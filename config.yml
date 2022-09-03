@@ -138,6 +138,15 @@ params:
     minMatchCharLength: 0
     keys: ["title"] # ["title", "permalink", "summary", "content"]
 
+  # for comments
+  utteranc:
+    enable: true
+    repo: "minyeamer/minyeamer.github.io"
+    issueTerm: "pathname"
+    label: "comments"
+    theme: "preferred-color-scheme"
+    crossorigin: "anonymous"
+
 google_site_verification: 'u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0'
 naver_site_verification: '6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da'
 
