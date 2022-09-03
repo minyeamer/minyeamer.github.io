@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://minyeamer.github.io/sitemap.xml
