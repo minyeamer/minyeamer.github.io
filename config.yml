@@ -10,7 +10,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-# googleAnalytics: UA-123-45
+googleAnalytics: G-BWECRMSX3V
 
 minify:
   disableXML: true
@@ -39,7 +39,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Minystory
   description: "minyeamer's logbook of the data world"
-  keywords: [Diary, Data, Engineering, MLOps]
+  keywords: ["Diary", "Data", "Engineering", "MLOps"]
   author: minyeamer
   # author: ["Me", "You"] # multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -63,11 +63,7 @@ params:
   showtoc: true
   tocopen: false
 
-  mainsections:
-    - page
-    - post
-    - archive
-    - search
+  mainsections: ["page", "post", "archive", "search"]
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -80,8 +76,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Minystory"
-    Content: 데이터 월드의 탐험일지
+    Title: Minystory
+    Content: "데이터 월드의 탐험일지"
 
   socialIcons:
     - name: email
@@ -95,7 +91,7 @@ params:
 
   label:
     text: "Home"
-    icon: /apple-touch-icon.png
+    icon: "/apple-touch-icon.png"
     iconHeight: 35
 
   # profile-mode
@@ -140,7 +136,10 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
+    keys: ["title"] # ["title", "permalink", "summary", "content"]
+
+google_site_verification: 'u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0'
+naver_site_verification: '6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da'
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -168,5 +167,4 @@ outputs:
         - RSS
         - JSON # is necessary
 
-ignoreFiles:
-- _page.md
+ignoreFiles: ["_page.md", "README.md", "til/task/*", "til/temp/*"]
