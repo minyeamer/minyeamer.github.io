@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web Crawling on Minystory</title>
+    <link>https://minyeamer.github.io/tags/web-crawling/</link>
+    <description>Recent content in Web Crawling on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 Mar 2022 16:09:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/web-crawling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 웹 크롤링 실습 - 웹 크롤링</title>
+      <link>https://minyeamer.github.io/blog/aischool-03-04-web-crawling/</link>
+      <pubDate>Tue, 29 Mar 2022 16:09:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-03-04-web-crawling/</guid>
+      <description>Wadis 마감 상품 재고 체크 Google 메일 설정 1 2 3 4 5 6 7 8 9 10 11 12 import smtplib from email.mime.text import MIMEText def sendMail(sender, receiver, msg): smtp = smtplib.SMTP_SSL(&amp;#39;smtp.gmail.com&amp;#39;, 465) smtp.login(sender, &amp;#39;your google app password&amp;#39;) msg = MIMEText(msg) msg[&amp;#39;Subject&amp;#39;] = &amp;#39;Product is available!&amp;#39; smtp.sendmail(sender, receiver, msg.as_string()) smtp.quit() Wadis 상품 재고 체크 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 라이브러리 선언 check_status = 1 url = &amp;#39;https://www.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 웹 크롤링 실습 - 셀레니움</title>
+      <link>https://minyeamer.github.io/blog/aischool-03-03-selenium/</link>
+      <pubDate>Mon, 28 Mar 2022 21:23:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-03-03-selenium/</guid>
+      <description>Selenium 브라우저의 기능을 체크할 때 사용하는 도구 브라우저를 조종해야할 때도 사용 Import Libraries 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 # 크롬 드라이버 파일 자동 다운로드 from webdriver_manager.chrome import ChromeDriverManager # 크롬 드라이버를 파일에 연결 from selenium.webdriver.chrome.service import Service from selenium import webdriver from selenium.webdriver.common.by import By from selenium.webdriver.common.keys import Keys from bs4 import BeautifulSoup import time import pandas as pd import warnings warnings.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 웹 크롤링 실습 - 웹 스크래핑 심화</title>
+      <link>https://minyeamer.github.io/blog/aischool-03-02-web-scraping-advanced/</link>
+      <pubDate>Mon, 28 Mar 2022 20:31:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-03-02-web-scraping-advanced/</guid>
+      <description>Import Libraries 1 2 3 4 5 6 7 import requests from bs4 import BeautifulSoup import pandas as pd from datetime import datetime import time # time.sleep() import re 뉴스 검색 결과에서 네이버 뉴스 추출 네이버 뉴스 검색 결과 URL 분석 1 2 3 4 https://search.naver.com/search.naver? where=news&amp;amp; sm=tab_jum&amp;amp; &amp;lt;!-- 불필요 --&amp;gt; query=데이터분석 네이버 뉴스 검색 URL 불러오기 1 2 3 4 5 query = input() # 데이터분석 url = f&amp;#39;https://search.naver.com/search.naver?where=news&amp;amp;query={query}&amp;#39; web = requests.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 웹 크롤링 실습 - 웹 스크래핑 기본</title>
+      <link>https://minyeamer.github.io/blog/aischool-03-01-web-scraping-basic/</link>
+      <pubDate>Fri, 25 Mar 2022 18:43:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-03-01-web-scraping-basic/</guid>
+      <description>BeautifulSoup Library 1 2 from bs4 import BeautifulSoup from urllib.request import urlopen 단어의 검색 결과 출력 다음 어학사전 URL 불러오기 1 2 3 4 5 6 # 찾는 단어 입력 word = &amp;#39;happiness&amp;#39; url = f&amp;#39;https://alldic.daum.net/search.do?q={word}&amp;#39; web = urlopen(url) web_page = BeautifulSoup(web, &amp;#39;html.parser&amp;#39;) 찾는 단어 출력 1 2 text_search = web_page.find(&amp;#39;span&amp;#39;, {&amp;#39;class&amp;#39;: &amp;#39;txt_emph1&amp;#39;}) print(f&amp;#39;찾는 단어: {text_search.get_text()}&amp;#39;) 단어의 뜻 출력 1 2 3 4 list_search = web_page.find(&amp;#39;ul&amp;#39;, {&amp;#39;class&amp;#39;: &amp;#39;list_search&amp;#39;}) list_text = list_search.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 웹 크롤링</title>
+      <link>https://minyeamer.github.io/blog/aischool-03-00-web-crawling/</link>
+      <pubDate>Fri, 25 Mar 2022 18:33:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-03-00-web-crawling/</guid>
+      <description>Web Crawling vs Web Scraping Web Crawling: Bot이 web을 link를 통해 돌아다니는 것 Web Scraping: Webpage에서 원하는 자료를 긇어오는 것 HTML Tags Tag&amp;rsquo;s Name: html, head, body, p, span, li, ol, ul, div Tag&amp;rsquo;s Attribute: class, id, style, href, src The Process of Web Scraping URL 분석 (query 종류 등) URL 구성 HTTP Response 얻기 (urlopen(URL) or request.get(URL).content) HTTP source 얻기 (BeautifulSoup(HTTP Response, &#39;html.parser&#39;)) HTML Tag 꺼내기 (.find(&#39;tag_name&#39;, {&#39;attr_name&#39;:&#39;attr_value&#39;})) Tag로부터 텍스트 혹은 Attribute values 꺼내기 (Tag.</description>
+    </item>
+    
+  </channel>
+</rss>

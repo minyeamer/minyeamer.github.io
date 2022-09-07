@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Union-Find on Minystory</title>
+    <link>https://minyeamer.github.io/tags/union-find/</link>
+    <description>Recent content in Union-Find on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 21 Aug 2022 23:09:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/union-find/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로그래머스 77486] 다단계 칫솔 판매 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-77486/</link>
+      <pubDate>Sun, 21 Aug 2022 23:09:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-77486/</guid>
+      <description>문제 링크 https://school.programmers.co.kr/learn/courses/30/lessons/77486 문제 해설 Idea Union-Find 알고리즘의 Find() 함수를 사용하여 부모 노드에 대해 재귀적으로 접근 최악의 경우 O(NM)=10^10으로 시간 초과가 발생하지만, 매 탐색마다 최대 10,000원을 10씩 나눠 0이 되는 순간에 재귀가 종료되기 때문에 최대 깊이가 5로 좁혀짐 Time Complexity O(N) = 100,000 Data Size enroll, referral: str(10) * 10,000 seller: str(10) * 100,000 amount: int(100) * 100,000 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 def find(parents, cur, income, answer): alloc = income//10 if parents[cur] == cur or alloc == 0: answer[cur] += income-alloc return answer[cur] += income-alloc find(parents, parents[cur], alloc, answer) return def solution(enroll, referral, seller, amount): N = len(enroll) answer = [0] * N name2id = {name:i for i,name in enumerate(enroll)} parents = [i if referral[i]==&amp;#39;-&amp;#39; else name2id[referral[i]] for i in range(N)] for i in range(len(seller)): find(parents, name2id[seller[i]], amount[i]*100, answer) return answer </description>
+    </item>
+    
+  </channel>
+</rss>

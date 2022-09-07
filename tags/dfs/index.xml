@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DFS on Minystory</title>
+    <link>https://minyeamer.github.io/tags/dfs/</link>
+    <description>Recent content in DFS on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 12 Aug 2022 11:29:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[백준 16987] 계란으로 계란치기 (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-16987/</link>
+      <pubDate>Fri, 12 Aug 2022 11:29:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-16987/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/16987 문제 해설 Idea Backtracking 0번째 계란부터 마지막 계란까지의 모든 경우의 수를 탐색 시간 단축을 위해 현재 계란이 깨진 경우 또는 나머지 모든 계란이 깨진 경우를 예외로 처리 한 번에 두 개 이상의 계란을 치는 경우를 방지하기 위해 계란을 친 후 원상복구 수행 Time Complexity Backtracking: O(N^N) = 16,777,216 Data Size N: 1 &amp;lt;= int &amp;lt;= 8 S, W: 1 &amp;lt;= int &amp;lt;= 300 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 N = int(input()) eggs = list() for _ in range(N): eggs.</description>
+    </item>
+    
+  </channel>
+</rss>

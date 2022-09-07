@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Two Pointer on Minystory</title>
+    <link>https://minyeamer.github.io/tags/two-pointer/</link>
+    <description>Recent content in Two Pointer on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 Aug 2022 10:26:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/two-pointer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[백준 20922] 겹치는 건 싫어 (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-20922/</link>
+      <pubDate>Mon, 15 Aug 2022 10:26:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-20922/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/20922 문제 해설 Idea Two Pointer 수열의 시작과 끝 지점에 대한 두 개의 포인터 지정 끝 지점에 대한 포인터를 확장하면서 탐색되는 원소의 수를 카운트 원소의 수가 K개와 같아지는 시점부터 시작 지점에 대한 포인터를 확장하여 범위 축소 최종적으로 두 포인터 간 거리의 최대치를 출력 Time Complexity O(N) = 200,000 Data Size N: 1 &amp;lt;= int &amp;lt;= 200,000 K: 1 &amp;lt;= int &amp;lt;= 100 a: int(100,000) * N 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 N, K = map(int, input().</description>
+    </item>
+    
+  </channel>
+</rss>

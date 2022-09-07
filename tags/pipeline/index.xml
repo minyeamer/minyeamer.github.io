@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pipeline on Minystory</title>
+    <link>https://minyeamer.github.io/tags/pipeline/</link>
+    <description>Recent content in Pipeline on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Apr 2022 22:13:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/pipeline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - Pipeline</title>
+      <link>https://minyeamer.github.io/blog/aischool-06-09-pipeline/</link>
+      <pubDate>Wed, 13 Apr 2022 22:13:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-06-09-pipeline/</guid>
+      <description>Feature Transformer Import Libraries 1 2 3 from sklearn.preprocessing import StandardScaler, OneHotEncoder from sklearn.compose import ColumnTransformer from sklearn.pipeline import Pipeline ColumnTransformer 1 2 3 4 5 6 7 8 9 10 numeric_features = [&amp;#39;CRIM&amp;#39;, &amp;#39;ZN&amp;#39;, &amp;#39;INDUS&amp;#39;, &amp;#39;NOX&amp;#39;, &amp;#39;RM&amp;#39;, &amp;#39;AGE&amp;#39;, &amp;#39;DIS&amp;#39;, &amp;#39;TAX&amp;#39;, &amp;#39;PTRATIO&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;LSTAT&amp;#39;] numeric_transformer = StandardScaler() categorical_features = [&amp;#39;CHAS&amp;#39;, &amp;#39;RAD&amp;#39;] categorical_transformer = OneHotEncoder(categories=&amp;#39;auto&amp;#39;) preprocessor = ColumnTransformer( transformers=[ (&amp;#39;num&amp;#39;, numeric_transformer, numeric_features), (&amp;#39;cat&amp;#39;, categorical_transformer, categorical_features)]) OneHotEncoder()의 handle_unknown 설정
+error: 숫자로 변환된 분류형 범주에 새로운 문자열 데이터가 들어올 경우 에러를 발생시킴 ignore: 카테고리에 해당되는 번호가 없으면 자동으로 0으로 바꿈 Preprocessing-Only 1 preprocessor_pipe = Pipeline(steps=[(&amp;#39;preprocessor&amp;#39;, preprocessor)]) steps: 전처리 도구를 순서대로 적용 (모델도 입력 가능) Model Fitting 1 2 3 4 preprocessor_pipe.</description>
+    </item>
+    
+  </channel>
+</rss>

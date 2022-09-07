@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Numpy on Minystory</title>
+    <link>https://minyeamer.github.io/tags/numpy/</link>
+    <description>Recent content in Numpy on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 Mar 2022 16:11:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 통계분석 실습 - Numpy &amp; Pandas</title>
+      <link>https://minyeamer.github.io/blog/aischool-04-01-numpy-pandas/</link>
+      <pubDate>Tue, 29 Mar 2022 16:11:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-04-01-numpy-pandas/</guid>
+      <description>Numpy Numpy Array 내부의 데이터는 하나의 자료형으로 통일 Numpy Array에 값을 곱하면 전체 데이터 그대로 복사되는 리스트와 달리 데이터에 각각 곱해짐 np.array([]): Numpy Array 생성 np.dtype: Numpy Array의 Data Type np.shape: Numpy Array 모양(차원) np.arange(): range를 바탕으로 Numpy Array 생성 np.reshape(): Numpy Array 모양을 변경, 열에 -1을 입력하면 자동 계산 np.dot(): 행렬곱 Pandas pd.Series([], index=[]): Key가 있는 리스트(Series) 생성 Series.values: Series의 값 Series.index: Series의 키 값 df.ammount: 띄어쓰기 없이 영단어로 구성된 열은 변수처럼 꺼내 쓸 수 있음 df.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Regex on Minystory</title>
+    <link>https://minyeamer.github.io/tags/regex/</link>
+    <description>Recent content in Regex on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 May 2022 16:46:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로그래머스/카카오 72410] 신규 아이디 추천 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-72410/</link>
+      <pubDate>Fri, 06 May 2022 16:46:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-72410/</guid>
+      <description>문제 링크 https://programmers.co.kr/learn/courses/30/lessons/72410 개요 정규식을 사용해 해결할 수 있는 문제다. 문제 조건 유저가 제시한 아이디 문자열을 규칙에 맞게 변경하여 반환하는 문제다. 문제 해설 제시된 조건에 대해 정규식을 구현하여 문자열에 적용하면 된다. 정규식 활용 능력에 따라 더욱 간단한 코드로 구현할 수도 있다. 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 import re def solution(new_id): answer = new_id.lower() answer = re.sub(r&amp;#34;[^a-z0-9-_\.]&amp;#34;,&amp;#34;&amp;#34;,answer) answer = re.sub(r&amp;#34;\.+&amp;#34;,&amp;#34;.&amp;#34;,answer) answer = re.</description>
+    </item>
+    
+  </channel>
+</rss>

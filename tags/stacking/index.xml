@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Stacking on Minystory</title>
+    <link>https://minyeamer.github.io/tags/stacking/</link>
+    <description>Recent content in Stacking on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Apr 2022 22:10:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/stacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - Model Stacking</title>
+      <link>https://minyeamer.github.io/blog/aischool-06-08-model-stacking/</link>
+      <pubDate>Wed, 13 Apr 2022 22:10:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-06-08-model-stacking/</guid>
+      <description>Model Stacking 서로 다른 모델들을 모으고 Ensemble 기법을 사용해 개선된 모델을 만드는 것 기존 모델들로부터 예측 결과를 도출하는 1st Stage와
+이를 기반으로 추가적인 판단을 진행하는 2nd Stage로 나뉨 1st Stage train_X를 가지고 1번 모델을 Training Training을 거친 1번 모델에 train_X를 넣었을 때 결과(예측값)을 저장 다른 모델에도 동일한 작업을 했을 때 나온 1열의 예측값들을 묶어 S_train을 생성 (기존 Ensemble은 S_train을 행별로 투표해서 분류함) 2nd Stage 새로운 모델 생성 (1st Stage에서 사용한 것과 다른 모델 사용 가능) S_train_X, train_Y를 가지고 새로운 모델을 Training Test Model test_X를 1st Stage 모델에 넣고 결과로 나온 예측값들의 묶음 S_test를 생성 (2nd Stage 모델의 학습 데이터는 원본 데이터와 다르기 때문에 test_X를 바로 넣으면 안됨) S_train_X, train_Y를 2nd Stage 모델에 넣었을 때 결과를 가지고 Accuracy 계산 Functional API Import Library 1 from vecstack import stacking 1st Level Models 1 2 3 4 models = [ ExtraTreesClassifier(random_state = 0, n_jobs = -1, n_estimators = 100, max_depth = 3), RandomForestClassifier(random_state = 0, n_jobs = -1, n_estimators = 100, max_depth = 3), XGBClassifier(seed = 0, n_jobs = -1, learning_rate = 0.</description>
+    </item>
+    
+  </channel>
+</rss>

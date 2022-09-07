@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>String on Minystory</title>
+    <link>https://minyeamer.github.io/tags/string/</link>
+    <description>Recent content in String on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 Aug 2022 10:26:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[백준 22859] HTML 파싱 (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-22859/</link>
+      <pubDate>Mon, 15 Aug 2022 10:26:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-22859/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/22859 문제 해설 Idea Implementation, String , , 태그 등을 구분 의 attribute인 title을 우선 출력하고 안에 있는 를 한 줄씩 출력 안에 있는 태그와 시작과 끝에 있는 공백을 지우고 2개 이상의 공백을 하나로 변경 제목은 무조건 존재하고 태그 사이에는 공백이 없으며 태그는 올바른 쌍으로만 주어짐을 보장 정규 표현식을 활용해 조건에 맞는 문장을 파싱하고 불필요한 문자를 제거해 출력 Data Size source: str(1,000,000) 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 import re source = input() main = re.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스/카카오 60057] 문자열 압축 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-60057/</link>
+      <pubDate>Fri, 06 May 2022 17:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-60057/</guid>
+      <description>문제 링크 https://programmers.co.kr/learn/courses/30/lessons/60057 개요 문자열 처리 능력이 요구되는 문제다. 문제 조건 문자열에서 반복되는 문자 또는 단어를 압축하고 가장 짧게 압축된 길이를 반환한다. 문제 해설 문자열을 단일 문자부터 2등분이 될 때까지 한 단위씩 늘려가면서 분리된 문자들에 대한 압축 과정을 진행한다. 분리된 문자들을 순회하면서 반복되는 문자열을 무시하고 남은 문자열의 길이를 세는 방법도 있지만,
+여기선 문자열을 형식에 맞게 압축시키고 그 길이를 구한다. 이전 문자열이 담길 메모리와 해당 문자열이 반복된 횟수를 기록하는 변수를 각각 선언한다.</description>
+    </item>
+    
+  </channel>
+</rss>

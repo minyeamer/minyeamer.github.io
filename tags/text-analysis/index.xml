@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Text Analysis on Minystory</title>
+    <link>https://minyeamer.github.io/tags/text-analysis/</link>
+    <description>Recent content in Text Analysis on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 28 Mar 2022 20:54:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/text-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 텍스트 분석 실습 - 워드클라우드</title>
+      <link>https://minyeamer.github.io/blog/aischool-02-04-word-cloud/</link>
+      <pubDate>Mon, 28 Mar 2022 20:54:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-02-04-word-cloud/</guid>
+      <description>Okt Library 한국어 형태소 분석기 KoNLPy 패키지에 속한 라이브러리 KoNLPy 테스트 1 2 3 4 5 from konlpy.tag import Okt tokenizer = Okt() tokens = tokenizer.pos(&amp;#34;아버지 가방에 들어가신다.&amp;#34;, norm=True, stem=True) print(tokens) norm: 정규화(Normalization), &amp;lsquo;안녕하세욯&amp;rsquo; -&amp;gt; &amp;lsquo;안녕하세요&amp;rsquo; stem: 어근화(Stemming, Lemmatization), (&amp;lsquo;한국어&amp;rsquo;, &amp;lsquo;Noun&amp;rsquo;) Pickle Library (Extra) 파이썬 변수를 pickle 파일로 저장/불러오기 1 2 3 4 5 with open(&amp;#39;raw_pos_tagged.pkl&amp;#39;, &amp;#39;wb&amp;#39;) as f: pickle.dump(raw_pos_tagged, f) with open(&amp;#39;raw_pos_tagged.pkl&amp;#39;,&amp;#39;rb&amp;#39;) as f: data = pickle.load(f) 크롤링 데이터 전처리 크롤링 데이터 불러오기 1 2 3 df = pd.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 분석</title>
+      <link>https://minyeamer.github.io/blog/aischool-02-03-text-analysis/</link>
+      <pubDate>Fri, 25 Mar 2022 19:18:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-02-03-text-analysis/</guid>
+      <description>Scikit-learn Library Traditional Machine Learning (vs DL, 인공신경을 썼는지의 여부) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 from sklearn import datasets, linear_model, model_selection, metrics data_total = datasets.load_boston() x = data_total.data y = data_total.target train_x, test_x, train_y, test_y = model_selection.train_test_split(x, y, test_size=0.3) # 학습 전의 모델 생성 model = linear_model.LinearRegression() # 모델에 학습 데이터를 넣으면서 학습 진행 model.fit(train_x, train_y) # 모델에게 새로운 데이터를 주면서 예측 요구 predictions = model.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 데이터 분석</title>
+      <link>https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/</link>
+      <pubDate>Fri, 25 Mar 2022 19:09:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/</guid>
+      <description>Tokenizing Text Data Import Libraries 1 2 3 import nltk from nltk.corpus import stopwords from collections import Counter Set Stopwords 1 2 3 4 5 6 stop_words = stopwords.words(&amp;#34;english&amp;#34;) stop_words.append(&amp;#39;,&amp;#39;) stop_words.append(&amp;#39;.&amp;#39;) stop_words.append(&amp;#39;’&amp;#39;) stop_words.append(&amp;#39;”&amp;#39;) stop_words.append(&amp;#39;—&amp;#39;) Open Text Data 1 2 file = open(&amp;#39;movie_review.txt&amp;#39;, &amp;#39;r&amp;#39;, encoding=&amp;#34;utf-8&amp;#34;) lines = file.readlines() Tokenize 1 2 3 4 5 6 tokens = [] for line in lines: tokenized = nltk.word_tokenize(line) for token in tokenized: if token.lower() not in stop_words: tokens.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 분석</title>
+      <link>https://minyeamer.github.io/blog/aischool-02-01-processing-text-data/</link>
+      <pubDate>Fri, 25 Mar 2022 19:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-02-01-processing-text-data/</guid>
+      <description>NLTK Library NLTK(Natural Language Toolkit)은 자연어 처리를 위한 라이브러리 1 2 3 import nltk nltk.download() 문장을 단어 수준에서 토큰화 1 2 3 sentence = &amp;#39;NLTK is a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning, wrappers for industrial-strength NLP libraries, and an active discussion forum.</description>
+    </item>
+    
+  </channel>
+</rss>

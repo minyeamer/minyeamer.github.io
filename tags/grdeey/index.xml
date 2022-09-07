@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Grdeey on Minystory</title>
+    <link>https://minyeamer.github.io/tags/grdeey/</link>
+    <description>Recent content in Grdeey on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Aug 2022 20:01:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/grdeey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로그래머스 87390] n^2 배열 자르기 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-87390/</link>
+      <pubDate>Tue, 16 Aug 2022 20:01:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-87390/</guid>
+      <description>문제 링크 https://school.programmers.co.kr/learn/courses/30/lessons/87390 문제 해설 Idea Greedy n의 크기가 굉장히 크기 때문에 2차원 배열을 만드는 것만으로 시간 초과가 발생할 것을 예상 r행 c열의 값은 max(r,c)+1과 같고 1차원 배열의 인덱스 i에 대해 r은 i//n, c는 i%n와 동일 left부터 right까지의 인덱스를 규칙에 맞는 값으로 변환하여 반환 Time Complexity O(N) = 10^5 Data Size n: 1 &amp;lt;= int &amp;lt;= 10^7 left, right: 0 &amp;lt;= long &amp;lt;= n^2 right - left &amp;lt; 10^5 해설 코드 1 2 def solution(n, left, right): return [max(divmod(i,n))+1 for i in range(left,right+1)] </description>
+    </item>
+    
+    <item>
+      <title>[백준 1541] 잃어버린 괄호 (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-1541/</link>
+      <pubDate>Tue, 16 Aug 2022 12:26:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-1541/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/1541 문제 해설 Idea Greedy 최솟값을 만들기 위해서는 &amp;lsquo;-&amp;lsquo;를 기준으로 괄호를 치는 것이 최선 &amp;lsquo;-&amp;lsquo;를 기준으로 식을 나누고 구분된 식을 계산하여 결과를 출력 Data Size arr: str(50) 해설 코드 1 2 3 4 5 arr = input().split(&amp;#39;-&amp;#39;) answer = sum(map(int,arr[0].split(&amp;#39;+&amp;#39;))) for i in arr[1:]: answer -= sum(map(int,i.split(&amp;#39;+&amp;#39;))) print(answer) </description>
+    </item>
+    
+  </channel>
+</rss>

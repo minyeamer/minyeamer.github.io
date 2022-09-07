@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Logistic Regression on Minystory</title>
+    <link>https://minyeamer.github.io/tags/logistic-regression/</link>
+    <description>Recent content in Logistic Regression on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Apr 2022 17:03:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/logistic-regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - 로지스틱 회귀</title>
+      <link>https://minyeamer.github.io/blog/aischool-06-02-logistic-regression/</link>
+      <pubDate>Wed, 13 Apr 2022 17:03:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-06-02-logistic-regression/</guid>
+      <description>Logistic Regression 이진 분류(0 또는 1) 문제를 해결하기 위한 모델 다항 로지스틱 회귀(k-class), 서수 로지스틱 회귀(k-class &amp;amp; ordinal)도 존재 Sigmoid Function을 이용하여 입력값이 양성 클래스에 속할 확률을 계산 로지스틱 회귀를 MSE 식에 넣으면 지수 함정의 특징 때문에 함정이 많은 그래프가 나옴 분류를 위한 Cost Function인 Cross-Entropy 활용 성능 지표로는 Cross-Entropy 외에 Accuracy 등을 같이 사용 ex) 스팸 메일 분류, 질병 양성/음성 분류 등 양성/음성 분류 모델 선형 모델은 새로운 데이터가 들어오면 양성/음성 판단 기준이 크게 바뀜 모델을 지수 함수인 Sigmoid Function으로 변경 Sigmoid Function θ 값에 따라 기울기나 x축의 위치가 바뀌는 지수 함수 y축을 이동하는 선형 함수와 다르게 x축을 이동 y가 0.</description>
+    </item>
+    
+  </channel>
+</rss>

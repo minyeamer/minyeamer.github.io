@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linear Regression on Minystory</title>
+    <link>https://minyeamer.github.io/tags/linear-regression/</link>
+    <description>Recent content in Linear Regression on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Apr 2022 16:31:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/linear-regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - 선형 회귀</title>
+      <link>https://minyeamer.github.io/blog/aischool-06-01-linear-regression/</link>
+      <pubDate>Wed, 13 Apr 2022 16:31:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-06-01-linear-regression/</guid>
+      <description>Linear Regression 종속 변수 y와 독립 변수 x 사이의 선형 상관 관계를 모델링하는 회귀분석 기법 정답이 있는 데이터의 추세를 잘 설명하는 선형 함수를 찾아 x에 대한 y를 예측 Linear Combination (선형 결합): 더하기와 곱하기로만 이루어진 식 단순 회귀분석: 1개의 독립변수(x)가 1개의 종속변수(y)에 영향을 미칠 때 다중 회귀분석: 2개 이상의 독립변수(x)가 1개의 종속변수(y)에 영향을 미칠 때 선형 회귀는 가장 적합한 θ들의 집합을 찾는 것이 목표 Cost Function 예측 값과 실제 값의 차이를 기반으로 모델의 성능(정확도)을 판단하기 위한 함수 Objective (MIN or MAX) 함수 안에 Cost Function이 존재 선형 회귀에서는 Mean Squre(d) Error Function (평균 제곱 오차 함수) 활용 MSE(Cost)가 최소가 되는 θ(a &amp;amp; b)를 찾아야하며,</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Brute Force on Minystory</title>
+    <link>https://minyeamer.github.io/tags/brute-force/</link>
+    <description>Recent content in Brute Force on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 18 Aug 2022 10:28:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/brute-force/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[백준 1182] 부분수열의 합 (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-1182/</link>
+      <pubDate>Thu, 18 Aug 2022 10:28:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-1182/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/1182 문제 해설 Idea Brute Force 전체 배열에서 1부터 N개의 부분 조합을 완전탐색하면서 합이 S와 같은 경우를 카운트하고 출력 Data Size N: 1 &amp;lt;= int &amp;lt;= 20 S: abs(int) &amp;lt;= 1,000,000 arr: int(100,000) * N 해설 코드 1 2 3 4 5 6 7 8 9 10 11 from itertools import combinations N, S = map(int, input().split()) arr = list(map(int, input().split())) count = 0 for i in range(1,N+1): comb = combinations(arr, i) count += sum(map(lambda x: sum(x)==S, comb)) print(count) </description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스/카카오 17684] 압축 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-17684/</link>
+      <pubDate>Tue, 09 Aug 2022 09:48:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-17684/</guid>
+      <description>문제 링크 https://school.programmers.co.kr/learn/courses/30/lessons/17684 문제 해설 Idea LZW 알고리즘 (List로 구현) 단어를 문자 단위로 탐색하면서 캐시에 추가 캐시가 문자 사전에 없을 경우 이전 문자까지의 인덱스를 반환하고 캐시를 문자 사전에 추가 Time Complexity Brute-Force: O(N^2) = 1000000 Data Size msg: str(1000) 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 def solution(msg): answer = [] chars = [chr(x) for x in range(64,91)] cache = str() for c in msg: cache += c if cache not in chars: answer.</description>
+    </item>
+    
+    <item>
+      <title>[프로그래머스/카카오 17683] 방금그곡 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-17683/</link>
+      <pubDate>Mon, 08 Aug 2022 14:16:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-17683/</guid>
+      <description>문제 링크 https://programmers.co.kr/learn/courses/30/lessons/17683 문제 해설 Idea 악보 정보에서 #이 포함된 음을 소문자로 대체하고 완전탐색 시간 계산은 timedelta 활용 (재생시간,제목)으로 구성된 리스트를 정렬 Time Complexity Brute-Force: O(NM) = 143,900 Data Size m: 1 &amp;lt;= int &amp;lt;= 1439 musicinfos: list &amp;lt;= 100 musicinfos[0,1]: HH:MM (00:00 - 23:59) musicinfos[2]: str(64) musicinfos[4]: 1 &amp;lt;= int &amp;lt;= 1439 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 import datetime as dt import re import math def solution(m, musicinfos): answer = list() lower_repl = lambda match: match.</description>
+    </item>
+    
+  </channel>
+</rss>

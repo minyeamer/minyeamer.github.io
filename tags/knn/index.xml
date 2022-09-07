@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>KNN on Minystory</title>
+    <link>https://minyeamer.github.io/tags/knn/</link>
+    <description>Recent content in KNN on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Apr 2022 20:57:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/knn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - KNN</title>
+      <link>https://minyeamer.github.io/blog/aischool-06-04-knn/</link>
+      <pubDate>Wed, 13 Apr 2022 20:57:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-06-04-knn/</guid>
+      <description>K-Nearest Neightbor Algorithm 기존의 가까운 이웃 데이터를 살펴 새로운 데이터를 분류하는 알고리즘 K=3일 경우, 가장 가까운 나머지 3개 중 2개가 Red면 Red로 판단 K 값이 작아질수록 아주 작은 영향에로 판단이 바뀌는 Overfitting 발생 K 값이 커질수록 멀리보고 결정이 느려져 Overfitting 감소 Learning Process Load Data 1 iris = datasets.load_iris() # 붓꽃 데이터 (150행, 4열) Select Feature 1 2 x = iris.data[:, :2] # [꽃받침 길이, 꽃받침 넓이] y = iris.target Create Model 1 model = neighbors.</description>
+    </item>
+    
+  </channel>
+</rss>

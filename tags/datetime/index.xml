@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Datetime on Minystory</title>
+    <link>https://minyeamer.github.io/tags/datetime/</link>
+    <description>Recent content in Datetime on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Aug 2022 11:08:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/datetime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[백준 1308] D-Day (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-1308/</link>
+      <pubDate>Fri, 26 Aug 2022 11:08:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-1308/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/1308 문제 해설 Idea 각각의 날짜에 대한 문자열을 date 타입으로 변환하고, today 기준 1000년 후 날짜와 dday를 비교 조건이 맞을 경우 &amp;lsquo;gg&amp;rsquo;를 출력하고, 아니면 두 날짜의 차이를 출력 Data Size y,m,d: 1,1,1 &amp;lt;= int*3 &amp;lt;= 9999,12,31 해설 코드 1 2 3 4 5 6 7 from datetime import date strptime = lambda: date(**{k:int(v) for k,v in zip([&amp;#39;year&amp;#39;,&amp;#39;month&amp;#39;,&amp;#39;day&amp;#39;],input().split())}) today, dday = strptime(), strptime() if dday &amp;gt;= today.replace(today.year+1000): print(&amp;#39;gg&amp;#39;) else: print(&amp;#39;D-&amp;#39;+str((dday-today).</description>
+    </item>
+    
+  </channel>
+</rss>

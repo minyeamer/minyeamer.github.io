@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Selenium on Minystory</title>
+    <link>https://minyeamer.github.io/tags/selenium/</link>
+    <description>Recent content in Selenium on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 Mar 2022 16:09:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/selenium/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 웹 크롤링 실습 - 웹 크롤링</title>
+      <link>https://minyeamer.github.io/blog/aischool-03-04-web-crawling/</link>
+      <pubDate>Tue, 29 Mar 2022 16:09:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-03-04-web-crawling/</guid>
+      <description>Wadis 마감 상품 재고 체크 Google 메일 설정 1 2 3 4 5 6 7 8 9 10 11 12 import smtplib from email.mime.text import MIMEText def sendMail(sender, receiver, msg): smtp = smtplib.SMTP_SSL(&amp;#39;smtp.gmail.com&amp;#39;, 465) smtp.login(sender, &amp;#39;your google app password&amp;#39;) msg = MIMEText(msg) msg[&amp;#39;Subject&amp;#39;] = &amp;#39;Product is available!&amp;#39; smtp.sendmail(sender, receiver, msg.as_string()) smtp.quit() Wadis 상품 재고 체크 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 라이브러리 선언 check_status = 1 url = &amp;#39;https://www.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 웹 크롤링 실습 - 셀레니움</title>
+      <link>https://minyeamer.github.io/blog/aischool-03-03-selenium/</link>
+      <pubDate>Mon, 28 Mar 2022 21:23:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-03-03-selenium/</guid>
+      <description>Selenium 브라우저의 기능을 체크할 때 사용하는 도구 브라우저를 조종해야할 때도 사용 Import Libraries 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 # 크롬 드라이버 파일 자동 다운로드 from webdriver_manager.chrome import ChromeDriverManager # 크롬 드라이버를 파일에 연결 from selenium.webdriver.chrome.service import Service from selenium import webdriver from selenium.webdriver.common.by import By from selenium.webdriver.common.keys import Keys from bs4 import BeautifulSoup import time import pandas as pd import warnings warnings.</description>
+    </item>
+    
+  </channel>
+</rss>

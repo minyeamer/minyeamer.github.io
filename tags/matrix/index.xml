@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Matrix on Minystory</title>
+    <link>https://minyeamer.github.io/tags/matrix/</link>
+    <description>Recent content in Matrix on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 May 2022 17:53:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/matrix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로그래머스/카카오 60059] 자물쇠와 열쇠 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-60059/</link>
+      <pubDate>Fri, 06 May 2022 17:53:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-60059/</guid>
+      <description>문제 링크 https://programmers.co.kr/learn/courses/30/lessons/60059 개요 numpy 라이브러리와 중복 순열을 사용해 해결할 수 있는 문제다. 문제 조건 2차원 배열인 열쇠(M)를 회전하거나 이동해 2차원 배열인 자물쇠(N)에 맞는지 여부를 반환하는 문제다. 문제 해설 2차원 배열을 numpy.ndarray 형식으로 변환하면 회전 및 이동 연산을 쉽게 처리할 수 있다. 90도 단위로 4번 회전된 각각의 목록을 구하고 상하좌우 이동을 위해 바깥쪽에 0으로 채워진 padding을 추가한다. padding이 채워진 N+M-1크기의 2차원 배열에 대해 자물쇠 크기만큼의 부분만 잘라내어 자물쇠의 구멍과 비교한다. OR 연산 시 자물쇠가 1로 채워지고 열쇠와 자물쇠 사이에 겹치는 부분이 없다면 열쇠가 자물쇠에 맞다고 판단한다.</description>
+    </item>
+    
+  </channel>
+</rss>

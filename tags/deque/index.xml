@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Deque on Minystory</title>
+    <link>https://minyeamer.github.io/tags/deque/</link>
+    <description>Recent content in Deque on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 Aug 2022 18:48:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/deque/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[백준 5430] AC (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-5430/</link>
+      <pubDate>Mon, 15 Aug 2022 18:48:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-5430/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/5430 문제 해설 Idea Implementation, Deque 문제에서 주어진대로 매번 배열을 뒤집으면 O(N^2)의 시간 복잡도로 시간 초과가 발생 배열에 영향을 주지 않으면서 R 함수를 처리하기 위해 상태 변수를 정의하고,
+D 함수가 호출될 경우 배열의 상태에 따라 첫 번째 수를 버릴지 마지막 수를 버릴지 결정 마지막에 배열의 상태를 업데이트하고 정해진 형태로 결과를 출력 Time Complexity O(N) = 100,000 Data Size T: 1 &amp;lt;= int &amp;lt;= 100 p: 1 &amp;lt;= int &amp;lt;= 100,000 n: 1 &amp;lt;= int &amp;lt;= 100,000 arr: int(100) * n (like [x_1,&amp;hellip;,x_n]) 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 from collections import deque for _ in range(int(input())): p = input() n = int(input()) arr = deque(eval(input())) forward = True try: for cmd in p: if cmd == &amp;#39;R&amp;#39;: forward = not forward elif cmd == &amp;#39;D&amp;#39;: if forward: arr.</description>
+    </item>
+    
+  </channel>
+</rss>

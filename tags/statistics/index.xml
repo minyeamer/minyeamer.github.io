@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Statistics on Minystory</title>
+    <link>https://minyeamer.github.io/tags/statistics/</link>
+    <description>Recent content in Statistics on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 02 Apr 2022 22:50:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 통계분석 실습 - A/B Test</title>
+      <link>https://minyeamer.github.io/blog/aischool-04-04-ab-test/</link>
+      <pubDate>Sat, 02 Apr 2022 22:50:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-04-04-ab-test/</guid>
+      <description>마케팅 비용 분석 매월 유튜브에 광고 비용을 지출하여 신규 유저(구매 고객 or 회원가입 고객)를 획득 월별로 10,000원 단위의 유튜브 광고 비용과 해당 월에 신규로 획득된 유저 수가 측정되었다고 가정 비교 데이터 단순 CAC 계산 CAC(Customer Acquisition Cost, 신규고객 유치 비용) @ https://j.mp/35O5NRe 1 2 3 4 5 cac = ad_df[&amp;#39;Marketing_Costs&amp;#39;].sum() / ad_df[&amp;#39;User_Acquired&amp;#39;].sum() print(cac * 10000) # Output 446원 위의 금액에 추가로 획득하기를 원하는 유저 수를 곱한 금액을
+유튜브 광고 비용으로 쓰면 그만큼 유저가 늘어날까?</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 통계분석 실습 - T-Test &amp; 상관관계 분석</title>
+      <link>https://minyeamer.github.io/blog/aischool-04-03-test-statistics/</link>
+      <pubDate>Sat, 02 Apr 2022 22:40:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-04-03-test-statistics/</guid>
+      <description>Import Libraries 1 2 3 4 5 6 7 8 import pandas as pd import seaborn as sns import scipy as sp from scipy import stats import warnings warnings.filterwarnings(&amp;#34;ignore&amp;#34;) 교차분석 교차표 (Cross-Table) 1 2 3 4 crosstab = pd.crosstab(df.propensity, df.skin, margins=True) crosstab.columns=[] crosstab.index=[] margins: 합계(All) 추가 여부 normalize: Normalization 여부 Chi-square 검정 두 범주형 변수 사이의 관계가 있는지 없는지를 검정 (독립성 검정) 귀무가설: Indepedent (vice versa) 대립가설: Not Independent 1 2 3 4 stats.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 통계분석 실습 - 빈도 분석 &amp; 기술통계량 분석</title>
+      <link>https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/</link>
+      <pubDate>Sat, 02 Apr 2022 22:09:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/</guid>
+      <description>Chart Pie Chart 1 df[&amp;#39;column&amp;#39;].value_counts().plot(kind = &amp;#39;pie&amp;#39;) Bar Chart 1 df[&amp;#39;column&amp;#39;].value_counts().plot(kind = &amp;#39;bar&amp;#39;) Descriptive Statistics df[&#39;column&#39;].max(): 최댓값 (행방향 기준: axis=1) df[&#39;column&#39;].min(): 최솟값 df[&#39;column&#39;].sum(): 합계 df[&#39;column&#39;].mean(): 평균 df[&#39;column&#39;].variance(): 분산 df[&#39;column&#39;].std(): 표준편차 df[&#39;column&#39;].describe(): 기술통계량 분포의 왜도와 첨도 df[&#39;column&#39;].hist(): 히스토그램 df[&#39;column&#39;].skew(): 왜도 (분포가 좌우로 치우쳐진 정도) 왜도(Skewness): 0에 가까울수록 정규분포 (절대값 기준 3 미초과)
+우측으로 치우치면 음(negative)의 왜도, 좌측으로 치우치면 양(positive)의 왜도 df[&#39;column&#39;].kurtosis(): 첨도 (분포가 뾰족한 정도) 첨도(Kurtosis): 1에 가까울수록 정규분포 (절대값 기준 8 또는 10 미초과) 왜도가 0, 정도가 1일 때 완전한 정규분포로 가정 sns.</description>
+    </item>
+    
+    <item>
+      <title>[AI SCHOOL 5기] 통계분석 실습 - Numpy &amp; Pandas</title>
+      <link>https://minyeamer.github.io/blog/aischool-04-01-numpy-pandas/</link>
+      <pubDate>Tue, 29 Mar 2022 16:11:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-04-01-numpy-pandas/</guid>
+      <description>Numpy Numpy Array 내부의 데이터는 하나의 자료형으로 통일 Numpy Array에 값을 곱하면 전체 데이터 그대로 복사되는 리스트와 달리 데이터에 각각 곱해짐 np.array([]): Numpy Array 생성 np.dtype: Numpy Array의 Data Type np.shape: Numpy Array 모양(차원) np.arange(): range를 바탕으로 Numpy Array 생성 np.reshape(): Numpy Array 모양을 변경, 열에 -1을 입력하면 자동 계산 np.dot(): 행렬곱 Pandas pd.Series([], index=[]): Key가 있는 리스트(Series) 생성 Series.values: Series의 값 Series.index: Series의 키 값 df.ammount: 띄어쓰기 없이 영단어로 구성된 열은 변수처럼 꺼내 쓸 수 있음 df.</description>
+    </item>
+    
+  </channel>
+</rss>

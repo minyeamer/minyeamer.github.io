@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>K-Means on Minystory</title>
+    <link>https://minyeamer.github.io/tags/k-means/</link>
+    <description>Recent content in K-Means on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Apr 2022 21:50:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/k-means/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - K-Means</title>
+      <link>https://minyeamer.github.io/blog/aischool-06-06-k-means/</link>
+      <pubDate>Wed, 13 Apr 2022 21:50:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/aischool-06-06-k-means/</guid>
+      <description>1. K-Means Algorithm K는 전체 데이터를 몇 개의 그룹으로 묶어낼 것인지 결정하는 상수 어떤 K 값이 적절한 것인지 파악하는 것이 중요 각각의 데이터마다 중심값까지의 거리를 계속 물어보기 때문에 계산량이 많음 클러스터링 성능을 향상시키기 위해 GPU Accelerated t-SNE for CUDA 활용 Clustering Process K개의 임의의 중심값을 선택 각 데이터마다 중심값까지의 거리를 계산하여 가까운 중심값의 클러스터에 할당 각 클러스터에 속한 데이터들의 평균값으로 각 중심값을 이동 데이터에 대한 클러스터 할당이 변하지 않을 때까지 2와 3을 반복 2.</description>
+    </item>
+    
+  </channel>
+</rss>

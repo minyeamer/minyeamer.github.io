@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Math on Minystory</title>
+    <link>https://minyeamer.github.io/tags/math/</link>
+    <description>Recent content in Math on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Aug 2022 19:28:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[프로그래머스/카카오 17687] n진수 게임 (Python)</title>
+      <link>https://minyeamer.github.io/blog/programmers-problems-17687/</link>
+      <pubDate>Tue, 16 Aug 2022 19:28:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/programmers-problems-17687/</guid>
+      <description>문제 링크 https://school.programmers.co.kr/learn/courses/30/lessons/17687 문제 해설 Idea Math 0부터 시작해 t*m의 길이를 만족하는 N진법 배열을 생성 매 순서마다 p 위치에 해당하는 값을 추출해 문자열로 반환 Data Size n: 2 &amp;lt;= int &amp;lt;= 16 t: 0 &amp;lt; int &amp;lt;= 1,000 m: 2 &amp;lt;= int &amp;lt;= 100 p: 1 &amp;lt;= int &amp;lt;= m 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 alpha = {10:&amp;#39;A&amp;#39;,11:&amp;#39;B&amp;#39;,12:&amp;#39;C&amp;#39;,13:&amp;#39;D&amp;#39;,14:&amp;#39;E&amp;#39;,15:&amp;#39;F&amp;#39;} def n_base(num, base): result = str() while num &amp;gt; 0: num, mod = divmod(num, base) result += str(mod) if mod &amp;lt; 10 else alpha[mod] return result[::-1] def solution(n, t, m, p): arr = &amp;#39;01&amp;#39; total = t*m p = p%m i = 2 while len(arr) &amp;lt; total: arr += n_base(i, n) i += 1 answer = [t for i,t in enumerate(arr[:total]) if (i+1)%m==p] return &amp;#39;&amp;#39;.</description>
+    </item>
+    
+    <item>
+      <title>[백준 1676] 팩토리얼 0의 개수 (Python)</title>
+      <link>https://minyeamer.github.io/blog/boj-problems-1676/</link>
+      <pubDate>Tue, 16 Aug 2022 12:41:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/boj-problems-1676/</guid>
+      <description>문제 링크 https://www.acmicpc.net/problem/1676 문제 해설 Idea Math 팩토리얼 수를 구하고 문자열로 변환해 연속되는 0의 개수를 출력 Data Size N: 0 &amp;lt;= int &amp;lt;= 500 해설 코드 1 2 3 4 5 6 7 8 9 from math import factorial import re N = int(input()) zeros = re.findall(&amp;#39;0+&amp;#39;, str(factorial(N))) if zeros: print(len(zeros[-1])) else: print(0) </description>
+    </item>
+    
+    <item>
+      <title>2022-07-04 Log</title>
+      <link>https://minyeamer.github.io/blog/2022-07-04/</link>
+      <pubDate>Mon, 04 Jul 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/2022-07-04/</guid>
+      <description>선형대수와 통계학으로 배우는 머신러닝 with 파이썬 2</description>
+    </item>
+    
+    <item>
+      <title>2022-06-19 Log</title>
+      <link>https://minyeamer.github.io/blog/2022-06-19/</link>
+      <pubDate>Sun, 19 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/2022-06-19/</guid>
+      <description>선형대수와 통계학으로 배우는 머신러닝 with 파이썬 1</description>
+    </item>
+    
+  </channel>
+</rss>

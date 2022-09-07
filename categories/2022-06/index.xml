@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>2022-06 on Minystory</title>
+    <link>https://minyeamer.github.io/categories/2022-06/</link>
+    <description>Recent content in 2022-06 on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Jun 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/categories/2022-06/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022-06-30 Log</title>
+      <link>https://minyeamer.github.io/blog/2022-06-30/</link>
+      <pubDate>Thu, 30 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/2022-06-30/</guid>
+      <description>딥 러닝을 이용한 자연어 처리 입문 3</description>
+    </item>
+    
+    <item>
+      <title>2022-06-29 Log</title>
+      <link>https://minyeamer.github.io/blog/2022-06-29/</link>
+      <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/2022-06-29/</guid>
+      <description>딥 러닝을 이용한 자연어 처리 입문 2</description>
+    </item>
+    
+    <item>
+      <title>2022-06-28 Log</title>
+      <link>https://minyeamer.github.io/blog/2022-06-28/</link>
+      <pubDate>Tue, 28 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/2022-06-28/</guid>
+      <description>딥 러닝을 이용한 자연어 처리 입문 1</description>
+    </item>
+    
+    <item>
+      <title>2022-06-19 Log</title>
+      <link>https://minyeamer.github.io/blog/2022-06-19/</link>
+      <pubDate>Sun, 19 Jun 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/2022-06-19/</guid>
+      <description>선형대수와 통계학으로 배우는 머신러닝 with 파이썬 1</description>
+    </item>
+    
+  </channel>
+</rss>
