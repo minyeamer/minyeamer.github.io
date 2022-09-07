@@ -63,7 +63,7 @@ params:
   showtoc: true
   tocopen: true
 
-  mainsections: ["page", "post", "archive", "search", "categories", "tags"]
+  mainsections: ["page", "post", "main", "archive", "search"]
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -125,7 +125,7 @@ params:
   #   hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/minyeamer/til/edit/main"
+    URL: "https://github.com/minyeamer/til/edit"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -167,7 +167,7 @@ markup:
     endLevel: 3
 
 permalinks:
-  post: /blog/:filename/
+  post: /blog/:slugorfilename/
 
 outputs:
     home:
