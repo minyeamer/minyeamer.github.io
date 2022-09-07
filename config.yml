@@ -119,10 +119,12 @@ params:
     # yandex:
     #   SiteVerificationTag: "XYZabc"
 
-  # cover:
-  #   hidden: true # hide everywhere but not in structured data
-  #   hiddenInList: true # hide on list pages and home
-  #   hiddenInSingle: true # hide on single page
+  cover:
+    prefix: "https://github.com/minyeamer/til/blob/main/.media/covers/"
+    suffix: "?raw=true"
+    # hidden: true # hide everywhere but not in structured data
+    # hiddenInList: true # hide on list pages and home
+    # hiddenInSingle: true # hide on single page
 
   editPost:
     URL: "https://github.com/minyeamer/til/edit/main"
