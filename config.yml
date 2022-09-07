@@ -125,9 +125,10 @@ params:
   #   hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/minyeamer/til/edit"
+    URL: "https://github.com/minyeamer/til/edit/main"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
+    ignoreFilePath: "post/" # to ignore specific file path from Edit link
 
   # for search
   # https://fusejs.io/api/options.html
