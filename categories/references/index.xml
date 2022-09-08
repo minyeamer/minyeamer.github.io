@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>References on Minystory</title>
+    <link>https://minyeamer.github.io/categories/references/</link>
+    <description>Recent content in References on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 20 Mar 2022 18:12:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/categories/references/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big-O List</title>
+      <link>https://minyeamer.github.io/blog/big-o-list/</link>
+      <pubDate>Sun, 20 Mar 2022 18:12:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/big-o-list/</guid>
+      <description>List Operation Example Big-O Index l[i] O(1) Store l[i] = 0 O(1) Length len(l) O(1) Append l.append(x) O(1) Pop l.pop() O(1) Slice l[a:b] O(b-a) Construction list(x) O(len(x)) Check l1 == l2 O(len(n)) Insert l[a:b] = x O(n) Containment x in l O(n) Copy l.copy() O(n) Remove l.remove() O(n) Count l.count(x) O(n) Index l.index(x) O(n) Pop l.pop(i) O(n) Extreme value min(l)/max(l) O(n) Iteration for v in l: O(n) Reverse l.reverse() O(n) Sort l.</description>
+    </item>
+    
+  </channel>
+</rss>
