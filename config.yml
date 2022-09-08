@@ -39,7 +39,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Minystory
   description: "minyeamer's logbook of the data world"
-  keywords: ["Diary", "Data", "Engineering", "MLOps"]
+  keywords: ["minyeamer", "Blog", "Data", "Engineering", "MLOps", "미니스토리", "김민엽", "블로그"]
   author: minyeamer
   # author: ["Me", "You"] # multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
