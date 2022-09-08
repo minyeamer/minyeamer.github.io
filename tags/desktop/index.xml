@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Desktop on Minystory</title>
+    <link>https://minyeamer.github.io/tags/desktop/</link>
+    <description>Recent content in Desktop on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Sep 2022 19:58:46 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>가벼운 딥러닝용 조립PC 후기</title>
+      <link>https://minyeamer.github.io/blog/desktop-settings/</link>
+      <pubDate>Thu, 01 Sep 2022 19:58:46 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/desktop-settings/</guid>
+      <description>구매 계기 매번 딥러닝 모델을 학습하는 실험을 하면서 Colab에 의존하는 방식에 불편함을 느꼈는데,
+결국 190발 사용해서 RTX 3060이 포함된 조립 PC를 구매했습니다.
+이번 기회에 혼자서 컴퓨터를 조립해봤으면 좋았겠지만,
+여기에 많은 시간을 쏟을만한 상황도 아니었고 이쪽이 고장날 일도 없어서 맡겼습니다.
+컴퓨터 조립 업체로 다나와, 피씨팩토리 등을 고려했는데,
+현금 결제를 권장하는 부분이 미심쩍었고 컴퓨존의 평이 좋아 믿고 맡겼습니다.
+부품 선정 그래픽 카드 처음엔 약 100만원을 얹어서 RTX 3090Ti을 구매할 생각이었지만,
+당시 소득이 없는 상황이라 저렴한 가격의 RTX 3060을 구매했습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
