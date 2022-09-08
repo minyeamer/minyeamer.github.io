@@ -146,7 +146,7 @@ params:
   # for comments
   utteranc:
     enable: true
-    repo: "minyeamer/minyeamer.github.io"
+    repo: "minyeamer/til"
     issueTerm: "pathname"
     label: "comments"
     theme: "preferred-color-scheme"
