@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Utterances on Minystory</title>
+    <link>https://minyeamer.github.io/tags/utterances/</link>
+    <description>Recent content in Utterances on Minystory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 08 Sep 2022 14:39:22 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/utterances/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 블로그 만들기 (2) - Utterances 댓글 적용</title>
+      <link>https://minyeamer.github.io/blog/hugo-blog-2/</link>
+      <pubDate>Thu, 08 Sep 2022 14:39:22 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/hugo-blog-2/</guid>
+      <description>Hugo 블로그는 기본적으로 댓글 기능을 제공하지는 않습니다.
+제가 사용하는 PaperMod 테마에서는 서드파티 서비스인 Disqus를 위한 레이아웃이 존재하지만,
+저는 기본적인 블로그 운영을 Github 플랫폼 내에서 구성하고 싶기 때문에 다른 기능을 사용해보려 합니다.
+이번 포스트에서는 Utterances 댓글 기능을 추가하는 방법을 안내해드리겠습니다.
+Utterances 설치하기 Utterances는 Github issues 기반으로 댓글을 관리하는 기능입니다.
+무료 플랜에서 광고가 붙는 Disqus와 다르게 별도의 유료 플랜이 없어 간편하게 사용할 수 있습니다.
+Utterances 설치는 단순히 레이아웃 상에서 댓글이 위치할 곳에 자바스크립트 코드를 삽입하면 됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>
