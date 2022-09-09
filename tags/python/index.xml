@@ -5,18 +5,7 @@
     <link>https://minyeamer.github.io/tags/python/</link>
     <description>Recent content in Python on Minystory</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Sep 2022 10:10:12 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[LeetCode 236] Lowest Common Ancestor of a Binary Tree (Python)</title>
-      <link>https://minyeamer.github.io/blog/leetcode-problems-236/</link>
-      <pubDate>Thu, 01 Sep 2022 10:10:12 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/blog/leetcode-problems-236/</guid>
-      <description>문제 링크 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ 문제 해설 Idea root부터 조건을 만족하는 깊이까지 재귀적으로 자식 노드를 탐색하면서
-p 또는 q 노드를 발견한 경우 해당 노드를 호출한 함수에게 반환 최종적으로 좌,우에 각각 p와 q가 있을 경우 깊이가 가장 깊은 부모 노드를 반환하고,
-한쪽 방향에 p와 q가 몰려있을 경우 둘 중 부모 관계에 있는 노드를 반환 Time Complexity O(N) = 10^5 Data Size nodes: [2, 10^5] val: -10^9 &amp;lt;= int &amp;lt;= 10^9 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 # Definition for a binary tree node.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 01 Sep 2022 09:32:22 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[백준 10026] 적록색약 (Python)</title>
       <link>https://minyeamer.github.io/blog/boj-problems-10026/</link>

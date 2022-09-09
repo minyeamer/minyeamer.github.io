@@ -16,40 +16,12 @@
     </item>
     
     <item>
-      <title>[프로그래머스 43238] 입국심사 (Python)</title>
-      <link>https://minyeamer.github.io/blog/programmers-problems-43238/</link>
-      <pubDate>Sun, 14 Aug 2022 18:51:00 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/blog/programmers-problems-43238/</guid>
-      <description>문제 링크 https://school.programmers.co.kr/learn/courses/30/lessons/43238 문제 해설 Idea Binary Search answer에 대한 이진탐색 수행 (1 &amp;lt;= answer &amp;lt;= max(times)*n) 매 탐색마다 answer 시간 동안 심사관들이 심사할 수 있는 사람의 수를 계산 심사한 사람의 수가 n명 이상일 경우 최대 범위를 조정하고 재탐색 심사한 사람의 수가 n명 미만일 경우 최소 범위를 조정하고 재탐색 n명 이상의 사람을 심사할 수 있는 가장 작은 answer를 반환 Time Complexity Binary Search: O(M Log N^N) = 6,000,000 Data Size n: 1 &amp;lt;= int &amp;lt;= 1,000,000,000 times: int(1,000,000,000) * 100,000 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 def solution(n, times): answer = 0 start, end = 1, max(times)*n while start &amp;lt;= end: mid = (start+end)//2 passed = 0 for time in times: passed += mid // time if passed &amp;gt;= n: break if passed &amp;gt;= n: answer = mid end = mid-1 elif passed &amp;lt; n: start = mid+1 return answer </description>
-    </item>
-    
-    <item>
-      <title>[프로그래머스 42895] N으로 표현 (Python)</title>
-      <link>https://minyeamer.github.io/blog/programmers-problems-42895/</link>
-      <pubDate>Sat, 13 Aug 2022 10:19:00 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/blog/programmers-problems-42895/</guid>
-      <description>문제 링크 https://school.programmers.co.kr/learn/courses/30/lessons/42895 문제 해설 Idea Dynamic Programming S[1] = {N} S[2] = {NN, N+N, N-N, N*N, N/N} S[3] = {NNN, S[2] (+,-,*,/) S[1][y], &amp;hellip;} 2부터 8까지의 범위를 가진 i와 1부터 i-1까지의 범위를 가진 j에 대해,
-S[j]와 S[i-j]의 사칙연산 결과를 S[i]에 추가하고 해당 집합이 number를 포함하는지 검증 Time Complexity DP: O(1) Data Size N: 1 &amp;lt;= int &amp;lt;= 9 number: 1 &amp;lt;= int &amp;lt;= 32,000 answer: int &amp;lt;= 8 해설 코드 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 from itertools import product def solution(N, number): S = [set() for _ in range(9)] if N == number: return 1 else: S[1].</description>
-    </item>
-    
-    <item>
       <title>[프로그래머스/카카오 60059] 자물쇠와 열쇠 (Python)</title>
       <link>https://minyeamer.github.io/blog/programmers-problems-60059/</link>
       <pubDate>Fri, 06 May 2022 17:53:00 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/blog/programmers-problems-60059/</guid>
       <description>문제 링크 https://programmers.co.kr/learn/courses/30/lessons/60059 개요 numpy 라이브러리와 중복 순열을 사용해 해결할 수 있는 문제다. 문제 조건 2차원 배열인 열쇠(M)를 회전하거나 이동해 2차원 배열인 자물쇠(N)에 맞는지 여부를 반환하는 문제다. 문제 해설 2차원 배열을 numpy.ndarray 형식으로 변환하면 회전 및 이동 연산을 쉽게 처리할 수 있다. 90도 단위로 4번 회전된 각각의 목록을 구하고 상하좌우 이동을 위해 바깥쪽에 0으로 채워진 padding을 추가한다. padding이 채워진 N+M-1크기의 2차원 배열에 대해 자물쇠 크기만큼의 부분만 잘라내어 자물쇠의 구멍과 비교한다. OR 연산 시 자물쇠가 1로 채워지고 열쇠와 자물쇠 사이에 겹치는 부분이 없다면 열쇠가 자물쇠에 맞다고 판단한다.</description>
-    </item>
-    
-    <item>
-      <title>[프로그래머스/카카오 17676] 추석 트래픽 (Python)</title>
-      <link>https://minyeamer.github.io/blog/programmers-problems-17676/</link>
-      <pubDate>Fri, 06 May 2022 17:26:00 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/blog/programmers-problems-17676/</guid>
-      <description>문제 링크 https://programmers.co.kr/learn/courses/30/lessons/17676 개요 datetime 라이브러리를 사용해 해결할 수 있는 문제다. 문제 조건 트래픽 처리 종료 시간 및 처리 시간이 짝지어진 로그 문자열을 해석하여 초당 최대 처리량을 반환하는 문제다. 문제 해설 datetime과 timedelta 모듈을 활용하여 각각의 트래픽 로그에 대한 시작과 끝 시간을 계산한다. 트래픽의 시작 또는 끝을 1초 구간의 시작으로 정의하고 해당 구간에서 시작됐거나 진행 중인 트래픽 수를 합산한다. 합산된 트래픽 수 중에서 최댓값을 초당 최대 처리량으로 판단하여 반환한다. 한계 트래픽 로그를 시작 시간과 끝 시간으로 분리하지 않고 시간 범위로 변환할 수 있다면,</description>
     </item>
     
   </channel>
