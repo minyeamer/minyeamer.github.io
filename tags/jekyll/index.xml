@@ -4,6 +4,10 @@
     <title>Jekyll on Minystory</title>
     <link>https://minyeamer.github.io/tags/jekyll/</link>
     <description>Recent content in Jekyll on Minystory</description>
+    <image>
+      <url>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</url>
+      <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 30 Aug 2022 16:28:43 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
     <item>

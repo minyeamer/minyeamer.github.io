@@ -4,6 +4,10 @@
     <title>PyTorch on Minystory</title>
     <link>https://minyeamer.github.io/tags/pytorch/</link>
     <description>Recent content in PyTorch on Minystory</description>
+    <image>
+      <url>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</url>
+      <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 13 Jul 2022 20:00:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <item>

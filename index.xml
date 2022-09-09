@@ -4,6 +4,10 @@
     <title>Minystory</title>
     <link>https://minyeamer.github.io/</link>
     <description>Recent content on Minystory</description>
+    <image>
+      <url>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</url>
+      <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 08 Sep 2022 15:52:12 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
