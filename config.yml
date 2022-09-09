@@ -42,7 +42,7 @@ params:
   keywords: ["minyeamer", "Blog", "Data", "Engineering", "MLOps", "미니스토리", "김민엽", "블로그"]
   author: minyeamer
   # author: ["Me", "You"] # multiple authors
-  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true"] # "<link or path of image for opengraph, twitter-cards>"
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
