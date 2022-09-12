@@ -2,10 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://minyeamer.github.io/categories/blog/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
+    <loc>https://minyeamer.github.io/blog/datacamp-tableau/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/datacamp/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/datacamp/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/post/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/study/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/tableau/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/%EA%B0%80%EC%A7%9C%EC%97%B0%EA%B5%AC%EC%86%8C/</loc>
+    <lastmod>2022-09-12T22:33:41+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/blog/</loc>
     <lastmod>2022-09-08T15:52:12+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/github/</loc>
@@ -26,16 +53,7 @@
     <loc>https://minyeamer.github.io/tags/katex/</loc>
     <lastmod>2022-09-08T15:52:12+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/tags/papermod/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/post/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/</loc>
     <lastmod>2022-09-08T15:52:12+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/tech/</loc>
@@ -154,6 +172,18 @@
   </url><url>
     <loc>https://minyeamer.github.io/blog/jekyll-blog/</loc>
     <lastmod>2022-08-30T16:28:43+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/2022-08-26/</loc>
+    <lastmod>2022-08-26T20:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/nlp/</loc>
+    <lastmod>2022-08-26T20:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/paper/</loc>
+    <lastmod>2022-08-26T20:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/til/</loc>
+    <lastmod>2022-08-26T20:00:00+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/boj-problems-1308/</loc>
     <lastmod>2022-08-26T11:08:00+09:00</lastmod>
@@ -338,22 +368,7 @@
     <loc>https://minyeamer.github.io/tags/deep-learning/</loc>
     <lastmod>2022-07-21T20:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/categories/study/</loc>
-    <lastmod>2022-07-21T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/til/</loc>
-    <lastmod>2022-07-21T20:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/2022-07-19/</loc>
-    <lastmod>2022-07-19T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/blog/2022-08-26/</loc>
-    <lastmod>2022-07-19T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/nlp/</loc>
-    <lastmod>2022-07-19T20:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/paper/</loc>
     <lastmod>2022-07-19T20:00:00+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/2022-07-17/</loc>

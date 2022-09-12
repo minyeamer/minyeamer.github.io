@@ -9,7 +9,34 @@
       <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Sep 2022 15:52:12 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Sep 2022 22:33:41 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DataCamp</title>
+      <link>https://minyeamer.github.io/tags/datacamp/</link>
+      <pubDate>Mon, 12 Sep 2022 22:33:41 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/datacamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tableau</title>
+      <link>https://minyeamer.github.io/tags/tableau/</link>
+      <pubDate>Mon, 12 Sep 2022 22:33:41 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/tableau/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>가짜연구소</title>
+      <link>https://minyeamer.github.io/tags/%EA%B0%80%EC%A7%9C%EC%97%B0%EA%B5%AC%EC%86%8C/</link>
+      <pubDate>Mon, 12 Sep 2022 22:33:41 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/%EA%B0%80%EC%A7%9C%EC%97%B0%EA%B5%AC%EC%86%8C/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Github</title>
       <link>https://minyeamer.github.io/tags/github/</link>
@@ -272,6 +299,33 @@
     </item>
     
     <item>
+      <title>NLP</title>
+      <link>https://minyeamer.github.io/tags/nlp/</link>
+      <pubDate>Fri, 26 Aug 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paper</title>
+      <link>https://minyeamer.github.io/tags/paper/</link>
+      <pubDate>Fri, 26 Aug 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/paper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TIL</title>
+      <link>https://minyeamer.github.io/tags/til/</link>
+      <pubDate>Fri, 26 Aug 2022 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/til/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Datetime</title>
       <link>https://minyeamer.github.io/tags/datetime/</link>
       <pubDate>Fri, 26 Aug 2022 11:08:00 +0900</pubDate>
@@ -484,33 +538,6 @@
       <pubDate>Thu, 21 Jul 2022 20:00:00 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TIL</title>
-      <link>https://minyeamer.github.io/tags/til/</link>
-      <pubDate>Thu, 21 Jul 2022 20:00:00 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/tags/til/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NLP</title>
-      <link>https://minyeamer.github.io/tags/nlp/</link>
-      <pubDate>Tue, 19 Jul 2022 20:00:00 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/tags/nlp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Paper</title>
-      <link>https://minyeamer.github.io/tags/paper/</link>
-      <pubDate>Tue, 19 Jul 2022 20:00:00 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/tags/paper/</guid>
       <description></description>
     </item>
     
