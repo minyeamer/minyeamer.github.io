@@ -1,7 +1,3 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/minyeamer/minyeamer.github.io.git
-	branch = gh-pages
 [submodule "content/post"]
 	path = content/post
 	url = https://github.com/minyeamer/til.git
