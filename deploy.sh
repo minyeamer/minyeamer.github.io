@@ -22,7 +22,7 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin gh-pages --force
+git push origin gh-pages
 
 # Come back up to the project root
 cd ..
