@@ -5,3 +5,6 @@
 [submodule "content/post"]
 	path = content/post
 	url = https://github.com/minyeamer/til.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/minyeamer/hugo-PaperMod.git
