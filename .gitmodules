@@ -4,3 +4,7 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/minyeamer/hugo-PaperMod.git
+[submodule "public"]
+	path = public
+	url = https://minyeamer@github.com/minyeamer/minyeamer.github.io.git
+	branch = gh-pages
