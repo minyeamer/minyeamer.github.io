@@ -9,7 +9,47 @@
       <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 13 Nov 2022 22:08:42 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Dec 2022 10:22:03 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Python] requests로 네이버 스마트스토어센터 로그인 구현하기 (3)</title>
+      <link>https://minyeamer.github.io/blog/smartstore-login-3/</link>
+      <pubDate>Sun, 04 Dec 2022 10:22:03 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/smartstore-login-3/</guid>
+      <description>앞선 네이버 로그인 구현 과정을 통해 네이버 로그인에 대해 이해하고
+스마트스토어센터 로그인 결과로 얻을 수 있는 쿠키 값의 일부를 획득했습니다.
+1 2 3 4 5 6 7 8 9 10 cookies = { &amp;#34;NNB&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;nid_inf&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NID_AUT&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NID_SES&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NID_JKL&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;CBI_SES&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;CBI_CHK&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NSI&amp;#34;: &amp;#34;...&amp;#34;, } 하지만, 스마트스토어센터에서 데이터를 가져오기 위해 필요한 쿠키 값은
+CBI_SES, CBI_CHK, NSI 세 가지 값이기 때문에
+지금까지는 준비 과정에 불과했다고 할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>[Python] requests로 네이버 스마트스토어센터 로그인 구현하기 (2)</title>
+      <link>https://minyeamer.github.io/blog/smartstore-login-2/</link>
+      <pubDate>Sat, 03 Dec 2022 16:11:42 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/smartstore-login-2/</guid>
+      <description>이번 게시글에서는 스마트스토어센터 페이지에서 데이터를 수집하는 자동화 프로그램을 제작하기 위한
+첫 번째 과정으로 네이버 로그인을 구현할 것입니다.
+앞선 게시글에서 데이터를 수집하는 방식에 대해 알아보면서
+로그인이 필요한 페이지에 접근하기 다음과 같은 쿠키 값이 필요함을 확인했습니다.
+1 2 3 4 5 6 7 8 9 10 cookies = { &amp;#34;NNB&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;nid_inf&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NID_AUT&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NID_SES&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NID_JKL&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;CBI_SES&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;CBI_CHK&amp;#34;: &amp;#34;...&amp;#34;, &amp;#34;NSI&amp;#34;: &amp;#34;...&amp;#34;, } 위 키값들은 앞으로 로그인 프로세스를 파악하는 과정에서 중요하게 활용됩니다.</description>
+    </item>
+    
+    <item>
+      <title>[Python] requests로 네이버 스마트스토어센터 로그인 구현하기 (1)</title>
+      <link>https://minyeamer.github.io/blog/smartstore-login-1/</link>
+      <pubDate>Sat, 03 Dec 2022 13:56:14 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/smartstore-login-1/</guid>
+      <description>네이버 스마트스토어센터에서는 매출 향상에 도움을 주는 유용한 통계 데이터를 제공해줍니다.
+쇼핑몰 데이터를 분석하는 입장에서 무료로 제공되는 이런 데이터는 큰 도움이 되지만,
+대부분이 엑셀 파일 다운로드를 지원하지 않고 빈번하게 수치가 바뀌는 데이터를 각각의 메뉴에서 매번 확인하기도 어렵습니다.
+이런 데이터를 자동화 프로그램으로 수집 및 적재할 수 있다면 업무 효율을 크게 향상시킬 수 있을 것입니다.
+이번 게시글에서는 실제 네이버 스마트스토어 로그인 구현에 앞서
+데이터 수집에 대한 간단한 설명을 진행하고 네이버 로그인 구현의 바탕이 되는 클래스와 메소드를 정의합니다.</description>
+    </item>
+    
     <item>
       <title>2022년 11월 13일 회고</title>
       <link>https://minyeamer.github.io/blog/2022-11-13/</link>
