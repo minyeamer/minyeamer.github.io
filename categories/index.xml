@@ -31,9 +31,18 @@
     <item>
       <title>2023</title>
       <link>https://minyeamer.github.io/categories/2023/</link>
-      <pubDate>Mon, 23 Jan 2023 12:08:30 +0900</pubDate>
+      <pubDate>Mon, 23 Jan 2023 20:00:00 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/categories/2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Study</title>
+      <link>https://minyeamer.github.io/categories/study/</link>
+      <pubDate>Mon, 23 Jan 2023 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/categories/study/</guid>
       <description></description>
     </item>
     
@@ -79,15 +88,6 @@
       <pubDate>Mon, 12 Sep 2022 22:33:41 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/categories/datacamp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Study</title>
-      <link>https://minyeamer.github.io/categories/study/</link>
-      <pubDate>Mon, 12 Sep 2022 22:33:41 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/categories/study/</guid>
       <description></description>
     </item>
     

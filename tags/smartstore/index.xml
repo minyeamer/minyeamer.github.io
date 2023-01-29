@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Smartstore on Minystory</title>
+    <link>https://minyeamer.github.io/tags/smartstore/</link>
+    <description>Recent content in Smartstore on Minystory</description>
+    <image>
+      <url>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</url>
+      <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Jan 2023 20:00:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/smartstore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023-01-23 Log</title>
+      <link>https://minyeamer.github.io/blog/2023-01-29/</link>
+      <pubDate>Mon, 23 Jan 2023 20:00:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/2023-01-29/</guid>
+      <description>Smartstore and Coupang study</description>
+    </item>
+    
+  </channel>
+</rss>
