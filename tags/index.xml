@@ -9,7 +9,25 @@
       <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Feb 2023 23:38:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Mar 2023 21:30:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spark</title>
+      <link>https://minyeamer.github.io/tags/spark/</link>
+      <pubDate>Tue, 21 Mar 2023 21:30:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/spark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TIL</title>
+      <link>https://minyeamer.github.io/tags/til/</link>
+      <pubDate>Tue, 21 Mar 2023 21:30:00 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/til/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CF</title>
       <link>https://minyeamer.github.io/tags/cf/</link>
@@ -34,15 +52,6 @@
       <pubDate>Sun, 19 Feb 2023 23:38:00 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/tags/recommender/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TIL</title>
-      <link>https://minyeamer.github.io/tags/til/</link>
-      <pubDate>Sun, 19 Feb 2023 23:38:00 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/tags/til/</guid>
       <description></description>
     </item>
     
