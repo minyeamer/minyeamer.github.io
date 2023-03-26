@@ -9,11 +9,47 @@
       <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Mar 2023 21:30:00 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2023 18:52:14 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crawling</title>
+      <link>https://minyeamer.github.io/tags/crawling/</link>
+      <pubDate>Sun, 26 Mar 2023 18:52:14 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/crawling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://minyeamer.github.io/tags/python/</link>
+      <pubDate>Sun, 26 Mar 2023 18:52:14 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>requests</title>
+      <link>https://minyeamer.github.io/tags/requests/</link>
+      <pubDate>Sun, 26 Mar 2023 18:52:14 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/requests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>만개의레시피</title>
+      <link>https://minyeamer.github.io/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/</link>
+      <pubDate>Sun, 26 Mar 2023 18:52:14 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Spark</title>
       <link>https://minyeamer.github.io/tags/spark/</link>
-      <pubDate>Tue, 21 Mar 2023 21:30:00 +0900</pubDate>
+      <pubDate>Sat, 25 Mar 2023 15:22:10 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/tags/spark/</guid>
       <description></description>
@@ -22,7 +58,7 @@
     <item>
       <title>TIL</title>
       <link>https://minyeamer.github.io/tags/til/</link>
-      <pubDate>Tue, 21 Mar 2023 21:30:00 +0900</pubDate>
+      <pubDate>Sat, 25 Mar 2023 15:22:10 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/tags/til/</guid>
       <description></description>
@@ -155,38 +191,11 @@
     </item>
     
     <item>
-      <title>Crawling</title>
-      <link>https://minyeamer.github.io/tags/crawling/</link>
-      <pubDate>Sun, 04 Dec 2022 10:22:03 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/tags/crawling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Naver</title>
       <link>https://minyeamer.github.io/tags/naver/</link>
       <pubDate>Sun, 04 Dec 2022 10:22:03 +0900</pubDate>
       
       <guid>https://minyeamer.github.io/tags/naver/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://minyeamer.github.io/tags/python/</link>
-      <pubDate>Sun, 04 Dec 2022 10:22:03 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>requests</title>
-      <link>https://minyeamer.github.io/tags/requests/</link>
-      <pubDate>Sun, 04 Dec 2022 10:22:03 +0900</pubDate>
-      
-      <guid>https://minyeamer.github.io/tags/requests/</guid>
       <description></description>
     </item>
     

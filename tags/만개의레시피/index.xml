@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>만개의레시피 on Minystory</title>
+    <link>https://minyeamer.github.io/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/</link>
+    <description>Recent content in 만개의레시피 on Minystory</description>
+    <image>
+      <url>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</url>
+      <link>https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 26 Mar 2023 18:52:14 +0900</lastBuildDate><atom:link href="https://minyeamer.github.io/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Python] 만개의 레시피 데이터 수집</title>
+      <link>https://minyeamer.github.io/blog/10000-recipe/</link>
+      <pubDate>Sun, 26 Mar 2023 18:52:14 +0900</pubDate>
+      
+      <guid>https://minyeamer.github.io/blog/10000-recipe/</guid>
+      <description>최근 레시피 생성을 목적으로 한 사이드 프로젝트에 참여하게 되었는데
+모델 학습을 위한 만개의 레시피 데이터 크롤링을 진행해보았습니다.
+스키마 구성 기존엔 레시피 명칭과 음식 재료 정보만을 수집할 계획이었지만,
+만개의 레시피의 각 페이지를 살펴보면서 추가적으로 가져갈만한 데이터가 있음을 확인하여
+우선적으로 테이블 관계 및 스키마를 구성해보았습니다.
+초기에 만개의 레시피와 공공데이터를 데이터 소스로 삼았기 때문에,
+만개의 레시피에 대한 DB _10000, 공공데이터에 대한 DB food로 구성했습니다.
+_10000 DB 내 테이블은 만개의 레시피 내 각각의 페이지에서 가져온 데이터로 구성되며,</description>
+    </item>
+    
+  </channel>
+</rss>
