@@ -1,0 +1,358 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="AI SCHOOL,멋쟁이사자처럼,코드라이언,Machine Learning,Gradient Boosting"><meta name=description content="XG Boost
+  #
+
+Extreme Gradient Boosting
+대용량 분산 처리를 위한 Gradient Boosting 라이브러리
+Decision Tree(의사결정나무) 에 Boosting 기법을 적용한 알고리즘
+AdaBoost는 학습 성능은 좋으나, 모델의 학습 시간이 오래 걸리는 단점
+병렬 처리 기법을 적용하여 Gradient Boost보다 학습 속도를 끌어올림
+Hyper-Parameter가 너무 많기 때문에 권장 세팅 사용 @ http://j.mp/2PukeTS
+
+Decision Tree
+  #
+
+이해하기 쉽고 해석도 용이함
+입력 데이터의 작은 변동에도 Tree의 구성이 크게 달라짐
+과적합이 쉽게 발생 (중간에 멈추지 않으면 Leaf 노드에 하나의 데이터만 남게 됨)
+의사결정나무의 문제를 해결하기 위해 Boosting 기법 활용
+ex) 테니스를 쳤던 과거 데이터를 보고 날씨 정보를 이용해 의사결정
+
+AdaBoost
+  #
+
+Adaptive Boosting
+데이터를 바탕으로 여러 weak learner 들을 반복적으로 생성
+앞선 learner가 잘못 예측한 데이터에 가중치를 부여하고 학습
+최종적으로 만들어진 strong learner를 이용하여 실제 예측 진행
+에러를 최소화하는 weight를 매기기 위해 경사 하강법 사용
+ex) Regression: 평균/가중평균, Classification: 투표
+
+XG Boost References
+  #
+
+NGBoost Explained (Comparison to LightGBM and XGBoost)
+Gradient Boosting Interactive Playground
+Gradient Boosting explained
+Comparison for hyperparams of XGBoost & LightGBM
+XGBoost Parameters
+XG Boost 하이퍼 파라미터 상세 설명
+Complete Guide to Parameter Tuning in XGBoost (with python codes)
+Microsoft EBM (Explainable Boosting Machine)
+정형데이터를 위한 인공신경망 모델, TabNet
+
+
+Ensemble
+  #
+
+주어진 데이터를 이용하여 여러 개의 서로 다른 예측 모형을 생성한 후,
+예측 모형의 예측 결과를 종합하여 하나의 최종 예측결과를 도출해내는 방법
+다양한 모델이 문제 공간의 다른 측면을 보면서 각기 다른 방식으로 오점이 있다고 가정
+(모델 별로 약점을 보완)
+
+Boosting
+  #
+
+weak learner들을 strong learner로 변환시키는 알고리즘
+(약한 학습기를 여러개 사용해서 하나의 강건한 학습기를 만들어내는 것)
+의사결정나무 모델을 합리적인 수준(60~70% 성능)에서 여러 종류 생성
+ex) AdaBoost
+
+Gradient Boosting
+  #
+
+경사 하강법을 사용해서 AdaBoost보다 성능을 개선한 Boosting 기법
+AdaBoost는 높은 가중치를 가진 지점이 존재하게 되면 성능이 크게 떨어지는 단점
+(높은 가중치를 가진 지점과 가까운 다른 데이터들이 잘못 분류될 가능성이 높음)
+Gradient Boosting 기법은 이전 모델에 종속적이기 때문에 병렬 처리가 불가능
+
+Bagging
+  #
+
+Bootstrap Aggregating
+가중치를 매기지 않고 각각의 모델이 서로 독립적
+x 데이터 열들의 서로 다른 조합으로 독립적인 모델을 여러 종류 생성
+ex) Random Forest
+
+Random Forest
+  #
+
+각 모델은 서로 다른 샘플 데이터셋을 활용 (Bootstrap Sampling & Bagging)
+각 데이터셋은 복원추출을 통해 원래 데이터셋 만큼의 크기로 샘플링 (누락 & 중복 발생)
+위 서로 다른 샘플로 각 모델 생성 시, 각 노드 지점마다 x열 n개 중 랜덤하게 m개 중 분기 선택
+Classification에서는 root n을 m으로 사용
+Regression에서는 n/3을 m으로 사용
+@ https://j.mp/3rZ05bN & https://j.mp/3GJ7QqH
+
+
+Learning Process
+  #
+
+@ https://j.mp/3jRJH6n
+
+Import Libraries
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  import numpy as np
+import matplotlib.pyplot as plt
+
+from sklearn import ensemble
+from sklearn import datasets
+from sklearn.utils import shuffle
+from sklearn.metrics import mean_squared_error
+Load Data
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  boston = datasets.load_boston()
+
+X, y = shuffle(boston.data, boston.target, random_state=13)
+X = X.astype(np.float32)
+offset = int(X.shape[0] * 0.9)
+
+X_train, y_train = X[:offset], y[:offset]
+X_test, y_test = X[offset:], y[offset:]
+
+load 부분에서 다른 데이터도 사용 가능
+boston.data: x data
+boston.target: y data
+int(X.shape[0] * 0.9): 전체 행 중 90 퍼센트 의미
+boston.feature_names: 데이터셋에서 열 이름
+boston.DESCR: 데이터에 대한 상세 설명
+
+Model Fitting
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  params = {'n_estimators': 500, 'max_depth': 4, 'min_samples_split': 2,
+          'learning_rate': 0.01, 'loss': 'ls'}
+clf = ensemble.GradientBoostingRegressor(**params)
+
+clf.fit(X_train, y_train)
+mse = mean_squared_error(y_test, clf.predict(X_test))
+print(&#34;MSE: %.4f&#34; % mse)
+
+**params: 딕셔너리를 파라미터로 변환 @ https://j.mp/2IPuJzY
+clf: Classifier
+
+
+Plot Deviance
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  test_score = np.zeros((params['n_estimators'],), dtype=np.float64)
+
+for i, y_pred in enumerate(clf.staged_predict(X_test)):
+    test_score[i] = clf.loss_(y_test, y_pred)
+
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 2, 1)
+plt.title('Deviance')
+plt.plot(np.arange(params['n_estimators']) + 1, clf.train_score_, 'b-',
+         label='Training Set Deviance')
+plt.plot(np.arange(params['n_estimators']) + 1, test_score, 'r-',
+         label='Test Set Deviance')
+plt.legend(loc='upper right')
+plt.xlabel('Boosting Iterations')
+plt.ylabel('Deviance')
+
+Deviance: 편차값, 에러
+n_estimators: 의사결정나무 모델을 몇 개 만들었는지
+Test Data에 대한 에러 라인이 튕겨올라가는 지점이 Overfitting
+
+"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/blog/aischool-06-03-gradient-boosting/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/blog/aischool-06-03-gradient-boosting/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="[AI SCHOOL 5기] 머신 러닝 실습 - Gradient Boosting"><meta property="og:description" content="XG Boost # Extreme Gradient Boosting 대용량 분산 처리를 위한 Gradient Boosting 라이브러리 Decision Tree(의사결정나무) 에 Boosting 기법을 적용한 알고리즘 AdaBoost는 학습 성능은 좋으나, 모델의 학습 시간이 오래 걸리는 단점 병렬 처리 기법을 적용하여 Gradient Boost보다 학습 속도를 끌어올림 Hyper-Parameter가 너무 많기 때문에 권장 세팅 사용 @ http://j.mp/2PukeTS Decision Tree # 이해하기 쉽고 해석도 용이함 입력 데이터의 작은 변동에도 Tree의 구성이 크게 달라짐 과적합이 쉽게 발생 (중간에 멈추지 않으면 Leaf 노드에 하나의 데이터만 남게 됨) 의사결정나무의 문제를 해결하기 위해 Boosting 기법 활용 ex) 테니스를 쳤던 과거 데이터를 보고 날씨 정보를 이용해 의사결정 AdaBoost # Adaptive Boosting 데이터를 바탕으로 여러 weak learner 들을 반복적으로 생성 앞선 learner가 잘못 예측한 데이터에 가중치를 부여하고 학습 최종적으로 만들어진 strong learner를 이용하여 실제 예측 진행 에러를 최소화하는 weight를 매기기 위해 경사 하강법 사용 ex) Regression: 평균/가중평균, Classification: 투표 XG Boost References # NGBoost Explained (Comparison to LightGBM and XGBoost) Gradient Boosting Interactive Playground Gradient Boosting explained Comparison for hyperparams of XGBoost & LightGBM XGBoost Parameters XG Boost 하이퍼 파라미터 상세 설명 Complete Guide to Parameter Tuning in XGBoost (with python codes) Microsoft EBM (Explainable Boosting Machine) 정형데이터를 위한 인공신경망 모델, TabNet Ensemble # 주어진 데이터를 이용하여 여러 개의 서로 다른 예측 모형을 생성한 후,
+예측 모형의 예측 결과를 종합하여 하나의 최종 예측결과를 도출해내는 방법 다양한 모델이 문제 공간의 다른 측면을 보면서 각기 다른 방식으로 오점이 있다고 가정
+(모델 별로 약점을 보완) Boosting # weak learner들을 strong learner로 변환시키는 알고리즘
+(약한 학습기를 여러개 사용해서 하나의 강건한 학습기를 만들어내는 것) 의사결정나무 모델을 합리적인 수준(60~70% 성능)에서 여러 종류 생성 ex) AdaBoost Gradient Boosting # 경사 하강법을 사용해서 AdaBoost보다 성능을 개선한 Boosting 기법 AdaBoost는 높은 가중치를 가진 지점이 존재하게 되면 성능이 크게 떨어지는 단점
+(높은 가중치를 가진 지점과 가까운 다른 데이터들이 잘못 분류될 가능성이 높음) Gradient Boosting 기법은 이전 모델에 종속적이기 때문에 병렬 처리가 불가능 Bagging # Bootstrap Aggregating 가중치를 매기지 않고 각각의 모델이 서로 독립적 x 데이터 열들의 서로 다른 조합으로 독립적인 모델을 여러 종류 생성 ex) Random Forest Random Forest # 각 모델은 서로 다른 샘플 데이터셋을 활용 (Bootstrap Sampling & Bagging) 각 데이터셋은 복원추출을 통해 원래 데이터셋 만큼의 크기로 샘플링 (누락 & 중복 발생) 위 서로 다른 샘플로 각 모델 생성 시, 각 노드 지점마다 x열 n개 중 랜덤하게 m개 중 분기 선택 Classification에서는 root n을 m으로 사용 Regression에서는 n/3을 m으로 사용 @ https://j.mp/3rZ05bN & https://j.mp/3GJ7QqH Learning Process # @ https://j.mp/3jRJH6n Import Libraries # Copy python import numpy as np import matplotlib.pyplot as plt from sklearn import ensemble from sklearn import datasets from sklearn.utils import shuffle from sklearn.metrics import mean_squared_error Load Data # Copy python boston = datasets.load_boston() X, y = shuffle(boston.data, boston.target, random_state=13) X = X.astype(np.float32) offset = int(X.shape[0] * 0.9) X_train, y_train = X[:offset], y[:offset] X_test, y_test = X[offset:], y[offset:] load 부분에서 다른 데이터도 사용 가능 boston.data: x data boston.target: y data int(X.shape[0] * 0.9): 전체 행 중 90 퍼센트 의미 boston.feature_names: 데이터셋에서 열 이름 boston.DESCR: 데이터에 대한 상세 설명 Model Fitting # Copy python params = {'n_estimators': 500, 'max_depth': 4, 'min_samples_split': 2, 'learning_rate': 0.01, 'loss': 'ls'} clf = ensemble.GradientBoostingRegressor(**params) clf.fit(X_train, y_train) mse = mean_squared_error(y_test, clf.predict(X_test)) print(&#34;MSE: %.4f&#34; % mse) **params: 딕셔너리를 파라미터로 변환 @ https://j.mp/2IPuJzY clf: Classifier Plot Deviance # Copy python test_score = np.zeros((params['n_estimators'],), dtype=np.float64) for i, y_pred in enumerate(clf.staged_predict(X_test)): test_score[i] = clf.loss_(y_test, y_pred) plt.figure(figsize=(12, 6)) plt.subplot(1, 2, 1) plt.title('Deviance') plt.plot(np.arange(params['n_estimators']) + 1, clf.train_score_, 'b-', label='Training Set Deviance') plt.plot(np.arange(params['n_estimators']) + 1, test_score, 'r-', label='Test Set Deviance') plt.legend(loc='upper right') plt.xlabel('Boosting Iterations') plt.ylabel('Deviance') Deviance: 편차값, 에러 n_estimators: 의사결정나무 모델을 몇 개 만들었는지 Test Data에 대한 에러 라인이 튕겨올라가는 지점이 Overfitting"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-04-13T20:51:00+09:00"><meta property="article:modified_time" content="2022-04-13T20:51:00+09:00"><meta property="article:tag" content="AI SCHOOL"><meta property="article:tag" content="멋쟁이사자처럼"><meta property="article:tag" content="코드라이언"><meta property="article:tag" content="Machine Learning"><meta property="article:tag" content="Gradient Boosting"><title>[AI SCHOOL 5기] 머신 러닝 실습 - Gradient Boosting | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/blog/aischool-06-03-gradient-boosting/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.97bd2c69bb66aba393499c7ad9ff319905e14e001ef050bf45d8b47a9c6d9278.js integrity="sha256-l70sabtmq6OTSZx62f8xmQXhTgAe8FC/Rdi0epxtkng=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/blog/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/blog/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/blog/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#decision-tree>Decision Tree</a></li><li><a href=#adaboost>AdaBoost</a></li><li><a href=#xg-boost-references>XG Boost References</a></li></ul><ul><li><a href=#boosting>Boosting</a></li><li><a href=#gradient-boosting>Gradient Boosting</a></li><li><a href=#bagging>Bagging</a></li><li><a href=#random-forest>Random Forest</a></li></ul><ul><li><a href=#import-libraries>Import Libraries</a></li><li><a href=#load-data>Load Data</a></li><li><a href=#model-fitting>Model Fitting</a></li></ul><ul><li><a href=#feature-importance-references>Feature Importance References</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/study/ai-school/ class=post-header-category-link>Study/AI SCHOOL</a></div><h1 class=post-header-title>[AI SCHOOL 5기] 머신 러닝 실습 - Gradient Boosting</h1><div class=post-header-date><time datetime=2022-04-13T20:51:00+09:00>2022. 4. 13. 20:51</time></div></header><h1 id=xg-boost>XG Boost
+<a class=anchor href=#xg-boost>#</a></h1><ul><li>Extreme Gradient Boosting</li><li>대용량 분산 처리를 위한 Gradient Boosting 라이브러리</li><li><strong>Decision Tree(의사결정나무)</strong> 에 <strong>Boosting</strong> 기법을 적용한 알고리즘</li><li><strong>AdaBoost</strong>는 학습 성능은 좋으나, 모델의 학습 시간이 오래 걸리는 단점</li><li>병렬 처리 기법을 적용하여 <strong>Gradient Boost</strong>보다 학습 속도를 끌어올림</li><li>Hyper-Parameter가 너무 많기 때문에 권장 세팅 사용 @ <a href=http://j.mp/2PukeTS>http://j.mp/2PukeTS</a></li></ul><h2 id=decision-tree>Decision Tree
+<a class=anchor href=#decision-tree>#</a></h2><ul><li>이해하기 쉽고 해석도 용이함</li><li>입력 데이터의 작은 변동에도 Tree의 구성이 크게 달라짐</li><li>과적합이 쉽게 발생 (중간에 멈추지 않으면 Leaf 노드에 하나의 데이터만 남게 됨)</li><li>의사결정나무의 문제를 해결하기 위해 <strong>Boosting</strong> 기법 활용</li><li>ex) 테니스를 쳤던 과거 데이터를 보고 날씨 정보를 이용해 의사결정</li></ul><h2 id=adaboost>AdaBoost
+<a class=anchor href=#adaboost>#</a></h2><ul><li>Adaptive Boosting</li><li>데이터를 바탕으로 여러 weak learner 들을 반복적으로 생성</li><li>앞선 learner가 잘못 예측한 데이터에 가중치를 부여하고 학습</li><li>최종적으로 만들어진 strong learner를 이용하여 실제 예측 진행</li><li>에러를 최소화하는 weight를 매기기 위해 <strong>경사 하강법</strong> 사용</li><li>ex) Regression: 평균/가중평균, Classification: 투표</li></ul><h2 id=xg-boost-references>XG Boost References
+<a class=anchor href=#xg-boost-references>#</a></h2><ul><li><a href=http://j.mp/2WzoyTl>NGBoost Explained (Comparison to LightGBM and XGBoost)</a></li><li><a href=http://j.mp/34xfO2Y>Gradient Boosting Interactive Playground</a></li><li><a href=http://j.mp/34z8BiK>Gradient Boosting explained</a></li><li><a href=http://j.mp/2PukeTS>Comparison for hyperparams of XGBoost & LightGBM</a></li><li><a href=https://goo.gl/9fD4G9>XGBoost Parameters</a></li><li><a href=https://goo.gl/1hWjNT>XG Boost 하이퍼 파라미터 상세 설명</a></li><li><a href=https://goo.gl/rvWfXY>Complete Guide to Parameter Tuning in XGBoost (with python codes)</a></li><li><a href=https://j.mp/3wBIyWx>Microsoft EBM (Explainable Boosting Machine)</a></li><li><a href=https://j.mp/38ABU8e>정형데이터를 위한 인공신경망 모델, TabNet</a></li></ul><hr><h1 id=ensemble>Ensemble
+<a class=anchor href=#ensemble>#</a></h1><ul><li>주어진 데이터를 이용하여 여러 개의 서로 다른 예측 모형을 생성한 후,<br>예측 모형의 예측 결과를 종합하여 하나의 최종 예측결과를 도출해내는 방법</li><li>다양한 모델이 문제 공간의 다른 측면을 보면서 각기 다른 방식으로 오점이 있다고 가정<br>(모델 별로 약점을 보완)</li></ul><h2 id=boosting>Boosting
+<a class=anchor href=#boosting>#</a></h2><ul><li>weak learner들을 strong learner로 변환시키는 알고리즘<br>(약한 학습기를 여러개 사용해서 하나의 강건한 학습기를 만들어내는 것)</li><li>의사결정나무 모델을 합리적인 수준(60~70% 성능)에서 여러 종류 생성</li><li>ex) AdaBoost</li></ul><h2 id=gradient-boosting>Gradient Boosting
+<a class=anchor href=#gradient-boosting>#</a></h2><ul><li>경사 하강법을 사용해서 AdaBoost보다 성능을 개선한 Boosting 기법</li><li>AdaBoost는 높은 가중치를 가진 지점이 존재하게 되면 성능이 크게 떨어지는 단점<br>(높은 가중치를 가진 지점과 가까운 다른 데이터들이 잘못 분류될 가능성이 높음)</li><li>Gradient Boosting 기법은 이전 모델에 종속적이기 때문에 병렬 처리가 불가능</li></ul><h2 id=bagging>Bagging
+<a class=anchor href=#bagging>#</a></h2><ul><li>Bootstrap Aggregating</li><li>가중치를 매기지 않고 각각의 모델이 서로 독립적</li><li>x 데이터 열들의 서로 다른 조합으로 독립적인 모델을 여러 종류 생성</li><li>ex) Random Forest</li></ul><h2 id=random-forest>Random Forest
+<a class=anchor href=#random-forest>#</a></h2><ul><li>각 모델은 서로 다른 샘플 데이터셋을 활용 (Bootstrap Sampling & Bagging)</li><li>각 데이터셋은 복원추출을 통해 원래 데이터셋 만큼의 크기로 샘플링 (누락 & 중복 발생)</li><li>위 서로 다른 샘플로 각 모델 생성 시, 각 노드 지점마다 x열 n개 중 랜덤하게 m개 중 분기 선택</li><li>Classification에서는 root n을 m으로 사용</li><li>Regression에서는 n/3을 m으로 사용</li><li>@ <a href=https://j.mp/3rZ05bN>https://j.mp/3rZ05bN</a> & <a href=https://j.mp/3GJ7QqH>https://j.mp/3GJ7QqH</a></li></ul><hr><h1 id=learning-process>Learning Process
+<a class=anchor href=#learning-process>#</a></h1><ul><li>@ <a href=https://j.mp/3jRJH6n>https://j.mp/3jRJH6n</a></li></ul><h2 id=import-libraries>Import Libraries
+<a class=anchor href=#import-libraries>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.pyplot</span> <span class=k>as</span> <span class=nn>plt</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn</span> <span class=kn>import</span> <span class=n>ensemble</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn</span> <span class=kn>import</span> <span class=n>datasets</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn.utils</span> <span class=kn>import</span> <span class=n>shuffle</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>mean_squared_error</span></span></span></code></pre></div></div><h2 id=load-data>Load Data
+<a class=anchor href=#load-data>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>boston</span> <span class=o>=</span> <span class=n>datasets</span><span class=o>.</span><span class=n>load_boston</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>X</span><span class=p>,</span> <span class=n>y</span> <span class=o>=</span> <span class=n>shuffle</span><span class=p>(</span><span class=n>boston</span><span class=o>.</span><span class=n>data</span><span class=p>,</span> <span class=n>boston</span><span class=o>.</span><span class=n>target</span><span class=p>,</span> <span class=n>random_state</span><span class=o>=</span><span class=mi>13</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>X</span> <span class=o>=</span> <span class=n>X</span><span class=o>.</span><span class=n>astype</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>float32</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>offset</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=n>X</span><span class=o>.</span><span class=n>shape</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>*</span> <span class=mf>0.9</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>X_train</span><span class=p>,</span> <span class=n>y_train</span> <span class=o>=</span> <span class=n>X</span><span class=p>[:</span><span class=n>offset</span><span class=p>],</span> <span class=n>y</span><span class=p>[:</span><span class=n>offset</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>X_test</span><span class=p>,</span> <span class=n>y_test</span> <span class=o>=</span> <span class=n>X</span><span class=p>[</span><span class=n>offset</span><span class=p>:],</span> <span class=n>y</span><span class=p>[</span><span class=n>offset</span><span class=p>:]</span></span></span></code></pre></div></div><ul><li><code>load</code> 부분에서 다른 데이터도 사용 가능</li><li><code>boston.data</code>: x data</li><li><code>boston.target</code>: y data</li><li><code>int(X.shape[0] * 0.9)</code>: 전체 행 중 90 퍼센트 의미</li><li><code>boston.feature_names</code>: 데이터셋에서 열 이름</li><li><code>boston.DESCR</code>: 데이터에 대한 상세 설명</li></ul><h2 id=model-fitting>Model Fitting
+<a class=anchor href=#model-fitting>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>params</span> <span class=o>=</span> <span class=p>{</span><span class=s1>&#39;n_estimators&#39;</span><span class=p>:</span> <span class=mi>500</span><span class=p>,</span> <span class=s1>&#39;max_depth&#39;</span><span class=p>:</span> <span class=mi>4</span><span class=p>,</span> <span class=s1>&#39;min_samples_split&#39;</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=s1>&#39;learning_rate&#39;</span><span class=p>:</span> <span class=mf>0.01</span><span class=p>,</span> <span class=s1>&#39;loss&#39;</span><span class=p>:</span> <span class=s1>&#39;ls&#39;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>clf</span> <span class=o>=</span> <span class=n>ensemble</span><span class=o>.</span><span class=n>GradientBoostingRegressor</span><span class=p>(</span><span class=o>**</span><span class=n>params</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>clf</span><span class=o>.</span><span class=n>fit</span><span class=p>(</span><span class=n>X_train</span><span class=p>,</span> <span class=n>y_train</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>mse</span> <span class=o>=</span> <span class=n>mean_squared_error</span><span class=p>(</span><span class=n>y_test</span><span class=p>,</span> <span class=n>clf</span><span class=o>.</span><span class=n>predict</span><span class=p>(</span><span class=n>X_test</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MSE: </span><span class=si>%.4f</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=n>mse</span><span class=p>)</span></span></span></code></pre></div></div><ul><li><code>**params</code>: 딕셔너리를 파라미터로 변환 @ <a href=https://j.mp/2IPuJzY>https://j.mp/2IPuJzY</a></li><li><code>clf</code>: Classifier</li></ul><hr><h1 id=plot-deviance>Plot Deviance
+<a class=anchor href=#plot-deviance>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>test_score</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>zeros</span><span class=p>((</span><span class=n>params</span><span class=p>[</span><span class=s1>&#39;n_estimators&#39;</span><span class=p>],),</span> <span class=n>dtype</span><span class=o>=</span><span class=n>np</span><span class=o>.</span><span class=n>float64</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span><span class=p>,</span> <span class=n>y_pred</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>clf</span><span class=o>.</span><span class=n>staged_predict</span><span class=p>(</span><span class=n>X_test</span><span class=p>)):</span>
+</span></span><span class=line><span class=cl>    <span class=n>test_score</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>clf</span><span class=o>.</span><span class=n>loss_</span><span class=p>(</span><span class=n>y_test</span><span class=p>,</span> <span class=n>y_pred</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>figure</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>12</span><span class=p>,</span> <span class=mi>6</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>subplot</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Deviance&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>arange</span><span class=p>(</span><span class=n>params</span><span class=p>[</span><span class=s1>&#39;n_estimators&#39;</span><span class=p>])</span> <span class=o>+</span> <span class=mi>1</span><span class=p>,</span> <span class=n>clf</span><span class=o>.</span><span class=n>train_score_</span><span class=p>,</span> <span class=s1>&#39;b-&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>         <span class=n>label</span><span class=o>=</span><span class=s1>&#39;Training Set Deviance&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>arange</span><span class=p>(</span><span class=n>params</span><span class=p>[</span><span class=s1>&#39;n_estimators&#39;</span><span class=p>])</span> <span class=o>+</span> <span class=mi>1</span><span class=p>,</span> <span class=n>test_score</span><span class=p>,</span> <span class=s1>&#39;r-&#39;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>         <span class=n>label</span><span class=o>=</span><span class=s1>&#39;Test Set Deviance&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>legend</span><span class=p>(</span><span class=n>loc</span><span class=o>=</span><span class=s1>&#39;upper right&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>xlabel</span><span class=p>(</span><span class=s1>&#39;Boosting Iterations&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>ylabel</span><span class=p>(</span><span class=s1>&#39;Deviance&#39;</span><span class=p>)</span></span></span></code></pre></div></div><ul><li>Deviance: 편차값, 에러</li><li><code>n_estimators</code>: 의사결정나무 모델을 몇 개 만들었는지</li><li>Test Data에 대한 에러 라인이 튕겨올라가는 지점이 Overfitting</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/03-gradient-boosting/deviance.png?raw=true" alt=deviance></p><h1 id=plot-feature-importance>Plot Feature Importance
+<a class=anchor href=#plot-feature-importance>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>feature_importance</span> <span class=o>=</span> <span class=n>clf</span><span class=o>.</span><span class=n>feature_importances_</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>feature_importance</span> <span class=o>=</span> <span class=mf>100.0</span> <span class=o>*</span> <span class=p>(</span><span class=n>feature_importance</span> <span class=o>/</span> <span class=n>feature_importance</span><span class=o>.</span><span class=n>max</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>sorted_idx</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>argsort</span><span class=p>(</span><span class=n>feature_importance</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>pos</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>arange</span><span class=p>(</span><span class=n>sorted_idx</span><span class=o>.</span><span class=n>shape</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span> <span class=o>+</span> <span class=mf>.5</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>subplot</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>barh</span><span class=p>(</span><span class=n>pos</span><span class=p>,</span> <span class=n>feature_importance</span><span class=p>[</span><span class=n>sorted_idx</span><span class=p>],</span> <span class=n>align</span><span class=o>=</span><span class=s1>&#39;center&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>yticks</span><span class=p>(</span><span class=n>pos</span><span class=p>,</span> <span class=n>boston</span><span class=o>.</span><span class=n>feature_names</span><span class=p>[</span><span class=n>sorted_idx</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>xlabel</span><span class=p>(</span><span class=s1>&#39;Relative Importance&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Variable Importance&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><ul><li><code>feature_importances_</code>: 트리 기반 모델이 가지고 있는 변수, 각각의 열마다의 중요도</li><li>Feature Importance는 상대적인 중요도이기 때문에 합계가 1</li><li>LSTAT(인구 중 하위 계층 비율)이 집값을 예측할 때 가장 중요함</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/03-gradient-boosting/variable-importance.png?raw=true" alt=variable-importance></p><h2 id=feature-importance-references>Feature Importance References
+<a class=anchor href=#feature-importance-references>#</a></h2><ul><li><a href=https://goo.gl/dvoMao>Feature Importance Analysis (LIME)</a></li><li><a href=https://j.mp/3AVL6B9>Permutation importance 한글 설명</a></li><li><a href=https://j.mp/3um5M2F>Permutation importance with Pipeline</a></li></ul></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/ai-school/ class=tag>#AI SCHOOL</a>
+<a href=/tags/%EB%A9%8B%EC%9F%81%EC%9D%B4%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC/ class=tag>#멋쟁이사자처럼</a>
+<a href=/tags/%EC%BD%94%EB%93%9C%EB%9D%BC%EC%9D%B4%EC%96%B8/ class=tag>#코드라이언</a>
+<a href=/tags/machine-learning/ class=tag>#Machine Learning</a>
+<a href=/tags/gradient-boosting/ class=tag>#Gradient Boosting</a></div><div class=post-navigation><a href=/blog/aischool-06-04-knn/ class="post-nav-link post-nav-prev"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>[AI SCHOOL 5기] 머신 러닝 실습 - KNN</span>
+</a><a href=/blog/aischool-06-02-logistic-regression/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>[AI SCHOOL 5기] 머신 러닝 실습 - 로지스틱 회귀</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/blog/aischool-06-03-gradient-boosting/",this.page.identifier="https://minyeamer.github.io/blog/aischool-06-03-gradient-boosting/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/blog/aischool-06-03-gradient-boosting/",this.page.identifier="https://minyeamer.github.io/blog/aischool-06-03-gradient-boosting/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#decision-tree>Decision Tree</a></li><li><a href=#adaboost>AdaBoost</a></li><li><a href=#xg-boost-references>XG Boost References</a></li></ul><ul><li><a href=#boosting>Boosting</a></li><li><a href=#gradient-boosting>Gradient Boosting</a></li><li><a href=#bagging>Bagging</a></li><li><a href=#random-forest>Random Forest</a></li></ul><ul><li><a href=#import-libraries>Import Libraries</a></li><li><a href=#load-data>Load Data</a></li><li><a href=#model-fitting>Model Fitting</a></li></ul><ul><li><a href=#feature-importance-references>Feature Importance References</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

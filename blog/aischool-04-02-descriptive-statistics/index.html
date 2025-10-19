@@ -1,0 +1,174 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="AI SCHOOL,멋쟁이사자처럼,코드라이언,Statistics"><meta name=description content="Chart
+  #
+Pie Chart
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  df['column'].value_counts().plot(kind = 'pie')
+
+Bar Chart
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  df['column'].value_counts().plot(kind = 'bar')
+
+
+Descriptive Statistics
+  #
+
+df['column'].max(): 최댓값 (행방향 기준: axis=1)
+df['column'].min(): 최솟값
+df['column'].sum(): 합계
+df['column'].mean(): 평균
+df['column'].variance(): 분산
+df['column'].std(): 표준편차
+df['column'].describe(): 기술통계량
+
+
+분포의 왜도와 첨도
+  #
+
+df['column'].hist(): 히스토그램
+
+
+
+df['column'].skew(): 왜도 (분포가 좌우로 치우쳐진 정도)
+왜도(Skewness): 0에 가까울수록 정규분포 (절대값 기준 3 미초과)
+우측으로 치우치면 음(negative)의 왜도, 좌측으로 치우치면 양(positive)의 왜도
+df['column'].kurtosis(): 첨도 (분포가 뾰족한 정도)
+첨도(Kurtosis): 1에 가까울수록 정규분포 (절대값 기준 8 또는 10 미초과)
+왜도가 0, 정도가 1일 때 완전한 정규분포로 가정
+sns.distplot(df['column'], rug=True): distribution plot
+rug: 막대 그래프를 표시할지 여부
+
+"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="[AI SCHOOL 5기] 통계분석 실습 - 빈도 분석 & 기술통계량 분석"><meta property="og:description" content="Chart # Pie Chart # Copy python df['column'].value_counts().plot(kind = 'pie') Bar Chart # Copy python df['column'].value_counts().plot(kind = 'bar') Descriptive Statistics # df['column'].max(): 최댓값 (행방향 기준: axis=1) df['column'].min(): 최솟값 df['column'].sum(): 합계 df['column'].mean(): 평균 df['column'].variance(): 분산 df['column'].std(): 표준편차 df['column'].describe(): 기술통계량 분포의 왜도와 첨도 # df['column'].hist(): 히스토그램 df['column'].skew(): 왜도 (분포가 좌우로 치우쳐진 정도) 왜도(Skewness): 0에 가까울수록 정규분포 (절대값 기준 3 미초과)
+우측으로 치우치면 음(negative)의 왜도, 좌측으로 치우치면 양(positive)의 왜도 df['column'].kurtosis(): 첨도 (분포가 뾰족한 정도) 첨도(Kurtosis): 1에 가까울수록 정규분포 (절대값 기준 8 또는 10 미초과) 왜도가 0, 정도가 1일 때 완전한 정규분포로 가정 sns.distplot(df['column'], rug=True): distribution plot
+rug: 막대 그래프를 표시할지 여부"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-04-02T22:09:00+09:00"><meta property="article:modified_time" content="2022-04-02T22:09:00+09:00"><meta property="article:tag" content="AI SCHOOL"><meta property="article:tag" content="멋쟁이사자처럼"><meta property="article:tag" content="코드라이언"><meta property="article:tag" content="Statistics"><title>[AI SCHOOL 5기] 통계분석 실습 - 빈도 분석 & 기술통계량 분석 | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.97bd2c69bb66aba393499c7ad9ff319905e14e001ef050bf45d8b47a9c6d9278.js integrity="sha256-l70sabtmq6OTSZx62f8xmQXhTgAe8FC/Rdi0epxtkng=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/blog/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/blog/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/blog/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#pie-chart>Pie Chart</a></li><li><a href=#bar-chart>Bar Chart</a></li></ul><ul><li><a href=#iqr-활용>IQR 활용</a></li><li><a href=#outlier-제거-전후-분포-비교>Outlier 제거 전후 분포 비교</a></li><li><a href=#histogram>Histogram</a></li><li><a href=#joint-plot>Joint-Plot</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/study/ai-school/ class=post-header-category-link>Study/AI SCHOOL</a></div><h1 class=post-header-title>[AI SCHOOL 5기] 통계분석 실습 - 빈도 분석 & 기술통계량 분석</h1><div class=post-header-date><time datetime=2022-04-02T22:09:00+09:00>2022. 4. 2. 22:09</time></div></header><h1 id=chart>Chart
+<a class=anchor href=#chart>#</a></h1><h2 id=pie-chart>Pie Chart
+<a class=anchor href=#pie-chart>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>df</span><span class=p>[</span><span class=s1>&#39;column&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>value_counts</span><span class=p>()</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>kind</span> <span class=o>=</span> <span class=s1>&#39;pie&#39;</span><span class=p>)</span></span></span></code></pre></div></div><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/pie-chart.png?raw=true" alt=pie-chart></p><h2 id=bar-chart>Bar Chart
+<a class=anchor href=#bar-chart>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>df</span><span class=p>[</span><span class=s1>&#39;column&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>value_counts</span><span class=p>()</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>kind</span> <span class=o>=</span> <span class=s1>&#39;bar&#39;</span><span class=p>)</span></span></span></code></pre></div></div><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/bar-chart.png?raw=true" alt=bar-chart></p><hr><h1 id=descriptive-statistics>Descriptive Statistics
+<a class=anchor href=#descriptive-statistics>#</a></h1><ul><li><code>df['column'].max()</code>: 최댓값 (행방향 기준: <code>axis=1</code>)</li><li><code>df['column'].min()</code>: 최솟값</li><li><code>df['column'].sum()</code>: 합계</li><li><code>df['column'].mean()</code>: 평균</li><li><code>df['column'].variance()</code>: 분산</li><li><code>df['column'].std()</code>: 표준편차</li><li><code>df['column'].describe()</code>: 기술통계량</li></ul><hr><h1 id=분포의-왜도와-첨도>분포의 왜도와 첨도
+<a class=anchor href=#%eb%b6%84%ed%8f%ac%ec%9d%98-%ec%99%9c%eb%8f%84%ec%99%80-%ec%b2%a8%eb%8f%84>#</a></h1><ul><li><code>df['column'].hist()</code>: 히스토그램</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/job-histogram.png?raw=true" alt=job-histogram></p><ul><li><code>df['column'].skew()</code>: 왜도 (분포가 좌우로 치우쳐진 정도)</li><li>왜도(Skewness): 0에 가까울수록 정규분포 (절대값 기준 3 미초과)<br>우측으로 치우치면 음(negative)의 왜도, 좌측으로 치우치면 양(positive)의 왜도</li><li><code>df['column'].kurtosis()</code>: 첨도 (분포가 뾰족한 정도)</li><li>첨도(Kurtosis): 1에 가까울수록 정규분포 (절대값 기준 8 또는 10 미초과)</li><li>왜도가 0, 정도가 1일 때 <strong>완전한 정규분포</strong>로 가정</li><li><code>sns.distplot(df['column'], rug=True)</code>: distribution plot<br><code>rug</code>: 막대 그래프를 표시할지 여부</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/sns-plot.png?raw=true" alt=sns-plot></p><ul><li><code>sns.jointplot(x='column1', y='column2', data=df)</code>: 산점도와 히스토그램 한번에 표시</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/joint-plot.png?raw=true" alt=joint-plot></p><ul><li><code>sns.jointplot(..., kind="kde")</code>: 밀집된 분포 곡선을 표시</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/kde-plot.png?raw=true" alt=kde-plot></p><hr><h1 id=outlier-탐지-및-제거>Outlier 탐지 및 제거
+<a class=anchor href=#outlier-%ed%83%90%ec%a7%80-%eb%b0%8f-%ec%a0%9c%ea%b1%b0>#</a></h1><ul><li><code>df.boxplot(column='column')</code>: 데이터 전체에 걸쳐서 분포 밀집도를 표시</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/boxplot.png?raw=true" alt=boxplot></p><h2 id=iqr-활용>IQR 활용
+<a class=anchor href=#iqr-%ed%99%9c%ec%9a%a9>#</a></h2><ul><li>IQR(Inter-Quantile Range): 바닥부터 75% 지점의 값 - 바닥부터 25% 지점의 값</li><li>상한치: 바닥부터 75% 지점의 값 + IQR의 1.5배</li><li>하한치: 바닥부터 25% 지점의 값 - IQR의 1.5배</li><li>상한/하한치를 넘으면 Outlier로 판단</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>Q1</span> <span class=o>=</span> <span class=n>df</span><span class=p>[</span><span class=s1>&#39;column&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>quantile</span><span class=p>(</span><span class=mf>0.25</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>Q3</span> <span class=o>=</span> <span class=n>df</span><span class=p>[</span><span class=s1>&#39;column&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>quantile</span><span class=p>(</span><span class=mf>0.75</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>IQR</span> <span class=o>=</span> <span class=n>Q3</span> <span class=o>-</span> <span class=n>Q1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>df_IQR</span> <span class=o>=</span> <span class=n>df</span><span class=p>[</span> <span class=p>(</span><span class=n>df</span><span class=p>[</span><span class=s1>&#39;column&#39;</span><span class=p>]</span> <span class=o>&lt;</span> <span class=n>Q3</span> <span class=o>+</span> <span class=n>IQR</span> <span class=o>*</span> <span class=mf>1.5</span><span class=p>)</span> <span class=o>&amp;</span> <span class=p>(</span><span class=n>df</span><span class=p>[</span><span class=s1>&#39;column&#39;</span><span class=p>]</span> <span class=o>&gt;</span> <span class=n>Q1</span> <span class=o>-</span> <span class=n>IQR</span> <span class=o>*</span> <span class=mf>1.5</span><span class=p>)</span> <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>df_IQR</span><span class=o>.</span><span class=n>boxplot</span><span class=p>(</span><span class=n>column</span><span class=o>=</span><span class=s1>&#39;column&#39;</span><span class=p>)</span></span></span></code></pre></div></div><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/outlier-boxplot.png?raw=true" alt=outlier-boxplot></p><h2 id=outlier-제거-전후-분포-비교>Outlier 제거 전후 분포 비교
+<a class=anchor href=#outlier-%ec%a0%9c%ea%b1%b0-%ec%a0%84%ed%9b%84-%eb%b6%84%ed%8f%ac-%eb%b9%84%ea%b5%90>#</a></h2><h2 id=histogram>Histogram
+<a class=anchor href=#histogram>#</a></h2><table><thead><tr><th style=text-align:center>Before</th><th style=text-align:center>After</th></tr></thead><tbody><tr><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/before.png?raw=true" alt=before></td><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/after.png?raw=true" alt=after></td></tr></tbody></table><h2 id=joint-plot>Joint-Plot
+<a class=anchor href=#joint-plot>#</a></h2><table><thead><tr><th style=text-align:center>Before</th><th style=text-align:center>After</th></tr></thead><tbody><tr><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/jointplot-before.png?raw=true" alt=jointplot-before></td><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/jointplot-after.png?raw=true" alt=jointplot-after></td></tr></tbody></table><hr><h1 id=log-함수를-활용한-데이터-스케일링>Log 함수를 활용한 데이터 스케일링
+<a class=anchor href=#log-%ed%95%a8%ec%88%98%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%8a%a4%ec%bc%80%ec%9d%bc%eb%a7%81>#</a></h1><ul><li>왜도 혹은 첨도가 너무 큰 경우, Log 함수를 적용해 왜도/첨도를 낮춰주는 전처리를 적용</li><li><code>processed_df['log_column'] = np.log(processed_df['column'])</code></li></ul><table><thead><tr><th style=text-align:center>Before</th><th style=text-align:center>After</th></tr></thead><tbody><tr><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/log-before.png?raw=true" alt=log-before></td><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/02-descriptive-statistics/log-after.png?raw=true" alt=log-after></td></tr></tbody></table></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/ai-school/ class=tag>#AI SCHOOL</a>
+<a href=/tags/%EB%A9%8B%EC%9F%81%EC%9D%B4%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC/ class=tag>#멋쟁이사자처럼</a>
+<a href=/tags/%EC%BD%94%EB%93%9C%EB%9D%BC%EC%9D%B4%EC%96%B8/ class=tag>#코드라이언</a>
+<a href=/tags/statistics/ class=tag>#Statistics</a></div><div class=post-navigation><a href=/blog/aischool-04-03-test-statistics/ class="post-nav-link post-nav-prev"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>[AI SCHOOL 5기] 통계분석 실습 - T-Test & 상관관계 분석</span>
+</a><a href=/blog/aischool-04-01-numpy-pandas/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>[AI SCHOOL 5기] 통계분석 실습 - Numpy & Pandas</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/",this.page.identifier="https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/",this.page.identifier="https://minyeamer.github.io/blog/aischool-04-02-descriptive-statistics/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#pie-chart>Pie Chart</a></li><li><a href=#bar-chart>Bar Chart</a></li></ul><ul><li><a href=#iqr-활용>IQR 활용</a></li><li><a href=#outlier-제거-전후-분포-비교>Outlier 제거 전후 분포 비교</a></li><li><a href=#histogram>Histogram</a></li><li><a href=#joint-plot>Joint-Plot</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

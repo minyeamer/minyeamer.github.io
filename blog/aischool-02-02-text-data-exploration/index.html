@@ -1,0 +1,314 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="AI SCHOOL,멋쟁이사자처럼,코드라이언,Text Analysis"><meta name=description content="Tokenizing Text Data
+  #
+Import Libraries
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  import nltk
+from nltk.corpus import stopwords
+from collections import Counter
+Set Stopwords
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  stop_words = stopwords.words(&#34;english&#34;)
+stop_words.append(',')
+stop_words.append('.')
+stop_words.append('’')
+stop_words.append('”')
+stop_words.append('—')
+Open Text Data
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  file = open('movie_review.txt', 'r', encoding=&#34;utf-8&#34;)
+lines = file.readlines()
+Tokenize
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  tokens = []
+for line in lines:
+    tokenized = nltk.word_tokenize(line)
+    for token in tokenized:
+        if token.lower() not in stop_words:
+            tokens.append(token)
+
+Counting Nouns
+  #
+POS Tagging
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  tags = nltk.pos_tag(tokens)
+
+word_list = []
+for word, tag in tags:
+    if tag.startswith('N'):
+        word_list.append(word.lower())
+Counting Nouns
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  counts = Counter(word_list)
+print(counts.most_common(10))
+
+
+  Output"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 데이터 분석"><meta property="og:description" content="Tokenizing Text Data # Import Libraries # Copy python import nltk from nltk.corpus import stopwords from collections import Counter Set Stopwords # Copy python stop_words = stopwords.words(&#34;english&#34;) stop_words.append(',') stop_words.append('.') stop_words.append('’') stop_words.append('”') stop_words.append('—') Open Text Data # Copy python file = open('movie_review.txt', 'r', encoding=&#34;utf-8&#34;) lines = file.readlines() Tokenize # Copy python tokens = [] for line in lines: tokenized = nltk.word_tokenize(line) for token in tokenized: if token.lower() not in stop_words: tokens.append(token) Counting Nouns # POS Tagging # Copy python tags = nltk.pos_tag(tokens) word_list = [] for word, tag in tags: if tag.startswith('N'): word_list.append(word.lower()) Counting Nouns # Copy python counts = Counter(word_list) print(counts.most_common(10)) Output"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-03-25T19:09:00+09:00"><meta property="article:modified_time" content="2022-03-25T19:09:00+09:00"><meta property="article:tag" content="AI SCHOOL"><meta property="article:tag" content="멋쟁이사자처럼"><meta property="article:tag" content="코드라이언"><meta property="article:tag" content="Text Analysis"><title>[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 데이터 분석 | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.97bd2c69bb66aba393499c7ad9ff319905e14e001ef050bf45d8b47a9c6d9278.js integrity="sha256-l70sabtmq6OTSZx62f8xmQXhTgAe8FC/Rdi0epxtkng=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/blog/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/blog/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/blog/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#import-libraries>Import Libraries</a></li><li><a href=#set-stopwords>Set Stopwords</a></li><li><a href=#open-text-data>Open Text Data</a></li><li><a href=#tokenize>Tokenize</a></li></ul><ul><li><a href=#pos-tagging>POS Tagging</a></li><li><a href=#counting-nouns-1>Counting Nouns</a></li></ul><ul><li><a href=#pos-tagging-1>POS Tagging</a></li><li><a href=#counting-adjectives-1>Counting Adjectives</a></li></ul><ul><li><a href=#pos-tagging-2>POS Tagging</a></li><li><a href=#counting-verbs-1>Counting Verbs</a></li></ul><ul><li><a href=#import-libraries-1>Import Libraries</a></li><li><a href=#정규표현식으로-토큰-분류>정규표현식으로 토큰 분류</a></li><li><a href=#visualizing-tokens-1>Visualizing Tokens</a></li><li><a href=#top-25-words-chart>Top 25 Words Chart</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/study/ai-school/ class=post-header-category-link>Study/AI SCHOOL</a></div><h1 class=post-header-title>[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 데이터 분석</h1><div class=post-header-date><time datetime=2022-03-25T19:09:00+09:00>2022. 3. 25. 19:09</time></div></header><h1 id=tokenizing-text-data>Tokenizing Text Data
+<a class=anchor href=#tokenizing-text-data>#</a></h1><h2 id=import-libraries>Import Libraries
+<a class=anchor href=#import-libraries>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>nltk</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>nltk.corpus</span> <span class=kn>import</span> <span class=n>stopwords</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>collections</span> <span class=kn>import</span> <span class=n>Counter</span></span></span></code></pre></div></div><h2 id=set-stopwords>Set Stopwords
+<a class=anchor href=#set-stopwords>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>stop_words</span> <span class=o>=</span> <span class=n>stopwords</span><span class=o>.</span><span class=n>words</span><span class=p>(</span><span class=s2>&#34;english&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>stop_words</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=s1>&#39;,&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>stop_words</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=s1>&#39;.&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>stop_words</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=s1>&#39;’&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>stop_words</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=s1>&#39;”&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>stop_words</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=s1>&#39;—&#39;</span><span class=p>)</span></span></span></code></pre></div></div><h2 id=open-text-data>Open Text Data
+<a class=anchor href=#open-text-data>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>file</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=s1>&#39;movie_review.txt&#39;</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>,</span> <span class=n>encoding</span><span class=o>=</span><span class=s2>&#34;utf-8&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>lines</span> <span class=o>=</span> <span class=n>file</span><span class=o>.</span><span class=n>readlines</span><span class=p>()</span></span></span></code></pre></div></div><h2 id=tokenize>Tokenize
+<a class=anchor href=#tokenize>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>tokens</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>line</span> <span class=ow>in</span> <span class=n>lines</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>tokenized</span> <span class=o>=</span> <span class=n>nltk</span><span class=o>.</span><span class=n>word_tokenize</span><span class=p>(</span><span class=n>line</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>token</span> <span class=ow>in</span> <span class=n>tokenized</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>token</span><span class=o>.</span><span class=n>lower</span><span class=p>()</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>stop_words</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>tokens</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>token</span><span class=p>)</span></span></span></code></pre></div></div><hr><h1 id=counting-nouns>Counting Nouns
+<a class=anchor href=#counting-nouns>#</a></h1><h2 id=pos-tagging>POS Tagging
+<a class=anchor href=#pos-tagging>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>tags</span> <span class=o>=</span> <span class=n>nltk</span><span class=o>.</span><span class=n>pos_tag</span><span class=p>(</span><span class=n>tokens</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>word_list</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>word</span><span class=p>,</span> <span class=n>tag</span> <span class=ow>in</span> <span class=n>tags</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>tag</span><span class=o>.</span><span class=n>startswith</span><span class=p>(</span><span class=s1>&#39;N&#39;</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>word_list</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>word</span><span class=o>.</span><span class=n>lower</span><span class=p>())</span></span></span></code></pre></div></div><h2 id=counting-nouns-1>Counting Nouns
+<a class=anchor href=#counting-nouns-1>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>counts</span> <span class=o>=</span> <span class=n>Counter</span><span class=p>(</span><span class=n>word_list</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>counts</span><span class=o>.</span><span class=n>most_common</span><span class=p>(</span><span class=mi>10</span><span class=p>))</span></span></span></code></pre></div></div><blockquote class=book-hint><p><strong>Output</strong></p></blockquote><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=p>[(</span><span class=s1>&#39;movie&#39;</span><span class=p>,</span> <span class=mi>406</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;batman&#39;</span><span class=p>,</span> <span class=mi>303</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;film&#39;</span><span class=p>,</span> <span class=mi>284</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;joker&#39;</span><span class=p>,</span> <span class=mi>219</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;dark&#39;</span><span class=p>,</span> <span class=mi>136</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;ledger&#39;</span><span class=p>,</span> <span class=mi>131</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;knight&#39;</span><span class=p>,</span> <span class=mi>124</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;time&#39;</span><span class=p>,</span> <span class=mi>112</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;heath&#39;</span><span class=p>,</span> <span class=mi>110</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;performance&#39;</span><span class=p>,</span> <span class=mi>87</span><span class=p>)]</span></span></span></code></pre></div></div><hr><h1 id=counting-adjectives>Counting Adjectives
+<a class=anchor href=#counting-adjectives>#</a></h1><h2 id=pos-tagging-1>POS Tagging
+<a class=anchor href=#pos-tagging-1>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>tags</span> <span class=o>=</span> <span class=n>nltk</span><span class=o>.</span><span class=n>pos_tag</span><span class=p>(</span><span class=n>tokens</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>word_list</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>word</span><span class=p>,</span> <span class=n>tag</span> <span class=ow>in</span> <span class=n>tags</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>tag</span><span class=o>.</span><span class=n>startswith</span><span class=p>(</span><span class=s1>&#39;J&#39;</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>word_list</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>word</span><span class=o>.</span><span class=n>lower</span><span class=p>())</span></span></span></code></pre></div></div><h2 id=counting-adjectives-1>Counting Adjectives
+<a class=anchor href=#counting-adjectives-1>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>counts</span> <span class=o>=</span> <span class=n>Counter</span><span class=p>(</span><span class=n>word_list</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>counts</span><span class=o>.</span><span class=n>most_common</span><span class=p>(</span><span class=mi>10</span><span class=p>))</span></span></span></code></pre></div></div><blockquote class=book-hint><p><strong>Output</strong></p></blockquote><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=p>[(</span><span class=s1>&#39;good&#39;</span><span class=p>,</span> <span class=mi>141</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;best&#39;</span><span class=p>,</span> <span class=mi>102</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;great&#39;</span><span class=p>,</span> <span class=mi>78</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;many&#39;</span><span class=p>,</span> <span class=mi>54</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;much&#39;</span><span class=p>,</span> <span class=mi>52</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;comic&#39;</span><span class=p>,</span> <span class=mi>43</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;real&#39;</span><span class=p>,</span> <span class=mi>29</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;bad&#39;</span><span class=p>,</span> <span class=mi>28</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;little&#39;</span><span class=p>,</span> <span class=mi>26</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;new&#39;</span><span class=p>,</span> <span class=mi>25</span><span class=p>)]</span></span></span></code></pre></div></div><hr><h1 id=counting-verbs>Counting Verbs
+<a class=anchor href=#counting-verbs>#</a></h1><h2 id=pos-tagging-2>POS Tagging
+<a class=anchor href=#pos-tagging-2>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>tags</span> <span class=o>=</span> <span class=n>nltk</span><span class=o>.</span><span class=n>pos_tag</span><span class=p>(</span><span class=n>tokens</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>word_list</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>word</span><span class=p>,</span> <span class=n>tag</span> <span class=ow>in</span> <span class=n>tags</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>tag</span><span class=o>.</span><span class=n>startswith</span><span class=p>(</span><span class=s1>&#39;V&#39;</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>word_list</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>word</span><span class=o>.</span><span class=n>lower</span><span class=p>())</span></span></span></code></pre></div></div><h2 id=counting-verbs-1>Counting Verbs
+<a class=anchor href=#counting-verbs-1>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>counts</span> <span class=o>=</span> <span class=n>Counter</span><span class=p>(</span><span class=n>word_list</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>counts</span><span class=o>.</span><span class=n>most_common</span><span class=p>(</span><span class=mi>10</span><span class=p>))</span></span></span></code></pre></div></div><blockquote class=book-hint><p><strong>Output</strong></p></blockquote><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=p>[(</span><span class=s1>&#39;see&#39;</span><span class=p>,</span> <span class=mi>59</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;get&#39;</span><span class=p>,</span> <span class=mi>54</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;made&#39;</span><span class=p>,</span> <span class=mi>49</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;think&#39;</span><span class=p>,</span> <span class=mi>46</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;seen&#39;</span><span class=p>,</span> <span class=mi>45</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;make&#39;</span><span class=p>,</span> <span class=mi>45</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;say&#39;</span><span class=p>,</span> <span class=mi>41</span><span class=p>),</span> <span class=p>(</span><span class=s2>&#34;&#39;ve&#34;</span><span class=p>,</span> <span class=mi>37</span><span class=p>),</span> <span class=p>(</span><span class=s2>&#34;&#39;m&#34;</span><span class=p>,</span> <span class=mi>32</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;going&#39;</span><span class=p>,</span> <span class=mi>31</span><span class=p>)]</span></span></span></code></pre></div></div><hr><h1 id=visualizing-tokens>Visualizing Tokens
+<a class=anchor href=#visualizing-tokens>#</a></h1><h2 id=import-libraries-1>Import Libraries
+<a class=anchor href=#import-libraries-1>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.pyplot</span> <span class=k>as</span> <span class=nn>plt</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>re</span></span></span></code></pre></div></div><h2 id=정규표현식으로-토큰-분류>정규표현식으로 토큰 분류
+<a class=anchor href=#%ec%a0%95%ea%b7%9c%ed%91%9c%ed%98%84%ec%8b%9d%ec%9c%bc%eb%a1%9c-%ed%86%a0%ed%81%b0-%eb%b6%84%eb%a5%98>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>tokens</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>line</span> <span class=ow>in</span> <span class=n>lines</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>tokenized</span> <span class=o>=</span> <span class=n>nltk</span><span class=o>.</span><span class=n>word_tokenize</span><span class=p>(</span><span class=n>line</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>token</span> <span class=ow>in</span> <span class=n>tokenized</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>token</span><span class=o>.</span><span class=n>lower</span><span class=p>()</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>stop_words</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>re</span><span class=o>.</span><span class=k>match</span><span class=p>(</span><span class=s1>&#39;^[a-zA-Z]+&#39;</span><span class=p>,</span> <span class=n>token</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=n>tokens</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>token</span><span class=p>)</span></span></span></code></pre></div></div><ul><li>정규표현식 개념 소개 @ <a href=https://j.mp/3bJQJHg>https://j.mp/3bJQJHg</a></li><li>정규표현식 기본 문법 정리 @ <a href=https://j.mp/3bLXSqB>https://j.mp/3bLXSqB</a></li><li>상세한 정규표현식 설명 @ <a href=http://j.mp/2PzgFO8>http://j.mp/2PzgFO8</a></li><li>상세한 정규표현식 예제 @ <a href=https://hamait.tistory.com/342>https://hamait.tistory.com/342</a></li><li>점프 투 파이썬 정규표현식 @ <a href=https://wikidocs.net/4308>https://wikidocs.net/4308</a></li></ul><h2 id=visualizing-tokens-1>Visualizing Tokens
+<a class=anchor href=#visualizing-tokens-1>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>figure</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>3</span><span class=p>))</span> 
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Top 25 Words&#39;</span><span class=p>,</span><span class=n>fontsize</span><span class=o>=</span><span class=mi>30</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>corpus</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=mi>25</span><span class=p>)</span></span></span></code></pre></div></div><h2 id=top-25-words-chart>Top 25 Words Chart
+<a class=anchor href=#top-25-words-chart>#</a></h2><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/02-text-analysis/02-text-data-exploration/token-chart.png?raw=true" alt=token-chart></p><hr><h1 id=similar-words>Similar Words
+<a class=anchor href=#similar-words>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s1>&#39;Similar words : &#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>corpus</span><span class=o>.</span><span class=n>similar</span><span class=p>(</span><span class=s1>&#39;batman&#39;</span><span class=p>)</span></span></span></code></pre></div></div><blockquote class=book-hint><p><strong>Output</strong></p></blockquote><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Similar words : 
+</span></span><span class=line><span class=cl>superhero film action movie character better iconic seen acting actor heath performance modern difficult villain second end good come best</span></span></code></pre></div></div><hr><h1 id=collocation>Collocation
+<a class=anchor href=#collocation>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s1>&#39;Collocation&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>corpus</span><span class=o>.</span><span class=n>collocation</span><span class=p>()</span></span></span></code></pre></div></div><blockquote class=book-hint><p><strong>Output</strong></p></blockquote><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Collocation
+</span></span><span class=line><span class=cl>Dark Knight<span class=p>;</span> Heath Ledger<span class=p>;</span> Christian Bale<span class=p>;</span> comic book<span class=p>;</span> Harvey Dent<span class=p>;</span> Christopher Nolan<span class=p>;</span> Bruce Wayne<span class=p>;</span> Aaron Eckhart<span class=p>;</span> Morgan Freeman<span class=p>;</span> Gary Oldman<span class=p>;</span> Batman Begins<span class=p>;</span> Two Face<span class=p>;</span> Gotham City<span class=p>;</span> Maggie Gyllenhaal<span class=p>;</span> Rachel Dawes<span class=p>;</span> Michael Caine<span class=p>;</span> special effect<span class=p>;</span> Tim Burton<span class=p>;</span> Jack Nicholson<span class=p>;</span> dark knight</span></span></code></pre></div></div></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/ai-school/ class=tag>#AI SCHOOL</a>
+<a href=/tags/%EB%A9%8B%EC%9F%81%EC%9D%B4%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC/ class=tag>#멋쟁이사자처럼</a>
+<a href=/tags/%EC%BD%94%EB%93%9C%EB%9D%BC%EC%9D%B4%EC%96%B8/ class=tag>#코드라이언</a>
+<a href=/tags/text-analysis/ class=tag>#Text Analysis</a></div><div class=post-navigation><a href=/blog/aischool-02-03-text-analysis/ class="post-nav-link post-nav-prev"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 분석</span>
+</a><a href=/blog/aischool-02-01-processing-text-data/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>[AI SCHOOL 5기] 텍스트 분석 실습 - 텍스트 분석</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/",this.page.identifier="https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/",this.page.identifier="https://minyeamer.github.io/blog/aischool-02-02-text-data-exploration/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#import-libraries>Import Libraries</a></li><li><a href=#set-stopwords>Set Stopwords</a></li><li><a href=#open-text-data>Open Text Data</a></li><li><a href=#tokenize>Tokenize</a></li></ul><ul><li><a href=#pos-tagging>POS Tagging</a></li><li><a href=#counting-nouns-1>Counting Nouns</a></li></ul><ul><li><a href=#pos-tagging-1>POS Tagging</a></li><li><a href=#counting-adjectives-1>Counting Adjectives</a></li></ul><ul><li><a href=#pos-tagging-2>POS Tagging</a></li><li><a href=#counting-verbs-1>Counting Verbs</a></li></ul><ul><li><a href=#import-libraries-1>Import Libraries</a></li><li><a href=#정규표현식으로-토큰-분류>정규표현식으로 토큰 분류</a></li><li><a href=#visualizing-tokens-1>Visualizing Tokens</a></li><li><a href=#top-25-words-chart>Top 25 Words Chart</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

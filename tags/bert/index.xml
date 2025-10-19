@@ -10,9 +10,9 @@
     <atom:link href="https://minyeamer.github.io/tags/bert/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2022-07-17 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-17/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-17/</link>
       <pubDate>Sun, 17 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-17/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-17/</guid>
       <description>구글 BERT의 정석 1</description>
     </item>
   </channel>

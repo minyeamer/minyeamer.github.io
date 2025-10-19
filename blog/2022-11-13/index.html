@@ -1,0 +1,110 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="Diary,Career,Data Analyst"><meta name=description content="데이터 분석가로 업무를 수행한지 두 달이 되었습니다.
+신입으로서 사수 없이 다양한 과제를 수행하다보니 다사다난했던 2개월이었습니다.
+UI
+  #
+초기엔 Airflow와 태블로를 위주로 데이터 수집 및 분석을 계획했지만,
+네이버 등 대상 사이트 크롤링을 구현하는데 소비하는 시간이 크다보니
+서버를 통한 체계적인 자동화를 구현할 여유가 없었습니다.
+대신, Streamlit과 PyInstaller를 통해 UI를 구성하고
+각각의 메뉴와 엑셀 설정 파일을 정의하여 자동화 서비스를 구현했습니다.
+개발 환경이 짜여짐을 전제로 프로그램을 제작했던 이전과는 정반대로
+아무것도 없는 윈도우 환경에서도 돌아가는 프로그램을 만들려다보니 적잖은 고민을 했습니다.
+밑바닥부터 UI를 개발하려 했으면 그 자체로 많은 시간이 걸렸겠지만,
+다행히 이전 교육 과정에서 활용해본 Streamlit을 도입하면서
+UI에 대한 걱정을 일체하지 않고 크롤링 기능만을 구현할 수 있었습니다."><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/blog/2022-11-13/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/blog/2022-11-13/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="2022년 11월 13일 회고"><meta property="og:description" content="데이터 분석가로 업무를 수행한지 두 달이 되었습니다.
+신입으로서 사수 없이 다양한 과제를 수행하다보니 다사다난했던 2개월이었습니다.
+UI # 초기엔 Airflow와 태블로를 위주로 데이터 수집 및 분석을 계획했지만,
+네이버 등 대상 사이트 크롤링을 구현하는데 소비하는 시간이 크다보니
+서버를 통한 체계적인 자동화를 구현할 여유가 없었습니다.
+대신, Streamlit과 PyInstaller를 통해 UI를 구성하고
+각각의 메뉴와 엑셀 설정 파일을 정의하여 자동화 서비스를 구현했습니다.
+개발 환경이 짜여짐을 전제로 프로그램을 제작했던 이전과는 정반대로
+아무것도 없는 윈도우 환경에서도 돌아가는 프로그램을 만들려다보니 적잖은 고민을 했습니다.
+밑바닥부터 UI를 개발하려 했으면 그 자체로 많은 시간이 걸렸겠지만,
+다행히 이전 교육 과정에서 활용해본 Streamlit을 도입하면서
+UI에 대한 걱정을 일체하지 않고 크롤링 기능만을 구현할 수 있었습니다."><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-11-13T22:08:42+09:00"><meta property="article:modified_time" content="2022-11-13T22:08:42+09:00"><meta property="article:tag" content="Diary"><meta property="article:tag" content="Career"><meta property="article:tag" content="Data Analyst"><title>2022년 11월 13일 회고 | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/blog/2022-11-13/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.97bd2c69bb66aba393499c7ad9ff319905e14e001ef050bf45d8b47a9c6d9278.js integrity="sha256-l70sabtmq6OTSZx62f8xmQXhTgAe8FC/Rdi0epxtkng=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.7cb06c5a504171147e5c23f8fa923c5413dc6769b4d635e327bb3c3acb570140.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/blog/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/blog/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/blog/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/blog/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/diary/2022/ class=post-header-category-link>Diary/2022</a></div><h1 class=post-header-title>2022년 11월 13일 회고</h1><div class=post-header-date><time datetime=2022-11-13T22:08:42+09:00>2022. 11. 13. 22:08</time></div></header><p>데이터 분석가로 업무를 수행한지 두 달이 되었습니다.<br>신입으로서 사수 없이 다양한 과제를 수행하다보니 다사다난했던 2개월이었습니다.</p><h1 id=ui>UI
+<a class=anchor href=#ui>#</a></h1><p>초기엔 Airflow와 태블로를 위주로 데이터 수집 및 분석을 계획했지만,<br>네이버 등 대상 사이트 크롤링을 구현하는데 소비하는 시간이 크다보니<br>서버를 통한 체계적인 자동화를 구현할 여유가 없었습니다.</p><p>대신, Streamlit과 PyInstaller를 통해 UI를 구성하고<br>각각의 메뉴와 엑셀 설정 파일을 정의하여 자동화 서비스를 구현했습니다.</p><p>개발 환경이 짜여짐을 전제로 프로그램을 제작했던 이전과는 정반대로<br>아무것도 없는 윈도우 환경에서도 돌아가는 프로그램을 만들려다보니 적잖은 고민을 했습니다.<br>밑바닥부터 UI를 개발하려 했으면 그 자체로 많은 시간이 걸렸겠지만,<br>다행히 이전 교육 과정에서 활용해본 Streamlit을 도입하면서<br>UI에 대한 걱정을 일체하지 않고 크롤링 기능만을 구현할 수 있었습니다.</p><p>하지만, Streamlit도 마냥 편하게 사용할 수는 없었던 것이,<br>무료 배포 서비스의 제한된 자원 때문에 크롤링이 안정적이지 못했고<br>여러 사람이 하나의 서버에 붙다보어 크롤링이 진행되다 보니<br>대상 사이트로부터 차단당하는 경우도 있었습니다.</p><p>더욱이 Streamlit의 배포 서버가 해외 소재였기 때문에<br>쿠팡 크롤링 또는 그외 사이트의 로그인 등이 해외 IP 차단의 이유로 원활하게 이루어지지 않았습니다.</p><p>결국 로컬 환경에서 돌아가는 실행 프로그램이 필요했고,<br>초기에는 개인적으로 활용하던 Bittorrent Web 프로그램처럼<br>Streamlit을 로컬 브라우저에서 실행시키는 방안을 구상했지만,<br>생각만큼 쉽지 않아 단순히 크롤링 기능을 실행 프로그램으로 변환하는 것으로 타협했습니다.</p><p>사용자 편의성을 고려했을 때 GUI가 포함된 실행 프로그램이 좋을 수 있지만,<br>윈도우 작업 스케줄러를 통해 자동으로 돌아가는 방식을 고려 중에 있었기 때문에<br>최대한 사람 손을 거치지 않게 모든 설정을 엑셀 파일로 제어하게 하고<br>터미널에서 진행상황만 표시하도록 개발했습니다.</p><p>향후 Airflow와 같은 웹 서버 설계를 기대하지만,<br>현재로서는 위와 같은 실행 방식이 가장 개발 효율적이라 생각하여 진행 중입니다.</p><h1 id=크롤링>크롤링
+<a class=anchor href=#%ed%81%ac%eb%a1%a4%eb%a7%81>#</a></h1><p>이전까지 배운 크롤링은 HTML을 파싱하는 굉장히 단순한 수준이었고<br>파이썬 자체를 깊이 다뤄볼 일도 없었기에 <code>requests</code> 라이브러리로 크롤링을 시도했습니다.<br>하지만, 1주 정도가 크롤링 기능을 개발하면서 유지보수 대비 및 시간 개선의 필요성을 느끼고<br>다른 방안을 탐색했습니다.</p><p>당시부터 지금까지 집중하고 있던 것이 네이버 크롤링이었는데,<br>우연히 네이버 내 데이터는 Open API와는 별개의 내부 API로 전달되는 것을 파악했습니다.<br>이때부터 크롬 개발자 도구의 네트워크 탭에서 모든 데이터의 소스를 파악했고<br>네이버 쇼핑 한정해서는 보이는 모든 데이터를 가져올 수 있는 기반을 다졌습니다.</p><p>또한, 시간 개선을 위해 멀티 쓰레딩 방식을 알아보았고,<br>이와 유사한 비동기 방식이 파이썬에서 가장 효율적임을 인식하고<br><code>requests</code>로 이루어진 코드를 <code>asyncio</code> 및 <code>aiohttp</code>로 변경했습니다.</p><p>이 과정에서 <code>Scrapy</code>의 Spider 및 Pipeline 구조를 참고해<br>기존의 함수 위주의 코드도 Spider, Parser, Pipeline으로 구분된 클래스 위주로 변환했습니다.<br>초기보다 훨씬 다양한 크롤링 기능이 생긴 지금도 위와 같은 구조 덕분에<br>코드 관리 및 재활용을 편리하게 수행하고 있습니다.</p><p>한편, 네이버 외에 이지어드민이라는 종합 쇼핑몰 관리 솔루션 내에서<br>데이터를 가져오는 과정에서 로그인을 <code>requests</code>로 처리하기 위해 많은 자료를 참고했습니다.<br>그 중에서 가장 도움이 되었던 것은 네이버 로그인을 <code>requests</code>로 구현한 네이버 블로그 자료였는데,<br>해당 내용을 통해 POST 요청 및 RSA 암호화에 대해 이해할 수 있었습니다.</p><p>덕분에 개발자 도구 네트워크 탭에서 로그인 과정을 역추적하는 식으로<br>이지어드민과 11번가 셀러오피스의 <code>requests</code> 로그인을 구현할 수 있게 되었고,<br>네이버 스마트스토어센터를 위한 2차 인증 또한 다소의 시간이 걸렸지만 해결할 수 있었습니다.<br>특히 네이버 2차 인증을 구현하면서 세션과 쿠키에 대한 개념을 잡을 수 있었습니다.</p><p>업무와는 별개로 개인적으로 크롤링에 고전하고 있는 jQuery 기반의 웹사이트가 있는데,<br>이런 특수한 경우를 제외하고는 대부분의 웹사이트 크롤링에 자신이 들었습니다.<br>또한, 여러 사이트의 소스를 뜯어보면서 자바스크립트에 대한 흥미가 생겼습니다.</p><h1 id=대시보드>대시보드
+<a class=anchor href=#%eb%8c%80%ec%8b%9c%eb%b3%b4%eb%93%9c>#</a></h1><p>한달 전쯤, 외부 업체를 통해 외주를 맡기면서 구글 데이터 스튜디오 교육을 들었는데,<br>최근들어서는 이를 활용한 대시보드 제작에 개발하는 것보다 많은 시간을 쓰고 있습니다.</p><p>대시보드 제작 자체는 이미 예상된 일이었기 때문에 태블로를 공부한 이력이 있는데,<br>예상과 다른 BI 툴을 사용하게 되었습니다.</p><p>태블로와 비교했을 때 구글 데이터 스튜디오는 무료라는 장점과 함께<br>구글 플랫폼 내에서 쉽게 온라인으로 접근할 수 있다는 편의성이 있지만,<br>태블로 대비 많이 부족한 기능과 투박한 그래프 디자인의 단점이 있습니다.</p><p>태블로의 Fixed LOD나 툴팁 커스터마이징과 같은 기능이 없는 것이 다소 답답하지만,<br>최대 장점인 구글 플랫폼 내 연동성의 장점을 살려 순위 비교와 같은 설정을<br>구글 시트 내에서 구현하고 구글 데이터 스튜디오 내에 필드로 연동시키는 방식을 활용했습니다.</p><p>덕분에 구글 시트의 ARRAYFORMULA 등의 함수에 익숙해지게 되었고,<br>구글 시트의 매크로라고 할 수 있는 앱 스크립트도 조작해보았습니다.<br>앱 스크립트의 경우 자바스크립트 기반이기 때문에 크롤링 과정에서 느낀<br>자바스크립트에 대한 흥미를 가지고 재밌게 활용했습니다.</p><p>구글 데이터 스튜디오도 1주 이상 사용해보면서 업무현황을 관리하거나<br>매출 등을 참고할 수 있는 다양한 대시보드를 제작할 수 있게 되었습니다.<br>간단한 것은 테이블 계산식으로, 어려운 것은 구글 시트로 떠넘기다보니<br>태블로 대비 부족한 기능의 단점을 어느정도 보완할 수 있었습니다.</p><p>회사 차원에서는 향후 대시보드와 연계할 데이터 적재를 위해 빅쿼리 도입을 고려하고 있는데,<br>당장의 저는 구글 시트 API를 통한 업로드를 통해 다음 발전에 대비하고 있습니다.</p><h1 id=앞으로>앞으로
+<a class=anchor href=#%ec%95%9e%ec%9c%bc%eb%a1%9c>#</a></h1><p>이 글을 작성하고 있는 시점의 저는 한 주 가까이 감기에 걸린 것과 함께<br>현재 진행 중인 업무가 대부분 마무리되면서 무료한 상태를 보내고 있습니다.<br>밤낮없이 하루종일 일만 했던 이전과 대비해서 편해진 것은 있지만,<br>갑작기 할일이 줄어든 것과 함께 감기로 인한 심경의 변화로 다소 의욕이 줄어들었습니다.</p><p>슬럼프보다는 약한 수준의 일시적인 현상이라고 생각하지만,<br>향후 흥미를 돋굴 새로운 일거리를 찾지 못한다면 좋지 못한 방향으로 갈 것이라 생각합니다.</p><p>개인적인 차원에서 평소 기획하고만 있던 크롤링을 개발하고는 있지만,<br>이보다 더욱 발전해서 팀 단위의 사이드 프로젝트를 기대하고 있습니다.<br>야근의 불확실성도 많이 개선되었기에 이제는 개발자끼리의 스터디를 통해<br>기술적 발전과 네트워킹을 같이 챙겨보려 합니다.</p></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/diary/ class=tag>#Diary</a>
+<a href=/tags/career/ class=tag>#Career</a>
+<a href=/tags/data-analyst/ class=tag>#Data Analyst</a></div><div class=post-navigation><a href class="post-nav-link post-nav-prev post-nav-disabled"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>이전 게시글이 없습니다</span>
+</a><a href=/blog/2022-09-07/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>데이터 분석가의 첫 스텝</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/blog/2022-11-13/",this.page.identifier="https://minyeamer.github.io/blog/2022-11-13/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/blog/2022-11-13/",this.page.identifier="https://minyeamer.github.io/blog/2022-11-13/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>

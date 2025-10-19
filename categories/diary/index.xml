@@ -10,23 +10,23 @@
     <atom:link href="https://minyeamer.github.io/categories/diary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2022년 01월 23일 회고</title>
-      <link>https://minyeamer.github.io/post/diary/2023/2023-01/2023-01-23/</link>
+      <link>https://minyeamer.github.io/blog/2023-01-23/</link>
       <pubDate>Mon, 23 Jan 2023 12:08:30 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/diary/2023/2023-01/2023-01-23/</guid>
+      <guid>https://minyeamer.github.io/blog/2023-01-23/</guid>
       <description>&lt;p&gt;지금으로부터 약 한 달 간 자동화 프로그램 안정화 작업으로 다소 바쁜 일정을 보냈지만,&lt;br&gt;&#xA;다행히 해당 작업이 마무리되어 이렇게 글로 정리해볼 여유가 생겼습니다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;구글-빅쿼리&#34;&gt;구글 빅쿼리&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b5%ac%ea%b8%80-%eb%b9%85%ec%bf%bc%eb%a6%ac&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;이전 회고에서 사내 빅쿼리 도입을 고려하고 있다고 남긴 바 있었는데,&lt;br&gt;&#xA;이제는 빅쿼리에 익숙해지며 SQL도 어느정도 원하는대로 다룰 수 있는 수준에 이르렀습니다.&lt;/p&gt;&#xA;&lt;p&gt;원래는 구글 시트 API를 통한 데이터 적재 자동화에 익숙해진 후 빅쿼리로 차차 넘어갈 예정이었지만,&lt;br&gt;&#xA;생각보다 구글 API의 사용법이 간단하여 얼마안가 빅쿼리 사용을 시도해볼 수 있었습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2022년 11월 13일 회고</title>
-      <link>https://minyeamer.github.io/post/diary/2022/2022-11/2022-11-13/</link>
+      <link>https://minyeamer.github.io/blog/2022-11-13/</link>
       <pubDate>Sun, 13 Nov 2022 22:08:42 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/diary/2022/2022-11/2022-11-13/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-11-13/</guid>
       <description>&lt;p&gt;데이터 분석가로 업무를 수행한지 두 달이 되었습니다.&lt;br&gt;&#xA;신입으로서 사수 없이 다양한 과제를 수행하다보니 다사다난했던 2개월이었습니다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;ui&#34;&gt;UI&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ui&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;초기엔 Airflow와 태블로를 위주로 데이터 수집 및 분석을 계획했지만,&lt;br&gt;&#xA;네이버 등 대상 사이트 크롤링을 구현하는데 소비하는 시간이 크다보니&lt;br&gt;&#xA;서버를 통한 체계적인 자동화를 구현할 여유가 없었습니다.&lt;/p&gt;&#xA;&lt;p&gt;대신, Streamlit과 PyInstaller를 통해 UI를 구성하고&lt;br&gt;&#xA;각각의 메뉴와 엑셀 설정 파일을 정의하여 자동화 서비스를 구현했습니다.&lt;/p&gt;&#xA;&lt;p&gt;개발 환경이 짜여짐을 전제로 프로그램을 제작했던 이전과는 정반대로&lt;br&gt;&#xA;아무것도 없는 윈도우 환경에서도 돌아가는 프로그램을 만들려다보니 적잖은 고민을 했습니다.&lt;br&gt;&#xA;밑바닥부터 UI를 개발하려 했으면 그 자체로 많은 시간이 걸렸겠지만,&lt;br&gt;&#xA;다행히 이전 교육 과정에서 활용해본 Streamlit을 도입하면서&lt;br&gt;&#xA;UI에 대한 걱정을 일체하지 않고 크롤링 기능만을 구현할 수 있었습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>데이터 분석가의 첫 스텝</title>
-      <link>https://minyeamer.github.io/post/diary/2022/2022-09/2022-09-07/</link>
+      <link>https://minyeamer.github.io/blog/2022-09-07/</link>
       <pubDate>Wed, 07 Sep 2022 21:49:03 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/diary/2022/2022-09/2022-09-07/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-09-07/</guid>
       <description>&lt;h1 id=&#34;서론&#34;&gt;서론&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%84%9c%eb%a1%a0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;2022년 3월 코로나19로 인한 조기전역 후,&lt;br&gt;&#xA;멋쟁이사자처럼에서 운영하는 AI SCHOOL 교육 과정에 참여했습니다.&lt;/p&gt;&#xA;&lt;p&gt;군대에서 나태하게 보내며 공부에는 익숙하지 않았지만, 몇달 뒤 서류상으로 전역하게 되면&lt;br&gt;&#xA;결국 일자리를 구해야 했기에 평소 목표로 했던 개발 관련 교육을 들을 필요성을 느꼈고,&lt;br&gt;&#xA;흔히 말하는 국비 지원 교육인 K-Digital Training을 수강했습니다.&lt;/p&gt;&#xA;&lt;p&gt;비전공자도 3개월의 과정을 거쳐 딥러닝 모델이 탑재된 웹 서비스를 만들 수 있다는&lt;br&gt;&#xA;희망에 가득찬 상태로 교육을 수료했지만,&lt;br&gt;&#xA;관심있었던 NLP 분야를 중심으로 독학하면서 스스로의 부족함을 크게 실감했습니다.&lt;/p&gt;</description>
     </item>
   </channel>

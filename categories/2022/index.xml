@@ -10,128 +10,128 @@
     <atom:link href="https://minyeamer.github.io/categories/2022/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2022년 11월 13일 회고</title>
-      <link>https://minyeamer.github.io/post/diary/2022/2022-11/2022-11-13/</link>
+      <link>https://minyeamer.github.io/blog/2022-11-13/</link>
       <pubDate>Sun, 13 Nov 2022 22:08:42 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/diary/2022/2022-11/2022-11-13/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-11-13/</guid>
       <description>&lt;p&gt;데이터 분석가로 업무를 수행한지 두 달이 되었습니다.&lt;br&gt;&#xA;신입으로서 사수 없이 다양한 과제를 수행하다보니 다사다난했던 2개월이었습니다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;ui&#34;&gt;UI&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ui&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;초기엔 Airflow와 태블로를 위주로 데이터 수집 및 분석을 계획했지만,&lt;br&gt;&#xA;네이버 등 대상 사이트 크롤링을 구현하는데 소비하는 시간이 크다보니&lt;br&gt;&#xA;서버를 통한 체계적인 자동화를 구현할 여유가 없었습니다.&lt;/p&gt;&#xA;&lt;p&gt;대신, Streamlit과 PyInstaller를 통해 UI를 구성하고&lt;br&gt;&#xA;각각의 메뉴와 엑셀 설정 파일을 정의하여 자동화 서비스를 구현했습니다.&lt;/p&gt;&#xA;&lt;p&gt;개발 환경이 짜여짐을 전제로 프로그램을 제작했던 이전과는 정반대로&lt;br&gt;&#xA;아무것도 없는 윈도우 환경에서도 돌아가는 프로그램을 만들려다보니 적잖은 고민을 했습니다.&lt;br&gt;&#xA;밑바닥부터 UI를 개발하려 했으면 그 자체로 많은 시간이 걸렸겠지만,&lt;br&gt;&#xA;다행히 이전 교육 과정에서 활용해본 Streamlit을 도입하면서&lt;br&gt;&#xA;UI에 대한 걱정을 일체하지 않고 크롤링 기능만을 구현할 수 있었습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>데이터 분석가의 첫 스텝</title>
-      <link>https://minyeamer.github.io/post/diary/2022/2022-09/2022-09-07/</link>
+      <link>https://minyeamer.github.io/blog/2022-09-07/</link>
       <pubDate>Wed, 07 Sep 2022 21:49:03 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/diary/2022/2022-09/2022-09-07/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-09-07/</guid>
       <description>&lt;h1 id=&#34;서론&#34;&gt;서론&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%84%9c%eb%a1%a0&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;2022년 3월 코로나19로 인한 조기전역 후,&lt;br&gt;&#xA;멋쟁이사자처럼에서 운영하는 AI SCHOOL 교육 과정에 참여했습니다.&lt;/p&gt;&#xA;&lt;p&gt;군대에서 나태하게 보내며 공부에는 익숙하지 않았지만, 몇달 뒤 서류상으로 전역하게 되면&lt;br&gt;&#xA;결국 일자리를 구해야 했기에 평소 목표로 했던 개발 관련 교육을 들을 필요성을 느꼈고,&lt;br&gt;&#xA;흔히 말하는 국비 지원 교육인 K-Digital Training을 수강했습니다.&lt;/p&gt;&#xA;&lt;p&gt;비전공자도 3개월의 과정을 거쳐 딥러닝 모델이 탑재된 웹 서비스를 만들 수 있다는&lt;br&gt;&#xA;희망에 가득찬 상태로 교육을 수료했지만,&lt;br&gt;&#xA;관심있었던 NLP 분야를 중심으로 독학하면서 스스로의 부족함을 크게 실감했습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2022-08-26 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-08/2022-08-26/</link>
+      <link>https://minyeamer.github.io/blog/2022-08-26/</link>
       <pubDate>Fri, 26 Aug 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-08/2022-08-26/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-08-26/</guid>
       <description>Language models paper reviews</description>
     </item>
     <item>
       <title>2022-07-21 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-21/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-21/</link>
       <pubDate>Thu, 21 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-21/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-21/</guid>
       <description>Self-adaptive forecasting for improved deep learning on non-stationary time-series</description>
     </item>
     <item>
       <title>2022-07-19 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-19/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-19/</link>
       <pubDate>Tue, 19 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-19/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-19/</guid>
       <description>DL Study</description>
     </item>
     <item>
       <title>2022-07-17 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-17/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-17/</link>
       <pubDate>Sun, 17 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-17/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-17/</guid>
       <description>구글 BERT의 정석 1</description>
     </item>
     <item>
       <title>2022-07-13 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-13/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-13/</link>
       <pubDate>Wed, 13 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-13/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-13/</guid>
       <description>PyTorch로 시작하는 딥 러닝 입문</description>
     </item>
     <item>
       <title>2022-07-08 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-08/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-08/</link>
       <pubDate>Fri, 08 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-08/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-08/</guid>
       <description>꼼꼼한 딥러닝 2</description>
     </item>
     <item>
       <title>2022-07-07 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-07/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-07/</link>
       <pubDate>Thu, 07 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-07/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-07/</guid>
       <description>꼼꼼한 딥러닝 1</description>
     </item>
     <item>
       <title>2022-07-06 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-06/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-06/</link>
       <pubDate>Wed, 06 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-06/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-06/</guid>
       <description>CS 124</description>
     </item>
     <item>
       <title>2022-07-04 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-04/</link>
+      <link>https://minyeamer.github.io/blog/2022-07-04/</link>
       <pubDate>Mon, 04 Jul 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-04/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-07-04/</guid>
       <description>선형대수와 통계학으로 배우는 머신러닝 with 파이썬 2</description>
     </item>
     <item>
       <title>2022-06-30 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-30/</link>
+      <link>https://minyeamer.github.io/blog/2022-06-30/</link>
       <pubDate>Thu, 30 Jun 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-30/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-06-30/</guid>
       <description>딥 러닝을 이용한 자연어 처리 입문 3</description>
     </item>
     <item>
       <title>2022-06-29 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-29/</link>
+      <link>https://minyeamer.github.io/blog/2022-06-29/</link>
       <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-29/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-06-29/</guid>
       <description>딥 러닝을 이용한 자연어 처리 입문 2</description>
     </item>
     <item>
       <title>2022-06-28 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-28/</link>
+      <link>https://minyeamer.github.io/blog/2022-06-28/</link>
       <pubDate>Tue, 28 Jun 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-28/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-06-28/</guid>
       <description>딥 러닝을 이용한 자연어 처리 입문 1</description>
     </item>
     <item>
       <title>2022-06-19 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-19/</link>
+      <link>https://minyeamer.github.io/blog/2022-06-19/</link>
       <pubDate>Sun, 19 Jun 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-19/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-06-19/</guid>
       <description>선형대수와 통계학으로 배우는 머신러닝 with 파이썬 1</description>
     </item>
     <item>
       <title>2022-03-06 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-03/2022-03-06/</link>
+      <link>https://minyeamer.github.io/blog/2022-03-06/</link>
       <pubDate>Sun, 06 Mar 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-03/2022-03-06/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-03-06/</guid>
       <description>Algorithm Study</description>
     </item>
     <item>
       <title>2022-03-05 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-03/2022-03-05/</link>
+      <link>https://minyeamer.github.io/blog/2022-03-05/</link>
       <pubDate>Sat, 05 Mar 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-03/2022-03-05/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-03-05/</guid>
       <description>Algorithm Study</description>
     </item>
     <item>
       <title>2022-03-04 Log</title>
-      <link>https://minyeamer.github.io/post/study/2022/2022-03/2022-03-04/</link>
+      <link>https://minyeamer.github.io/blog/2022-03-04/</link>
       <pubDate>Fri, 04 Mar 2022 20:00:00 +0900</pubDate>
-      <guid>https://minyeamer.github.io/post/study/2022/2022-03/2022-03-04/</guid>
+      <guid>https://minyeamer.github.io/blog/2022-03-04/</guid>
       <description>Algorithm Study</description>
     </item>
   </channel>
