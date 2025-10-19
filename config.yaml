@@ -8,7 +8,6 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
-googleAnalytics: "G-BWECRMSX3V"
 
 minify:
   disableXML: true
@@ -39,6 +38,9 @@ params:
     # yandex:
     #   SiteVerificationTag: "XYZabc"
 
+  GoogleAnalytics:
+    tagId: "G-BWECRMSX3V"
+
 markup:
   goldmark:
     renderer:
@@ -46,5 +48,8 @@ markup:
   highlight:
     noClasses: false
     codeFences: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
 
 ignoreFiles: ["_page.md", "README.md"]
