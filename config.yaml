@@ -47,7 +47,7 @@ params:
     #   SiteVerificationTag: "XYZabc"
 
   GoogleAnalytics:
-    tagId: "G-BWECRMSX3V"
+    tagId: "G-BJ8Z9RMBPJ"
 
 markup:
   goldmark:
