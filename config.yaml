@@ -1,0 +1,50 @@
+baseURL: "https://minyeamer.github.io/"
+title: Minystory
+theme: "Book"
+languageCode: "ko-kr"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+googleAnalytics: "G-BWECRMSX3V"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  author: "minyeamer"
+  # author: ["Me", "You"] # multiple authors
+  keywords: ["minyeamer", "Blog", "Data", "Engineering", "MLOps", "미니스토리", "블로그"]
+
+  BookMenu:
+    profileImage: "https://avatars.githubusercontent.com/u/17109173?v=4"
+    githubLink: "https://github.com/minyeamer"
+    categoriesLabel: "전체"
+    recentPosts: true
+
+  BookComments:
+    enable: true
+    disqusShortname: "minyeamer"
+
+  SearchEngine:
+    google:
+      SiteVerificationTag: "u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"
+    naver:
+      SiteVerificationTag: "6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"
+    # bing:
+    #   SiteVerificationTag: "XYZabc"
+    # yandex:
+    #   SiteVerificationTag: "XYZabc"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+
+ignoreFiles: ["_page.md", "README.md"]
