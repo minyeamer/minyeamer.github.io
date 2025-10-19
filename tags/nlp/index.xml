@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Minystory</title>
+    <link>https://minyeamer.github.io/tags/nlp/</link>
+    <description>Recent content in NLP on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 26 Aug 2022 20:00:00 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022-08-26 Log</title>
+      <link>https://minyeamer.github.io/post/study/2022/2022-08/2022-08-26/</link>
+      <pubDate>Fri, 26 Aug 2022 20:00:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2022/2022-08/2022-08-26/</guid>
+      <description>Language models paper reviews</description>
+    </item>
+    <item>
+      <title>2022-07-17 Log</title>
+      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-17/</link>
+      <pubDate>Sun, 17 Jul 2022 20:00:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-17/</guid>
+      <description>구글 BERT의 정석 1</description>
+    </item>
+    <item>
+      <title>2022-07-06 Log</title>
+      <link>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-06/</link>
+      <pubDate>Wed, 06 Jul 2022 20:00:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2022/2022-07/2022-07-06/</guid>
+      <description>CS 124</description>
+    </item>
+    <item>
+      <title>2022-06-30 Log</title>
+      <link>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-30/</link>
+      <pubDate>Thu, 30 Jun 2022 20:00:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-30/</guid>
+      <description>딥 러닝을 이용한 자연어 처리 입문 3</description>
+    </item>
+    <item>
+      <title>2022-06-29 Log</title>
+      <link>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-29/</link>
+      <pubDate>Wed, 29 Jun 2022 20:00:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-29/</guid>
+      <description>딥 러닝을 이용한 자연어 처리 입문 2</description>
+    </item>
+    <item>
+      <title>2022-06-28 Log</title>
+      <link>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-28/</link>
+      <pubDate>Tue, 28 Jun 2022 20:00:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2022/2022-06/2022-06-28/</guid>
+      <description>딥 러닝을 이용한 자연어 처리 입문 1</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SVM on Minystory</title>
+    <link>https://minyeamer.github.io/tags/svm/</link>
+    <description>Recent content in SVM on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 13 Apr 2022 21:19:00 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/svm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - Kernelized SVM</title>
+      <link>https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-05-kernelized-svm/</link>
+      <pubDate>Wed, 13 Apr 2022 21:19:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-05-kernelized-svm/</guid>
+      <description>&lt;h1 id=&#34;support-vector-machine&#34;&gt;Support Vector Machine&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#support-vector-machine&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;img src=&#34;https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/05-kernelized-svm/svm.png?raw=true&#34; style=&#34;max-width:500px&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;패턴 인식을 위한 지도 학습 모델&lt;/li&gt;&#xA;&lt;li&gt;데이터를 분류하는 &lt;strong&gt;Margin&lt;/strong&gt;을 최대화하는 결정 경계(Decision Boundary)를 찾는 기법&lt;/li&gt;&#xA;&lt;li&gt;결정 경계와 가장 가까운 데이터를 가로지르는 선을 기준으로 Plus &amp;amp; Minus Plane 설정&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Support Vector&lt;/strong&gt;: 결정 경계와 가장 가까운 데이터의 좌표&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Margin&lt;/strong&gt;: b11(plus-plane)과 b12(minus-plane) 사이의 거리, 2/w&lt;/li&gt;&#xA;&lt;li&gt;기존의 &lt;strong&gt;Hard Margin SVM&lt;/strong&gt;은 소수의 Noise로 인해 결정 경계를 찾지 못할 수 있음&lt;/li&gt;&#xA;&lt;li&gt;Plus &amp;amp; Minus Plane에 약간의 여유 변수를 두어 에러를 무시하는 &lt;strong&gt;Soft Margin SVM&lt;/strong&gt;로 발전&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;arg-min&#34;&gt;arg min&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#arg-min&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;$$arg\ min\lbrace\frac{1}{2}{||w||}^2+C\Sigma^n_{i=1}\xi_i\rbrace$$&#xA;$$\text{단, }y_i({w}\cdot{x_i}-b)\ge{1-\xi_i},\quad{\xi_i\ge{0}},\quad{\text{for all }1\le{i}\le{n}}$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

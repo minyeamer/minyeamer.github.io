@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on Minystory</title>
+    <link>https://minyeamer.github.io/tags/jekyll/</link>
+    <description>Recent content in Jekyll on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 30 Aug 2022 16:28:43 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>깃허브 블로그 시작하기</title>
+      <link>https://minyeamer.github.io/post/blog/tech/jekyll-blog/</link>
+      <pubDate>Tue, 30 Aug 2022 16:28:43 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/blog/tech/jekyll-blog/</guid>
+      <description>&lt;p&gt;블로그를 처음 시작함에 있어서 모든 것이 준비된 호스팅 서비스의 편의성은 무시할 수 없습니다.&lt;br&gt;&#xA;저도 처음엔 코드를 직접 건드리는 자유도 높은 방식의 블로그에 진입 장벽을 느끼고&lt;br&gt;&#xA;가볍게 시작할 수 있는 티스토리를 통해 블로그에 입문했습니다.&lt;br&gt;&#xA;하지만, 개발적 지식을 학습하면서 깃허브에 마크다운 문서를 올리는 빈도가 늘어났고,&lt;br&gt;&#xA;깃허브에 올린 문서를 굳이 티스토리로 다시 옮겨 담는 것에 불편함을 느끼게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;마크다운 문서를 자주 작성하고 깃허브 저장소를 학습 노트로 활용한다면,&lt;br&gt;&#xA;깃허브 블로그를 구성해보는 것이 문서를 통합적으로 관리할 수 있다는 점에서 매력적이라 생각합니다.&lt;br&gt;&#xA;현재는 막 깃허브 블로그를 꾸려서 적응해가는 단계에 불과하지만,&lt;br&gt;&#xA;웹에서 정적 파일을 수집하는 기술을 적용할 수 있다면 중복된 자료를 생성할 필요 없이&lt;br&gt;&#xA;TIL 저장소 자체를 블로그 포스트 저장소로도 활용할 수 있을 것이라 기대합니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

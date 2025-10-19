@@ -1,0 +1,210 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="TIL,Spark"><meta name=description content="Spark study"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="2023-03-21 Log"><meta property="og:description" content="Spark study"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2023-03-21T21:30:00+09:00"><meta property="article:modified_time" content="2023-03-21T21:30:00+09:00"><meta property="article:tag" content="TIL"><meta property="article:tag" content="Spark"><title>2023-03-21 Log | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.25901006165b642d19a996db15ba3fb29bba415c2ffcfe138ac0af40df3ee4eb.js integrity="sha256-JZAQBhZbZC0ZqZbbFbo/spu6QVwv/P4TisCvQN8+5Os=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/post/study/2023/2023-04/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/post/data/crawling/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-02/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#spark-components>Spark Components</a></li><li><a href=#spark-architecture>Spark Architecture</a></li></ul><ul><li><a href=#schema>Schema</a></li><li><a href=#column>Column</a></li><li><a href=#row>Row</a></li><li><a href=#dataframereader>DataFrameReader</a></li><li><a href=#projection>Projection</a></li><li><a href=#aggregation>Aggregation</a></li></ul><ul><li><a href=#catalyst-optimizer>Catalyst Optimizer</a></li><li><a href=#optimization-flow>Optimization Flow</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/study/2023/ class=post-header-category-link>Study/2023</a></div><h1 class=post-header-title>2023-03-21 Log</h1><div class=post-header-date><time datetime=2023-03-21T21:30:00+09:00>2023. 3. 21. 21:30</time></div></header><h1 id=map-reduce>Map Reduce
+<a class=anchor href=#map-reduce>#</a></h1><ul><li>MR API는 많은 양의 기본 셋업 코드가 필요하고,<br>장애 대응이 불안정하며 반복적인 디스크 I/O 작업 발생</li><li>머신러닝, 스트리밍 등 동적이고 반복적인 컴퓨팅 작업에서 효율 개선을 위해 스파크 개발</li></ul><h1 id=spark>Spark
+<a class=anchor href=#spark>#</a></h1><ul><li>DAG의 스케줄러와 질의 최적화 모듈을 통해 병렬 수행</li><li>모든 결과는 메모리에 유지되며, 디스크 I/O를 제한적으로 사용</li><li>데이터 프레임과 같은 고수준 데이터 추상화 계층 아래 단순한 논리 자료구조 구축</li><li>스파크 SQL, 스파크 MLlib, 스파크 정형화 스트리밍 GraphX 등 모듈 지원</li><li>저장과 연산을 분리하여 데이터 소스를 메모리에서 처리</li></ul><h2 id=spark-components>Spark Components
+<a class=anchor href=#spark-components>#</a></h2><ul><li>어떠한 코드로 작성해도 고도로 경량화된 바이트코드로 변환되어 워커 노드의 JVM에서 실행</li><li>스파크 SQL: SQL 계통의 질의를 써서 데이터를 데이터 프레임으로 읽어들이는 기능</li><li>스파크 MLlib: 경사 하강법 최적화를 포함한 저수준 ML 기능 포함</li><li>스파크 정형화 스트리밍: 카프카 등 실시간 연결 및 반응을 위한 모델</li><li>GraphX: 그래프 병렬 연산을 수행하기 위한 라이브러리</li></ul><h2 id=spark-architecture>Spark Architecture
+<a class=anchor href=#spark-architecture>#</a></h2><ul><li>스파크 드라이버: 스파크 이그제큐터를 위한 자원 요청 및 태스크 분배</li><li>SparkSession: 모든 스파크 연산과 데이터에 대한 통합 연결 채널, 스파크 SQL 질의 가능</li><li>클러스터 매니저: 클러스터에서 자원을 관리 및 할당하는 책임</li><li>스파크 이그제큐터: 클러스터의 각 워커 노드에서 동작하며 태스크를 실행하는 역할</li></ul><h1 id=spark-application>Spark Application
+<a class=anchor href=#spark-application>#</a></h1><ul><li>스파크 애플리케이션의 핵심에는 스파크 드라이버가 있으며, 이 드라이버는 SparkSession 객체를 생성</li><li>스파크 잡: 드라이버는 스파크 애플리케이션을 하나 이상의 스파크 잡으로 변환</li><li>스파크 스테이지: 스파크 연산을 여러 스테이지로 나뉘어 실행, 최소 실행 단위</li><li>스파크 태스크: 개별 CPU 코어에 할당되어 작업</li></ul><h1 id=spark-calculation>Spark Calculation
+<a class=anchor href=#spark-calculation>#</a></h1><ul><li>트랜스포메이션: 원본 데이터를 수정하지 않고 새로운 데이터 프레임으로 변형<br>(select()나 filter() 같은 연산으로 원본 데이터 프레임을 수정하지 않음)</li><li>트랜스포메이션은 즉시 계산되지 않고 리니지 형태로 기록,<br>액션이 실행될 때 트랜스포메이션끼리 재배열하거나 합쳐서 더 효율적으로 최적화</li><li>트랜스포메이션 연산: orderBy(), groupBy(), filter(), select(), join()</li><li>액션 연산: show(), take(), count(), collect(), save()</li><li>좁은 트랜스포메이션: 하나의 입력 파티션을 연산하여 하나의 결과 파티션을 생성 (filter, contains)</li><li>넓은 트랜스포메이션: 다른 파티션으로부터 데이터를 읽어 들여서 합치고 디스크에 작성 (groupBy, orderBy)</li></ul><h1 id=spark-rdd>Spark RDD
+<a class=anchor href=#spark-rdd>#</a></h1><ul><li>의존성: 어떤 입력을 필요로 하고 현재의 RDD가 어떻게 만들어지는지</li><li>파티션: 작업을 나눠 파티션별로 병렬 연산할 수 있는 능력을 부여</li><li>연산 함수: RDD에 저장되는 데이터를 Iterator[T] 형태로 변환</li></ul><blockquote class=book-hint><p>스파크 2.x는 고수준 연산을 사용하여 명료함과 단순함을 가짐<br>예시로 #1과 같은 그룹화는 #2로 간소화할 수 있음</p></blockquote><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#1</span>
+</span></span><span class=line><span class=cl><span class=n>agesRDD</span> <span class=o>=</span> <span class=p>(</span><span class=n>dataRDD</span><span class=o>.</span>
+</span></span><span class=line><span class=cl>  <span class=nb>map</span><span class=p>(</span><span class=k>lambda</span> <span class=n>x</span><span class=p>:</span> <span class=p>(</span><span class=n>x</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=p>(</span><span class=n>x</span><span class=p>[</span><span class=mi>1</span><span class=p>],</span> <span class=mi>1</span><span class=p>))))</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>reduceByKey</span><span class=p>(</span><span class=k>lambda</span> <span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>:</span> <span class=p>(</span><span class=n>x</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>+</span> <span class=n>y</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>x</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>+</span> <span class=n>y</span><span class=p>[</span><span class=mi>1</span><span class=p>]))</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>map</span><span class=p>(</span><span class=k>lambda</span> <span class=n>x</span><span class=p>:</span> <span class=p>(</span><span class=n>x</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>x</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span><span class=o>/</span><span class=n>x</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>]))</span></span></span></code></pre></div></div><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#2</span>
+</span></span><span class=line><span class=cl><span class=n>avgDf</span> <span class=o>=</span> <span class=n>dataDf</span><span class=o>.</span><span class=n>groupby</span><span class=p>(</span><span class=s2>&#34;name&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>agg</span><span class=p>(</span><span class=n>avg</span><span class=p>(</span><span class=s2>&#34;age&#34;</span><span class=p>))</span></span></span></code></pre></div></div><h1 id=dataframe>DataFrame
+<a class=anchor href=#dataframe>#</a></h1><ul><li>스파크는 이전 변경 내역을 보관하여 이를 보존한 채로 칼럼의 이름이나 타입을 변경 가능</li><li>스파크의 기본 데이터 타입은 String, Byte, Integer, Float 등 (파이썬 데이터 타입도 지원)</li><li>복합 데이터 분석을 위한 Map, Array, Struct, Date 타입 등의 복합 타입 및 정형화 타입 지원</li></ul><h2 id=schema>Schema
+<a class=anchor href=#schema>#</a></h2><ul><li>데이터 프레임을 위해 칼럼 이름과 연관된 데이터 타입을 정의한 것</li><li>스파크가 데이터 타입을 추측해야 하는 책임을 덜어주어 이에 대한 별도의 잡을 만드는 것을 방지</li><li>데이터가 스키마와 맞지 않는 경우, 조기에 문제를 발견 가능</li><li>프로그래밍 스타일 또는 DDL을 사용하여 스키마 정의</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>pyspark.sql.types</span> <span class=kn>import</span> <span class=o>*</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 프로그래밍 스타일</span>
+</span></span><span class=line><span class=cl><span class=n>schema</span> <span class=o>=</span> <span class=n>StructType</span><span class=p>([</span>
+</span></span><span class=line><span class=cl>  <span class=n>StructField</span><span class=p>(</span><span class=s2>&#34;author&#34;</span><span class=p>,</span> <span class=n>StringType</span><span class=p>(),</span> <span class=kc>False</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>  <span class=n>StructField</span><span class=p>(</span><span class=s2>&#34;title&#34;</span><span class=p>,</span> <span class=n>StringType</span><span class=p>(),</span> <span class=kc>False</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>  <span class=n>StructField</span><span class=p>(</span><span class=s2>&#34;pages&#34;</span><span class=p>,</span> <span class=n>IntegerType</span><span class=p>(),</span> <span class=kc>False</span><span class=p>)])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># DDL</span>
+</span></span><span class=line><span class=cl><span class=n>schema</span> <span class=o>=</span> <span class=s2>&#34;author STRING, title STRING, pages INT&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 스키마로 데이터 프레임 생성</span>
+</span></span><span class=line><span class=cl><span class=n>df</span> <span class=o>=</span> <span class=n>spark</span><span class=o>.</span><span class=n>createDataFrame</span><span class=p>(</span><span class=n>data</span><span class=p>,</span> <span class=n>schema</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 데이터 프레임의 스키마 출력</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>df</span><span class=o>.</span><span class=n>printSchema</span><span class=p>())</span></span></span></code></pre></div></div><h2 id=column>Column
+<a class=anchor href=#column>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=n>expr</span><span class=p>(</span><span class=s2>&#34;Hits * 2&#34;</span><span class=p>))</span> <span class=c1># 표현식을 사용한 계산</span>
+</span></span><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=n>col</span><span class=p>(</span><span class=s2>&#34;Hits&#34;</span><span class=p>)</span> <span class=o>*</span> <span class=mi>2</span><span class=p>)</span> <span class=c1># 칼럼명을 사용한 계산</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 기존 칼럼을 연결하여 새로운 칼럼을 생성</span>
+</span></span><span class=line><span class=cl><span class=n>df</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>withColumn</span><span class=p>(</span><span class=s2>&#34;AuthorsId&#34;</span><span class=p>,</span> <span class=p>(</span><span class=n>concat</span><span class=p>(</span><span class=n>expr</span><span class=p>(</span><span class=s2>&#34;First&#34;</span><span class=p>),</span> <span class=n>expr</span><span class=p>(</span><span class=s2>&#34;Last&#34;</span><span class=p>),</span> <span class=n>expr</span><span class=p>(</span><span class=s2>&#34;Id&#34;</span><span class=p>))))</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=n>col</span><span class=p>(</span><span class=s2>&#34;AuthorsId&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 칼럼값에 따라 정렬</span>
+</span></span><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>sort</span><span class=p>(</span><span class=n>col</span><span class=p>(</span><span class=s2>&#34;Id&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>desc</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>sort</span><span class=p>(</span><span class=err>$</span><span class=s2>&#34;Id&#34;</span><span class=o>.</span><span class=n>desc</span><span class=p>)</span> <span class=c1># $는 칼럼을 Column 타입으로 변환해주는 스파크의 함수</span></span></span></code></pre></div></div><h2 id=row>Row
+<a class=anchor href=#row>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>blog_row</span> <span class=o>=</span> <span class=n>Row</span><span class=p>(</span><span class=mi>6</span><span class=p>,</span> <span class=s2>&#34;Reynold&#34;</span><span class=p>,</span> <span class=s2>&#34;2015-03-02&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>blog_row</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=c1># &gt;&gt; &#39;Reynold&#39; ; 인덱스로 개별 Row에 접근</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Row 객체들을 데이터 프레임으로 변환</span>
+</span></span><span class=line><span class=cl><span class=n>rows</span> <span class=o>=</span> <span class=p>[</span><span class=n>Row</span><span class=p>(</span><span class=s2>&#34;Matei&#34;</span><span class=p>,</span> <span class=s2>&#34;CA&#34;</span><span class=p>),</span> <span class=n>Row</span><span class=p>(</span><span class=s2>&#34;Reynold&#34;</span><span class=p>,</span> <span class=s2>&#34;CA&#34;</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl><span class=n>df</span> <span class=o>=</span> <span class=n>spark</span><span class=o>.</span><span class=n>createDateFrame</span><span class=p>(</span><span class=n>rows</span><span class=p>,</span> <span class=p>[</span><span class=s2>&#34;Authors&#34;</span><span class=p>,</span> <span class=s2>&#34;State&#34;</span><span class=p>])</span> </span></span></code></pre></div></div><h2 id=dataframereader>DataFrameReader
+<a class=anchor href=#dataframereader>#</a></h2><ul><li>JSON, CSV 등 다양한 포맷의 데이터 소스에서 데이터를 읽어 데이터 프레임으로 가져옴</li><li>동일하게 데이터 프레임을 내보내기 위해 <code>DataFrameWriter</code> 사용</li><li><code>DataFrameWriter</code>의 포맷은 기본으로 <code>parquet</code>, 데이터 압축에서는 <code>snapy</code> 사용</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>pyspark.sql.types</span> <span class=kn>import</span> <span class=o>*</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 데이터 읽기</span>
+</span></span><span class=line><span class=cl><span class=n>schema</span> <span class=o>=</span> <span class=n>StructType</span><span class=p>([</span><span class=n>StructField</span><span class=p>(</span><span class=o>...</span><span class=p>),</span> <span class=o>...</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=o>=</span> <span class=s2>&#34;data.csv&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>df</span> <span class=o>=</span> <span class=n>spark</span><span class=o>.</span><span class=n>read_csv</span><span class=p>(</span><span class=n>file</span><span class=p>,</span> <span class=n>header</span><span class=o>=</span><span class=kc>True</span><span class=p>,</span> <span class=n>schema</span><span class=o>=</span><span class=n>schema</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 데이터 쓰기</span>
+</span></span><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>write</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=s2>&#34;parquet&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>save</span><span class=p>(</span><span class=n>path</span><span class=p>)</span></span></span></code></pre></div></div><h2 id=projection>Projection
+<a class=anchor href=#projection>#</a></h2><ul><li>필터를 이용해 특정 관계 상태와 매칭되는 행들만 반환</li><li><code>filter()</code>나 <code>where()</code> 메서드로 표현</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>pyspark.sql.functions</span> <span class=kn>import</span> <span class=o>*</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 앞에서 5개 행 반환</span>
+</span></span><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>show</span><span class=p>(</span><span class=mi>5</span><span class=p>,</span> <span class=n>truncate</span><span class=o>=</span><span class=kc>False</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># CallType의 unique한 개수 반환</span>
+</span></span><span class=line><span class=cl><span class=p>(</span><span class=n>df</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=s2>&#34;CallType&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>where</span><span class=p>(</span><span class=n>col</span><span class=p>(</span><span class=s2>&#34;CallType&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>isNotNull</span><span class=p>())</span> <span class=c1># null 타입 제외</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>agg</span><span class=p>(</span><span class=n>countDistinct</span><span class=p>(</span><span class=s2>&#34;CallType&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>alias</span><span class=p>(</span><span class=s2>&#34;DistinctCallTypes&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>show</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 칼럼명 변경</span>
+</span></span><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>withColumnRenamed</span><span class=p>(</span><span class=s2>&#34;Delay&#34;</span><span class=p>,</span> <span class=s2>&#34;ResponseDelayedinMins&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 칼럼 내용 변경</span>
+</span></span><span class=line><span class=cl><span class=p>(</span><span class=n>df</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>withColumn</span><span class=p>(</span><span class=s2>&#34;IncidentDate&#34;</span><span class=p>,</span> <span class=n>to_timestamp</span><span class=p>(</span><span class=n>col</span><span class=p>(</span><span class=s2>&#34;CallDate&#34;</span><span class=p>),</span> <span class=s2>&#34;MM/dd/yyyy&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>drop</span><span class=p>(</span><span class=s2>&#34;CallDate&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 날짜 칼럼 질의</span>
+</span></span><span class=line><span class=cl><span class=p>(</span><span class=n>df</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=n>year</span><span class=p>(</span><span class=s2>&#34;IncidentDate&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>distinct</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>orderBy</span><span class=p>(</span><span class=n>year</span><span class=p>(</span><span class=s2>&#34;IncidentDate&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>show</span><span class=p>())</span></span></span></code></pre></div></div><h2 id=aggregation>Aggregation
+<a class=anchor href=#aggregation>#</a></h2><ul><li><code>count()</code>, <code>min()</code>, <code>max()</code>, <code>sum()</code>, <code>avg()</code> 등 연산</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=p>(</span><span class=n>df</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=s2>&#34;CallType&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>groupBy</span><span class=p>(</span><span class=s2>&#34;CallType&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>count</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>orderBy</span><span class=p>(</span><span class=s2>&#34;count&#34;</span><span class=p>,</span> <span class=n>ascending</span><span class=o>=</span><span class=kc>False</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=o>.</span><span class=n>show</span><span class=p>(</span><span class=n>n</span><span class=o>=</span><span class=mi>10</span><span class=p>,</span> <span class=n>truncate</span><span class=o>=</span><span class=kc>False</span><span class=p>))</span></span></span></code></pre></div></div><h1 id=dataset-api>Dataset API
+<a class=anchor href=#dataset-api>#</a></h1><ul><li>정적 타입 API와 동적 타입 API로 구분</li><li>데이터 프레임은 <code>Dataset[Row]</code>으로 표현되며,<br>Row는 서로 다른 타입의 값을 저장할 수 있는 포괄적 JVM 객체</li><li>데이터세트는 <code>Dataset[T]</code>로 표현되며, 엄격하게 타입이 정해진 JVM 객체의 집합</li><li>동적으로 타입이 부여되는 파이썬과 R에서는 데이터프레임, 자바 등에서는 데이터세트 사용</li><li>스칼라에서는 <strong>케이스 클래스</strong>로 데이터세트 정의</li></ul><div class=book-codeblock data-lang=scala><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">scala</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-scala data-lang=scala><span class=line><span class=cl><span class=k>case</span> <span class=k>class</span> <span class=nc>DeviceIoTData</span> <span class=o>(</span><span class=n>battery_level</span><span class=k>:</span> <span class=kt>Long</span><span class=o>,</span> <span class=o>...)</span>
+</span></span><span class=line><span class=cl><span class=n>ds</span> <span class=k>=</span> <span class=n>spark</span><span class=o>.</span><span class=n>read</span><span class=o>.</span><span class=n>json</span><span class=o>(</span><span class=s>&#34;devices.json&#34;</span><span class=o>).</span><span class=n>as</span><span class=o>[</span><span class=kt>DeviceIoTData</span><span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 데이터세트에서도 트랜스포메이션 또는 액션 수행 가능
+</span></span></span><span class=line><span class=cl><span class=c1>// 람다 함수의 인자는 DeviceIoT의 JVM 객체로 개별 데이터 필드에 접근 가능
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>ds</span><span class=o>.</span><span class=n>filter</span><span class=o>(</span><span class=n>d</span> <span class=k>=&gt;</span> <span class=n>d</span><span class=o>.</span><span class=n>temp</span> <span class=o>&gt;</span> <span class=mi>30</span> <span class=o>&amp;&amp;</span> <span class=n>d</span><span class=o>.</span><span class=n>humidity</span> <span class=o>&gt;</span> <span class=mi>70</span><span class=o>)</span></span></span></code></pre></div></div><h1 id=spark-sql>Spark SQL
+<a class=anchor href=#spark-sql>#</a></h1><ul><li>정형화 데이터 관련 작업을 단순화할 수 있도록 추상화</li><li>빠른 데이터 탐색을 위한 대화형 스파크 SQL 셸을 제공</li><li>표준 데이터베이스의 JDBC/ODBC 커넥터를 통해 외부의 도구들과 연결할 수 있는 중간 역할</li><li>최적화된 질의 계획과 JVM을 위한 최적화된 코드 생성</li></ul><h2 id=catalyst-optimizer>Catalyst Optimizer
+<a class=anchor href=#catalyst-optimizer>#</a></h2><ul><li>연산 쿼리를 실행 계획으로 변환하기 위해<br>분석 > 논리적 최적화 > 물리 계획 수립 > 코드 생성 과정을 거침</li><li>언어에 상관없이 사용자가 실행한 작업은 동일한 과정을 거쳐 바이트 코드로 변환</li><li>파이썬에서 <code>df.explain(True)</code> 함수를 통해 스테이지별 상세 내용 확인 가능</li></ul><h2 id=optimization-flow>Optimization Flow
+<a class=anchor href=#optimization-flow>#</a></h2><ul><li>분석: 쿼리를 위한 추상 문법 트리 생성</li><li>논리적 최적화: 여러 계획들을 수립하고 비용 기반 옵티마이저를 통해 최적화</li><li>물리 계획 수립: 논리 계획을 바탕으로 물리적 연산자를 사용해 최적화된 물리 계획 생성</li><li>코드 생성: 각 머신에서 실행할 효율적인 자바 바이트 코드를 생성</li><li>포괄 코드 생성을 통해 전체 쿼리를 하나의 함수로 합치고 CPU 레지스터 사용을 없앰</li></ul></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/til/ class=tag>#TIL</a>
+<a href=/tags/spark/ class=tag>#Spark</a></div><div class=post-navigation><a href=/post/study/2023/2023-03/2023-03-25/ class="post-nav-link post-nav-prev"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>2023-03-25 Log</span>
+</a><a href=/post/study/2023/2023-02/2023-02-19/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>2023-02-19 Log</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/",this.page.identifier="https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/",this.page.identifier="https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#spark-components>Spark Components</a></li><li><a href=#spark-architecture>Spark Architecture</a></li></ul><ul><li><a href=#schema>Schema</a></li><li><a href=#column>Column</a></li><li><a href=#row>Row</a></li><li><a href=#dataframereader>DataFrameReader</a></li><li><a href=#projection>Projection</a></li><li><a href=#aggregation>Aggregation</a></li></ul><ul><li><a href=#catalyst-optimizer>Catalyst Optimizer</a></li><li><a href=#optimization-flow>Optimization Flow</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

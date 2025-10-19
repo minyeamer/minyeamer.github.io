@@ -1,0 +1,393 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="AI SCHOOL,멋쟁이사자처럼,코드라이언,Machine Learning,K-Means"><meta name=description content="1. K-Means Algorithm
+  #
+
+K는 전체 데이터를 몇 개의 그룹으로 묶어낼 것인지 결정하는 상수
+어떤 K 값이 적절한 것인지 파악하는 것이 중요
+각각의 데이터마다 중심값까지의 거리를 계속 물어보기 때문에 계산량이 많음
+클러스터링 성능을 향상시키기 위해 GPU Accelerated t-SNE for CUDA 활용
+
+Clustering Process
+  #
+
+K개의 임의의 중심값을 선택
+각 데이터마다 중심값까지의 거리를 계산하여 가까운 중심값의 클러스터에 할당
+각 클러스터에 속한 데이터들의 평균값으로 각 중심값을 이동
+데이터에 대한 클러스터 할당이 변하지 않을 때까지 2와 3을 반복
+
+
+2. Learning Process
+  #
+Model Fitting
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  from sklearn import cluster
+
+kmeans = cluster.KMeans(n_clusters=2, random_state=0).fit(X) 
+
+kmeans.labels_: 클러스터 번호
+kmeans.cluster_centers_: 학습이 끝난 중심값
+
+Model Predict
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  kmeans.predict([[0, 0], [8, 4]]))
+
+각각의 번호가 어떤 클러스터에 속하는지 예측
+
+
+3. K-Means for Iris Data
+  #
+Import Libraries
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+from sklearn import cluster
+from sklearn import datasets
+from sklearn import metrics
+
+Axes3D: 3D 공간에서 시각화하는 함수
+
+Model Fitting
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  estimators = [('k=8', cluster.KMeans(n_clusters=8)),
+              ('k=3', cluster.KMeans(n_clusters=3)),
+              ('k=3(r)', cluster.KMeans(n_clusters=3, n_init=1, init='random'))]
+Plot Model
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  fignum = 1
+titles = ['8 clusters', '3 clusters', '3 clusters, bad initialization']
+
+for name, est in estimators:
+    fig = plt.figure(fignum, figsize=(7, 7))
+    ax = Axes3D(fig, elev=48, azim=134)
+    est.fit(X)
+    labels = est.labels_
+
+    ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=labels.astype(np.float), edgecolor='w', s=100)
+
+    ...
+    
+    fignum = fignum + 1
+
+plt.show()
+
+plt.figure(fignum): plot을 여러 개 생성 (subplot()은 하나의 plot을 분리)
+Axes3D(elev, azim): elevation (축의 고도), azimuth (방위각)
+astype: 색깔 칠해주는 옵션
+edgecolor: 테두리
+
+
+  
+      
+          
+          
+          
+      
+  
+  
+      
+          
+          
+          
+      
+  
+
+
+1번 모델은 8개의 클러스터로 나눈 모델 (불필요하게 세분화시킴)
+3번 모델은 초기 중앙값을 랜덤으로 잡아서 특정 클러스터에 데이터가 몰림
+
+Ground Truth (원본)
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  fig = plt.figure(figsize=(7, 7))
+ax = Axes3D(fig,  elev=48, azim=134)
+
+for name, label in [('Setosa', 0), ('Versicolour', 1), ('Virginica', 2)]:
+    ax.text3D(X[y == label, 3].mean(), X[y == label, 0].mean(), X[y == label, 2].mean()+2, 
+              name, horizontalalignment='center')
+
+ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=y, edgecolor='w', s=100)
+
+...
+
+plt.show()
+
+
+
+
+4. 최적의 클러스터 개수
+  #
+최적의 클러스터 기준
+  #
+
+같은 클러스터에 있는 데이터끼리 뭉쳐 있음
+서로 다른 클러스터에 있는 데이터끼리 멀리 떨어져 있음
+
+Elbow 기법
+  #
+
+SSE(Sum of Squared Errors)의 값이 점점 줄어들다가 어느 순간
+줄어드는 비율이 급격하게 작아지는 부분이 발생
+결과물인 그래프 모양을 보면 팔꿈치에 해당하는 부분이 최적의 클러스터 개수가 됨
+
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  def elbow(X):
+    total_distance = []
+    for i in range(1, 11):
+        model = cluster.KMeans(n_clusters=i, random_state=0)
+        model.fit(X)
+
+        total_distance.append(model.inertia_) 
+
+    plt.plot(range(1, 11), total_distance, marker='o')
+    plt.xlabel('# of clusters')
+    plt.ylabel('Total distance (SSE)')
+    plt.show()
+
+elbow(X)
+
+model.inertia_: 샘플에 대해 가장 가까운 클러스터와의 거리 제곱의 합
+inertia 값은 클러스터 수가 늘어날수록 감소
+같은 클러스터에 있는 데이터끼리 뭉쳐있는 정도만 확인 가능
+
+"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-06-k-means/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-06-k-means/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="[AI SCHOOL 5기] 머신 러닝 실습 - K-Means"><meta property="og:description" content="1. K-Means Algorithm # K는 전체 데이터를 몇 개의 그룹으로 묶어낼 것인지 결정하는 상수 어떤 K 값이 적절한 것인지 파악하는 것이 중요 각각의 데이터마다 중심값까지의 거리를 계속 물어보기 때문에 계산량이 많음 클러스터링 성능을 향상시키기 위해 GPU Accelerated t-SNE for CUDA 활용 Clustering Process # K개의 임의의 중심값을 선택 각 데이터마다 중심값까지의 거리를 계산하여 가까운 중심값의 클러스터에 할당 각 클러스터에 속한 데이터들의 평균값으로 각 중심값을 이동 데이터에 대한 클러스터 할당이 변하지 않을 때까지 2와 3을 반복 2. Learning Process # Model Fitting # Copy python from sklearn import cluster kmeans = cluster.KMeans(n_clusters=2, random_state=0).fit(X) kmeans.labels_: 클러스터 번호 kmeans.cluster_centers_: 학습이 끝난 중심값 Model Predict # Copy python kmeans.predict([[0, 0], [8, 4]])) 각각의 번호가 어떤 클러스터에 속하는지 예측 3. K-Means for Iris Data # Import Libraries # Copy python import numpy as np import matplotlib.pyplot as plt from mpl_toolkits.mplot3d import Axes3D from sklearn import cluster from sklearn import datasets from sklearn import metrics Axes3D: 3D 공간에서 시각화하는 함수 Model Fitting # Copy python estimators = [('k=8', cluster.KMeans(n_clusters=8)), ('k=3', cluster.KMeans(n_clusters=3)), ('k=3(r)', cluster.KMeans(n_clusters=3, n_init=1, init='random'))] Plot Model # Copy python fignum = 1 titles = ['8 clusters', '3 clusters', '3 clusters, bad initialization'] for name, est in estimators: fig = plt.figure(fignum, figsize=(7, 7)) ax = Axes3D(fig, elev=48, azim=134) est.fit(X) labels = est.labels_ ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=labels.astype(np.float), edgecolor='w', s=100) ... fignum = fignum + 1 plt.show() plt.figure(fignum): plot을 여러 개 생성 (subplot()은 하나의 plot을 분리) Axes3D(elev, azim): elevation (축의 고도), azimuth (방위각) astype: 색깔 칠해주는 옵션 edgecolor: 테두리 1번 모델은 8개의 클러스터로 나눈 모델 (불필요하게 세분화시킴) 3번 모델은 초기 중앙값을 랜덤으로 잡아서 특정 클러스터에 데이터가 몰림 Ground Truth (원본) # Copy python fig = plt.figure(figsize=(7, 7)) ax = Axes3D(fig, elev=48, azim=134) for name, label in [('Setosa', 0), ('Versicolour', 1), ('Virginica', 2)]: ax.text3D(X[y == label, 3].mean(), X[y == label, 0].mean(), X[y == label, 2].mean()+2, name, horizontalalignment='center') ax.scatter(X[:, 3], X[:, 0], X[:, 2], c=y, edgecolor='w', s=100) ... plt.show() 4. 최적의 클러스터 개수 # 최적의 클러스터 기준 # 같은 클러스터에 있는 데이터끼리 뭉쳐 있음 서로 다른 클러스터에 있는 데이터끼리 멀리 떨어져 있음 Elbow 기법 # SSE(Sum of Squared Errors)의 값이 점점 줄어들다가 어느 순간
+줄어드는 비율이 급격하게 작아지는 부분이 발생 결과물인 그래프 모양을 보면 팔꿈치에 해당하는 부분이 최적의 클러스터 개수가 됨 Copy python def elbow(X): total_distance = [] for i in range(1, 11): model = cluster.KMeans(n_clusters=i, random_state=0) model.fit(X) total_distance.append(model.inertia_) plt.plot(range(1, 11), total_distance, marker='o') plt.xlabel('# of clusters') plt.ylabel('Total distance (SSE)') plt.show() elbow(X) model.inertia_: 샘플에 대해 가장 가까운 클러스터와의 거리 제곱의 합 inertia 값은 클러스터 수가 늘어날수록 감소 같은 클러스터에 있는 데이터끼리 뭉쳐있는 정도만 확인 가능"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-04-13T21:50:00+09:00"><meta property="article:modified_time" content="2022-04-13T21:50:00+09:00"><meta property="article:tag" content="AI SCHOOL"><meta property="article:tag" content="멋쟁이사자처럼"><meta property="article:tag" content="코드라이언"><meta property="article:tag" content="Machine Learning"><meta property="article:tag" content="K-Means"><title>[AI SCHOOL 5기] 머신 러닝 실습 - K-Means | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-06-k-means/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.25901006165b642d19a996db15ba3fb29bba415c2ffcfe138ac0af40df3ee4eb.js integrity="sha256-JZAQBhZbZC0ZqZbbFbo/spu6QVwv/P4TisCvQN8+5Os=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/post/study/2023/2023-04/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/post/data/crawling/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-02/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#clustering-process>Clustering Process</a></li></ul><ul><li><a href=#model-fitting>Model Fitting</a></li><li><a href=#model-predict>Model Predict</a></li></ul><ul><li><a href=#import-libraries>Import Libraries</a></li><li><a href=#model-fitting-1>Model Fitting</a></li><li><a href=#plot-model>Plot Model</a></li><li><a href=#ground-truth-원본>Ground Truth (원본)</a></li></ul><ul><li><a href=#최적의-클러스터-기준>최적의 클러스터 기준</a></li><li><a href=#elbow-기법>Elbow 기법</a></li><li><a href=#silhouette>Silhouette</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/study/ai-school/ class=post-header-category-link>Study/AI SCHOOL</a></div><h1 class=post-header-title>[AI SCHOOL 5기] 머신 러닝 실습 - K-Means</h1><div class=post-header-date><time datetime=2022-04-13T21:50:00+09:00>2022. 4. 13. 21:50</time></div></header><h1 id=1-k-means-algorithm>1. K-Means Algorithm
+<a class=anchor href=#1-k-means-algorithm>#</a></h1><ul><li>K는 전체 데이터를 몇 개의 그룹으로 묶어낼 것인지 결정하는 상수</li><li>어떤 K 값이 적절한 것인지 파악하는 것이 중요</li><li>각각의 데이터마다 중심값까지의 거리를 계속 물어보기 때문에 계산량이 많음</li><li>클러스터링 성능을 향상시키기 위해 <a href=https://github.com/CannyLab/tsne-cuda>GPU Accelerated t-SNE for CUDA</a> 활용</li></ul><h2 id=clustering-process>Clustering Process
+<a class=anchor href=#clustering-process>#</a></h2><ol><li>K개의 임의의 중심값을 선택</li><li>각 데이터마다 중심값까지의 거리를 계산하여 가까운 중심값의 클러스터에 할당</li><li>각 클러스터에 속한 데이터들의 평균값으로 각 중심값을 이동</li><li>데이터에 대한 클러스터 할당이 변하지 않을 때까지 2와 3을 반복</li></ol><hr><h1 id=2-learning-process>2. Learning Process
+<a class=anchor href=#2-learning-process>#</a></h1><h2 id=model-fitting>Model Fitting
+<a class=anchor href=#model-fitting>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn</span> <span class=kn>import</span> <span class=n>cluster</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>kmeans</span> <span class=o>=</span> <span class=n>cluster</span><span class=o>.</span><span class=n>KMeans</span><span class=p>(</span><span class=n>n_clusters</span><span class=o>=</span><span class=mi>2</span><span class=p>,</span> <span class=n>random_state</span><span class=o>=</span><span class=mi>0</span><span class=p>)</span><span class=o>.</span><span class=n>fit</span><span class=p>(</span><span class=n>X</span><span class=p>)</span> </span></span></code></pre></div></div><ul><li><code>kmeans.labels_</code>: 클러스터 번호</li><li><code>kmeans.cluster_centers_</code>: 학습이 끝난 중심값</li></ul><h2 id=model-predict>Model Predict
+<a class=anchor href=#model-predict>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>kmeans</span><span class=o>.</span><span class=n>predict</span><span class=p>([[</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>],</span> <span class=p>[</span><span class=mi>8</span><span class=p>,</span> <span class=mi>4</span><span class=p>]]))</span></span></span></code></pre></div></div><ul><li>각각의 번호가 어떤 클러스터에 속하는지 예측</li></ul><hr><h1 id=3-k-means-for-iris-data>3. K-Means for Iris Data
+<a class=anchor href=#3-k-means-for-iris-data>#</a></h1><h2 id=import-libraries>Import Libraries
+<a class=anchor href=#import-libraries>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.pyplot</span> <span class=k>as</span> <span class=nn>plt</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>mpl_toolkits.mplot3d</span> <span class=kn>import</span> <span class=n>Axes3D</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn</span> <span class=kn>import</span> <span class=n>cluster</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn</span> <span class=kn>import</span> <span class=n>datasets</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn</span> <span class=kn>import</span> <span class=n>metrics</span></span></span></code></pre></div></div><ul><li><code>Axes3D</code>: 3D 공간에서 시각화하는 함수</li></ul><h2 id=model-fitting-1>Model Fitting
+<a class=anchor href=#model-fitting-1>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>estimators</span> <span class=o>=</span> <span class=p>[(</span><span class=s1>&#39;k=8&#39;</span><span class=p>,</span> <span class=n>cluster</span><span class=o>.</span><span class=n>KMeans</span><span class=p>(</span><span class=n>n_clusters</span><span class=o>=</span><span class=mi>8</span><span class=p>)),</span>
+</span></span><span class=line><span class=cl>              <span class=p>(</span><span class=s1>&#39;k=3&#39;</span><span class=p>,</span> <span class=n>cluster</span><span class=o>.</span><span class=n>KMeans</span><span class=p>(</span><span class=n>n_clusters</span><span class=o>=</span><span class=mi>3</span><span class=p>)),</span>
+</span></span><span class=line><span class=cl>              <span class=p>(</span><span class=s1>&#39;k=3(r)&#39;</span><span class=p>,</span> <span class=n>cluster</span><span class=o>.</span><span class=n>KMeans</span><span class=p>(</span><span class=n>n_clusters</span><span class=o>=</span><span class=mi>3</span><span class=p>,</span> <span class=n>n_init</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span> <span class=n>init</span><span class=o>=</span><span class=s1>&#39;random&#39;</span><span class=p>))]</span></span></span></code></pre></div></div><h2 id=plot-model>Plot Model
+<a class=anchor href=#plot-model>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>fignum</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=n>titles</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;8 clusters&#39;</span><span class=p>,</span> <span class=s1>&#39;3 clusters&#39;</span><span class=p>,</span> <span class=s1>&#39;3 clusters, bad initialization&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>name</span><span class=p>,</span> <span class=n>est</span> <span class=ow>in</span> <span class=n>estimators</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>fig</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>figure</span><span class=p>(</span><span class=n>fignum</span><span class=p>,</span> <span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>7</span><span class=p>,</span> <span class=mi>7</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax</span> <span class=o>=</span> <span class=n>Axes3D</span><span class=p>(</span><span class=n>fig</span><span class=p>,</span> <span class=n>elev</span><span class=o>=</span><span class=mi>48</span><span class=p>,</span> <span class=n>azim</span><span class=o>=</span><span class=mi>134</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>est</span><span class=o>.</span><span class=n>fit</span><span class=p>(</span><span class=n>X</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>labels</span> <span class=o>=</span> <span class=n>est</span><span class=o>.</span><span class=n>labels_</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>ax</span><span class=o>.</span><span class=n>scatter</span><span class=p>(</span><span class=n>X</span><span class=p>[:,</span> <span class=mi>3</span><span class=p>],</span> <span class=n>X</span><span class=p>[:,</span> <span class=mi>0</span><span class=p>],</span> <span class=n>X</span><span class=p>[:,</span> <span class=mi>2</span><span class=p>],</span> <span class=n>c</span><span class=o>=</span><span class=n>labels</span><span class=o>.</span><span class=n>astype</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>float</span><span class=p>),</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;w&#39;</span><span class=p>,</span> <span class=n>s</span><span class=o>=</span><span class=mi>100</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=o>...</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>fignum</span> <span class=o>=</span> <span class=n>fignum</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><ul><li><code>plt.figure(fignum)</code>: plot을 여러 개 생성 (<code>subplot()</code>은 하나의 plot을 분리)</li><li><code>Axes3D(elev, azim)</code>: elevation (축의 고도), azimuth (방위각)</li><li><code>astype</code>: 색깔 칠해주는 옵션</li><li><code>edgecolor</code>: 테두리</li></ul><table><thead><tr><th style=text-align:center></th><th style=text-align:center></th><th></th></tr></thead><tbody><tr><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/06-k-means/kmeans-1.png?raw=true" alt=kmeans-1></td><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/06-k-means/kmeans-2.png?raw=true" alt=kmeans-2></td><td style=text-align:center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/06-k-means/kmeans-3.png?raw=true" alt=kmeans-3></td></tr></tbody></table><ul><li>1번 모델은 8개의 클러스터로 나눈 모델 (불필요하게 세분화시킴)</li><li>3번 모델은 초기 중앙값을 랜덤으로 잡아서 특정 클러스터에 데이터가 몰림</li></ul><h2 id=ground-truth-원본>Ground Truth (원본)
+<a class=anchor href=#ground-truth-%ec%9b%90%eb%b3%b8>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>fig</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>figure</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>7</span><span class=p>,</span> <span class=mi>7</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>ax</span> <span class=o>=</span> <span class=n>Axes3D</span><span class=p>(</span><span class=n>fig</span><span class=p>,</span>  <span class=n>elev</span><span class=o>=</span><span class=mi>48</span><span class=p>,</span> <span class=n>azim</span><span class=o>=</span><span class=mi>134</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>name</span><span class=p>,</span> <span class=n>label</span> <span class=ow>in</span> <span class=p>[(</span><span class=s1>&#39;Setosa&#39;</span><span class=p>,</span> <span class=mi>0</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;Versicolour&#39;</span><span class=p>,</span> <span class=mi>1</span><span class=p>),</span> <span class=p>(</span><span class=s1>&#39;Virginica&#39;</span><span class=p>,</span> <span class=mi>2</span><span class=p>)]:</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax</span><span class=o>.</span><span class=n>text3D</span><span class=p>(</span><span class=n>X</span><span class=p>[</span><span class=n>y</span> <span class=o>==</span> <span class=n>label</span><span class=p>,</span> <span class=mi>3</span><span class=p>]</span><span class=o>.</span><span class=n>mean</span><span class=p>(),</span> <span class=n>X</span><span class=p>[</span><span class=n>y</span> <span class=o>==</span> <span class=n>label</span><span class=p>,</span> <span class=mi>0</span><span class=p>]</span><span class=o>.</span><span class=n>mean</span><span class=p>(),</span> <span class=n>X</span><span class=p>[</span><span class=n>y</span> <span class=o>==</span> <span class=n>label</span><span class=p>,</span> <span class=mi>2</span><span class=p>]</span><span class=o>.</span><span class=n>mean</span><span class=p>()</span><span class=o>+</span><span class=mi>2</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>              <span class=n>name</span><span class=p>,</span> <span class=n>horizontalalignment</span><span class=o>=</span><span class=s1>&#39;center&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>ax</span><span class=o>.</span><span class=n>scatter</span><span class=p>(</span><span class=n>X</span><span class=p>[:,</span> <span class=mi>3</span><span class=p>],</span> <span class=n>X</span><span class=p>[:,</span> <span class=mi>0</span><span class=p>],</span> <span class=n>X</span><span class=p>[:,</span> <span class=mi>2</span><span class=p>],</span> <span class=n>c</span><span class=o>=</span><span class=n>y</span><span class=p>,</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;w&#39;</span><span class=p>,</span> <span class=n>s</span><span class=o>=</span><span class=mi>100</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>...</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><div align=center><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/06-k-means/kmeans-4.png?raw=true" style=max-width:500px></div><hr><h1 id=4-최적의-클러스터-개수>4. 최적의 클러스터 개수
+<a class=anchor href=#4-%ec%b5%9c%ec%a0%81%ec%9d%98-%ed%81%b4%eb%9f%ac%ec%8a%a4%ed%84%b0-%ea%b0%9c%ec%88%98>#</a></h1><h2 id=최적의-클러스터-기준>최적의 클러스터 기준
+<a class=anchor href=#%ec%b5%9c%ec%a0%81%ec%9d%98-%ed%81%b4%eb%9f%ac%ec%8a%a4%ed%84%b0-%ea%b8%b0%ec%a4%80>#</a></h2><ol><li>같은 클러스터에 있는 데이터끼리 뭉쳐 있음</li><li>서로 다른 클러스터에 있는 데이터끼리 멀리 떨어져 있음</li></ol><h2 id=elbow-기법>Elbow 기법
+<a class=anchor href=#elbow-%ea%b8%b0%eb%b2%95>#</a></h2><ul><li>SSE(Sum of Squared Errors)의 값이 점점 줄어들다가 어느 순간<br>줄어드는 비율이 급격하게 작아지는 부분이 발생</li><li>결과물인 그래프 모양을 보면 팔꿈치에 해당하는 부분이 최적의 클러스터 개수가 됨</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>elbow</span><span class=p>(</span><span class=n>X</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>total_distance</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>11</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>model</span> <span class=o>=</span> <span class=n>cluster</span><span class=o>.</span><span class=n>KMeans</span><span class=p>(</span><span class=n>n_clusters</span><span class=o>=</span><span class=n>i</span><span class=p>,</span> <span class=n>random_state</span><span class=o>=</span><span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>model</span><span class=o>.</span><span class=n>fit</span><span class=p>(</span><span class=n>X</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=n>total_distance</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>model</span><span class=o>.</span><span class=n>inertia_</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>plt</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>11</span><span class=p>),</span> <span class=n>total_distance</span><span class=p>,</span> <span class=n>marker</span><span class=o>=</span><span class=s1>&#39;o&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>plt</span><span class=o>.</span><span class=n>xlabel</span><span class=p>(</span><span class=s1>&#39;# of clusters&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>plt</span><span class=o>.</span><span class=n>ylabel</span><span class=p>(</span><span class=s1>&#39;Total distance (SSE)&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>elbow</span><span class=p>(</span><span class=n>X</span><span class=p>)</span></span></span></code></pre></div></div><ul><li><code>model.inertia_</code>: 샘플에 대해 가장 가까운 클러스터와의 거리 제곱의 합</li><li>inertia 값은 클러스터 수가 늘어날수록 감소</li><li>같은 클러스터에 있는 데이터끼리 뭉쳐있는 정도만 확인 가능</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/06-k-means/elbow.png?raw=true" alt=elbow></p><h2 id=silhouette>Silhouette
+<a class=anchor href=#silhouette>#</a></h2><ul><li>클러스터링의 품질을 정량적으로 계산해주는 방법 (모든 클러스터링 기법에 적용 가능)</li><li>i번째 데이터 x(i)에 대한 실루엣 계수 s(i) 값은 아래의 식으로 정의</li></ul><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/06-machine-learning/06-k-means/silhouette.png?raw=true" alt=silhouette></p><ul><li>a(i): <strong>클러스터 내 데이터 응집도(cohesion)</strong> 를 나타내는 값<br>== 데이터 x(i)와 <strong>동일한 클러스터 내의 나머지 데이터들과의 평균 거리</strong></li><li>b(i): <strong>클러스터 간 분리도(separation)</strong> 를 나타내는 값<br>== 데이터 x(i)와 <strong>가장 가까운 클러스터 내의 모든 데이터들과의 평균 거리</strong></li><li>클러스터의 개수가 최적화되어 있으면 실루엣 계수의 값은 1에 가까운 값이 됨</li><li>실루엣 계수의 평균이 0.7 이상이면 안정적</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>silhouette_score</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>silhouette_avg</span> <span class=o>=</span> <span class=n>silhouette_score</span><span class=p>(</span><span class=n>X</span><span class=p>,</span> <span class=n>y_fitted</span><span class=p>)</span></span></span></code></pre></div></div><ul><li><code>silhouette_avg</code>: 실루엣 계수의 평균</li><li>클러스터링의 기준이 이론적으로는 맞을 수 있어도 실용적으로는 다를 수 있음<br>(판단 기준이 없을 때 활용)</li></ul></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/ai-school/ class=tag>#AI SCHOOL</a>
+<a href=/tags/%EB%A9%8B%EC%9F%81%EC%9D%B4%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC/ class=tag>#멋쟁이사자처럼</a>
+<a href=/tags/%EC%BD%94%EB%93%9C%EB%9D%BC%EC%9D%B4%EC%96%B8/ class=tag>#코드라이언</a>
+<a href=/tags/machine-learning/ class=tag>#Machine Learning</a>
+<a href=/tags/k-means/ class=tag>#K-Means</a></div><div class=post-navigation><a href=/post/study/ai-school/06-machine-learning/aischool-06-07-pca/ class="post-nav-link post-nav-prev"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>[AI SCHOOL 5기] 머신 러닝 실습 - PCA</span>
+</a><a href=/post/study/ai-school/06-machine-learning/aischool-06-05-kernelized-svm/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>[AI SCHOOL 5기] 머신 러닝 실습 - Kernelized SVM</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-06-k-means/",this.page.identifier="https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-06-k-means/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-06-k-means/",this.page.identifier="https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-06-k-means/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#clustering-process>Clustering Process</a></li></ul><ul><li><a href=#model-fitting>Model Fitting</a></li><li><a href=#model-predict>Model Predict</a></li></ul><ul><li><a href=#import-libraries>Import Libraries</a></li><li><a href=#model-fitting-1>Model Fitting</a></li><li><a href=#plot-model>Plot Model</a></li><li><a href=#ground-truth-원본>Ground Truth (원본)</a></li></ul><ul><li><a href=#최적의-클러스터-기준>최적의 클러스터 기준</a></li><li><a href=#elbow-기법>Elbow 기법</a></li><li><a href=#silhouette>Silhouette</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear Regression on Minystory</title>
+    <link>https://minyeamer.github.io/tags/linear-regression/</link>
+    <description>Recent content in Linear Regression on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 13 Apr 2022 16:31:00 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/linear-regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI SCHOOL 5기] 머신 러닝 실습 - 선형 회귀</title>
+      <link>https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-01-linear-regression/</link>
+      <pubDate>Wed, 13 Apr 2022 16:31:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/ai-school/06-machine-learning/aischool-06-01-linear-regression/</guid>
+      <description>&lt;h1 id=&#34;linear-regression&#34;&gt;Linear Regression&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#linear-regression&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;종속 변수 y와 독립 변수 x 사이의 선형 상관 관계를 모델링하는 회귀분석 기법&lt;/li&gt;&#xA;&lt;li&gt;정답이 있는 데이터의 추세를 잘 설명하는 선형 함수를 찾아 x에 대한 y를 예측&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Linear Combination (선형 결합)&lt;/strong&gt;: 더하기와 곱하기로만 이루어진 식&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;단순 회귀분석&lt;/strong&gt;: 1개의 독립변수(x)가 1개의 종속변수(y)에 영향을 미칠 때&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;다중 회귀분석&lt;/strong&gt;: 2개 이상의 독립변수(x)가 1개의 종속변수(y)에 영향을 미칠 때&lt;/li&gt;&#xA;&lt;li&gt;선형 회귀는 가장 적합한 θ들의 집합을 찾는 것이 목표&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;cost-function&#34;&gt;Cost Function&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cost-function&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;예측 값과 실제 값의 차이를 기반으로 모델의 성능(정확도)을 판단하기 위한 함수&lt;/li&gt;&#xA;&lt;li&gt;Objective (MIN or MAX) 함수 안에 Cost Function이 존재&lt;/li&gt;&#xA;&lt;li&gt;선형 회귀에서는 &lt;strong&gt;Mean Squre(d) Error Function (평균 제곱 오차 함수)&lt;/strong&gt; 활용&lt;/li&gt;&#xA;&lt;li&gt;MSE(Cost)가 최소가 되는 θ(a &amp;amp; b)를 찾아야하며,&lt;br&gt;&#xA;이를 위한 최적화 기법으로 &lt;strong&gt;Gradient Descent Algorithm (경사하강법)&lt;/strong&gt; 활용&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;mean-squre-error-function&#34;&gt;Mean Squre Error Function&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#mean-squre-error-function&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;회귀 분석을 위한 Cost Function&lt;/li&gt;&#xA;&lt;li&gt;y축 방향의 차이를 에러로 판단하는데 전체 에러를 단순하게 합칠 경우&lt;br&gt;&#xA;양 에러와 음 에러가 상쇄되어 올바른 판단을 할 수 없음&lt;/li&gt;&#xA;&lt;li&gt;부호를 제거하기 위해 모든 에러에 제곱을 취하고 그 평균을 구한 것이 MSE&lt;/li&gt;&#xA;&lt;li&gt;MSE(Cost)가 0에 가까울수록 에러가 적다고 판단&lt;/li&gt;&#xA;&lt;li&gt;값에 제곱을 취하기 때문에 이상치가 있으면 영향을 많이 받아 이상치를 찾아내기 쉬움&lt;/li&gt;&#xA;&lt;li&gt;제곱 대신에 절댓값을 사용하는 &lt;strong&gt;MAE Function&lt;/strong&gt;은 이상치에 영향을 덜 받음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;gradient-descent-algorithm&#34;&gt;Gradient Descent Algorithm&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#gradient-descent-algorithm&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Cost Function의 값을 최소로 만드는 θ를 찾아나가는 방법&lt;/li&gt;&#xA;&lt;li&gt;Cost Function의 Gradient(기울기)에 상수를 곱한 값을 빼서 θ를 조정&lt;/li&gt;&#xA;&lt;li&gt;어느 방향으로 θ를 움직이면 Cost가 작아지는지 현재 위치에서 함수를 미분하여 판단&lt;/li&gt;&#xA;&lt;li&gt;변수(θ)를 움직이면서 전체 Cost 값이 변하지 않거나 매우 느리게 변할 때까지 접근&lt;/li&gt;&#xA;&lt;li&gt;MSE를 미분했을 때 0이 나오는 지점을 찾아도 되지만, 빅데이터에서 x 데이터 역행렬이 오래걸림&lt;/li&gt;&#xA;&lt;li&gt;그래프 중간에 함정처럼 페인 부분을 Local Minima라 부름 (목표점은 Global Minima)&lt;/li&gt;&#xA;&lt;li&gt;가던 방향에서 조금 더 가는 발전된 Gradient Descent 기법을 통해 함정을 빠져나감&lt;/li&gt;&#xA;&lt;li&gt;Local Minima도 Global Minima와 비슷하게 떨어지기 때문에 에러가 적음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;$$\text{repeat until convergence}\ { \theta_j:=\theta_j-{\alpha}\frac{\delta}{\delta\theta_j}J(\theta_0,\theta_1)\quad(\text{for}j=0\text{and}j=1) }$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

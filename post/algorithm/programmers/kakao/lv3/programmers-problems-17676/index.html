@@ -1,0 +1,195 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="Algorithm,Problem Solving,프로그래머스,프로그래머스 Lv3,Python,Sliding Window"><meta name=description content="문제 링크
+  #
+
+https://programmers.co.kr/learn/courses/30/lessons/17676
+
+개요
+  #
+
+datetime 라이브러리를 사용해 해결할 수 있는 문제다.
+
+문제 조건
+  #
+
+트래픽 처리 종료 시간 및 처리 시간이 짝지어진 로그 문자열을 해석하여 초당 최대 처리량을 반환하는 문제다.
+
+문제 해설
+  #
+
+datetime과 timedelta 모듈을 활용하여 각각의 트래픽 로그에 대한 시작과 끝 시간을 계산한다.
+트래픽의 시작 또는 끝을 1초 구간의 시작으로 정의하고 해당 구간에서 시작됐거나 진행 중인 트래픽 수를 합산한다.
+합산된 트래픽 수 중에서 최댓값을 초당 최대 처리량으로 판단하여 반환한다.
+
+한계
+  #
+
+트래픽 로그를 시작 시간과 끝 시간으로 분리하지 않고 시간 범위로 변환할 수 있다면,
+굳이 2N 길이의 반복문을 사용하지 않고 교집합 연산을 사용해서 시간 복잡도를 개선할 수 있었을 것이다.
+
+해설 코드
+  #
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  from datetime import datetime, timedelta
+
+def solution(lines):
+    answer = 0
+    lines = sorted(map(interpret_log, lines))
+
+    delta = timedelta(seconds=1)
+    for start in sum(lines, []):
+        t = sum([check_time_range(time_range, start, start+delta) for time_range in lines])
+        answer = max(t, answer)
+        start += delta
+
+    return answer
+
+def interpret_log(line):
+    line = line.split()
+    line = [word.split(s) for word, s in zip(line, ['-',':','s'])]
+    Y,m,d,H,M,S,ms = list(map(int,line[0]+line[1][:-1]+line[1][-1].split('.')))
+    end_date = datetime(Y,m,d,H,M,S,ms*1000)
+    duration = line[2][0] if '.' in line[2][0] else line[2][0]+'.0'
+    S,ms = list(map(int,duration.split('.')))
+    start_date = end_date - timedelta(seconds=S,milliseconds=ms-1)
+
+    return [start_date, end_date]
+
+def check_time_range(time_range, start, end):
+    con1 = start <= time_range[0] < end
+    con2 = time_range[0] <= start <= time_range[1]
+    return con1 or con2"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/post/algorithm/programmers/kakao/lv3/programmers-problems-17676/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/post/algorithm/programmers/kakao/lv3/programmers-problems-17676/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="[프로그래머스/카카오 17676] 추석 트래픽 (Python)"><meta property="og:description" content="문제 링크 # https://programmers.co.kr/learn/courses/30/lessons/17676 개요 # datetime 라이브러리를 사용해 해결할 수 있는 문제다. 문제 조건 # 트래픽 처리 종료 시간 및 처리 시간이 짝지어진 로그 문자열을 해석하여 초당 최대 처리량을 반환하는 문제다. 문제 해설 # datetime과 timedelta 모듈을 활용하여 각각의 트래픽 로그에 대한 시작과 끝 시간을 계산한다. 트래픽의 시작 또는 끝을 1초 구간의 시작으로 정의하고 해당 구간에서 시작됐거나 진행 중인 트래픽 수를 합산한다. 합산된 트래픽 수 중에서 최댓값을 초당 최대 처리량으로 판단하여 반환한다. 한계 # 트래픽 로그를 시작 시간과 끝 시간으로 분리하지 않고 시간 범위로 변환할 수 있다면,
+굳이 2N 길이의 반복문을 사용하지 않고 교집합 연산을 사용해서 시간 복잡도를 개선할 수 있었을 것이다. 해설 코드 # Copy python from datetime import datetime, timedelta def solution(lines): answer = 0 lines = sorted(map(interpret_log, lines)) delta = timedelta(seconds=1) for start in sum(lines, []): t = sum([check_time_range(time_range, start, start+delta) for time_range in lines]) answer = max(t, answer) start += delta return answer def interpret_log(line): line = line.split() line = [word.split(s) for word, s in zip(line, ['-',':','s'])] Y,m,d,H,M,S,ms = list(map(int,line[0]+line[1][:-1]+line[1][-1].split('.'))) end_date = datetime(Y,m,d,H,M,S,ms*1000) duration = line[2][0] if '.' in line[2][0] else line[2][0]+'.0' S,ms = list(map(int,duration.split('.'))) start_date = end_date - timedelta(seconds=S,milliseconds=ms-1) return [start_date, end_date] def check_time_range(time_range, start, end): con1 = start <= time_range[0] < end con2 = time_range[0] <= start <= time_range[1] return con1 or con2"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-05-06T17:26:00+09:00"><meta property="article:modified_time" content="2022-05-06T17:26:00+09:00"><meta property="article:tag" content="Algorithm"><meta property="article:tag" content="Problem Solving"><meta property="article:tag" content="프로그래머스"><meta property="article:tag" content="프로그래머스 Lv3"><meta property="article:tag" content="Python"><meta property="article:tag" content="Sliding Window"><title>[프로그래머스/카카오 17676] 추석 트래픽 (Python) | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/post/algorithm/programmers/kakao/lv3/programmers-problems-17676/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.25901006165b642d19a996db15ba3fb29bba415c2ffcfe138ac0af40df3ee4eb.js integrity="sha256-JZAQBhZbZC0ZqZbbFbo/spu6QVwv/P4TisCvQN8+5Os=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/post/study/2023/2023-04/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/post/data/crawling/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-02/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#한계>한계</a></li><li><a href=#해설-코드>해설 코드</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/algorithm/programmers/ class=post-header-category-link>Algorithm/Programmers</a></div><h1 class=post-header-title>[프로그래머스/카카오 17676] 추석 트래픽 (Python)</h1><div class=post-header-date><time datetime=2022-05-06T17:26:00+09:00>2022. 5. 6. 17:26</time></div></header><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://programmers.co.kr/learn/courses/30/lessons/17676>https://programmers.co.kr/learn/courses/30/lessons/17676</a></li></ul><h1 id=개요>개요
+<a class=anchor href=#%ea%b0%9c%ec%9a%94>#</a></h1><ul><li><code>datetime</code> 라이브러리를 사용해 해결할 수 있는 문제다.</li></ul><h1 id=문제-조건>문제 조건
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ec%a1%b0%ea%b1%b4>#</a></h1><ul><li>트래픽 처리 종료 시간 및 처리 시간이 짝지어진 로그 문자열을 해석하여 초당 최대 처리량을 반환하는 문제다.</li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><ul><li><code>datetime</code>과 <code>timedelta</code> 모듈을 활용하여 각각의 트래픽 로그에 대한 시작과 끝 시간을 계산한다.</li><li>트래픽의 시작 또는 끝을 1초 구간의 시작으로 정의하고 해당 구간에서 시작됐거나 진행 중인 트래픽 수를 합산한다.</li><li>합산된 트래픽 수 중에서 최댓값을 초당 최대 처리량으로 판단하여 반환한다.</li></ul><h2 id=한계>한계
+<a class=anchor href=#%ed%95%9c%ea%b3%84>#</a></h2><ul><li>트래픽 로그를 시작 시간과 끝 시간으로 분리하지 않고 시간 범위로 변환할 수 있다면,<br>굳이 2N 길이의 반복문을 사용하지 않고 교집합 연산을 사용해서 시간 복잡도를 개선할 수 있었을 것이다.</li></ul><h2 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>datetime</span> <span class=kn>import</span> <span class=n>datetime</span><span class=p>,</span> <span class=n>timedelta</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>solution</span><span class=p>(</span><span class=n>lines</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>answer</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=n>lines</span> <span class=o>=</span> <span class=nb>sorted</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=n>interpret_log</span><span class=p>,</span> <span class=n>lines</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>delta</span> <span class=o>=</span> <span class=n>timedelta</span><span class=p>(</span><span class=n>seconds</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>start</span> <span class=ow>in</span> <span class=nb>sum</span><span class=p>(</span><span class=n>lines</span><span class=p>,</span> <span class=p>[]):</span>
+</span></span><span class=line><span class=cl>        <span class=n>t</span> <span class=o>=</span> <span class=nb>sum</span><span class=p>([</span><span class=n>check_time_range</span><span class=p>(</span><span class=n>time_range</span><span class=p>,</span> <span class=n>start</span><span class=p>,</span> <span class=n>start</span><span class=o>+</span><span class=n>delta</span><span class=p>)</span> <span class=k>for</span> <span class=n>time_range</span> <span class=ow>in</span> <span class=n>lines</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>        <span class=n>answer</span> <span class=o>=</span> <span class=nb>max</span><span class=p>(</span><span class=n>t</span><span class=p>,</span> <span class=n>answer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>start</span> <span class=o>+=</span> <span class=n>delta</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>answer</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>interpret_log</span><span class=p>(</span><span class=n>line</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>line</span> <span class=o>=</span> <span class=n>line</span><span class=o>.</span><span class=n>split</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>line</span> <span class=o>=</span> <span class=p>[</span><span class=n>word</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=n>s</span><span class=p>)</span> <span class=k>for</span> <span class=n>word</span><span class=p>,</span> <span class=n>s</span> <span class=ow>in</span> <span class=nb>zip</span><span class=p>(</span><span class=n>line</span><span class=p>,</span> <span class=p>[</span><span class=s1>&#39;-&#39;</span><span class=p>,</span><span class=s1>&#39;:&#39;</span><span class=p>,</span><span class=s1>&#39;s&#39;</span><span class=p>])]</span>
+</span></span><span class=line><span class=cl>    <span class=n>Y</span><span class=p>,</span><span class=n>m</span><span class=p>,</span><span class=n>d</span><span class=p>,</span><span class=n>H</span><span class=p>,</span><span class=n>M</span><span class=p>,</span><span class=n>S</span><span class=p>,</span><span class=n>ms</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span><span class=n>line</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>+</span><span class=n>line</span><span class=p>[</span><span class=mi>1</span><span class=p>][:</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span><span class=o>+</span><span class=n>line</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=s1>&#39;.&#39;</span><span class=p>)))</span>
+</span></span><span class=line><span class=cl>    <span class=n>end_date</span> <span class=o>=</span> <span class=n>datetime</span><span class=p>(</span><span class=n>Y</span><span class=p>,</span><span class=n>m</span><span class=p>,</span><span class=n>d</span><span class=p>,</span><span class=n>H</span><span class=p>,</span><span class=n>M</span><span class=p>,</span><span class=n>S</span><span class=p>,</span><span class=n>ms</span><span class=o>*</span><span class=mi>1000</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>duration</span> <span class=o>=</span> <span class=n>line</span><span class=p>[</span><span class=mi>2</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=k>if</span> <span class=s1>&#39;.&#39;</span> <span class=ow>in</span> <span class=n>line</span><span class=p>[</span><span class=mi>2</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=k>else</span> <span class=n>line</span><span class=p>[</span><span class=mi>2</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span><span class=o>+</span><span class=s1>&#39;.0&#39;</span>
+</span></span><span class=line><span class=cl>    <span class=n>S</span><span class=p>,</span><span class=n>ms</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span><span class=n>duration</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=s1>&#39;.&#39;</span><span class=p>)))</span>
+</span></span><span class=line><span class=cl>    <span class=n>start_date</span> <span class=o>=</span> <span class=n>end_date</span> <span class=o>-</span> <span class=n>timedelta</span><span class=p>(</span><span class=n>seconds</span><span class=o>=</span><span class=n>S</span><span class=p>,</span><span class=n>milliseconds</span><span class=o>=</span><span class=n>ms</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=p>[</span><span class=n>start_date</span><span class=p>,</span> <span class=n>end_date</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>check_time_range</span><span class=p>(</span><span class=n>time_range</span><span class=p>,</span> <span class=n>start</span><span class=p>,</span> <span class=n>end</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>con1</span> <span class=o>=</span> <span class=n>start</span> <span class=o>&lt;=</span> <span class=n>time_range</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>&lt;</span> <span class=n>end</span>
+</span></span><span class=line><span class=cl>    <span class=n>con2</span> <span class=o>=</span> <span class=n>time_range</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>&lt;=</span> <span class=n>start</span> <span class=o>&lt;=</span> <span class=n>time_range</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>con1</span> <span class=ow>or</span> <span class=n>con2</span></span></span></code></pre></div></div></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/algorithm/ class=tag>#Algorithm</a>
+<a href=/tags/problem-solving/ class=tag>#Problem Solving</a>
+<a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/ class=tag>#프로그래머스</a>
+<a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv3/ class=tag>#프로그래머스 Lv3</a>
+<a href=/tags/python/ class=tag>#Python</a></div><div class=post-navigation><a href=/post/algorithm/programmers/kakao/lv1/programmers-problems-81301/ class="post-nav-link post-nav-prev"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>[프로그래머스/카카오 81301] 숫자 문자열과 영단어 (Python)</span>
+</a><a href=/post/algorithm/programmers/kakao/lv2/programmers-problems-42888/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>[프로그래머스/카카오 42888] 오픈채팅방 (Python)</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/post/algorithm/programmers/kakao/lv3/programmers-problems-17676/",this.page.identifier="https://minyeamer.github.io/post/algorithm/programmers/kakao/lv3/programmers-problems-17676/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/post/algorithm/programmers/kakao/lv3/programmers-problems-17676/",this.page.identifier="https://minyeamer.github.io/post/algorithm/programmers/kakao/lv3/programmers-problems-17676/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#한계>한계</a></li><li><a href=#해설-코드>해설 코드</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

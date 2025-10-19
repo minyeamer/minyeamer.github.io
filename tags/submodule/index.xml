@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Submodule on Minystory</title>
+    <link>https://minyeamer.github.io/tags/submodule/</link>
+    <description>Recent content in Submodule on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 08 Sep 2022 12:02:32 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/submodule/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 블로그 만들기 (1) - Hugo 기본 구성</title>
+      <link>https://minyeamer.github.io/post/blog/tech/hugo-blog-1/</link>
+      <pubDate>Thu, 08 Sep 2022 12:02:32 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/blog/tech/hugo-blog-1/</guid>
+      <description>&lt;p&gt;얼마 전, 티스토리 블로그에서 &lt;a href=&#34;https://minyeamer.github.io/blog/jekyll-blog/&#34;&gt;Jekyll 블로그&lt;/a&gt;로 이동했는데,&lt;br&gt;&#xA;처음 기대했던 submodule을 활용한 효율적인 저장소 연동에서 어려움을 겪고 다른 대안을 탐색하게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;Jekyll 블로그를 사용함에 있어서, Ruby 언어로 구성된 블로그 구조에 대해 이해하기 어려운데다가&lt;br&gt;&#xA;로컬 환경에서 Jekyll 블로그를 실행하면서 발생하는 에러를 처리하는데도 난항을 겪었는데,&lt;br&gt;&#xA;웹상에서 자동 배포가 이루어지는 과정에서 submodule인 TIL 저장소를 포스트로 인식하지 못하는 문제가 있었습니다.&lt;/p&gt;&#xA;&lt;p&gt;Jekyll 블로그의 대안으로 Hexo 및 Hugo 프레임워크에 주목했고,&lt;br&gt;&#xA;두 제품의 장단점을 비교하여 상대적으로 배포가 빠르고 현재까지도 업데이트가 이루어지는 Hugo를 선택했습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

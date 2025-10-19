@@ -1,0 +1,234 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="TIL,Spark"><meta name=description content="Spark study"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="2023-04-02 Log"><meta property="og:description" content="Spark study"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2023-04-02T17:32:30+09:00"><meta property="article:modified_time" content="2023-04-02T17:32:30+09:00"><meta property="article:tag" content="TIL"><meta property="article:tag" content="Spark"><title>2023-04-02 Log | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.25901006165b642d19a996db15ba3fb29bba415c2ffcfe138ac0af40df3ee4eb.js integrity="sha256-JZAQBhZbZC0ZqZbbFbo/spu6QVwv/P4TisCvQN8+5Os=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/post/study/2023/2023-04/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/post/data/crawling/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-02/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#pandas-udf>Pandas UDF</a></li></ul><ul><li><a href=#배열-유형-함수>배열 유형 함수</a></li><li><a href=#맵-함수>맵 함수</a></li><li><a href=#고차-함수>고차 함수</a></li></ul><ul><li><a href=#union>Union</a></li><li><a href=#join>JOIN</a></li><li><a href=#window>Window</a></li><li><a href=#modification>Modification</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/study/2023/ class=post-header-category-link>Study/2023</a></div><h1 class=post-header-title>2023-04-02 Log</h1><div class=post-header-date><time datetime=2023-04-02T17:32:30+09:00>2023. 4. 2. 17:32</time></div></header><h1 id=spark-udf>Spark UDF
+<a class=anchor href=#spark-udf>#</a></h1><ul><li>자신의 기능을 정의할 수 있는 사용자 정의 함수</li><li>머신러닝 모델의 내부를 이해하지 않고도 스파크 SQL에서 예측 결과를 쿼리 가능</li><li>스파크 SQL이 하위 표현식의 평가 순서를 보장하지 않기 때문에 UDF 내부에서 null 검사</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>pyspark.sql.types</span> <span class=kn>import</span> <span class=n>LongType</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>cubed</span><span class=p>(</span><span class=n>s</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>s</span> <span class=o>*</span> <span class=n>s</span> <span class=o>*</span> <span class=n>s</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>udf</span><span class=o>.</span><span class=n>register</span><span class=p>(</span><span class=s2>&#34;cubed&#34;</span><span class=p>,</span> <span class=n>cubed</span><span class=p>,</span> <span class=n>LongType</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>9</span><span class=p>)</span><span class=o>.</span><span class=n>createOrReplaceTempView</span><span class=p>(</span><span class=s2>&#34;udf_test&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>sql</span><span class=p>(</span><span class=s2>&#34;SELECT id, cubed(id) AS id_cubed FROM udf_test&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><h2 id=pandas-udf>Pandas UDF
+<a class=anchor href=#pandas-udf>#</a></h2><ul><li>입력과 출력이 모두 판다스 인스턴스인 API 지원</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>pandas</span> <span class=k>as</span> <span class=nn>pd</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>pyspark.sql.functions</span> <span class=n>ipmort</span> <span class=n>col</span><span class=p>,</span> <span class=n>pandas_udf</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>pyspark.sql.types</span> <span class=kn>import</span> <span class=n>LongType</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>cubed</span><span class=p>(</span><span class=n>a</span><span class=p>:</span> <span class=n>pd</span><span class=o>.</span><span class=n>Series</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>pd</span><span class=o>.</span><span class=n>Series</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>a</span> <span class=o>*</span> <span class=n>a</span> <span class=o>*</span> <span class=n>a</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>cubed_udf</span> <span class=o>=</span> <span class=n>pandas_udf</span><span class=p>(</span><span class=n>cubed</span><span class=p>,</span> <span class=n>returnType</span><span class=o>=</span><span class=n>LongType</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>df</span> <span class=o>=</span> <span class=n>spark</span><span class=o>.</span><span class=n>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>4</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>df</span><span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=s2>&#34;id&#34;</span><span class=p>,</span> <span class=n>cubed_udf</span><span class=p>(</span><span class=n>col</span><span class=p>(</span><span class=s2>&#34;id&#34;</span><span class=p>)))</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><h1 id=spark-shell>Spark Shell
+<a class=anchor href=#spark-shell>#</a></h1><ul><li><code>$SPARK_HOME</code> 폴더에서 <code>./bin/spark-sql</code> 명령어 실행</li></ul><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>spark-sql&gt; CREATE TABLE people <span class=o>(</span>Name STRING, age INT<span class=o>)</span></span></span></code></pre></div></div><h1 id=jdbc>JDBC
+<a class=anchor href=#jdbc>#</a></h1><ul><li><code>user, password, url, dbtable, query, driver</code> 연결 속성 지정</li><li>파티셔닝을 위한 <code>numPartitions, partitionColumn, lowerBound, upperBound</code> 속성</li></ul><h1 id=postgresql>PostgreSQL
+<a class=anchor href=#postgresql>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>jdbcDF1</span> <span class=o>=</span> <span class=p>(</span><span class=n>spark</span>
+</span></span><span class=line><span class=cl>    <span class=o>.</span><span class=n>read</span> <span class=c1># .write</span>
+</span></span><span class=line><span class=cl>    <span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=s2>&#34;jdbc&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=o>.</span><span class=n>opiton</span><span class=p>(</span><span class=s2>&#34;url&#34;</span><span class=p>,</span> <span class=s2>&#34;jdbc:postgresql://[DBSERVER]&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=o>.</span><span class=n>option</span><span class=p>(</span><span class=s2>&#34;dbtable&#34;</span><span class=p>,</span> <span class=s2>&#34;[SCHEMA].[TABLENAME]&#34;</span><span class=p>)</span><span class=o>.</span>
+</span></span><span class=line><span class=cl>    <span class=o>.</span><span class=n>option</span><span class=p>(</span><span class=s2>&#34;user&#34;</span><span class=p>,</span> <span class=s2>&#34;[USERNAME]&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=o>.</span><span class=n>option</span><span class=p>(</span><span class=s2>&#34;password&#34;</span><span class=p>,</span> <span class=s2>&#34;[PASSWORD]&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=o>.</span><span class=n>load</span><span class=p>())</span> <span class=c1># .save()</span></span></span></code></pre></div></div><h1 id=sql-고차-함수>SQL 고차 함수
+<a class=anchor href=#sql-%ea%b3%a0%ec%b0%a8-%ed%95%a8%ec%88%98>#</a></h1><blockquote class=book-hint><p>중첩된 구조를 개별 행으로 분해</p></blockquote><div class=book-codeblock data-lang=sql><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">sql</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SELECT</span><span class=w> </span><span class=n>id</span><span class=p>,</span><span class=w> </span><span class=n>collect_list</span><span class=p>(</span><span class=n>value</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=mi>1</span><span class=p>)</span><span class=w> </span><span class=k>AS</span><span class=w> </span><span class=k>values</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=k>FROM</span><span class=w> </span><span class=p>(</span><span class=k>SELECT</span><span class=w> </span><span class=n>id</span><span class=p>,</span><span class=w> </span><span class=n>EXPLODE</span><span class=p>(</span><span class=k>values</span><span class=p>)</span><span class=w> </span><span class=k>AS</span><span class=w> </span><span class=n>value</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>FROM</span><span class=w> </span><span class=k>table</span><span class=p>)</span><span class=w> </span><span class=n>x</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=k>GROUP</span><span class=w> </span><span class=k>BY</span><span class=w> </span><span class=n>id</span></span></span></code></pre></div></div><h2 id=배열-유형-함수>배열 유형 함수
+<a class=anchor href=#%eb%b0%b0%ec%97%b4-%ec%9c%a0%ed%98%95-%ed%95%a8%ec%88%98>#</a></h2><ul><li><code>array_distinct(array)</code>: 배열 내의 중복을 제거</li><li><code>array_intersect(array, array)</code>: 중복되지 않은 두 배열의 교차점을 반환</li><li><code>array_union(array, array)</code>: 중복 항목 없이 두 배열의 결합을 반환</li><li><code>array_except(array, array)</code>: 배열1에는 존재하지만 배열2에는 존재하지 않는 요소를 반환</li><li><code>array_join(array, string)</code>: 구분 기호를 사용하여 배열 요소를 연결</li><li><code>array_max(array)</code>: Null값을 제외한 배열의 최댓값을 반환</li><li><code>array_min(array)</code>: Null값을 제외한 배열의 최솟값을 반환</li><li><code>array_position(array, T)</code>: 배열에서 지정된 요소의 첫번째 인덱스를 반환</li><li><code>array_remove(array, T)</code>: 배열에서 지정된 요소와 동일한 모든 요소를 제거</li><li><code>array_overlap(array, array)</code>: Null이 아닌 동일한 값이 두 배열에 있을 경우 true를 반환</li><li><code>array_sort(array)</code>: 배열을 오름차순으로 정렬하고 Null은 맨 끝에 위치</li><li><code>concat(array, ...)</code>: 문자열, 바이너리, 배열 등을 연결</li><li><code>flatten(array&lt;array>)</code>: 배열 안의 배열들을 단일 배열로 플랫화</li><li><code>array_repeat(T, Int)</code>: 지정된 요소가 포함된 배열을 지정한 횟수만큼 반환</li><li><code>reverse(array)</code>: 문자열의 역순 또는 배열에서 요소의 역순을 반환</li><li><code>sequence(T, T)</code>, 시작부터 끝을 포함한 일련의 요소를 생성</li><li><code>shuffle(array)</code>: 주어진 배열의 무작위 순열을 반환</li><li><code>slice(array, Int, Int)</code>: 배열에서 지정된 시작과 끝 인덱스에 대한 하위 집합을 반환</li><li><code>array_zip(array, array, ...)</code>: 병합된 구조 배열을 반환</li><li><code>element_at(array, Int)</code>: 지정된 인덱스에서 지정된 배열의 요소를 반환</li><li><code>cardinality(array)</code>: 지정된 배열 또는 맵의 크기를 반환</li></ul><h2 id=맵-함수>맵 함수
+<a class=anchor href=#%eb%a7%b5-%ed%95%a8%ec%88%98>#</a></h2><ul><li><code>map_form_arrays(array, array)</code>: 주어진 키/값 배열 쌍에서 맵을 생성하여 반환</li><li><code>map_from_entries(array&lt;struct>)</code>: 주어진 배열에서 생성된 맵을 반환</li><li><code>map_concat(map, ...)</code>: 입력된 맵의 결합을 반환</li><li><code>element_at(map, K)</code>: 주어진 키에 대한 값을 반환하고 없을 경우 Null을 반환</li><li><code>cardinality(array)</code>: 지정된 배열 또는 맵의 크기를 반환</li></ul><h2 id=고차-함수>고차 함수
+<a class=anchor href=#%ea%b3%a0%ec%b0%a8-%ed%95%a8%ec%88%98>#</a></h2><ul><li><code>transform(values, value -> lambda expression)</code> 형태의 람다식 사용</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># transform(): 배열의 각 요소에 함수를 적용하여 배열을 생성</span>
+</span></span><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>sql</span><span class=p>(</span><span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>SELECT celsius,
+</span></span></span><span class=line><span class=cl><span class=s2>    transform(celsius, t -&gt; ((t * 9) div 5) + 32) AS fahrenheit
+</span></span></span><span class=line><span class=cl><span class=s2>FROM tC
+</span></span></span><span class=line><span class=cl><span class=s2>&#34;&#34;&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># filter(): 입력한 배열의 요소 중 참인 요소만 배열로 반환</span>
+</span></span><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>sql</span><span class=p>(</span><span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>SELECT celsius,
+</span></span></span><span class=line><span class=cl><span class=s2>    filter(celsius, t -&gt; t &gt; 38) AS high
+</span></span></span><span class=line><span class=cl><span class=s2>FROM tC
+</span></span></span><span class=line><span class=cl><span class=s2>&#34;&#34;&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># exists(): 입력한 배열의 요소 중 불린 함수를 만족시키면 참을 반환</span>
+</span></span><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>sql</span><span class=p>(</span><span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>SELECT celsius,
+</span></span></span><span class=line><span class=cl><span class=s2>    exists(celsius, t -&gt; t &gt; 38) AS high
+</span></span></span><span class=line><span class=cl><span class=s2>FROM tC
+</span></span></span><span class=line><span class=cl><span class=s2>&#34;&#34;&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># reduce(): 요소를 병합하고 배열의 요소를 단일값으로 줄임</span>
+</span></span><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>sql</span><span class=p>(</span><span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>SELECT celsius,
+</span></span></span><span class=line><span class=cl><span class=s2>    reduce(celsius, 0,
+</span></span></span><span class=line><span class=cl><span class=s2>        (t, acc) -&gt; t + acc,
+</span></span></span><span class=line><span class=cl><span class=s2>        acc -&gt; (acc div size(celsius) * 9 div 5) + 32
+</span></span></span><span class=line><span class=cl><span class=s2>    ) AS avgFahrenheit
+</span></span></span><span class=line><span class=cl><span class=s2>FROM tC
+</span></span></span><span class=line><span class=cl><span class=s2>&#34;&#34;&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><h1 id=sql-작업>SQL 작업
+<a class=anchor href=#sql-%ec%9e%91%ec%97%85>#</a></h1><h2 id=union>Union
+<a class=anchor href=#union>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>bar</span> <span class=o>=</span> <span class=n>departureDelays</span><span class=o>.</span><span class=n>union</span><span class=p>(</span><span class=n>foo</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>bar</span><span class=o>.</span><span class=n>createOrReplaceTempView</span><span class=p>(</span><span class=s2>&#34;bar&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>bar</span><span class=o>.</span><span class=n>filter</span><span class=p>(</span><span class=n>expr</span><span class=p>(</span><span class=s2>&#34;&#34;&#34;origin == &#39;SEA&#39; AND destination == &#39;SFO&#39;
+</span></span></span><span class=line><span class=cl><span class=s2>AND date LIKE &#39;01010%&#39; AND delay &gt; 0&#34;&#34;&#34;</span><span class=p>))</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><h2 id=join>JOIN
+<a class=anchor href=#join>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>foo</span><span class=o>.</span><span class=n>join</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=n>airports</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>airports</span><span class=o>.</span><span class=n>IATA</span> <span class=o>==</span> <span class=n>foo</span><span class=o>.</span><span class=n>origin</span>
+</span></span><span class=line><span class=cl><span class=p>)</span><span class=o>.</span><span class=n>select</span><span class=p>(</span><span class=s2>&#34;City&#34;</span><span class=p>,</span> <span class=s2>&#34;State&#34;</span><span class=p>,</span> <span class=s2>&#34;date&#34;</span><span class=p>,</span> <span class=s2>&#34;delay&#34;</span><span class=p>,</span> <span class=s2>&#34;distance&#34;</span><span class=p>,</span> <span class=s2>&#34;destination&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><h2 id=window>Window
+<a class=anchor href=#window>#</a></h2><ul><li><code>rank()</code>, <code>dense_rank()</code>, <code>percent_rank()</code>, <code>ntile()</code>, <code>row_number()</code></li><li><code>cume_dist()</code>, <code>first_value()</code>, <code>last_value()</code>, <code>lag()</code>, <code>lead()</code></li></ul><div class=book-codeblock data-lang=sql><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">sql</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>CREATE</span><span class=w> </span><span class=k>TABLE</span><span class=w> </span><span class=n>departureDelaysWindow</span><span class=w> </span><span class=k>AS</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=k>SELECT</span><span class=w> </span><span class=n>origin</span><span class=p>,</span><span class=w> </span><span class=n>destination</span><span class=p>,</span><span class=w> </span><span class=k>SUM</span><span class=p>(</span><span class=n>delay</span><span class=p>)</span><span class=w> </span><span class=k>AS</span><span class=w> </span><span class=n>TotalDelays</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>FROM</span><span class=w> </span><span class=n>departureDelays</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>WHERE</span><span class=w> </span><span class=n>origin</span><span class=w> </span><span class=k>IN</span><span class=w> </span><span class=p>(</span><span class=s1>&#39;SEA&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;SFO&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;JFK&#39;</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>AND</span><span class=w> </span><span class=n>destination</span><span class=w> </span><span class=k>IN</span><span class=w> </span><span class=p>(</span><span class=s1>&#39;SEA&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;SFO&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;JFK&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;DEN&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;ORD&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;LAX&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;ATL&#39;</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>GROUP</span><span class=w> </span><span class=k>BY</span><span class=w> </span><span class=n>origin</span><span class=p>,</span><span class=w> </span><span class=n>destination</span><span class=p>;</span></span></span></code></pre></div></div><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>spark</span><span class=o>.</span><span class=n>sql</span><span class=p>(</span><span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>SELECT origin, destination, TotalDelays, rank
+</span></span></span><span class=line><span class=cl><span class=s2>    FROM (
+</span></span></span><span class=line><span class=cl><span class=s2>        SELECT origin, destination, TotalDelays,
+</span></span></span><span class=line><span class=cl><span class=s2>            dense_rank() OVER (PARTITION BY origin ORDER BY TotalDelays DESC) AS rank
+</span></span></span><span class=line><span class=cl><span class=s2>            FROM departureDelaysWindow
+</span></span></span><span class=line><span class=cl><span class=s2>    ) t
+</span></span></span><span class=line><span class=cl><span class=s2>    WHERE rank &lt;= 3
+</span></span></span><span class=line><span class=cl><span class=s2>&#34;&#34;&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>show</span><span class=p>()</span></span></span></code></pre></div></div><h2 id=modification>Modification
+<a class=anchor href=#modification>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>pyspark.sql.functions</span> <span class=kn>import</span> <span class=o>*</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 열 추가</span>
+</span></span><span class=line><span class=cl><span class=n>foo2</span> <span class=o>=</span> <span class=p>(</span><span class=n>foo</span><span class=o>.</span><span class=n>withColumn</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;status&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=n>expr</span><span class=p>(</span><span class=s2>&#34;CASE WHEN delay &lt;= 10 THEN &#39;On-time&#39; ELSE &#39;Delayed&#39; END&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 열 삭제</span>
+</span></span><span class=line><span class=cl><span class=n>foo3</span> <span class=o>=</span> <span class=n>foo2</span><span class=o>.</span><span class=n>drop</span><span class=p>(</span><span class=s2>&#34;delay&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 칼럼명 바꾸기</span>
+</span></span><span class=line><span class=cl><span class=n>foo4</span> <span class=o>=</span> <span class=n>foo3</span><span class=o>.</span><span class=n>withColumnRenamed</span><span class=p>(</span><span class=s2>&#34;status&#34;</span><span class=p>,</span> <span class=s2>&#34;flight_status&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 피벗</span>
+</span></span><span class=line><span class=cl><span class=n>SELECT</span> <span class=o>*</span> <span class=n>FROM</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=n>SELECT</span> <span class=n>destination</span><span class=p>,</span> <span class=n>CAST</span><span class=p>(</span><span class=n>SUBSTRING</span><span class=p>(</span><span class=n>date</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span> <span class=n>AS</span> <span class=nb>int</span><span class=p>)</span> <span class=n>AS</span> <span class=n>month</span><span class=p>,</span> <span class=n>delay</span>
+</span></span><span class=line><span class=cl>    <span class=n>FROM</span> <span class=n>departureDelays</span> <span class=n>WHERE</span> <span class=n>origin</span> <span class=o>=</span> <span class=s1>&#39;SFA</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>PIVOT</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=n>CAST</span> <span class=n>AVG</span><span class=p>(</span><span class=n>delay</span><span class=p>)</span> <span class=n>AS</span> <span class=n>DECIMAL</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span> <span class=n>AS</span> <span class=n>AvgDelay</span><span class=p>,</span> <span class=n>MAX</span><span class=p>(</span><span class=n>delay</span><span class=p>)</span> <span class=n>AS</span> <span class=n>MaxDelay</span>
+</span></span><span class=line><span class=cl>    <span class=n>FOR</span> <span class=n>month</span> <span class=n>IN</span> <span class=p>(</span><span class=mi>1</span> <span class=n>JAN</span><span class=p>,</span> <span class=mi>2</span> <span class=n>FEB</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>)</span></span></span></code></pre></div></div></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/til/ class=tag>#TIL</a>
+<a href=/tags/spark/ class=tag>#Spark</a></div><div class=post-navigation><a href class="post-nav-link post-nav-prev post-nav-disabled"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>이전 게시글이 없습니다</span>
+</a><a href=/post/study/2023/2023-03/2023-03-25/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>2023-03-25 Log</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/",this.page.identifier="https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/",this.page.identifier="https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#pandas-udf>Pandas UDF</a></li></ul><ul><li><a href=#배열-유형-함수>배열 유형 함수</a></li><li><a href=#맵-함수>맵 함수</a></li><li><a href=#고차-함수>고차 함수</a></li></ul><ul><li><a href=#union>Union</a></li><li><a href=#join>JOIN</a></li><li><a href=#window>Window</a></li><li><a href=#modification>Modification</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

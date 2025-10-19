@@ -1,0 +1,172 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="AI SCHOOL,멋쟁이사자처럼,코드라이언,Statistics"><meta name=description content="마케팅 비용 분석
+  #
+
+매월 유튜브에 광고 비용을 지출하여 신규 유저(구매 고객 or 회원가입 고객)를 획득
+월별로 10,000원 단위의 유튜브 광고 비용과 해당 월에 신규로 획득된 유저 수가 측정되었다고 가정
+
+비교 데이터
+  #
+
+단순 CAC 계산
+  #
+
+CAC(Customer Acquisition Cost, 신규고객 유치 비용)
+@ https://j.mp/35O5NRe
+
+
+  
+
+    
+      Copy
+    
+
+    python
+
+  cac = ad_df['Marketing_Costs'].sum() / ad_df['User_Acquired'].sum()
+print(cac * 10000)
+
+# Output
+446원
+위의 금액에 추가로 획득하기를 원하는 유저 수를 곱한 금액을
+유튜브 광고 비용으로 쓰면 그만큼 유저가 늘어날까?
+== 위의 금액 만큼 유튜브 광고에 쓰면 정말로 유저가 1명 늘어날까?"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/post/study/ai-school/04-statistical-analysis/aischool-04-04-ab-test/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/post/study/ai-school/04-statistical-analysis/aischool-04-04-ab-test/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="[AI SCHOOL 5기] 통계분석 실습 - A/B Test"><meta property="og:description" content="마케팅 비용 분석 # 매월 유튜브에 광고 비용을 지출하여 신규 유저(구매 고객 or 회원가입 고객)를 획득 월별로 10,000원 단위의 유튜브 광고 비용과 해당 월에 신규로 획득된 유저 수가 측정되었다고 가정 비교 데이터 # 단순 CAC 계산 # CAC(Customer Acquisition Cost, 신규고객 유치 비용) @ https://j.mp/35O5NRe Copy python cac = ad_df['Marketing_Costs'].sum() / ad_df['User_Acquired'].sum() print(cac * 10000) # Output 446원 위의 금액에 추가로 획득하기를 원하는 유저 수를 곱한 금액을
+유튜브 광고 비용으로 쓰면 그만큼 유저가 늘어날까?
+== 위의 금액 만큼 유튜브 광고에 쓰면 정말로 유저가 1명 늘어날까?"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-04-02T22:50:00+09:00"><meta property="article:modified_time" content="2022-04-02T22:50:00+09:00"><meta property="article:tag" content="AI SCHOOL"><meta property="article:tag" content="멋쟁이사자처럼"><meta property="article:tag" content="코드라이언"><meta property="article:tag" content="Statistics"><title>[AI SCHOOL 5기] 통계분석 실습 - A/B Test | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/post/study/ai-school/04-statistical-analysis/aischool-04-04-ab-test/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.25901006165b642d19a996db15ba3fb29bba415c2ffcfe138ac0af40df3ee4eb.js integrity="sha256-JZAQBhZbZC0ZqZbbFbo/spu6QVwv/P4TisCvQN8+5Os=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-post book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/post/study/2023/2023-04/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/post/data/crawling/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-02/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#비교-데이터>비교 데이터</a></li><li><a href=#단순-cac-계산>단순 CAC 계산</a></li><li><a href=#피어슨-상관계수>피어슨 상관계수</a></li></ul><ul><li><a href=#비교-데이터-1>비교 데이터</a></li><li><a href=#독립표본-t-test>독립표본 T-Test</a></li></ul><ul><li><a href=#비교-데이터-2>비교 데이터</a></li><li><a href=#conversion-rate-전환율>Conversion Rate (전환율)</a></li><li><a href=#click-through-rate-ctr-클릭율>Click-Through Rate (CTR, 클릭율)</a></li><li><a href=#카이제곱-검정>카이제곱 검정</a></li></ul><ul><li><a href=#p-value>p-value</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/study/ai-school/ class=post-header-category-link>Study/AI SCHOOL</a></div><h1 class=post-header-title>[AI SCHOOL 5기] 통계분석 실습 - A/B Test</h1><div class=post-header-date><time datetime=2022-04-02T22:50:00+09:00>2022. 4. 2. 22:50</time></div></header><h1 id=마케팅-비용-분석>마케팅 비용 분석
+<a class=anchor href=#%eb%a7%88%ec%bc%80%ed%8c%85-%eb%b9%84%ec%9a%a9-%eb%b6%84%ec%84%9d>#</a></h1><ul><li>매월 유튜브에 광고 비용을 지출하여 신규 유저(구매 고객 or 회원가입 고객)를 획득</li><li>월별로 10,000원 단위의 유튜브 광고 비용과 해당 월에 신규로 획득된 유저 수가 측정되었다고 가정</li></ul><h2 id=비교-데이터>비교 데이터
+<a class=anchor href=#%eb%b9%84%ea%b5%90-%eb%8d%b0%ec%9d%b4%ed%84%b0>#</a></h2><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/04-ab-test/youtube.png?raw=true" alt=youtube></p><h2 id=단순-cac-계산>단순 CAC 계산
+<a class=anchor href=#%eb%8b%a8%ec%88%9c-cac-%ea%b3%84%ec%82%b0>#</a></h2><ul><li>CAC(Customer Acquisition Cost, 신규고객 유치 비용)</li><li>@ <a href=https://j.mp/35O5NRe>https://j.mp/35O5NRe</a></li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>cac</span> <span class=o>=</span> <span class=n>ad_df</span><span class=p>[</span><span class=s1>&#39;Marketing_Costs&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>sum</span><span class=p>()</span> <span class=o>/</span> <span class=n>ad_df</span><span class=p>[</span><span class=s1>&#39;User_Acquired&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>sum</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>cac</span> <span class=o>*</span> <span class=mi>10000</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output</span>
+</span></span><span class=line><span class=cl><span class=mi>446</span><span class=n>원</span></span></span></code></pre></div></div><p>위의 금액에 추가로 획득하기를 원하는 유저 수를 곱한 금액을<br>유튜브 광고 비용으로 쓰면 그만큼 유저가 늘어날까?<br>== 위의 금액 만큼 유튜브 광고에 쓰면 정말로 유저가 1명 늘어날까?</p><h2 id=피어슨-상관계수>피어슨 상관계수
+<a class=anchor href=#%ed%94%bc%ec%96%b4%ec%8a%a8-%ec%83%81%ea%b4%80%ea%b3%84%ec%88%98>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>stats</span><span class=o>.</span><span class=n>pearsonr</span><span class=p>(</span><span class=n>ad_df</span><span class=p>[</span><span class=s1>&#39;Marketing_Costs&#39;</span><span class=p>],</span> <span class=n>ad_df</span><span class=p>[</span><span class=s1>&#39;User_Acquired&#39;</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output</span>
+</span></span><span class=line><span class=cl><span class=n>피어슨</span> <span class=n>상관계수</span> <span class=p>:</span> <span class=mf>0.8035775069546849</span>
+</span></span><span class=line><span class=cl><span class=n>p</span><span class=o>-</span><span class=n>value</span> <span class=p>:</span> <span class=mf>0.0016386012345537505</span></span></span></code></pre></div></div><ul><li>p-value가 0.0016(&lt;0.05)이므로,<br>월별 유튜브 광고 비용과 신규 유저 수가 통계적으로 유의미한 상관관계가 없다</li><li>월별 유튜브 광고 비용과 신규 유저 수 사이에는<br>통계적으로 유의미한 강한 상관관계(+0.8)가 있다</li><li>피어슨 상관계수 값에 대한 해석 기준 (Strong/Moderate/Weak) @ <a href=https://j.mp/3mH8FWN>https://j.mp/3mH8FWN</a></li><li>파이썬 프로그래밍 없이 상관관계 분석을 진행할 수 있는 도구 @ <a href=https://j.mp/324551c>https://j.mp/324551c</a></li></ul><hr><h1 id=ab-test-독립표본>A/B Test (독립표본)
+<a class=anchor href=#ab-test-%eb%8f%85%eb%a6%bd%ed%91%9c%eb%b3%b8>#</a></h1><ul><li>페이지 구성과 세부 디자인을 다르게 만든 2개의 웹사이트 시안을 기반으로 A/B Test 진행</li><li>웹사이트 시안 A와 B 각각에 유입된 유저들이<br>실제로 각 웹사이트 내에서 이탈하기까지의 시간(체류시간, Duration time)을 측정</li><li>T-Test를 진행하기 이전에 Null인 데이터들은 제외</li></ul><h2 id=비교-데이터-1>비교 데이터
+<a class=anchor href=#%eb%b9%84%ea%b5%90-%eb%8d%b0%ec%9d%b4%ed%84%b0-1>#</a></h2><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/04-ab-test/duration.png?raw=true" alt=duration></p><h2 id=독립표본-t-test>독립표본 T-Test
+<a class=anchor href=#%eb%8f%85%eb%a6%bd%ed%91%9c%eb%b3%b8-t-test>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>stats</span><span class=o>.</span><span class=n>ttest_ind</span><span class=p>(</span><span class=n>web_a</span><span class=o>.</span><span class=n>Duration_A</span><span class=o>.</span><span class=n>values</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>                <span class=n>web_b</span><span class=o>.</span><span class=n>Duration_B</span><span class=o>.</span><span class=n>values</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>                <span class=n>equal_var</span><span class=o>=</span><span class=kc>False</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output</span>
+</span></span><span class=line><span class=cl><span class=n>Ttest_indResult</span><span class=p>(</span><span class=n>statistic</span><span class=o>=</span><span class=mf>3.0165632092150694</span><span class=p>,</span> <span class=n>pvalue</span><span class=o>=</span><span class=mf>0.008734970056646718</span><span class=p>)</span></span></span></code></pre></div></div><ul><li><code>equal_var=True</code> : 두 개의 열의 분산값이 동일할거라 가정</li><li><code>equal_var=False</code>: 분산값이 동일하지 않기 때문에 <code>False</code>로 설정</li><li>2개의 측정 그룹이 동일한 수가 아니거나 유사한 분산값을 갖지 않을 경우<br>Welch&rsquo;s t-test를 사용 @ <a href=https://j.mp/3kLFwcE>https://j.mp/3kLFwcE</a></li><li>p-value가 0.0087(&lt;0.05)이므로,<br>웹 시안 A와 B에 대한 체류시간의 평균값이 통계적으로 유의미한 차이가 없다</li><li>이러한 전제 하에 위와 같은 체류시간 측정 결과가 나올 확률이 0.87%라고 이해할 수 있음</li><li>웹 시안 A와 B에 대한 유저들의 체류 시간 사이에는 통계적으로 유의미한 차이가 있다</li></ul><hr><h1 id=ab-test-카이제곱-검정>A/B Test (카이제곱 검정)
+<a class=anchor href=#ab-test-%ec%b9%b4%ec%9d%b4%ec%a0%9c%ea%b3%b1-%ea%b2%80%ec%a0%95>#</a></h1><ul><li>최종 구매를 위한 버튼을 2개의 서로 다른 시안으로 제작해 각기 다른 유저들에게 노출</li><li>해당 버튼을 누르면 구매가 확정된다고 가정</li></ul><h2 id=비교-데이터-2>비교 데이터
+<a class=anchor href=#%eb%b9%84%ea%b5%90-%eb%8d%b0%ec%9d%b4%ed%84%b0-2>#</a></h2><p><img src="https://github.com/minyeamer/til/blob/main/.media/study/ai-school/04-statistical-analysis/04-ab-test/clicked.png?raw=true" alt=clicked></p><h2 id=conversion-rate-전환율>Conversion Rate (전환율)
+<a class=anchor href=#conversion-rate-%ec%a0%84%ed%99%98%ec%9c%a8>#</a></h2><ul><li>전체 웹사이트 사용자 중에서 얼마나 많은 사용자들이 동작을 마치는지에 대한 지표</li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>conversion_rate</span> <span class=o>=</span> <span class=n>click_df</span><span class=p>[</span><span class=s1>&#39;Clicked&#39;</span><span class=p>]</span> <span class=o>/</span> <span class=p>(</span><span class=n>click_df</span><span class=p>[</span><span class=s1>&#39;Clicked&#39;</span><span class=p>]</span> <span class=o>+</span> <span class=n>click_df</span><span class=p>[</span><span class=s1>&#39;Unclicked&#39;</span><span class=p>])</span> <span class=o>*</span> <span class=mi>100</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output</span>
+</span></span><span class=line><span class=cl><span class=n>Button_A</span>    <span class=mf>5.746209</span>
+</span></span><span class=line><span class=cl><span class=n>Button_B</span>    <span class=mf>7.737226</span>
+</span></span><span class=line><span class=cl><span class=n>dtype</span><span class=p>:</span> <span class=n>float64</span></span></span></code></pre></div></div><h2 id=click-through-rate-ctr-클릭율>Click-Through Rate (CTR, 클릭율)
+<a class=anchor href=#click-through-rate-ctr-%ed%81%b4%eb%a6%ad%ec%9c%a8>#</a></h2><ul><li>얼마나 많은 사용자들이 웹사이트에 접근하기 위해 광고를 클릭하는지에 대한 지표</li><li>Button_A는 5.75%</li><li>Button_B는 7.73%</li></ul><h2 id=카이제곱-검정>카이제곱 검정
+<a class=anchor href=#%ec%b9%b4%ec%9d%b4%ec%a0%9c%ea%b3%b1-%ea%b2%80%ec%a0%95>#</a></h2><ul><li>버튼 A/B에 대한 클릭 여부가 정리된 위 테이블 == Contingency Table(분할표)<br>@ <a href=https://j.mp/384CcFR>https://j.mp/384CcFR</a></li><li>chi2_contingency 함수 활용 시 Contingency Table을 기반으로 카이제곱 검정<br>@ <a href=https://j.mp/3mH1Nsr>https://j.mp/3mH1Nsr</a></li></ul><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>stats</span><span class=o>.</span><span class=n>chi2_contingency</span><span class=p>([</span><span class=n>click_df</span><span class=p>[</span><span class=s1>&#39;Clicked&#39;</span><span class=p>],</span> <span class=n>click_df</span><span class=p>[</span><span class=s1>&#39;Unclicked&#39;</span><span class=p>]])[</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Output</span>
+</span></span><span class=line><span class=cl><span class=mf>0.004968535119697213</span></span></span></code></pre></div></div><ul><li>p-value가 0.0049(&lt;0.05)이므로,<br>버튼 A/B에 대한 클릭 여부가 통계적으로 유의미한 연관성이 없다는 전제 하에,<br>이러한 클릭 수 측정 결과가 나올 확률이 0.49%라고 이해할 수 있음</li><li>배너 버튼 시안 A와 B에 대한 유저들의 클릭 수 사이에는 통계적으로 유의미한 차이가 있다</li></ul><hr><h1 id=ab-test-references>A/B Test References
+<a class=anchor href=#ab-test-references>#</a></h1><ul><li>A/B Testing에 대한 기초적인 정보들 @ <a href=https://j.mp/3eeo2TA>https://j.mp/3eeo2TA</a></li><li>데이터를 활용한 디지털 마케팅 효과분석 @ <a href=https://j.mp/2P7YHCO>https://j.mp/2P7YHCO</a></li><li>P-hacking에 대하여 @ <a href=https://j.mp/3mLMOgP>https://j.mp/3mLMOgP</a> / <a href=https://j.mp/31XJBTF>https://j.mp/31XJBTF</a></li></ul><h2 id=p-value>p-value
+<a class=anchor href=#p-value>#</a></h2><p>p-value의 높고 낮음과 별개로 실제 실험의 효과 크기 역시도 중요하게 고려해야한다.<br>예를 들어 어떤 웹사이트의 구매 버튼의 디자인을 변경하여 구매 수가 n 만큼 증가되었고,<br>디자인 변경 전/후에 대한 구매 버튼 클릭 수 사이의 관계를 대상으로 통계 검정 후 p-value가 0.05보다 낮게 나왔더라도,<br>정작 증가된 구매 수에 해당하는 n이 미미하다면 낮은 p-value에도 불구하고 디자인 변경의 실질적인 효용이 적기 때문이다.<br>(통계적으로만 유의미할 뿐 독립변수의 변화에 따른 종속변수의 변화값이 실질적/실용적인 의미를 갖지 않음)</p></article><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/ai-school/ class=tag>#AI SCHOOL</a>
+<a href=/tags/%EB%A9%8B%EC%9F%81%EC%9D%B4%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC/ class=tag>#멋쟁이사자처럼</a>
+<a href=/tags/%EC%BD%94%EB%93%9C%EB%9D%BC%EC%9D%B4%EC%96%B8/ class=tag>#코드라이언</a>
+<a href=/tags/statistics/ class=tag>#Statistics</a></div><div class=post-navigation><a href=/post/study/ai-school/05-sql-programming/aischool-05-01-sqlite3/ class="post-nav-link post-nav-prev"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>[AI SCHOOL 5기] SQL 프로그래밍 실습 - SQLite3</span>
+</a><a href=/post/study/ai-school/04-statistical-analysis/aischool-04-03-test-statistics/ class="post-nav-link post-nav-next"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>[AI SCHOOL 5기] 통계분석 실습 - T-Test & 상관관계 분석</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/post/study/ai-school/04-statistical-analysis/aischool-04-04-ab-test/",this.page.identifier="https://minyeamer.github.io/post/study/ai-school/04-statistical-analysis/aischool-04-04-ab-test/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/post/study/ai-school/04-statistical-analysis/aischool-04-04-ab-test/",this.page.identifier="https://minyeamer.github.io/post/study/ai-school/04-statistical-analysis/aischool-04-04-ab-test/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#비교-데이터>비교 데이터</a></li><li><a href=#단순-cac-계산>단순 CAC 계산</a></li><li><a href=#피어슨-상관계수>피어슨 상관계수</a></li></ul><ul><li><a href=#비교-데이터-1>비교 데이터</a></li><li><a href=#독립표본-t-test>독립표본 T-Test</a></li></ul><ul><li><a href=#비교-데이터-2>비교 데이터</a></li><li><a href=#conversion-rate-전환율>Conversion Rate (전환율)</a></li><li><a href=#click-through-rate-ctr-클릭율>Click-Through Rate (CTR, 클릭율)</a></li><li><a href=#카이제곱-검정>카이제곱 검정</a></li></ul><ul><li><a href=#p-value>p-value</a></li></ul></nav><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div></div></aside></main></body></html>

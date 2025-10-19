@@ -1,0 +1,698 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content><meta name=description content><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/categories/baekjoon/><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:url" content="https://minyeamer.github.io/categories/baekjoon/"><meta property="og:site_name" content="Minystory"><meta property="og:title" content="Baekjoon"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="website"><title>Baekjoon | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/categories/baekjoon/><link rel=stylesheet href=/book.min.b806db2fcd7252f443c9368f219d473f25aaf586f28798bf9f651f41a7225060.css integrity="sha256-uAbbL81yUvRDyTaPIZ1HPyWq9Ybyh5i/n2UfQaciUGA=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.25901006165b642d19a996db15ba3fb29bba415c2ffcfe138ac0af40df3ee4eb.js integrity="sha256-JZAQBhZbZC0ZqZbbFbo/spu6QVwv/P4TisCvQN8+5Os=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.b0e1b42f927aec8bb7d54995be39485efe34e26282f96f491b8830611aeb6bbf.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BWECRMSX3V"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BWECRMSX3V")</script><link rel=alternate type=application/rss+xml href=https://minyeamer.github.io/categories/baekjoon/index.xml title=Minystory><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-term book-type-categories book-layout-"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src="https://avatars.githubusercontent.com/u/17109173?v=4" alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(126)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(51)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/baekjoon/><i class="fa-solid fa-file"></i>
+Baekjoon
+<span class=category-count>(31)</span></a></li><li class=categories-link><a href=/categories/algorithm/leetcode/><i class="fa-solid fa-file"></i>
+LeetCode
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/algorithm/programmers/><i class="fa-solid fa-file"></i>
+Programmers
+<span class=category-count>(17)</span></a></li><li class=categories-link><a href=/categories/algorithm/references/><i class="fa-solid fa-file"></i>
+References
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-blog>
+<label for=cat-blog class="categories-toggle categories-link"><a href=/categories/blog/><i class="fa-solid fa-folder"></i>
+Blog
+<span class=category-count>(5)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/blog/review/><i class="fa-solid fa-file"></i>
+Review
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/blog/tech/><i class="fa-solid fa-file"></i>
+Tech
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-book>
+<label for=cat-book class="categories-toggle categories-link"><a href=/categories/book/><i class="fa-solid fa-folder"></i>
+Book
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/book/finance/><i class="fa-solid fa-file"></i>
+Finance
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data>
+<label for=cat-data class="categories-toggle categories-link"><a href=/categories/data/><i class="fa-solid fa-folder"></i>
+Data
+<span class=category-count>(4)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-diary>
+<label for=cat-diary class="categories-toggle categories-link"><a href=/categories/diary/><i class="fa-solid fa-folder"></i>
+Diary
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/diary/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(2)</span></a></li><li class=categories-link><a href=/categories/diary/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-study>
+<label for=cat-study class="categories-toggle categories-link"><a href=/categories/study/><i class="fa-solid fa-folder"></i>
+Study
+<span class=category-count>(61)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/study/2022/><i class="fa-solid fa-file"></i>
+2022
+<span class=category-count>(16)</span></a></li><li class=categories-link><a href=/categories/study/2023/><i class="fa-solid fa-file"></i>
+2023
+<span class=category-count>(10)</span></a></li><li class=categories-link><a href=/categories/study/ai-school/><i class="fa-solid fa-file"></i>
+AI SCHOOL
+<span class=category-count>(34)</span></a></li><li class=categories-link><a href=/categories/study/datacamp/><i class="fa-solid fa-file"></i>
+DataCamp
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/post/study/2023/2023-04/2023-04-02/ title="2023-04-02 Log"><div class=recent-post-title>2023-04-02 Log</div><div class=recent-post-date><time datetime=2023-04-02>2023.04.02</time></div></a></li><li class=recent-post-item><a href=/post/data/crawling/10000-recipe/ title="[Python] 만개의 레시피 데이터 수집"><div class=recent-post-title>[Python] 만개의 레시피 데이터 수집</div><div class=recent-post-date><time datetime=2023-03-26>2023.03.26</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-25/ title="2023-03-25 Log"><div class=recent-post-title>2023-03-25 Log</div><div class=recent-post-date><time datetime=2023-03-25>2023.03.25</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-03/2023-03-21/ title="2023-03-21 Log"><div class=recent-post-title>2023-03-21 Log</div><div class=recent-post-date><time datetime=2023-03-21>2023.03.21</time></div></a></li><li class=recent-post-item><a href=/post/study/2023/2023-02/2023-02-19/ title="2023-02-19 Log"><div class=recent-post-title>2023-02-19 Log</div><div class=recent-post-date><time datetime=2023-02-19>2023.02.19</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control></label></div><aside class="hidden clearfix"><nav><ul><li class=book-section-flat><span>Categories</span><ul><li class="flex justify-between"><a href=/categories/2023/>2023</a>
+<span>11</span></li><li class="flex justify-between"><a href=/categories/study/>Study</a>
+<span>61</span></li><li class="flex justify-between"><a href=/categories/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/data/>Data</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/book/>Book</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/finance/>Finance</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/diary/>Diary</a>
+<span>3</span></li><li class="flex justify-between"><a href=/categories/2022/>2022</a>
+<span>18</span></li><li class="flex justify-between"><a href=/categories/datacamp/>DataCamp</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/blog/>Blog</a>
+<span>5</span></li><li class="flex justify-between"><a href=/categories/tech/>Tech</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/review/>Review</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/algorithm/>Algorithm</a>
+<span>51</span></li><li class="flex justify-between"><a href=/categories/leetcode/>LeetCode</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/baekjoon/>Baekjoon</a>
+<span>31</span></li><li class="flex justify-between"><a href=/categories/lv3/>Lv3</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/programmers/>Programmers</a>
+<span>17</span></li><li class="flex justify-between"><a href=/categories/ai-school/>AI SCHOOL</a>
+<span>34</span></li><li class="flex justify-between"><a href=/categories/references/>References</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/diary/2022/>2022</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/2022/>2022</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/diary/2023/>2023</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/2023/>2023</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/ai-school/>AI SCHOOL</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/baekjoon/>Baekjoon</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data/crawling/>Crawling</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/datacamp/>DataCamp</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/book/finance/>Finance</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/leetcode/>LeetCode</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/programmers/>Programmers</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/references/>References</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/blog/review/>Review</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/blog/tech/>Tech</a>
+<span>0</span></li></ul></li><li class=book-section-flat><span>Tags</span><ul><li class="flex justify-between"><a href=/tags/spark/>Spark</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/til/>TIL</a>
+<span>21</span></li><li class="flex justify-between"><a href=/tags/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/python/>Python</a>
+<span>57</span></li><li class="flex justify-between"><a href=/tags/requests/>Requests</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/>만개의레시피</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cf/>CF</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/deep-learning/>Deep Learning</a>
+<span>7</span></li><li class="flex justify-between"><a href=/tags/recommender/>Recommender</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/bond/>Bond</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/finance/>Finance</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/business/>Business</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/coupang/>Coupang</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/smartstore/>Smartstore</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/book/>Book</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/review/>Review</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/career/>Career</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/data-analyst/>Data Analyst</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/diary/>Diary</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/gcp/>GCP</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/naver/>Naver</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/>네이버</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%A1%9C%EA%B7%B8%EC%9D%B8/>로그인</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4/>스마트스토어</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%EC%84%BC%ED%84%B0/>스마트스토어센터</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%ED%81%AC%EB%A1%A4%EB%A7%81/>크롤링</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/datacamp/>DataCamp</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/tableau/>Tableau</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%80%EC%A7%9C%EC%97%B0%EA%B5%AC%EC%86%8C/>가짜연구소</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/github/>Github</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/github-pages/>Github Pages</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/go-template/>Go Template</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hugo/>Hugo</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/katex/>KaTex</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/papermod/>PaperMod</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84/>검색 엔진</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/utterances/>Utterances</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/submodule/>Submodule</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/desktop/>Desktop</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/fractal-design/>Fractal Design</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/i5-12600k/>I5-12600K</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rtx-3060/>RTX 3060</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%B4%ED%93%A8%EC%A1%B4/>컴퓨존</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/algorithm/>Algorithm</a>
+<span>54</span></li><li class="flex justify-between"><a href=/tags/leetcode/>LeetCode</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/leetcode-medium-python/>LeetCode Medium Python</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/problem-solving/>Problem Solving</a>
+<span>51</span></li><li class="flex justify-between"><a href=/tags/recursion/>Recursion</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/bfs/>BFS</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>
+<span>31</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80-%EA%B3%A8%EB%93%9C/>백준 골드</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/prefix-sum/>Prefix Sum</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/chirpy/>Chirpy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jekyll/>Jekyll</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/nlp/>NLP</a>
+<span>6</span></li><li class="flex justify-between"><a href=/tags/paper/>Paper</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/datetime/>Datetime</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>
+<span>23</span></li><li class="flex justify-between"><a href=/tags/sorting/>Sorting</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/sliding-window/>Sliding Window</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/combinations/>Combinations</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/heapq/>Heapq</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/divide-and-conquer/>Divide and Conquer</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/union-find/>Union-Find</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/>프로그래머스</a>
+<span>17</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv3/>프로그래머스 Lv3</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/brute-force/>Brute Force</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv2/>프로그래머스 Lv2</a>
+<span>9</span></li><li class="flex justify-between"><a href=/tags/grdeey/>Grdeey</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/math/>Math</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/deque/>Deque</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dp/>DP</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/string/>String</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/two-pointer/>Two Pointer</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/binary-search/>Binary Search</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/dfs/>DFS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/simulation/>Simulation</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/queue/>Queue</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/arima/>ARIMA</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/bert/>BERT</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pytorch/>PyTorch</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/matrix/>Matrix</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dictionary/>Dictionary</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv1/>프로그래머스 Lv1</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/regex/>Regex</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ai-school/>AI SCHOOL</a>
+<span>34</span></li><li class="flex justify-between"><a href=/tags/machine-learning/>Machine Learning</a>
+<span>10</span></li><li class="flex justify-between"><a href=/tags/pipeline/>Pipeline</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%A9%8B%EC%9F%81%EC%9D%B4%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC/>멋쟁이사자처럼</a>
+<span>34</span></li><li class="flex justify-between"><a href=/tags/%EC%BD%94%EB%93%9C%EB%9D%BC%EC%9D%B4%EC%96%B8/>코드라이언</a>
+<span>34</span></li><li class="flex justify-between"><a href=/tags/stacking/>Stacking</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pca/>PCA</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/k-means/>K-Means</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/svm/>SVM</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/knn/>KNN</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/gradient-boosting/>Gradient Boosting</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/logistic-regression/>Logistic Regression</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/gradient/>Gradient</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/linear-regression/>Linear Regression</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/db/>DB</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/sql/>SQL</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/statistics/>Statistics</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/numpy/>Numpy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pandas/>Pandas</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/selenium/>Selenium</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/web-crawling/>Web Crawling</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/text-analysis/>Text Analysis</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/word-cloud/>Word Cloud</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/leetcode-easy/>LeetCode Easy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/data-analysis/>Data Analysis</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/stack/>Stack</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/big-o/>Big-O</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/data-structure/>Data Structure</a>
+<span>1</span></li></ul></li></ul></nav></aside></header><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/03-gold/boj-problems-22859/>[백준 22859] HTML 파싱 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>August 15, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EA%B3%A8%EB%93%9C/>백준 골드</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/string/>String</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/22859>https://www.acmicpc.net/problem/22859</a></li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><h2 id=idea>Idea
+<a class=anchor href=#idea>#</a></h2><ul><li>Implementation, String</li><li><main>,<div>,<p>태그 등을 구분</li><li><div>의 attribute인 title을 우선 출력하고 안에 있는<p>를 한 줄씩 출력</li><li><p>안에 있는 태그와 시작과 끝에 있는 공백을 지우고 2개 이상의 공백을 하나로 변경</li><li>제목은 무조건 존재하고 태그 사이에는 공백이 없으며 태그는 올바른 쌍으로만 주어짐을 보장</li><li>정규 표현식을 활용해 조건에 맞는 문장을 파싱하고 불필요한 문자를 제거해 출력</li></ul><h2 id=data-size>Data Size
+<a class=anchor href=#data-size>#</a></h2><ul><li>source: str(1,000,000)</li></ul><h1 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>re</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>source</span> <span class=o>=</span> <span class=nb>input</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>main</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>findall</span><span class=p>(</span><span class=s1>&#39;&lt;main&gt;(.*)&lt;/main&gt;&#39;</span><span class=p>,</span> <span class=n>source</span><span class=p>)[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>div_list</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>findall</span><span class=p>(</span><span class=s1>&#39;&lt;div title=&#34;(.*?)&#34;&gt;(.*?)&lt;/div&gt;&#39;</span><span class=p>,</span> <span class=n>main</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>title</span><span class=p>,</span> <span class=n>paragraph</span> <span class=ow>in</span> <span class=n>div_list</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;title :&#39;</span><span class=p>,</span> <span class=n>title</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>p_list</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>findall</span><span class=p>(</span><span class=s1>&#39;&lt;p&gt;(.*?)&lt;/p&gt;&#39;</span><span class=p>,</span> <span class=n>paragraph</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>p</span> <span class=ow>in</span> <span class=n>p_list</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>sub</span><span class=p>(</span><span class=s1>&#39;(&lt;.*?&gt;)&#39;</span><span class=p>,</span> <span class=s1>&#39;&#39;</span><span class=p>,</span> <span class=n>p</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>sub</span><span class=p>(</span><span class=s1>&#39;\s+&#39;</span><span class=p>,</span> <span class=s1>&#39; &#39;</span><span class=p>,</span> <span class=n>p</span><span class=o>.</span><span class=n>strip</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>p</span><span class=p>)</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-21318/>[백준 21318] 피아노 체조 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>August 12, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/prefix-sum/>Prefix Sum</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/21318>https://www.acmicpc.net/problem/21318</a></li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><h2 id=idea>Idea
+<a class=anchor href=#idea>#</a></h2><ul><li>Prefix Sum</li><li>실수한 곡에 대한 누적합을 구하고 인덱싱을 통해 특정 구간에 대한 누적합 출력</li><li>마지막 곡은 항상 성공하기 때문에 y에 대한 누적합과 y-1에 대한 누적합이 다르면 1 감소</li></ul><h2 id=time-complexity>Time Complexity
+<a class=anchor href=#time-complexity>#</a></h2><ul><li>Prefix Sum: O(N) = 100,000</li></ul><h2 id=data-size>Data Size
+<a class=anchor href=#data-size>#</a></h2><ul><li>N: 1 &lt;= int &lt;= 100,000</li><li>scores: int(10^9) * N</li><li>Q: 1 &lt;= int &lt;= 100,000</li></ul><h1 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>sys</span>
+</span></span><span class=line><span class=cl><span class=nb>input</span> <span class=o>=</span> <span class=n>sys</span><span class=o>.</span><span class=n>stdin</span><span class=o>.</span><span class=n>readline</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>N</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>scores</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>()))</span>
+</span></span><span class=line><span class=cl><span class=n>Q</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>fails</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>*</span><span class=p>(</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>fails</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>fails</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>+</span> <span class=nb>int</span><span class=p>(</span><span class=n>scores</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>&gt;</span> <span class=n>scores</span><span class=p>[</span><span class=nb>min</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=n>N</span><span class=o>-</span><span class=mi>1</span><span class=p>)])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>Q</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span><span class=p>,</span> <span class=n>y</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>    <span class=n>answer</span> <span class=o>=</span> <span class=n>fails</span><span class=p>[</span><span class=n>y</span><span class=p>]</span> <span class=o>-</span> <span class=n>fails</span><span class=p>[</span><span class=n>x</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>fails</span><span class=p>[</span><span class=n>y</span><span class=p>]</span> <span class=o>!=</span> <span class=n>fails</span><span class=p>[</span><span class=n>y</span><span class=o>-</span><span class=mi>1</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>        <span class=n>answer</span> <span class=o>-=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>answer</span><span class=p>)</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-16987/>[백준 16987] 계란으로 계란치기 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>August 12, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/dfs/>DFS</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/16987>https://www.acmicpc.net/problem/16987</a></li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><h2 id=idea>Idea
+<a class=anchor href=#idea>#</a></h2><ul><li>Backtracking</li><li>0번째 계란부터 마지막 계란까지의 모든 경우의 수를 탐색</li><li>시간 단축을 위해 현재 계란이 깨진 경우 또는 나머지 모든 계란이 깨진 경우를 예외로 처리</li><li>한 번에 두 개 이상의 계란을 치는 경우를 방지하기 위해 계란을 친 후 원상복구 수행</li></ul><h2 id=time-complexity>Time Complexity
+<a class=anchor href=#time-complexity>#</a></h2><ul><li>Backtracking: O(N^N) = 16,777,216</li></ul><h2 id=data-size>Data Size
+<a class=anchor href=#data-size>#</a></h2><ul><li>N: 1 &lt;= int &lt;= 8</li><li>S, W: 1 &lt;= int &lt;= 300</li></ul><h1 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>N</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>eggs</span> <span class=o>=</span> <span class=nb>list</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>N</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>eggs</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>answer</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>dfs</span><span class=p>(</span><span class=n>eggs</span><span class=p>,</span> <span class=n>idx</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>global</span> <span class=n>answer</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>idx</span> <span class=o>==</span> <span class=n>N</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>answer</span> <span class=o>=</span> <span class=nb>max</span><span class=p>(</span><span class=n>answer</span><span class=p>,</span> <span class=nb>len</span><span class=p>([</span><span class=n>s</span> <span class=k>for</span> <span class=n>s</span><span class=p>,</span><span class=n>w</span> <span class=ow>in</span> <span class=n>eggs</span> <span class=k>if</span> <span class=n>s</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>]))</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>eggs</span><span class=p>[</span><span class=n>idx</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>dfs</span><span class=p>(</span><span class=n>eggs</span><span class=p>,</span> <span class=n>idx</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nb>len</span><span class=p>([</span><span class=n>s</span> <span class=k>for</span> <span class=n>s</span><span class=p>,</span><span class=n>w</span> <span class=ow>in</span> <span class=n>eggs</span> <span class=k>if</span> <span class=n>s</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>])</span> <span class=o>&gt;=</span> <span class=n>N</span><span class=o>-</span><span class=mi>1</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>answer</span> <span class=o>=</span> <span class=nb>max</span><span class=p>(</span><span class=n>answer</span><span class=p>,</span> <span class=n>N</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>target</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>N</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>target</span> <span class=o>!=</span> <span class=n>idx</span> <span class=ow>and</span> <span class=n>eggs</span><span class=p>[</span><span class=n>target</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>eggs</span><span class=p>[</span><span class=n>target</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>-=</span> <span class=n>eggs</span><span class=p>[</span><span class=n>idx</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=n>eggs</span><span class=p>[</span><span class=n>idx</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>-=</span> <span class=n>eggs</span><span class=p>[</span><span class=n>target</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=n>dfs</span><span class=p>(</span><span class=n>eggs</span><span class=p>,</span> <span class=n>idx</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>eggs</span><span class=p>[</span><span class=n>target</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>+=</span> <span class=n>eggs</span><span class=p>[</span><span class=n>idx</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=n>eggs</span><span class=p>[</span><span class=n>idx</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>+=</span> <span class=n>eggs</span><span class=p>[</span><span class=n>target</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>dfs</span><span class=p>(</span><span class=n>eggs</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>answer</span><span class=p>)</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-16918/>[백준 16918] 봄버맨 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>August 11, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/simulation/>Simulation</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/16918>https://www.acmicpc.net/problem/16918</a></li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><h2 id=idea>Idea
+<a class=anchor href=#idea>#</a></h2><ul><li>Simulation (or BFS)</li><li>초기에 빈 칸(.)을 0, 폭탄이 있는 칸(O)을 1로 설정</li><li>처음에 폭탄이 있는 칸의 상태를 우선 1 증가시키고, 이후 모든 칸의 상태를 1씩 증가시키는 과정 반복</li><li>매번 각 칸의 상태를 점검하면서 3을 초과할 경우 해당 위치 및 이웃 위치를 폭발 대상에 추가</li><li>폭발 대상이 존재할 경우 격자의 범위를 벗어나지 않는 범위 내에서 상태를 0으로 변환</li><li>위 과정을 N초 동안 반복하고, 0은 빈칸으로, 나머지는 O로 표시하여 출력</li></ul><h2 id=time-complexity>Time Complexity
+<a class=anchor href=#time-complexity>#</a></h2><ul><li>Simulation: O(N^3) = 8,000,000</li></ul><h2 id=data-size>Data Size
+<a class=anchor href=#data-size>#</a></h2><ul><li>R, C, N: 1 &lt;= int &lt;= 200</li></ul><h1 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>sys</span>
+</span></span><span class=line><span class=cl><span class=nb>input</span> <span class=o>=</span> <span class=n>sys</span><span class=o>.</span><span class=n>stdin</span><span class=o>.</span><span class=n>readline</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>R</span><span class=p>,</span> <span class=n>C</span><span class=p>,</span> <span class=n>N</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>board</span> <span class=o>=</span> <span class=nb>list</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>char2id</span> <span class=o>=</span> <span class=k>lambda</span> <span class=n>x</span><span class=p>:</span> <span class=mi>0</span> <span class=k>if</span> <span class=n>x</span> <span class=o>==</span> <span class=s1>&#39;.&#39;</span> <span class=k>else</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=n>id2char</span> <span class=o>=</span> <span class=k>lambda</span> <span class=n>x</span><span class=p>:</span> <span class=s1>&#39;.&#39;</span> <span class=k>if</span> <span class=n>x</span> <span class=o>==</span> <span class=mi>0</span> <span class=k>else</span> <span class=s1>&#39;O&#39;</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>R</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>board</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=n>char2id</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>strip</span><span class=p>())))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>board</span> <span class=o>=</span> <span class=p>[[</span><span class=n>state</span><span class=o>+</span><span class=mi>1</span> <span class=k>if</span> <span class=n>state</span> <span class=o>&gt;</span> <span class=mi>0</span> <span class=k>else</span> <span class=mi>0</span> <span class=k>for</span> <span class=n>state</span> <span class=ow>in</span> <span class=n>row</span><span class=p>]</span> <span class=k>for</span> <span class=n>row</span> <span class=ow>in</span> <span class=n>board</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>s</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>board</span> <span class=o>=</span> <span class=p>[[</span><span class=n>state</span><span class=o>+</span><span class=mi>1</span> <span class=k>for</span> <span class=n>state</span> <span class=ow>in</span> <span class=n>row</span><span class=p>]</span> <span class=k>for</span> <span class=n>row</span> <span class=ow>in</span> <span class=n>board</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>bomb</span> <span class=o>=</span> <span class=nb>set</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>R</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>C</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>board</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>&gt;</span> <span class=mi>3</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>neighbor</span> <span class=o>=</span> <span class=p>[(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>),(</span><span class=mi>1</span><span class=p>,</span><span class=mi>0</span><span class=p>),(</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span><span class=mi>0</span><span class=p>),(</span><span class=mi>0</span><span class=p>,</span><span class=mi>1</span><span class=p>),(</span><span class=mi>0</span><span class=p>,</span><span class=o>-</span><span class=mi>1</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl>                <span class=p>[</span><span class=n>bomb</span><span class=o>.</span><span class=n>add</span><span class=p>((</span><span class=n>i</span><span class=o>+</span><span class=n>dy</span><span class=p>,</span><span class=n>j</span><span class=o>+</span><span class=n>dx</span><span class=p>))</span> <span class=k>for</span> <span class=n>dy</span><span class=p>,</span><span class=n>dx</span> <span class=ow>in</span> <span class=n>neighbor</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span><span class=p>,</span><span class=n>j</span> <span class=ow>in</span> <span class=n>bomb</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=mi>0</span> <span class=o>&lt;=</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>R</span> <span class=ow>and</span> <span class=mi>0</span> <span class=o>&lt;=</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>C</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>board</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>row</span> <span class=ow>in</span> <span class=n>board</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=n>id2char</span><span class=p>,</span> <span class=n>row</span><span class=p>))))</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-2302/>[백준 2302] 극장 좌석 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>August 11, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/dp/>DP</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/2302>https://www.acmicpc.net/problem/2302</a></li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><h2 id=idea>Idea
+<a class=anchor href=#idea>#</a></h2><ul><li>Dynamic Programming</li><li>자리를 옮길 수 있는 연속되는 좌석의 수는 피보나치 수열을 따름 (S[i] = F[i+1])</li><li>VIP 좌석 번호를 기준으로 연속되는 좌석의 수를 리스트로 저장</li><li>모든 연속되는 좌석 수에 대한 피보나치 수를 곱하고 출력</li></ul><h3 id=sequence>Sequence
+<a class=anchor href=#sequence>#</a></h3><p>S2 (1,2) -> (1,2), (2,1) = 2(F3)<br>S3 (1,2,3) -> (1,2,3), (2,1,3), (1,3,2) = 3(F4)<br>S4 (1,2,3,4) -> (1,2,3,4), (2,1,3,4), (1,2,4,3), (1,3,2,4), (2,1,4,3) = 5(F5)<br>S5 (1,2,3,4,5) -> (1,2,3,4,5), (1,2,4,3,5), (1,2,3,5,4), (2,1,3,4,5), (2,1,4,3,5), (2,1,3,5,4), (1,3,2,4,5), (1,3,2,5,4) = 8(F6)<br>S6 (1,2,3,4,5,6) -> (1,2,3,4,5,6), (1,2,4,3,5,6), (1,2,3,5,4,6), (1,2,3,4,6,5), (1,2,4,3,6,5), &mldr;</p></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-18352/>[백준 18352] 특정 거리의 도시 찾기 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>August 10, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/bfs/>BFS</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/18352>https://www.acmicpc.net/problem/18352</a></li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><h2 id=idea>Idea
+<a class=anchor href=#idea>#</a></h2><ul><li>BFS</li><li>시작 노드 X부터 연결된 노드를 순차적으로 방문하면서 X로부터 떨어진 거리를 기록</li><li>거리가 K와 같은 노드를 출력하고, 해당하는 노드가 없을 경우 -1을 출력</li><li>거리가 K를 넘어가지 않는 노드에 대해서만 탐색하여 시간 단축</li></ul><h2 id=time-complexity>Time Complexity
+<a class=anchor href=#time-complexity>#</a></h2><ul><li>BFS: O(N+M) = 1,300,000</li></ul><h2 id=data-size>Data Size
+<a class=anchor href=#data-size>#</a></h2><ul><li>N: 2 &lt;= int &lt;= 300,000</li><li>M: 1 &lt;= int &lt;= 1,000,000</li><li>K: 1 &lt;= int &lt;= 300,000</li><li>X: 1 &lt;= int &lt;= N</li><li>A, B: 1 &lt;= int &lt;= N</li></ul><h1 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>collections</span> <span class=kn>import</span> <span class=n>deque</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>sys</span>
+</span></span><span class=line><span class=cl><span class=nb>input</span> <span class=o>=</span> <span class=n>sys</span><span class=o>.</span><span class=n>stdin</span><span class=o>.</span><span class=n>readline</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>N</span><span class=p>,</span> <span class=n>M</span><span class=p>,</span> <span class=n>K</span><span class=p>,</span> <span class=n>X</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>nodes</span> <span class=o>=</span> <span class=p>[[]</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl><span class=n>visited</span> <span class=o>=</span> <span class=p>[</span><span class=kc>False</span><span class=p>]</span> <span class=o>*</span> <span class=p>(</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>dists</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>*</span> <span class=p>(</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>M</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>A</span><span class=p>,</span> <span class=n>B</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>    <span class=n>nodes</span><span class=p>[</span><span class=n>A</span><span class=p>]</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>B</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>queue</span> <span class=o>=</span> <span class=n>deque</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>queue</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>X</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>visited</span><span class=p>[</span><span class=n>X</span><span class=p>]</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=n>queue</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>city</span> <span class=o>=</span> <span class=n>queue</span><span class=o>.</span><span class=n>popleft</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nb>next</span> <span class=ow>in</span> <span class=n>nodes</span><span class=p>[</span><span class=n>city</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=ow>not</span> <span class=n>visited</span><span class=p>[</span><span class=nb>next</span><span class=p>]</span> <span class=ow>and</span> <span class=n>dists</span><span class=p>[</span><span class=n>city</span><span class=p>]</span> <span class=o>&lt;</span> <span class=n>K</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>queue</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=nb>next</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>visited</span><span class=p>[</span><span class=nb>next</span><span class=p>]</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>            <span class=n>dists</span><span class=p>[</span><span class=nb>next</span><span class=p>]</span> <span class=o>=</span> <span class=n>dists</span><span class=p>[</span><span class=n>city</span><span class=p>]</span><span class=o>+</span><span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>targets</span> <span class=o>=</span> <span class=p>[</span><span class=n>i</span> <span class=k>for</span> <span class=n>i</span><span class=p>,</span><span class=n>d</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>dists</span><span class=p>)</span> <span class=k>if</span> <span class=n>d</span><span class=o>==</span><span class=n>K</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>targets</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>target</span> <span class=ow>in</span> <span class=n>targets</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>target</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-1495/>[백준 1495] 기타리스트 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>August 10, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/dp/>DP</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/1495>https://www.acmicpc.net/problem/1495</a></li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><h2 id=idea>Idea
+<a class=anchor href=#idea>#</a></h2><ul><li>Dynamic Programming</li><li>P[i] = max(P[i-1]+V[i-1],P[i-1]-V[i-1]), 0 &lt;= P[i] &lt;= M</li><li>모든 P[i-1]가 P[i+1]에 영향을 줄 수 있기 때문에 범위 내 모든 값을 집합에 저장</li><li>마지막 곡에 대한 P가 존재할 경우 최댓값을 출력하고, 없을 경우 -1을 출력</li></ul><h2 id=time-complexity>Time Complexity
+<a class=anchor href=#time-complexity>#</a></h2><ul><li>DP: O(NM) = 50,000</li></ul><h2 id=data-size>Data Size
+<a class=anchor href=#data-size>#</a></h2><ul><li>N: 1 &lt;= int &lt;= 50</li><li>M: 1 &lt;= int &lt;= 1,000</li><li>S: 0 &lt;= int &lt;= M</li><li>V: int * N</li></ul><h1 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h1><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>N</span><span class=p>,</span> <span class=n>S</span><span class=p>,</span> <span class=n>M</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>V</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>()))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>P</span> <span class=o>=</span> <span class=p>[</span><span class=nb>set</span><span class=p>()</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl><span class=n>P</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=p>{</span><span class=n>S</span><span class=p>,}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=n>N</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=n>P</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>j</span><span class=o>+</span><span class=n>V</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>&lt;=</span> <span class=n>M</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>P</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>j</span><span class=o>+</span><span class=n>V</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>j</span><span class=o>-</span><span class=n>V</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>&gt;=</span> <span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>P</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>j</span><span class=o>-</span><span class=n>V</span><span class=p>[</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>P</span><span class=p>[</span><span class=o>-</span><span class=mi>1</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=nb>max</span><span class=p>(</span><span class=n>P</span><span class=p>[</span><span class=o>-</span><span class=mi>1</span><span class=p>]))</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-2805/>[백준 2805] 나무 자르기 (PyPy3)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>March 25, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/binary-search/>Binary Search</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/2805>https://www.acmicpc.net/problem/2805</a></li></ul><h1 id=개요>개요
+<a class=anchor href=#%ea%b0%9c%ec%9a%94>#</a></h1><ul><li>이분 탐색으로 해결할 수 있는 문제이다.</li><li>Python3을 사용하면 시간초과가 발생하므로 PyPy3를 사용한다.</li></ul><h1 id=문제-조건>문제 조건
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ec%a1%b0%ea%b1%b4>#</a></h1><ul><li>일정 높이에 대해 모든 나무를 잘랐을 때, 조건을 만족하는 절단기의 최대 높이(H)를 구하는 문제이다.</li><li>잘린 나무의 길이의 합은 상근이가 필요로 하는 나무의 길이(M)보다 크거나 같아야 한다.</li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><ul><li>나무의 수(N)의 최댓값이 1,000,000이므로 모든 범위에 대해 반복하는 순차 탐색을 이용할 경우 시간초과가 발생한다.</li><li>시간 복잡도가 <code>O(log n)</code>인 이분 탐색을 이용하면 시간 복잡도가 <code>O(n)</code>인 순차 탐색을 쓰는 것보다 훨씬 빠르다.</li><li>이분 탐색은 중간값(<code>md</code>)을 기준으로 시작하여 조건에 따라<br>최대/최솟값의 포인터(<code>mx</code>/<code>mn</code>)를 조정하는 탐색 알고리즘이다.</li><li>잘린 나무의 길이의 합(<code>total</code>)을 구할 때 잘리지 않은 나무에 대한 음수값을 포함하지 않도록 주의한다.</li><li>조건을 만족할 경우 최솟값(<code>mn</code>)을 중간값(<code>md</code>)보다 크게 맞추며,<br>반대의 경우 최댓값(<code>mx</code>)을 중간값(<code>md</code>)보다 작게 조정한다.</li><li>이분 탐색을 마치면 최댓값(<code>mx</code>)에 조건을 만족하는 최대 높이(H)의 값이 남게 된다.</li></ul><h1 id=시간-복잡도>시간 복잡도
+<a class=anchor href=#%ec%8b%9c%ea%b0%84-%eb%b3%b5%ec%9e%a1%eb%8f%84>#</a></h1><ul><li>시간 복잡도가 <code>O(log N)</code>인 이분 탐색의 매 반복마다 시간 복잡도가 <code>O(n)</code>인 <code>for</code>문을 실행하므로<br>시간 복잡도는 <code>O(N log N)</code> 이상이 된다.</li><li>N의 최댓값 1,000,000에 대해 20,000,000번이 넘는 연산이 실행되므로 Python3으로는 시간 제한 1초를 초과한다.</li><li>PyPy3에 대한 이해가 깊은 편이 아니라 자세한 설명은 어렵지만,<br>메모리를 더 사용하는 대신 코드를 캐싱하는 PyPy3를 사용하면 시간 제한 안에 해결할 수 있다.</li></ul><h2 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>N</span><span class=p>,</span> <span class=n>M</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())</span>
+</span></span><span class=line><span class=cl><span class=n>trees</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>()))</span>
+</span></span><span class=line><span class=cl><span class=n>mn</span><span class=p>,</span> <span class=n>md</span><span class=p>,</span> <span class=n>mx</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=nb>max</span><span class=p>(</span><span class=n>trees</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=n>mn</span> <span class=o>&lt;=</span> <span class=n>mx</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>md</span> <span class=o>=</span> <span class=p>(</span><span class=n>mx</span> <span class=o>+</span> <span class=n>mn</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>    <span class=n>total</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>tree</span> <span class=ow>in</span> <span class=n>trees</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>total</span> <span class=o>+=</span> <span class=n>tree</span> <span class=o>-</span> <span class=n>md</span> <span class=k>if</span> <span class=n>tree</span> <span class=o>&gt;</span> <span class=n>md</span> <span class=k>else</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>total</span> <span class=o>&gt;=</span> <span class=n>M</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>mn</span> <span class=o>=</span> <span class=n>md</span> <span class=o>+</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>mx</span> <span class=o>=</span> <span class=n>md</span> <span class=o>-</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>mx</span><span class=p>)</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-11650/>[백준 11650] 좌표 정렬하기 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>March 23, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/sorting/>Sorting</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/11650>https://www.acmicpc.net/problem/11650</a></li></ul><h1 id=개요>개요
+<a class=anchor href=#%ea%b0%9c%ec%9a%94>#</a></h1><ul><li>배열 형태의 자료들을 정렬하는 간단한 문제이다.</li><li>파이썬에서는 내장 함수 <code>sort()</code>를 사용하면 쉽게 풀 수 있다.</li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><ul><li>문제에서 요구하는 것은 x좌표 값과 y좌표 값으로 구성된 배열들의 리스트를 x 값, y 값 순으로 정렬하는 것이다.</li><li>배열의 자료구조는 인덱싱으로 접근이 가능한 것이면 아무거나 상관없기에 좌표 표현에 직관적인 튜플을 사용한다.</li><li>정렬의 기준이 반대였으면 람다 식을 써야겠지만 좌표의 위치가 곧 정렬 순서이기 때문에 Key값은 사용하지 않는다.</li></ul><h2 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>sys</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>input</span> <span class=o>=</span> <span class=n>sys</span><span class=o>.</span><span class=n>stdin</span><span class=o>.</span><span class=n>readline</span>
+</span></span><span class=line><span class=cl><span class=n>points</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>())):</span>
+</span></span><span class=line><span class=cl>    <span class=n>points</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=nb>tuple</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>())))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>point</span> <span class=ow>in</span> <span class=nb>sorted</span><span class=p>(</span><span class=n>points</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>point</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>point</span><span class=p>[</span><span class=mi>1</span><span class=p>])</span></span></span></code></pre></div></div></div></article><article class="markdown book-post"><h2><a href=/post/algorithm/baekjoon/02-silver/boj-problems-4949/>[백준 4949] 균형잡힌 세상 (Python)</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>March 22, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/baekjoon/>Baekjoon</a></div><div class=text-small><a href=/tags/algorithm/>Algorithm</a>,
+<a href=/tags/problem-solving/>Problem Solving</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>,
+<a href=/tags/python/>Python</a>,
+<a href=/tags/stack/>Stack</a></div><div class=book-post-content><h1 id=문제-링크>문제 링크
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%eb%a7%81%ed%81%ac>#</a></h1><ul><li><a href=https://www.acmicpc.net/problem/4949>https://www.acmicpc.net/problem/4949</a></li></ul><h1 id=개요>개요
+<a class=anchor href=#%ea%b0%9c%ec%9a%94>#</a></h1><ul><li>스택을 이용하여 풀 수 있는 문제이다.</li><li>문자열 처리에 관한 능력이 추가로 요구된다.</li><li>최대 입력 크기가 정해지지 않았기에 시간 복잡도는 무시한다.</li></ul><h1 id=문제-해설>문제 해설
+<a class=anchor href=#%eb%ac%b8%ec%a0%9c-%ed%95%b4%ec%84%a4>#</a></h1><ul><li>해당 문제에서 고려해야할 문자는 종료 조건인 점(&rsquo;.&rsquo;)을 제외하면 소괄호와 대괄호 뿐이다.</li><li>균형잡힌 문장의 구분 여부는 1. 닫힌 괄호가 열린 괄호보다 앞에 나온 경우 2. 열린 괄호가 안 닫힌 경우로 판단했다.</li><li>문자 하나하나마다 확인하며 괄호를 골라낼 수도 있지만 이번엔 정규식을 사용해본다.</li><li>우선 정규식 라이브러리인 <code>re</code>에 속한 <code>sub</code> 메서드를 사용해 괄호를 제외한 모든 문자를 제거한다.</li><li>나머지 문자에 대해 for문을 돌려 열린 괄호면 스택에 추가, 닫힌 괄호면 스택에 남은 값을 뺀다.</li><li>단, 닫힌 괄호의 경우 스택에 열린 괄호가 없거나 스택 맨 위의 값이 다른 종류의 괄호면 균형이 깨졌다 판단한다.</li><li>코드의 중복을 발생시키지 않기 위해 균형이 깨진 경우를 <code>IndexError</code>의 발생으로 통일하고<br>이 때 조건 변수를 재설정하고 반복문을 중지시킨다.</li><li>반복문이 종료된 후 스택과 조건 변수에 대한 NAND 결과를 통해 균형잡힌 문장의 여부를 판단하여 결과를 출력한다.</li></ul><h2 id=해설-코드>해설 코드
+<a class=anchor href=#%ed%95%b4%ec%84%a4-%ec%bd%94%eb%93%9c>#</a></h2><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>re</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>match</span> <span class=o>=</span> <span class=p>{</span><span class=s1>&#39;)&#39;</span><span class=p>:</span> <span class=s1>&#39;(&#39;</span><span class=p>,</span> <span class=s1>&#39;]&#39;</span><span class=p>:</span> <span class=s1>&#39;[&#39;</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>balanced_stack</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>    <span class=n>unbalanced</span> <span class=o>=</span> <span class=kc>False</span>
+</span></span><span class=line><span class=cl>    <span class=n>sentence</span> <span class=o>=</span> <span class=nb>input</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>sentence</span> <span class=o>==</span> <span class=s1>&#39;.&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>break</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>sentence</span> <span class=o>=</span> <span class=n>re</span><span class=o>.</span><span class=n>sub</span><span class=p>(</span><span class=s1>&#39;[^\(\)\[\]]+&#39;</span><span class=p>,</span> <span class=s1>&#39;&#39;</span><span class=p>,</span> <span class=n>sentence</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>bracket</span> <span class=ow>in</span> <span class=n>sentence</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>bracket</span> <span class=ow>in</span> <span class=p>{</span><span class=s1>&#39;(&#39;</span><span class=p>,</span> <span class=s1>&#39;[&#39;</span><span class=p>}:</span>
+</span></span><span class=line><span class=cl>            <span class=n>balanced_stack</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>bracket</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>balanced_stack</span><span class=p>[</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>==</span> <span class=k>match</span><span class=p>[</span><span class=n>bracket</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>balanced_stack</span><span class=o>.</span><span class=n>pop</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                    <span class=k>raise</span> <span class=ne>IndexError</span>
+</span></span><span class=line><span class=cl>            <span class=k>except</span> <span class=ne>IndexError</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=n>unbalanced</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>                <span class=k>break</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=ow>not</span><span class=p>(</span><span class=n>balanced_stack</span> <span class=ow>or</span> <span class=n>unbalanced</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;yes&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;no&#39;</span><span class=p>)</span></span></span></code></pre></div></div></div></article><ul class="pagination pagination-default"><li class=page-item><a href=/categories/baekjoon/ aria-label=First class=page-link role=button><span aria-hidden=true>&#171;&#171;</span></a></li><li class=page-item><a href=/categories/baekjoon/page/2/ aria-label=Previous class=page-link role=button><span aria-hidden=true>&#171;</span></a></li><li class=page-item><a href=/categories/baekjoon/ aria-label="Page 1" class=page-link role=button>1</a></li><li class=page-item><a href=/categories/baekjoon/page/2/ aria-label="Page 2" class=page-link role=button>2</a></li><li class="page-item active"><a aria-current=page aria-label="Page 3" class=page-link role=button>3</a></li><li class=page-item><a href=/categories/baekjoon/page/4/ aria-label="Page 4" class=page-link role=button>4</a></li><li class=page-item><a href=/categories/baekjoon/page/4/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a></li><li class=page-item><a href=/categories/baekjoon/page/4/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a></li></ul><div class=book-mobile-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav><ul><li class=book-section-flat><span>Categories</span><ul><li class="flex justify-between"><a href=/categories/2023/>2023</a>
+<span>11</span></li><li class="flex justify-between"><a href=/categories/study/>Study</a>
+<span>61</span></li><li class="flex justify-between"><a href=/categories/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/data/>Data</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/book/>Book</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/finance/>Finance</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/diary/>Diary</a>
+<span>3</span></li><li class="flex justify-between"><a href=/categories/2022/>2022</a>
+<span>18</span></li><li class="flex justify-between"><a href=/categories/datacamp/>DataCamp</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/blog/>Blog</a>
+<span>5</span></li><li class="flex justify-between"><a href=/categories/tech/>Tech</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/review/>Review</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/algorithm/>Algorithm</a>
+<span>51</span></li><li class="flex justify-between"><a href=/categories/leetcode/>LeetCode</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/baekjoon/>Baekjoon</a>
+<span>31</span></li><li class="flex justify-between"><a href=/categories/lv3/>Lv3</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/programmers/>Programmers</a>
+<span>17</span></li><li class="flex justify-between"><a href=/categories/ai-school/>AI SCHOOL</a>
+<span>34</span></li><li class="flex justify-between"><a href=/categories/references/>References</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/diary/2022/>2022</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/2022/>2022</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/diary/2023/>2023</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/2023/>2023</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/ai-school/>AI SCHOOL</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/baekjoon/>Baekjoon</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data/crawling/>Crawling</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/study/datacamp/>DataCamp</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/book/finance/>Finance</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/leetcode/>LeetCode</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/programmers/>Programmers</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/references/>References</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/blog/review/>Review</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/blog/tech/>Tech</a>
+<span>0</span></li></ul></li><li class=book-section-flat><span>Tags</span><ul><li class="flex justify-between"><a href=/tags/spark/>Spark</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/til/>TIL</a>
+<span>21</span></li><li class="flex justify-between"><a href=/tags/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/python/>Python</a>
+<span>57</span></li><li class="flex justify-between"><a href=/tags/requests/>Requests</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/>만개의레시피</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cf/>CF</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/deep-learning/>Deep Learning</a>
+<span>7</span></li><li class="flex justify-between"><a href=/tags/recommender/>Recommender</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/bond/>Bond</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/finance/>Finance</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/business/>Business</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/coupang/>Coupang</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/smartstore/>Smartstore</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/book/>Book</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/review/>Review</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/career/>Career</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/data-analyst/>Data Analyst</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/diary/>Diary</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/gcp/>GCP</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/naver/>Naver</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/>네이버</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%A1%9C%EA%B7%B8%EC%9D%B8/>로그인</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4/>스마트스토어</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%EC%84%BC%ED%84%B0/>스마트스토어센터</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%ED%81%AC%EB%A1%A4%EB%A7%81/>크롤링</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/datacamp/>DataCamp</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/tableau/>Tableau</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%80%EC%A7%9C%EC%97%B0%EA%B5%AC%EC%86%8C/>가짜연구소</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/github/>Github</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/github-pages/>Github Pages</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/go-template/>Go Template</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hugo/>Hugo</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/katex/>KaTex</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/papermod/>PaperMod</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84/>검색 엔진</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/utterances/>Utterances</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/submodule/>Submodule</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/desktop/>Desktop</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/fractal-design/>Fractal Design</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/i5-12600k/>I5-12600K</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rtx-3060/>RTX 3060</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%B4%ED%93%A8%EC%A1%B4/>컴퓨존</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/algorithm/>Algorithm</a>
+<span>54</span></li><li class="flex justify-between"><a href=/tags/leetcode/>LeetCode</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/leetcode-medium-python/>LeetCode Medium Python</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/problem-solving/>Problem Solving</a>
+<span>51</span></li><li class="flex justify-between"><a href=/tags/recursion/>Recursion</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/bfs/>BFS</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>
+<span>31</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80-%EA%B3%A8%EB%93%9C/>백준 골드</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/prefix-sum/>Prefix Sum</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/chirpy/>Chirpy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jekyll/>Jekyll</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/nlp/>NLP</a>
+<span>6</span></li><li class="flex justify-between"><a href=/tags/paper/>Paper</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/datetime/>Datetime</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80-%EC%8B%A4%EB%B2%84/>백준 실버</a>
+<span>23</span></li><li class="flex justify-between"><a href=/tags/sorting/>Sorting</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/sliding-window/>Sliding Window</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/combinations/>Combinations</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/heapq/>Heapq</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/divide-and-conquer/>Divide and Conquer</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/union-find/>Union-Find</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/>프로그래머스</a>
+<span>17</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv3/>프로그래머스 Lv3</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/brute-force/>Brute Force</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv2/>프로그래머스 Lv2</a>
+<span>9</span></li><li class="flex justify-between"><a href=/tags/grdeey/>Grdeey</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/math/>Math</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/deque/>Deque</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dp/>DP</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/string/>String</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/two-pointer/>Two Pointer</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/binary-search/>Binary Search</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/dfs/>DFS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/simulation/>Simulation</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/queue/>Queue</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/arima/>ARIMA</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/bert/>BERT</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pytorch/>PyTorch</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/matrix/>Matrix</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dictionary/>Dictionary</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv1/>프로그래머스 Lv1</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/regex/>Regex</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ai-school/>AI SCHOOL</a>
+<span>34</span></li><li class="flex justify-between"><a href=/tags/machine-learning/>Machine Learning</a>
+<span>10</span></li><li class="flex justify-between"><a href=/tags/pipeline/>Pipeline</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%A9%8B%EC%9F%81%EC%9D%B4%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC/>멋쟁이사자처럼</a>
+<span>34</span></li><li class="flex justify-between"><a href=/tags/%EC%BD%94%EB%93%9C%EB%9D%BC%EC%9D%B4%EC%96%B8/>코드라이언</a>
+<span>34</span></li><li class="flex justify-between"><a href=/tags/stacking/>Stacking</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pca/>PCA</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/k-means/>K-Means</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/svm/>SVM</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/knn/>KNN</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/gradient-boosting/>Gradient Boosting</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/logistic-regression/>Logistic Regression</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/gradient/>Gradient</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/linear-regression/>Linear Regression</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/db/>DB</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/sql/>SQL</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/statistics/>Statistics</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/numpy/>Numpy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pandas/>Pandas</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/selenium/>Selenium</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/web-crawling/>Web Crawling</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/text-analysis/>Text Analysis</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/word-cloud/>Word Cloud</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/leetcode-easy/>LeetCode Easy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/data-analysis/>Data Analysis</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/stack/>Stack</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/big-o/>Big-O</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/data-structure/>Data Structure</a>
+<span>1</span></li></ul></li></ul></nav></div></aside></main></body></html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2023 on Minystory</title>
+    <link>https://minyeamer.github.io/categories/2023/</link>
+    <description>Recent content in 2023 on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 02 Apr 2023 17:32:30 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/categories/2023/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023-04-02 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/</link>
+      <pubDate>Sun, 02 Apr 2023 17:32:30 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-04/2023-04-02/</guid>
+      <description>Spark study</description>
+    </item>
+    <item>
+      <title>2023-03-25 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-03/2023-03-25/</link>
+      <pubDate>Sat, 25 Mar 2023 15:22:10 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-03/2023-03-25/</guid>
+      <description>Spark study</description>
+    </item>
+    <item>
+      <title>2023-03-21 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/</link>
+      <pubDate>Tue, 21 Mar 2023 21:30:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-03/2023-03-21/</guid>
+      <description>Spark study</description>
+    </item>
+    <item>
+      <title>2023-02-19 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-19/</link>
+      <pubDate>Sun, 19 Feb 2023 23:38:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-19/</guid>
+      <description>Collaborative Filtering</description>
+    </item>
+    <item>
+      <title>2023-02-18 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-18/</link>
+      <pubDate>Sat, 18 Feb 2023 09:57:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-18/</guid>
+      <description>Recommender System</description>
+    </item>
+    <item>
+      <title>2023-02-12 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-12/</link>
+      <pubDate>Sun, 12 Feb 2023 23:12:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-12/</guid>
+      <description>Bond market study</description>
+    </item>
+    <item>
+      <title>2023-02-05 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-05/</link>
+      <pubDate>Sun, 05 Feb 2023 17:56:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-05/</guid>
+      <description>Smartstore and Coupang study</description>
+    </item>
+    <item>
+      <title>2023-02-04 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-04/</link>
+      <pubDate>Sat, 04 Feb 2023 15:28:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-04/</guid>
+      <description>Smartstore and Coupang study</description>
+    </item>
+    <item>
+      <title>2023-02-02 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-02/</link>
+      <pubDate>Thu, 02 Feb 2023 23:10:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-02/2023-02-02/</guid>
+      <description>Smartstore and Coupang study</description>
+    </item>
+    <item>
+      <title>2023-01-29 Log</title>
+      <link>https://minyeamer.github.io/post/study/2023/2023-01/2023-01-29/</link>
+      <pubDate>Sun, 29 Jan 2023 23:10:00 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/study/2023/2023-01/2023-01-29/</guid>
+      <description>Smartstore and Coupang study</description>
+    </item>
+    <item>
+      <title>2022년 01월 23일 회고</title>
+      <link>https://minyeamer.github.io/post/diary/2023/2023-01/2023-01-23/</link>
+      <pubDate>Mon, 23 Jan 2023 12:08:30 +0900</pubDate>
+      <guid>https://minyeamer.github.io/post/diary/2023/2023-01/2023-01-23/</guid>
+      <description>&lt;p&gt;지금으로부터 약 한 달 간 자동화 프로그램 안정화 작업으로 다소 바쁜 일정을 보냈지만,&lt;br&gt;&#xA;다행히 해당 작업이 마무리되어 이렇게 글로 정리해볼 여유가 생겼습니다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;구글-빅쿼리&#34;&gt;구글 빅쿼리&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ea%b5%ac%ea%b8%80-%eb%b9%85%ec%bf%bc%eb%a6%ac&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;이전 회고에서 사내 빅쿼리 도입을 고려하고 있다고 남긴 바 있었는데,&lt;br&gt;&#xA;이제는 빅쿼리에 익숙해지며 SQL도 어느정도 원하는대로 다룰 수 있는 수준에 이르렀습니다.&lt;/p&gt;&#xA;&lt;p&gt;원래는 구글 시트 API를 통한 데이터 적재 자동화에 익숙해진 후 빅쿼리로 차차 넘어갈 예정이었지만,&lt;br&gt;&#xA;생각보다 구글 API의 사용법이 간단하여 얼마안가 빅쿼리 사용을 시도해볼 수 있었습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
