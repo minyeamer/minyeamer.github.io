@@ -52,4 +52,7 @@ markup:
     startLevel: 2
     endLevel: 3
 
+permalinks:
+  post: /blog/:slugorfilename/
+
 ignoreFiles: ["_page.md", "README.md"]
