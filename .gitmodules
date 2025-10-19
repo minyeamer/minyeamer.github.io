@@ -1,0 +1,4 @@
+[submodule "content"]
+	path = content
+	url = https://github.com/minyeamer/minyeamer.github.io.git
+	branch = content
