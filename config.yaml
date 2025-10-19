@@ -17,6 +17,14 @@ params:
   author: "minyeamer"
   # author: ["Me", "You"] # multiple authors
   keywords: ["minyeamer", "Blog", "Data", "Engineering", "MLOps", "미니스토리", "블로그"]
+  favicon: "/images/favicon.ico"
+
+  assets:
+    favicon: "/images/favicons/favicon.ico"
+    favicon16x16: "/images/favicons/favicon-16x16.png"
+    favicon32x32: "/images/favicons/favicon-32x32.png"
+    apple_touch_icon: "/images/favicons/apple-touch-icon.png"
+    safari_pinned_tab: "/images/favicons/apple-touch-icon.png"
 
   BookMenu:
     profileImage: "https://avatars.githubusercontent.com/u/17109173?v=4"
