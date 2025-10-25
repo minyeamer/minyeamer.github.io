@@ -1,5 +1,6 @@
 baseURL: "https://minyeamer.github.io/"
 title: Minystory
+description: "minyeamer's blog"
 theme: "Book"
 languageCode: "ko-kr"
 
@@ -17,7 +18,10 @@ params:
   author: "minyeamer"
   # author: ["Me", "You"] # multiple authors
   keywords: ["minyeamer", "Blog", "Data", "Engineering", "MLOps", "미니스토리", "블로그"]
+
   favicon: "/images/favicon.ico"
+  images:
+    - "/images/profile/opengraph.jpg"
 
   assets:
     favicon: "/images/favicons/favicon.ico"
@@ -27,7 +31,7 @@ params:
     safari_pinned_tab: "/images/favicons/apple-touch-icon.png"
 
   BookMenu:
-    profileImage: "https://avatars.githubusercontent.com/u/17109173?v=4"
+    profileImage: "/images/profile/menu.jpg"
     githubLink: "https://github.com/minyeamer"
     categoriesLabel: "전체"
     recentPosts: true
@@ -35,6 +39,9 @@ params:
   BookComments:
     enable: true
     disqusShortname: "minyeamer"
+
+  GoogleAnalytics:
+    tagId: "G-BJ8Z9RMBPJ"
 
   SearchEngine:
     google:
@@ -46,8 +53,14 @@ params:
     # yandex:
     #   SiteVerificationTag: "XYZabc"
 
-  GoogleAnalytics:
-    tagId: "G-BJ8Z9RMBPJ"
+  schema:
+    publisherType: "Person"
+    sameAs:
+      - "https://minyeamer.tistory.com/"
+      - "https://velog.io/@minyeamer/posts"
+
+  social:
+    twitter: "https://x.com/minyeamer"
 
 markup:
   goldmark:
@@ -61,6 +74,6 @@ markup:
     endLevel: 3
 
 permalinks:
-  post: /blog/:slugorfilename/
+  post: /blog/:slugorcontentbasename/
 
 ignoreFiles: ["_page.md", "README.md"]
