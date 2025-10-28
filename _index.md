@@ -1,5 +1,5 @@
 ---
 title: "Home"
-description: "minyeamer's logbook of the data world"
+description: "minyeamer's blog"
 type: "home"
 ---
