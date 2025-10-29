@@ -2,10 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://minyeamer.github.io/blog/10000-recipe/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
+    <loc>https://minyeamer.github.io/blog/openup-handson/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/open-source/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/openup/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/ossca/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/post/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/project/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/project/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/pytorch/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/translation/</loc>
+    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/10000-recipe/</loc>
     <lastmod>2023-03-26T18:52:14+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/crawling/</loc>
@@ -17,16 +50,7 @@
     <loc>https://minyeamer.github.io/categories/data-engineering/</loc>
     <lastmod>2023-03-26T18:52:14+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/post/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/tags/python/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/</loc>
     <lastmod>2023-03-26T18:52:14+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/</loc>
@@ -113,6 +137,8 @@
     <loc>https://minyeamer.github.io/categories/frontend/blog/</loc>
   </url><url>
     <loc>https://minyeamer.github.io/categories/data-engineering/crawling/</loc>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/project/open-source/</loc>
   </url><url>
     <loc>https://minyeamer.github.io/search/</loc>
   </url>
