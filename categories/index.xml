@@ -6,8 +6,22 @@
     <description>Recent content in Categories on Minystory</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 28 Oct 2025 23:23:55 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 01 Nov 2025 20:42:21 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://minyeamer.github.io/categories/blog/</link>
+      <pubDate>Sat, 01 Nov 2025 20:42:21 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend</title>
+      <link>https://minyeamer.github.io/categories/frontend/</link>
+      <pubDate>Sat, 01 Nov 2025 20:42:21 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/frontend/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Open Source</title>
       <link>https://minyeamer.github.io/categories/open-source/</link>
@@ -34,20 +48,6 @@
       <link>https://minyeamer.github.io/categories/data-engineering/</link>
       <pubDate>Sun, 26 Mar 2023 18:52:14 +0900</pubDate>
       <guid>https://minyeamer.github.io/categories/data-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blog</title>
-      <link>https://minyeamer.github.io/categories/blog/</link>
-      <pubDate>Thu, 08 Sep 2022 15:52:12 +0900</pubDate>
-      <guid>https://minyeamer.github.io/categories/blog/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Frontend</title>
-      <link>https://minyeamer.github.io/categories/frontend/</link>
-      <pubDate>Thu, 08 Sep 2022 15:52:12 +0900</pubDate>
-      <guid>https://minyeamer.github.io/categories/frontend/</guid>
       <description></description>
     </item>
     <item>

@@ -9,24 +9,24 @@
     <lastBuildDate>Thu, 08 Sep 2022 15:52:12 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 블로그 만들기 (3) - 테마 커스터마이징</title>
+      <title>Hugo 블로그 만들기 [2022년] (3) - 테마 커스터마이징</title>
       <link>https://minyeamer.github.io/blog/hugo-blog-3/</link>
       <pubDate>Thu, 08 Sep 2022 15:52:12 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/hugo-blog-3/</guid>
       <description>&lt;h2 id=&#34;hugo-블로그-만들기-3---테마-커스터마이징&#34;&gt;Hugo 블로그 만들기 (3) - 테마 커스터마이징&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0-3---%ed%85%8c%eb%a7%88-%ec%bb%a4%ec%8a%a4%ed%84%b0%eb%a7%88%ec%9d%b4%ec%a7%95&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;블로그를 구성할 때 기술적, 시간적 한계 때문에 이미 만들어진 테마를 사용하게 됩니다.&lt;br&gt;&#xA;제가 Hugo 블로그를 만들 때도 이러한 문제 때문에 &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PaperMod&lt;/a&gt; 테마를 사용했지만,&lt;br&gt;&#xA;블로그를 보다보면 만족스럽지 못한 부분이 발견됩니다.&lt;/p&gt;&#xA;&lt;p&gt;이번 포스트에서는 제가 PaperMod 테마를 커스터마이징한 과정을 안내해드리겠습니다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;archive-search-추가하기&#34;&gt;Archive, Search 추가하기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#archive-search-%ec%b6%94%ea%b0%80%ed%95%98%ea%b8%b0&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;PaperMod 테마를 가져오면서 가장 신경쓰였던 부분은&lt;br&gt;&#xA;메인 메뉴가 Categories, Tags 두 개 뿐이었단 점입니다.&lt;/p&gt;&#xA;&lt;p&gt;Archive는 그렇다쳐도 Search 기능은 빼먹을 수 없는 부분이라 생각하기 때문에,&lt;br&gt;&#xA;Hugo 및 PaperMod 내 이슈를 참고하여 관련된 내용을 탐색했습니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hugo 블로그 만들기 (2) - Utterances 댓글 적용</title>
+      <title>Hugo 블로그 만들기 [2022년] (2) - Utterances 댓글 적용</title>
       <link>https://minyeamer.github.io/blog/hugo-blog-2/</link>
       <pubDate>Thu, 08 Sep 2022 14:39:22 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/hugo-blog-2/</guid>
       <description>&lt;p&gt;Hugo 블로그는 기본적으로 댓글 기능을 제공하지는 않습니다.&lt;br&gt;&#xA;제가 사용하는 PaperMod 테마에서는 서드파티 서비스인 &lt;code&gt;Disqus&lt;/code&gt;를 위한 레이아웃이 존재하지만,&lt;br&gt;&#xA;저는 기본적인 블로그 운영을 Github 플랫폼 내에서 구성하고 싶기 때문에 다른 기능을 사용해보려 합니다.&lt;/p&gt;&#xA;&lt;p&gt;이번 포스트에서는 Utterances 댓글 기능을 추가하는 방법을 안내해드리겠습니다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;utterances-설치하기&#34;&gt;Utterances 설치하기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#utterances-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Utterances는 Github issues 기반으로 댓글을 관리하는 기능입니다.&lt;br&gt;&#xA;무료 플랜에서 광고가 붙는 &lt;code&gt;Disqus&lt;/code&gt;와 다르게 별도의 유료 플랜이 없어 간편하게 사용할 수 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;Utterances 설치는 단순히 레이아웃 상에서 댓글이 위치할 곳에 자바스크립트 코드를 삽입하면 됩니다.&lt;br&gt;&#xA;하지만, 선행적으로 &lt;a href=&#34;https://github.com/marketplace/utterances&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;해당 링크&lt;/a&gt;를 통해 Utterances와 연동시킬 저장소를 등록해야 합니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hugo 블로그 만들기 (1) - Hugo 기본 구성</title>
-      <link>https://minyeamer.github.io/blog/hugo-blog-1/</link>
+      <title>Hugo 블로그 만들기 [2022년] (1) - Hugo 기본 구성</title>
+      <link>https://minyeamer.github.io/blog/hugo-blog-old-1/</link>
       <pubDate>Thu, 08 Sep 2022 12:02:32 +0900</pubDate>
-      <guid>https://minyeamer.github.io/blog/hugo-blog-1/</guid>
+      <guid>https://minyeamer.github.io/blog/hugo-blog-old-1/</guid>
       <description>&lt;p&gt;얼마 전, 티스토리 블로그에서 &lt;a href=&#34;https://minyeamer.github.io/blog/jekyll-blog/&#34;&gt;Jekyll 블로그&lt;/a&gt;로 이동했는데,&lt;br&gt;&#xA;처음 기대했던 submodule을 활용한 효율적인 저장소 연동에서 어려움을 겪고 다른 대안을 탐색하게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;Jekyll 블로그를 사용함에 있어서, Ruby 언어로 구성된 블로그 구조에 대해 이해하기 어려운데다가&lt;br&gt;&#xA;로컬 환경에서 Jekyll 블로그를 실행하면서 발생하는 에러를 처리하는데도 난항을 겪었는데,&lt;br&gt;&#xA;웹상에서 자동 배포가 이루어지는 과정에서 submodule인 TIL 저장소를 포스트로 인식하지 못하는 문제가 있었습니다.&lt;/p&gt;&#xA;&lt;p&gt;Jekyll 블로그의 대안으로 Hexo 및 Hugo 프레임워크에 주목했고,&lt;br&gt;&#xA;두 제품의 장단점을 비교하여 상대적으로 배포가 빠르고 현재까지도 업데이트가 이루어지는 Hugo를 선택했습니다.&lt;/p&gt;</description>
     </item>
     <item>
