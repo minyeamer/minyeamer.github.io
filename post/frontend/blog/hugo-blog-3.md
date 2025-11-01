@@ -1,7 +1,7 @@
 ---
+title: "Hugo 블로그 만들기 [2022년] (3) - 테마 커스터마이징"
+date: "2022-09-08T15:52:12+0900"
 layout: "post"
-title: "Hugo 블로그 만들기 (3) - 테마 커스터마이징"
-date: "2022-09-08 15:52:12 +0900"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "PaperMod", "Github", "Github Pages", "Go Template", "KaTex", "검색 엔진"]
 ---

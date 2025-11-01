@@ -1,7 +1,7 @@
 ---
+title: "Hugo 블로그 만들기 [2022년] (2) - Utterances 댓글 적용"
+date: "2022-09-08T14:39:22+0900"
 layout: "post"
-title: "Hugo 블로그 만들기 (2) - Utterances 댓글 적용"
-date: "2022-09-08 14:39:22 +0900"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "PaperMod", "Github", "Github Pages", "Utterances"]
 ---
