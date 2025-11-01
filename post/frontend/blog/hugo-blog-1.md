@@ -23,7 +23,7 @@ tags: ["Blog", "Hugo", "Tistory", "Velog", "Git", "Github Pages", "Submodule", "
 <li>과거 다른 블로그 플랫폼을 이용하면서 겪은 경험 및 장단점 (<a href="#나만의-블로그를-만들게-된-계기">나만의 블로그를 만들게 된 계기</a>)</li>
 <li>나만의 블로그에 추가하고 싶은 기능 목록을 영역 별로 나열 (<a href="#나만의-블로그-기획하기">나만의 블로그 기획하기</a>)</li>
 <li>관심있는 Hugo 테마에 대한 소개 (<a href="#기본-테마-선정하기">기본 테마 선정하기</a>)</li>
-<li>Hugo 설치부터 Github 연동까지 프로젝트 구조를 설계하고 배포 스크립트 작성 (<a href="#블로그-프로젝트-구성하기">블로그 프로젝트 구성하기</a>)</li>
+<li>Hugo 설치부터 Submodule 활용까지 프로젝트 구조를 설계하고 배포 스크립트 작성 (<a href="#블로그-프로젝트-구성하기">블로그 프로젝트 구성하기</a>)</li>
 </ul>
 {{< /hint >}}
 
@@ -171,6 +171,7 @@ Github 웹사이트에서 raw 이미지 링크를 찾아와야 해서 비효율�
 
 {{< hint >}}
 <ol>
+<li>Open Graph 설정 및 외부 링크 미리보기 기능을 추가합니다.</li>
 <li>스크롤 위치에 맞춰 상단에 진행도를 표시합니다.</li>
 <li>다크모드 ON/OFF 버튼을 추가합니다.</li>
 <ul>
@@ -285,7 +286,7 @@ Hugo 프로젝트는 다음과 같은 구조를 가집니다.
 ├── public/
 ├── static/
 ├── themes/
-└── config.toml
+└── hugo.toml
 ```
 
 각 폴더는 다음과 같은 역할 또는 목적이 있습니다.
@@ -296,7 +297,7 @@ Hugo 프로젝트는 다음과 같은 구조를 가집니다.
 - `public/` : 빌드한 결과, 즉 정적 HTML 파일들이 생성되는 폴더입니다.
 - `static/` : 빌드할 때 포함시킬 이미지, JS, CSS 등의 파일들이 위치하는 폴더입니다.
 - `themes/` : 만들어진 테마를 블로그에 적용하기 위해 위치시키는 폴더입니다.
-- `config.toml` : 블로그에 대한 설정을 위한 파일입니다. YAML 등 다른 형식도 지원합니다.
+- `hugo.toml` : 블로그에 대한 설정을 위한 파일입니다. YAML 등 다른 형식도 지원합니다.
 
 ### 3. Github 저장소 생성
 
@@ -449,7 +450,7 @@ Github Pages 배포를 진행합니다.
 ```bash
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+echo -e "\033[0;32mDeploying updates to GitHub***\033[0m"
 
 # 모든 서브모듈의 변경사항을 업데이트
 git submodule update --remote
@@ -486,5 +487,19 @@ git commit -m "$msg"
 git push origin main
 ```
 
-해당 내용의 `deploy.sh` 를 생성하고 `chmod 755 deploy.sh` 명령어로 실행 권한을 부여하여
-복잡한 배포 과정을 쉘 스크립트 하나를 실행하는 것으로 대체합니다.
+해당 내용의 `deploy.sh` 스크립트 파일을 생성하고 `chmod 755 deploy.sh`
+명령어로 실행 권한을 부여하여 복잡한 배포 과정을 쉘 스크립트 하나를 실행하는 것으로 대체합니다.
+
+스크립트를 실행하면 Hugo 프로젝트를 HTML 소스코드로 빌드한 후 원격 저장소에 푸쉬하여
+Github Pages 배포하게 됩니다. Github Actions를 확인하면 다음과 같은 과정으로
+배포가 진행되는 것을 확인할 수 있습니다.
+
+![github-pages](https://dl.dropboxusercontent.com/s/nqarvwpa9dx420e0qmqoa/github-actions.jpeg?rlkey=p49fwrwf9wx4pluzov9bmaf5t&st=32iyylty&dl=0)
+
+모든 과정이 성공하면 `https://<사용자명>.github.io/` 주소로 배포된 블로그를 조회할 수 있습니다.
+
+기본 Hugo Book 테마를 사용할 경우 배포했을 때 좌측 메뉴에 블로그 제목과 검색창만 덩그러니 놓여있을 것입니다. 임시로 게시글을 생성하고 게시글 경로로 직접 이동해보면 아래와 같은 결과를 확인할 수 있습니다.
+
+![github-test](https://dl.dropboxusercontent.com/s/lpwj762hzh7r7vriwijqb/hugo-test.jpeg?rlkey=tub36ap9s95kegc5jxwvviz6m&st=34gnq1ao&dl=0)
+
+다음 게시글에서는 본격적으로 테마를 커스터마이징하는 과정을 진행하겠습니다.
