@@ -3,16 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://minyeamer.github.io/categories/blog/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/blog/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/css/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/frontend/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/html/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/hugo/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/hugo-blog-2/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/hugo-book/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/javascript/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/post/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/</loc>
+    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/git/</loc>
     <lastmod>2025-11-01T20:42:21+09:00</lastmod>
@@ -20,25 +47,10 @@
     <loc>https://minyeamer.github.io/tags/github-pages/</loc>
     <lastmod>2025-11-01T20:42:21+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/hugo/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-1/</loc>
     <lastmod>2025-11-01T20:42:21+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/hugo-book/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/post/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/tags/submodule/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/</loc>
     <lastmod>2025-11-01T20:42:21+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/tistory/</loc>
@@ -134,7 +146,7 @@
     <loc>https://minyeamer.github.io/tags/%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84/</loc>
     <lastmod>2022-09-08T15:52:12+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/blog/hugo-blog-2/</loc>
+    <loc>https://minyeamer.github.io/blog/hugo-blog-old-2/</loc>
     <lastmod>2022-09-08T14:39:22+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/utterances/</loc>
