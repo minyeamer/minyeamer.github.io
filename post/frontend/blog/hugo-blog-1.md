@@ -11,7 +11,6 @@ tags: ["Blog", "Hugo", "Tistory", "Velog", "Git", "Github Pages", "Submodule", "
 <ul style="margin: 0.5rem 0;">
 <li>마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들</li>
 <li>블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들</li>
-<li>AI 에이전트와 협력하여 웹페이지를 구성하는 사례에 관심있는 분들</li>
 <li>Github Pages 서비스를 활용한 웹 호스팅을 하고 싶은 분들</li>
 <li>Git Submodules 기능을 활용한 프로젝트 구성 방식을 알고 싶은 분들</li>
 </ul>
