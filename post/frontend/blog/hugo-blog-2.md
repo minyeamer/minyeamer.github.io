@@ -2,8 +2,13 @@
 title: "Hugo 블로그 만들기 (2) - 메인 레이아웃 개선"
 date: "2025-11-04T01:50:16+09:00"
 layout: "post"
+description: >
+  Hugo Book 테마의 구조를 이해하고 메인 레이아웃을 개선하는 방법을 소개합니다.
+  메뉴 영역에 프로필 사진과 소셜 링크를 추가하고,
+  목차 영역에 하이라이트와 스크롤 이동 버튼을 구현하는 과정을 안내합니다.
+cover: "https://dl.dropboxusercontent.com/s/72ltf5j0b07qactn4tpfg/hugo-cover.png?rlkey=dkijvoj0d0fzn9jxxfk45nbnp&st=7xu2qwun&dl=0"
 categories: ["Frontend", "Blog"]
-tags: ["Blog", "Hugo", "HTML", "CSS", "JavaScript", "hugo-book"]
+tags: ["Hugo", "Blog", "HTML", "CSS", "JavaScript", "Layout", "Hugo Book", "휴고", "커스터마이징", "목차"]
 ---
 
 {{< hint info >}}

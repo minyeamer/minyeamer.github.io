@@ -2,11 +2,13 @@
 title: "[OSSCA] 2025 오픈소스 컨트리뷰션 아카데미 - PyTorch 문서 한글화 참여 후기"
 date: "2025-10-28T23:23:55+09:00"
 layout: "post"
+description: >
+  2025 OSSCA 오픈소스 컨트리뷰션 아카데미에서 PyTorch 문서 한글화 프로젝트에 참여한 경험을 공유합니다.
+  샘플 번역부터 통번역까지의 과정, RST 문법 이슈 해결, 용어집 추가, PR 리뷰 반영 등을 안내합니다.
+cover: "https://dl.dropboxusercontent.com/s/03vlt9nl3jn91zarenw8l/ossca-cover.jpeg?rlkey=fcm7ikyr0xrianlrw1uue61tj&st=2w1jdazi&dl=0"
 categories: ["Project", "Open Source"]
-tags: ["OSSCA", "OpenUp", "Project", "PyTorch", "Translation"]
+tags: ["OSSCA", "PyTorch", "OpenUp", "Open Source", "Translation", "RST", "Github", "파이토치", "오픈소스", "번역"]
 ---
-
-![ossca-cover](https://drive.google.com/thumbnail?id=1ZWa1RVcRDog23_CJjHIlAe2vlGIvGD5N&sz=w1500)
 
 {{< hint success >}}
 <p style="margin-bottom: 0;"><i class="fa-solid fa-lightbulb"></i> 오픈소스 컨트리뷰션 아카데미 소개</p>

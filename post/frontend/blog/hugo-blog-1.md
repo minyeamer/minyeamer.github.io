@@ -2,8 +2,13 @@
 title: "Hugo 블로그 만들기 (1) - 프로젝트 기획 및 구조 설계"
 date: "2025-11-01T20:42:21+09:00"
 layout: "post"
+description: >
+  Hugo 블로그 프로젝트 기획부터 구조 설계까지 단계별로 안내합니다.
+  타 블로그 플랫폼과 비교하고 Hugo 테마를 선정하는 방법을 소개하며,
+  GitHub Pages와 Submodule을 활용한 효율적인 배포 방법을 설명합니다.
+cover: "https://dl.dropboxusercontent.com/s/72ltf5j0b07qactn4tpfg/hugo-cover.png?rlkey=dkijvoj0d0fzn9jxxfk45nbnp&st=7xu2qwun&dl=0"
 categories: ["Frontend", "Blog"]
-tags: ["Blog", "Hugo", "Tistory", "Velog", "Git", "Github Pages", "Submodule", "hugo-book"]
+tags: ["Hugo", "Blog", "티스토리", "Velog", "Git", "Github Pages", "Submodule", "Hugo Book", "휴고", "벨로그"]
 ---
 
 {{< hint info >}}
