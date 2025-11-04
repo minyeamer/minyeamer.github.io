@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>커스터마이징 on Minystory</title>
+    <link>https://minyeamer.github.io/tags/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/</link>
+    <description>Recent content in 커스터마이징 on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 04 Nov 2025 01:50:16 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 블로그 만들기 (2) - 메인 레이아웃 개선</title>
+      <link>https://minyeamer.github.io/blog/hugo-blog-2/</link>
+      <pubDate>Tue, 04 Nov 2025 01:50:16 +0900</pubDate>
+      <guid>https://minyeamer.github.io/blog/hugo-blog-2/</guid>
+      <description>&lt;blockquote class=&#34;book-hint info&#34;&gt;&#xA;  &#xA;&lt;p style=&#34;margin-bottom: 0;&#34;&gt;&lt;i class=&#34;fa-solid fa-circle-info&#34;&gt;&lt;/i&gt; 대상 독자&lt;/p&gt;&#xA;&lt;ul style=&#34;margin: 0.5rem 0;&#34;&gt;&#xA;&lt;li&gt;마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;Hugo 템플릿 구조에 대해 이해하고 싶으신 분들&lt;/li&gt;&#xA;&lt;li&gt;CSS 선택자 등 CSS 개념과 사용법을 이해하고 있으신 분들&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&lt;blockquote class=&#34;book-hint success&#34;&gt;&#xA;  &#xA;&lt;p style=&#34;margin-bottom: 0;&#34;&gt;&lt;i class=&#34;fa-solid fa-lightbulb&#34;&gt;&lt;/i&gt; 주요 내용&lt;/p&gt;&#xA;&lt;ul style=&#34;margin: 0.5rem 0;&#34;&gt;&#xA;&lt;li&gt;Hugo 템플릿 구조와 Book 테마에서 활용되는 템플릿 (&lt;a href=&#34;#book-테마-알아보기&#34;&gt;Book 테마 알아보기&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Book 테마의 메인 레이아웃을 둘러보며 각 영역을 구별 (&lt;a href=&#34;#메인-레이아웃-개선하기&#34;&gt;메인 레이아웃 개선하기&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Book 테마에서 메뉴/목차/헤더 영역을 개선하는 과정 (&lt;a href=&#34;#메뉴-영역-개선하기&#34;&gt;메뉴 영역 개선하기&lt;/a&gt; / &lt;a href=&#34;#목차-영역-개선하기&#34;&gt;목차 영역 개선하기&lt;/a&gt; / &lt;a href=&#34;#헤더-영역-개선하기&#34;&gt;헤더 영역 개선하기&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&lt;p&gt;&lt;a href=&#34;https://minyeamer.github.io/blog/hugo-blog-1/&#34;&gt;앞선 게시글&lt;/a&gt;에서 Hugo 테마에 대해 둘러보고 Hugo 프로젝트 구조를 설계하는 방법을 알아보았습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
