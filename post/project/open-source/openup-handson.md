@@ -3,9 +3,9 @@ title: "[OSSCA] 2025 오픈소스 컨트리뷰션 아카데미 - PyTorch 문서 
 date: "2025-10-28T23:23:55+09:00"
 layout: "post"
 description: >
-  2025 OSSCA 오픈소스 컨트리뷰션 아카데미에서 PyTorch 문서 한글화 프로젝트에 참여한 경험을 공유합니다.
+  2025 OSSCA 오픈소스 컨트리뷰션 아카데미 [체험형-2차]에서 PyTorch 문서 한글화 프로젝트에 참여한 경험을 공유합니다.
   샘플 번역부터 통번역까지의 과정, RST 문법 이슈 해결, 용어집 추가, PR 리뷰 반영 등을 안내합니다.
-cover: "https://dl.dropboxusercontent.com/s/03vlt9nl3jn91zarenw8l/ossca-cover.jpeg?rlkey=fcm7ikyr0xrianlrw1uue61tj&st=2w1jdazi&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/aznkzro8brx3fc2jukjx9/ossca-00-cover.webp?rlkey=kril9lwgp3t4qcktr8l3e537j&dl=0"
 categories: ["Project", "Open Source"]
 tags: ["OSSCA", "PyTorch", "OpenUp", "Open Source", "Translation", "RST", "Github", "파이토치", "오픈소스", "번역"]
 ---
@@ -35,7 +35,7 @@ OSSCA라는 과정을 처음 알게 된 건 2025 파이콘의 OpenUp 부스를 �
 
 ### 프로젝트 선택
 
-![ossca-projects](https://dl.dropboxusercontent.com/s/br43955gkthbfm0azbu00/ossca-proejcts.jpeg?rlkey=5kmv70g0cdtb04o38mhujvhzt&st=wx6wlkrv&dl=0)
+![OSSCA 체험형 프로그램 프로젝트 목록](https://dl.dropboxusercontent.com/scl/fi/hgsyav8yjoq0xoqlw90pz/ossca-01-projects.webp?rlkey=gx1og65bhox5o21n202ursz8q&dl=0)
 
 이번 체험형 프로그램에는 PyTorch, MDN, Ubuntu, Yocto, Braillify 프로젝트 중 하나를 선택할 수 있었습니다.
 내가 선택한다고 합격이 보장되는 건 아니지만, 그래도 개인적으로는 과거 딥러닝 모델을 학습하면서 활용한 PyTorch가 가장 익숙했고,
@@ -49,8 +49,7 @@ OSSCA라는 과정을 처음 알게 된 건 2025 파이콘의 OpenUp 부스를 �
 아쉽게도 오프라인 발대식에는 개인 일정과 겹쳐서 참가하지 못했고,   
 해당 일정 전에 OSSCA 디스코드에 초대받아 어떤걸 하게 될지 둘러보았습니다.
 
-![ossca-discord](https://dl.dropboxusercontent.com/s/p16ws61wn4q92tt8x45mq/ossca-discord.jpeg?rlkey=m4vs1ys3lmc2o6gah9eq7rgmx&st=wssbyd1t&dl=0)
-
+![OSSCA 디스코드 팀별 채널 입장](https://dl.dropboxusercontent.com/scl/fi/jzcxanqph2toa1opzjit1/ossca-02-discord.webp?rlkey=5uhscn4wjapisuqbyggculzfe&dl=0)
 
 프로젝트 시작 전에 특별히 볼 건 없었고 팀별 채널에서 대화를 나누면서 향후 일정을 전달받게 되었습니다.
 
@@ -65,7 +64,7 @@ PyTorch 튜토리얼에는 advanced, beginner, intermediate, recipes 4가지 폴
 
 로컬에서 샘플 번역한 결과는 테스트 repo에 PR을 올리고 조원들 간에 PR 리뷰 댓글을 달았습니다.
 
-![ossca-week1-pr](https://dl.dropboxusercontent.com/s/dl3zie6vl6xy8p41bjk5a/ossca-week1-pr.jpeg?rlkey=26thnjz0fx5b4kxanmhsdr596&st=wct0fxkd&dl=0)
+![Github에서 첫 번째 PR 및 리뷰](https://dl.dropboxusercontent.com/scl/fi/2k12c5urpxrdunc3pzq9f/ossca-03-week1-pr.webp?rlkey=yqj6w1kqdam1plc987e16fhm2&dl=0)
 
 저는 `advanced/generic_join.rst` 문서를 선택했고 조금 의욕이 들어 35줄 정도를 번역해서 올렸습니다.
 
@@ -81,7 +80,7 @@ PyTorch 튜토리얼에는 advanced, beginner, intermediate, recipes 4가지 폴
 대표적으로 인라인 코드블럭을 마크다운에서는 백틱(\`) 하나로 감싸서 표현했는데, RST에서는 백틱 2개로 감쌌습니다.
 그리고, 백틱과 한글이 겹치면 외부 링크가 텍스트로 노출되어 보기에 좋지 않았습니다.
 
-![ossca-week1-render](https://dl.dropboxusercontent.com/s/ek5z89k2w2ulzi0iiop4g/ossca-week1-render.jpeg?rlkey=n1miwxsbd2qebo6qhvco3ns3v&st=23uhb8v1&dl=0)
+![PyTorch 튜토리얼 문서 렌더링](https://dl.dropboxusercontent.com/scl/fi/c99s2xckv2lif310zrrhb/ossca-04-week1-rendor.webp?rlkey=6hkj41gky49v53a3zb3k5nwdd&dl=0)
 
 ### 이슈사항 (2) - 한국어 문법
 
@@ -92,13 +91,13 @@ PyTorch 튜토리얼에는 advanced, beginner, intermediate, recipes 4가지 폴
 평소에 특수문자 사용에 신경을 쓰지 않았다 보니, 그리고 개인적으로도 영어로 된 공식 문서를 자주 읽어 콜론 사용이 익숙하다 보니
 처음 번역할 때 이러한 표현을 놓치는 경우가 많았습니다.
 
-![ossca-week1-changes](https://dl.dropboxusercontent.com/s/fdhzkcj3fnzl4cieftkoc/ossca-week1-changes.jpeg?rlkey=oqavvxssab9syg1nrllvtj0ud&st=3vkptvxt&dl=0)
+!["In this tutorial, you will see:" -> "이 튜토리얼에서는 다음을 다룹니다."](https://dl.dropboxusercontent.com/scl/fi/c1kswrpmj5dulx0bwsnjd/ossca-05-week1-changes.webp?rlkey=xv68qey3bvuo3k376ne1gj67e&dl=0)
 
 ### 이슈사항 (3) - 코드 블럭
 
 마지막으로 겪었던 문제는 로컬에서 렌더링할 때 인라인 코드블럭이 아래 이미지처럼 공백 단위로 분리되어 보였습니다.
 
-![ossca-week1-code1](https://dl.dropboxusercontent.com/s/o3hgbafkdh1zqb5p9rkul/ossca-week1-code1.jpg?rlkey=mow6vmvj4c3kvn9rxxs16ehe5&st=q6tk8swz&dl=0)
+![\`join_hook(self,\` \`**kwargs)\` \`->\` \`JoinHook\`](https://dl.dropboxusercontent.com/scl/fi/s5gwp9weuxvmee640vuyo/ossca-06-week1-code1.webp?rlkey=6qhmftt2a3ygga957amgxf7hk&dl=0)
 
 원문 튜토리얼과 샘플 번역한 문서 간에 인라인 코드블럭을 표현하는 문법에 차이가 없기 때문에
 로컬에서 렌더링할 때만 발생하는 문제겠지만 그래도 거슬려서 해결해보기로 했습니다.
@@ -120,7 +119,7 @@ Role에 대한 설명은 [Sphinx 공식 문서](https://www.sphinx-doc.org/en/ma
 위와 같이 수정하고 다시 렌더링하니 아래 이미지처럼 보기 좋게 나타났습니다.   
 하지만, 마지막 주차에서 번역할 때 원문과 형식을 맞추기 위해 해당 표현은 제외했습니다.
 
-![ossca-week1-code2](https://dl.dropboxusercontent.com/s/ia1femys7dmc1nyvbzr97/ossca-week1-code2.jpeg?rlkey=1lz2430f2cnwol6caviwoz7q0&st=betjkckn&dl=0)
+![\`join_hook(self, **kwargs) -> JoinHook\`](https://dl.dropboxusercontent.com/scl/fi/8gu8dka3otou9qzs0vavp/ossca-07-week1-code2.webp?rlkey=5qyr6u0m5z2jrv8l3o3yrfv6j&dl=0)
 
 ## 2주차 - 기존 문서 오탈자 수정
 
@@ -135,7 +134,7 @@ Role에 대한 설명은 [Sphinx 공식 문서](https://www.sphinx-doc.org/en/ma
 번역 퀄리티를 개선할만한 점은 찾지 못했지만 [이슈사항 (1) - RST 문법](#이슈사항-1---rst-문법)에 해당하는
 링크가 텍스트로 노출되는 이슈 사항을 해결했습니다.
 
-![ossca-week2-typo](https://dl.dropboxusercontent.com/s/ihibbyun6rmfh0a9e6g23/ossca-week2-typo.jpeg?rlkey=l7gg4pmty3aq6uzy02sjwr209&st=wh9qbme2&dl=0)
+!["\`여기 <https...>__\`에서" -> "\`여기 <https...>__\` 에서"](https://dl.dropboxusercontent.com/scl/fi/e9dm9fvnu3ez2w81nbc75/ossca-08-week2-typo.webp?rlkey=05ysmhykoh935wbz9pq9mawb7&dl=0)
 
 [#1010](https://github.com/PyTorchKorea/tutorials-kr/pull/1010) PR을 올려 현재는 Merged 되었습니다.
 
@@ -162,7 +161,7 @@ PyTorch로 딥러닝 모델 학습을 해본 사람이라면 누구나 알만한
 아래 이미지와 같이 [#978](https://github.com/PyTorchKorea/tutorials-kr/issues/978) 이슈를 올리면서 실제 번역 사례를 제시했습니다.
 
 <div class="center-block">
-<img src="https://dl.dropboxusercontent.com/s/h2ridkdvqbhvantoyie43/ossca-week3-issue.jpeg?rlkey=6s08dupje8kw8ho1ugpd4vzdr&st=9c0475za&dl=0" alt="ossca-week3-issue" style="max-width: 750px;">
+<img src="https://dl.dropboxusercontent.com/scl/fi/rfv4oagugifuazt3lgomv/ossca-09-week3-issue.webp?rlkey=4fpavcp4lpy64tmk5ebzhiey7&dl=0" alt="혼동/오차 행렬 번역 사례" style="max-width: 750px;">
 </div>
 
 `confusion matrix` 는 "오차 행렬" 또는 "혼동 행렬" 이라고 번역되는 사례가 있는데,
@@ -176,7 +175,7 @@ PyTorch 튜토리얼에서 "오차 행렬" 이라고 번역된 사례가 있어 
 제가 제안한 `confusion matrix` 도 채택되었습니다.
 
 <div class="center-block">
-<img src="https://dl.dropboxusercontent.com/s/wg11sqcgse0iihumdiy70/ossca-week3-vote.jpeg?rlkey=kxfs8zixp2aqsuj0thu2mlqo6&st=2chtit14&dl=0" alt="ossca-week3-vote" style="max-width: 400px;">
+<img src="https://dl.dropboxusercontent.com/scl/fi/hmsdnkm7fdq9tmf1remp1/ossca-10-week3-vote.webp?rlkey=tb650kys85utvhhkduczxtd6f&dl=0" alt="디스코드 용어 투표" style="max-width: 400px;">
 </div>
 
 [#1009](https://github.com/PyTorchKorea/tutorials-kr/pull/1009) PR을 올려 현재 Merged 되었으며
@@ -195,7 +194,7 @@ PyTorch 튜토리얼에서 "오차 행렬" 이라고 번역된 사례가 있어 
 
 </div>
 
-## 4~5주차 - PyTorch 문서 통번역
+## 4~6주차 - PyTorch 문서 통번역
 
 앞선 과제가 끝나고 다음 2주 동안은 PyTorch 튜토리얼에서 아직 번역되지 않은 문서를 선택해
 통번역을 진행하는 과제를 수행했습니다.
@@ -204,8 +203,9 @@ PyTorch 튜토리얼에서 "오차 행렬" 이라고 번역된 사례가 있어 
 
 2주 동안 진행되는 과제였지만, 이미 1주차에 만들어둔 번역 초안이 있어서 1주 내에 끝냈습니다.
 에디터에서 영어 원문과 클로드가 한글로 번역한 문장을 비교해 보면서 어색한 표현을 고치는 방식으로 진행했습니다.
+이후 마지막 주차에는 멘토분들이 PR 리뷰를 달아주며 번역 중 놓친 부분들을 추가로 개선했습니다.
 
-![ossca-week4-changes](https://dl.dropboxusercontent.com/s/10mocljtay8pzkdpj8lh6k/ossca-week4-changes.jpeg?rlkey=k967tsx54k9rsznw8n4ehe8as&st=5vja23ou&dl=0)
+![불균등한 입력에 대한 분산 학습을 위한 Join 컨텍스트 관리자(context manager) 사용 예시](https://dl.dropboxusercontent.com/scl/fi/qtggnxpepvwyeq6rrzbks/ossca-11-week4-changes.webp?rlkey=d692z6p7fa6gw8uuo0pbdz5pj&dl=0)
 
 ### 고려사항 (1) - 고유명사 구분
 
@@ -266,14 +266,12 @@ to synchronize gradients across ranks.
 예를 들어, 아래 이미지처럼 문장 끝에 마침표를 빼먹어 추가해야 함을 요청 받은 경우도 있고,
 용어집과 다른 단어를 사용한 경우나 원문의 형식(공백 등)을 유지하지 않은 경우를 지적받기도 했습니다.
 
-![ossca-week4-review](https://dl.dropboxusercontent.com/s/c18k3bxrwqn46k6a2j7jl/ossca-week4-review.jpeg?rlkey=xykqt7zpy91fot3fap87oyw5z&st=zqorsbn7&dl=0)
+![긴 문서 번역하느라 고생 많으셨습니다. 다음과 같이 리뷰 드립니다.](https://dl.dropboxusercontent.com/scl/fi/gyj5ot23oosxzryt2t8zv/ossca-12-week4-review.webp?rlkey=42jjjauy71ee4tdn2921ekpaa&dl=0)
 
 리뷰로 제안된 사항을 반영한 후 리뷰를 남긴 멘토님들에게 커밋 해시를 포함한 답변을 남겼습니다.
 커밋 해시를 적으면 Github에서 커밋에 대한 변경사항을 보여주는 페이지로 링크를 달아줘서 편했습니다.
 
 > 요청주신 변경사항은 새로운 커밋([`564104a`](https://github.com/PyTorchKorea/tutorials-kr/commit/564104add1b94cfc66d65b2ccec814f9f7b1dd7a))을 통해 반영되었습니다!
-
-아직은 OSSCA 과정 중 마지막 주차에 있어서 Merged 되진 않았지만 곧 승인되어 PyTorch 튜토리얼에 반영될 것 같습니다.
 
 ## 활동을 돌아보며
 

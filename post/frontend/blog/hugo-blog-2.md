@@ -6,7 +6,7 @@ description: >
   Hugo Book 테마의 구조를 이해하고 메인 레이아웃을 개선하는 방법을 소개합니다.
   메뉴 영역에 프로필 사진과 소셜 링크를 추가하고,
   목차 영역에 하이라이트와 스크롤 이동 버튼을 구현하는 과정을 안내합니다.
-cover: "https://dl.dropboxusercontent.com/s/72ltf5j0b07qactn4tpfg/hugo-cover.png?rlkey=dkijvoj0d0fzn9jxxfk45nbnp&st=7xu2qwun&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/tmx5klj6hyiupke0u01ef/hugo-00-cover.png?rlkey=1cxv77edyfl0w2ljjqvjxg1mr&dl=0"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Blog", "HTML", "CSS", "JavaScript", "Layout", "Hugo Book", "휴고", "커스터마이징", "목차"]
 ---
@@ -70,7 +70,7 @@ Github에 올라온 [hugo-book 저장소](https://github.com/alex-shpak/hugo-boo
 [`hugo-book-custom`](https://github.com/minyeamer/hugo-book-custom)이라는
 별도의 저장소를 Fork해서 만들었습니다.
 
-![hugo-book-fork](https://dl.dropboxusercontent.com/s/jifnskow0edrirqyofd89/hugo-book-fork.jpeg?rlkey=xib1dx4feva6lwkqvb8tmeku4&st=i0xu5gsg&dl=0)
+![Book 테마 Fork하기](https://dl.dropboxusercontent.com/scl/fi/nlz6cmz7tu68u90muvomr/hugo-25-book-fork.webp?rlkey=o4a5k3phxon9jr4y4budm84sl&dl=0)
 
 Fork한 저장소를 `git clone` 명령어로 로컬 경로로 가져와 코드를 확인해보겠습니다.
 
@@ -182,24 +182,71 @@ assets/
 
 이 외에 JS 파일 등도 `assets/` 경로에 위치합니다.
 
+### Example Site
+
+앞으로 Book 테마를 수정하게 되는데 아무런 글도 없으면 스타일이 어떻게 적용되었는지 확인하기 어렵습니다.
+
+이미 작성한 게시글이 있다면 `content/` 경로에 가져다 놓아도 좋지만,
+그러한 게시글이 없을 경우엔 테마에서 제공하는 `exampleSite/` 를 참고할 수 있습니다.
+
+Book 테마의 Example Site는 영어, 히브리어, 중국어로 작성된 각각의 폴더로 나누어져 있는데,
+이번 프로젝트에서 다국어 텍스트를 고려하지는 않으므로 영어 문서로 구성된 `content.en/` 폴더 내 파일들을
+현재 프로젝트의 `content/` 경로로 가져옵니다.
+
+```bash
+exampleSite/content.en/
+├── _index.md
+├── docs
+│   ├── example
+│   │   ├── _index.md
+│   │   └── ...
+│   └── ...
+├── posts
+│   ├── _index.md
+│   └── ....md
+└── showcases.md
+```
+
+그리고, `exampleSite/` 경로 바로 아래에 있는 `hugo.yaml` 설정 파일도 현재 프로젝트로 가져옵니다.
+
+해당 파일은 Hugo 블로그를 구성하는데 필요한 파라미터 등의 설정 정보가 기록되어 있는데,
+TOML, YAML, JSON 등 다양한 형식을 지원합니다.
+Hugo 프로젝트를 시작할 때 `hugo.toml` 이라는 파일이 기본적으로 생성되었을 것인데,
+TOML 형식은 중첩된 구조를 표현하기에는 번거로워 YAML 형식을 사용합니다.
+
+설정 파일에 대해서는 필요한 순간에 설명드릴 예정이지만,
+설정 파일 상단에서 `baseUrl` 및 `theme` 값은 지금 변경해두는게 좋습니다.
+
+```yaml
+baseURL: http://localhost:1313/
+title: Hugo Book
+theme: Book
+```
+
+`baseUrl` 은 기본값으로 `http://localhost:1313/hugo-book/` 경로가 적용되어 있는데,
+매번 테스트 페이지에 접근할 때마다 `hugo-book/` 경로를 추가하는게 불편하여 제거했습니다.
+
+`theme` 은 기본값으로 `hugo-book` 이 적용되어 있는데, `themes/` 경로에 위치한
+Book 테마의 폴더명을 입력해야 합니다.
+
 ## 메인 레이아웃 개선하기
 
 Book 테마는 다음과 같은 형태를 가집니다.
 
-![hugo-book](https://dl.dropboxusercontent.com/s/q6hwehoa35sona6sqggre/hugo-book.jpeg?rlkey=5xzilgu7af531dya32tds237w&st=io2s3766&dl=0)
+![Example Site 보기](https://dl.dropboxusercontent.com/scl/fi/872htn2ieg1jk74k7cfm6/hugo-09-example-site.webp?rlkey=0ou1fendglqi8310cmzhk1fyh&dl=0)
 
 브라우저에서 `<body>` 태그 바로 아래에 있는 `.container` 요소를 클랙해보면
 아래와 같이 메뉴, 본문, 목차 3개의 부분으로 나눠져 있는 것을 확인할 수 있습니다.
 HTML 소스코드에서 각각의 요소에 대한 클래스를 확인해보면 `book-menu`, `book-page`, `book-toc`
 로 지정되어 있습니다.
 
-![hugo-book-area](https://dl.dropboxusercontent.com/s/wb73edezuz4z1fyonh89q/hugo-book-area.jpeg?rlkey=xdtszx46gzhm16g7ch26wnqbq&st=s24tiwp5&dl=0)
+![메인 컨테이너 영역 선택](https://dl.dropboxusercontent.com/scl/fi/q3m1gtqi2kwz1109pz8nq/hugo-10-main-container.webp?rlkey=5g1s015httn7c8nilwhv0w9pb&dl=0)
 
 브라우저의 너비를 줄이다 보면 메뉴와 목차 영역이 사라지고 헤더 영역이 나타나게 됩니다.
 헤더 영역은 `book-header` 클래스로 특정할 수 있습니다.
 헤더 양옆의 버튼을 클릭하면 메뉴(왼쪽 버튼)와 목차(오른쪽 버튼)가 다시 나타납니다.
 
-![hugo-book-area](https://dl.dropboxusercontent.com/s/qc8v3yeyucq2r799wu18t/hugo-book-mobile.jpeg?rlkey=j5cpuyyq6sn82dk30ueq0z4i0&st=f239l7lk&dl=0)
+![모바일 헤더 영역 선택](https://dl.dropboxusercontent.com/scl/fi/x68lh4nu28awnctyyoc9p/hugo-11-mobile-header.webp?rlkey=1ktuycfbolqs19t7wok1q72l0&dl=0)
 
 이번 게시글에서는 메뉴, 목차, 헤더 영역을 순차적으로 개선해보겠습니다.
 
@@ -207,7 +254,7 @@ HTML 소스코드에서 각각의 요소에 대한 클래스를 확인해보면 
 
 Book 테마에서 메뉴 영역은 아래 이미지에서 선택된 부분입니다.
 
-![book-menu](https://dl.dropboxusercontent.com/s/gq5rukchtl5syw80n5vkp/book-menu.jpeg?rlkey=z322xye65gw3pkfpzyyhdc3ji&st=m4zeai7z&dl=0)
+![book-menu 영역 선택](https://dl.dropboxusercontent.com/scl/fi/vql6oba5mxrrv1yskoqjv/hugo-12-book-menu.webp?rlkey=99je2sfrmzs92jpbhuezlun58&dl=0)
 
 좌측 사이드바에 해당하는 메뉴 영역은 `book-menu` 클래스가 적용된 요소로 감싸져 있으며,
 `baseof.html` 파일에서 다음과 같이 `menu.html` 템플릿 파일을 호출합니다.
@@ -254,14 +301,14 @@ Book 테마에서 메뉴 영역은 아래 이미지에서 선택된 부분입니
 일단, 결론적으로 제가 희망하는 디자인은 아래 이미지와 같습니다.
 티스토리의 hELLO 테마입니다.
 
-![example-tistory](https://dl.dropboxusercontent.com/s/alv9yupu0hk1vkul8biia/example-tistory.jpeg?rlkey=59g1p34snls6nrp99k968mirv&st=oha625wb&dl=0)
+![티스토리 인터페이스](https://dl.dropboxusercontent.com/scl/fi/4xn1fjflju78w0jv76i7h/hugo-02-example-tistory.webp?rlkey=ixtuq0oo3xa26cgqfkwri1i4t&dl=0)
 
 위 스타일을 구현하는데 있어 문제점은 메뉴 영역이 어중간하게 화면 좌측 중간에 위치한다는 점입니다.
 
 Book 테마에서는 메뉴 영역에 배경색이 없어서 자연스러워 보이지만,
 저는 메뉴 영역과 본문 영역의 경계를 명확히 하기 위해 배경색을 넣어보면서 해당 문제점을 발견했습니다.
 
-![book-menu-1-bg](https://dl.dropboxusercontent.com/s/obid449egwcj1tdge63u7/book-menu-1-bg.jpeg?rlkey=0akh9cohnw2o3atiakjphb8ga&st=crt8zosl&dl=0)
+![book-menu 영역에 회색 배경 스타일 적용 결과](https://dl.dropboxusercontent.com/scl/fi/r91v7nhof30antpb5wauo/hugo-13-book-menu-bg.webp?rlkey=vscar5p994g1xglcekt96r04l&dl=0)
 
 이러한 스타일을 만들어낸 `assets/_main.scss` 파일의 `.book-menu` 부분을 확인해보니까
 `flex` 속성이 적용되어 있었습니다. 메뉴, 본문, 목차 영역이 나란히 붙어있고
@@ -340,13 +387,13 @@ Book 테마에서는 메뉴 영역에 배경색이 없어서 자연스러워 보
 
 위 스타일을 적용하면 아래 이미지와 같이 좌측 끝의 고정된 위치에 메뉴가 보여집니다.
 
-![book-menu-2-pos](https://dl.dropboxusercontent.com/s/sbcilbghmd7eiiph9lqmv/book-menu-2-pos.jpeg?rlkey=0zr038d7nh67wkz37tefrasqw&st=yex0d3tt&dl=0)
+![book-menu 영역 위치 고정 결과](https://dl.dropboxusercontent.com/scl/fi/2mr2dsohsmvog0vb36w9k/hugo-14-book-menu-pos.webp?rlkey=48smm08lv0n1ua8ojxv0w77wz&dl=0)
 
 잘 보이기 위해 브라우저의 너비를 1500px 정도로 줄이고 캡쳐한 것인데,
 여기서 브라우저의 너비를 1200px까지 줄여보니까 아래 이미지처럼
-본문이 메뉴 영역 뒤에 겹쳐서 숨어버리는 현상이 발생했습니다.
+본문이 메뉴 및 목차 영역 뒤에 겹쳐서 숨어버리는 현상이 발생했습니다.
 
-![book-menu-3-overlap](https://dl.dropboxusercontent.com/s/kgno42myr4fuax5dkf1gh/book-menu-3-overlap.jpeg?rlkey=dxmxhzti3el2hk00aytqyvlqt&st=hrs7ypzs&dl=0)
+![book-menu 영역 간 겹치는 문제](https://dl.dropboxusercontent.com/scl/fi/4i0yr7l89580syf3z2b9f/hugo-15-book-menu-overlap.webp?rlkey=adw6l26t24bvbo17jqj7d4wmr&dl=0)
 
 메뉴, 본문, 목차 영역이 flexible하게 정렬된 기존의 스타일과 다르게
 메뉴와 목차 영역을 `position` 속성으로 양끝에 고정시키면서 본문 영역과 독립적인 요소가 되었습니다.
@@ -404,7 +451,7 @@ $mobile-breakpoint: $menu-width + $body-max-width * 1.2 + $toc-width !default;
 
 현재까지의 변경사항을 적용하면 블로그가 아래와 같이 보여집니다.
 
-![book-menu-2-pos](https://dl.dropboxusercontent.com/s/sbcilbghmd7eiiph9lqmv/book-menu-2-pos.jpeg?rlkey=0zr038d7nh67wkz37tefrasqw&st=yex0d3tt&dl=0)
+![book-menu 영역 위치 고정 결과](https://dl.dropboxusercontent.com/scl/fi/2mr2dsohsmvog0vb36w9k/hugo-14-book-menu-pos.webp?rlkey=48smm08lv0n1ua8ojxv0w77wz&dl=0)
 
 메뉴 영역에서 블로그 제목만 있고 눈길을 끌만한 이미지가 없습니다.
 이번에는 제목 위에 프로필 사진을 추가해보겠습니다.
@@ -448,18 +495,19 @@ $mobile-breakpoint: $menu-width + $body-max-width * 1.2 + $toc-width !default;
 템플릿에서 `{{ .Site.Params.BookMenu.profileImage }}` 부분은
 설정 파일에서 파라미터를 호출하는 부분입니다.
 기본 설정 파일은 Hugo 프로젝트 루트 경로에 있는 `hugo.toml` 파일입니다.
-해당 파일에서 `profileImage` 파라미터를 추가해야 하는데 기본 형식인 TOML 파일에서는
+해당 파일에서 `profileImage` 파라미터를 추가해야 하는데 YAML 형식에서는
 이렇게 추가할 수 있습니다.
 
 (참고로, `{{ .Site.BaseURL }}` 부분은 마찬가지로 설정 파일에서
 `BaseURL` 를 가리키며 웹 사이트 기본 경로를 의미합니다. 프로필 사진을 클릭했을 때
 홈페이지로 이동하기 위한 설정입니다.)
 
-```toml
-# hugo.toml
+```yaml
+# hugo.yaml
 
-[params.BookMenu]
-profileImage = '<프로필-사진-주소>'
+params:
+  BookMenu:
+    profileImage: "<프로필-사진-주소>"
 ```
 
 하지만, 이렇게만 추가하면 이미지가 원본으로 들어가서 보기에 안좋습니다.
@@ -490,7 +538,7 @@ profileImage = '<프로필-사진-주소>'
 
 이렇게 적용한 결과는 아래 이미지와 같습니다.
 
-![book-menu-4-profile](https://dl.dropboxusercontent.com/s/wy8wvqvqns08lcuq0af4l/book-menu-4-profile.jpeg?rlkey=x5cwekcbrwv9a42pdmyl8go5b&st=bykg2wpf&dl=0)
+![book-menu 영역에 프로필 사진 추가](https://dl.dropboxusercontent.com/scl/fi/ctvdfak8bnphkkjcu08xf/hugo-16-book-menu-profile.webp?rlkey=vv1amtzqw7er0vezhsac2tmn2&dl=0)
 
 ### 3. 소셜 링크를 표시하기
 
@@ -592,7 +640,7 @@ profileImage = '<프로필-사진-주소>'
 
 소셜 링크까지 추가한 결과는 아래 이미지와 같습니다.
 
-![book-menu-5-social](https://dl.dropboxusercontent.com/s/o7n5s133u3xbcqbm4o7pf/book-menu-5-social.jpeg?rlkey=w1do9xlyw73pjn75i76qy6wbk&st=2xohcct7&dl=0)
+![book-menu 영역에 소셜 링크 추가](https://dl.dropboxusercontent.com/scl/fi/wnx9vi7vszdijhyg6fyre/hugo-17-book-menu-social.webp?rlkey=2x53x3i816t9rshv25va0bjgi&dl=0)
 
 추후에 카테고리, 태그 등을 추가하기 위해 메뉴 영역을 수정할 일이 있지만,
 이번 게시글에서는 메뉴 영역에 대해 여기까지 진행하겠습니다.
@@ -601,13 +649,14 @@ profileImage = '<프로필-사진-주소>'
 
 Book 테마에서 목차 영역은 아래 이미지에서 선택된 부분입니다.
 
-![book-toc](https://dl.dropboxusercontent.com/s/1g1uud3wyi1bryhrm2o1w/book-toc.jpeg?rlkey=at2l5k8rx8v8p20v397mz2o0t&st=55frk3ei&dl=0)
+![book-toc 영역 선택](https://dl.dropboxusercontent.com/scl/fi/s6ntlk5pgwkqi3kdtopnb/hugo-18-book-toc.webp?rlkey=b35n6qbjlk3sbateixn0jn4br&dl=0)
 
 물론, 위 이미지는 메뉴 영역을 개선하기 전인 Example Site 기준이고,
 [메뉴 영역을 위치 고정하기](#1-메뉴-영역-위치-고정하기) 문단에서
 목차 영역도 우측 끝에 고정시켰습니다.
+(너무 끝에 붙어있으면 보기 안좋아 `1.5rem` 수준의 여백을 추가했습니다.)
 
-![book-toc-1-pos](https://dl.dropboxusercontent.com/s/aaczvqgjhkkmzkv4fp6dg/book-toc-1-pos.jpeg?rlkey=vjmi0aafya4aws6dnenshqwg1&st=fv6d0v17&dl=0)
+![book-toc 영역 위치 고정 결과](https://dl.dropboxusercontent.com/scl/fi/lh2apnezxbezik8n5hpan/hugo-19-book-toc-pos.webp?rlkey=tuwvadpunh2try3jvw3lptvpz&dl=0)
 
 목차 영역은 `book-toc` 클래스가 적용된 요소로 감싸져 있으며, `baseof.html` 파일에서
 다음과 같이 `toc` 템플릿을 호출합니다.
@@ -724,7 +773,7 @@ Book 테마의 `toc.html` 템플릿만 보았다면 어디에 `border` 속성을
 추가로, 목차를 구성하는 `<a>` 태그가 링크와 동일한 파란색 글씨색을 가져서 보기 안좋아
 구분선과 동일한 색상을 적용했는데, 이 부분은 취향에 맞게 수정해보시기 바랍니다.
 
-![book-toc-2-border](https://dl.dropboxusercontent.com/s/4s2b6t8ig3fih1hxl07md/book-toc-2-border.jpeg?rlkey=yzmkxjtz1ubzu2v45epwhb709&st=lwmfs5ad&dl=0)
+![book-toc 영역에 구분선 추가](https://dl.dropboxusercontent.com/scl/fi/ji6qysyrb41vogsh95g2z/hugo-20-book-toc-border.webp?rlkey=wcu0nu9xg5oes1im89ds7tclt&dl=0)
 
 목차 영역을 돋보이기 위해 잠시 본문의 헤딩을 늘렸습니다.
 
@@ -822,7 +871,7 @@ document.addEventListener('DOMContentLoaded', function() {
 스크롤을 할만큼 본문이 길지 않지만, 이미지를 기준으로 "제목 2-3" 헤딩을 현재 보고 있는 것으로 인식하여
 목차에서 "제목 2-3" 항목이 굵은 글씨로 강조되고 있습니다.
 
-![book-toc-3-highlight](https://dl.dropboxusercontent.com/s/c4pnhwtidy04fzx49rmyj/book-toc-3-highlight.jpeg?rlkey=60gs8eeb5gd16usnvvbaaj29d&st=cjzzaoex&dl=0)
+![book-toc 영역에 하이라이트 기능 추가](https://dl.dropboxusercontent.com/scl/fi/0ncrj5rqapnj3ikwqzx70/hugo-21-book-toc-highlight.webp?rlkey=cune4iwe36oamxeszzmbtawyc&dl=0)
 
 ### 3. 스크롤 이동 버튼 추가하기
 
@@ -922,9 +971,9 @@ Font Awesome에서 가져온 단순한 화살표 아이콘을 동그란 버튼�
 독립적으로 남아있게 해줄 수 있는 스타일 입니다.
 
 스크롤 이동 버튼까지 추가한 결과는 아래와 같습니다.
-(잘 보이기 위해 브라우저 높이를 575px 정도로 줄였습니다.)
+(하단에 있는 버튼이 잘 보이기 위해 브라우저 높이를 450px 정도로 줄였습니다.)
 
-![book-toc-3-highlight](https://dl.dropboxusercontent.com/s/4521fvh8gcvqcxw3yn9xg/book-toc-4-button.jpeg?rlkey=llcp5gtafamlvvriohz81emlv&st=cyfffjm7&dl=0)
+![book-toc 영역 하단에 스크롤 이동 버튼 추가](https://dl.dropboxusercontent.com/scl/fi/dsdk1qgd6ymnaziu2g83o/hugo-22-book-toc-button.webp?rlkey=ycvts8xntyix655ym1m6nsvhs&dl=0)
 
 목차 영역은 여기서 완성입니다.
 나중에 다크 모드를 적용할 때 전용 색상 스타일을 추가할 일이 있지만,
@@ -934,7 +983,7 @@ Font Awesome에서 가져온 단순한 화살표 아이콘을 동그란 버튼�
 
 헤더 영역은 브라우저 너비가 일정 크기 이상 줄어들 때만 나타나는 모바일 전용 헤더입니다.
 
-![book-header](https://dl.dropboxusercontent.com/s/64jrlc07lvsdox4f9asnt/book-header.jpeg?rlkey=voohn2zmiswkfdy7gwb3rjrmf&st=stiqrzyx&dl=0)
+![모바일 화면에서 book-header가 보이는 모습](https://dl.dropboxusercontent.com/scl/fi/tnmxpbfinoqf0o3z0wi72/hugo-23-book-header.webp?rlkey=tc7h4bspbn2ea5scnjqbqrdl8&dl=0)
 
 헤더 영역은 `book-header` 클래스가 적용된 요소로 감싸져 있으며, `baseof.html` 파일에서
 다음과 같이 `header` 템플릿을 호출합니다. `book-header` 의 바로 위를 보면
@@ -1014,9 +1063,9 @@ Font Awesome에서 가져온 단순한 화살표 아이콘을 동그란 버튼�
 결국 의도했던 동작을 수행하지 못해 아직까지 해결책을 찾고 있는데,
 해결되었다면 해당 게시글에 업데이트 하겠습니다.
 
-![book-header-1-bg](https://dl.dropboxusercontent.com/s/gqjolzwshx27jv1jdpcm5/book-header-1-bg.jpeg?rlkey=k6dkjdg86hqnw06w2wo2icn5m&st=1ajirc7f&dl=0)
+![book-header 영역에 반투명한 배경 추가](https://dl.dropboxusercontent.com/scl/fi/t71bdlejum4fopmg4ic1s/hugo-24-book-header-bg.webp?rlkey=zvh85hvkiwik4b3x0zy7do81a&dl=0)
 
-스크롤을 내려봐야 알 것 같아 본문에 몇 줄 추가했는데 의도대로 헤더가 반투명하게 보입니다.
+스크롤을 내려보면 헤더가 반투명하게 보이면서 헤더 밑에 있는 본문을 읽을 수 있습니다.
 
 다음 게시글에서는 카테고리와 태그 기능을 추가하고, 관련 게시글을 목록을 보여주는 템플릿을
 작성하는 과정을 진행하겠습니다. 카테고리와 태그 기능은 특히 내용이 길어서

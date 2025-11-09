@@ -6,7 +6,7 @@ description: >
   Hugo 블로그 프로젝트 기획부터 구조 설계까지 단계별로 안내합니다.
   타 블로그 플랫폼과 비교하고 Hugo 테마를 선정하는 방법을 소개하며,
   GitHub Pages와 Submodule을 활용한 효율적인 배포 방법을 설명합니다.
-cover: "https://dl.dropboxusercontent.com/s/72ltf5j0b07qactn4tpfg/hugo-cover.png?rlkey=dkijvoj0d0fzn9jxxfk45nbnp&st=7xu2qwun&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/tmx5klj6hyiupke0u01ef/hugo-00-cover.png?rlkey=1cxv77edyfl0w2ljjqvjxg1mr&dl=0"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Blog", "티스토리", "Velog", "Git", "Github Pages", "Submodule", "Hugo Book", "휴고", "벨로그"]
 ---
@@ -37,32 +37,32 @@ tags: ["Hugo", "Blog", "티스토리", "Velog", "Git", "Github Pages", "Submodul
 
 Velog, 티스토리 등의 블로그 플랫폼을 이용해 봤지만 원하는 요소들을 전부 추가하는데는 제약이 많았습니다.
 
-### <img src="https://dl.dropboxusercontent.com/s/phq1y41yc4wzvjbap5od2/logo-velog.jpg?rlkey=ad7h4tki6d2ufwdqaqf86rdww&st=off897m9&dl=0" alt="velog" class="h3-image"> Velog 사용 경험
+### <img src="https://dl.dropboxusercontent.com/scl/fi/rclmscmcgcz0re8hq60pd/logo-velog.jpg?rlkey=3d1nh4v5s46oz094lx9tos3vl&dl=0" alt="Velog" class="h3-image"> Velog 사용 경험
 
 Velog는 개인적으로 느끼기에 블로그 플랫폼들 중에서 따로 테마를 설정하지 않아도 기본 스타일이 보기 좋다는 장점이 있지만,
 다크모드 ON/OFF 버튼 추가 또는 코드 블럭 스타일 변경 등의 커스터마이징이 불가능하고,
 무엇보다 카테고리 없이 태그로만 게시글을 구별해야 한다는걸 가장 큰 제약으로 인식했습니다.
 
 <a href="https://velog.io/@minyeamer/posts" target="_blank">
-<img src="https://dl.dropboxusercontent.com/s/8ds0lb9nbi98cghnc1y59/example-velog.jpeg?rlkey=sa95rk7sk256fvmy1bpuj9m4q&st=0fchm24c&dl=0" alt="example-velog">
+<img src="https://dl.dropboxusercontent.com/scl/fi/2aspdgqtn9er0wpvvgh5v/hugo-01-example-velog.webp?rlkey=6nxofpq3gndqrnogm3m1o3dxl&dl=0" alt="Velog 인터페이스">
 </a>
 
-### <img src="https://dl.dropboxusercontent.com/s/4ebcp2sa1mg4vby5zzsnc/logo-tistory.png?rlkey=6067ws2pjtzv2bgvt9j71fz6n&st=7czjpuk4&dl=0" alt="tistory" class="h3-image"> 티스토리 사용 경험
+### <img src="https://dl.dropboxusercontent.com/scl/fi/u28ide6ixcwmte9deafju/logo-tistory.png?rlkey=thffzqj0ouhn0axj6fapizz7x&dl=0" alt="Tistory" class="h3-image"> 티스토리 사용 경험
 
 티스토리는 테마 수정은 자유로운 편이지만, 테마 편집이든 블로그 게시글 작성이든 티스토리 UI에서 편집 과정을 거쳐야 반영되는 점에서
 즉각적인 피드백이 어렵다고 느꼈습니다. 그리고, 무엇보다 글 편집이나 블로그 관리 등의 설정 메뉴에는 다크모드가 적용이 안돼서 개인적으로 쓰기 싫었습니다.
 
 <a href="https://minyeamer.tistory.com/" target="_blank">
-<img src="https://dl.dropboxusercontent.com/s/alv9yupu0hk1vkul8biia/example-tistory.jpeg?rlkey=59g1p34snls6nrp99k968mirv&st=9iv5ptfp&dl=0" alt="example-tistory">
+<img src="https://dl.dropboxusercontent.com/scl/fi/4xn1fjflju78w0jv76i7h/hugo-02-example-tistory.webp?rlkey=ixtuq0oo3xa26cgqfkwri1i4t&dl=0" alt="티스토리 인터페이스">
 </a>
 
-### <img src="https://dl.dropboxusercontent.com/s/diff0rqppqwazbkkz9nib/logo-hugo.png?rlkey=uzoea2lxtwjt0xq6vr4qsyl2z&st=p89m5lr3&dl=0" alt="hugo" class="h3-image"> Hugo 사용 경험
+### <img src="https://dl.dropboxusercontent.com/scl/fi/xgh0tzbm00qneoy4x1par/logo-hugo.png?rlkey=xnyulio177owaxe8pjir0vf9j&dl=0" alt="Hugo" class="h3-image"> Hugo 사용 경험
 
 3년 전에 Hugo를 활용한 [Github 블로그](http://localhost:1313/blog/hugo-blog-old-1/)를 만든 적이 있었는데,
 당시에는 테마를 원하는대로 수정할 수 있을 만큼의 전문 지식이 없어서 다른 블로그 플랫폼들과 마찬가지로 잠깐 이용하다 말았지만,
 AI 에이전트의 도움을 받으면 자연어 프롬프트로 원하는 기능들을 추가해볼 수 있지 않을까라는 막연한 생각에 다시 Hugo 블로그를 도전해보게 되었습니다.
 
-![example-hugo](https://dl.dropboxusercontent.com/s/ildtu9i45z29a3jnoli2q/example-hugo.jpeg?rlkey=20c7qqcweikatz7sg92ldp1ju&st=fxi0ahs0&dl=0)
+![Hugo 블로그 - PaperMod 테마 인터페이스](https://dl.dropboxusercontent.com/scl/fi/o5ppc9sdj1jee5wvzp0ck/hugo-03-example-hugo.webp?rlkey=w6w8nobkuond1rva40wbqei7k&dl=0)
 
 Hugo 블로그의 단점이라고 한다면 웹 호스팅을 직접 해야한다는 점입니다.
 과거에 블로그를 운영할 때는 Github Pages 기능을 활용해 무료로 웹 호스팅을 제공받았습니다.
@@ -231,7 +231,7 @@ Hugo 테마는 아래 경로에서 찾아볼 수 있습니다.
 
 Book 테마는 좌측의 `book-menu`, 우측의 `book-toc`, 그리고 중앙의 본문인 `book-page` 영역으로 나눠집니다.
 
-![hELLO](https://dl.dropboxusercontent.com/s/q6hwehoa35sona6sqggre/hugo-book.jpeg?rlkey=5xzilgu7af531dya32tds237w&st=nim38ycu&dl=0)
+![Hugo 블로그 - Book 테마 인터페이스](https://dl.dropboxusercontent.com/scl/fi/zuksrebozfve99snbqb6z/hugo-04-book-theme.webp?rlkey=ezk4ocya4qf6p33st2kxmz8he&dl=0)
 
 `book-menu` 영역에는 상단에 검색창이 있고 그 아래에 카테고리 목록을 표시합니다.
 검색창에 키워드를 입력하면 카테고리 목록을 밀어내고 검색창 바로 아래에 검색 결과를 표시합니다.
@@ -315,7 +315,7 @@ Hugo 프로젝트는 다음과 같은 구조를 가집니다.
 단순히 버전 관리 목적으로 Github을 이용한다면 저장소 명칭은 아무렇게나 해도 괜찮지만,
 아래에서 설명할 Github Pages 서비스를 이용하려면 `<사용자명>.github.io` 명칭을 사용해야 합니다.
 
-![github-repository](https://dl.dropboxusercontent.com/s/hwjnddxh0espu71c4ctgl/github-repository.jpeg?rlkey=vzfxh2a09gyy801mwx7lalwci&st=i8az47bm&dl=0)
+![Github 저장소 생성 예시](https://dl.dropboxusercontent.com/scl/fi/qs3zxgai75efvghshsccg/hugo-05-github-repo.webp?rlkey=cgizkyzr06ku7abreqtaqpslf&dl=0)
 
 Github 저장소를 생성했다면 앞에서 생성한 Hugo 프로젝트와 연동합니다.
 
@@ -342,7 +342,7 @@ Github 저장소의 `main` 를 원격 저장소로 등록한 후 푸쉬합니다
 
 Github 저장소의 설정(Settings) 탭에 접근한 후, 사이드바의 Pages 메뉴에서 Github Pages를 설정할 수 있습니다.
 
-![github-pages](https://dl.dropboxusercontent.com/s/vrborlpbd1fuosoufkvkl/github-pages.jpeg?rlkey=6128w8lmo6q15xisn8bygc5bf&st=tpazgj1u&dl=0)
+![Github Pages 설정 화면](https://dl.dropboxusercontent.com/scl/fi/k730csxion7uu41rymefr/hugo-06-github-pages.webp?rlkey=iibu1g2awc4toyoedksjv5lgz&dl=0)
 
 Github Actions를 사용해 빌드 과정을 커스터마이징할 수 있지만,
 해당 프로젝트에서는 단순하게 별도의 브랜치에 HTML 소스코드를 두고
@@ -498,12 +498,12 @@ git push origin main
 Github Pages 배포하게 됩니다. Github Actions를 확인하면 다음과 같은 과정으로
 배포가 진행되는 것을 확인할 수 있습니다.
 
-![github-pages](https://dl.dropboxusercontent.com/s/nqarvwpa9dx420e0qmqoa/github-actions.jpeg?rlkey=p49fwrwf9wx4pluzov9bmaf5t&st=32iyylty&dl=0)
+![Github Pages 배포 과정](https://dl.dropboxusercontent.com/scl/fi/tx2mlp4r4busainz1fgx1/hugo-07-github-workflow.webp?rlkey=rdjb1kvitpnkiol8h7kdlp238&dl=0)
 
 모든 과정이 성공하면 `https://<사용자명>.github.io/` 주소로 배포된 블로그를 조회할 수 있습니다.
 
 기본 Hugo Book 테마를 사용할 경우 배포했을 때 좌측 메뉴에 블로그 제목과 검색창만 덩그러니 놓여있을 것입니다. 임시로 게시글을 생성하고 게시글 경로로 직접 이동해보면 아래와 같은 결과를 확인할 수 있습니다.
 
-![github-test](https://dl.dropboxusercontent.com/s/lpwj762hzh7r7vriwijqb/hugo-test.jpeg?rlkey=tub36ap9s95kegc5jxwvviz6m&st=34gnq1ao&dl=0)
+![초기 Hugo Book 테마](https://dl.dropboxusercontent.com/scl/fi/6fmjemvbe3mx0kcbsjlf6/hugo-08-new-site.webp?rlkey=2z7oobn7o3pryg1eneu04tb9g&dl=0)
 
 다음 게시글에서는 본격적으로 테마를 커스터마이징하는 과정을 진행하겠습니다.
