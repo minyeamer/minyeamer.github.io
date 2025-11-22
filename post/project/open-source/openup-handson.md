@@ -107,7 +107,7 @@ PyTorch 튜토리얼에는 advanced, beginner, intermediate, recipes 4가지 폴
 Role에 대한 설명은 [Sphinx 공식 문서](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#roles)에서
 확인할 수 있습니다.
 
-{{< link-preview "https://stackoverflow.com/questions/10870719/inline-code-highlighting-in-restructuredtext" >}}
+{{< bookmark "https://stackoverflow.com/questions/10870719/inline-code-highlighting-in-restructuredtext" >}}
 
 ```python
 .. role:: python(code)

@@ -207,13 +207,13 @@ Github 웹사이트에서 raw 이미지 링크를 찾아와야 해서 비효율�
 
 Hugo 테마는 아래 경로에서 찾아볼 수 있습니다.
 
-{{< link-preview "https://themes.gohugo.io/" >}}
+{{< bookmark "https://themes.gohugo.io/" >}}
 
 ### PaperMod 테마 사용 경험
 
 처음 Hugo 블로그를 만들 땐 [PaperMod](https://themes.gohugo.io/themes/hugo-papermod/)라는 테마를 사용했습니다.
 
-{{< link-preview "https://themes.gohugo.io/themes/hugo-papermod/" >}}
+{{< bookmark "https://themes.gohugo.io/themes/hugo-papermod/" >}}
 
 다크모드 ON/OFF 버튼 및 소셜 링크 기능을 지원하고 디자인이 마음에 들어 초기 테마로 사용을 했지만 Velog에서 느꼈던 단점인,
 카테고리를 지원하지 않는 문제로 인해 블로그를 쓰고 싶다는 생각이 갈수록 줄어들었습니다.
@@ -227,7 +227,7 @@ Hugo 테마는 아래 경로에서 찾아볼 수 있습니다.
 
 최근에 다시 테마를 찾아보면서 가장 마음에 들은 것은 Book 테마입니다.
 
-{{< link-preview "https://themes.gohugo.io/themes/hugo-book/" >}}
+{{< bookmark "https://themes.gohugo.io/themes/hugo-book/" >}}
 
 Book 테마는 좌측의 `book-menu`, 우측의 `book-toc`, 그리고 중앙의 본문인 `book-page` 영역으로 나눠집니다.
 

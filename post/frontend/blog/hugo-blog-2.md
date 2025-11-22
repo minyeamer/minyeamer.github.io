@@ -8,7 +8,7 @@ description: >
   목차 영역에 하이라이트와 스크롤 이동 버튼을 구현하는 과정을 안내합니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/tmx5klj6hyiupke0u01ef/hugo-00-cover.png?rlkey=1cxv77edyfl0w2ljjqvjxg1mr&dl=0"
 categories: ["Frontend", "Blog"]
-tags: ["Hugo", "Blog", "HTML", "CSS", "JavaScript", "Layout", "Hugo Book", "휴고", "커스터마이징", "목차"]
+tags: ["Hugo", "Blog", "휴고 테마", "휴고 레이아웃", "HTML", "CSS", "JavaScript", "Hugo Book", "커스터마이징", "블로그 목차"]
 ---
 
 {{< hint info >}}
@@ -82,7 +82,7 @@ git clone https://github.com/minyeamer/hugo-book-custom
 
 Hugo v0.146.0 공식문서에서 안내하는 폴더 구조를 알아보겠습니다.
 
-{{< link-preview "https://gohugo.io/templates/new-templatesystem-overview/" >}}
+{{< bookmark "https://gohugo.io/templates/new-templatesystem-overview/" >}}
 
 `layouts/` 경로 아래에 다음과 같은 경로로 레이아웃을 구성하도록 권장합니다.
 
@@ -585,7 +585,7 @@ params:
 `<i>` 태그 아이콘을 사용하고 있습니다. 이것은 [Font Awesome](https://fontawesome.com/)에서
 제공하는 스타일인데, 이를 사용하기 위해 외부 소스의 CSS 파일을 가져와야 합니다.
 
-{{< link-preview "https://fontawesome.com/" >}}
+{{< bookmark "https://fontawesome.com/" >}}
 
 [Book 테마 구조](#Book-테마-구조) 문단에서 `<head>` 태그 내에 들어갈 요소는
 `layouts/_partials/docs/html-head.html` 템플릿에서 정의한다고 알려드렸습니다.
