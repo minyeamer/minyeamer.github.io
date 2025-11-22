@@ -905,8 +905,8 @@ categories: ["Frontend", "Blog"]
   {{ $pages := slice }}
   {{ $subCategories := slice }}
 
-  <!-- 모든 "post" 레이아웃 유형의 게시글들을 순회하면서 -->
-  {{ range where .Site.RegularPages "Section" "post" }}
+  <!-- 모든 "posts" 경로의 게시글들을 순회하면서 -->
+  {{ range where .Site.RegularPages "Section" "posts" }}
     {{ $pageCategory := partial "categories/value-first" .Params.categories }}
 
     <!-- 게시글의 첫 번째 카테고리가 현재 부모 카테고리와 같으면 `$pages` 배열에 추가 -->
@@ -1042,8 +1042,8 @@ layout: "parent"
   {{ $currentCategories := partial "categories/value" (slice .Params.parent .Title) }}
   {{ $pages := slice }}
 
-  <!-- 모든 "post" 레이아웃 유형의 게시글들을 순회하면서 -->
-  {{ range where .Site.RegularPages "Section" "post" }}
+  <!-- 모든 "posts" 경로의 게시글들을 순회하면서 -->
+  {{ range where .Site.RegularPages "Section" "posts" }}
     {{ $pageCategories := partial "categories/value" .Params.categories }}
 
     <!-- 게시글의 전체 카테고리가 현재 카테고리와 같으면 `$pages` 배열에 추가 -->
@@ -1196,7 +1196,7 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
     <a href="/categories/">
       <i class="fa-solid fa-folder"></i>
       <span>{{ default "Categories" .Site.Params.BookMenu.categoriesLabel }}</span>
-      <span class="category-count">({{ len (where .Site.RegularPages "Section" "post") }})</span>
+      <span class="category-count">({{ len (where .Site.RegularPages "Section" "posts") }})</span>
     </a>
     <i class="fa-solid fa-chevron-down categories-arrow"></i>
   </label>
@@ -1205,7 +1205,7 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
     {{/* Build category tree and count posts */}}
     <!-- 부모-자식 카테고리 트리 구성 -->
     {{ $categoryTree := dict }}
-    {{ range (where .Site.RegularPages "Section" "post") }}
+    {{ range (where .Site.RegularPages "Section" "posts") }}
       {{ if .Params.categories }}
         {{ $parent := partial "categories/value-first" .Params.categories | string }}
         {{ if $parent }}
@@ -1231,7 +1231,7 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 
     <!-- 부모 카테고리와 연관된 게시글 수를 카운팅 -->
     {{ $parentCount := 0 }}
-    {{ range (where $.Site.RegularPages "Section" "post") }}
+    {{ range (where $.Site.RegularPages "Section" "posts") }}
       {{ if .Params.categories }}
         {{ if eq $parent (partial "categories/value-first" .Params.categories | string) }}
           {{ $parentCount = add $parentCount 1 }}
@@ -1255,7 +1255,7 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 
         <!-- 자식 카테고리와 연관된 게시글 수를 카운팅 -->
         {{ $childCount := 0 }}
-        {{ range (where $.Site.RegularPages "Section" "post") }}
+        {{ range (where $.Site.RegularPages "Section" "posts") }}
           {{ if .Params.categories }}
             {{ if eq (printf "%s/%s" $parent $child) (partial "categories/value" .Params.categories | string) }}
               {{ $childCount = add $childCount 1 }}
