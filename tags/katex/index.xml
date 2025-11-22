@@ -10,9 +10,9 @@
     <atom:link href="https://minyeamer.github.io/tags/katex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 블로그 만들기 [2022년] (3) - 테마 커스터마이징</title>
-      <link>https://minyeamer.github.io/blog/hugo-blog-3/</link>
+      <link>https://minyeamer.github.io/blog/hugo-blog-old-3/</link>
       <pubDate>Thu, 08 Sep 2022 15:52:12 +0900</pubDate>
-      <guid>https://minyeamer.github.io/blog/hugo-blog-3/</guid>
+      <guid>https://minyeamer.github.io/blog/hugo-blog-old-3/</guid>
       <description>&lt;h2 id=&#34;hugo-블로그-만들기-3---테마-커스터마이징&#34;&gt;Hugo 블로그 만들기 (3) - 테마 커스터마이징&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0-3---%ed%85%8c%eb%a7%88-%ec%bb%a4%ec%8a%a4%ed%84%b0%eb%a7%88%ec%9d%b4%ec%a7%95&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;블로그를 구성할 때 기술적, 시간적 한계 때문에 이미 만들어진 테마를 사용하게 됩니다.&lt;br&gt;&#xA;제가 Hugo 블로그를 만들 때도 이러한 문제 때문에 &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PaperMod&lt;/a&gt; 테마를 사용했지만,&lt;br&gt;&#xA;블로그를 보다보면 만족스럽지 못한 부분이 발견됩니다.&lt;/p&gt;&#xA;&lt;p&gt;이번 포스트에서는 제가 PaperMod 테마를 커스터마이징한 과정을 안내해드리겠습니다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;archive-search-추가하기&#34;&gt;Archive, Search 추가하기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#archive-search-%ec%b6%94%ea%b0%80%ed%95%98%ea%b8%b0&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;PaperMod 테마를 가져오면서 가장 신경쓰였던 부분은&lt;br&gt;&#xA;메인 메뉴가 Categories, Tags 두 개 뿐이었단 점입니다.&lt;/p&gt;&#xA;&lt;p&gt;Archive는 그렇다쳐도 Search 기능은 빼먹을 수 없는 부분이라 생각하기 때문에,&lt;br&gt;&#xA;Hugo 및 PaperMod 내 이슈를 참고하여 관련된 내용을 탐색했습니다.&lt;/p&gt;</description>
     </item>
   </channel>

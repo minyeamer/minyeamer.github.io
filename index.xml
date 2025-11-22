@@ -6,8 +6,15 @@
     <description>Recent content in Home on Minystory</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 04 Nov 2025 01:50:16 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 22 Nov 2025 23:04:47 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 블로그 만들기 (3) - 태그, 카테고리 페이지 추가</title>
+      <link>https://minyeamer.github.io/blog/hugo-blog-3/</link>
+      <pubDate>Sat, 22 Nov 2025 23:04:47 +0900</pubDate>
+      <guid>https://minyeamer.github.io/blog/hugo-blog-3/</guid>
+      <description>&lt;blockquote class=&#34;book-hint info&#34;&gt;&#xA;  &#xA;&lt;p style=&#34;margin-bottom: 0;&#34;&gt;&lt;i class=&#34;fa-solid fa-circle-info&#34;&gt;&lt;/i&gt; 대상 독자&lt;/p&gt;&#xA;&lt;ul style=&#34;margin: 0.5rem 0;&#34;&gt;&#xA;&lt;li&gt;마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;Hugo에서 지원하는 태그 기능을 활용한 사례를 찾고 있는 분들&lt;/li&gt;&#xA;&lt;li&gt;Hugo에서 지원하지 않는 다단계 카테고리를 만들어보고 싶은 분들&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&lt;blockquote class=&#34;book-hint success&#34;&gt;&#xA;  &#xA;&lt;p style=&#34;margin-bottom: 0;&#34;&gt;&lt;i class=&#34;fa-solid fa-lightbulb&#34;&gt;&lt;/i&gt; 주요 내용&lt;/p&gt;&#xA;&lt;ul style=&#34;margin: 0.5rem 0;&#34;&gt;&#xA;&lt;li&gt;Hugo의 taxonomies 기능과 구성 요소 이해 (&lt;a href=&#34;#taxonomies&#34;&gt;Taxonomies&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;게시글 목록과 페이지네이션 템플릿 구현 (&lt;a href=&#34;#게시글-목록-템플릿-추가&#34;&gt;게시글 목록 템플릿 추가&lt;/a&gt; / &lt;a href=&#34;#페이지네이션-템플릿-추가&#34;&gt;페이지네이션 템플릿 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;태그 페이지 추가 및 terms 템플릿 작성 (&lt;a href=&#34;#태그-페이지-추가&#34;&gt;태그 페이지 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;2단계 카테고리 구조 설계 및 부모-자식 카테고리 템플릿 구현 (&lt;a href=&#34;#카테고리-페이지-추가&#34;&gt;카테고리 페이지 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;메뉴 영역에 카테고리 트리 통합 및 게시글 카운팅 (&lt;a href=&#34;#메뉴에-카테고리-추가&#34;&gt;메뉴에 카테고리 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;/blockquote&gt;&#xA;&#xA;&lt;p&gt;&lt;a href=&#34;https://minyeamer.github.io/blog/hugo-blog-2/&#34;&gt;앞선 게시글&lt;/a&gt;에서 Book 테마의 메인 레이아웃인 메뉴, 목차, 헤더를 개선해보았습니다.&lt;br&gt;&#xA;앞에서의 과정을 거쳤다면 프로필 사진, 소셜 링크, 스크롤 이동 버튼 등이 블로그에 추가되었을 것입니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hugo 블로그 만들기 (2) - 메인 레이아웃 개선</title>
       <link>https://minyeamer.github.io/blog/hugo-blog-2/</link>
@@ -59,9 +66,9 @@
     </item>
     <item>
       <title>Hugo 블로그 만들기 [2022년] (3) - 테마 커스터마이징</title>
-      <link>https://minyeamer.github.io/blog/hugo-blog-3/</link>
+      <link>https://minyeamer.github.io/blog/hugo-blog-old-3/</link>
       <pubDate>Thu, 08 Sep 2022 15:52:12 +0900</pubDate>
-      <guid>https://minyeamer.github.io/blog/hugo-blog-3/</guid>
+      <guid>https://minyeamer.github.io/blog/hugo-blog-old-3/</guid>
       <description>&lt;h2 id=&#34;hugo-블로그-만들기-3---테마-커스터마이징&#34;&gt;Hugo 블로그 만들기 (3) - 테마 커스터마이징&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0-3---%ed%85%8c%eb%a7%88-%ec%bb%a4%ec%8a%a4%ed%84%b0%eb%a7%88%ec%9d%b4%ec%a7%95&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;블로그를 구성할 때 기술적, 시간적 한계 때문에 이미 만들어진 테마를 사용하게 됩니다.&lt;br&gt;&#xA;제가 Hugo 블로그를 만들 때도 이러한 문제 때문에 &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;PaperMod&lt;/a&gt; 테마를 사용했지만,&lt;br&gt;&#xA;블로그를 보다보면 만족스럽지 못한 부분이 발견됩니다.&lt;/p&gt;&#xA;&lt;p&gt;이번 포스트에서는 제가 PaperMod 테마를 커스터마이징한 과정을 안내해드리겠습니다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;archive-search-추가하기&#34;&gt;Archive, Search 추가하기&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#archive-search-%ec%b6%94%ea%b0%80%ed%95%98%ea%b8%b0&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;PaperMod 테마를 가져오면서 가장 신경쓰였던 부분은&lt;br&gt;&#xA;메인 메뉴가 Categories, Tags 두 개 뿐이었단 점입니다.&lt;/p&gt;&#xA;&lt;p&gt;Archive는 그렇다쳐도 Search 기능은 빼먹을 수 없는 부분이라 생각하기 때문에,&lt;br&gt;&#xA;Hugo 및 PaperMod 내 이슈를 참고하여 관련된 내용을 탐색했습니다.&lt;/p&gt;</description>
     </item>
     <item>
