@@ -74,6 +74,6 @@ markup:
     endLevel: 3
 
 permalinks:
-  post: /blog/:slugorcontentbasename/
+  posts: /blog/:slugorcontentbasename/
 
 ignoreFiles: ["_page.md", "README.md"]
