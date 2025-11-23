@@ -11,24 +11,20 @@ categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Blog", "휴고 테마", "휴고 레이아웃", "HTML", "CSS", "JavaScript", "Hugo Book", "커스터마이징", "블로그 목차"]
 ---
 
-{{< hint info >}}
-<p style="margin-bottom: 0;"><i class="fa-solid fa-circle-info"></i> 대상 독자</p>
-<ul style="margin: 0.5rem 0;">
-<li>마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들</li>
-<li>블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들</li>
-<li>Hugo 템플릿 구조에 대해 이해하고 싶으신 분들</li>
-<li>CSS 선택자 등 CSS 개념과 사용법을 이해하고 있으신 분들</li>
-</ul>
-{{< /hint >}}
+{{% hint info %}}
+<i class="fa-solid fa-circle-info"></i> 대상 독자
+- 마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들
+- 블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들
+- Hugo 템플릿 구조에 대해 이해하고 싶으신 분들
+- HTML/CSS를 이용한 단일 웹 페이지 구성에 익숙하신 분들
+{{% /hint %}}
 
-{{< hint success >}}
-<p style="margin-bottom: 0;"><i class="fa-solid fa-lightbulb"></i> 주요 내용</p>
-<ul style="margin: 0.5rem 0;">
-<li>Hugo 템플릿 구조와 Book 테마에서 활용되는 템플릿 (<a href="#book-테마-알아보기">Book 테마 알아보기</a>)</li>
-<li>Book 테마의 메인 레이아웃을 둘러보며 각 영역을 구별 (<a href="#메인-레이아웃-개선하기">메인 레이아웃 개선하기</a>)</li>
-<li>Book 테마에서 메뉴/목차/헤더 영역을 개선하는 과정 (<a href="#메뉴-영역-개선하기">메뉴 영역 개선하기</a> / <a href="#목차-영역-개선하기">목차 영역 개선하기</a> / <a href="#헤더-영역-개선하기">헤더 영역 개선하기</a>)</li>
-</ul>
-{{< /hint >}}
+{{% hint success %}}
+<i class="fa-solid fa-lightbulb"></i> 주요 내용
+- Hugo 템플릿 구조와 Book 테마에서 활용되는 템플릿 ([Book 테마 알아보기](#book-테마-알아보기))
+- Book 테마의 메인 레이아웃을 둘러보며 각 영역을 구별 ([메인 레이아웃 개선하기](#메인-레이아웃-개선하기))
+- Book 테마에서 메뉴/목차/헤더 영역을 개선하는 과정 ([메뉴 영역 개선하기](#메뉴-영역-개선하기) / [목차 영역 개선하기](#목차-영역-개선하기) / [헤더 영역 개선하기](#헤더-영역-개선하기))
+{{% /hint %}}
 
 [앞선 게시글](/blog/hugo-blog-1/)에서 Hugo 테마에 대해 둘러보고 Hugo 프로젝트 구조를 설계하는 방법을 알아보았습니다.
 
@@ -288,13 +284,11 @@ Book 테마에서 메뉴 영역은 아래 이미지에서 선택된 부분입니
 다시 [위 이미지](#메뉴-영역-개선하기)와 아래 개선하고 싶은 사항을 같이 보면서
 어떤 점을 해결해야 하는지 생각해보겠습니다.
 
-{{< hint >}}
-<ol>
-<li>좌측에는 메뉴 영역을 표시합니다.</li>
-<li>프로필 사진을 표시합니다. 클릭하면 블로그 홈페이지와 연결됩니다.</li>
-<li>소셜 링크 또는 기능성 버튼을 표시합니다.</li>
-</ol>
-{{< /hint >}}
+{{% hint %}}
+1. 좌측에는 메뉴 영역을 표시합니다.
+2. 프로필 사진을 표시합니다. 클릭하면 블로그 홈페이지와 연결됩니다.
+3. 소셜 링크 또는 기능성 버튼을 표시합니다.
+{{% /hint %}}
 
 ### 1. 메뉴 영역 위치 고정하기
 
@@ -475,7 +469,11 @@ $mobile-breakpoint: $menu-width + $body-max-width * 1.2 + $toc-width !default;
 
 설정 파일에서 BookLogo 파라미터를 추가하면 제목 옆에 로고를 표시하는듯 하지만,
 프로필 사진은 이보다 더 크게 제목 위에 나타낼 것이기 때문에 새로운 요소를 추가하겠습니다.
+(프로필 사진을 원형으로 표현하는 CSS 스타일도 `assets/_custom.scss` 에 적용합니다.)
 
+{{< tabs "profile-image" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/_partials/docs/brand.html -->
 
@@ -491,29 +489,9 @@ $mobile-breakpoint: $menu-width + $body-max-width * 1.2 + $toc-width !default;
 <!-- ... -->
 </h2>
 ```
+{{% /tab %}}
 
-템플릿에서 `{{ .Site.Params.BookMenu.profileImage }}` 부분은
-설정 파일에서 파라미터를 호출하는 부분입니다.
-기본 설정 파일은 Hugo 프로젝트 루트 경로에 있는 `hugo.toml` 파일입니다.
-해당 파일에서 `profileImage` 파라미터를 추가해야 하는데 YAML 형식에서는
-이렇게 추가할 수 있습니다.
-
-(참고로, `{{ .Site.BaseURL }}` 부분은 마찬가지로 설정 파일에서
-`BaseURL` 를 가리키며 웹 사이트 기본 경로를 의미합니다. 프로필 사진을 클릭했을 때
-홈페이지로 이동하기 위한 설정입니다.)
-
-```yaml
-# hugo.yaml
-
-params:
-  BookMenu:
-    profileImage: "<프로필-사진-주소>"
-```
-
-하지만, 이렇게만 추가하면 이미지가 원본으로 들어가서 보기에 안좋습니다.
-프로필 사진에 대한 스타일은 사용자 커스터마이징으로 분류하여
-`assets/_custom.scss` 파일에 추가하겠습니다.
-
+{{% tab "CSS" %}}
 ```scss
 // assets/_custom.scss
 
@@ -531,12 +509,25 @@ params:
   display: block;
 }
 ```
+{{% /tab %}}
 
-프로필 이미지를 어떻게 표현할지는 개인 취향이지만, 저는 `border-raidus: 50%;` 속성을 더해
-원형으로 나타내고 `.profile-img` 요소가 상위의 `.profile-img-wrap` 요소에서
-가로/세로로 100%를 차지하게 하여 이미지 크기를 자동으로 조정하게 했습니다.
+{{< /tabs >}}
 
-이렇게 적용한 결과는 아래 이미지와 같습니다.
+템플릿에서 `{{ .Site.Params.BookMenu.profileImage }}` 부분은
+설정 파일에서 파라미터를 호출하는 부분입니다.
+기본 설정 파일은 Hugo 프로젝트 루트 경로에 있는 `hugo.toml` 파일입니다.
+해당 파일에서 `profileImage` 파라미터를 추가해야 하는데 YAML 형식에서는
+이렇게 추가할 수 있습니다.
+
+```yaml
+# hugo.yaml
+
+params:
+  BookMenu:
+    profileImage: "<프로필-사진-주소>"
+```
+
+프로필 사진의 주소까지 설정한 결과는 아래 이미지와 같습니다.
 
 ![book-menu 영역에 프로필 사진 추가](https://dl.dropboxusercontent.com/scl/fi/ctvdfak8bnphkkjcu08xf/hugo-16-book-menu-profile.webp?rlkey=vv1amtzqw7er0vezhsac2tmn2&dl=0)
 
@@ -547,6 +538,9 @@ params:
 `brand.html` 템플릿에 소셜 링크를 추가하면 되는 것은 이미 알고 있으므로
 부가적인 설명없이 바로 추가해보겠습니다.
 
+{{< tabs "social-links" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/_partials/docs/brand.html -->
 
@@ -574,33 +568,9 @@ params:
 <!-- ... -->
 </h2>
 ```
+{{% /tab %}}
 
-총 4개의 소셜 링크 [ 깃허브, 링크드인, 노션, 트위터 ] 를 추가했습니다.
-
-`<a>` 태그에서 if 문을 사용하는 것을 볼 수 있는데, 이는 소셜 링크를 가리키는
-`BookMenu.githubLink` 등의 파라미터가 설정 파일에 없을 경우 추가되는 구문입니다.
-소셜 링크가 없으면 아래 CSS 설정에서 활용될 `disabled` 클래스가 적용되어 링크가 비활성화됩니다.
-
-그리고, `<a>` 태그의 내용을 보면 알 수 있듯이 소셜 플랫폼에 대한 로고 이미지가 아니라
-`<i>` 태그 아이콘을 사용하고 있습니다. 이것은 [Font Awesome](https://fontawesome.com/)에서
-제공하는 스타일인데, 이를 사용하기 위해 외부 소스의 CSS 파일을 가져와야 합니다.
-
-{{< bookmark "https://fontawesome.com/" >}}
-
-[Book 테마 구조](#Book-테마-구조) 문단에서 `<head>` 태그 내에 들어갈 요소는
-`layouts/_partials/docs/html-head.html` 템플릿에서 정의한다고 알려드렸습니다.
-바로 추가해봅시다.
-
-```html
-<!-- layouts/_partials/docs/html-head.html -->
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
-```
-
-아이콘은 나타나지만, 기본 스타일로는 세로로 나열되어 보기 좋지 않습니다.
-프로필 사진과 동일하게 사용자 커스터마이징으로 분류하여
-`assets/_custom.scss` 파일에 스타일을 추가하겠습니다.
-
+{{% tab "CSS" %}}
 ```scss
 // assets/_custom.scss
 
@@ -628,9 +598,34 @@ params:
   cursor: default;
 }
 ```
+{{% /tab %}}
+
+{{< /tabs >}}
+
+총 4개의 소셜 링크 [ 깃허브, 링크드인, 노션, 트위터 ] 를 추가했습니다.
+
+`<a>` 태그에서 if 문을 사용하는 것을 볼 수 있는데, 이는 소셜 링크를 가리키는
+`BookMenu.githubLink` 등의 파라미터가 설정 파일에 없을 경우 추가되는 구문입니다.
+소셜 링크가 없으면 아래 CSS 설정에서 활용될 `disabled` 클래스가 적용되어 링크가 비활성화됩니다.
+
+그리고, `<a>` 태그의 내용을 보면 알 수 있듯이 소셜 플랫폼에 대한 로고 이미지가 아니라
+`<i>` 태그 아이콘을 사용하고 있습니다. 이것은 [Font Awesome](https://fontawesome.com/)에서
+제공하는 스타일인데, 이를 사용하기 위해 외부 소스의 CSS 파일을 가져와야 합니다.
+
+{{< bookmark "https://fontawesome.com/" >}}
+
+[Book 테마 구조](#Book-테마-구조) 문단에서 했던 것처럼
+`<head>` 태그 내에 들어갈 요소는 `layouts/_partials/docs/html-head.html`
+템플릿에 추가합니다.
+
+```html
+<!-- layouts/_partials/docs/html-head.html -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
+```
 
 로고 이미지를 사용했다면 소셜 로고 크기를 조절하기 위해 `width` 속성을 적용해야 하지만,
-텍스트인 `<i>` 태그를 사용하기 때문에 `font-size` 속성으로 크기를 조절해줍니다.
+텍스트 유형인 `<i>` 태그를 사용하기 때문에 `font-size` 속성으로 크기를 조절해주어야 합니다.
 (`--color-social-link` 변수는 라이트 모드와 다크 모드에 따라 달라지는데,
 아직 다크 모드를 추가하기 전이므로 `#fff` 색상을 적용해주세요.
 변수가 정의되지 않아도 오류는 발생하지 않습니다.)
@@ -651,7 +646,7 @@ Book 테마에서 목차 영역은 아래 이미지에서 선택된 부분입니
 
 ![book-toc 영역 선택](https://dl.dropboxusercontent.com/scl/fi/s6ntlk5pgwkqi3kdtopnb/hugo-18-book-toc.webp?rlkey=b35n6qbjlk3sbateixn0jn4br&dl=0)
 
-물론, 위 이미지는 메뉴 영역을 개선하기 전인 Example Site 기준이고,
+위 이미지는 메뉴 영역을 개선하기 전인 Example Site 기준이고,
 [메뉴 영역을 위치 고정하기](#1-메뉴-영역-위치-고정하기) 문단에서
 목차 영역도 우측 끝에 고정시켰습니다.
 (너무 끝에 붙어있으면 보기 안좋아 `1.5rem` 수준의 여백을 추가했습니다.)
@@ -723,17 +718,12 @@ Book 테마에서도 Hugo에 내장된 목차 템플릿을 호출하여 목차�
 
 목차 영역에서는 어떤 점을 해결하면 좋을지 생각해보겠습니다.
 
-{{< hint >}}
-<ol>
-<li>목차와 본문의 사이에 목차의 길이만큼 구분선을 추가합니다.</li>
-<li>스크롤이 위치한 목차를 하이라이트로 강조합니다.</li>
-</ul>
-<li>우측 하단의 고정된 위치에 이동 버튼을 추가합니다.</li>
-<ul>
-  <li>맨 위로 이동, 맨 아래로 이동, 뒤로 가기 버튼을 세로로 나열합니다.</li>
-</ul>
-</ol>
-{{< /hint >}}
+{{% hint %}}
+1. 목차와 본문의 사이에 목차의 길이만큼 구분선을 추가합니다.
+2. 스크롤이 위치한 목차를 하이라이트로 강조합니다.
+3. 우측 하단의 고정된 위치에 이동 버튼을 추가합니다.
+   - 맨 위로 이동, 맨 아래로 이동, 뒤로 가기 버튼을 세로로 나열합니다.
+{{% /hint %}}
 
 ### 1. 목차 옆에 구분선 추가하기
 
@@ -786,6 +776,9 @@ Book 테마의 `toc.html` 템플릿만 보았다면 어디에 `border` 속성을
 프롬프트는 특별히 길게 쓴건 아니라서 따로 저장해두진 않았는데,
 에이전트 모드로 Book 테마 경로를 첨부하여 문맥을 제공하였고 아래와 같은 코드가 생성되었습니다.
 
+{{< tabs "toc-highlight" >}}
+
+{{% tab "JavaScript" %}}
 ```js
 // assets/toc-highlight.js
 
@@ -828,17 +821,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 ```
+{{% /tab %}}
 
-자바스크립트로 기능을 정의하는데 익숙하지는 않지만,
-함수명 등으로 유추해봤을 때 `getVisibleToc()` 함수에서 `#TableOfContents` 요소를 가져와
-`toc` 상수에 할당하는데 사용되는 것으로 보입니다.
-그리고, `toc` 상수로부터 `<a>` 태그들을 꺼내서 순회하면서 `<a>` 태그가 가리키는
-헤딩 요소가 화면에 들어오면 `active` 클래스를 추가한다고 해석할 수 있습니다.
-
-목차에서 현재 보고 있는 헤딩을 가리키는 `<a>` 태그에 `active` 클래스를
-부여한다는 것은 이해했는데, 그렇다면 `active` 클래스에 대한 스타일도 넣어줘야 합니다.
-물론, AI 에이전트에게 요청했을 때 CSS 스타일도 추가해주었습니다.
-
+{{% tab "CSS" %}}
 ```scss
 // assets/_main.scss
 
@@ -851,14 +836,23 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 ```
+{{% /tab %}}
 
+{{< /tabs >}}
+
+자바스크립트로 기능을 정의하는데 익숙하지는 않지만,
+함수명 등으로 유추해봤을 때 `getVisibleToc()` 함수에서 `#TableOfContents` 요소를 가져와
+`toc` 상수에 할당하는데 사용되는 것으로 보입니다.
+그리고, `toc` 상수로부터 `<a>` 태그들을 꺼내서 순회하면서 `<a>` 태그가 가리키는
+헤딩 요소가 화면에 들어오면 `active` 클래스를 추가한다고 해석할 수 있습니다.
+
+CSS 스타일을 통해 `active` 클래스인 요소에 대해서만 하이라이트를 적용했습니다.
 `--toc-active-color` 변수는 제가 입맛에 맞게 바꾼 색상인데
 라이트 모드에서는 다른 목차 글씨 색상과 동일한 검은색(`black`)이며,
-`font-weight: bold;` 속성으로 글씨를 굵게하여 하이라이트를 표현했습니다.
+`font-weight: bold;` 속성으로 글씨를 굵게하는 것으로 하이라이트를 표현했습니다.
 
 이렇게하면 목차 하이라이트가 적용되지만, `assets/` 경로에 새로 추가한 자바스크립트 파일은
 `layouts/_partials/docs/html-head.html` 템플릿에서 호출해주어야 합니다.
-
 
 ```html
 <!-- layouts/_partials/docs/html-head.html -->
@@ -901,6 +895,9 @@ PC에서는 굳이 이러한 버튼을 안써도 키보드 단축키로 이동�
 위에서부터 스크롤을 맨 위로, 스크롤을 맨 아래로, 그리고 이전 페이지로 이동하는 3가지 기능을
 하는 버튼입니다.
 
+{{< tabs "book-nav" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/_partials/docs/inject/toc-after.html -->
 
@@ -919,10 +916,9 @@ PC에서는 굳이 이러한 버튼을 안써도 키보드 단축키로 이동�
 
 </div>
 ```
+{{% /tab %}}
 
-당연히 이렇게만 추가해두면 보기에 좋지 않아 스타일을 적용했습니다.
-자잘한 속성들은 제외하고 윗 부분만 가져왔습니다.
-
+{{% tab "CSS" %}}
 ```scss
 // assets/_main.scss
 
@@ -958,17 +954,15 @@ PC에서는 굳이 이러한 버튼을 안써도 키보드 단축키로 이동�
   // ...
 }
 ```
+{{% /tab %}}
 
-스크롤 이동 버튼을 표현하는데 핵심적인 속성은 `border-radius: 50%;` 및
+{{% /tabs %}}
+
+CSS 스타일에서 스크롤 이동 버튼을 표현하는데 핵심적인 속성은 `border-radius: 50%;` 및
 `background: var(--gray-200);` 입니다.
 Font Awesome에서 가져온 단순한 화살표 아이콘을 동그란 버튼처럼 가공해 보기 좋아졌습니다.
 그런데, 이렇게 적용했을 때 스크롤 이동 버튼이 우측 끝에 너무 딱 붙어있어서
 `book-toc` 영역 전체에 `margin-right: $padding-48;` 속성을 추가했습니다.
-
-추가로, 스크롤 이동 버튼 스타일에서 `position: fixed;` 속성도
-중요한 역할을 합니다. 단순히 버튼 영역을 우측 하단에 고정시키는 목적도 있지만,
-모바일 크기에서 `book-toc` 영역이 숨겨질 때 같이 사라지지 않고
-독립적으로 남아있게 해줄 수 있는 스타일 입니다.
 
 스크롤 이동 버튼까지 추가한 결과는 아래와 같습니다.
 (하단에 있는 버튼이 잘 보이기 위해 브라우저 높이를 450px 정도로 줄였습니다.)
@@ -1024,12 +1018,10 @@ Font Awesome에서 가져온 단순한 화살표 아이콘을 동그란 버튼�
 
 헤더 영역에서는 어떤 점을 해결하면 좋을지 생각해보겠습니다.
 
-{{< hint >}}
-<ol>
-<li>헤더 영역의 가운데에는 블로그 제목을 표시하고 홈페이지로 이동하는 링크를 설정합니다.</li>
-<li>헤더 영역은 반투명한 배경색을 가지고 스크롤 위치에 관계없이 고정됩니다.</li>
-</ol>
-{{< /hint >}}
+{{% hint %}}
+1. 헤더 영역의 가운데에는 블로그 제목을 표시하고 홈페이지로 이동하는 링크를 설정합니다.
+2. 헤더 영역은 반투명한 배경색을 가지고 스크롤 위치에 관계없이 고정됩니다.
+{{% /hint %}}
 
 헤더 영역은 특별히 수정할건 없습니다.
 

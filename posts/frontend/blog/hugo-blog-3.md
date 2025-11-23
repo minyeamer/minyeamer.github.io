@@ -10,26 +10,23 @@ categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Taxonomies", "태그", "카테고리", "휴고 테마", "휴고 레이아웃", "Blog", "HTML", "CSS", "JavaScript", "Hugo Book", "블로그 태그", "블로그 카테고리"]
 ---
 
-{{< hint info >}}
-<p style="margin-bottom: 0;"><i class="fa-solid fa-circle-info"></i> 대상 독자</p>
-<ul style="margin: 0.5rem 0;">
-<li>마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들</li>
-<li>블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들</li>
-<li>Hugo에서 지원하는 태그 기능을 활용한 사례를 찾고 있는 분들</li>
-<li>Hugo에서 지원하지 않는 다단계 카테고리를 만들어보고 싶은 분들</li>
-</ul>
-{{< /hint >}}
+{{% hint info %}}
+<i class="fa-solid fa-circle-info"></i> 대상 독자
+- 마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들
+- 블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들
+- Hugo에서 지원하는 taxonomies 기능을 활용한 사례를 찾고 있는 분들
+- 블로그에 2단계 카테고리를 구현하고 싶은 분들
+- HTML/CSS를 이용한 단일 웹 페이지 구성에 익숙하신 분들
+{{% /hint %}}
 
-{{< hint success >}}
-<p style="margin-bottom: 0;"><i class="fa-solid fa-lightbulb"></i> 주요 내용</p>
-<ul style="margin: 0.5rem 0;">
-<li>Hugo의 taxonomies 기능과 구성 요소 이해 (<a href="#taxonomies">Taxonomies</a>)</li>
-<li>게시글 목록과 페이지네이션 템플릿 구현 (<a href="#게시글-목록-템플릿-추가">게시글 목록 템플릿 추가</a> / <a href="#페이지네이션-템플릿-추가">페이지네이션 템플릿 추가</a>)</li>
-<li>태그 페이지 추가 및 terms 템플릿 작성 (<a href="#태그-페이지-추가">태그 페이지 추가</a>)</li>
-<li>2단계 카테고리 구조 설계 및 부모-자식 카테고리 템플릿 구현 (<a href="#카테고리-페이지-추가">카테고리 페이지 추가</a>)</li>
-<li>메뉴 영역에 카테고리 트리 통합 및 게시글 카운팅 (<a href="#메뉴에-카테고리-추가">메뉴에 카테고리 추가</a>)</li>
-</ul>
-{{< /hint >}}
+{{% hint success %}}
+<i class="fa-solid fa-lightbulb"></i> 주요 내용
+- Hugo의 taxonomies 기능과 구성 요소 이해 ([Taxonomies](#taxonomies))
+- 게시글 목록과 페이지네이션 템플릿 구현 ([게시글 목록 템플릿 추가](#게시글-목록-템플릿-추가) / [페이지네이션 템플릿 추가](#페이지네이션-템플릿-추가))
+- 태그 페이지 추가 및 terms 템플릿 작성 ([태그 페이지 추가](#태그-페이지-추가))
+- 2단계 카테고리 구조 설계 및 부모-자식 카테고리 템플릿 구현 ([카테고리 페이지 추가](#카테고리-페이지-추가))
+- 메뉴 영역에 카테고리 트리 통합 및 게시글 카운팅 ([메뉴에 카테고리 추가](#메뉴에-카테고리-추가))
+{{% /hint %}}
 
 [앞선 게시글](/blog/hugo-blog-2/)에서 Book 테마의 메인 레이아웃인 메뉴, 목차, 헤더를 개선해보았습니다.   
 앞에서의 과정을 거쳤다면 프로필 사진, 소셜 링크, 스크롤 이동 버튼 등이 블로그에 추가되었을 것입니다.
@@ -123,7 +120,12 @@ Book 테마는 `layouts/_partials/docs` 경로에 partial 템플릿이 위치해
 
 게시글 목록에서 단일 게시글 항목은 partial 템플릿으로 분류된다 생각하여 해당 경로에
 `post-item.html` 이라는 템플릿을 추가했습니다.
+커버 이미지의 위치를 조정하는 등의 CSS 스타일은 `assets/_custom.scss` 에 적용해줍니다.
+(CSS 스타일이 상대적으로 길어 주석으로 설명을 대체합니다.)
 
+{{< tabs "post-item-draft" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/_partials/docs/post-item.html -->
 
@@ -168,34 +170,9 @@ Book 테마는 `layouts/_partials/docs` 경로에 partial 템플릿이 위치해
 
 </article>
 ```
+{{% /tab %}}
 
-게시글 작성일, 제목, 요약, 커버 이미지로만 구성된 간단한 구성이지만,
-게시글 요약과 커버 이미지는 고려해야할 경우가 많아 상대적으로 길어 보입니다.
-
-간단하게 설명하자면, 게시글 요약은 게시글이 가진 `Description` 또는 `Summary` 를 가져와
-일정 글자 수까지 잘라서 표시합니다. `Description` 은 front matter에서 작성하는
-게시글에 대한 설명문이고, `Summary` 는 마찬가지로 front matter에서 지정할 수도 있지만
-따로 지정하지 않으면 게시글의 본문 텍스트를 일정 글자 수까지 제공합니다.
-
-게시글 요약에 표시할 글자 수의 경우 여러가지 숫자를 넣어봤을 때 148자가 적절했고,
-모바일의 경우 그보다 더 적은 72자 정도가 적절했습니다.
-이어지는 CSS 설정에서 볼 수 있는데, 화면의 너비에 따라 일정 크기를 초과하면 `post-summary` 요소만 표시하고
-일정 크기 이하로 줄어들면 `post-summary-mobile` 요소만 표시하는 원리입니다.
-
-커버 이미지를 불러오는 부분은 Hugo에서 이미지가 문자열로 전달되는 경우와 맵 형태로 전달되는 경우를 고려하여 작성되었습니다.
-특별히 맵 형태의 이미지를 의식한 것은 아니고, Book 테마의 다른 템플릿에서 이런식으로 커버 이미지를 불러와서 그대로 가져다 썼습니다.
-front matter에서 커버 이미지에 대한 주소를 작성하면 `img.post-cover-img` 요소의 `src` 속성으로 해당 이미지 주소가 전달됩니다.
-
-아직 게시글 목록을 볼 수 있는 페이지를 만들지 않아서 해당 템플릿을 직접 확인하기 어려울 것이기에
-참고로 보여드리자면, 위 템플릿을 렌더링했을 때 아래 이미지와 같은 결과를 볼 수 있습니다. (커버 이미지는 해당 게시글의 커버 이미지를 첨부했습니다.)
-
-![스타일이 적용되지 않은 게시글 항목](https://dl.dropboxusercontent.com/scl/fi/byg55ykidst9onrhd0emx/hugo-28-post-item-no-style.webp?rlkey=955x956plz4vi5u00xcmog1tx&dl=0)
-
-### 게시글 항목 스타일 적용
-
-따로 스타일을 적용하지 않은 위 게시글 항목의 형태는 세로로 너무 길고 보기에도 안좋아서
-`assets/_custom.scss` 파일에 스타일을 추가하겠습니다.
-
+{{% tab "CSS" %}}
 ```scss
 // assets/_custom.scss
 
@@ -308,12 +285,7 @@ front matter에서 커버 이미지에 대한 주소를 작성하면 `img.post-c
     object-position: center;
   }
 }
-```
 
-코드가 길어져서 주석으로 설명을 대체합니다.
-이어서 모바일 사이즈에 대한 스타일을 추가하겠습니다.
-
-```scss
 @media (max-width: $body-max-width) {
   .post-title {
     font-size: $font-size-20; // 모바일 사이즈에서 제목 텍스트 크기를 줄이기
@@ -340,10 +312,30 @@ front matter에서 커버 이미지에 대한 주소를 작성하면 `img.post-c
   }
 }
 ```
+{{% /tab %}}
 
-스타일이 적용된 결과는 아래 이미지와 같습니다.
+{{< /tabs >}}
+
+하나의 게시글 항목은 게시글 작성일, 제목, 요약, 커버 이미지로만 구성되어 있습니다.
+
+아직 게시글 항목을 볼 수 있는 페이지를 만들지 않아서 해당 템플릿을 직접 확인하기 어려울 것이기에
+실제로 템플릿을 렌더링한 결과를 보여드립니다. (커버 이미지는 해당 게시글의 커버 이미지를 첨부했습니다.)
 
 ![스타일이 적용된 게시글 항목](https://dl.dropboxusercontent.com/scl/fi/5wp1ijnpa7wsiiidjqx90/hugo-29-post-item-with-style.webp?rlkey=xpi059pig9wnpki1t6x2hemvk&dl=0)
+
+간단하게 설명하자면, 게시글 요약은 게시글이 가진 `Description` 또는 `Summary` 를 가져와
+일정 글자 수까지 잘라서 표시합니다. `Description` 은 front matter에서 작성하는
+게시글에 대한 설명문이고, `Summary` 는 마찬가지로 front matter에서 지정할 수도 있지만
+따로 지정하지 않으면 게시글의 본문 텍스트를 일정 글자 수까지 제공합니다.
+
+게시글 요약에 표시할 글자 수의 경우 여러가지 숫자를 넣어봤을 때 148자가 적절했고,
+모바일의 경우 그보다 더 적은 72자 정도가 적절했습니다.
+이어지는 CSS 설정에서 볼 수 있는데, 화면의 너비에 따라 일정 크기를 초과하면 `post-summary` 요소만 표시하고
+일정 크기 이하로 줄어들면 `post-summary-mobile` 요소만 표시하는 원리입니다.
+
+커버 이미지를 불러오는 부분은 Hugo에서 이미지가 문자열로 전달되는 경우와 맵 형태로 전달되는 경우를 고려하여 작성되었습니다.
+특별히 맵 형태의 이미지를 의식한 것은 아니고, Book 테마의 다른 템플릿에서 이런식으로 커버 이미지를 불러와서 그대로 가져다 썼습니다.
+front matter에서 커버 이미지에 대한 주소를 작성하면 `img.post-cover-img` 요소의 `src` 속성으로 해당 이미지 주소가 전달됩니다.
 
 이후에 카테고리와 태그 페이지를 추가하면서
 게시글 항목의 우측 상단인 커버 이미지 위에 카테고리 목록을,
@@ -396,7 +388,11 @@ The Paginate method is more flexible, and strongly recommended.
 [Paginate](https://gohugo.io/methods/page/paginate/)라는 다른 기능을 사용할 것입니다.
 
 다음과 같이 `paginate.html` 템플릿을 변경해줍니다.
+(CSS 스타일도 `assets/_custom.scss` 에 추가해줍니다.)
 
+{{< tabs "pagination" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/_partials/docs/pagination.html -->
 
@@ -457,28 +453,12 @@ The Paginate method is more flexible, and strongly recommended.
 </nav>
 {{ end }}
 ```
+{{% /tab %}}
 
-페이지네이션 템플릿을 렌더링하면 아래 이미지처럼 보입니다.
-
-<img src="https://dl.dropboxusercontent.com/scl/fi/6iogo1s9emqw8o0hxb8lo/hugo-31-pagination-no-style.webp?rlkey=dp0c25eip5vhq2oiwv79h9kxc&dl=0" alt="스타일이 적용되지 않은 페이지네이션" style="max-width: 400px;">
-
-페이지네이션 템플릿은 이전 버튼, 페이지 링크 10개, 다음 버튼이 순서대로 나열되어 있습니다.
-
-페이지를 이동하는건 현재 경로 뒤에 `/page/{페이지}` 를 붙이면 됩니다.   
-(`Paginate` 기능을 사용했다면 렌더링 시에 각 페이지별 정적 페이지가 만들어집니다.)
-
-페이지 링크는 이를 이용해 특정 페이지에 대한 경로로 이동할 수 있는 링크를 제공합니다.
-또한, 다른 페이지로 이동한 후에도 스크롤 위치를 유지하도록 페이지네이션 영역에 대한 앵커 링크 `#pagination-anchor` 를
-추가했습니다.
-
-이전 버튼과 다음 버튼은 직전, 직후 페이지로 이동하는게 아니라 이전, 다음 페이지 그룹으로 이동하는 링크를 제공합니다.
-페이지 그룹은 10개 페이지 단위로 구성되어 있으며, 해당 버튼은 페이지 그룹의 첫 번째 페이지로 연결됩니다.
-
-### 페이지네이션 스타일 적용
-
-이전, 다음 버튼과 페이지 링크는 한 줄로 나열되는데 보기 좋아서 스타일을 추가하겠습니다.
-
+{{% tab "CSS" %}}
 ```scss
+// assets/_custom.scss
+
 .pagination {
   // 이전 버튼, 페이지 링크, 다음 버튼을 정렬
   display: flex;
@@ -586,10 +566,25 @@ The Paginate method is more flexible, and strongly recommended.
   }
 }
 ```
+{{% /tab %}}
 
-스타일이 적용된 결과는 아래 이미지와 같습니다.
+{{< /tabs >}}
+
+페이지네이션 템플릿을 렌더링하면 아래 이미지처럼 보입니다.
 
 <img src="https://dl.dropboxusercontent.com/scl/fi/ese1anj2erz20tjsy4zd3/hugo-32-pagination-with-style.webp?rlkey=lpaiva9puxov3agnsyh0cget1&dl=0" alt="스타일이 적용된 페이지네이션" style="width: 100%;">
+
+페이지네이션 템플릿은 이전 버튼, 페이지 링크 10개, 다음 버튼이 순서대로 나열되어 있습니다.
+
+페이지를 이동하는건 현재 경로 뒤에 `/page/{페이지}` 를 붙이면 됩니다.   
+(`Paginate` 기능을 사용했다면 렌더링 시에 각 페이지별 정적 페이지가 만들어집니다.)
+
+페이지 링크는 이를 이용해 특정 페이지에 대한 경로로 이동할 수 있는 링크를 제공합니다.
+또한, 다른 페이지로 이동한 후에도 스크롤 위치를 유지하도록 페이지네이션 영역에 대한 앵커 링크 `#pagination-anchor` 를
+추가했습니다.
+
+이전 버튼과 다음 버튼은 직전, 직후 페이지로 이동하는게 아니라 이전, 다음 페이지 그룹으로 이동하는 링크를 제공합니다.
+페이지 그룹은 10개 페이지 단위로 구성되어 있으며, 해당 버튼은 페이지 그룹의 첫 번째 페이지로 연결됩니다.
 
 ## Taxonomy 템플릿 경로
 
@@ -634,6 +629,9 @@ Book 테마에서 terms 템플릿은 제공되지 않지만 taxonomy 템플릿�
 먼저, `layouts/tags/list.html` 파일을 추가하여 특정 태그를 포함하는 게시글 목록을 보여주는
 템플릿을 만들어보겠습니다.
 
+{{< tabs "tags-list" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/tags/list.html -->
 
@@ -656,30 +654,12 @@ Book 테마에서 terms 템플릿은 제공되지 않지만 taxonomy 템플릿�
 </article>
 {{ end }}
 ```
+{{% /tab %}}
 
-앞에서 게시글 목록과 페이지네이션 템플릿을 미리 만들어뒀기 때문에 taxonomy 템플릿은 단순합니다.
-
-템플릿에서 사용되는 [Pages](https://gohugo.io/methods/page/pages/) 기능은
-모든 `Page` 객체를 목록으로 반환하는데, taxonomy 레이아웃에서는
-해당 taxonomy, 즉 태그를 포함하는 `Page` 객체들만 반환합니다.
-
-상단의 `list-header` 영역에서는 단순히 `Pages` 를 호출하고
-그 개수를 세어 전체 몇 개의 게시글이 있는지 알려줍니다.
-
-헤더 아래 본문인 `post-list` 영역에서는 각각의 `Page` 객체에 대한
-메타데이터를 목록으로 나타내는데, 한번에 10개 페이지씩 나눠서 보여주기 위해
-`Pages` 를 [Paginate](https://gohugo.io/methods/page/paginate/)로 감쌉니다.
-
-반복문을 통해 현재 페이지에 할당된 모든 `Page` 객체를
-`layouts/_partials/docs/post-item.html` 템플릿을 사용해 보여주고,
-본문 아래에는 `layouts/_partials/docs/pagination.html` 템플릿을 사용해
-페이지 이동 링크를 나타냅니다.
-
-보기 좋게 스타일도 추가하겠습니다.
-`list-header` 및 `post-list` 클래스는 카테고리의 taxonomy 템플릿에서도 사용되므로
-공통으로 적용되는 스타일입니다.
-
+{{% tab "CSS" %}}
 ```scss
+// assets/_custom.scss
+
 .list-header {
   // 헤더 영역의 요소들을 가운데 정렬
   text-align: center;
@@ -716,6 +696,31 @@ Book 테마에서 terms 템플릿은 제공되지 않지만 taxonomy 템플릿�
   margin-bottom: $padding-48;
 }
 ```
+{{% /tab %}}
+
+{{< /tabs >}}
+
+앞에서 게시글 목록과 페이지네이션 템플릿을 미리 만들어뒀기 때문에 taxonomy 템플릿은 단순합니다.
+
+템플릿에서 사용되는 [Pages](https://gohugo.io/methods/page/pages/) 기능은
+모든 `Page` 객체를 목록으로 반환하는데, taxonomy 레이아웃에서는
+해당 taxonomy, 즉 태그를 포함하는 `Page` 객체들만 반환합니다.
+
+상단의 `list-header` 영역에서는 단순히 `Pages` 를 호출하고
+그 개수를 세어 전체 몇 개의 게시글이 있는지 알려줍니다.
+
+헤더 아래 본문인 `post-list` 영역에서는 각각의 `Page` 객체에 대한
+메타데이터를 목록으로 나타내는데, 한번에 10개 페이지씩 나눠서 보여주기 위해
+`Pages` 를 [Paginate](https://gohugo.io/methods/page/paginate/)로 감쌉니다.
+
+반복문을 통해 현재 페이지에 할당된 모든 `Page` 객체를
+`layouts/_partials/docs/post-item.html` 템플릿을 사용해 보여주고,
+본문 아래에는 `layouts/_partials/docs/pagination.html` 템플릿을 사용해
+페이지 이동 링크를 나타냅니다.
+
+보기 좋게 CSS 스타일도 추가했습니다.
+`list-header` 및 `post-list` 클래스는 카테고리의 taxonomy 템플릿에서도 사용되므로
+taxonomy 유형의 템플릿에서 공통으로 적용되는 스타일입니다.
 
 렌더링하고 Example Site의 태그 중 `Development` 에 대한 taxonomy 페이지를 접속하면
 아래와 같이 관련 게시글 목록을 볼 수 있습니다.
@@ -731,6 +736,9 @@ Book 테마에서 terms 템플릿은 제공되지 않지만 taxonomy 템플릿�
 `layouts/tags/terms.html` 파일을 추가하여 모든 태그 목록을 보여주는
 템플릿을 만들어보겠습니다.
 
+{{< tabs "tags-terms" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/tags/terms.html -->
 
@@ -754,40 +762,12 @@ Book 테마에서 terms 템플릿은 제공되지 않지만 taxonomy 템플릿�
 </article>
 {{ end }}
 ```
+{{% /tab %}}
 
-terms 템플릿은 단순히 태그 목록을 나열하는 것뿐이라서 내용은 단순합니다.
-
-`.Data.Terms` 방식으로 taxonomies를 가져오는 것은
-[Taxonomies 문서](https://gohugo.io/content-management/taxonomies/)에 안내되어 있습니다.
-이렇게 가져온 taxonomies, 즉 태그 목록에서 각 태그마다 관련된 게시글의 수를 세어서
-`태그 (개수)` 형식으로 보여줄 것입니다.
-
-`{baseURL}/tags` 경로를 통해 terms 페이지에 접근할 수 있는데,
-좌측 메뉴에 해당 페이지에 대한 바로가기 버튼도 추가하면 누구나 찾아갈 수 있습니다.
-소셜 링크 영역에서 안쓰는 링크 하나를 태그 페이지로 연결시키겠습니다.
-
-```html
-<!-- layouts/_partials/docs/brand.html -->
-
-<div class="sidebar-profile">
-  <div class="sidebar-social">
-    <!-- ... -->
-    <a href="{{ "/tags/" | relURL }}" title="Tags">
-      <i class="fa-solid fa-tags"></i>
-    </a>
-    <!-- ... -->
-  </div>
-</div>
-```
-
-렌더링하고 태그 페이지로 이동하는 아이콘을 클릭하면 아래와 같은 목록을 볼 수 있습니다.
-
-![스타일이 적용되지 않은 태그 목록](https://dl.dropboxusercontent.com/scl/fi/atbj55gmxr7in453th0lg/hugo-34-tags-terms-no-style.webp?rlkey=m5x863zabo01dxb4cb9sazlb0&dl=0)
-
-기능적으로는 별 문제가 없지만 태그가 하나에 한줄씩 세로로 나열되어 있어 보기에 좋지 않습니다.
-단순한 텍스트인 각각의 태그를 칩 형태로 바꾸고 가로로 나열하여 더 보기 좋게 변경해보겠습니다.
-
+{{% tab "CSS" %}}
 ```scss
+// assets/_custom.scss
+
 .tag-chips {
   display: flex;
   flex-wrap: wrap;
@@ -810,10 +790,39 @@ terms 템플릿은 단순히 태그 목록을 나열하는 것뿐이라서 내�
   }
 }
 ```
+{{% /tab %}}
 
-다시 렌더링하고 태그 목록을 보면 더 보기 좋게 바뀌었습니다.
+{{< /tabs >}}
+
+terms 템플릿은 단순히 태그 목록을 나열하는 것뿐이라서 내용은 단순합니다.
+
+`.Data.Terms` 방식으로 taxonomies를 가져오는 것은
+[Taxonomies 문서](https://gohugo.io/content-management/taxonomies/)에 안내되어 있습니다.
+이렇게 가져온 taxonomies, 즉 태그 목록에서 각 태그마다 관련된 게시글의 수를 세어서
+`태그 (개수)` 형식으로 보여줄 것입니다.
+
+하지만, 이렇게하면 태그가 하나에 한줄씩 세로로 나열되어 보기에 좋지 않습니다.
+단순한 텍스트인 각각의 태그를 칩 형태로 바꾸고 가로로 나열하는 CSS 스타일도 적용했습니다.
 
 ![스타일이 적용된 태그 목록](https://dl.dropboxusercontent.com/scl/fi/d2d796n8c5mvv01s566t5/hugo-35-tags-terms-with-style.webp?rlkey=2nncbcugjb28gv45disvkab1m&dl=0)
+
+`{baseURL}/tags` 경로를 통해 terms 페이지에 접근할 수 있는데,
+좌측 메뉴에 해당 페이지에 대한 바로가기 버튼도 추가하면 누구나 찾아갈 수 있습니다.
+다음과 같이 소셜 링크 영역에서 안쓰는 링크 하나를 태그 페이지로 연결시켰습니다.
+
+```html
+<!-- layouts/_partials/docs/brand.html -->
+
+<div class="sidebar-profile">
+  <div class="sidebar-social">
+    <!-- ... -->
+    <a href="{{ "/tags/" | relURL }}" title="Tags">
+      <i class="fa-solid fa-tags"></i>
+    </a>
+    <!-- ... -->
+  </div>
+</div>
+```
 
 ## 카테고리 페이지 추가
 
@@ -894,6 +903,9 @@ categories: ["Frontend", "Blog"]
 태그에서 `layouts/tags/` 경로 아래에 템플릿을 추가한 것처럼
 카테고리도 `layouts/categories/` 경로 아래에 템플릿을 추가하겠습니다.
 
+{{< tabs "categories-parent" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/categories/parent.html -->
 
@@ -961,21 +973,12 @@ categories: ["Frontend", "Blog"]
 </article>
 {{ end }}
 ```
+{{% /tab %}}
 
-템플릿의 상단에서 부모 카테고리와 연관된 게시글들을 걸러내는 부분을 제외하면
-태그의 taxonomy 템플릿과 유사합니다.
-
-해당 템플릿도 taxonomy 템플릿이기 때문에 `Pages` 를 직접 호출할 수도 있지만,
-Hugo에서 taxonomy엔 순서가 없기 때문에 부모 카테고리가 카테고리 배열에서 첫 번째 값인 조건을 만족시키기 위해
-직접 `Page` 배열을 만들었습니다.
-
-태그의 taxonomy 템플릿과의 가장 큰 차이점은 헤더 아래에 하위 카테고리들에 대한 바로가기 링크를 표시한다는 것입니다.
-부모-자식 카테고리 간에 이동을 용이하게 하기 위해 이와 같은 바로가기 링크를 추가했고,
-이것이 폴더-파일 관계와 유사하다 생각해 그러한 아이콘으로 직관성을 더했습니다.
-
-바로가기 링크를 칩 형태로 표현하고 적절한 여백을 추가하기 위해 스타일도 적용하겠습니다.
-
+{{% tab "CSS" %}}
 ```scss
+// assets/_custom.scss
+
 .categories-section {
   margin-bottom: $padding-40;
 }
@@ -1005,6 +1008,20 @@ Hugo에서 taxonomy엔 순서가 없기 때문에 부모 카테고리가 카테�
   text-align: center;
 }
 ```
+{{% /tab %}}
+
+{{< /tabs >}}
+
+템플릿의 상단에서 부모 카테고리와 연관된 게시글들을 걸러내는 부분을 제외하면
+태그의 taxonomy 템플릿과 유사합니다.
+
+해당 템플릿도 taxonomy 템플릿이기 때문에 `Pages` 를 직접 호출할 수도 있지만,
+Hugo에서 taxonomy엔 순서가 없기 때문에 부모 카테고리가 카테고리 배열에서 첫 번째 값인 조건을 만족시키기 위해
+직접 `Page` 배열을 만들었습니다.
+
+태그의 taxonomy 템플릿과의 가장 큰 차이점은 헤더 아래에 하위 카테고리들에 대한 바로가기 링크를 표시한다는 것입니다.
+부모-자식 카테고리 간에 이동을 용이하게 하기 위해 이와 같은 바로가기 링크를 추가했고,
+이것이 폴더-파일 관계와 유사하다 생각해 그러한 아이콘으로 직관성을 더했습니다.
 
 렌더링하기 전에 한가지 유의할 점은,
 `parent` 라는 임의의 명칭을 사용하는 해당 템플릿은 자동으로 카테고리 페이지들을 만들어내지 않습니다.
@@ -1031,6 +1048,7 @@ layout: "parent"
 ### 자식 카테고리 템플릿 추가
 
 자식 카테고리 템플릿은 동일하게 `layouts/categories/` 경로 아래에 추가합니다.
+CSS 스타일은 부모 카테고리 템플릿과 동일한 설정을 공유합니다.
 
 ```html
 <!-- layouts/categories/child.html -->
@@ -1185,6 +1203,9 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 새로운 템플릿의 위치는 앞에서 카테고리 파싱 템플릿을 추가했던 `layouts/_partials/categories/`
 경로가 적절해보입니다. 여기에 `menu.html` 템플릿을 추가하겠습니다.
 
+{{< tabs "categories-menu" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/_partials/categories/menu.html -->
 
@@ -1202,7 +1223,6 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
   </label>
 
   <ul class="categories-menu" id="categories-menu">
-    {{/* Build category tree and count posts */}}
     <!-- 부모-자식 카테고리 트리 구성 -->
     {{ $categoryTree := dict }}
     {{ range (where .Site.RegularPages "Section" "posts") }}
@@ -1285,25 +1305,9 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 </div>
 {{ end }}
 ```
+{{% /tab %}}
 
-메뉴 카테고리의 핵심 기능은 카테고리를 펼치고 접을 수 있는 기능과
-카테고리와 연관된 게시글의 수를 카운팅하여 표시하는 것입니다.
-
-첫 번째, 카테고리를 펼치고 접는 기능은 체크박스를 통해 이루어집니다.
-기능상 체크박스지만 스타일을 적용하게 되면 화살표로 보이는데,
-체크박스를 클릭하면 하위 카테고리가 펼쳐지게 됩니다.
-
-두 번째, 카테고리와 연관된 게시글의 수를 카운팅하는 방식은
-처음에 `categoryCount` 라는 맵을 만들고 카테고리 트리를 만들 때
-카운팅도 같이 하려고 했지만, Hugo에서 맵은 불변성을 가져서
-아무리 카운팅해도 1 이상으로 올라가지 않았습니다.
-그래서, 완성된 카테고리 트리를 순회하는 과정에서 매번 모든 게시글 목록을 가져와
-현재 카테고리와 연관된 게시글의 수를 세는 방식을 채택했습니다.
-
-아래 스타일도 같이 추가하겠습니다.
-폰트 사이즈나 여백 등 기본적인 스타일 외에
-펼치기/접기 체크박스가 체크된 여부에 따라 화살표를 회전시키는 스타일도 있습니다.
-
+{{% tab "CSS" %}}
 ```scss
 .book-categories {
   margin: $padding-16 0;
@@ -1355,9 +1359,26 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
   }
 }
 ```
+{{% /tab %}}
+
+{{< /tabs >}}
+
+메뉴 카테고리의 핵심 기능은 카테고리를 펼치고 접을 수 있는 기능과
+카테고리와 연관된 게시글의 수를 카운팅하여 표시하는 것입니다.
+
+첫 번째, 카테고리를 펼치고 접는 기능은 체크박스를 통해 이루어집니다.
+기능상 체크박스지만 스타일을 적용하게 되면 화살표로 보이는데,
+체크박스를 클릭하면 하위 카테고리가 펼쳐지게 됩니다.
+
+두 번째, 카테고리와 연관된 게시글의 수를 카운팅하는 방식은
+처음에 `categoryCount` 라는 맵을 만들고 카테고리 트리를 만들 때
+카운팅도 같이 하려고 했지만, Hugo에서 맵은 불변성을 가져서
+아무리 카운팅해도 1 이상으로 올라가지 않았습니다.
+그래서, 완성된 카테고리 트리를 순회하는 과정에서 매번 모든 게시글 목록을 가져와
+현재 카테고리와 연관된 게시글의 수를 세는 방식을 채택했습니다.
 
 마지막으로, `layouts/_partials/docs/menu.html` 템플릿으로 돌아가서
-검색창 아래에 방금 추가한 템플릿을 호출해주면 됩니다.
+검색창 아래에 방금 추가한 템플릿을 호출해주면 메뉴 영역에 카테고리 트리가 나타납니다.
 
 ```html
 <!-- layouts/_partials/docs/menu.html -->
@@ -1369,14 +1390,17 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 <!-- ... -->
 ```
 
-여기까지 적용했다면 아래 이미지와 같이 메뉴에 카테고리가 보여집니다.
+여기까지 적용했다면 아래 이미지와 같이 메뉴에 카테고리 트리가 보여집니다.
 
-![카테고리 메뉴](https://dl.dropboxusercontent.com/scl/fi/dfuwpvpv27nzbn8drlfs9/hugo-39-categories-menu.webp?rlkey=gg0qotqspkfblua4gv7454c2h&dl=0)
+![메뉴에서 보이는 카테고리 트리](https://dl.dropboxusercontent.com/scl/fi/dfuwpvpv27nzbn8drlfs9/hugo-39-categories-menu.webp?rlkey=gg0qotqspkfblua4gv7454c2h&dl=0)
 
 ## 게시글 항목 개선하기
 
 태그와 카테고리 페이지를 추가했으니 처음에 만들다만 게시글 항목 템플릿을 완성시켜보겠습니다.
 
+{{< tabs "post-item-complete" >}}
+
+{{% tab "HTML" %}}
 ```html
 <!-- layouts/_partials/docs/post-item.html -->
 
@@ -1441,12 +1465,9 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 
 </article>
 ```
+{{% /tab %}}
 
-[게시글 항목 템플릿 추가](#게시글-항목-템플릿-추가) 시에 만들었던 `post-item` 템플릿 중간에
-`post-categories` 및 `post-tags` 요소를 추가했습니다.
-
-두 가지, 태그와 카테고리 요소는 칩 형태로 표현하는게 가장 보기 좋다고 생각하여 아래 스타일을 적용했습니다.
-
+{{% tab "CSS" %}}
 ```scss
 .post-categories {
   display: flex;
@@ -1511,8 +1532,12 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
   }
 }
 ```
+{{% /tab %}}
 
-그 결과는 아래 이미지처럼 보여집니다.
+{{< /tabs >}}
+
+[게시글 항목 템플릿 추가](#게시글-항목-템플릿-추가) 시에 만들었던 `post-item` 템플릿 중간에
+`post-categories` 및 `post-tags` 요소를 칩 형태로 추가했습니다.
 
 ![태그와 카테고리를 추가하여 완성된 게시글 항목](https://dl.dropboxusercontent.com/scl/fi/wgpcod2e86fb6kpnq6cnd/hugo-40-post-item-complete.webp?rlkey=tqzyqvdn0j5c4r81cg96ukpuq&dl=0)
 

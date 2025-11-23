@@ -10,14 +10,12 @@ categories: ["Project", "Open Source"]
 tags: ["OSSCA", "PyTorch", "OpenUp", "Open Source", "Translation", "RST", "Github", "파이토치", "오픈소스", "번역"]
 ---
 
-{{< hint success >}}
-<p style="margin-bottom: 0;"><i class="fa-solid fa-lightbulb"></i> 오픈소스 컨트리뷰션 아카데미 소개</p>
-<ul style="margin: 0.5rem 0;">
-<li>오픈소스 컨트리뷰션 아카데미 <b>체험형 프로그램</b>은 오픈소스 프로젝트에 익숙하지 않은 예비 개발자를 위한 <b>6주 간</b>의 속성 컨트리뷰션 체험형 패키지 입니다.</li>
-<li>제가 참여한 <b>PyTorch 문서 한글화 프로젝트</b>는 파이토치 한국어 튜토리얼 문서를 번역하여 PR을 올리고 멘토/멘티로부터 리뷰를 받는 활동을 했습니다.</li>
-<li>아카데미 활동에 관심있다면 <a href="https://www.contribution.ac/" target="_blank">해당 링크</a>로 이동하여 향후 일정을 확인할 수 있습니다.</li>
-</ul>
-{{< /hint >}}
+{{% hint success %}}
+<i class="fa-solid fa-lightbulb"></i> 오픈소스 컨트리뷰션 아카데미 소개
+- 오픈소스 컨트리뷰션 아카데미 **체험형 프로그램**은 오픈소스 프로젝트에 익숙하지 않은 예비 개발자를 위한 **6주 간**의 속성 컨트리뷰션 체험형 패키지 입니다.
+- 제가 참여한 **PyTorch 문서 한글화 프로젝트**는 파이토치 한국어 튜토리얼 문서를 번역하여 PR을 올리고 멘토/멘티로부터 리뷰를 받는 활동을 했습니다.
+- 아카데미 활동에 관심있다면 [해당 링크](https://www.contribution.ac/)로 이동하여 향후 일정을 확인할 수 있습니다.
+{{% /hint %}}
 
 25년 9월 17일부터 10월 31일까지 6주간 OSSCA에 멘티로 참여하면서 경험한 과정을 공유드리고자 합니다.
 
