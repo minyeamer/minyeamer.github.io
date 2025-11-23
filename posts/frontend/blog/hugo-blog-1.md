@@ -429,9 +429,9 @@ echo -e "\033[0;32mDeploying updates to GitHub***\033[0m"
 # 모든 서브모듈의 변경사항을 업데이트
 git submodule update --remote
 
-# 프로젝트 빌드
-# `hugo -t <테마명>`
-hugo -t Book
+# `hugo -t <테마명>` 명령어로 Hugo 정적 페이지 렌더링
+# `--gc` 옵션은 `garbage collection` 을 의미하며 불필요한 페이지를 삭제
+hugo -t Book --gc
 
 # `source` 브랜치로 이동
 cd public
