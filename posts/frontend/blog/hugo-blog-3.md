@@ -572,7 +572,7 @@ The Paginate method is more flexible, and strongly recommended.
 
 페이지네이션 템플릿을 렌더링하면 아래 이미지처럼 보입니다.
 
-<img src="https://dl.dropboxusercontent.com/scl/fi/ese1anj2erz20tjsy4zd3/hugo-32-pagination-with-style.webp?rlkey=lpaiva9puxov3agnsyh0cget1&dl=0" alt="스타일이 적용된 페이지네이션" style="width: 100%;">
+![스타일이 적용된 페이지네이션](https://dl.dropboxusercontent.com/scl/fi/ese1anj2erz20tjsy4zd3/hugo-32-pagination-with-style.webp?rlkey=lpaiva9puxov3agnsyh0cget1&dl=0)
 
 페이지네이션 템플릿은 이전 버튼, 페이지 링크 10개, 다음 버튼이 순서대로 나열되어 있습니다.
 
