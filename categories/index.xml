@@ -37,6 +37,20 @@
       <description></description>
     </item>
     <item>
+      <title>Apache Spark</title>
+      <link>https://minyeamer.github.io/categories/apache-spark/</link>
+      <pubDate>Sat, 12 Jul 2025 21:29:06 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/apache-spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Engineering</title>
+      <link>https://minyeamer.github.io/categories/data-engineering/</link>
+      <pubDate>Sat, 12 Jul 2025 21:29:06 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/data-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Algorithm</title>
       <link>https://minyeamer.github.io/categories/algorithm/</link>
       <pubDate>Thu, 03 Jul 2025 23:15:02 +0900</pubDate>
@@ -58,13 +72,6 @@
       <description></description>
     </item>
     <item>
-      <title>Data Engineering</title>
-      <link>https://minyeamer.github.io/categories/data-engineering/</link>
-      <pubDate>Sun, 08 Jun 2025 16:52:44 +0900</pubDate>
-      <guid>https://minyeamer.github.io/categories/data-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Crawling</title>
       <link>https://minyeamer.github.io/categories/crawling/</link>
       <pubDate>Sun, 26 Mar 2023 18:52:14 +0900</pubDate>
@@ -76,6 +83,13 @@
       <link>https://minyeamer.github.io/categories/data-engineering/apache-airflow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://minyeamer.github.io/categories/data-engineering/apache-airflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache Spark</title>
+      <link>https://minyeamer.github.io/categories/data-engineering/apache-spark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://minyeamer.github.io/categories/data-engineering/apache-spark/</guid>
       <description></description>
     </item>
     <item>
