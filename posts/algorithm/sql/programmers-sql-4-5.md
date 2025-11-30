@@ -41,7 +41,7 @@ SQL 코딩테스트는 어떻게 나오나 궁금해서 프로그래머스 Lv.4,
 |[131118](https://school.programmers.co.kr/learn/courses/30/lessons/131118)|서울에 위치한 식당 목록 출력하기|SELECT|Lv. 4|75%|
 |[131117](https://school.programmers.co.kr/learn/courses/30/lessons/131117)|5월 식품들의 총매출 조회하기|JOIN|Lv. 4|84%|
 |[131116](https://school.programmers.co.kr/learn/courses/30/lessons/131116)|식품분류별 가장 비싼 식품의 정보 조회하기|GROUP BY|Lv. 4|85%|
-|[62284](https://school.programmers.co.kr/learn/courses/30/lessons/62284)|우유와 요거트가 담긴 장바구니|Summer/Winter Coding(2019)|Lv. 4|74%|
+|[62284](https://school.programmers.co.kr/learn/courses/30/lessons/62284)|우유와 요거트가 담긴 장바구니|GROUP BY|Lv. 4|74%|
 |[59413](https://school.programmers.co.kr/learn/courses/30/lessons/59413)|입양 시각 구하기(2)|GROUP BY|Lv. 4|61%|
 |[59045](https://school.programmers.co.kr/learn/courses/30/lessons/59045)|보호소에서 중성화한 동물|JOIN|Lv. 4|85%|
 
