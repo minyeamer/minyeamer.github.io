@@ -135,15 +135,42 @@
     <lastmod>2025-10-28T23:23:55+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/apache-spark/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/apache-spark/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/blog/spark-study-7/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
+    <loc>https://minyeamer.github.io/blog/spark-study-8/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/categories/data-engineering/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/pandas-udf/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/pyspark/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/spark-sql/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/study/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/udf/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/%EA%B3%A0%EC%B0%A8%ED%95%A8%EC%88%98/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/%EC%8A%A4%ED%8C%8C%ED%81%AC/</loc>
+    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/spark-study-7/</loc>
     <lastmod>2025-07-12T21:29:06+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/hive/</loc>
@@ -159,15 +186,6 @@
     <lastmod>2025-07-12T21:29:06+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/rdbms/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/study/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%8A%A4%ED%8C%8C%ED%81%AC/</loc>
     <lastmod>2025-07-12T21:29:06+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-6/</loc>
@@ -186,12 +204,6 @@
     <lastmod>2025-07-10T23:56:54+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/tags/parquet/</loc>
-    <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/pyspark/</loc>
-    <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/spark-sql/</loc>
     <lastmod>2025-07-10T23:56:54+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-5/</loc>
