@@ -7,7 +7,7 @@ description: >
   Variable 사용법과 Airflow 3.0 업데이트 내용까지 다룹니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
-tags: ["Apache Airflow", "Jinja 템플릿", "XCom", "Variable", "템플릿 변수", "BashOperator", "PythonOperator", "데이터 엔지니어링", "Python", "Study"]
+tags: ["Apache Airflow", "Jinja 템플릿", "XCom", "Variable", "템플릿 변수", "BashOperator", "PythonOperator", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
 
 ## Jinja 템플릿
