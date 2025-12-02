@@ -206,6 +206,42 @@
     <loc>https://minyeamer.github.io/tags/parquet/</loc>
     <lastmod>2025-07-10T23:56:54+09:00</lastmod>
   </url><url>
+    <loc>https://minyeamer.github.io/categories/linux/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/linux/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/mac/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/install-ubuntu-server/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/ssh/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/ubuntu/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/ubuntu/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/ubuntu-server/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/utm/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/virtual-machine/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
+  </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-5/</loc>
     <lastmod>2025-07-05T23:03:04+09:00</lastmod>
   </url><url>
@@ -507,5 +543,7 @@
     <loc>https://minyeamer.github.io/search/</loc>
   </url><url>
     <loc>https://minyeamer.github.io/categories/algorithm/sql/</loc>
+  </url><url>
+    <loc>https://minyeamer.github.io/categories/linux/ubuntu/</loc>
   </url>
 </urlset>

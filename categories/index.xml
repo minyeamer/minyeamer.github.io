@@ -51,6 +51,20 @@
       <description></description>
     </item>
     <item>
+      <title>Linux</title>
+      <link>https://minyeamer.github.io/categories/linux/</link>
+      <pubDate>Sun, 06 Jul 2025 15:47:47 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>https://minyeamer.github.io/categories/ubuntu/</link>
+      <pubDate>Sun, 06 Jul 2025 15:47:47 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Algorithm</title>
       <link>https://minyeamer.github.io/categories/algorithm/</link>
       <pubDate>Thu, 03 Jul 2025 23:15:02 +0900</pubDate>
@@ -118,6 +132,13 @@
       <link>https://minyeamer.github.io/categories/algorithm/sql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://minyeamer.github.io/categories/algorithm/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>https://minyeamer.github.io/categories/linux/ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://minyeamer.github.io/categories/linux/ubuntu/</guid>
       <description></description>
     </item>
   </channel>
