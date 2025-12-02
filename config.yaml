@@ -1,5 +1,5 @@
 baseURL: "https://minyeamer.github.io/"
-title: Minystory
+title: "Minystory"
 description: "minyeamer's blog"
 theme: "Book"
 languageCode: "ko-kr"
@@ -64,6 +64,9 @@ params:
 
 markup:
   goldmark:
+    extensions:
+      typographer:
+        disable: true
     renderer:
       unsafe: true
   highlight:
@@ -74,6 +77,6 @@ markup:
     endLevel: 3
 
 permalinks:
-  posts: /blog/:slugorcontentbasename/
+  posts: "/blog/:slugorcontentbasename/"
 
 ignoreFiles: ["_page.md", "README.md"]
