@@ -158,9 +158,11 @@ PyTorch로 딥러닝 모델 학습을 해본 사람이라면 누구나 알만한
 물론, 제 생각만을 설득의 근거로 사용할 순 없기 때문에
 아래 이미지와 같이 [#978](https://github.com/PyTorchKorea/tutorials-kr/issues/978) 이슈를 올리면서 실제 번역 사례를 제시했습니다.
 
-<div class="center-block">
-<img src="https://dl.dropboxusercontent.com/scl/fi/rfv4oagugifuazt3lgomv/ossca-09-week3-issue.webp?rlkey=4fpavcp4lpy64tmk5ebzhiey7&dl=0" alt="혼동/오차 행렬 번역 사례" style="max-width: 750px;">
-</div>
+{{< img
+  src="https://dl.dropboxusercontent.com/scl/fi/rfv4oagugifuazt3lgomv/ossca-09-week3-issue.webp?rlkey=4fpavcp4lpy64tmk5ebzhiey7&dl=0"
+  alt="혼동/오차 행렬 번역 사례"
+  max-width="750px"
+  align="center" >}}
 
 `confusion matrix` 는 "오차 행렬" 또는 "혼동 행렬" 이라고 번역되는 사례가 있는데,
 비교적 공신력 있는 문서에서는 "혼동 행렬" 이라고 번역되는 사례가 많아서 후자를 선택했습니다.
@@ -172,9 +174,11 @@ PyTorch 튜토리얼에서 "오차 행렬" 이라고 번역된 사례가 있어 
 제안된 용어는 디스코드 채널에서 민주적으로 투표하여 선정했고,
 제가 제안한 `confusion matrix` 도 채택되었습니다.
 
-<div class="center-block">
-<img src="https://dl.dropboxusercontent.com/scl/fi/hmsdnkm7fdq9tmf1remp1/ossca-10-week3-vote.webp?rlkey=tb650kys85utvhhkduczxtd6f&dl=0" alt="디스코드 용어 투표" style="max-width: 400px;">
-</div>
+{{< img
+  src="https://dl.dropboxusercontent.com/scl/fi/hmsdnkm7fdq9tmf1remp1/ossca-10-week3-vote.webp?rlkey=tb650kys85utvhhkduczxtd6f&dl=0"
+  alt="디스코드 용어 투표"
+  max-width="400px"
+  align="center" >}}
 
 [#1009](https://github.com/PyTorchKorea/tutorials-kr/pull/1009) PR을 올려 현재 Merged 되었으며
 [PyTorch 튜토리얼 번역 가이드](https://github.com/PyTorchKorea/tutorials-kr/blob/master/TRANSLATION_GUIDE.md#용어-사용-규칙)에서
