@@ -1,0 +1,238 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content="uv,Python,프로젝트 관리,가상환경,PyPI,배포,패키지 관리,Rust,Python 패키지"><meta name=description content="uv를 활용한 Python 프로젝트 구성 및 배포 가이드. Rust 기반 고속 패키지 관리자로 프로젝트 초기화, 가상환경 생성, 의존성 추가부터 PyPI 배포까지 단계별로 안내합니 …"><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/blog/uv-project/><link rel=icon href=https://minyeamer.github.io/images/favicons/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://minyeamer.github.io/images/favicons/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://minyeamer.github.io/images/favicons/favicon-32x32.png><link rel=apple-touch-icon href=https://minyeamer.github.io/images/favicons/apple-touch-icon.png><link rel=mask-icon href=https://minyeamer.github.io/images/favicons/apple-touch-icon.png><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:title" content="[Python] uv 프로젝트 구성하고 배포하기"><meta property="og:description" content="uv를 활용한 Python 프로젝트 구성 및 배포 가이드. Rust 기반 고속 패키지 관리자로 프로젝트 초기화, 가상환경 생성, 의존성 추가부터 PyPI 배포까지 단계별로 안내합니 …"><meta property="og:type" content="article"><meta property="og:url" content="https://minyeamer.github.io/blog/uv-project/"><meta property="og:image" content="https://dl.dropboxusercontent.com/scl/fi/jj13nbquunpa7gfeok7qf/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa&amp;st=escdsoau&amp;dl=0"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-07-23T00:47:11+09:00"><meta property="article:modified_time" content="2025-07-23T00:47:11+09:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://dl.dropboxusercontent.com/scl/fi/jj13nbquunpa7gfeok7qf/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa&amp;st=escdsoau&amp;dl=0"><meta name=twitter:title content="[Python] uv 프로젝트 구성하고 배포하기"><meta name=twitter:description content="uv를 활용한 Python 프로젝트 구성 및 배포 가이드. Rust 기반 고속 패키지 관리자로 프로젝트 초기화, 가상환경 생성, 의존성 추가부터 PyPI 배포까지 단계별로 안내합니 …"><meta name=twitter:site content="@https://x.com/minyeamer"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://minyeamer.github.io/posts/"},{"@type":"ListItem","position":2,"name":"[Python] uv 프로젝트 구성하고 배포하기","item":"https://minyeamer.github.io/blog/uv-project/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"[Python] uv 프로젝트 구성하고 배포하기","name":"[Python] uv 프로젝트 구성하고 배포하기","description":"uv를 활용한 Python 프로젝트 구성 및 배포 가이드. Rust 기반 고속 패키지 관리자로 프로젝트 초기화, 가상환경 생성, 의존성 추가부터 PyPI 배포까지 단계별로 안내합니다. pip보다 빠른 uv로 효율적인 개발 환경을 구축하세요.\n","keywords":["uv","Python","프로젝트 관리","가상환경","PyPI","배포","패키지 관리","Rust","Python 패키지"],"articleBody":"Python으로 새로운 프로젝트를 시작하려고 하는데 uv가 프로젝트 관리에 좋다는 얘기를 들어서 어떻게 활용할 수 있을지 찾아보았습니다. 단순히 프로젝트 의존성을 빠르게 설치해줄 뿐 아니라 가상환경과 PyPI 배포까지 지원해줘서 사용해보려고 합니다.\nuv # GitHub - astral-sh/uv: An extremely fast Python package and project manager, … An extremely fast Python package and project manager, written in Rust. - astral-sh/uv GitHub uv는 Rust로 작성된 매우 빠른 Python 패키지 및 프로젝트 관리자라고 설명합니다. Rust 기반으로 만들어져서 그런지 pip 나 poetry 와 비교했을 때 굉장히 빠른 속도를 보여줍니다.\n설치하기 # 설치 스크립트를 내려받아 설치할 수 있습니다.\nCopy bash # macOS 또는 Linux curl -LsSf https://astral.sh/uv/install.sh | sh Copy bash # Windows powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\" 또는, 간단하게 PyPI를 통하거나 맥에서는 brew를 통해 설치할 수 있습니다.\nCopy bash pip install uv Copy bash brew install uv 설치한 후 버전을 조회하여 정상적으로 설치되었는지 확인할 수 있습니다.\nCopy bash % uv --version uv 0.8.0 (Homebrew 2025-07-17) 프로젝트 시작하기 # uv init 명령어를 통해 기본적인 프로젝트 구조를 생성할 수 있습니다. 프로젝트명은 \"linkmerce\", 파이썬 버전은 3.10으로 설정하여 프로젝트를 시작했습니다.\nCopy bash % uv init linkmerce --python 3.10 Initialized project `linkmerce` at `{$root}/linkmerce` uv init 명령어를 통해 생성되는 프로젝트 구조는 아래와 같습니다.\nCopy text ./ ├── .git/ ├── .gitignore ├── .python-version ├── main.py ├── README.md └── pyproject.toml 이 중에서 pyproject.toml 파일은 프로젝트명 또는 패키지 의존성과 같은 메타데이터를 명시하는 설정 파일입니다. 프로젝트를 초기화하면서 만들어진 pyproject.toml 의 내용을 살펴보면 아래와 같습니다.\nCopy text [project] name = \"linkmerce\" version = \"0.1.0\" description = \"Add your description here\" readme = \"README.md\" requires-python = \"\u003e=3.10\" dependencies = [] 초기 버전은 \"0.1.0\"으로 권장하고, 앞에서 설정한 파이썬 3.10 버전이 최소 요구사항으로 명시되어 있습니다.\n가상환경 생성하기 # uv venv 명령어를 통해 .venv/ 위치에 가상환경을 생성할 수 있습니다. --name 옵션을 주어 가상환경 이름을 변경할 수 있습니다.\nCopy bash % uv venv --python 3.10 Using CPython 3.10.18 Creating virtual environment at: .venv Activate with: source .venv/bin/activate 가상환경 실행은 출력 결과에서 설명하듯이 source .venv/bin/activate 명령어를 입력하면 됩니다.\n의존성 추가하기 # uv add 명령어를 통해 패키지 의존성을 설치할 수 있습니다. 개발할 때만 사용하고 배포할 때는 활용하지 않을 경우 --dev 옵션을 추가할 수 있습니다.\n의존성을 고려하지 않고 가상환경에만 패키지를 설치하고 싶은 경우엔 uv pip install 명령어를 사용할 수 있습니다.\nCopy bash % uv add requests Using CPython 3.10.18 Creating virtual environment at: .venv Resolved 6 packages in 158ms Prepared 5 packages in 101ms Installed 5 packages in 5ms + certifi==2025.7.14 + charset-normalizer==3.4.2 + idna==3.10 + requests==2.32.4 + urllib3==2.5.0 가벼운 패키지이긴 하지만 pip 로 설치했을 때 대비해서 훨씬 빠른 속도를 체감합니다. uv add 명령어로 패키지 의존성을 설치하면 pyproject.toml 설정 파일에 자동으로 의존성이 추가됩니다.\nCopy bash [project] name = \"linkmerce\" version = \"0.1.0\" description = \"Add your description here\" readme = \"README.md\" requires-python = \"\u003e=3.10\" dependencies = [ \"requests\u003e=2.32.4\", ] 또한, 동시에 생성되는 uv.lock 파일에는 패키지 의존성에 대한 바이너리 경로가 추가되어 있습니다. 의존성의 버전을 정확히 잠가버리기 때문에 다른 환경에서도 일관된 개발 및 배포 환경을 유지할 수 있습니다.\nCopy bash version = 1 revision = 2 requires-python = \"\u003e=3.10\" ... [[package]] name = \"linkmerce\" version = \"0.1.0\" source = { virtual = \".\" } dependencies = [ { name = \"requests\" }, ] [package.metadata] requires-dist = [{ name = \"requests\", specifier = \"\u003e=2.32.4\" }] [[package]] name = \"requests\" version = \"2.32.4\" source = { registry = \"https://pypi.org/simple\" } dependencies = [ { name = \"certifi\" }, { name = \"charset-normalizer\" }, { name = \"idna\" }, { name = \"urllib3\" }, ] sdist = { url = \"https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz\", hash = \"sha256:27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422\", size = 135258, upload-time = \"2025-06-09T16:43:07.34Z\" } wheels = [ { url = \"https://files.pythonhosted.org/packages/7c/e4/56027c4a6b4ae70ca9de302488c5ca95ad4a39e190093d6c1a8ace08341b/requests-2.32.4-py3-none-any.whl\", hash = \"sha256:27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c\", size = 64847, upload-time = \"2025-06-09T16:43:05.728Z\" }, ] 패키지 배포하기 # 프로젝트 구성하기 # 패키지를 배포하기에 앞서 프로젝트와 관련된 폴더를 생성하고 간단한 모듈을 추가했습니다.\nCopy bash ./ ├── .git/ ├── src/ │ └── linkmerce/ │ ├── auth/ │ ├── collect/ │ ├── parse/ │ └── utils/ ├── .gitignore ├── .python-version ├── main.py ├── README.md ├── pyproject.toml └── uv.lock 패키지 빌드하기 # twine 으로 패키지를 빌드할 때는 패키지 루트 경로를 변경하는 기능이 없어서 프로젝트 명칭의 폴더 아래에 패키지를 놓아야 했던 것으로 기억합니다.\nuv build 명령어로 패키지를 빌드할 때는 pyproject.toml 설정 파일에서 module-root 값에 루트 경로를 지정할 수 있습니다. 해당 값을 명시하지 않으면 기본 루트 경로로 src/ 가 적용되고 이는 uv에서 권장하는 사항입니다.\nCopy bash [build-system] requires = [\"uv_build\u003e=0.8.0,\u003c0.9.0\"] build-backend = \"uv_build\" [tool.uv.build-backend] module-name = \"linkmerce\" module-root = \"src\" uv build 와 관련한 자세한 내용은 공식 문서를 참고할 수 있습니다.\nuv build 명령어로 패키지를 빌드하면 dist/ 경로에 .whl 파일이 생성됩니다.\nCopy bash % uv build Building source distribution (uv build backend)... Building wheel from source distribution (uv build backend)... Successfully built dist/linkmerce-0.1.0.tar.gz Successfully built dist/linkmerce-0.1.0-py3-none-any.whl PyPI에 배포하기 # PyPI에 배포하기 전에 먼저 API 토큰을 생성해야 합니다. 자세한 내용은 안내 문서를 참고할 수도 있습니다.\n과거에 아래와 같이 PyPI에 패키지를 등록한 적이 있는데, 이번에 새로운 패키지를 등록해봅니다.\nAccount settings 페이지의 API tokens 항목에서 API 토큰을 발급받을 수 있습니다.\nAPI 토큰은 pypi-* 형식을 가지는데, 해당 토큰 값을 uv publish 명령어로 배포할 때 추가하면 PyPI 인증을 처리하고 PyPI에 패키지를 배포할 수 있습니다.\nCopy bash % uv publish --token pypi-* Publishing 2 files https://upload.pypi.org/legacy/ Uploading linkmerce-0.1.0-py3-none-any.whl (7.8KiB) Uploading linkmerce-0.1.0.tar.gz (5.5KiB) PyPI 프로젝트 페이지를 확인해보면 방금 배포한 패키지가 올라온 것을 볼 수 있습니다.\n매번 uv publish 명령어를 작성하는 것은 불편하기 때문에 dist.sh 스크립트 파일로 명령어를 내보내서 간단하게 호출할 수 있습니다.\nCopy bash echo \"uv publish --token pypi-*\" \u003e\u003e dist.sh chmod 755 dist.sh Copy bash # 다음에 배포할 떄는 간단하게 uv publish 명령어 호출 ./dist.sh ","wordCount":"890","inLanguage":"en","image":"https:\/\/dl.dropboxusercontent.com\/scl\/fi\/jj13nbquunpa7gfeok7qf\/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa\u0026st=escdsoau\u0026dl=0","datePublished":"2025-07-23T00:47:11+09:00","dateModified":"2025-07-23T00:47:11+09:00","author":{"@type":"Person","name":"minyeamer"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://minyeamer.github.io/blog/uv-project/"},"publisher":{"@type":"Person","name":"Minystory","logo":{"@type":"ImageObject","url":"https://minyeamer.github.io/images/favicons/favicon.ico"}}}</script><title>[Python] uv 프로젝트 구성하고 배포하기 | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/blog/uv-project/><link rel=stylesheet href=/book.min.311a0d28e56a8dc9294d8724f37af7a5345b31f874fa82712d0b85f235e6e6a4.css integrity="sha256-MRoNKOVqjckpTYck83r3pTRbMfh0+oJxLQuF8jXm5qQ=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.b3a1d169e34838f7d087b1b349d548fd7e7143ac4a00d4525a69a443316a96c8.js integrity="sha256-s6HRaeNIOPfQh7GzSdVI/X5xQ6xKANRSWmmkQzFqlsg=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.152e4fefe8d2edbae4270763eb1ed9dba0ec320980a1f1cb33e063498c95a900.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.152e4fefe8d2edbae4270763eb1ed9dba0ec320980a1f1cb33e063498c95a900.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ8Z9RMBPJ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BJ8Z9RMBPJ")</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-posts book-layout-post"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src=/images/profile/menu.jpg alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(30)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/sql/><i class="fa-solid fa-file"></i>
+SQL
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data-engineering>
+<label for=cat-data-engineering class="categories-toggle categories-link"><a href=/categories/data-engineering/><i class="fa-solid fa-folder"></i>
+Data Engineering
+<span class=category-count>(19)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data-engineering/apache-airflow/><i class="fa-solid fa-file"></i>
+Apache Airflow
+<span class=category-count>(7)</span></a></li><li class=categories-link><a href=/categories/data-engineering/apache-spark/><i class="fa-solid fa-file"></i>
+Apache Spark
+<span class=category-count>(8)</span></a></li><li class=categories-link><a href=/categories/data-engineering/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-frontend>
+<label for=cat-frontend class="categories-toggle categories-link"><a href=/categories/frontend/><i class="fa-solid fa-folder"></i>
+Frontend
+<span class=category-count>(7)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/frontend/blog/><i class="fa-solid fa-file"></i>
+Blog
+<span class=category-count>(7)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-linux>
+<label for=cat-linux class="categories-toggle categories-link"><a href=/categories/linux/><i class="fa-solid fa-folder"></i>
+Linux
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/linux/ubuntu/><i class="fa-solid fa-file"></i>
+Ubuntu
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-project>
+<label for=cat-project class="categories-toggle categories-link"><a href=/categories/project/><i class="fa-solid fa-folder"></i>
+Project
+<span class=category-count>(2)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/project/open-source/><i class="fa-solid fa-file"></i>
+Open Source
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/project/tools/><i class="fa-solid fa-file"></i>
+Tools
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/blog/hugo-blog-3/ title="Hugo 블로그 만들기 (3) - 태그, 카테고리 페이지 추가"><div class=recent-post-title>Hugo 블로그 만들기 (3) - 태그, 카테고리 페이지 추가</div><div class=recent-post-date><time datetime=2025-11-22>2025.11.22</time></div></a></li><li class=recent-post-item><a href=/blog/hugo-blog-2/ title="Hugo 블로그 만들기 (2) - 메인 레이아웃 개선"><div class=recent-post-title>Hugo 블로그 만들기 (2) - 메인 레이아웃 개선</div><div class=recent-post-date><time datetime=2025-11-04>2025.11.04</time></div></a></li><li class=recent-post-item><a href=/blog/hugo-blog-1/ title="Hugo 블로그 만들기 (1) - 프로젝트 기획 및 구조 설계"><div class=recent-post-title>Hugo 블로그 만들기 (1) - 프로젝트 기획 및 구조 설계</div><div class=recent-post-date><time datetime=2025-11-01>2025.11.01</time></div></a></li><li class=recent-post-item><a href=/blog/openup-handson/ title="[OSSCA] 2025 오픈소스 컨트리뷰션 아카데미 - PyTorch 문서 한글화 참여 후기"><div class=recent-post-title>[OSSCA] 2025 오픈소스 컨트리뷰션 아카데미 - PyTorch 문서 한글화 참여 후기</div><div class=recent-post-date><time datetime=2025-10-28>2025.10.28</time></div></a></li><li class=recent-post-item><a href=/blog/uv-project/ title="[Python] uv 프로젝트 구성하고 배포하기"><div class=recent-post-title>[Python] uv 프로젝트 구성하고 배포하기</div><div class=recent-post-date><time datetime=2025-07-23>2025.07.23</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control><i class="fa-solid fa-list book-icon" id=toc-icon></i></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#uv>uv</a></li><li><a href=#설치하기>설치하기</a></li><li><a href=#프로젝트-시작하기>프로젝트 시작하기</a></li><li><a href=#가상환경-생성하기>가상환경 생성하기</a></li><li><a href=#의존성-추가하기>의존성 추가하기</a></li><li><a href=#패키지-배포하기>패키지 배포하기</a><ul><li><a href=#프로젝트-구성하기>프로젝트 구성하기</a></li><li><a href=#패키지-빌드하기>패키지 빌드하기</a></li><li><a href=#pypi에-배포하기>PyPI에 배포하기</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><header class=post-header><div class=post-header-category><a href=/categories/project/tools/ class=post-header-category-link>Project/Tools</a></div><h1 class=post-header-title>[Python] uv 프로젝트 구성하고 배포하기</h1><div class=post-header-date><time datetime=2025-07-23T00:47:11+09:00>2025. 7. 23. 00:47</time></div></header><div class=book-cover><img src="https://dl.dropboxusercontent.com/scl/fi/jj13nbquunpa7gfeok7qf/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa&amp;st=escdsoau&amp;dl=0" alt="Cover Image" class=book-cover-img></div><p>Python으로 새로운 프로젝트를 시작하려고 하는데 uv가 프로젝트 관리에 좋다는 얘기를 들어서 어떻게 활용할 수 있을지 찾아보았습니다.
+단순히 프로젝트 의존성을 빠르게 설치해줄 뿐 아니라 가상환경과 PyPI 배포까지 지원해줘서 사용해보려고 합니다.</p><h2 id=uv>uv
+<a class=anchor href=#uv>#</a></h2><a href=https://github.com/astral-sh/uv target=_blank class=bookmark-card><div class=bookmark-image><img src=https://opengraph.githubassets.com/bd524299586f9c8c25f16d142f3bb6c92d4f85b3b33d5ea20a9ce360bdf5c435/astral-sh/uv alt="GitHub - astral-sh/uv: An extremely fast Python package and project manager, written in Rust."></div><div class=bookmark-content><h3 class=bookmark-title>GitHub - astral-sh/uv: An extremely fast Python package and project manager, …</h3><p class=bookmark-description>An extremely fast Python package and project manager, written in Rust. - astral-sh/uv</p><small class=bookmark-url>GitHub</small></div></a><p>uv는 Rust로 작성된 매우 빠른 Python 패키지 및 프로젝트 관리자라고 설명합니다.
+Rust 기반으로 만들어져서 그런지 <code>pip</code> 나 <code>poetry</code> 와 비교했을 때 굉장히 빠른 속도를 보여줍니다.</p><div style=text-align:center><img src="https://dl.dropboxusercontent.com/scl/fi/nw5qz64i85snrbm7ocir9/uv-01-fast.webp?rlkey=gwy75efcl9clbyzdenfq2z8eb&amp;dl=0" alt="uv 0.06s, poetry 0.99s, pdm 1.90s, pip-sync 4.63s" style=width:100%;max-width:691px></div><h2 id=설치하기>설치하기
+<a class=anchor href=#%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0>#</a></h2><p>설치 스크립트를 내려받아 설치할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># macOS 또는 Linux</span>
+</span></span><span class=line><span class=cl>curl -LsSf https://astral.sh/uv/install.sh <span class=p>|</span> sh</span></span></code></pre></div></div><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># Windows</span>
+</span></span><span class=line><span class=cl>powershell -ExecutionPolicy ByPass -c <span class=s2>&#34;irm https://astral.sh/uv/install.ps1 | iex&#34;</span></span></span></code></pre></div></div><p>또는, 간단하게 PyPI를 통하거나 맥에서는 brew를 통해 설치할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pip install uv</span></span></code></pre></div></div><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>brew install uv</span></span></code></pre></div></div><p>설치한 후 버전을 조회하여 정상적으로 설치되었는지 확인할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>% uv --version
+</span></span><span class=line><span class=cl>uv 0.8.0 <span class=o>(</span>Homebrew 2025-07-17<span class=o>)</span></span></span></code></pre></div></div><h2 id=프로젝트-시작하기>프로젝트 시작하기
+<a class=anchor href=#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0>#</a></h2><p><code>uv init</code> 명령어를 통해 기본적인 프로젝트 구조를 생성할 수 있습니다.
+프로젝트명은 "linkmerce", 파이썬 버전은 3.10으로 설정하여 프로젝트를 시작했습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>% uv init linkmerce --python 3.10
+</span></span><span class=line><span class=cl>Initialized project <span class=sb>`</span>linkmerce<span class=sb>`</span> at <span class=sb>`</span><span class=o>{</span><span class=nv>$root</span><span class=o>}</span>/linkmerce<span class=sb>`</span></span></span></code></pre></div></div><p><code>uv init</code> 명령어를 통해 생성되는 프로젝트 구조는 아래와 같습니다.</p><div class=book-codeblock data-lang><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">text</span></div><pre tabindex=0><code>./
+├── .git/
+├── .gitignore
+├── .python-version
+├── main.py
+├── README.md
+└── pyproject.toml</code></pre></div><p>이 중에서 <code>pyproject.toml</code> 파일은 프로젝트명 또는 패키지 의존성과 같은 메타데이터를 명시하는 설정 파일입니다.
+프로젝트를 초기화하면서 만들어진 <code>pyproject.toml</code> 의 내용을 살펴보면 아래와 같습니다.</p><div class=book-codeblock data-lang><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">text</span></div><pre tabindex=0><code>[project]
+name = &#34;linkmerce&#34;
+version = &#34;0.1.0&#34;
+description = &#34;Add your description here&#34;
+readme = &#34;README.md&#34;
+requires-python = &#34;&gt;=3.10&#34;
+dependencies = []</code></pre></div><p>초기 버전은 "0.1.0"으로 권장하고, 앞에서 설정한 파이썬 3.10 버전이 최소 요구사항으로 명시되어 있습니다.</p><h2 id=가상환경-생성하기>가상환경 생성하기
+<a class=anchor href=#%ea%b0%80%ec%83%81%ed%99%98%ea%b2%bd-%ec%83%9d%ec%84%b1%ed%95%98%ea%b8%b0>#</a></h2><p><code>uv venv</code> 명령어를 통해 <code>.venv/</code> 위치에 가상환경을 생성할 수 있습니다.
+<code>--name</code> 옵션을 주어 가상환경 이름을 변경할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>% uv venv --python 3.10
+</span></span><span class=line><span class=cl>Using CPython 3.10.18
+</span></span><span class=line><span class=cl>Creating virtual environment at: .venv
+</span></span><span class=line><span class=cl>Activate with: <span class=nb>source</span> .venv/bin/activate</span></span></code></pre></div></div><p>가상환경 실행은 출력 결과에서 설명하듯이 <code>source .venv/bin/activate</code> 명령어를 입력하면 됩니다.</p><h2 id=의존성-추가하기>의존성 추가하기
+<a class=anchor href=#%ec%9d%98%ec%a1%b4%ec%84%b1-%ec%b6%94%ea%b0%80%ed%95%98%ea%b8%b0>#</a></h2><p><code>uv add</code> 명령어를 통해 패키지 의존성을 설치할 수 있습니다.
+개발할 때만 사용하고 배포할 때는 활용하지 않을 경우 <code>--dev</code> 옵션을 추가할 수 있습니다.</p><p>의존성을 고려하지 않고 가상환경에만 패키지를 설치하고 싶은 경우엔 <code>uv pip install</code> 명령어를 사용할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>% uv add requests
+</span></span><span class=line><span class=cl>Using CPython 3.10.18
+</span></span><span class=line><span class=cl>Creating virtual environment at: .venv
+</span></span><span class=line><span class=cl>Resolved <span class=m>6</span> packages in 158ms
+</span></span><span class=line><span class=cl>Prepared <span class=m>5</span> packages in 101ms
+</span></span><span class=line><span class=cl>Installed <span class=m>5</span> packages in 5ms
+</span></span><span class=line><span class=cl> + <span class=nv>certifi</span><span class=o>==</span>2025.7.14
+</span></span><span class=line><span class=cl> + charset-normalizer<span class=o>==</span>3.4.2
+</span></span><span class=line><span class=cl> + <span class=nv>idna</span><span class=o>==</span>3.10
+</span></span><span class=line><span class=cl> + <span class=nv>requests</span><span class=o>==</span>2.32.4
+</span></span><span class=line><span class=cl> + <span class=nv>urllib3</span><span class=o>==</span>2.5.0</span></span></code></pre></div></div><p>가벼운 패키지이긴 하지만 <code>pip</code> 로 설치했을 때 대비해서 훨씬 빠른 속도를 체감합니다.
+<code>uv add</code> 명령어로 패키지 의존성을 설치하면 <code>pyproject.toml</code> 설정 파일에 자동으로 의존성이 추가됩니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>[</span>project<span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;linkmerce&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>version</span> <span class=o>=</span> <span class=s2>&#34;0.1.0&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>description</span> <span class=o>=</span> <span class=s2>&#34;Add your description here&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>readme</span> <span class=o>=</span> <span class=s2>&#34;README.md&#34;</span>
+</span></span><span class=line><span class=cl>requires-python <span class=o>=</span> <span class=s2>&#34;&gt;=3.10&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>dependencies</span> <span class=o>=</span> <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;requests&gt;=2.32.4&#34;</span>,
+</span></span><span class=line><span class=cl><span class=o>]</span></span></span></code></pre></div></div><p>또한, 동시에 생성되는 <code>uv.lock</code> 파일에는 패키지 의존성에 대한 바이너리 경로가 추가되어 있습니다.
+의존성의 버전을 정확히 잠가버리기 때문에 다른 환경에서도 일관된 개발 및 배포 환경을 유지할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>version</span> <span class=o>=</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=nv>revision</span> <span class=o>=</span> <span class=m>2</span>
+</span></span><span class=line><span class=cl>requires-python <span class=o>=</span> <span class=s2>&#34;&gt;=3.10&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>...
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>[[</span>package<span class=o>]]</span>
+</span></span><span class=line><span class=cl><span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;linkmerce&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>version</span> <span class=o>=</span> <span class=s2>&#34;0.1.0&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>source</span> <span class=o>=</span> <span class=o>{</span> <span class=nv>virtual</span> <span class=o>=</span> <span class=s2>&#34;.&#34;</span> <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=nv>dependencies</span> <span class=o>=</span> <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span> <span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;requests&#34;</span> <span class=o>}</span>,
+</span></span><span class=line><span class=cl><span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>[</span>package.metadata<span class=o>]</span>
+</span></span><span class=line><span class=cl>requires-dist <span class=o>=</span> <span class=o>[{</span> <span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;requests&#34;</span>, <span class=nv>specifier</span> <span class=o>=</span> <span class=s2>&#34;&gt;=2.32.4&#34;</span> <span class=o>}]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>[[</span>package<span class=o>]]</span>
+</span></span><span class=line><span class=cl><span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;requests&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>version</span> <span class=o>=</span> <span class=s2>&#34;2.32.4&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>source</span> <span class=o>=</span> <span class=o>{</span> <span class=nv>registry</span> <span class=o>=</span> <span class=s2>&#34;https://pypi.org/simple&#34;</span> <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=nv>dependencies</span> <span class=o>=</span> <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span> <span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;certifi&#34;</span> <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span> <span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;charset-normalizer&#34;</span> <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span> <span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;idna&#34;</span> <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span> <span class=nv>name</span> <span class=o>=</span> <span class=s2>&#34;urllib3&#34;</span> <span class=o>}</span>,
+</span></span><span class=line><span class=cl><span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=nv>sdist</span> <span class=o>=</span> <span class=o>{</span> <span class=nv>url</span> <span class=o>=</span> <span class=s2>&#34;https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz&#34;</span>, <span class=nb>hash</span> <span class=o>=</span> <span class=s2>&#34;sha256:27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422&#34;</span>, <span class=nv>size</span> <span class=o>=</span> 135258, upload-time <span class=o>=</span> <span class=s2>&#34;2025-06-09T16:43:07.34Z&#34;</span> <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=nv>wheels</span> <span class=o>=</span> <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span> <span class=nv>url</span> <span class=o>=</span> <span class=s2>&#34;https://files.pythonhosted.org/packages/7c/e4/56027c4a6b4ae70ca9de302488c5ca95ad4a39e190093d6c1a8ace08341b/requests-2.32.4-py3-none-any.whl&#34;</span>, <span class=nb>hash</span> <span class=o>=</span> <span class=s2>&#34;sha256:27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c&#34;</span>, <span class=nv>size</span> <span class=o>=</span> 64847, upload-time <span class=o>=</span> <span class=s2>&#34;2025-06-09T16:43:05.728Z&#34;</span> <span class=o>}</span>,
+</span></span><span class=line><span class=cl><span class=o>]</span></span></span></code></pre></div></div><h2 id=패키지-배포하기>패키지 배포하기
+<a class=anchor href=#%ed%8c%a8%ed%82%a4%ec%a7%80-%eb%b0%b0%ed%8f%ac%ed%95%98%ea%b8%b0>#</a></h2><h3 id=프로젝트-구성하기>프로젝트 구성하기
+<a class=anchor href=#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%84%b1%ed%95%98%ea%b8%b0>#</a></h3><p>패키지를 배포하기에 앞서 프로젝트와 관련된 폴더를 생성하고 간단한 모듈을 추가했습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>./
+</span></span><span class=line><span class=cl>├── .git/
+</span></span><span class=line><span class=cl>├── src/
+</span></span><span class=line><span class=cl>│   └── linkmerce/
+</span></span><span class=line><span class=cl>│       ├── auth/
+</span></span><span class=line><span class=cl>│       ├── collect/
+</span></span><span class=line><span class=cl>│       ├── parse/
+</span></span><span class=line><span class=cl>│       └── utils/
+</span></span><span class=line><span class=cl>├── .gitignore
+</span></span><span class=line><span class=cl>├── .python-version
+</span></span><span class=line><span class=cl>├── main.py
+</span></span><span class=line><span class=cl>├── README.md
+</span></span><span class=line><span class=cl>├── pyproject.toml
+</span></span><span class=line><span class=cl>└── uv.lock</span></span></code></pre></div></div><h3 id=패키지-빌드하기>패키지 빌드하기
+<a class=anchor href=#%ed%8c%a8%ed%82%a4%ec%a7%80-%eb%b9%8c%eb%93%9c%ed%95%98%ea%b8%b0>#</a></h3><p><code>twine</code> 으로 패키지를 빌드할 때는 패키지 루트 경로를 변경하는 기능이 없어서
+프로젝트 명칭의 폴더 아래에 패키지를 놓아야 했던 것으로 기억합니다.</p><p><code>uv build</code> 명령어로 패키지를 빌드할 때는 <code>pyproject.toml</code> 설정 파일에서
+<code>module-root</code> 값에 루트 경로를 지정할 수 있습니다.
+해당 값을 명시하지 않으면 기본 루트 경로로 <code>src/</code> 가 적용되고 이는 uv에서 권장하는 사항입니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>[</span>build-system<span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=nv>requires</span> <span class=o>=</span> <span class=o>[</span><span class=s2>&#34;uv_build&gt;=0.8.0,&lt;0.9.0&#34;</span><span class=o>]</span>
+</span></span><span class=line><span class=cl>build-backend <span class=o>=</span> <span class=s2>&#34;uv_build&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=o>[</span>tool.uv.build-backend<span class=o>]</span>
+</span></span><span class=line><span class=cl>module-name <span class=o>=</span> <span class=s2>&#34;linkmerce&#34;</span>
+</span></span><span class=line><span class=cl>module-root <span class=o>=</span> <span class=s2>&#34;src&#34;</span></span></span></code></pre></div></div><p><code>uv build</code> 와 관련한 자세한 내용은 <a href=https://docs.astral.sh/uv/concepts/build-backend/ target=_blank rel="noopener noreferrer">공식 문서</a>를 참고할 수 있습니다.</p><p><code>uv build</code> 명령어로 패키지를 빌드하면 <code>dist/</code> 경로에 <code>.whl</code> 파일이 생성됩니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl> % uv build
+</span></span><span class=line><span class=cl>Building <span class=nb>source</span> distribution <span class=o>(</span>uv build backend<span class=o>)</span>...
+</span></span><span class=line><span class=cl>Building wheel from <span class=nb>source</span> distribution <span class=o>(</span>uv build backend<span class=o>)</span>...
+</span></span><span class=line><span class=cl>Successfully built dist/linkmerce-0.1.0.tar.gz
+</span></span><span class=line><span class=cl>Successfully built dist/linkmerce-0.1.0-py3-none-any.whl</span></span></code></pre></div></div><h3 id=pypi에-배포하기>PyPI에 배포하기
+<a class=anchor href=#pypi%ec%97%90-%eb%b0%b0%ed%8f%ac%ed%95%98%ea%b8%b0>#</a></h3><p>PyPI에 배포하기 전에 먼저 API 토큰을 생성해야 합니다.
+자세한 내용은 <a href=https://pypi.org/help/#apitoken target=_blank rel="noopener noreferrer">안내 문서</a>를 참고할 수도 있습니다.</p><p>과거에 아래와 같이 PyPI에 패키지를 등록한 적이 있는데, 이번에 새로운 패키지를 등록해봅니다.</p><p><img src="https://dl.dropboxusercontent.com/scl/fi/5g23hk24yl9rtn1o5r1h8/uv-02-pypi-list.webp?rlkey=laccd47zg8gr644ach7uke5iy&amp;dl=0" alt="PyPI > Your projects (2)"></p><p>Account settings 페이지의 API tokens 항목에서 API 토큰을 발급받을 수 있습니다.</p><div style=text-align:center><img src="https://dl.dropboxusercontent.com/scl/fi/wfto4binkivlk9qcdwp4d/uv-03-pypi-token.webp?rlkey=jiwgu55kust02dpigbvxxx22i&amp;dl=0" alt="API tokens > Name = minyeamer, Scope = All projects" style=width:100%;max-width:691px></div><p>API 토큰은 <code>pypi-*</code> 형식을 가지는데, 해당 토큰 값을 <code>uv publish</code> 명령어로
+배포할 때 추가하면 PyPI 인증을 처리하고 PyPI에 패키지를 배포할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>% uv publish --token pypi-*
+</span></span><span class=line><span class=cl>Publishing <span class=m>2</span> files https://upload.pypi.org/legacy/
+</span></span><span class=line><span class=cl>Uploading linkmerce-0.1.0-py3-none-any.whl <span class=o>(</span>7.8KiB<span class=o>)</span>
+</span></span><span class=line><span class=cl>Uploading linkmerce-0.1.0.tar.gz <span class=o>(</span>5.5KiB<span class=o>)</span></span></span></code></pre></div></div><p>PyPI 프로젝트 페이지를 확인해보면 방금 배포한 패키지가 올라온 것을 볼 수 있습니다.</p><p><img src="https://dl.dropboxusercontent.com/scl/fi/fh8dfopuws8ub83wmlldo/uv-04-pypi-add.webp?rlkey=wpe4wkbusikljdedt0k80ji99&amp;dl=0" alt="PyPI > Your projects (3)"></p><p>매번 <code>uv publish</code> 명령어를 작성하는 것은 불편하기 때문에
+<code>dist.sh</code> 스크립트 파일로 명령어를 내보내서 간단하게 호출할 수 있습니다.</p><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;uv publish --token pypi-*&#34;</span> &gt;&gt; dist.sh
+</span></span><span class=line><span class=cl>chmod <span class=m>755</span> dist.sh</span></span></code></pre></div></div><div class=book-codeblock data-lang=bash><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">bash</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># 다음에 배포할 떄는 간단하게 uv publish 명령어 호출</span>
+</span></span><span class=line><span class=cl>./dist.sh</span></span></code></pre></div></div></article><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><div class=post-tags><a href=/tags/uv/ class=tag>#uv</a>
+<a href=/tags/python/ class=tag>#Python</a>
+<a href=/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC/ class=tag>#프로젝트 관리</a>
+<a href=/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/ class=tag>#가상환경</a>
+<a href=/tags/pypi/ class=tag>#PyPI</a>
+<a href=/tags/%EB%B0%B0%ED%8F%AC/ class=tag>#배포</a>
+<a href=/tags/%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B4%80%EB%A6%AC/ class=tag>#패키지 관리</a>
+<a href=/tags/rust/ class=tag>#Rust</a>
+<a href=/tags/python-%ED%8C%A8%ED%82%A4%EC%A7%80/ class=tag>#Python 패키지</a></div><div class=post-navigation><a href class="post-nav-link post-nav-prev post-nav-disabled"><span class=post-nav-direction><i class="fa-solid fa-backward"></i> PREV</span>
+<span class=post-nav-title>이전 게시글이 없습니다</span>
+</a><a href class="post-nav-link post-nav-next post-nav-disabled"><span class=post-nav-direction>NEXT <i class="fa-solid fa-forward"></i></span>
+<span class=post-nav-title>다음 게시글이 없습니다</span></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url="https://minyeamer.github.io/blog/uv-project/",this.page.identifier="https://minyeamer.github.io/blog/uv-project/"};(function(){var e=document,t=e.createElement("script");t.src="https://minyeamer.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})();function reloadDisqus(){window.DISQUS&&DISQUS.reset({reload:!0,config:function(){this.page.url="https://minyeamer.github.io/blog/uv-project/",this.page.identifier="https://minyeamer.github.io/blog/uv-project/"}})}</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#uv>uv</a></li><li><a href=#설치하기>설치하기</a></li><li><a href=#프로젝트-시작하기>프로젝트 시작하기</a></li><li><a href=#가상환경-생성하기>가상환경 생성하기</a></li><li><a href=#의존성-추가하기>의존성 추가하기</a></li><li><a href=#패키지-배포하기>패키지 배포하기</a><ul><li><a href=#프로젝트-구성하기>프로젝트 구성하기</a></li><li><a href=#패키지-빌드하기>패키지 빌드하기</a></li><li><a href=#pypi에-배포하기>PyPI에 배포하기</a></li></ul></li></ul></nav></div></aside></main></body></html>
