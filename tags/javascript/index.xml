@@ -9,14 +9,14 @@
     <lastBuildDate>Sat, 22 Nov 2025 23:04:47 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 블로그 만들기 (3) - 태그, 카테고리 페이지 추가</title>
+      <title>Hugo 블로그 만들기 (3) - Taxonomies로 태그/카테고리 페이지 커스터마이징</title>
       <link>https://minyeamer.github.io/blog/hugo-blog-3/</link>
       <pubDate>Sat, 22 Nov 2025 23:04:47 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/hugo-blog-3/</guid>
       <description>&lt;blockquote class=&#34;book-hint info&#34;&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa-solid fa-circle-info&#34;&gt;&lt;/i&gt; 대상 독자&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;Hugo에서 지원하는 taxonomies 기능을 활용한 사례를 찾고 있는 분들&lt;/li&gt;&#xA;&lt;li&gt;블로그에 2단계 카테고리를 구현하고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;HTML/CSS를 이용한 단일 웹 페이지 구성에 익숙하신 분들&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote class=&#34;book-hint success&#34;&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa-solid fa-lightbulb&#34;&gt;&lt;/i&gt; 주요 내용&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hugo의 taxonomies 기능과 구성 요소 이해 (&lt;a href=&#34;#taxonomies&#34;&gt;Taxonomies&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;게시글 목록과 페이지네이션 템플릿 구현 (&lt;a href=&#34;#%ea%b2%8c%ec%8b%9c%ea%b8%80-%eb%aa%a9%eb%a1%9d-%ed%85%9c%ed%94%8c%eb%a6%bf-%ec%b6%94%ea%b0%80&#34;&gt;게시글 목록 템플릿 추가&lt;/a&gt; / &lt;a href=&#34;#%ed%8e%98%ec%9d%b4%ec%a7%80%eb%84%a4%ec%9d%b4%ec%85%98-%ed%85%9c%ed%94%8c%eb%a6%bf-%ec%b6%94%ea%b0%80&#34;&gt;페이지네이션 템플릿 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;태그 페이지 추가 및 terms 템플릿 작성 (&lt;a href=&#34;#%ed%83%9c%ea%b7%b8-%ed%8e%98%ec%9d%b4%ec%a7%80-%ec%b6%94%ea%b0%80&#34;&gt;태그 페이지 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;2단계 카테고리 구조 설계 및 부모-자식 카테고리 템플릿 구현 (&lt;a href=&#34;#%ec%b9%b4%ed%85%8c%ea%b3%a0%eb%a6%ac-%ed%8e%98%ec%9d%b4%ec%a7%80-%ec%b6%94%ea%b0%80&#34;&gt;카테고리 페이지 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;메뉴 영역에 카테고리 트리 통합 및 게시글 카운팅 (&lt;a href=&#34;#%eb%a9%94%eb%89%b4%ec%97%90-%ec%b9%b4%ed%85%8c%ea%b3%a0%eb%a6%ac-%ec%b6%94%ea%b0%80&#34;&gt;메뉴에 카테고리 추가&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://minyeamer.github.io/blog/hugo-blog-2/&#34;&gt;앞선 게시글&lt;/a&gt;에서 Book 테마의 메인 레이아웃인 메뉴, 목차, 헤더를 개선해보았습니다.&lt;br&gt;&#xA;앞에서의 과정을 거쳤다면 프로필 사진, 소셜 링크, 스크롤 이동 버튼 등이 블로그에 추가되었을 것입니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hugo 블로그 만들기 (2) - 메인 레이아웃 개선</title>
+      <title>Hugo 블로그 만들기 (2) - 메인 레이아웃 커스터마이징 (메뉴, 목차, 헤더)</title>
       <link>https://minyeamer.github.io/blog/hugo-blog-2/</link>
       <pubDate>Tue, 04 Nov 2025 01:50:16 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/hugo-blog-2/</guid>

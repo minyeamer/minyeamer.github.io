@@ -58,6 +58,20 @@
       <description></description>
     </item>
     <item>
+      <title>Cloud</title>
+      <link>https://minyeamer.github.io/categories/cloud/</link>
+      <pubDate>Wed, 16 Jul 2025 23:52:48 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://minyeamer.github.io/categories/kubernetes/</link>
+      <pubDate>Wed, 16 Jul 2025 23:52:48 +0900</pubDate>
+      <guid>https://minyeamer.github.io/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Linux</title>
       <link>https://minyeamer.github.io/categories/linux/</link>
       <pubDate>Sun, 06 Jul 2025 15:47:47 +0900</pubDate>
@@ -125,6 +139,13 @@
       <link>https://minyeamer.github.io/categories/data-engineering/crawling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://minyeamer.github.io/categories/data-engineering/crawling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://minyeamer.github.io/categories/cloud/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://minyeamer.github.io/categories/cloud/kubernetes/</guid>
       <description></description>
     </item>
     <item>

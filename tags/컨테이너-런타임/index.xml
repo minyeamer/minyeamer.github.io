@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>컨테이너 런타임 on Minystory</title>
+    <link>https://minyeamer.github.io/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%9F%B0%ED%83%80%EC%9E%84/</link>
+    <description>Recent content in 컨테이너 런타임 on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 15 Jul 2025 01:55:24 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%9F%B0%ED%83%80%EC%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>컨테이너의 역사와 쿠버네티스 등장 배경 - LXC에서 containerd까지</title>
+      <link>https://minyeamer.github.io/blog/container-history/</link>
+      <pubDate>Tue, 15 Jul 2025 01:55:24 +0900</pubDate>
+      <guid>https://minyeamer.github.io/blog/container-history/</guid>
+      <description>&lt;h2 id=&#34;study-overview&#34;&gt;Study Overview&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#study-overview&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;blockquote class=&#34;book-hint warning&#34;&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.inflearn.com/course/%ec%bf%a0%eb%b2%84%eb%84%a4%ed%8b%b0%ec%8a%a4-%ec%96%b4%eb%82%98%eb%8d%94-%ed%81%b4%eb%9e%98%ec%8a%a4-%ec%a7%80%ec%83%81%ed%8e%b8-sprint1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;쿠버네티스 어나더 클래스 (지상편) - Sprint 1, 2&lt;/a&gt; 과정을 따릅니다.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;[따배쿠] 쿠버네티스 시리즈&lt;/a&gt; 과정(유튜브 공개 영상)을 따릅니다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;목적&#34;&gt;목적&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%aa%a9%ec%a0%81&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;쿠버네티스가 무엇이고, 쿠버네티스로 어떤 것을 할 수 있는지 알기 위해 학습합니다.&lt;/li&gt;&#xA;&lt;li&gt;두 가지 커리큘럼을 참고하지만, 그대로 따라하지 않고 개발 환경에 맞춰서 설치 버전 등을 변경합니다.&lt;/li&gt;&#xA;&lt;li&gt;이론보다는 실습 위주로 직접 명령어를 입력하고 결과를 보면서 쿠버네티스를 익힙니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;container-history&#34;&gt;Container History&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#container-history&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/scl/fi/68zs362oo5yfcc4q7vt3b/diagram-00-container-history.webp?rlkey=l0wyexrgbiugt67y6telphnwe&amp;amp;dl=0&#34; alt=&#34;chroot -&amp;gt; cgroup -&amp;gt; namespace -&amp;gt; lxc -&amp;gt; docker -&amp;gt; containerd &amp;#43; Cloud Orchestration&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
