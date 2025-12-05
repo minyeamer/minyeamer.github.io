@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 (1) - 프로젝트 기획 및 구조 설계"
+title: "Hugo 블로그 만들기 (1) - 프로젝트 구성과 GitHub Pages 배포 (Submodule 활용)"
 date: "2025-11-01T20:42:21+09:00"
 layout: "post"
 description: >

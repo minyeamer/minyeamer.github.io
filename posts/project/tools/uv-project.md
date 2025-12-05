@@ -1,5 +1,5 @@
 ---
-title: "[Python] uv 프로젝트 구성하고 배포하기"
+title: "[Python] uv로 프로젝트 구성하고 PyPI 배포하기 - Rust 기반 고속 패키지 관리"
 date: "2025-07-23T00:47:11+09:00"
 layout: "post"
 description: >

@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 (3) - 태그, 카테고리 페이지 추가"
+title: "Hugo 블로그 만들기 (3) - Taxonomies로 태그/카테고리 페이지 커스터마이징"
 date: "2025-11-22T23:04:47+09:00"
 layout: "post"
 description: >
