@@ -592,7 +592,9 @@ The Paginate method is more flexible, and strongly recommended.
 필요한 partial 템플릿들을 만들었으니 본격적으로 taxonomy 및 terms 템플릿을 만들겠습니다.   
 그전에, 어디에 템플릿을 만들어야 하는지 알아보겠습니다.
 
-{{< bookmark "https://gohugobrasil.netlify.app/templates/taxonomy-templates/#taxonomy-list-templates" >}}
+{{< bookmark
+  url="https://gohugobrasil.netlify.app/templates/taxonomy-templates/#taxonomy-list-templates"
+  image="https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&st=2fjsd1c2&dl=0" >}}
 
 위 Hugo 공식문서를 참고해보면 다음과 같은 우선순위로 taxonomy 템플릿을 탐색한다는 것을 알 수 있습니다.
 

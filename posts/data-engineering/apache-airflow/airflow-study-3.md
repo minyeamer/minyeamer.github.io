@@ -1,5 +1,5 @@
 ---
-title: "Apache Airflow - Jinja Template, XCom, Variable"
+title: "Apache Airflow - 데이터 전달과 템플릿 활용 (Jinja, XCom, Variable)"
 date: "2025-06-01T23:46:09+09:00"
 layout: "post"
 description: >
@@ -12,7 +12,9 @@ tags: ["Apache Airflow", "Jinja 템플릿", "XCom", "Variable", "템플릿 변�
 
 ## Jinja 템플릿
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - 파이썬 기반 웹 프레임워크 Flask, Django에서 주로 사용
 - HTML 템플릿을 만들고 화면에 보여질 때 값을 렌더링해서 출력
@@ -227,7 +229,9 @@ with DAG(
 
 ## Macro 변수
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html#macros" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html#macros"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - Jinja 템플릿 변수 기반으로 다양한 날짜 연산이 가능하도록 연산 모듈을 제공
 
@@ -342,7 +346,9 @@ with DAG(
 > The `create_cron_data_intervals` configuration is now `False` by default.
 > This means that the `CronTriggerTimetable` will be used by default instead of the `CronDataIntervalTimetable`
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/installation/upgrading_to_airflow3.html#breaking-changes" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/installation/upgrading_to_airflow3.html#breaking-changes"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ### CronDataIntervalTimetable
 - 이전 버전의 알고리즘인 `CronDataIntervalTimetable` 의 경로를 파악해서 `bash_macros1` DAG의 스케줄을 재설정
@@ -428,7 +434,9 @@ with DAG(
 
 ## XCom
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - Cross Communication이란 의미로, Airflow DAG 내 Task 간 데이터 공유를 위해 사용되는 기술
 - 주로 작은 규모의 데이터 공유를 위해 사용 (XCom 내용은 메타 DB의 xcom 테이블에 값이 저장)
@@ -557,7 +565,9 @@ with DAG(
 > In Airflow 2, the `xcom_pull()` method allowed pulling XComs by key without specifying task_ids, ..., leading to unpredictable behavior.
 > Airflow 3 resolves this inconsistency by requiring `task_ids` when pulling by key.
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#behaviour-change-in-xcom-pull" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#behaviour-change-in-xcom-pull"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ### PythonOperator (2)
 - `xcom_return_task` 에서 문자열 "Success"를 반환하고, 두 개의 `xcom_pull_task` 에서 서로 다른 방식으로 return 값을 받아 출력
@@ -677,7 +687,9 @@ bash_pull = BashOperator(
 
 ## Variable
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/variables.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/variables.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - 모든 DAG에서 공유하는 전역 변수
 - Airflow UI에서 Admin 메뉴를 통해 접근 및 생성 가능
@@ -749,4 +761,6 @@ with DAG(
 [2025-06-03, 16:52:07] INFO - variable: ***: source="airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"
 ```
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/security/secrets/mask-sensitive-values.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/security/secrets/mask-sensitive-values.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}

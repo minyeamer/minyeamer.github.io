@@ -1,5 +1,5 @@
 ---
-title: "Apache Spark - 설치하고 PySpark 실행하기"
+title: "Apache Spark - 로컬 환경에서 설치하고 PySpark 실행하기"
 date: "2025-06-28T21:55:14+09:00"
 layout: "post"
 description: >

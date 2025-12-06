@@ -1,14 +1,14 @@
 ---
-title: "Apache Spark - 고차함수(Higher-Order Functions)"
+title: "Apache Spark - 사용자 정의 함수(UDF)와 고차 함수 활용하기"
 date: "2025-07-19T23:53:45+09:00"
 layout: "post"
 description: >
-  Apache Spark의 고차함수와 사용자 정의 함수를 다루며,
+  Apache Spark의 고차 함수와 사용자 정의 함수를 다루며,
   UDF 생성부터 Pandas UDF, transform, filter 등 고차 함수 활용까지 단계별로 안내합니다.
   빅데이터 분석과 데이터 엔지니어링을 위한 강력한 도구를 습득하고 실무에 적용하세요.
 cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
 categories: ["Data Engineering", "Apache Spark"]
-tags: ["Apache Spark", "고차함수", "UDF", "Pandas UDF", "Spark SQL", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
+tags: ["Apache Spark", "고차 함수", "UDF", "Pandas UDF", "Spark SQL", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
 ---
 
 ## User-Defined Functions

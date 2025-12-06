@@ -1,5 +1,5 @@
 ---
-title: "Apache Spark - 스파크 애플리케이션 및 RDD"
+title: "Apache Spark - 스파크 애플리케이션 구조와 RDD 이해하기"
 date: "2025-06-29T12:50:06+09:00"
 layout: "post"
 description: >

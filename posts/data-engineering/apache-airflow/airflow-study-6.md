@@ -1,5 +1,5 @@
 ---
-title: "Apache Airflow - Http Operator"
+title: "Apache Airflow - REST API 연동과 Custom Operator 구현"
 date: "2025-06-07T12:50:14+09:00"
 layout: "post"
 description: >
@@ -12,7 +12,9 @@ tags: ["Apache Airflow", "HttpOperator", "BaseOperator", "REST API", "네이버 
 
 ## HttpOperator
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow-providers-http/stable/index.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow-providers-http/stable/index.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - HTTP 요청을 하고 응답 결과를 반환받는 Operator (반환값은 XCom에 저장)
 - HTTP를 이용하여 API를 처리하는 RestAPI 호출 시 사용 가능
@@ -27,7 +29,9 @@ pip install apache-airflow-providers-http
 
 ### HttpOperator 파라미터
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow-providers-http/stable/_api/airflow/providers/http/operators/http/index.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow-providers-http/stable/_api/airflow/providers/http/operators/http/index.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - `http_conn_id` : http Connection을 생성해야 하는데 해당 Connection의 ID
 - `endpoint` : Connection에 등록한 Host 뒤에 붙는 경로
@@ -159,7 +163,9 @@ with DAG(
 
 ## Custom Operator
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/howto/custom-operator.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/howto/custom-operator.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ### BaseOperator
 - `BaseOperator` 클래스를 상속받아 직접 만든 Operator를 사용 가능

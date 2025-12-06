@@ -1,5 +1,5 @@
 ---
-title: "Apache Airflow - Operator (Branch, Email)"
+title: "Apache Airflow - 조건부 실행과 알림 (Branch, Email Operator)"
 date: "2025-06-06T16:36:50+09:00"
 layout: "post"
 description: >
@@ -14,7 +14,9 @@ tags: ["Apache Airflow", "BranchOperator", "EmailOperator", "Branching", "SMTP",
 
 ### Branching
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#branching" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#branching"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - 특정 Task의 결과에 따라 하위 Task를 선별해서 수행시키고 싶을 때 사용
 
@@ -157,7 +159,9 @@ with DAG(
 
 ### BaseBranchOperator
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/2.9.2/_api/airflow/operators/branch/index.html#airflow.operators.branch.BaseBranchOperator" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/2.9.2/_api/airflow/operators/branch/index.html#airflow.operators.branch.BaseBranchOperator"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - Branching 기능을 제공하는 Operator의 기본 클래스
 - 해당 클래스를 상속받을 경우 `choose_branch(self, context)` 메서드를 구현해야 하고,
@@ -217,7 +221,9 @@ with DAG(
 
 ## EmailOperator
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/1.10.9/_api/airflow/operators/email_operator/index.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/1.10.9/_api/airflow/operators/email_operator/index.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - 이메일을 전송해주는 Operator
 - SMTP 프로토콜을 통해 개인 Gmail에서 다른 주소로 메일을 보내는 기능 구현
@@ -226,7 +232,9 @@ with DAG(
 
 ### docker-compose 수정
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/howto/email-config.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/howto/email-config.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - `docker-compose.yaml` 파일 내에 아래와 같은 항목을 추가
 - `AIRFLOW__SMTP__SMTP_USER` 에는 앱 비밀번호를 생성한 구글 계정을 입력
@@ -247,7 +255,9 @@ x-airflow-common:
 
 ### Connection 추가
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - Airflow 3.0 버전부터는 SMTP 설정을 환경변수나 설정 파일에서 가져오는 것이 아닌, Connection을 활용하도록 권장
 - Airflow UI의 사이드바에서 `Admin->Connections` 메뉴로 이동한 후, `Add Connection` 버튼을 클릭하여 Connection 추가

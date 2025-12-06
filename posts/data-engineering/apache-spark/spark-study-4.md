@@ -1,5 +1,5 @@
 ---
-title: "Apache Spark - Structured API"
+title: "Apache Spark - DataFrame과 Dataset API 활용하기"
 date: "2025-06-29T20:01:48+09:00"
 layout: "post"
 description: >

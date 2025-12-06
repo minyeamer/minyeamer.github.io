@@ -1,5 +1,5 @@
 ---
-title: "Mac에 Ubuntu Server 24.04 설치하기 (UTM)"
+title: "Mac에서 UTM으로 Ubuntu Server 24.04 설치하기"
 date: "2025-07-06T15:47:47+09:00"
 layout: "post"
 description: >

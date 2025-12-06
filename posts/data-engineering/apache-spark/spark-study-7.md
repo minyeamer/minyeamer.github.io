@@ -1,5 +1,5 @@
 ---
-title: "Apache Spark - JDBC 및 데이터베이스"
+title: "Apache Spark - 외부 데이터베이스 연동 (PostgreSQL, MySQL)"
 date: "2025-07-12T21:29:06+09:00"
 layout: "post"
 description: >

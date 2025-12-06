@@ -1,5 +1,5 @@
 ---
-title: "Apache Airflow - Trigger Dag Run Operator"
+title: "Apache Airflow - DAG 흐름 제어 (Trigger Rule, TriggerDagRun, TaskGroup)"
 date: "2025-06-07T11:08:37+09:00"
 layout: "post"
 description: >
@@ -12,7 +12,9 @@ tags: ["Apache Airflow", "TriggerDagRunOperator", "TaskGroup", "Trigger Rule", "
 
 ## Trigger Rule
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#trigger-rules" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#trigger-rules"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - 상위 Task들의 상태에 따라 수행여부를 결정하고 싶을 때 사용
 - 기본적으로는 상위 Task가 모두 성공해야 실행
@@ -152,7 +154,9 @@ with DAG(
 
 ## TriggerDagRunOperator
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/2.3.4/_api/airflow/operators/trigger_dagrun/index.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/2.3.4/_api/airflow/operators/trigger_dagrun/index.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - 다른 DAG을 실행시키는 Operator
 - 실행할 다른 DAG의 ID를 지정하여 수행
@@ -235,7 +239,9 @@ with DAG(
 
 ## TaskGroup
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#taskgroups" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#taskgroups"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - 여러 Task들을 그룹화하는 개념
 - UI 상에서 Task들을 모아서 편하게 보고 관리하기 쉽게 하기 위한 목적
@@ -314,7 +320,9 @@ with DAG(
 
 ## Edge Label
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#edge-labels" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#edge-labels"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - Task 연결에 대한 설명을 추가하는 개념
 - Task 종속성을 나타내는 `>>` 또는 `<<` 연산자 사이에 `Label` 을 추가

@@ -1,5 +1,5 @@
 ---
-title: "Apache Airflow - Connection, Hook"
+title: "Apache Airflow - 외부 시스템 연동 (Connection, Hook, PostgreSQL)"
 date: "2025-06-08T16:52:44+09:00"
 layout: "post"
 description: >
@@ -8,7 +8,6 @@ description: >
   Docker Compose, Postgres, Connection, Hook, bulk_load까지 다룹니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
-tags: ["Apache Airflow"]
 tags: ["Apache Airflow", "Connection", "Hook", "Docker Compose", "Postgres", "Custom Hook", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
 
@@ -291,7 +290,9 @@ with DAG(
 
 ### Postgres Provider 문서 보기
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/index.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/index.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - Providers에 속한 Postgres 문서에서
   [Connection 접속 과정](https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/_modules/airflow/providers/postgres/hooks/postgres.html#PostgresHook.get_conn)을 조회 가능
@@ -396,7 +397,9 @@ with DAG(
 
 ### Postgres Provider 문서 보기
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/_modules/airflow/providers/postgres/hooks/postgres.html#PostgresHook.bulk_load" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/_modules/airflow/providers/postgres/hooks/postgres.html#PostgresHook.bulk_load"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - PostgreSQL에 데이터를 업로드하는 `bulk_load()` 메서드에 대해 살펴보기
 
@@ -531,7 +534,9 @@ with DAG(
 
 ## Custom Hook
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/_modules/airflow/hooks/base.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/_modules/airflow/hooks/base.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ### BaseHook
 - `BaseHook` 클래스를 상속받아 직접 만든 Hook을 사용 가능

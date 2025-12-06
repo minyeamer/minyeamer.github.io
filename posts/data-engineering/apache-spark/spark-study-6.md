@@ -1,5 +1,5 @@
 ---
-title: "Apache Spark - 데이터 소스"
+title: "Apache Spark - 다양한 데이터 소스 읽기/쓰기 (Parquet, JSON, CSV, Avro)"
 date: "2025-07-10T23:56:54+09:00"
 layout: "post"
 description: >

@@ -54,7 +54,9 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 - DAG 실행을 직접 트리거
 - DAG 실행 로그를 확인하고 제한적인 디버깅 수행
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/2.6.0/core-concepts/overview.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/2.6.0/core-concepts/overview.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ![UI / Screenshots - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/r15u5f5worgn1qmt8dfga/airflow-03-user-interface.webp?rlkey=weeolbcg3a9e363nunxmj21ux&dl=0)
 
@@ -85,7 +87,9 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 
 ## Airflow 설치하기
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ### 1. docker-compose.yaml
 

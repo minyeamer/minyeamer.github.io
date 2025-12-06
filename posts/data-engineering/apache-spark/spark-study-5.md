@@ -1,5 +1,5 @@
 ---
-title: "Apache Spark - 스파크 SQL"
+title: "Apache Spark - 스파크 SQL과 테이블/뷰 관리"
 date: "2025-07-05T23:03:04+09:00"
 layout: "post"
 description: >

@@ -1,5 +1,5 @@
 ---
-title: "Apache Airflow - Operator (Bash, Python)"
+title: "Apache Airflow - 기본 Operator 이해하기 (Bash, Python)"
 date: "2025-05-30T23:36:13+09:00"
 layout: "post"
 description: >
@@ -66,7 +66,9 @@ AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
 
 ## BashOperator
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/bash.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/bash.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ### BashOperator 정의
 - `dags/` 경로 아래에 `bash_operator.py` 파일을 생성
@@ -149,7 +151,9 @@ with DAG(
 
 ## PythonOperator
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/python.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/python.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 ### PythonOperator 종류
 - `PythonOperator` : 파이썬 함수를 실행시키기 위한 Operator
@@ -226,7 +230,9 @@ with DAG(
 
 ## Plugins
 
-{{< bookmark "https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/plugins.html" >}}
+{{< bookmark
+  url="https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/plugins.html"
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
 
 - `plugins/` 경로에 파이썬 함수를 작성하고 외부에서 활용
 - DAG 선언 시 함수를 가져오기만 해도 되어서 깔끔해지고 같은 함수를 재활용할 수 있어서 편리
