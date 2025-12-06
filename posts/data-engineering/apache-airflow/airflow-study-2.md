@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 Operator 개념을 소개하고, BashOperator와 PythonOperator의 사용법을 단계별로 안내합니다.
   DAG 작성, Plugins 활용, Decorator 패턴, 파라미터 전달 방법까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "BashOperator", "PythonOperator", "DAG", "Plugins", "Decorator", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---

@@ -6,8 +6,8 @@ description: >
   Ubuntu 24.04에서 쿠버네티스 클러스터 설치 가이드.
   kubeadm, containerd, Calico CNI를 활용한 마스터/워커 노드 구성부터 대시보드 배포까지 단계별로 설명합니다.
   Apple Silicon(ARM64) 환경에서 실습 가능한 완벽한 K8s 설치 튜토리얼입니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernetes-00-cover.webp?rlkey=62jkzfxluywah0k79039ywve0&st=ttltfwrk&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&st=rz2ddqlp&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernetes-00-cover.webp?rlkey=62jkzfxluywah0k79039ywve0&dl=0"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&dl=0"
 categories: ["Cloud", "Kubernetes"]
 tags: ["Kubernetes", "쿠버네티스 설치", "Ubuntu 24.04", "kubeadm", "containerd", "Calico", "CNI", "kubectl", "kubelet", "클러스터 구성"]
 ---

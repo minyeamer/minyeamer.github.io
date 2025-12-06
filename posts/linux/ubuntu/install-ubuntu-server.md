@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Mac에서 UTM 가상화 소프트웨어를 사용하여 Ubuntu Server 24.04 LTS를 가상머신으로 설치하는 가이드를 제공합니다.
   ARM64 이미지 다운로드, 네트워크 구성, SSH 접속 설정까지 단계별로 안내합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/cw0ng73mwxr7yd0pgutnf/ubuntu-00-cover-2404.jpg?rlkey=y1b4ptay54ln84xn06spxi6w4&st=pu2ctpn3&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/cw0ng73mwxr7yd0pgutnf/ubuntu-00-cover-2404.jpg?rlkey=y1b4ptay54ln84xn06spxi6w4&dl=0"
 categories: ["Linux", "Ubuntu"]
 tags: ["Ubuntu", "Ubuntu Server", "UTM", "Virtual Machine", "Mac", "Linux", "우분투 설치하기", "가상머신", "SSH"]
 ---

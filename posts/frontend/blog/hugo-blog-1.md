@@ -6,8 +6,8 @@ description: >
   Hugo 블로그 프로젝트 기획부터 구조 설계까지 단계별로 안내합니다.
   타 블로그 플랫폼과 비교하고 Hugo 테마를 선정하는 방법을 소개하며,
   GitHub Pages와 Submodule을 활용한 효율적인 배포 방법을 설명합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&st=uiminuv3&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&st=2fjsd1c2&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Blog", "티스토리", "Velog", "Git", "Github Pages", "Submodule", "Hugo Book", "휴고", "벨로그"]
 ---

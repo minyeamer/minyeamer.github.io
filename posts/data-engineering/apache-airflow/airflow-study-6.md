@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 HttpOperator와 Custom Operator 개념을 소개하고, 네이버 Open API 연동과 BaseOperator 상속을 단계별로 안내합니다.
   REST API 호출, Connection 설정, Variable 활용, CSV 파일 저장, NaverSearchToCsvOperator 구현까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "HttpOperator", "BaseOperator", "REST API", "네이버 Open API", "Custom Operator", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---

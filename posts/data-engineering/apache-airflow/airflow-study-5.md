@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 Trigger Rule과 TriggerDagRunOperator 개념을 소개하고, TaskGroup과 Edge Label 사용법을 단계별로 안내합니다.
   DAG 실행 트리거, 그룹화, 라벨링, Trigger Rule 옵션까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "TriggerDagRunOperator", "TaskGroup", "Trigger Rule", "Edge Label", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -246,7 +246,7 @@ with DAG(
 - 여러 Task들을 그룹화하는 개념
 - UI 상에서 Task들을 모아서 편하게 보고 관리하기 쉽게 하기 위한 목적
 
-![TaskGroups - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/0ake7j9qyw49ei0nze6n3/airflow-38-task-group.gif?rlkey=eauhbvmxgwh15ybsyx2yh57xn&st=11vxluiq&dl=0)
+![TaskGroups - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/0ake7j9qyw49ei0nze6n3/airflow-38-task-group.gif?rlkey=eauhbvmxgwh15ybsyx2yh57xn&dl=0)
 
 ### TaskGroup 활용
 - `@task_group` 데코레이터 또는 `TaskGroup` 클래스를 활용하여 TaskGroup을 구현

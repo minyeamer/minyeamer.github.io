@@ -7,7 +7,7 @@ description: >
   SQL 코딩테스트는 어떻게 나오나 궁금해서 프로그래머스 Lv.4, 5 수준의 문제를 모두 풀어보았습니다.
   표에서 제목을 클릭하면 프로그래머스 문제 풀이로 이동합니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/3090p904jp5tkidn1l398/programmers-00-cover.webp?rlkey=yvpp7t47lzzxm8lgsjfdgdeby&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/nrqqo3iyw68si0zamyqey/programmers-00-logo.webp?rlkey=emibt2grzxs1ra3bla48pe6r8&st=8la2mzzw&dl=0"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/nrqqo3iyw68si0zamyqey/programmers-00-logo.webp?rlkey=emibt2grzxs1ra3bla48pe6r8&dl=0"
 categories: ["Algorithm", "SQL"]
 tags: ["프로그래머스", "코딩테스트", "SQL", "JOIN", "GROUP BY", "SELECT", "프로그래머스 Lv4", "프로그래머스 Lv5", "문제풀이"]
 ---

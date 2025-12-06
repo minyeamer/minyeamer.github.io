@@ -6,7 +6,7 @@ description: >
   uv를 활용한 Python 프로젝트 구성 및 배포 가이드.
   Rust 기반 고속 패키지 관리자로 프로젝트 초기화, 가상환경 생성, 의존성 추가부터 PyPI 배포까지 단계별로 안내합니다.
   pip보다 빠른 uv로 효율적인 개발 환경을 구축하세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/jj13nbquunpa7gfeok7qf/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa&st=escdsoau&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/jj13nbquunpa7gfeok7qf/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa&dl=0"
 categories: ["Project", "Tools"]
 tags: ["uv", "Python", "프로젝트 관리", "가상환경", "PyPI", "배포", "패키지 관리", "Rust", "Python 패키지"]
 ---

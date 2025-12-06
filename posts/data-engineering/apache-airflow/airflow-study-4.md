@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 BranchOperator와 EmailOperator 개념을 소개하고, Branching 기능과 이메일 전송 방법을 단계별로 안내합니다.
   BranchPythonOperator, @task.branch 데코레이터, BaseBranchOperator 상속, SMTP 설정, Connection 추가, SSLError 해결까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "BranchOperator", "EmailOperator", "Branching", "SMTP", "Email", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---

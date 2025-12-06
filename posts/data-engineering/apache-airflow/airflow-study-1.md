@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 개념과 장단점을 소개하고, Docker를 이용한 Airflow 설치 과정을 단계별로 안내합니다.
   DAG 구조와 워크플로우 이해, Docker Compose를 활용한 로컬 환경 구축, 웹 UI를 통한 Example DAG 실행까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---

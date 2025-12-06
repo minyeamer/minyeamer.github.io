@@ -6,7 +6,7 @@ description: >
   Apache Airflow의 Connection과 Hook 개념을 소개하고,
   Docker Compose를 활용한 Postgres 컨테이너 생성부터 Connection 설정, Hook 사용, bulk_load 기능까지 단계별로 안내합니다.
   Docker Compose, Postgres, Connection, Hook, bulk_load까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&st=n484uuow&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "Connection", "Hook", "Docker Compose", "Postgres", "Custom Hook", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
