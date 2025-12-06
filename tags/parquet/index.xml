@@ -9,7 +9,7 @@
     <lastBuildDate>Thu, 10 Jul 2025 23:56:54 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/parquet/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache Spark - 데이터 소스</title>
+      <title>Apache Spark - 다양한 데이터 소스 읽기/쓰기 (Parquet, JSON, CSV, Avro)</title>
       <link>https://minyeamer.github.io/blog/spark-study-6/</link>
       <pubDate>Thu, 10 Jul 2025 23:56:54 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/spark-study-6/</guid>

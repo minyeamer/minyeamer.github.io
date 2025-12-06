@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 30 May 2025 23:36:13 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/dag/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache Airflow - Operator (Bash, Python)</title>
+      <title>Apache Airflow - 기본 Operator 이해하기 (Bash, Python)</title>
       <link>https://minyeamer.github.io/blog/airflow-study-2/</link>
       <pubDate>Fri, 30 May 2025 23:36:13 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/airflow-study-2/</guid>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>감정 분석 on Minystory</title>
+    <link>https://minyeamer.github.io/tags/%EA%B0%90%EC%A0%95-%EB%B6%84%EC%84%9D/</link>
+    <description>Recent content in 감정 분석 on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 22 Aug 2022 15:06:20 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/%EA%B0%90%EC%A0%95-%EB%B6%84%EC%84%9D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DACON 쇼핑몰 리뷰 평점 분류 - KoELECTRA와 RoBERTa 앙상블로 2위 달성</title>
+      <link>https://minyeamer.github.io/blog/dacon-shop-review/</link>
+      <pubDate>Mon, 22 Aug 2022 15:06:20 +0900</pubDate>
+      <guid>https://minyeamer.github.io/blog/dacon-shop-review/</guid>
+      <description>&lt;a href=&#34;https://dacon.io/competitions/official/235938/overview/description&#34; target=&#34;_blank&#34; class=&#34;bookmark-card&#34;&gt;&lt;div class=&#34;bookmark-image&#34;&gt;&#xA;    &lt;img src=&#34;https://dacon.s3.ap-northeast-2.amazonaws.com/competition/235938/meta_cpt.jpeg&#34; alt=&#34;쇼핑몰 리뷰 평점 분류 AI 해커톤&#34;&gt;&#xA;  &lt;/div&gt;&lt;div class=&#34;bookmark-content&#34;&gt;&#xA;    &lt;h3 class=&#34;bookmark-title&#34;&gt;쇼핑몰 리뷰 평점 분류 AI 해커톤&lt;/h3&gt;&lt;p class=&#34;bookmark-description&#34;&gt;&#xA;      출처 : DACON - Data Science Competition&#xA;    &lt;/p&gt;&lt;small class=&#34;bookmark-url&#34;&gt;dacon.io&lt;/small&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/a&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#introduction&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;쇼핑몰에서 상품을 고르는데 있어서 다른 사람들의 리뷰와 평점을 참고하게 되는데,&#xA;상품 리뷰 텍스트와 평점 사이에 어떤 관계가 있는지, 리뷰 텍스트만으로 평점을 예측가능한지에 대해 실험합니다.&lt;/li&gt;&#xA;&lt;li&gt;1점, 2점, 4점, 5점으로 분류된 평점 별로 워드 클라우드를 활용해 빈도수가 많은 단어를 시각화해보고,&#xA;다중 분류 작업을 수행하는 언어 모델을 학습시킨 결과를 비교할 계획으로 프로젝트 진행합니다.&lt;/li&gt;&#xA;&lt;li&gt;평점 별 불균형이 존재해 F1-Score로 평가하는 것이 이상적이라 판단하지만,&#xA;대회의 판단 기준에 맞게 Accuracy를 활용하고, 전체 테스트 데이터 중 50%에 대한 점수를 지표로 활용합니다.&lt;/li&gt;&#xA;&lt;li&gt;Fine-tuning된 KoELECTRA 및 RoBERTa 모델에 대한 예측 결과를 hard-voting하여&#xA;accuracy 기준 &lt;code&gt;0.7116&lt;/code&gt; 점으로 550팀 중 2위에 위치했습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;a href=&#34;https://dacon.io/competitions/official/235938/codeshare/5932&#34; target=&#34;_blank&#34; class=&#34;bookmark-card&#34;&gt;&lt;div class=&#34;bookmark-image&#34;&gt;&#xA;    &lt;img src=&#34;https://dacon.s3.ap-northeast-2.amazonaws.com/competition/235938/meta_cpt.jpeg&#34; alt=&#34; Private 2nd | 0.7116 | KoELECTAR&amp;#43;RoBERTa | Hard-Voting&#34;&gt;&#xA;  &lt;/div&gt;&lt;div class=&#34;bookmark-content&#34;&gt;&#xA;    &lt;h3 class=&#34;bookmark-title&#34;&gt; Private 2nd | 0.7116 | KoELECTAR+RoBERTa | Hard-Voting&lt;/h3&gt;&lt;p class=&#34;bookmark-description&#34;&gt;&#xA;      알고리즘 | NLP | 분류 | 리뷰 | Accuracy&#xA;    &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

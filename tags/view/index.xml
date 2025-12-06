@@ -9,7 +9,7 @@
     <lastBuildDate>Sat, 05 Jul 2025 23:03:04 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/view/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache Spark - 스파크 SQL</title>
+      <title>Apache Spark - 스파크 SQL과 테이블/뷰 관리</title>
       <link>https://minyeamer.github.io/blog/spark-study-5/</link>
       <pubDate>Sat, 05 Jul 2025 23:03:04 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/spark-study-5/</guid>

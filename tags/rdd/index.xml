@@ -9,7 +9,7 @@
     <lastBuildDate>Sun, 29 Jun 2025 12:50:06 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/rdd/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache Spark - 스파크 애플리케이션 및 RDD</title>
+      <title>Apache Spark - 스파크 애플리케이션 구조와 RDD 이해하기</title>
       <link>https://minyeamer.github.io/blog/spark-study-3/</link>
       <pubDate>Sun, 29 Jun 2025 12:50:06 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/spark-study-3/</guid>

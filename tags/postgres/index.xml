@@ -9,7 +9,7 @@
     <lastBuildDate>Sun, 08 Jun 2025 16:52:44 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache Airflow - Connection, Hook</title>
+      <title>Apache Airflow - 외부 시스템 연동 (Connection, Hook, PostgreSQL)</title>
       <link>https://minyeamer.github.io/blog/airflow-study-7/</link>
       <pubDate>Sun, 08 Jun 2025 16:52:44 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/airflow-study-7/</guid>

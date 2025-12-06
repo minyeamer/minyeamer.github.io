@@ -9,7 +9,7 @@
     <lastBuildDate>Sat, 19 Jul 2025 23:53:45 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/udf/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache Spark - 고차함수(Higher-Order Functions)</title>
+      <title>Apache Spark - 사용자 정의 함수(UDF)와 고차 함수 활용하기</title>
       <link>https://minyeamer.github.io/blog/spark-study-8/</link>
       <pubDate>Sat, 19 Jul 2025 23:53:45 +0900</pubDate>
       <guid>https://minyeamer.github.io/blog/spark-study-8/</guid>
