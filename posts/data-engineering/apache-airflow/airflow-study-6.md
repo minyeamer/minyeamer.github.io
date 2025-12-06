@@ -43,7 +43,9 @@ pip install apache-airflow-providers-http
 
 ## 네이버 쇼핑 검색 API
 
-{{< bookmark "https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md" >}}
+{{< bookmark
+  url="https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md"
+  image="https://dl.dropboxusercontent.com/scl/fi/x4x2s1wylgkwatfygk09z/naver-developers.webp?rlkey=z10lqzacm268bma2enhqbej0g&dl=0" >}}
 
 - `HttpOperator` 활용을 위해 간단한 API를 예제로 사용
 - 네이버 쇼핑 검색 API는 네이버에서 제공하는 Open API 중 하나로 네이버 쇼핑 페이지에서 검색한 결과를 XML 형식 또는 JSON 형식으로 반환하는 RestAPI
