@@ -1,5 +1,5 @@
 ---
-title: "프로그래머스 SQL Lv.4, 5 문제풀이"
+title: "프로그래머스 SQL Lv.4, 5 완전 정복 - 20문제 상세 풀이 (JOIN, GROUP BY, 윈도우 함수)"
 date: "2025-07-03T23:15:02+09:00"
 layout: "post"
 description: >
@@ -23,28 +23,29 @@ SQL 코딩테스트는 어떻게 나오나 궁금해서 프로그래머스 Lv.4,
 문제를 순서대로 풀어보면 유사한 데이터를 사용하는 경우가 있어 비슷한건 큰 제목으로 묶었습니다.
 테이블 구조는 생략하고 `문제 요약 > 문제 해석 + 풀이 > SQL문` 순서로 구성합니다.
 
-|ID|제목|유형|난이도|정답률|
-|---|---|---|---|---|
-|[301651](https://school.programmers.co.kr/learn/courses/30/lessons/301651)|멸종위기의 대장균 찾기|SELECT|Lv. 5|21%|
-|[301650](https://school.programmers.co.kr/learn/courses/30/lessons/301650)|특정 세대의 대장균 찾기|SELECT|Lv. 4|61%|
-|[284528](https://school.programmers.co.kr/learn/courses/30/lessons/284528)|연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기|GROUP BY|Lv. 4|72%|
-|[276036](https://school.programmers.co.kr/learn/courses/30/lessons/276036)|언어별 개발자 분류하기|GROUP BY|Lv. 4|41%|
-|[276035](https://school.programmers.co.kr/learn/courses/30/lessons/276035)|FrontEnd 개발자 찾기|JOIN|Lv. 4|51%|
-|[157339](https://school.programmers.co.kr/learn/courses/30/lessons/157339)|특정 기간동안 대여 가능한 자동차들의 대여비용 구하기|JOIN|Lv. 4|49%|
-|[151141](https://school.programmers.co.kr/learn/courses/30/lessons/151141)|자동차 대여 기록 별 대여 금액 구하기|String, Date|Lv. 4|51%|
-|[144856](https://school.programmers.co.kr/learn/courses/30/lessons/144856)|저자 별 카테고리 별 매출액 집계하기|GROUP BY|Lv. 4|76%|
-|[133027](https://school.programmers.co.kr/learn/courses/30/lessons/133027)|주문량이 많은 아이스크림들 조회하기|JOIN|Lv. 4|74%|
-|[132204](https://school.programmers.co.kr/learn/courses/30/lessons/132204)|취소되지 않은 진료 예약 조회하기|String, Date|Lv. 4|79%|
-|[131537](https://school.programmers.co.kr/learn/courses/30/lessons/131537)|오프라인/온라인 판매 데이터 통합하기|SELECT|Lv. 4|67%|
-|[131534](https://school.programmers.co.kr/learn/courses/30/lessons/131534)|상품을 구매한 회원 비율 구하기|JOIN|Lv. 5|46%|
-|[131532](https://school.programmers.co.kr/learn/courses/30/lessons/131532)|년, 월, 성별 별 상품 구매 회원 수 구하기|GROUP BY|Lv. 4|75%|
-|[131124](https://school.programmers.co.kr/learn/courses/30/lessons/131124)|그룹별 조건에 맞는 식당 목록 출력하기|JOIN|Lv. 4|71%|
-|[131118](https://school.programmers.co.kr/learn/courses/30/lessons/131118)|서울에 위치한 식당 목록 출력하기|SELECT|Lv. 4|75%|
-|[131117](https://school.programmers.co.kr/learn/courses/30/lessons/131117)|5월 식품들의 총매출 조회하기|JOIN|Lv. 4|84%|
-|[131116](https://school.programmers.co.kr/learn/courses/30/lessons/131116)|식품분류별 가장 비싼 식품의 정보 조회하기|GROUP BY|Lv. 4|85%|
-|[62284](https://school.programmers.co.kr/learn/courses/30/lessons/62284)|우유와 요거트가 담긴 장바구니|GROUP BY|Lv. 4|74%|
-|[59413](https://school.programmers.co.kr/learn/courses/30/lessons/59413)|입양 시각 구하기(2)|GROUP BY|Lv. 4|61%|
-|[59045](https://school.programmers.co.kr/learn/courses/30/lessons/59045)|보호소에서 중성화한 동물|JOIN|Lv. 4|85%|
+{{% data-table delimiter="|" align-center="1,4,5,6,7" %}}
+ID|제목|유형|난이도|정답률|문제풀기|풀이보기
+301651|멸종위기의 대장균 찾기|SELECT|Lv.5|21%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/301651)|[링크](#멸종위기의-대장균-찾기)
+301650|특정 세대의 대장균 찾기|SELECT|Lv.4|61%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/301650)|[링크](#특정-세대의-대장균-찾기)
+284528|연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기|GROUP BY|Lv.4|72%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/284528)|[링크](#연간-평가점수에-해당하는-평가-등급-및-성과금-조회하기)
+276036|언어별 개발자 분류하기|GROUP BY|Lv.4|41%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/276036)|[링크](#언어별-개발자-분류하기)
+276035|FrontEnd 개발자 찾기|JOIN|Lv.4|51%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/276035)|[링크](#frontend-개발자-찾기)
+157339|특정 기간동안 대여 가능한 자동차들의 대여비용 구하기|JOIN|Lv.4|49%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/157339)|[링크](#특정-기간동안-대여-가능한-자동차들의-대여비용-구하기)
+151141|자동차 대여 기록 별 대여 금액 구하기|String, Date|Lv.4|51%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/151141)|[링크](#자동차-대여-기록-별-대여-금액-구하기)
+144856|저자 별 카테고리 별 매출액 집계하기|GROUP BY|Lv.4|76%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/144856)|[링크](#저자-별-카테고리-별-매출액-집계하기)
+133027|주문량이 많은 아이스크림들 조회하기|JOIN|Lv.4|74%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/133027)|[링크](#주문량이-많은-아이스크림들-조회하기)
+132204|취소되지 않은 진료 예약 조회하기|String, Date|Lv.4|79%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/132204)|[링크](#취소되지-않은-진료-예약-조회하기)
+131537|오프라인/온라인 판매 데이터 통합하기|SELECT|Lv.4|67%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/131537)|[링크](#오프라인/온라인-판매-데이터-통합하기)
+131534|상품을 구매한 회원 비율 구하기|JOIN|Lv.5|46%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/131534)|[링크](#상품을-구매한-회원-비율-구하기)
+131532|년, 월, 성별 별 상품 구매 회원 수 구하기|GROUP BY|Lv.4|75%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/131532)|[링크](#년,-월,-성별-별-상품-구매-회원-수-구하기)
+131124|그룹별 조건에 맞는 식당 목록 출력하기|JOIN|Lv.4|71%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/131124)|[링크](#그룹별-조건에-맞는-식당-목록-출력하기)
+131118|서울에 위치한 식당 목록 출력하기|SELECT|Lv.4|75%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/131118)|[링크](#서울에-위치한-식당-목록-출력하기)
+131117|5월 식품들의 총매출 조회하기|JOIN|Lv.4|84%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/131117)|[링크](#5월-식품들의-총매출-조회하기)
+131116|식품분류별 가장 비싼 식품의 정보 조회하기|GROUP BY|Lv.4|85%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/131116)|[링크](#식품분류별-가장-비싼-식품의-정보-조회하기)
+62284|우유와 요거트가 담긴 장바구니|GROUP BY|Lv.4|74%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/62284)|[링크](#우유와-요거트가-담긴-장바구니)
+59413|입양 시각 구하기(2)|GROUP BY|Lv.4|61%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/59413)|[링크](#입양-시각-구하기(2))
+59045|보호소에서 중성화한 동물|JOIN|Lv.4|85%|[링크](https://school.programmers.co.kr/learn/courses/30/lessons/59045)|[링크](#보호소에서-중성화한-동물)
+{{% /data-table %}}
 
 ## 동물 입양 테이블
 
