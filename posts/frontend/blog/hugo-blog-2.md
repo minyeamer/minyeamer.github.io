@@ -6,7 +6,8 @@ description: >
   Hugo Book 테마의 구조를 이해하고 메인 레이아웃을 개선하는 방법을 소개합니다.
   메뉴 영역에 프로필 사진과 소셜 링크를 추가하고,
   목차 영역에 하이라이트와 스크롤 이동 버튼을 구현하는 과정을 안내합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/tmx5klj6hyiupke0u01ef/hugo-00-cover.png?rlkey=1cxv77edyfl0w2ljjqvjxg1mr&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&st=uiminuv3&dl=0"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&st=2fjsd1c2&dl=0"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Blog", "휴고 테마", "휴고 레이아웃", "HTML", "CSS", "JavaScript", "Hugo Book", "커스터마이징", "블로그 목차"]
 ---

@@ -5,7 +5,8 @@ layout: "post"
 description: >
   Hugo의 taxonomies 기능을 활용하여 태그와 카테고리 페이지를 커스터마이징하는 방법을 소개합니다.
   게시글 목록 템플릿과 페이지네이션 구현, 태그 및 카테고리 페이지 추가, 메뉴에 카테고리를 통합하는 과정을 안내합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/tmx5klj6hyiupke0u01ef/hugo-00-cover.png?rlkey=1cxv77edyfl0w2ljjqvjxg1mr&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&st=uiminuv3&dl=0"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&st=2fjsd1c2&dl=0"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Taxonomies", "태그", "카테고리", "휴고 테마", "휴고 레이아웃", "Blog", "HTML", "CSS", "JavaScript", "Hugo Book", "블로그 태그", "블로그 카테고리"]
 ---

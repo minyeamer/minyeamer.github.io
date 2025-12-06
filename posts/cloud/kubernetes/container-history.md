@@ -7,6 +7,7 @@ description: >
   LXC, Docker, containerd부터 CRI, OCI까지 컨테이너 기술의 진화를 단계별로 설명하며,
   Kubernetes의 핵심 개념을 이해하세요. 클라우드 네이티브 환경 구축에 필수적인 지식입니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernetes-00-cover.webp?rlkey=62jkzfxluywah0k79039ywve0&st=ttltfwrk&dl=0"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&st=rz2ddqlp&dl=0"
 categories: ["Cloud", "Kubernetes"]
 tags: ["Kubernetes", "Container", "컨테이너 역사", "Docker", "LXC", "containerd", "CRI", "OCI", "kubelet", "컨테이너 런타임", "클라우드 네이티브", "오케스트레이션"]
 ---
