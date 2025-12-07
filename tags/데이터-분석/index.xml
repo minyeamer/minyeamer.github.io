@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>데이터 분석 on Minystory</title>
+    <link>https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D/</link>
+    <description>Recent content in 데이터 분석 on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 22 Aug 2022 14:31:44 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DACON 소비자 데이터 기반 소비 예측 AI 경진대회 - EDA &#43; Soft Voting Ensemble</title>
+      <link>https://minyeamer.github.io/blog/dacon-consumption-prediction/</link>
+      <pubDate>Mon, 22 Aug 2022 14:31:44 +0900</pubDate>
+      <guid>https://minyeamer.github.io/blog/dacon-consumption-prediction/</guid>
+      <description>&lt;a href=&#34;https://dacon.io/competitions/official/235893/codeshare/4921&#34; target=&#34;_blank&#34; class=&#34;bookmark-card&#34;&gt;&lt;div class=&#34;bookmark-image&#34;&gt;&#xA;    &lt;img src=&#34;https://dacon.s3.ap-northeast-2.amazonaws.com/competition/235893/meta_cpt.jpeg&#34; alt=&#34;[0.16691] EDA 및  Ensemble을 활용한 데이터 예측&#34;&gt;&#xA;  &lt;/div&gt;&lt;div class=&#34;bookmark-content&#34;&gt;&#xA;    &lt;h3 class=&#34;bookmark-title&#34;&gt;[0.16691] EDA 및  Ensemble을 활용한 데이터 예측&lt;/h3&gt;&lt;p class=&#34;bookmark-description&#34;&gt;&#xA;      정형 | NMAE&#xA;    &lt;/p&gt;&lt;small class=&#34;bookmark-url&#34;&gt;dacon.io&lt;/small&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/a&gt;&#xA;&lt;h2 id=&#34;분석-목표-및-결과&#34;&gt;분석 목표 및 결과&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%eb%b6%84%ec%84%9d-%eb%aa%a9%ed%91%9c-%eb%b0%8f-%ea%b2%b0%ea%b3%bc&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;소비자 데이터를 바탕으로 고객의 제품 총 소비량을 예측했습니다.&lt;/li&gt;&#xA;&lt;li&gt;팀 프로젝트를 통해 습득한 EDA 시각화를 최대한 활용해보는 것을 목적으로 진행했습니다.&lt;/li&gt;&#xA;&lt;li&gt;Ensemble 기법 중 Soft Voting 방식을 사용해 NMAE 기준 &lt;code&gt;0.18533&lt;/code&gt; 수치를 달성하여 36위를 기록했습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;학습-데이터&#34;&gt;학습 데이터&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ed%95%99%ec%8a%b5-%eb%8d%b0%ec%9d%b4%ed%84%b0&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://dacon.io/competitions/official/235893/data&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;소비자 데이터&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;베이스라인에서 데이터 결측치가 없음을 확인받고 전처리 없이 EDA 진행했습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/scl/fi/y4e3kpu0yxm2ax2deeyxp/consumption-prediction-01-data.webp?rlkey=3arpouhstnsbnspq75vnjp7as&amp;amp;dl=0&#34; alt=&#34;train.csv&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
