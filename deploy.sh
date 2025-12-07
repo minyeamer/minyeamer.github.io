@@ -7,7 +7,7 @@ git submodule update --remote
 
 # Build the project.
 # hugo -t <your theme>
-hugo -t Book --gc
+hugo -t Book --gc --cleanDestinationDir
 
 # Go to public folder, submodule commit
 cd public
