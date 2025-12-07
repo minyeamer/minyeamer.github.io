@@ -660,10 +660,17 @@
       <description></description>
     </item>
     <item>
-      <title>문제풀이</title>
-      <link>https://minyeamer.github.io/tags/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/</link>
+      <title>알고리즘</title>
+      <link>https://minyeamer.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
       <pubDate>Thu, 03 Jul 2025 23:15:02 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/</guid>
+      <guid>https://minyeamer.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>알고리즘 문제풀이</title>
+      <link>https://minyeamer.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/</link>
+      <pubDate>Thu, 03 Jul 2025 23:15:02 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/</guid>
       <description></description>
     </item>
     <item>
@@ -1238,6 +1245,97 @@
       <link>https://minyeamer.github.io/tags/%EC%9D%8C%EC%84%B1-%EB%B6%84%EB%A5%98/</link>
       <pubDate>Mon, 22 Aug 2022 14:50:36 +0900</pubDate>
       <guid>https://minyeamer.github.io/tags/%EC%9D%8C%EC%84%B1-%EB%B6%84%EB%A5%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DFS</title>
+      <link>https://minyeamer.github.io/tags/dfs/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/dfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Heap</title>
+      <link>https://minyeamer.github.io/tags/heap/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/heap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MST</title>
+      <link>https://minyeamer.github.io/tags/mst/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/mst/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Union-Find</title>
+      <link>https://minyeamer.github.io/tags/union-find/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/union-find/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>백준</title>
+      <link>https://minyeamer.github.io/tags/%EB%B0%B1%EC%A4%80/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EB%B0%B1%EC%A4%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>백준 Gold 4</title>
+      <link>https://minyeamer.github.io/tags/%EB%B0%B1%EC%A4%80-gold-4/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EB%B0%B1%EC%A4%80-gold-4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>최소 스패닝 트리</title>
+      <link>https://minyeamer.github.io/tags/%EC%B5%9C%EC%86%8C-%EC%8A%A4%ED%8C%A8%EB%8B%9D-%ED%8A%B8%EB%A6%AC/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EC%B5%9C%EC%86%8C-%EC%8A%A4%ED%8C%A8%EB%8B%9D-%ED%8A%B8%EB%A6%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>크루스칼 알고리즘</title>
+      <link>https://minyeamer.github.io/tags/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>프림 알고리즘</title>
+      <link>https://minyeamer.github.io/tags/%ED%94%84%EB%A6%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%ED%94%84%EB%A6%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BFS</title>
+      <link>https://minyeamer.github.io/tags/bfs/</link>
+      <pubDate>Sun, 20 Mar 2022 13:37:54 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/bfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Set</title>
+      <link>https://minyeamer.github.io/tags/set/</link>
+      <pubDate>Sun, 20 Mar 2022 13:37:54 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/set/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>이진 탐색</title>
+      <link>https://minyeamer.github.io/tags/%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89/</link>
+      <pubDate>Sun, 20 Mar 2022 13:37:54 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>자료구조</title>
+      <link>https://minyeamer.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</link>
+      <pubDate>Sun, 20 Mar 2022 13:37:54 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</guid>
       <description></description>
     </item>
   </channel>

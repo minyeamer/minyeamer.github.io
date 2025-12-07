@@ -1,0 +1,774 @@
+<!doctype html><html lang=ko-kr dir=ltr><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="index, follow"><meta name=keywords content><meta name=description content><meta name=author content="minyeamer"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><link rel=canonical href=https://minyeamer.github.io/categories/python/><link rel=icon href=https://minyeamer.github.io/images/favicons/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://minyeamer.github.io/images/favicons/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://minyeamer.github.io/images/favicons/favicon-32x32.png><link rel=apple-touch-icon href=https://minyeamer.github.io/images/favicons/apple-touch-icon.png><link rel=mask-icon href=https://minyeamer.github.io/images/favicons/apple-touch-icon.png><meta name=google-site-verification content="u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"><meta name=naver-site-verification content="6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"><meta property="og:title" content="Python"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://minyeamer.github.io/categories/python/"><meta property="og:image" content="https://minyeamer.github.io/images/profile/opengraph.jpg"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://minyeamer.github.io/images/profile/opengraph.jpg"><meta name=twitter:title content="Python"><meta name=twitter:description content><meta name=twitter:site content="@https://x.com/minyeamer"><title>Python | Minystory</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://minyeamer.github.io/categories/python/><link rel=stylesheet href=/book.min.da9f864e1bccfac13510edef0c8dbe217c58d1ba58855d698051f162d9101fc5.css integrity="sha256-2p+GThvM+sE1EO3vDI2+IXxY0bpYhV1pgFHxYtkQH8U=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/search-input.min.14cad5494ccc0535fda20cdf35667c523278c700c0725af04708c4c53af8f2e6.js integrity="sha256-FMrVSUzMBTX9ogzfNWZ8UjJ4xwDAclrwRwjExTr48uY=" crossorigin=anonymous></script><link rel=preload href=/search-data.min.125289a0655fe4ee106f0668f2f05784c72a361ded0fdb56cf6c84729eed4bb3.json as=fetch crossorigin><script>window.SEARCH_DATA_URL="/search-data.min.125289a0655fe4ee106f0668f2f05784c72a361ded0fdb56cf6c84729eed4bb3.json"</script><script defer src=/search.min.f30f9834d4764fd9751da64098c954d01085f648ba9ca421a3c97582f8c47253.js integrity="sha256-8w+YNNR2T9l1HaZAmMlU0BCF9ki6nKQho8l1gvjEclM=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ8Z9RMBPJ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BJ8Z9RMBPJ")</script><link rel=alternate type=application/rss+xml href=https://minyeamer.github.io/categories/python/index.xml title=Minystory><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css crossorigin=anonymous><script defer src=/scroll-progress.min.841ade7e507a5f6d59c4e7bf2fe2b2ca034070677ff7957eec55610a024dd776.js integrity="sha256-hBreflB6X21ZxOe/L+KyygNAcGd/95V+7FVhCgJN13Y=" crossorigin=anonymous></script><script defer src=/dark-mode.min.e41c6440ffd9967d6f6a419ff3ce09b862009fe1646ab265f5cb2817d2a508e3.js integrity="sha256-5BxkQP/Zln1vakGf884JuGIAn+FkarJl9csoF9KlCOM=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js></script><script defer src=/copy-code.min.aaeef965f0b4992e55f976edaecb34a89d414e1791caa18c3f4f4376c6d8b5a8.js integrity="sha256-qu75ZfC0mS5V+Xbtrss0qJ1BTheRyqGMP09DdsbYtag=" crossorigin=anonymous></script><script defer src=/toc-highlightjs.093016f0ef312174ad862fdcf5792e88ab5442bd39beecc38d15643f71ab5c31.min integrity="sha256-CTAW8O8xIXSthi/c9XkuiKtUQr05vuzDjRVkP3GrXDE=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-term book-type-categories book-layout-"><div class=scroll-progress><div class=scroll-progress-bar></div></div><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><div class=sidebar-profile><div class=profile-img-wrap><a href=https://minyeamer.github.io/><img src=/images/profile/menu.jpg alt=Profile class=profile-img></a></div><div class=sidebar-social><a href=https://github.com/minyeamer target=_blank title=GitHub><i class="fa-brands fa-github"></i>
+</a><a href=/categories/ title=Categories><i class="fa-solid fa-folder"></i>
+</a><a href=/tags/ title=Tags><i class="fa-solid fa-tags"></i>
+</a><button id=dark-mode-toggle class=dark-mode-toggle aria-label="Toggle dark mode">
+<i class="fa-solid fa-circle-half-stroke"></i></button></div></div><h2 class=book-brand><a class="flex align-center" href=/><span>Minystory</span></a></h2><div class="book-search hidden"><div class=search-input-container><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/ onkeydown='event.key==="Enter"&&goToSearchPage()'>
+<button type=button id=book-search-button class=book-search-btn onclick=goToSearchPage()>
+<i class="fa-solid fa-magnifying-glass"></i></button></div><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden");function goToSearchPage(){const t=document.getElementById("book-search-input"),e=t.value.trim();e&&(window.location.href="/search/?q="+encodeURIComponent(e))}</script><div class=book-categories><input type=checkbox class="hidden toggle" id=categories-control checked>
+<label for=categories-control class="categories-toggle categories-link"><a href=/categories/><i class="fa-solid fa-folder"></i>
+<span>전체</span>
+<span class=category-count>(36)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul class=categories-menu id=categories-menu><li><input type=checkbox class="hidden toggle" id=cat-algorithm>
+<label for=cat-algorithm class="categories-toggle categories-link"><a href=/categories/algorithm/><i class="fa-solid fa-folder"></i>
+Algorithm
+<span class=category-count>(3)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/algorithm/graph/><i class="fa-solid fa-file"></i>
+Graph
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/algorithm/python/><i class="fa-solid fa-file"></i>
+Python
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/algorithm/sql/><i class="fa-solid fa-file"></i>
+SQL
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-cloud>
+<label for=cat-cloud class="categories-toggle categories-link"><a href=/categories/cloud/><i class="fa-solid fa-folder"></i>
+Cloud
+<span class=category-count>(2)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/cloud/kubernetes/><i class="fa-solid fa-file"></i>
+Kubernetes
+<span class=category-count>(2)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data-analysis>
+<label for=cat-data-analysis class="categories-toggle categories-link"><a href=/categories/data-analysis/><i class="fa-solid fa-folder"></i>
+Data Analysis
+<span class=category-count>(2)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data-analysis/dacon/><i class="fa-solid fa-file"></i>
+Dacon
+<span class=category-count>(2)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-data-engineering>
+<label for=cat-data-engineering class="categories-toggle categories-link"><a href=/categories/data-engineering/><i class="fa-solid fa-folder"></i>
+Data Engineering
+<span class=category-count>(19)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/data-engineering/apache-airflow/><i class="fa-solid fa-file"></i>
+Apache Airflow
+<span class=category-count>(7)</span></a></li><li class=categories-link><a href=/categories/data-engineering/apache-spark/><i class="fa-solid fa-file"></i>
+Apache Spark
+<span class=category-count>(8)</span></a></li><li class=categories-link><a href=/categories/data-engineering/crawling/><i class="fa-solid fa-file"></i>
+Crawling
+<span class=category-count>(4)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-frontend>
+<label for=cat-frontend class="categories-toggle categories-link"><a href=/categories/frontend/><i class="fa-solid fa-folder"></i>
+Frontend
+<span class=category-count>(7)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/frontend/blog/><i class="fa-solid fa-file"></i>
+Blog
+<span class=category-count>(7)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-linux>
+<label for=cat-linux class="categories-toggle categories-link"><a href=/categories/linux/><i class="fa-solid fa-folder"></i>
+Linux
+<span class=category-count>(1)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/linux/ubuntu/><i class="fa-solid fa-file"></i>
+Ubuntu
+<span class=category-count>(1)</span></a></li></ul></li><li><input type=checkbox class="hidden toggle" id=cat-project>
+<label for=cat-project class="categories-toggle categories-link"><a href=/categories/project/><i class="fa-solid fa-folder"></i>
+Project
+<span class=category-count>(2)</span>
+</a><i class="fa-solid fa-chevron-down categories-arrow"></i></label><ul><li class=categories-link><a href=/categories/project/open-source/><i class="fa-solid fa-file"></i>
+Open Source
+<span class=category-count>(1)</span></a></li><li class=categories-link><a href=/categories/project/tools/><i class="fa-solid fa-file"></i>
+Tools
+<span class=category-count>(1)</span></a></li></ul></li></ul></div><div class=recent-posts><div class=recent-posts-header><i class="fa-solid fa-clock"></i>
+<span>최신글</span></div><ul class=recent-posts-list><li class=recent-post-item><a href=/blog/hugo-blog-3/ title="Hugo 블로그 만들기 (3) - Taxonomies로 태그/카테고리 페이지 커스터마이징"><div class=recent-post-title>Hugo 블로그 만들기 (3) - Taxonomies로 태그/카테고리 페이지 커스터마이징</div><div class=recent-post-date><time datetime=2025-11-22>2025.11.22</time></div></a></li><li class=recent-post-item><a href=/blog/hugo-blog-2/ title="Hugo 블로그 만들기 (2) - 메인 레이아웃 커스터마이징 (메뉴, 목차, 헤더)"><div class=recent-post-title>Hugo 블로그 만들기 (2) - 메인 레이아웃 커스터마이징 (메뉴, 목차, 헤더)</div><div class=recent-post-date><time datetime=2025-11-04>2025.11.04</time></div></a></li><li class=recent-post-item><a href=/blog/hugo-blog-1/ title="Hugo 블로그 만들기 (1) - 프로젝트 구성과 GitHub Pages 배포 (Submodule 활용)"><div class=recent-post-title>Hugo 블로그 만들기 (1) - 프로젝트 구성과 GitHub Pages 배포 (Submodule 활용)</div><div class=recent-post-date><time datetime=2025-11-01>2025.11.01</time></div></a></li><li class=recent-post-item><a href=/blog/openup-handson/ title="[OSSCA] 2025 오픈소스 컨트리뷰션 아카데미 - PyTorch 문서 한글화 참여 후기"><div class=recent-post-title>[OSSCA] 2025 오픈소스 컨트리뷰션 아카데미 - PyTorch 문서 한글화 참여 후기</div><div class=recent-post-date><time datetime=2025-10-28>2025.10.28</time></div></a></li><li class=recent-post-item><a href=/blog/uv-project/ title="[Python] uv로 프로젝트 구성하고 PyPI 배포하기 - Rust 기반 고속 패키지 관리"><div class=recent-post-title>[Python] uv로 프로젝트 구성하고 PyPI 배포하기 - Rust 기반 고속 패키지 관리</div><div class=recent-post-date><time datetime=2025-07-23>2025.07.23</time></div></a></li></ul></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><i class="fa-solid fa-bars book-icon" id=menu-icon></i></label><h3><a href=https://minyeamer.github.io/ class=site-title>Minystory</a></h3><label for=toc-control></label></div><aside class="hidden clearfix"><nav><ul><li class=book-section-flat><span>Categories</span><ul><li class="flex justify-between"><a href=/categories/blog/>Blog</a>
+<span>7</span></li><li class="flex justify-between"><a href=/categories/frontend/>Frontend</a>
+<span>7</span></li><li class="flex justify-between"><a href=/categories/open-source/>Open Source</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/project/>Project</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/tools/>Tools</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/apache-spark/>Apache Spark</a>
+<span>8</span></li><li class="flex justify-between"><a href=/categories/data-engineering/>Data Engineering</a>
+<span>19</span></li><li class="flex justify-between"><a href=/categories/cloud/>Cloud</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/kubernetes/>Kubernetes</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/linux/>Linux</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/ubuntu/>Ubuntu</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/algorithm/>Algorithm</a>
+<span>3</span></li><li class="flex justify-between"><a href=/categories/sql/>SQL</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/apache-airflow/>Apache Airflow</a>
+<span>7</span></li><li class="flex justify-between"><a href=/categories/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/dacon/>Dacon</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/data-analysis/>Data Analysis</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/graph/>Graph</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/python/>Python</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/data-engineering/apache-airflow/>Apache Airflow</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data-engineering/apache-spark/>Apache Spark</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/frontend/blog/>Blog</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data-engineering/crawling/>Crawling</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data-analysis/dacon/>Dacon</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/graph/>Graph</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/cloud/kubernetes/>Kubernetes</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/project/open-source/>Open Source</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/python/>Python</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/sql/>SQL</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/project/tools/>Tools</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/linux/ubuntu/>Ubuntu</a>
+<span>0</span></li></ul></li><li class=book-section-flat><span>Tags</span><ul><li class="flex justify-between"><a href=/tags/blog/>Blog</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/css/>CSS</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/html/>HTML</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/hugo/>Hugo</a>
+<span>6</span></li><li class="flex justify-between"><a href=/tags/hugo-book/>Hugo Book</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/javascript/>JavaScript</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/taxonomies/>Taxonomies</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/>블로그 카테고리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%83%9C%EA%B7%B8/>블로그 태그</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/>카테고리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%83%9C%EA%B7%B8/>태그</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%9C%B4%EA%B3%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/>휴고 레이아웃</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%ED%9C%B4%EA%B3%A0-%ED%85%8C%EB%A7%88/>휴고 테마</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%AA%A9%EC%B0%A8/>블로그 목차</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/>커스터마이징</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/git/>Git</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/github-pages/>Github Pages</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/submodule/>Submodule</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/velog/>Velog</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B2%A8%EB%A1%9C%EA%B7%B8/>벨로그</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC/>티스토리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%9C%B4%EA%B3%A0/>휴고</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/github/>Github</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/open-source/>Open Source</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/openup/>OpenUp</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ossca/>OSSCA</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pytorch/>PyTorch</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rst/>RST</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/translation/>Translation</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B2%88%EC%97%AD/>번역</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/>오픈소스</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98/>파이토치</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pypi/>PyPI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/python/>Python</a>
+<span>14</span></li><li class="flex justify-between"><a href=/tags/python-%ED%8C%A8%ED%82%A4%EC%A7%80/>Python 패키지</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rust/>Rust</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/uv/>Uv</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/>가상환경</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B0%ED%8F%AC/>배포</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B4%80%EB%A6%AC/>패키지 관리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC/>프로젝트 관리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/apache-spark/>Apache Spark</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/pandas-udf/>Pandas UDF</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pyspark/>PySpark</a>
+<span>6</span></li><li class="flex justify-between"><a href=/tags/spark-sql/>Spark SQL</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/study/>Study</a>
+<span>15</span></li><li class="flex justify-between"><a href=/tags/udf/>UDF</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B3%A0%EC%B0%A8-%ED%95%A8%EC%88%98/>고차 함수</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81/>데이터 엔지니어링</a>
+<span>15</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%ED%8C%8C%ED%81%AC/>스파크</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/calico/>Calico</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cni/>CNI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/containerd/>Containerd</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/kubeadm/>Kubeadm</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/kubectl/>Kubectl</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/kubelet/>Kubelet</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/kubernetes/>Kubernetes</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/ubuntu-24.04/>Ubuntu 24.04</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EC%84%A4%EC%B9%98/>쿠버네티스 설치</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1/>클러스터 구성</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/container/>Container</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cri/>CRI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/docker/>Docker</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/lxc/>LXC</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/oci/>OCI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98/>오케스트레이션</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%9F%B0%ED%83%80%EC%9E%84/>컨테이너 런타임</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%97%AD%EC%82%AC/>컨테이너 역사</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C/>클라우드 네이티브</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hive/>Hive</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jdbc/>JDBC</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mysql/>MySQL</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/postgresql/>PostgreSQL</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rdbms/>RDBMS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/avro/>Avro</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/csv/>CSV</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/data-sources/>Data Sources</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/json/>JSON</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/parquet/>Parquet</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/linux/>Linux</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mac/>Mac</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ssh/>SSH</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ubuntu/>Ubuntu</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ubuntu-server/>Ubuntu Server</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/utm/>UTM</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/virtual-machine/>Virtual Machine</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0/>가상머신</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/>우분투 설치하기</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/sql/>SQL</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/view/>View</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/group-by/>GROUP BY</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/join/>JOIN</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/select/>SELECT</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>알고리즘</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/>알고리즘 문제풀이</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/>코딩테스트</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/>프로그래머스</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv4/>프로그래머스 Lv4</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv5/>프로그래머스 Lv5</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dataframe/>DataFrame</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dataset/>Dataset</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/structured-api/>Structured API</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rdd/>RDD</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/spark-application/>Spark Application</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/spark-shell/>Spark Shell</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/spark-web-ui/>Spark Web UI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hadoop/>Hadoop</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hdfs/>HDFS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jdk/>JDK</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cluster-manager/>Cluster Manager</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/spark-architecture/>Spark Architecture</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/sparksession/>SparkSession</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/apache-airflow/>Apache Airflow</a>
+<span>7</span></li><li class="flex justify-between"><a href=/tags/connection/>Connection</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/custom-hook/>Custom Hook</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/docker-compose/>Docker Compose</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/hook/>Hook</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/postgres/>Postgres</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%97%90%EC%96%B4%ED%94%8C%EB%A1%9C%EC%9A%B0/>에어플로우</a>
+<span>7</span></li><li class="flex justify-between"><a href=/tags/baseoperator/>BaseOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/custom-operator/>Custom Operator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/httpoperator/>HttpOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rest-api/>REST API</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%84%A4%EC%9D%B4%EB%B2%84-open-api/>네이버 Open API</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/edge-label/>Edge Label</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/taskgroup/>TaskGroup</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/trigger-rule/>Trigger Rule</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/triggerdagrunoperator/>TriggerDagRunOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/branching/>Branching</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/branchoperator/>BranchOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/email/>Email</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/emailoperator/>EmailOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/smtp/>SMTP</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/bashoperator/>BashOperator</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/jinja-%ED%85%9C%ED%94%8C%EB%A6%BF/>Jinja 템플릿</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pythonoperator/>PythonOperator</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/variable/>Variable</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/xcom/>XCom</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%B3%80%EC%88%98/>템플릿 변수</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dag/>DAG</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/decorator/>Decorator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/plugins/>Plugins</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/airflow-%EC%84%A4%EC%B9%98/>Airflow 설치</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/>만개의레시피</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%AC%EB%A1%A4%EB%A7%81/>크롤링</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/naver/>Naver</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/>네이버</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%A1%9C%EA%B7%B8%EC%9D%B8/>로그인</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4/>스마트스토어</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%EC%84%BC%ED%84%B0/>스마트스토어센터</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/go-template/>Go Template</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/katex/>KaTex</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/papermod/>PaperMod</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84/>검색 엔진</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/utterances/>Utterances</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/chirpy/>Chirpy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jekyll/>Jekyll</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dacon/>DACON</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/koelectra/>KoELECTRA</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/nlp/>NLP</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/nlpaug/>NLPAUG</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/roberta/>RoBERTa</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%90%EC%A0%95-%EB%B6%84%EC%84%9D/>감정 분석</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A6%9D%EA%B0%95/>데이터 증강</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%87%BC%ED%95%91%EB%AA%B0-%EB%A6%AC%EB%B7%B0/>쇼핑몰 리뷰</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%95%99%EC%83%81%EB%B8%94/>앙상블</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EC%97%AD%EB%B2%88%EC%97%AD/>역번역</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%B6%84%EB%A5%98/>텍스트 분류</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/audio-mnist/>Audio MNIST</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/librosa/>Librosa</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mel-spectrogram/>Mel Spectrogram</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mfcc/>MFCC</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/resnet/>ResNet</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D/>교차검증</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/>딥러닝</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9D%8C%EC%84%B1-%EB%B6%84%EB%A5%98/>음성 분류</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dfs/>DFS</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/heap/>Heap</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/mst/>MST</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/union-find/>Union-Find</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80-gold-4/>백준 Gold 4</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%B5%9C%EC%86%8C-%EC%8A%A4%ED%8C%A8%EB%8B%9D-%ED%8A%B8%EB%A6%AC/>최소 스패닝 트리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>크루스칼 알고리즘</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A6%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>프림 알고리즘</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/bfs/>BFS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/set/>Set</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89/>이진 탐색</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/>자료구조</a>
+<span>1</span></li></ul></li></ul></nav></aside></header><article class="markdown book-post"><h2><a href=/blog/algorithm-basics/>파이썬 알고리즘 스터디 노트 - Set, Heap, DFS, BFS 정리</a></h2><div class="flex align-center text-small book-post-date"><img src=/icons/calendar.svg class=book-icon alt>
+<span>March 20, 2022</span></div><div class=text-small><a href=/categories/algorithm/>Algorithm</a>,
+<a href=/categories/python/>Python</a></div><div class=text-small><a href=/tags/python/>Python</a>,
+<a href=/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>알고리즘</a>,
+<a href=/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/>자료구조</a>,
+<a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>,
+<a href=/tags/set/>Set</a>,
+<a href=/tags/heap/>Heap</a>,
+<a href=/tags/%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89/>이진 탐색</a>,
+<a href=/tags/dfs/>DFS</a>,
+<a href=/tags/bfs/>BFS</a>,
+<a href=/tags/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>크루스칼 알고리즘</a>,
+<a href=/tags/%ED%94%84%EB%A6%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>프림 알고리즘</a>,
+<a href=/tags/union-find/>Union-Find</a></div><div class=book-post-content><h2 id=자료구조>자료구조
+<a class=anchor href=#%ec%9e%90%eb%a3%8c%ea%b5%ac%ec%a1%b0>#</a></h2><h3 id=set>Set
+<a class=anchor href=#set>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/1107 target=_blank rel="noopener noreferrer">백준 1107번(리모컨) 문제</a>를 풀 때 사용</li><li>해당 문제는 특정 길이의 문자열에 대해 가능한 모든 조합을 탐색해야 하는데 시간복잡도를 줄이기 위해 중복이 없는 집합을 사용</li><li>빈집합은 set() 명령어로 간단하게 정의</li><li>Set은 Dictionary와 동일한 Hash Table 기반이기 때문에 <code>x in s</code> 연산의 시간복잡도가
+<strong>O(1)</strong> 리스트의 <code>x in s</code> 연산 시간복잡도가 <strong>O(n)</strong> 인 것과는 큰 차이</li></ul><h4 id=set을-활용한-코드-일부>Set을 활용한 코드 일부
+<a class=anchor href=#set%ec%9d%84-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%bd%94%eb%93%9c-%ec%9d%bc%eb%b6%80>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>buttons</span> <span class=o>=</span> <span class=nb>set</span><span class=p>([</span><span class=nb>str</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>10</span><span class=p>)])</span>
+</span></span><span class=line><span class=cl><span class=n>channels</span> <span class=o>=</span> <span class=p>{</span><span class=n>N</span><span class=p>,}</span>
+</span></span><span class=line><span class=cl><span class=n>diff</span> <span class=o>=</span> <span class=p>{</span><span class=nb>abs</span><span class=p>(</span><span class=n>int_N</span><span class=o>-</span><span class=mi>100</span><span class=p>)}</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>M</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>buttons</span> <span class=o>-=</span> <span class=nb>set</span><span class=p>(</span><span class=nb>list</span><span class=p>(</span><span class=nb>input</span><span class=p>()</span><span class=o>.</span><span class=n>split</span><span class=p>()))</span>
+</span></span><span class=line><span class=cl>    <span class=n>channels</span> <span class=o>=</span> <span class=nb>set</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=n>count</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>product</span> <span class=o>=</span> <span class=n>itertools</span><span class=o>.</span><span class=n>product</span><span class=p>(</span><span class=n>buttons</span><span class=p>,</span> <span class=n>repeat</span><span class=o>=</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>channels</span><span class=o>|=</span> <span class=nb>set</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=o>.</span><span class=n>join</span><span class=p>,</span> <span class=n>product</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>min_chan</span><span class=p>,</span> <span class=n>max_chan</span> <span class=o>=</span> <span class=s1>&#39;0&#39;</span><span class=p>,</span> <span class=s1>&#39;1&#39;</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>count</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>min_chan</span> <span class=o>+=</span> <span class=nb>max</span><span class=p>(</span><span class=n>buttons</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>count</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>max_chan</span> <span class=o>+=</span> <span class=nb>min</span><span class=p>(</span><span class=n>buttons</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nb>set</span><span class=p>(</span><span class=n>max_chan</span><span class=p>)</span> <span class=o>&amp;</span> <span class=n>buttons</span> <span class=o>==</span> <span class=nb>set</span><span class=p>(</span><span class=n>max_chan</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>channels</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>max_chan</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nb>set</span><span class=p>(</span><span class=n>min_chan</span><span class=p>)</span> <span class=o>&amp;</span> <span class=n>buttons</span> <span class=o>==</span> <span class=nb>set</span><span class=p>(</span><span class=n>min_chan</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>channels</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>min_chan</span><span class=p>)</span></span></span></code></pre></div></div><h3 id=dictionary>Dictionary
+<a class=anchor href=#dictionary>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/1620 target=_blank rel="noopener noreferrer">백준 1620번(나는야 포켓몬 마스터 이다솜) 문제</a>를 풀 때 사용</li><li>해당 문제는 문자열 또는 인덱스를 입력했을 때 대칭되는 값을 출력해야 하는데
+처음엔 시간복잡도가 <strong>O(n)</strong> 인 <strong>List</strong> 의 <strong>index(x)</strong> 를 사용하여 시간초과가 발생</li><li>문자열과 인덱스의 관계를 Dictionary로 구현해 탐색 시간복잡도를 <strong>O(1)</strong> 로 개선</li></ul><h3 id=coutner>Coutner
+<a class=anchor href=#coutner>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/10816 target=_blank rel="noopener noreferrer">백준 10816번(숫자카드 2) 문제</a>를 풀 때 사용</li><li>해당 문제는 숫자 카드의 값을 입력했을 때 해당 카드의 개수를 출력해야 하는데
+처음엔 시간복잡도가 <strong>O(n)</strong> 인 <strong>List</strong> 의 <strong>count(x)</strong> 를 사용하여 시간초과가 발생</li><li>전체 카드에 대한 Counter를 정의하여 탐색 시간복잡도를 <strong>O(1)</strong> 로 개선</li></ul><h3 id=heap>Heap
+<a class=anchor href=#heap>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/7662 target=_blank rel="noopener noreferrer">백준 7662번(이중 우선순위 큐) 문제</a>를 풀 때 사용</li><li>해당 문제는 최솟값과 최댓값 삭제 기능을 모두 가지고 있는 이중 우선순위 큐를 구현하는 것</li></ul><ol><li>처음엔 <strong>List</strong> 의 <strong>pop(x)</strong>, <strong>index(x)</strong>, <strong>max(x)/min(x)</strong> 를 혼합하여 사용한 것 때문에
+<strong>O(n^3)</strong> 이상의 시간복잡도를 만들어서 시간초과가 발생</li><li>두번째 시도에선 <strong>List</strong> 의 <strong>pop(x)</strong> 와 <strong>heapq</strong> 모듈의 <strong>heappop(x)</strong> 를 사용해 시간복잡도를 <strong>O(1)</strong> 로 개선
+하지만, Heap은 이진트리 기반으로 리스트와는 구조가 다르기 때문에 인덱스로 참조 시 에러가 발생</li><li>세번째 시도에선 단일 큐를 Max Heap과 Min Heap으로 나누고 각각에서 <strong>heappop(x), heappush(x)</strong> 를 수행
+하지만, Max Heap 또는 Min Heap에서 삭제된 값이 반대쪽 Heap에서 남아있는 경우가 있어 에러가 발생</li><li>해당 에러에 대한 해결책으로 Max Heap과 Min Heap을 동기화를 시키는 방법도 있지만,
+값이 유효한지 판단하는 <strong>Dictionary</strong> 를 구현해 값에 대한 참/거짓 여부를 참조하는 방법을 이용
+해당 Dictionary를 heappop(x) 사용 시 한 번, 최대/최솟값 출력 시 한 번씩 참조해 에러 해결</li></ol><h4 id=heap을-활용한-코드-일부>Heap을 활용한 코드 일부
+<a class=anchor href=#heap%ec%9d%84-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%bd%94%eb%93%9c-%ec%9d%bc%eb%b6%80>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>if</span> <span class=n>cmd</span> <span class=o>==</span> <span class=s1>&#39;I&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>n</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=n>n</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>heapq</span><span class=o>.</span><span class=n>heappush</span><span class=p>(</span><span class=n>min_Q</span><span class=p>,</span> <span class=n>n</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>heapq</span><span class=o>.</span><span class=n>heappush</span><span class=p>(</span><span class=n>max_Q</span><span class=p>,</span> <span class=o>-</span><span class=n>n</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>valid</span><span class=p>[</span><span class=n>n</span><span class=p>]</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=k>except</span> <span class=ne>KeyError</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>valid</span><span class=p>[</span><span class=n>n</span><span class=p>]</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=n>ins</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=n>cmd</span> <span class=o>==</span> <span class=s1>&#39;D&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>n</span> <span class=o>==</span> <span class=s1>&#39;1&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>max_pop</span> <span class=o>=</span> <span class=o>-</span><span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>max_Q</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=k>while</span> <span class=ow>not</span> <span class=n>valid</span><span class=p>[</span><span class=n>max_pop</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                <span class=n>max_pop</span> <span class=o>=</span> <span class=o>-</span><span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>max_Q</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>valid</span><span class=p>[</span><span class=n>max_pop</span><span class=p>]</span> <span class=o>-=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>            <span class=n>ins</span> <span class=o>-=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>elif</span> <span class=n>n</span> <span class=o>==</span> <span class=s1>&#39;-1&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>min_pop</span> <span class=o>=</span> <span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>min_Q</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=k>while</span> <span class=ow>not</span> <span class=n>valid</span><span class=p>[</span><span class=n>min_pop</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                <span class=n>min_pop</span> <span class=o>=</span> <span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>min_Q</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>valid</span><span class=p>[</span><span class=n>min_pop</span><span class=p>]</span> <span class=o>-=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>            <span class=n>ins</span> <span class=o>-=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>    <span class=k>except</span> <span class=ne>IndexError</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>min_Q</span><span class=p>,</span> <span class=n>max_Q</span> <span class=o>=</span> <span class=p>[],</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>        <span class=k>continue</span></span></span></code></pre></div></div><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>max_pop</span><span class=p>,</span> <span class=n>min_pop</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>max_pop</span> <span class=o>=</span> <span class=o>-</span><span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>max_Q</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>valid</span><span class=p>[</span><span class=n>max_pop</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>        <span class=k>break</span>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>min_pop</span> <span class=o>=</span> <span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>min_Q</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>valid</span><span class=p>[</span><span class=n>min_pop</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>        <span class=k>break</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>max_pop</span><span class=p>,</span> <span class=n>min_pop</span><span class=p>)</span></span></span></code></pre></div></div><h2 id=조합순열>조합/순열
+<a class=anchor href=#%ec%a1%b0%ed%95%a9%ec%88%9c%ec%97%b4>#</a></h2><h3 id=combination>Combination
+<a class=anchor href=#combination>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/1010 target=_blank rel="noopener noreferrer">백준 1010번(다리 놓기) 문제</a>를 풀 때 사용</li><li>해당 문제는 강에 다리를 놓는 경우의 수를 출력해야 하는데 math 모듈의 comb 함수를 이용해 경우의 수를 계산</li></ul><h3 id=permutation>Permutation
+<a class=anchor href=#permutation>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/1107 target=_blank rel="noopener noreferrer">백준 1107번(리모컨) 문제</a>를 풀 때 사용</li><li>해당 문제에서 특정 길이의 문자열에 대해 가능한 모든 조합을 나열하는데,
+순서를 고려하고 중복을 허용하기 위해 중복 순열(Product)을 사용</li></ul><h4 id=permutation을-활용한-코드-일부>Permutation을 활용한 코드 일부
+<a class=anchor href=#permutation%ec%9d%84-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%bd%94%eb%93%9c-%ec%9d%bc%eb%b6%80>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>buttons</span> <span class=o>=</span> <span class=nb>set</span><span class=p>([</span><span class=nb>str</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>10</span><span class=p>)])</span>
+</span></span><span class=line><span class=cl><span class=o>...</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=n>count</span><span class=o>+</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>product</span> <span class=o>=</span> <span class=n>itertools</span><span class=o>.</span><span class=n>product</span><span class=p>(</span><span class=n>buttons</span><span class=p>,</span> <span class=n>repeat</span><span class=o>=</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>channels</span><span class=o>|=</span> <span class=nb>set</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=o>.</span><span class=n>join</span><span class=p>,</span> <span class=n>product</span><span class=p>))</span></span></span></code></pre></div></div><h2 id=탐색>탐색
+<a class=anchor href=#%ed%83%90%ec%83%89>#</a></h2><h3 id=binary-search>Binary Search
+<a class=anchor href=#binary-search>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/1654 target=_blank rel="noopener noreferrer">백준 1654번(랜선 자르기) 문제</a>를 풀 때 사용</li><li>해당 문제는 서로 다른 길이의 선들을 동일한 길이로 가장 길게 잘라야 되는데
+처음엔 가장 긴 선부터 가장 짧은 선까지의 범위 내에서 완전탐색을 진행하여 시간초과가 발생</li><li>완전탐색을 이분탐색으로 대체하여 시간복잡도 개선</li></ul><h4 id=binary-search를-활용한-코드-일부>Binary Search를 활용한 코드 일부
+<a class=anchor href=#binary-search%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%bd%94%eb%93%9c-%ec%9d%bc%eb%b6%80>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>while</span> <span class=n>mn</span> <span class=o>&lt;</span> <span class=n>mx</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>md</span> <span class=o>=</span> <span class=p>(</span><span class=n>mx</span> <span class=o>+</span> <span class=n>mn</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>    <span class=n>count</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>K</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>count</span> <span class=o>+=</span> <span class=n>k</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>//</span> <span class=n>md</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>count</span> <span class=o>&lt;</span> <span class=n>N</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>mx</span> <span class=o>=</span> <span class=n>md</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>mn</span> <span class=o>=</span> <span class=n>md</span> <span class=o>+</span> <span class=mi>1</span></span></span></code></pre></div></div><h2 id=그래프>그래프
+<a class=anchor href=#%ea%b7%b8%eb%9e%98%ed%94%84>#</a></h2><h3 id=dfsbfs>DFS/BFS
+<a class=anchor href=#dfsbfs>#</a></h3><ul><li><a href=https://www.acmicpc.net/problem/1260 target=_blank rel="noopener noreferrer">백준 1260번(DFS와 BFS) 문제</a>를 풀 때 사용</li><li>해당 문제는 DFS와 BFS로 탐색했을 때의 결과를 출력하는 기본적인 문제</li><li>DFS는 <strong>깊이</strong> 를 우선적으로 탐색, BFS는 <strong>너비</strong> 를 우선적으로 탐색</li><li>DFS는 경로의 특징을 저장할 때 사용, BFS는 최단거리를 구할 때 사용</li><li>DFS는 스택 또는 <strong>재귀함수</strong> 로 구현, BFS는 <strong>큐(데크)</strong> 를 이용해서 구현</li></ul><h4 id=dfsbfs를-활용한-코드-일부>DFS/BFS를 활용한 코드 일부
+<a class=anchor href=#dfsbfs%eb%a5%bc-%ed%99%9c%ec%9a%a9%ed%95%9c-%ec%bd%94%eb%93%9c-%ec%9d%bc%eb%b6%80>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>dfs</span><span class=p>(</span><span class=n>nodes</span><span class=p>,</span> <span class=n>visited</span><span class=p>,</span> <span class=n>node</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>visited</span><span class=p>[</span><span class=n>node</span><span class=p>]</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>next_nodes</span> <span class=o>=</span> <span class=n>nodes</span><span class=p>[</span><span class=n>node</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=n>next_nodes</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>next_node</span> <span class=o>=</span> <span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>next_nodes</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=ow>not</span> <span class=n>visited</span><span class=p>[</span><span class=n>next_node</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>            <span class=nb>print</span><span class=p>(</span><span class=n>next_node</span><span class=p>,</span> <span class=n>end</span><span class=o>=</span><span class=s1>&#39; &#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>dfs</span><span class=p>(</span><span class=n>nodes</span><span class=p>,</span> <span class=n>visited</span><span class=p>,</span> <span class=n>next_node</span><span class=p>)</span></span></span></code></pre></div></div><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>bfs</span><span class=p>(</span><span class=n>nodes</span><span class=p>,</span> <span class=n>visited</span><span class=p>,</span> <span class=n>root</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>queue</span> <span class=o>=</span> <span class=n>deque</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>visited</span><span class=p>[</span><span class=n>root</span><span class=p>]</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>    <span class=n>queue</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>root</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=n>queue</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>node</span> <span class=o>=</span> <span class=n>queue</span><span class=o>.</span><span class=n>popleft</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=n>visited</span><span class=p>[</span><span class=n>node</span><span class=p>]</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>node</span><span class=p>,</span> <span class=n>end</span><span class=o>=</span><span class=s1>&#39; &#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=n>next_nodes</span> <span class=o>=</span> <span class=n>nodes</span><span class=p>[</span><span class=n>node</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>while</span> <span class=n>next_nodes</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>next_node</span> <span class=o>=</span> <span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>next_nodes</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=ow>not</span> <span class=n>visited</span><span class=p>[</span><span class=n>next_node</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                <span class=n>visited</span><span class=p>[</span><span class=n>next_node</span><span class=p>]</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>                <span class=n>queue</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>next_node</span><span class=p>)</span></span></span></code></pre></div></div><h3 id=union-find-algorithm>Union-Find Algorithm
+<a class=anchor href=#union-find-algorithm>#</a></h3><ul><li>두 노드가 같은 그래프에 속하는지 판별하는 알고리즘</li><li>노드를 합치는 Union 연산과 루트 노드를 찾는 Find 연산으로 이루어짐</li><li>배열에 나열된 모든 노드들은 기본적으로 자기 자신의 값을 가짐</li><li>노드를 합칠 때 자식 노드의 배열 값에 부모 노드의 배열 값을 넣음</li></ul><h4 id=파이썬-구현-코드>파이썬 구현 코드
+<a class=anchor href=#%ed%8c%8c%ec%9d%b4%ec%8d%ac-%ea%b5%ac%ed%98%84-%ec%bd%94%eb%93%9c>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>find</span><span class=p>(</span><span class=n>graph</span><span class=p>:</span> <span class=nb>list</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>graph</span><span class=p>[</span><span class=n>x</span><span class=p>]</span> <span class=o>==</span> <span class=n>x</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>x</span>
+</span></span><span class=line><span class=cl>    <span class=n>graph</span><span class=p>[</span><span class=n>x</span><span class=p>]</span> <span class=o>=</span> <span class=n>find</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>graph</span><span class=p>[</span><span class=n>x</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>union</span><span class=p>(</span><span class=n>graph</span><span class=p>:</span> <span class=nb>list</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>y</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>find</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>find</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>y</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>x</span> <span class=o>==</span> <span class=n>y</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=n>graph</span><span class=p>[</span><span class=n>y</span><span class=p>]</span> <span class=o>=</span> <span class=n>x</span></span></span></code></pre></div></div><h3 id=kruskals-algorithm>Kruskal's Algorithm
+<a class=anchor href=#kruskals-algorithm>#</a></h3><ul><li>가장 적은 비용으로 모든 노드를 연결하기 위해 사용하는 알고리즘 (최소 비용 신장 트리)</li><li>모든 간선 정보를 오름차순으로 정렬한 뒤 비용이 적은 간선부터 그래프에 포함</li><li>참고자료: <a href=https://blog.naver.com/ndb796/221230994142 target=_blank rel="noopener noreferrer">https://blog.naver.com/ndb796/221230994142</a></li></ul><h4 id=파이썬-구현-코드-1>파이썬 구현 코드
+<a class=anchor href=#%ed%8c%8c%ec%9d%b4%ec%8d%ac-%ea%b5%ac%ed%98%84-%ec%bd%94%eb%93%9c-1>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>class</span> <span class=nc>Edge</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>a</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>b</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>cost</span><span class=p>:</span> <span class=nb>int</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>parent</span> <span class=o>=</span> <span class=n>a</span>
+</span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>child</span> <span class=o>=</span> <span class=n>b</span>
+</span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>cost</span> <span class=o>=</span> <span class=n>cost</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>get_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>:</span> <span class=nb>list</span><span class=p>,</span> <span class=n>x</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>graph</span><span class=p>[</span><span class=n>x</span><span class=p>]</span> <span class=o>==</span> <span class=n>x</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>x</span>
+</span></span><span class=line><span class=cl>    <span class=n>graph</span><span class=p>[</span><span class=n>x</span><span class=p>]</span> <span class=o>=</span> <span class=n>get_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>graph</span><span class=p>[</span><span class=n>x</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>union_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>:</span> <span class=nb>list</span><span class=p>,</span> <span class=n>a</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>b</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>a</span> <span class=o>=</span> <span class=n>get_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>a</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>b</span> <span class=o>=</span> <span class=n>get_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>a</span> <span class=o>&lt;</span> <span class=n>b</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>graph</span><span class=p>[</span><span class=n>b</span><span class=p>]</span> <span class=o>=</span> <span class=n>a</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>graph</span><span class=p>[</span><span class=n>a</span><span class=p>]</span> <span class=o>=</span> <span class=n>b</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>find</span><span class=p>(</span><span class=n>graph</span><span class=p>:</span> <span class=nb>list</span><span class=p>,</span> <span class=n>a</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>b</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>a</span> <span class=o>=</span> <span class=n>get_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>a</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>b</span> <span class=o>=</span> <span class=n>get_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>b</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>a</span> <span class=o>==</span> <span class=n>b</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>False</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>sort_edge</span><span class=p>(</span><span class=n>edge_list</span><span class=p>:</span> <span class=nb>list</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>sorted</span><span class=p>(</span><span class=n>edge_list</span><span class=p>,</span> <span class=n>key</span><span class=o>=</span><span class=k>lambda</span> <span class=n>x</span><span class=p>:</span> <span class=p>[</span><span class=n>x</span><span class=o>.</span><span class=n>cost</span><span class=p>,</span> <span class=n>x</span><span class=o>.</span><span class=n>parent</span><span class=p>,</span> <span class=n>x</span><span class=o>.</span><span class=n>child</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>union_edge</span><span class=p>(</span><span class=n>graph</span><span class=p>:</span> <span class=nb>list</span><span class=p>,</span> <span class=n>edge_list</span><span class=p>:</span> <span class=nb>list</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>cost</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>edge</span> <span class=ow>in</span> <span class=n>edge_list</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=ow>not</span> <span class=n>find</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>edge</span><span class=o>.</span><span class=n>parent</span><span class=p>,</span> <span class=n>edge</span><span class=o>.</span><span class=n>child</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=n>cost</span> <span class=o>+=</span> <span class=n>edge</span><span class=o>.</span><span class=n>cost</span>
+</span></span><span class=line><span class=cl>            <span class=n>union_parent</span><span class=p>(</span><span class=n>graph</span><span class=p>,</span> <span class=n>edge</span><span class=o>.</span><span class=n>parent</span><span class=p>,</span> <span class=n>edge</span><span class=o>.</span><span class=n>child</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>cost</span></span></span></code></pre></div></div><h3 id=prims-algorithm>Prim's Algorithm
+<a class=anchor href=#prims-algorithm>#</a></h3><ul><li>시작 정점을 선택한 후, 정점에 인접한 간선 중 최소 비용의 간선을 연결하여
+최소 신장 트리(MST)를 확장해가는 방식</li><li><strong>Kruskal's Algorithm</strong> 이 <strong>비용이 가장 작은 간선부터</strong> 다음 간선을 선택하는데 반해,
+<strong>Prim's Algorithm</strong> 은 <strong>특정 정점에서부터</strong> 다음 정점을 갱신해나가며 비용이 작은 간선을 선택</li><li>Prim's Algorithm의 시간 복잡도는 최악의 경우 <strong>O(E log E)</strong>
+(while 구문에서 모든 간선에 대해 반복하고, 최소 힙 구조를 사용)</li><li>참고자료: <a href=http://www.fun-coding.org/Chapter20-prim-live.html target=_blank rel="noopener noreferrer">www.fun-coding.org/Chapter20-prim-live.html</a></li></ul><h4 id=파이썬-구현-코드-2>파이썬 구현 코드
+<a class=anchor href=#%ed%8c%8c%ec%9d%b4%ec%8d%ac-%ea%b5%ac%ed%98%84-%ec%bd%94%eb%93%9c-2>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>prim</span><span class=p>(</span><span class=n>edge_list</span><span class=p>:</span> <span class=nb>list</span><span class=p>,</span> <span class=n>start_node</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>list</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>mst</span> <span class=o>=</span> <span class=nb>list</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>adjacent_edge_list</span> <span class=o>=</span> <span class=n>defaultdict</span><span class=p>(</span><span class=nb>list</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>weight</span><span class=p>,</span> <span class=n>n1</span><span class=p>,</span> <span class=n>n2</span> <span class=ow>in</span> <span class=n>edge_list</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>adjacent_edge_list</span><span class=p>[</span><span class=n>n1</span><span class=p>]</span><span class=o>.</span><span class=n>append</span><span class=p>((</span><span class=n>weight</span><span class=p>,</span> <span class=n>n1</span><span class=p>,</span> <span class=n>n2</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>        <span class=n>adjacent_edge_list</span><span class=p>[</span><span class=n>n1</span><span class=p>]</span><span class=o>.</span><span class=n>append</span><span class=p>((</span><span class=n>weight</span><span class=p>,</span> <span class=n>n2</span><span class=p>,</span> <span class=n>n1</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>connected_nodes</span> <span class=o>=</span> <span class=p>{</span><span class=n>start_node</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>candidate_edge_list</span> <span class=o>=</span> <span class=n>adjacent_edge_list</span><span class=p>[</span><span class=n>start_node</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=n>heapq</span><span class=o>.</span><span class=n>heapify</span><span class=p>(</span><span class=n>candidate_edge_list</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=n>candidate_edge_list</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>weight</span><span class=p>,</span> <span class=n>n1</span><span class=p>,</span> <span class=n>n2</span> <span class=o>=</span> <span class=n>heapq</span><span class=o>.</span><span class=n>heappop</span><span class=p>(</span><span class=n>candidate_edge_list</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>n2</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>connected_nodes</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>connected_nodes</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>n2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>mst</span><span class=o>.</span><span class=n>append</span><span class=p>((</span><span class=n>weight</span><span class=p>,</span> <span class=n>n1</span><span class=p>,</span> <span class=n>n2</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>edge</span> <span class=ow>in</span> <span class=n>adjacent_edge_list</span><span class=p>[</span><span class=n>n2</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=n>edge</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>connected_nodes</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>heapq</span><span class=o>.</span><span class=n>heappush</span><span class=p>(</span><span class=n>candidate_edge_list</span><span class=p>,</span> <span class=n>edge</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>mst</span></span></span></code></pre></div></div><h4 id=prims-algorithm-개선>Prim's Algorithm 개선
+<a class=anchor href=#prims-algorithm-%ea%b0%9c%ec%84%a0>#</a></h4><ul><li>간선이 아닌 <strong>노드를 중심</strong> 으로 우선순위 큐를 적용</li><li>노드마다 Key 값을 가지고 있고, Key 값을 우선순위 큐에 넣음</li><li>Key 값이 0인 정점의 인접한 정점들에 대해 Key 값과 연결된 비용을 비교하여
+Key 값이 작으면 해당 정점의 Key 값을 갱신</li><li>개선된 Prim's Algorithm의 시간 복잡도는 <strong>O(E log V)</strong></li><li>해당 알고리즘을 구현하기 위해 heapdict 라이브러리 사용
+(기존의 heap 내용을 업데이트하면 알아서 최소 힙의 구조로 업데이트됨)</li></ul><h4 id=파이썬-구현-코드-3>파이썬 구현 코드
+<a class=anchor href=#%ed%8c%8c%ec%9d%b4%ec%8d%ac-%ea%b5%ac%ed%98%84-%ec%bd%94%eb%93%9c-3>#</a></h4><div class=book-codeblock data-lang=python><div class=code-actions><button class="code-copy-btn code-action" onclick=copyCode(this)>
+<i class="fa-solid fa-copy"></i>Copy
+</button>
+<span class="code-language code-action">python</span></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>heapdict</span> <span class=kn>import</span> <span class=n>heapdict</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>prim</span><span class=p>(</span><span class=n>graph</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>start_node</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=p>(</span><span class=nb>list</span><span class=p>,</span> <span class=nb>int</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>mst</span><span class=p>,</span> <span class=n>keys</span><span class=p>,</span> <span class=n>pi</span><span class=p>,</span> <span class=n>total_weight</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(),</span> <span class=n>heapdict</span><span class=p>(),</span> <span class=nb>dict</span><span class=p>(),</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>node</span> <span class=ow>in</span> <span class=n>graph</span><span class=o>.</span><span class=n>keys</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>        <span class=n>keys</span><span class=p>[</span><span class=n>node</span><span class=p>]</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=s1>&#39;inf&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>pi</span><span class=p>[</span><span class=n>node</span><span class=p>]</span> <span class=o>=</span> <span class=kc>None</span>
+</span></span><span class=line><span class=cl>    <span class=n>keys</span><span class=p>[</span><span class=n>start_node</span><span class=p>],</span> <span class=n>pi</span><span class=p>[</span><span class=n>start_node</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>start_node</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=n>keys</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>current_node</span><span class=p>,</span> <span class=n>current_key</span> <span class=o>=</span> <span class=n>keys</span><span class=o>.</span><span class=n>popitem</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=n>mst</span><span class=o>.</span><span class=n>append</span><span class=p>([</span><span class=n>pi</span><span class=p>[</span><span class=n>current_node</span><span class=p>],</span> <span class=n>current_node</span><span class=p>,</span> <span class=n>current_key</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>        <span class=n>total_weight</span> <span class=o>+=</span> <span class=n>current_key</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>adjacent</span><span class=p>,</span> <span class=n>weight</span> <span class=ow>in</span> <span class=n>graph</span><span class=p>[</span><span class=n>current_node</span><span class=p>]</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=n>adjacent</span> <span class=ow>in</span> <span class=n>keys</span> <span class=ow>and</span> <span class=n>weight</span> <span class=o>&lt;</span> <span class=n>keys</span><span class=p>[</span><span class=n>adjacent</span><span class=p>]:</span>
+</span></span><span class=line><span class=cl>                <span class=n>keys</span><span class=p>[</span><span class=n>adjacent</span><span class=p>]</span> <span class=o>=</span> <span class=n>weight</span>
+</span></span><span class=line><span class=cl>                <span class=n>pi</span><span class=p>[</span><span class=n>adjacent</span><span class=p>]</span> <span class=o>=</span> <span class=n>current_node</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>mst</span><span class=p>,</span> <span class=n>total_weight</span></span></span></code></pre></div></div><h2 id=연산자-오버로딩>연산자 오버로딩
+<a class=anchor href=#%ec%97%b0%ec%82%b0%ec%9e%90-%ec%98%a4%eb%b2%84%eb%a1%9c%eb%94%a9>#</a></h2><ul><li>연산자 오버로딩은 인스턴스 객체끼리 서로 연산을 할 수 있게 기존 연산자의 기능을 중복으로 정의하는 것</li><li>연산자 오버로딩의 예시</li></ul><table><thead><tr><th><strong>Method</strong></th><th><strong>Operator</strong></th><th><strong>Example</strong></th></tr></thead><tbody><tr><td>__add__(self, other)</td><td>+ (Binomial)</td><td>A + B, A += B</td></tr><tr><td>__pos__(self)</td><td>+ (Unary)</td><td>+A</td></tr><tr><td>_sub__(self, other)</td><td>- (Binomial)</td><td>A - B, A -= B</td></tr><tr><td>__neg__(self)</td><td>- (Unary)</td><td>-A</td></tr><tr><td>__mul__(self, other)</td><td>*</td><td>A * B, A *= B</td></tr><tr><td>__truediv__(self, other)</td><td>/</td><td>A / B, A /= B</td></tr><tr><td>__floordiv__(self, other)</td><td>//</td><td>A // B, A //= B</td></tr><tr><td>__mod__(self, other)</td><td>%</td><td>A % B, A %= B</td></tr><tr><td>__pow__(self, other)</td><td>pow(), **</td><td>pow(A, B), A ** B</td></tr><tr><td>__eq__(self, other)</td><td>==</td><td>A == B</td></tr><tr><td>__lt__(self, other)</td><td>&lt;</td><td>A &lt; B</td></tr><tr><td>__gt__(self, other)</td><td>></td><td>A > B</td></tr><tr><td>__lshift__(self, other)</td><td>&lt;&lt;</td><td>A &lt;&lt; B</td></tr><tr><td>__rshift__(self, other)</td><td>>></td><td>A >> B</td></tr><tr><td>__and__(self, other)</td><td>&</td><td>A & B, A &= B</td></tr><tr><td>__xor__(self, other)</td><td>^</td><td>A ^ B, A ^= B</td></tr><tr><td>__or__(self, other)</td><td>|</td><td>A |B, A |= B</td></tr><tr><td>__invert__(self)</td><td>~</td><td>~A</td></tr><tr><td>__abs__(self)</td><td>abs()</td><td>abs(A)</td></tr></tbody></table></div></article><div class=book-nav><button class=book-nav-btn3 onclick='window.scrollTo({top:0,behavior:"smooth"})' title="Go to top">
+<i class="fa fa-chevron-up"></i>
+</button>
+<button class=book-nav-btn3 onclick='window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"})' title="Go to bottom">
+<i class="fa fa-chevron-down"></i>
+<button class=book-nav-btn3 onclick=history.back() title="Go back">
+<i class="fa-solid fa-arrow-left"></i></button></div><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav><ul><li class=book-section-flat><span>Categories</span><ul><li class="flex justify-between"><a href=/categories/blog/>Blog</a>
+<span>7</span></li><li class="flex justify-between"><a href=/categories/frontend/>Frontend</a>
+<span>7</span></li><li class="flex justify-between"><a href=/categories/open-source/>Open Source</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/project/>Project</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/tools/>Tools</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/apache-spark/>Apache Spark</a>
+<span>8</span></li><li class="flex justify-between"><a href=/categories/data-engineering/>Data Engineering</a>
+<span>19</span></li><li class="flex justify-between"><a href=/categories/cloud/>Cloud</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/kubernetes/>Kubernetes</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/linux/>Linux</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/ubuntu/>Ubuntu</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/algorithm/>Algorithm</a>
+<span>3</span></li><li class="flex justify-between"><a href=/categories/sql/>SQL</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/apache-airflow/>Apache Airflow</a>
+<span>7</span></li><li class="flex justify-between"><a href=/categories/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/categories/dacon/>Dacon</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/data-analysis/>Data Analysis</a>
+<span>2</span></li><li class="flex justify-between"><a href=/categories/graph/>Graph</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/python/>Python</a>
+<span>1</span></li><li class="flex justify-between"><a href=/categories/data-engineering/apache-airflow/>Apache Airflow</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data-engineering/apache-spark/>Apache Spark</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/frontend/blog/>Blog</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data-engineering/crawling/>Crawling</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/data-analysis/dacon/>Dacon</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/graph/>Graph</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/cloud/kubernetes/>Kubernetes</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/project/open-source/>Open Source</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/python/>Python</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/algorithm/sql/>SQL</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/project/tools/>Tools</a>
+<span>0</span></li><li class="flex justify-between"><a href=/categories/linux/ubuntu/>Ubuntu</a>
+<span>0</span></li></ul></li><li class=book-section-flat><span>Tags</span><ul><li class="flex justify-between"><a href=/tags/blog/>Blog</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/css/>CSS</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/html/>HTML</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/hugo/>Hugo</a>
+<span>6</span></li><li class="flex justify-between"><a href=/tags/hugo-book/>Hugo Book</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/javascript/>JavaScript</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/taxonomies/>Taxonomies</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/>블로그 카테고리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%83%9C%EA%B7%B8/>블로그 태그</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/>카테고리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%83%9C%EA%B7%B8/>태그</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%9C%B4%EA%B3%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/>휴고 레이아웃</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%ED%9C%B4%EA%B3%A0-%ED%85%8C%EB%A7%88/>휴고 테마</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%AA%A9%EC%B0%A8/>블로그 목차</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/>커스터마이징</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/git/>Git</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/github-pages/>Github Pages</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/submodule/>Submodule</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/velog/>Velog</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B2%A8%EB%A1%9C%EA%B7%B8/>벨로그</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC/>티스토리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%9C%B4%EA%B3%A0/>휴고</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/github/>Github</a>
+<span>5</span></li><li class="flex justify-between"><a href=/tags/open-source/>Open Source</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/openup/>OpenUp</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ossca/>OSSCA</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pytorch/>PyTorch</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rst/>RST</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/translation/>Translation</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B2%88%EC%97%AD/>번역</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/>오픈소스</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98/>파이토치</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pypi/>PyPI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/python/>Python</a>
+<span>14</span></li><li class="flex justify-between"><a href=/tags/python-%ED%8C%A8%ED%82%A4%EC%A7%80/>Python 패키지</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rust/>Rust</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/uv/>Uv</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/>가상환경</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B0%ED%8F%AC/>배포</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B4%80%EB%A6%AC/>패키지 관리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC/>프로젝트 관리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/apache-spark/>Apache Spark</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/pandas-udf/>Pandas UDF</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pyspark/>PySpark</a>
+<span>6</span></li><li class="flex justify-between"><a href=/tags/spark-sql/>Spark SQL</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/study/>Study</a>
+<span>15</span></li><li class="flex justify-between"><a href=/tags/udf/>UDF</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B3%A0%EC%B0%A8-%ED%95%A8%EC%88%98/>고차 함수</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81/>데이터 엔지니어링</a>
+<span>15</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%ED%8C%8C%ED%81%AC/>스파크</a>
+<span>8</span></li><li class="flex justify-between"><a href=/tags/calico/>Calico</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cni/>CNI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/containerd/>Containerd</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/kubeadm/>Kubeadm</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/kubectl/>Kubectl</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/kubelet/>Kubelet</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/kubernetes/>Kubernetes</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/ubuntu-24.04/>Ubuntu 24.04</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EC%84%A4%EC%B9%98/>쿠버네티스 설치</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1/>클러스터 구성</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/container/>Container</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cri/>CRI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/docker/>Docker</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/lxc/>LXC</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/oci/>OCI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98/>오케스트레이션</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%9F%B0%ED%83%80%EC%9E%84/>컨테이너 런타임</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%97%AD%EC%82%AC/>컨테이너 역사</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C/>클라우드 네이티브</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hive/>Hive</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jdbc/>JDBC</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mysql/>MySQL</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/postgresql/>PostgreSQL</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rdbms/>RDBMS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/avro/>Avro</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/csv/>CSV</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/data-sources/>Data Sources</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/json/>JSON</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/parquet/>Parquet</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/linux/>Linux</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mac/>Mac</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ssh/>SSH</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ubuntu/>Ubuntu</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/ubuntu-server/>Ubuntu Server</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/utm/>UTM</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/virtual-machine/>Virtual Machine</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0/>가상머신</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/>우분투 설치하기</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/sql/>SQL</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/view/>View</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/group-by/>GROUP BY</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/join/>JOIN</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/select/>SELECT</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>알고리즘</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/>알고리즘 문제풀이</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/>코딩테스트</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/>프로그래머스</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv4/>프로그래머스 Lv4</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv5/>프로그래머스 Lv5</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dataframe/>DataFrame</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dataset/>Dataset</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/structured-api/>Structured API</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rdd/>RDD</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/spark-application/>Spark Application</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/spark-shell/>Spark Shell</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/spark-web-ui/>Spark Web UI</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hadoop/>Hadoop</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/hdfs/>HDFS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jdk/>JDK</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/cluster-manager/>Cluster Manager</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/spark-architecture/>Spark Architecture</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/sparksession/>SparkSession</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/apache-airflow/>Apache Airflow</a>
+<span>7</span></li><li class="flex justify-between"><a href=/tags/connection/>Connection</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/custom-hook/>Custom Hook</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/docker-compose/>Docker Compose</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/hook/>Hook</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/postgres/>Postgres</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%97%90%EC%96%B4%ED%94%8C%EB%A1%9C%EC%9A%B0/>에어플로우</a>
+<span>7</span></li><li class="flex justify-between"><a href=/tags/baseoperator/>BaseOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/custom-operator/>Custom Operator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/httpoperator/>HttpOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/rest-api/>REST API</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%84%A4%EC%9D%B4%EB%B2%84-open-api/>네이버 Open API</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/edge-label/>Edge Label</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/taskgroup/>TaskGroup</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/trigger-rule/>Trigger Rule</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/triggerdagrunoperator/>TriggerDagRunOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/branching/>Branching</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/branchoperator/>BranchOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/email/>Email</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/emailoperator/>EmailOperator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/smtp/>SMTP</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/bashoperator/>BashOperator</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/jinja-%ED%85%9C%ED%94%8C%EB%A6%BF/>Jinja 템플릿</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/pythonoperator/>PythonOperator</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/variable/>Variable</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/xcom/>XCom</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%B3%80%EC%88%98/>템플릿 변수</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dag/>DAG</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/decorator/>Decorator</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/plugins/>Plugins</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/airflow-%EC%84%A4%EC%B9%98/>Airflow 설치</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/crawling/>Crawling</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98%EB%A0%88%EC%8B%9C%ED%94%BC/>만개의레시피</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%AC%EB%A1%A4%EB%A7%81/>크롤링</a>
+<span>4</span></li><li class="flex justify-between"><a href=/tags/naver/>Naver</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/>네이버</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EB%A1%9C%EA%B7%B8%EC%9D%B8/>로그인</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4/>스마트스토어</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%EC%84%BC%ED%84%B0/>스마트스토어센터</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/go-template/>Go Template</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/katex/>KaTex</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/papermod/>PaperMod</a>
+<span>3</span></li><li class="flex justify-between"><a href=/tags/%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84/>검색 엔진</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/utterances/>Utterances</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/chirpy/>Chirpy</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/jekyll/>Jekyll</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dacon/>DACON</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/koelectra/>KoELECTRA</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/nlp/>NLP</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/nlpaug/>NLPAUG</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/roberta/>RoBERTa</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B0%90%EC%A0%95-%EB%B6%84%EC%84%9D/>감정 분석</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A6%9D%EA%B0%95/>데이터 증강</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%87%BC%ED%95%91%EB%AA%B0-%EB%A6%AC%EB%B7%B0/>쇼핑몰 리뷰</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%95%99%EC%83%81%EB%B8%94/>앙상블</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EC%97%AD%EB%B2%88%EC%97%AD/>역번역</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%B6%84%EB%A5%98/>텍스트 분류</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/audio-mnist/>Audio MNIST</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/librosa/>Librosa</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mel-spectrogram/>Mel Spectrogram</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/mfcc/>MFCC</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/resnet/>ResNet</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D/>교차검증</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/>딥러닝</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9D%8C%EC%84%B1-%EB%B6%84%EB%A5%98/>음성 분류</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/dfs/>DFS</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/heap/>Heap</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/mst/>MST</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/union-find/>Union-Find</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80/>백준</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%EB%B0%B1%EC%A4%80-gold-4/>백준 Gold 4</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%B5%9C%EC%86%8C-%EC%8A%A4%ED%8C%A8%EB%8B%9D-%ED%8A%B8%EB%A6%AC/>최소 스패닝 트리</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>크루스칼 알고리즘</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/%ED%94%84%EB%A6%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/>프림 알고리즘</a>
+<span>2</span></li><li class="flex justify-between"><a href=/tags/bfs/>BFS</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/set/>Set</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89/>이진 탐색</a>
+<span>1</span></li><li class="flex justify-between"><a href=/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/>자료구조</a>
+<span>1</span></li></ul></li></ul></nav></div></aside></main></body></html>

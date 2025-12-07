@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Define styles -->
+  <defs>
+    <style>
+      .node-circle {
+        fill: #b8d4e8;
+        stroke: #5a8db8;
+        stroke-width: 3;
+      }
+      .node-text {
+        font-family: Arial, sans-serif;
+        font-size: 48px;
+        font-weight: bold;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        fill: #000;
+      }
+      .edge {
+        stroke: #000;
+        stroke-width: 4;
+        fill: none;
+      }
+    </style>
+  </defs>
+  
+  <!-- Edges (drawn first so they appear behind nodes) -->
+  <!-- Level 0 to Level 1 -->
+  <line class="edge" x1="600" y1="100" x2="300" y2="250" />
+  <line class="edge" x1="600" y1="100" x2="600" y2="250" />
+  <line class="edge" x1="600" y1="100" x2="900" y2="250" />
+  
+  <!-- Level 1 to Level 2 -->
+  <line class="edge" x1="300" y1="250" x2="150" y2="400" />
+  <line class="edge" x1="300" y1="250" x2="300" y2="400" />
+  <line class="edge" x1="900" y1="250" x2="800" y2="400" />
+  <line class="edge" x1="900" y1="250" x2="1000" y2="400" />
+  
+  <!-- Level 2 to Level 3 -->
+  <line class="edge" x1="150" y1="400" x2="100" y2="550" />
+  <line class="edge" x1="150" y1="400" x2="200" y2="550" />
+  <line class="edge" x1="800" y1="400" x2="750" y2="550" />
+  <line class="edge" x1="800" y1="400" x2="850" y2="550" />
+  
+  <!-- Nodes with BFS order -->
+  <!-- Level 0: Node 1 -->
+  <g>
+    <circle class="node-circle" cx="600" cy="100" r="60" />
+    <text class="node-text" x="600" y="100">1</text>
+  </g>
+  
+  <!-- Level 1: Nodes 2, 3, 4 -->
+  <g>
+    <circle class="node-circle" cx="300" cy="250" r="60" />
+    <text class="node-text" x="300" y="250">2</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="600" cy="250" r="60" />
+    <text class="node-text" x="600" y="250">3</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="900" cy="250" r="60" />
+    <text class="node-text" x="900" y="250">4</text>
+  </g>
+  
+  <!-- Level 2: Nodes 5, 6, 7, 8 -->
+  <g>
+    <circle class="node-circle" cx="150" cy="400" r="60" />
+    <text class="node-text" x="150" y="400">5</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="300" cy="400" r="60" />
+    <text class="node-text" x="300" y="400">6</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="800" cy="400" r="60" />
+    <text class="node-text" x="800" y="400">7</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="1000" cy="400" r="60" />
+    <text class="node-text" x="1000" y="400">8</text>
+  </g>
+  
+  <!-- Level 3: Nodes 9, 10, 11, 12 -->
+  <g>
+    <circle class="node-circle" cx="100" cy="550" r="60" />
+    <text class="node-text" x="100" y="550">9</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="200" cy="550" r="60" />
+    <text class="node-text" x="200" y="550">10</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="750" cy="550" r="60" />
+    <text class="node-text" x="750" y="550">11</text>
+  </g>
+  <g>
+    <circle class="node-circle" cx="850" cy="550" r="60" />
+    <text class="node-text" x="850" y="550">12</text>
+  </g>
+</svg>

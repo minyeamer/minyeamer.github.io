@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph on Minystory</title>
+    <link>https://minyeamer.github.io/categories/graph/</link>
+    <description>Recent content in Graph on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 20 Mar 2022 16:18:29 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/categories/graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Python] 백준 1197 - 최소 스패닝 트리 (Gold 4)</title>
+      <link>https://minyeamer.github.io/blog/baekjoon-1197-mst/</link>
+      <pubDate>Sun, 20 Mar 2022 16:18:29 +0900</pubDate>
+      <guid>https://minyeamer.github.io/blog/baekjoon-1197-mst/</guid>
+      <description>&lt;a href=&#34;https://www.acmicpc.net/problem/1197&#34; target=&#34;_blank&#34; class=&#34;bookmark-card&#34;&gt;&lt;div class=&#34;bookmark-image&#34;&gt;&#xA;    &lt;img src=&#34;https://dl.dropboxusercontent.com/scl/fi/tg1jfh6uc53wykiuden0x/baekjoon-00-cover-og.webp?rlkey=ptw8l3wroyh530mzhhx7mi5tf&amp;amp;dl=0&#34; alt=&#34;1197번: 최소 스패닝 트리&#34;&gt;&#xA;  &lt;/div&gt;&lt;div class=&#34;bookmark-content&#34;&gt;&#xA;    &lt;h3 class=&#34;bookmark-title&#34;&gt;1197번: 최소 스패닝 트리&lt;/h3&gt;&lt;p class=&#34;bookmark-description&#34;&gt;&#xA;      그래프가 주어졌을 때, 그 그래프의 최소 스패닝 트리를 구하는 프로그램을 작성하시오. 최소 스패닝 트리는, 주어진 그래프의 모든 정점들을 연결하는 부분 그래프 중에서 그 가중치의 합이 최소인 트리를 말한다.&#xA;    &lt;/p&gt;&lt;small class=&#34;bookmark-url&#34;&gt;www.acmicpc.net&lt;/small&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/a&gt;&#xA;&lt;p&gt;해당 문제는 n개의 정점들에 대한 간선들 중에서 가장 가중치가 작은 경로의 가중치를 찾는 것이다.  &lt;/p&gt;&#xA;&lt;p&gt;정답 풀이보다는 여러가지 방식으로 시도하면서 알고리즘을 발전시키는 과정을 서술한다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;dfs&#34;&gt;DFS&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#dfs&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;처음엔 노드하면 DFS와 BFS 밖에 몰랐기 때문에 당연하게 DFS로 접근했다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
