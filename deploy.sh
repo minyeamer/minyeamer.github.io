@@ -7,7 +7,16 @@ git submodule update --remote
 
 # Build the project.
 # hugo -t <your theme>
-hugo -t Book --gc --cleanDestinationDir
+# hugo -t Book --gc --cleanDestinationDir
+
+# Build the project into temporary folder.
+TMP_PUBLIC="public_tmp"
+rm -rf "$TMP_PUBLIC"
+hugo -t Book --gc --destination "$TMP_PUBLIC"
+
+# Sync into public but preserve .git
+rsync -a --delete --exclude='.git' "$TMP_PUBLIC"/ public/
+rm -rf "$TMP_PUBLIC"
 
 # Go to public folder, submodule commit
 cd public
