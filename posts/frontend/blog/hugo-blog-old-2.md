@@ -1,6 +1,6 @@
 ---
 title: "Hugo 블로그 만들기 [2022년] (2) - Utterances 댓글 시스템 설치 및 설정"
-date: "2022-09-08T14:39:22+0900"
+date: "2022-09-08T14:39:22+09:00"
 layout: "post"
 description: >
   Hugo PaperMod 테마에 Utterances 댓글 기능을 추가하는 방법입니다.

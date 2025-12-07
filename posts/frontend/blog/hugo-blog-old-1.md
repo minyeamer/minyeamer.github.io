@@ -1,6 +1,6 @@
 ---
 title: "Hugo 블로그 만들기 [2022년] (1) - PaperMod 테마 설치 및 Github Pages 배포"
-date: "2022-09-08T12:02:32+0900"
+date: "2022-09-08T12:02:32+09:00"
 layout: "post"
 description: >
   Hugo와 PaperMod 테마를 이용한 깃허브 블로그 구축 가이드입니다.

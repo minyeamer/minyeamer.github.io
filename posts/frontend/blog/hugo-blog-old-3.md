@@ -1,6 +1,6 @@
 ---
 title: "Hugo 블로그 만들기 [2022년] (3) - PaperMod 테마 커스터마이징"
-date: "2022-09-08T15:52:12+0900"
+date: "2022-09-08T15:52:12+09:00"
 layout: "post"
 description: >
   Hugo PaperMod 테마 커스터마이징 가이드입니다.
