@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EventListener on Minystory</title>
+    <link>https://minyeamer.github.io/tags/eventlistener/</link>
+    <description>Recent content in EventListener on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 14 Dec 2025 12:40:13 +0900</lastBuildDate>
+    <atom:link href="https://minyeamer.github.io/tags/eventlistener/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 블로그 만들기 (4) - 검색 기능 개선 및 검색 페이지 구현 (Fuse.js)</title>
+      <link>https://minyeamer.github.io/blog/hugo-blog-4/</link>
+      <pubDate>Sun, 14 Dec 2025 12:40:13 +0900</pubDate>
+      <guid>https://minyeamer.github.io/blog/hugo-blog-4/</guid>
+      <description>&lt;blockquote class=&#34;book-hint info&#34;&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa-solid fa-circle-info&#34;&gt;&lt;/i&gt; 대상 독자&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;마크다운으로 작성할 수 있는 나만의 블로그를 만들고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;블로그를 기능적으로 또는 시각적으로 커스터마이징 하고 싶은 분들&lt;/li&gt;&#xA;&lt;li&gt;Fuse.js를 활용한 클라이언트 사이드 검색을 구현하려는 분들&lt;/li&gt;&#xA;&lt;li&gt;자바스크립트 이벤트 리스너와 가상 DOM을 활용한 사례를 찾고 있는 분들&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote class=&#34;book-hint success&#34;&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa-solid fa-lightbulb&#34;&gt;&lt;/i&gt; 주요 내용&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Book 테마 검색 프로세스 분석 (&lt;a href=&#34;#book-%ed%85%8c%eb%a7%88-%ea%b2%80%ec%83%89-%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4-%eb%b6%84%ec%84%9d&#34;&gt;Book 테마 검색 프로세스 분석&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Book 테마 검색창의 UI 및 기능 개선 (&lt;a href=&#34;#%ea%b2%80%ec%83%89-%ea%b8%b0%eb%8a%a5-%ea%b0%9c%ec%84%a0&#34;&gt;검색 기능 개선&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;템플릿 구조 재설계 및 window 전역 객체 활용 (&lt;a href=&#34;#%ea%b2%80%ec%83%89-%ea%b8%b0%eb%8a%a5-%ed%8c%8c%ec%9d%bc-%ea%b5%ac%ec%a1%b0-%ec%9e%ac%ec%84%a4%ea%b3%84&#34;&gt;검색 기능 파일 구조 재설계&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;검색 결과를 표시하기 위한 DOM 조작 최적화 (&lt;a href=&#34;#%ea%b2%80%ec%83%89-%ec%88%98%ed%96%89-%eb%b0%8f-%ea%b2%b0%ea%b3%bc-%ed%95%84%ed%84%b0%eb%a7%81&#34;&gt;검색 수행 및 결과 필터링&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://minyeamer.github.io/blog/hugo-blog-3/&#34;&gt;앞선 게시글&lt;/a&gt;에서 Book 테마의 태그와 카테고리 페이지를 구성하기 위한&#xA;Taxonomies 기능에 대해 알아보았습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
