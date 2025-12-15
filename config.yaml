@@ -4,6 +4,8 @@ description: "minyeamer's blog"
 theme: "Book"
 languageCode: "ko-kr"
 
+copyright: "[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)"
+
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false

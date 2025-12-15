@@ -5,6 +5,7 @@ layout: "post"
 description: >
   
 cover: ""
+thumbnail: ""
 categories: []
 tags: []
 ---

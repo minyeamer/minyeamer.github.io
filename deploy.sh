@@ -9,6 +9,9 @@ git submodule update --remote
 # hugo -t <your theme>
 # hugo -t Book --gc --cleanDestinationDir
 
+# Find and kill Hugo server processes
+ps -ef | grep "hugo server" | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null
+
 # Build the project into temporary folder.
 TMP_PUBLIC="public_tmp"
 rm -rf "$TMP_PUBLIC"
