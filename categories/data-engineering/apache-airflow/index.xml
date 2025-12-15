@@ -6,6 +6,7 @@
     <description>Recent content in Apache Airflow on Minystory</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
+    <copyright>[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)</copyright>
     <atom:link href="https://minyeamer.github.io/categories/data-engineering/apache-airflow/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

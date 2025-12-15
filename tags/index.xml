@@ -6,8 +6,100 @@
     <description>Recent content in Tags on Minystory</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 14 Dec 2025 12:40:13 +0900</lastBuildDate>
+    <copyright>[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)</copyright>
+    <lastBuildDate>Mon, 15 Dec 2025 11:01:49 +0900</lastBuildDate>
     <atom:link href="https://minyeamer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://minyeamer.github.io/tags/blog/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>https://minyeamer.github.io/tags/css/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Disqus</title>
+      <link>https://minyeamer.github.io/tags/disqus/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/disqus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://minyeamer.github.io/tags/html/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://minyeamer.github.io/tags/hugo/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo Book</title>
+      <link>https://minyeamer.github.io/tags/hugo-book/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/hugo-book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://minyeamer.github.io/tags/javascript/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>댓글 기능</title>
+      <link>https://minyeamer.github.io/tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>스크롤 진행도</title>
+      <link>https://minyeamer.github.io/tags/%EC%8A%A4%ED%81%AC%EB%A1%A4-%EC%A7%84%ED%96%89%EB%8F%84/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EC%8A%A4%ED%81%AC%EB%A1%A4-%EC%A7%84%ED%96%89%EB%8F%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>커버 이미지</title>
+      <link>https://minyeamer.github.io/tags/%EC%BB%A4%EB%B2%84-%EC%9D%B4%EB%AF%B8%EC%A7%80/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%EC%BB%A4%EB%B2%84-%EC%9D%B4%EB%AF%B8%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>휴고 레이아웃</title>
+      <link>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>휴고 본문</title>
+      <link>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%B3%B8%EB%AC%B8/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%B3%B8%EB%AC%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>휴고 테마</title>
+      <link>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%ED%85%8C%EB%A7%88/</link>
+      <pubDate>Mon, 15 Dec 2025 11:01:49 +0900</pubDate>
+      <guid>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%ED%85%8C%EB%A7%88/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DocumentFragment</title>
       <link>https://minyeamer.github.io/tags/documentfragment/</link>
@@ -30,31 +122,10 @@
       <description></description>
     </item>
     <item>
-      <title>Hugo</title>
-      <link>https://minyeamer.github.io/tags/hugo/</link>
-      <pubDate>Sun, 14 Dec 2025 12:40:13 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo Book</title>
-      <link>https://minyeamer.github.io/tags/hugo-book/</link>
-      <pubDate>Sun, 14 Dec 2025 12:40:13 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/hugo-book/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Hugo 검색</title>
       <link>https://minyeamer.github.io/tags/hugo-%EA%B2%80%EC%83%89/</link>
       <pubDate>Sun, 14 Dec 2025 12:40:13 +0900</pubDate>
       <guid>https://minyeamer.github.io/tags/hugo-%EA%B2%80%EC%83%89/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>JavaScript</title>
-      <link>https://minyeamer.github.io/tags/javascript/</link>
-      <pubDate>Sun, 14 Dec 2025 12:40:13 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
@@ -76,34 +147,6 @@
       <link>https://minyeamer.github.io/tags/%EA%B2%80%EC%83%89-%ED%8E%98%EC%9D%B4%EC%A7%80/</link>
       <pubDate>Sun, 14 Dec 2025 12:40:13 +0900</pubDate>
       <guid>https://minyeamer.github.io/tags/%EA%B2%80%EC%83%89-%ED%8E%98%EC%9D%B4%EC%A7%80/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>휴고 테마</title>
-      <link>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%ED%85%8C%EB%A7%88/</link>
-      <pubDate>Sun, 14 Dec 2025 12:40:13 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%ED%85%8C%EB%A7%88/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blog</title>
-      <link>https://minyeamer.github.io/tags/blog/</link>
-      <pubDate>Sat, 22 Nov 2025 23:04:47 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CSS</title>
-      <link>https://minyeamer.github.io/tags/css/</link>
-      <pubDate>Sat, 22 Nov 2025 23:04:47 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTML</title>
-      <link>https://minyeamer.github.io/tags/html/</link>
-      <pubDate>Sat, 22 Nov 2025 23:04:47 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/html/</guid>
       <description></description>
     </item>
     <item>
@@ -139,13 +182,6 @@
       <link>https://minyeamer.github.io/tags/%ED%83%9C%EA%B7%B8/</link>
       <pubDate>Sat, 22 Nov 2025 23:04:47 +0900</pubDate>
       <guid>https://minyeamer.github.io/tags/%ED%83%9C%EA%B7%B8/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>휴고 레이아웃</title>
-      <link>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</link>
-      <pubDate>Sat, 22 Nov 2025 23:04:47 +0900</pubDate>
-      <guid>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</guid>
       <description></description>
     </item>
     <item>
