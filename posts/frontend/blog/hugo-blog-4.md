@@ -3,12 +3,12 @@ title: "Hugo 블로그 만들기 (4) - 검색 기능 개선 및 검색 페이지
 date: "2025-12-14T12:40:13+09:00"
 layout: "post"
 description: >
-  Hugo Book 테마에 Fuse.js 기반 검색 인덱스를 분석하고 검색 UI를 개선하는 과정을 소개합니다.
+  Hugo Book 테마에서 Fuse.js 기반 검색 인덱스를 분석하고 검색 UI를 개선하는 과정을 소개합니다.
   검색 페이지를 구현하면서 검색 성능을 최적화하고 템플릿 일관성을 보장하기 위한 방식을 알아봅니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
 categories: ["Frontend", "Blog"]
-tags: ["Hugo", "Fusejs", "검색 인덱스", "검색 페이지", "Hugo 검색", "휴고 테마", "EventListener", "window", "DocumentFragment", "JavaScript", "Hugo Book"]
+tags: ["Hugo", "Fusejs", "검색 인덱스", "검색 페이지", "Hugo 검색", "휴고 테마", "EventListener", "window", "DocumentFragment", "JavaScript", "Blog", "Hugo Book"]
 ---
 
 {{% hint info %}}
