@@ -19,7 +19,7 @@ tags: ["Apache Airflow", "TriggerDagRunOperator", "TaskGroup", "Trigger Rule", "
 - 상위 Task들의 상태에 따라 수행여부를 결정하고 싶을 때 사용
 - 기본적으로는 상위 Task가 모두 성공해야 실행
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/dydw147s5pt1s7fg6leop/airflow-31-trigger-rule.webp?rlkey=rg9lo0dungmd863zk8gh76fgj&dl=0"
   alt="Trigger Rule (Failed, Skipped, Success -> Running)"
   max-width="691px"
@@ -85,7 +85,7 @@ with DAG(
 - `all_done` 은 상위 Task가 성공 또는 실패 여부에 관계없이 모두 수행되면 실행하는 옵션으로,
   `upstream_task2` 가 실패 처리되어도 `downstream_task` 가 수행되는 모습을 확인
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/dxr2449t4dkkoomh1qr1u/airflow-32-trigger-all-done.webp?rlkey=9vxn9jjqug6t88csakmh9m87y&dl=0"
   alt="all_done - upstream failed > downstream success"
   max-width="518px"
@@ -146,7 +146,7 @@ with DAG(
 - `none_skipped` 은 상위 Task가 `skipped` 상태가 아니어야 실행하는 옵션으로, `upstream_task1` 만 성공하고
   나머지는 `skipped` 처리되었기 때문에, `downstream_task` 도 수행되지 못하고 `skipped` 처리
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/3tjf1xjx31kjcufq3fkmp/airflow-33-trigger-none-skipped.webp?rlkey=t89irlnfi2j04e61kh7tie1yz&dl=0"
   alt="none_skipped - upstream failed > downstream success"
   max-width="691px"
@@ -162,11 +162,15 @@ with DAG(
 - 실행할 다른 DAG의 ID를 지정하여 수행
 - 선행 DAG이 하나만 있을 경우 `TriggerDagRunOperator` 를 사용하고, 선행 DAG이 2개 이상인 경우는 `ExternalTaskSensor` 를 사용 권장
 
-{{< img-two
-  src-left="https://dl.dropboxusercontent.com/scl/fi/vxkt9g7uy44cwfc4vl174/airflow-34-trigger-dagrun-operator.webp?rlkey=t3i8pjpa7l1yfsscggh3d3j8t&dl=0"
-  alt-left="TriggerDagRunOperator"
-  src-right="https://dl.dropboxusercontent.com/scl/fi/o2urlt1hg28y1apeobgom/airflow-35-external-task-sensor.webp?rlkey=rg8l6wgbfja8jw934akg8t5qg&dl=0"
-  alt-right="ExternalTaskSensor" >}}
+{{% columns %}}
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/vxkt9g7uy44cwfc4vl174/airflow-34-trigger-dagrun-operator.webp?rlkey=t3i8pjpa7l1yfsscggh3d3j8t&dl=0"
+  alt="TriggerDagRunOperator" >}}
+<--->
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/o2urlt1hg28y1apeobgom/airflow-35-external-task-sensor.webp?rlkey=rg8l6wgbfja8jw934akg8t5qg&dl=0"
+  alt="ExternalTaskSensor" >}}
+{{% /columns %}}
 
 ### run_id
 - DAG의 수행 방식과 시간을 유일하게 식별해주는 키
@@ -308,7 +312,7 @@ with DAG(
 - DAG 실행 후 Graph View에서 두 개의 TaskGroup을 확인
 - 기대와 다르게 지정한 Tooltip이 표시되지 않았는데, Airflow 3.0 버전의 버그인 것으로 추정
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/8eszfqcf35b9trq3n7yzi/airflow-39-task-group-summary.webp?rlkey=87f0vvl76lsxexlqz8i8385mb&dl=0"
   alt="TaskGroup 요약"
   max-width="518px"

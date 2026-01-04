@@ -25,7 +25,7 @@ Ubuntu Server 24.04.2 LTS 이미지를 다운로드 받습니다. (이미지 클
 애플 실리콘 기반의 Mac이라면 다운로드 받는 파일이 arm64 이미지인지 확인해야 합니다.
 {{% /hint %}}
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/oceh3he8l3sdtym9thmgm/ubuntu-01-download-arm.webp?rlkey=7v481x1bntmgbe1ulnahmonmu&dl=0"
   alt="Downloads > Ubuntu Server for ARM"
   href="https://ubuntu.com/download/server/arm" >}}
@@ -45,7 +45,7 @@ curl -O -L https://cdimage.ubuntu.com/releases/24.04/release/ubuntu-24.04.2-live
 
 UTM 최신 버전(작성일 기준 4.6.5)을 설치합니다. (이미지 클릭 시 다운로드 경로로 이동)
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/08wbq1ughueuppsalapz8/utm-00-download.webp?rlkey=tljmi68xpg0nlfjurj2viccpa&dl=0"
   alt="UTM Download > Securely run operating systems on your Mac"
   href="https://mac.getutm.app/" >}}
@@ -54,7 +54,7 @@ UTM 최신 버전(작성일 기준 4.6.5)을 설치합니다. (이미지 클릭 
 
 UTM을 실행하면 다음과 같은 화면이 나타납니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/e1fjmfsn0id95xkrpjwvg/utm-01-create-vm.webp?rlkey=fayvfsb1rtej0wrjhds1na5l6&dl=0"
   alt="Welcome to UTM"
   max-width="691px"
@@ -64,7 +64,7 @@ UTM을 실행하면 다음과 같은 화면이 나타납니다.
 
 새 가상머신 만들기를 선택합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/jssht9bq4ghahyhu36x8q/utm-01-create-vm-guide.webp?rlkey=n05rhgb2akmyf2af3gqpzv3oz&dl=0"
   alt="Create a New Virtual Machine"
   max-width="691px"
@@ -72,7 +72,7 @@ UTM을 실행하면 다음과 같은 화면이 나타납니다.
 
 Start 화면에서 Virtualize를 선택합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/4cqnht6i802ict7ejq0tf/utm-02-start-virtualize-guide.webp?rlkey=5f3bz7prft1luehm9gef1dduq&dl=0"
   alt="Start > Virtualize (Faster, but can only run the native CPU architecture.)"
   max-width="691px"
@@ -80,7 +80,7 @@ Start 화면에서 Virtualize를 선택합니다.
 
 운영체제는 Linux를 선택합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/0zsipmeuxd76aarzmzbao/utm-03-os-linux-guide.webp?rlkey=jjx99y67zj5cvz0y65yumfh1i&dl=0"
   alt="Operating System > Linux"
   max-width="691px"
@@ -90,7 +90,7 @@ Start 화면에서 Virtualize를 선택합니다.
 
 Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 추가합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/t3cyt6s98f2iukzkcncgr/utm-04-boot-iso-image-guide.webp?rlkey=1b2j2trhax5h2py8z4zakpy01&dl=0"
   alt="Linux > Boot ISO Image > ubuntu-24.04.2-live-server-arm64.iso"
   max-width="691px"
@@ -100,7 +100,7 @@ Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 �
 
 메모리와 CPU 크기는 목적에 맞게 설정합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/c4i1o2auh3382l6156aaf/utm-05-hardware-4g-guide.webp?rlkey=k0d4nyq0w6tolp6ermwasmb72&dl=0"
   alt="Hardware > Memory 4096 MiB, CPU Cores 2"
   max-width="691px"
@@ -108,7 +108,7 @@ Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 �
 
 저장공간도 목적에 맞게 설정합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/hthm6z1y5nm83anw3n65r/utm-06-storage-40g-guide.webp?rlkey=3h0m3gzz2q6yhtz4gydp6w22g&dl=0"
   alt="Storage > Specify the size of the drive where data will be stored into, 40 GiB"
   max-width="691px"
@@ -119,7 +119,7 @@ Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 �
 저장공간 설정 후에 나오는 공유폴더 설정은 무시합니다.
 마지막으로 요약 화면이 나오는데 가상머신 이름을 설정합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/1659cvqcr1lct2x0cxsya/utm-07-summary-guide.webp?rlkey=xczccbzy4qqc6zxbff3gm3048&dl=0"
   alt="Summary > Name: k8s-master"
   max-width="691px"
@@ -127,7 +127,7 @@ Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 �
 
 저장을 누르면 가상머신이 생성된 것을 확인할 수 있습니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/ao4ebm7s6ivuv56ehy0s1/utm-08-k8s-master.webp?rlkey=m6oni31rids7s6pte576nzg71&dl=0"
   alt="UTM > k8s-master"
   max-width="691px"
@@ -139,7 +139,7 @@ Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 �
 향후 여러 대의 가상머신과 Mac 간의 통신을 원활히 하기 위해 브릿지 모드를 선택했습니다.
 이러한 경우가 아니라면 기본 설정인 Shared Network(NAT) 모드를 사용해도 됩니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/5hl5w2730xxzhzy99i73p/utm-09-network-bridge.webp?rlkey=ukq4ocs4eqsc6rtx5m0qzp5cd&dl=0"
   alt="Settings > Devices > Network > Network Mode: Bridged (Advanced)"
   max-width="691px"
@@ -150,7 +150,7 @@ Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 �
 앞에서 생성한 가상머신을 실행합니다.
 "Try or Install Ubuntu Server" 를 선택합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/5667kbl3ff7vba3y49fwc/ubuntu-02-install-init.webp?rlkey=dfi2ae1p0gy3rz13ptc90fasl&dl=0"
   alt="GNU GRUB version 2.12 > Try or Install Ubuntu Server"
   max-width="691px"
@@ -181,13 +181,13 @@ Boot ISO Image에 앞에서 다운로드 받았던 Ubuntu 이미지 파일을 �
 브릿지 모드로 변경했기 때문에 맥의 네트워크와 동일한 대역을 사용할 수 있습니다.
 NAT 모드로 가상머신을 실행 중이라면 DHCP를 통해 배정된 IP 주소를 바탕으로 대역을 추정해 IP 주소를 지정해야 합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/f6xmbgh8zd413oees8yv9/ubuntu-07-install-ipv4-method.webp?rlkey=xdyg9og782d0rbojyxo8gvyvp&dl=0"
   alt="Edit enp0s1 IPv4 configuration > IPv4 Method: Manual"
   max-width="604px"
   align="center" >}}
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/xv50tlt58s6vp7bgzcqfl/ubuntu-08-install-ipv4-info.webp?rlkey=nphq16at79pqy2hbisnb5i0an&dl=0"
   alt="Edit enp0s1 IPv4 configuration > Address: 192.168.50.13/24"
   max-width="604px"
@@ -221,7 +221,7 @@ NAT 모드로 가상머신을 실행 중이라면 DHCP를 통해 배정된 IP �
 
 설치를 진행하게 되면 디스크 포맷을 통해 저장된 데이터가 삭제될 수 있다고 경고하는데 그대로 진행합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/eodlicwk3z1f0o86yv59j/ubuntu-14-install-confirm-format.webp?rlkey=3u7tfyely8c8lh2c762jyidkr&dl=0"
   alt="Confirm destructive action"
   max-width="518px"
@@ -262,7 +262,7 @@ OpenSSH 서버 설치를 묻는데 SSH 서버를 사용하기 위해 체크합�
 최초 설치 후 재부팅하면 더이상 진행되지 않고 커서만 깜빡이는데, 일단 종료하고 UTM 화면으로 돌아갑니다.
 가상머신에서 부팅용 이미지 파일을 초기화한 후 다시 실행합니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/rnys091je3c9wb5yhgfm6/utm-10-clear-cd-dvd-guide.webp?rlkey=veuxjlfig9prmveyi6e9eu0c1&dl=0"
   alt="UTM > CD/DVD > Clear"
   max-width="691px"

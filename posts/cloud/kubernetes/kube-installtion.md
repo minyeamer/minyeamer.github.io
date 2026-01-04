@@ -85,7 +85,7 @@ IP Address : 192.168.50.15/24
 
 ### 네트워크
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/a74mlztg1okfv44avn46l/diagram-03-network.webp?rlkey=nod84kq0bx9nrb0lhvizjozoo&dl=0"
   alt="{k8s-master, k8s-worker1, k8s-worker2} -> localhost(minyeamer) -> gateway -> internet"
   max-width="691px"

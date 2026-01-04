@@ -43,7 +43,7 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 - **DAG Directory** : 파이썬으로 작성한 DAG 파일을 저장하는 공간
 - **Webserver** : User Interface를 통해 Scheduler와 DAG 실행 과정을 시각화해 표시
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/f3l1sntgvfm9h82c1utod/airflow-02-workflow.webp?rlkey=l6qafh8nbfricv588tsdk1qye&dl=0"
   alt="Architecture Overview - Airflow Documentation"
   max-width="691px"
@@ -70,7 +70,7 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 - 가상화 서버(VM)와 비교했을 때, Guest OS를 요구하지 않아 더 효율적인 자원 활용이 가능
 - `docker-compose` 를 이용해 Airflow를 운영하는데 필요한 여러 서비스(컨테이너)를 실행
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/wrp3yqqd8l9llzk5jfjb2/airflow-04-docker.webp?rlkey=p5u5yu9bbs0hu6clbu9azubbt&dl=0"
   alt="Docker vs VM"
   max-width="691px"

@@ -102,7 +102,7 @@ RDBMS 테이블이나 CSV와 같은 구조화된 데이터 파일 포맷에서 �
 
 ## Spark Architecture
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/hhpp6o2d6m6grww5vz6t8/spark-02-architecture.webp?rlkey=mzdwo2l947nuead3shu2xeodz&dl=0"
   alt="The Architecture of Apache Spark"
   max-width="691px"

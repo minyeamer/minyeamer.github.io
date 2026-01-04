@@ -473,7 +473,7 @@ Dataset는 정적 타입 API와 동적 타입 API의 두 가지 특성을 모두
 
 ### Dataset
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/u1a2mkzn6mvvldypq7zi5/spark-13-unified-api.webp?rlkey=nkt5uf9qce0h6ezrurbjmjqzw&dl=0"
   alt="Unified Apache Spark 2.0 API - databricks"
   max-width="691px"
@@ -544,7 +544,7 @@ Spark SQL은 고수준 정형화 기능들이 구축되도록 하는 방대한 �
 - JDBC/ODBC 커넥터를 통해 외부의 도구들과 연결할 수 있는 중간 역할을 한다.
 - JVM을 위한 최적화된 코드를 생성한다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/zf3tn8nbir6j0rw492p96/spark-14-sql-connectors.webp?rlkey=m81odrfx2wd463g9xqsuqcdy5&dl=0"
   alt="Figure 4-1. Spark SQL connectors and data sources"
   max-width="691px"

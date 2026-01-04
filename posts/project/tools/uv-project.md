@@ -21,7 +21,7 @@ Python으로 새로운 프로젝트를 시작하려고 하는데 uv가 프로젝
 uv는 Rust로 작성된 매우 빠른 Python 패키지 및 프로젝트 관리자라고 설명합니다.
 Rust 기반으로 만들어져서 그런지 `pip` 나 `poetry` 와 비교했을 때 굉장히 빠른 속도를 보여줍니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/nw5qz64i85snrbm7ocir9/uv-01-fast.webp?rlkey=gwy75efcl9clbyzdenfq2z8eb&dl=0"
   alt="uv 0.06s, poetry 0.99s, pdm 1.90s, pip-sync 4.63s"
   max-width="691px"
@@ -247,7 +247,7 @@ PyPI에 배포하기 전에 먼저 API 토큰을 생성해야 합니다.
 
 Account settings 페이지의 API tokens 항목에서 API 토큰을 발급받을 수 있습니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/wfto4binkivlk9qcdwp4d/uv-03-pypi-token.webp?rlkey=jiwgu55kust02dpigbvxxx22i&dl=0"
   alt="API tokens > Name = minyeamer, Scope = All projects"
   max-width="691px"

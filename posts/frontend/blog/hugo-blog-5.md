@@ -46,7 +46,7 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 ```html
 <!-- layouts/baseof.html -->
 
-<body ...>
+<body>
     <!-- ... -->
     <div class="book-page">
       <header class="book-header hidden">
@@ -100,7 +100,7 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 
 위 모습을 그대로 `layouts/_partials/docs/post-header.html` 템플릿 파일로 만들었습니다.
 
-{{< tabs "post-header" >}}
+{{% tabs "post-header" %}}
 
 {{% tab "HTML" %}}
 ```html
@@ -188,7 +188,7 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{% /tabs %}}
 
 이렇게 템플릿 파일을 추가하고 `baseof` 의 `main` 템플릿에서
 `docs/post-header` 템플릿을 호출하여 마크다운 콘텐츠 위에 헤더를 추가해줍니다.
@@ -223,7 +223,7 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 
 티스토리 헤더 형식만으로는 역시 허전하여 헤더 아래에 커버 이미지를 추가하겠습니다.
 
-{{< tabs "post-cover" >}}
+{{% tabs "post-cover" %}}
 
 {{% tab "HTML" %}}
 ```html
@@ -260,7 +260,7 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{% /tabs %}}
 
 템플릿은 동일하게 `post-header` 템플릿을 활용합니다.
 위치는 `.post-header` 헤더 영역의 아래쪽에 추가하는데,
@@ -287,7 +287,7 @@ Book 테마의 기본 푸터 영역은 아래 이미지처럼 카피라이트 �
 ```html
 <!-- layouts/baseof.html -->
 
-<body ...>
+<body>
     <!-- ... -->
     <div class="book-page">
       <!-- ... -->
@@ -422,7 +422,7 @@ Book 테마에서는 위에 `prev-next` 템플릿 외에 `post-prev-next` 템플
 내용은 비슷합니다. 이전, 다음 게시글 링크로는 `post-prev-next` 라는 명칭이 더 적절한 것 같아서
 `prev-next` 템플릿 대신에 `post-prev-next` 템플릿을 사용하겠습니다.
 
-{{< tabs "post-prev-next" >}}
+{{% tabs "post-prev-next" %}}
 
 {{% tab "HTML1" %}}
 ```go
@@ -589,7 +589,7 @@ $narrow-breakpoint: ($body-min-width + $body-max-width) / 2;
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{% /tabs %}}
 
 `post-prev-next` 템플릿 내용이 길어서 HTML1, HTML2 탭으로 분리했습니다.
 템플릿의 상단인 HTML1 탭에서는 Hugo 문법을 사용해서 이전, 다음 페이지 객체를 구하고,
@@ -678,7 +678,7 @@ Disqus의 장단점을 설명하는게 목적은 아니기에 자세한건 다�
 Disqus를 사용하려면 먼저 Disqus 사이트에 방문하여 요금제를 선택합니다.
 (이미지를 클릭하면 이동합니다.)
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/r50aiy2tpou104i9dwm5v/hugo-59-disqus-pricing.webp?rlkey=toy12an5lob6o0zd5cungv4iz&dl=0"
   alt="Disqus Pricing"
   href="https://disqus.com/pricing/" >}}
@@ -757,7 +757,7 @@ Disqus를 사용하려면 먼저 Disqus 사이트에 방문하여 요금제를 �
 
 생각보다 원리는 간단합니다.
 
-{{< tabs "scroll-progress" >}}
+{{% tabs "scroll-progress" %}}
 
 {{% tab "JavaScript" %}}
 ```js
@@ -800,7 +800,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{% /tabs %}}
 
 모든 페이지에 `scroll-progress-bar` 라는 클래스를 포함하는 요소를 두고
 이 요소의 가로 길이를 스크롤 위치에 맞춰서 제어합니다.
@@ -810,7 +810,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```html
 <!-- baseof.html -->
 
-<body ...>
+<body>
   <div class="scroll-progress">
     <div class="scroll-progress-bar"></div>
   </div>
@@ -830,7 +830,7 @@ document.addEventListener('DOMContentLoaded', function() {
 왼쪽 사이드 메뉴에서 최신글 목록을 표시하면 유입된 독자들을
 다른 게시글로 전환시키는데 효과적일 것이라 생각하여 관련 템플릿을 만들어보았습니다.
 
-{{< tabs "recent-posts" >}}
+{{% tabs "recent-posts" %}}
 
 {{% tab "HTML" %}}
 ```html
@@ -927,7 +927,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 {{% /tab %}}
 
-{{< /tabs >}}
+{{% /tabs %}}
 
 최신글 템플릿이 추가되는 위치는 사이드 메뉴에서 카테고리 목록 아래가 적절해보입니다.
 `docs/menu` 템플릿에서 `docs/recent-posts` 템플릿을 불러오면 되는데,

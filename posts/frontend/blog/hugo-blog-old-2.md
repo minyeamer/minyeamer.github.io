@@ -33,7 +33,7 @@ Utterances와 연동시킬 저장소를 등록해야 합니다.
 무료 플랜 선택 후 Utterances를 적용할 저장소를 선택하게 되는데
 모든 저장소를 지정해도 되지만, 저는 댓글을 관리할 저장소만 지정하겠습니다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/6wg0cqovib47bd1i0a3t8/hugo-2022-03-utterances-install.webp?rlkey=1qpnaqk2hsr90609cap0s3p3w&dl=0"
   alt="Install utterances"
   max-width="550px"

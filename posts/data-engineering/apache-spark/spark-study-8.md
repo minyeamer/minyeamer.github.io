@@ -119,7 +119,7 @@ df.select("id", cubed_udf(col("id"))).show()
 스파크 UI에서 시각화된 `pandas_udf` 함수의 실행 단계에 대한 DAG을 조회할 수 있다.
 Stage 0에서 `ArrowEvalPython` 연산이 Pandas UDF를 평가하는 단계이다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/kn9ih42tqsbxfskwq5vj4/spark-19-pandas-udf.webp?rlkey=f1yvfjog5fvxjyhcvjugsd1id&dl=0"
   alt="WholeStageCodegen (1) -> ArrowEvalPython -> WholeStageCodeGen (2) -> mapPartitionsInternal"
   max-width="432px"

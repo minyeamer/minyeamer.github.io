@@ -122,12 +122,15 @@ response = requests.get(url, headers=headers)
 
 스마트스토어센터 로그인을 구현하기 위해 로그인 페이지를 탐색할 필요가 있습니다.
 
-{{< img-two
-  src-left="https://dl.dropboxusercontent.com/scl/fi/dioekdylr9hg6mi6rj9f6/smartstore-login-00-main.webp?rlkey=uf5euqirww7zb8uwp1dayl87r&dl=0"
-  alt-left="스마트스토어 홈페이지 - 로그인하기"
-  src-right="https://dl.dropboxusercontent.com/scl/fi/ss8nhi6428fxn0n4bpx4y/smartstore-login-04-login-ui.webp?rlkey=3klo2immbjzwmd5uxqbqxl24c&dl=0"
-  alt-right="이메일/판매자 아이디 로그인"
-  width-ratio=0.65 >}}
+{{% columns ratio="65:35" %}}
+- {{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/dioekdylr9hg6mi6rj9f6/smartstore-login-00-main.webp?rlkey=uf5euqirww7zb8uwp1dayl87r&dl=0"
+  alt="스마트스토어 홈페이지 - 로그인하기" >}}
+<--->
+- {{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/ss8nhi6428fxn0n4bpx4y/smartstore-login-04-login-ui.webp?rlkey=3klo2immbjzwmd5uxqbqxl24c&dl=0"
+  alt="이메일/판매자 아이디 로그인" >}}
+{{% /columns %}}
 
 메인 페이지에서 로그인하기 버튼을 클릭했을 때 이동하는 로그인 페이지에서 실제 로그인이 이루어집니다.
 스마트스토어센터 로그인에는 판매자 아이디로 로그인하는 방식과

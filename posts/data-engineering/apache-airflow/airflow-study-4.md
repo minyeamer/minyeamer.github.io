@@ -81,11 +81,15 @@ with DAG(
 
 - 여러 번 Trigger하여 실행했는데, 의도대로 `task_a` 만 수행되거나, `task_b` 와 `task_c` 가 같이 수행되는 두 가지 경우를 확인
 
-{{< img-two
-  src-left="https://dl.dropboxusercontent.com/scl/fi/zmqrndlh8ei1rlngzxz76/airflow-26-branch-success-a.webp?rlkey=zxsorrt87pao4n0azm8j8378q&dl=0"
-  alt-left="branch_task >> task_a 성공"
-  src-right="https://dl.dropboxusercontent.com/scl/fi/uu93j7ryw1blnzp5m178z/airflow-27-branch-success-bc.webp?rlkey=kd14bt6phatm40q8mbb56iyoc&dl=0"
-  alt-right="branch_task >> task_b, task_c 성공" >}}
+{{% columns %}}
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/zmqrndlh8ei1rlngzxz76/airflow-26-branch-success-a.webp?rlkey=zxsorrt87pao4n0azm8j8378q&dl=0"
+  alt="branch_task >> task_a 성공" >}}
+<--->
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/uu93j7ryw1blnzp5m178z/airflow-27-branch-success-bc.webp?rlkey=kd14bt6phatm40q8mbb56iyoc&dl=0"
+  alt="branch_task >> task_b, task_c 성공" >}}
+{{% /columns %}}
 
 - 또한, `task_a` 가 선택되는 작업에서 XCom을 보면 `skipmixin_key` 키로 `{'followed': ['task_a']}` 값이 전달되는데,
   이를 통해 다른 Task에서도 어떤 분기 처리가 되었는지 확인 가능
@@ -265,7 +269,7 @@ x-airflow-common:
   docker-compose 파일에 추가했던 것처럼 구글 계정과 앱 비밀번호를 포함한 메일 연결 설정을 입력
 - `Extra Fields` 에서 메일을 보내는 계정 등 추가적인 정보를 입력 가능
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/7tj5wzmg7xo93p8cftpps/airflow-29-smtp-connection.webp?rlkey=sglggl4g8gib7vr4stn0jw1ae&dl=0"
   alt="Edit Connection - SMTP"
   max-width="691px"
@@ -315,7 +319,7 @@ File "/usr/local/lib/python3.12/ssl.py", line 1319 in do_handshake
 
 - 원인 파악은 못했지만, Connection에서 SSL 비활성화 후 재시도하니 정상적으로 메일 전송
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/jrubhr3qfjs3pv2ll5csk/airflow-30-smtp-disable-ssl.webp?rlkey=fp6yfxpdgry4h7ojyuv77ruel&dl=0"
   alt="Edit Connection - SMTP > Disable SSL"
   max-width="691px"

@@ -55,7 +55,7 @@ pip install apache-airflow-providers-http
 - [네이버 개발자 센터](https://developers.naver.com/main/)에서 로그인 후 상단의 메뉴 중 `Application->애플리케이션 등록` 으로 이동
 - 아래 이미지와 같이 사용 API로 "검색"을 선택하고, 임의로 애플리케이션 이름과 서비스 환경을 입력하여 애플리케이션 등록
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/077ryedn6nmsmd7xnb1xy/airflow-42-naver-openapi-register.webp?rlkey=8e0iylgt9z8ze8snge38nbaky&dl=0"
   alt="애플리케이션 등록 (API 이용신청)"
   max-width="691px"
@@ -63,7 +63,7 @@ pip install apache-airflow-providers-http
 
 - 생성한 애플리케이션 정보에서 `Client ID` 와 `Client Secret` 을 조회 가능
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/yxvxn3o30wvxip6cyy40b/airflow-43-naver-openapi-info.webp?rlkey=skjpbqiydx1e4if1octvkef4a&dl=0"
   alt="애플리케이션 정보 - Client ID, Client Secret"
   max-width="691px"
@@ -74,7 +74,7 @@ pip install apache-airflow-providers-http
   참고하여 `Host` 를 입력
 - API가 별도로 알려지지 않은 포트를 사용할 경우 `Port` 에 포트 번호를 입력하지만, 네이버 Open API는 표준 HTTPS 포트를 사용하기 때문에 미표기
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/yk6vu7a970ulpe7m1fog5/airflow-44-http-connection.webp?rlkey=5l6wya7grf6757xubjmcfid2w&dl=0"
   alt="Edit Connection - HTTP"
   max-width="691px"
@@ -520,7 +520,7 @@ with DAG(
 
 - `start` 1부터 `display` 1000까지 총 1000개의 검색 결과를 100개 단위로 나눠서 요청하는 과정을 로그로 남겨서 조회
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/3hty0k935z7ae0y3u0y2y/airflow-46-naver-search-task.webp?rlkey=k2diw9fntl9qaud4pxvgl6akv&dl=0"
   alt="search_shopping_task >> search_blog_task"
   max-width="518px"

@@ -17,7 +17,7 @@ tags: ["Apache Spark", "Spark Shell", "JDK", "Hadoop", "HDFS", "PySpark", "데�
 
 ### Spark 설치
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/ziy6h7z1oxy7puilm5ml2/spark-03-download-spark.webp?rlkey=bv8ckikaauinh733icd2l9gem&dl=0"
   alt="Download Apache Spark"
   href="https://spark.apache.org/downloads.html" >}}
@@ -27,7 +27,7 @@ tags: ["Apache Spark", "Spark Shell", "JDK", "Hadoop", "HDFS", "PySpark", "데�
 [spark-4.0.0-bin-hadoop3.tgz](https://www.apache.org/dyn/closer.lua/spark/spark-4.0.0/spark-4.0.0-bin-hadoop3.tgz)
 가 나타난다. 해당 링크로 이동하면 아래와 같이 Hadoop 관련 바이너리 파일이 포함된 압축 파일의 설치 경로를 확인할 수 있다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/20hbdfye2kl3jvmytp6bk/spark-04-download-spark-tgz.webp?rlkey=o7zeq22r59epazjwef0ck0s10&dl=0"
   alt="https://www.apache.org/dyn/closer.lua/spark/spark-4.0.0/spark-4.0.0-bin-hadoop3.tgz"
   href="https://www.apache.org/dyn/closer.lua/spark/spark-4.0.0/spark-4.0.0-bin-hadoop3.tgz" >}}
@@ -75,7 +75,7 @@ Hadoop은 다운로드할 때 지정한 것과 같은 3.4 버전을 설치하고
 
 ### Java 설치
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/ksrg6fvzag4uxt2foh65e/spark-05-homebrew-openjdk17.webp?rlkey=as293mym3jrl2097r83fqo4fp&dl=0"
   alt="Homebrew Formulae > openjdk@17"
   href="https://formulae.brew.sh/formula/openjdk@17" >}}
@@ -115,7 +115,7 @@ OpenJDK 64-Bit Server VM Homebrew (build 17.0.15+0, mixed mode, sharing)
 
 ### Hadoop 설치
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/z3qvarefsly6np0p6y5y3/spark-06-download-hadoop-tgz.webp?rlkey=pp1nflw57fl14iur748zkp2td&dl=0"
   alt="https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.4.0/hadoop-3.4.0-aarch64.tar.gz"
   href="https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.4.0/hadoop-3.4.0-aarch64.tar.gz" >}}
@@ -411,7 +411,7 @@ Java, Python, R, Scala에 대한 예제들을 제공한다.
 
 ### PyPi 설치
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/svtj2gv0qt6yg4r4440kq/spark-08-pyspark-pypi.webp?rlkey=jsyxby5oeh4ty6dvzo40phtly&dl=0"
   alt="Apache Spark Python API > Project description"
   href="https://pypi.org/project/pyspark/" >}}

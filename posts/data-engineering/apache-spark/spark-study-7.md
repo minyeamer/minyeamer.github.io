@@ -22,7 +22,7 @@ tags: ["Apache Spark", "JDBC", "RDBMS", "Hive", "PostgreSQL", "MySQL", "데이�
 설치 과정은 [[Hive] virtual box linux [ubuntu 18.04]에 하이브 설치,다운로드 4.ubuntu 에 Hive(하이브) 다운로드](https://spidyweb.tistory.com/215)
 게시글을 참고했다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/0o5512v3i618kk6yrok97/spark-16-hive-tgz.webp?rlkey=1lcorgbp5xngu4w4g4zugvi6b&dl=0"
   alt="/hive/hive-4.0.1/apache-hive-4.0.1-bin.tar.gz"
   max-width="691px"
@@ -401,7 +401,7 @@ postgres=# SELECT * FROM spark_schema.users;
 
 PostgreSQL 데이터베이스에 연결하려면 JDBC 드라이버 파일을 클래스 경로에 추가한다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/j2o3uadsj58suc9z81yaw/spark-17-postgres-jdbc-driver.webp?rlkey=qpai41152zlaovp7aoev19p72&dl=0"
   alt="If you are using Java 8 or newer then you should use the JDBC 4.2 version"
   href="https://jdbc.postgresql.org/download/" >}}
@@ -581,7 +581,7 @@ mysql> SELECT * FROM users;
 
 MySQL 데이터베이스에 연결하려면 JDBC 드라이버 파일을 클래스 경로에 추가한다.
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/oyl2a11p3l7jfkzcl5bp3/spark-18-mysql-connector.webp?rlkey=2zsceygess6fl29e1ze5nd9eo&dl=0"
   alt="Platform Independent (Architecture Independent), Compressed TAR Archive"
   href="https://downloads.mysql.com/archives/c-j/" >}}

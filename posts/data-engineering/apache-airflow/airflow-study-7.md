@@ -193,15 +193,19 @@ e23d4eb919fc   postgres:13            "docker-entrypoint.s…"   58 seconds ago 
    - Port는 Docker Compose에서 맵핑한 5432 사용
    - Database, Username, Password 또한 Docker Compose에서 지정한 값을 사용
 
-{{< img-two
-  src-left="https://dl.dropboxusercontent.com/scl/fi/mdmcowq7snd9kre1nk3er/airflow-47-dbeaver-select-database.webp?rlkey=mqhmcjbk9ffa0cjqb4yib3wkw&dl=0"
-  alt-left="Connect to a database > Select your database"
-  src-right="https://dl.dropboxusercontent.com/scl/fi/fjrzi28evemhofio626rl/airflow-48-dbeaver-connection-settings.webp?rlkey=q4xqe24sguok0arrnn3z8jv2b&dl=0"
-  alt-right="Connect to a database > Connection Settings" >}}
+{{% columns %}}
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/mdmcowq7snd9kre1nk3er/airflow-47-dbeaver-select-database.webp?rlkey=mqhmcjbk9ffa0cjqb4yib3wkw&dl=0"
+  alt="Connect to a database > Select your database" >}}
+<--->
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/fjrzi28evemhofio626rl/airflow-48-dbeaver-connection-settings.webp?rlkey=q4xqe24sguok0arrnn3z8jv2b&dl=0"
+  alt="Connect to a database > Connection Settings" >}}
+{{% /columns %}}
 
 - 정상적으로 연결되었다면 아래와 같이 Database 명칭을 확인 가능
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/76s6qjohro7qeawziu92c/airflow-49-dbeaver-database-navigator.webp?rlkey=b8ja2rvtsyqjmn6tay2mw8hl4&dl=0"
   alt="Database Navigator"
   max-width="518px"
@@ -268,7 +272,7 @@ with DAG(
 
 - DAG을 실행한 후 DBeaver에서 `dag_run` 테이블 조회 시 아래와 같이 하나의 행이 올라온 것을 확인
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/qkhf61bfelnqo014ics1d/airflow-51-dbeaver-dagrun-row.webp?rlkey=nnj98cyd7dn4feedrdoyztee4&dl=0"
   alt="dag_run > Data > manual__2025-06-08T04:11:08.876393+00:00"
   max-width="691px"
@@ -337,7 +341,7 @@ def get_conn(self) -> connection:
 - 연결 정보로 Docker Compose에서 지정한 값을 입력
 - Connection에 입력한 각 항목은 앞서 확인한 `get_conn()` 메서드에서 PostgreSQL 연결 시 사용
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/3q28bhxv5ld52bx3dqaiz/airflow-52-postgres-connection.webp?rlkey=py1x2x3gab8qemhlyw38h188k&dl=0"
   alt="Add Connection - Postgres"
   max-width="691px"
@@ -387,7 +391,7 @@ with DAG(
 
 - DAG을 실행한 후 DBeaver에서 `dag_run` 테이블 조회 시 아래와 같이 두 번째 행이 추가된 것을 확인
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/qgawsskyvb52i0d82sjbs/airflow-53-dbeaver-dagrun-rows.webp?rlkey=l81q9dh7a68q062s0nrnam77v&dl=0"
   alt="dag_run > Data > manual__2025-06-08T06:15:41.672840+00:00"
   max-width="691px"
@@ -810,7 +814,7 @@ with DAG(
 ### 테이블 조회
 - DBeaver에서 `nshopping.search2` 테이블이 생성되었고, 의도대로 정수형 열을 추측하여 데이터 타입을 구분해서 지정된 것을 확인
 
-{{< img
+{{< image
   src="https://dl.dropboxusercontent.com/scl/fi/7wxi8iful4mscw6hrbk4b/airflow-56-dbeaver-search2-columns.webp?rlkey=21gcfnuz4969c25nzmocd9kmc&dl=0"
   alt="search2 > Properties > Columns"
   max-width="691px"
