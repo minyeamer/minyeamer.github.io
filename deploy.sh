@@ -15,7 +15,7 @@ ps -ef | grep "hugo server" | grep -v grep | awk '{print $2}' | xargs kill -9 2>
 # Build the project into temporary folder.
 TMP_PUBLIC="public_tmp"
 rm -rf "$TMP_PUBLIC"
-hugo -t Book --gc --destination "$TMP_PUBLIC"
+hugo -t seotax --gc --destination "$TMP_PUBLIC"
 
 # Sync into public but preserve .git
 rsync -a --delete --exclude='.git' "$TMP_PUBLIC"/ public/

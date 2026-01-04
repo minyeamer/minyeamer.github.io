@@ -1,10 +1,11 @@
 baseURL: "https://minyeamer.github.io/"
 title: "Minystory"
 description: "minyeamer's blog"
-theme: "Book"
-languageCode: "ko-kr"
-
 copyright: "[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)"
+
+theme: "seotax"
+defaultContentLanguage: "ko"
+languageCode: "ko-kr"
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -25,6 +26,9 @@ params:
   images:
     - "/images/profile/opengraph.jpg"
 
+  posts:
+    section: "posts"
+
   assets:
     favicon: "/images/favicons/favicon.ico"
     favicon16x16: "/images/favicons/favicon-16x16.png"
@@ -32,37 +36,46 @@ params:
     apple_touch_icon: "/images/favicons/apple-touch-icon.png"
     safari_pinned_tab: "/images/favicons/apple-touch-icon.png"
 
-  BookMenu:
+  menu:
     profileImage: "/images/profile/menu.jpg"
-    githubLink: "https://github.com/minyeamer"
-    categoriesLabel: "전체"
+    categories: true
     recentPosts: true
 
-  BookComments:
-    enable: true
+  social:
+    github: "https://github.com/minyeamer"
+    twitter: "https://x.com/minyeamer"
+
+  comments:
+    enabled: true
     disqusShortname: "minyeamer"
+
+  search:
+    enabled: true
+
+  serviceWorker: "precache"
+
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
 
   GoogleAnalytics:
     tagId: "G-BJ8Z9RMBPJ"
 
-  SearchEngine:
+  searchEngine:
     google:
-      SiteVerificationTag: "u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"
+      siteVerificationTag: "u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"
     naver:
-      SiteVerificationTag: "6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"
+      siteVerificationTag: "6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"
     # bing:
-    #   SiteVerificationTag: "XYZabc"
+    #   siteVerificationTag: "XYZabc"
     # yandex:
-    #   SiteVerificationTag: "XYZabc"
+    #   siteVerificationTag: "XYZabc"
 
   schema:
     publisherType: "Person"
     sameAs:
       - "https://minyeamer.tistory.com/"
       - "https://velog.io/@minyeamer/posts"
-
-  social:
-    twitter: "https://x.com/minyeamer"
 
 markup:
   goldmark:
@@ -80,5 +93,7 @@ markup:
 
 permalinks:
   posts: "/blog/:slugorcontentbasename/"
+
+disableKinds: ["term"]
 
 ignoreFiles: ["_page.md", "README.md"]

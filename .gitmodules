@@ -6,6 +6,6 @@
 	path = public
 	url = https://github.com/minyeamer/minyeamer.github.io.git
 	branch = source
-[submodule "themes/Book"]
-	path = themes/Book
-	url = https://github.com/minyeamer/hugo-book-custom.git
+[submodule "themes/seotax"]
+	path = themes/seotax
+	url = https://github.com/minyeamer/hugo-seotax
