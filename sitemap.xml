@@ -2,431 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://minyeamer.github.io/categories/blog/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/blog/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/css/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/disqus/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/frontend/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/html/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/hugo/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/hugo-book/</loc>
     <lastmod>2025-12-15T11:01:49+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-5/</loc>
     <lastmod>2025-12-15T11:01:49+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/javascript/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/posts/</loc>
     <lastmod>2025-12-15T11:01:49+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%8A%A4%ED%81%AC%EB%A1%A4-%EC%A7%84%ED%96%89%EB%8F%84/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%BB%A4%EB%B2%84-%EC%9D%B4%EB%AF%B8%EC%A7%80/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%EB%B3%B8%EB%AC%B8/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0-%ED%85%8C%EB%A7%88/</loc>
-    <lastmod>2025-12-15T11:01:49+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/documentfragment/</loc>
-    <lastmod>2025-12-14T12:40:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/eventlistener/</loc>
-    <lastmod>2025-12-14T12:40:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/fusejs/</loc>
-    <lastmod>2025-12-14T12:40:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/hugo-%EA%B2%80%EC%83%89/</loc>
-    <lastmod>2025-12-14T12:40:13+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-4/</loc>
-    <lastmod>2025-12-14T12:40:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/window/</loc>
-    <lastmod>2025-12-14T12:40:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B2%80%EC%83%89-%EC%9D%B8%EB%8D%B1%EC%8A%A4/</loc>
-    <lastmod>2025-12-14T12:40:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B2%80%EC%83%89-%ED%8E%98%EC%9D%B4%EC%A7%80/</loc>
     <lastmod>2025-12-14T12:40:13+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-3/</loc>
     <lastmod>2025-11-22T23:04:47+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/taxonomies/</loc>
-    <lastmod>2025-11-22T23:04:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/</loc>
-    <lastmod>2025-11-22T23:04:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%83%9C%EA%B7%B8/</loc>
-    <lastmod>2025-11-22T23:04:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/</loc>
-    <lastmod>2025-11-22T23:04:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%83%9C%EA%B7%B8/</loc>
-    <lastmod>2025-11-22T23:04:47+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-2/</loc>
     <lastmod>2025-11-04T01:50:16+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%AA%A9%EC%B0%A8/</loc>
-    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/</loc>
-    <lastmod>2025-11-04T01:50:16+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/git/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/github-pages/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-1/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/submodule/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/velog/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B2%A8%EB%A1%9C%EA%B7%B8/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC/</loc>
-    <lastmod>2025-11-01T20:42:21+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%9C%B4%EA%B3%A0/</loc>
     <lastmod>2025-11-01T20:42:21+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/openup-handson/</loc>
     <lastmod>2025-10-28T23:23:55+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/github/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/open-source/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/open-source/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/openup/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/ossca/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/project/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/pytorch/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/rst/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/translation/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B2%88%EC%97%AD/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98/</loc>
-    <lastmod>2025-10-28T23:23:55+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/uv-project/</loc>
     <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/pypi/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/python/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/python-%ED%8C%A8%ED%82%A4%EC%A7%80/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/rust/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/tools/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/uv/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B0%B0%ED%8F%AC/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B4%80%EB%A6%AC/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC/</loc>
-    <lastmod>2025-07-23T00:47:11+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/apache-spark/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/apache-spark/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-8/</loc>
     <lastmod>2025-07-19T23:53:45+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/categories/data-engineering/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/pandas-udf/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/pyspark/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/spark-sql/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/study/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/udf/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B3%A0%EC%B0%A8-%ED%95%A8%EC%88%98/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%8A%A4%ED%8C%8C%ED%81%AC/</loc>
-    <lastmod>2025-07-19T23:53:45+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/calico/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/cloud/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/cni/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/containerd/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/kubeadm/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/kubectl/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/kubelet/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/kubernetes/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/kubernetes/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/ubuntu-24.04/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EC%84%A4%EC%B9%98/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/kube-installtion/</loc>
     <lastmod>2025-07-16T23:52:48+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1/</loc>
-    <lastmod>2025-07-16T23:52:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/container/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/cri/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/docker/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/lxc/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/oci/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EB%9F%B0%ED%83%80%EC%9E%84/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%97%AD%EC%82%AC/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/container-history/</loc>
-    <lastmod>2025-07-15T01:55:24+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C/</loc>
     <lastmod>2025-07-15T01:55:24+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-7/</loc>
     <lastmod>2025-07-12T21:29:06+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/hive/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/jdbc/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/mysql/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/postgresql/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/rdbms/</loc>
-    <lastmod>2025-07-12T21:29:06+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-6/</loc>
     <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/avro/</loc>
-    <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/csv/</loc>
-    <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/data-sources/</loc>
-    <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/json/</loc>
-    <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/parquet/</loc>
-    <lastmod>2025-07-10T23:56:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/linux/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/linux/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/mac/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/install-ubuntu-server/</loc>
     <lastmod>2025-07-06T15:47:47+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/ssh/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/ubuntu/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/ubuntu/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/ubuntu-server/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/utm/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/virtual-machine/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B0%80%EC%83%81%EB%A8%B8%EC%8B%A0/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</loc>
-    <lastmod>2025-07-06T15:47:47+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-5/</loc>
     <lastmod>2025-07-05T23:03:04+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/sql/</loc>
-    <lastmod>2025-07-05T23:03:04+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/view/</loc>
-    <lastmod>2025-07-05T23:03:04+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/algorithm/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/group-by/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/join/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/select/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/sql/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv4/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-lv5/</loc>
-    <lastmod>2025-07-03T23:15:02+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/programmers-sql-4-5/</loc>
     <lastmod>2025-07-03T23:15:02+09:00</lastmod>
@@ -434,167 +56,32 @@
     <loc>https://minyeamer.github.io/blog/spark-study-4/</loc>
     <lastmod>2025-06-29T20:01:48+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/dataframe/</loc>
-    <lastmod>2025-06-29T20:01:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/dataset/</loc>
-    <lastmod>2025-06-29T20:01:48+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/structured-api/</loc>
-    <lastmod>2025-06-29T20:01:48+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-3/</loc>
-    <lastmod>2025-06-29T12:50:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/rdd/</loc>
-    <lastmod>2025-06-29T12:50:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/spark-application/</loc>
-    <lastmod>2025-06-29T12:50:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/spark-shell/</loc>
-    <lastmod>2025-06-29T12:50:06+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/spark-web-ui/</loc>
     <lastmod>2025-06-29T12:50:06+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-2/</loc>
     <lastmod>2025-06-28T21:55:14+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/hadoop/</loc>
-    <lastmod>2025-06-28T21:55:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/hdfs/</loc>
-    <lastmod>2025-06-28T21:55:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/jdk/</loc>
-    <lastmod>2025-06-28T21:55:14+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/spark-study-1/</loc>
     <lastmod>2025-06-22T18:42:10+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/cluster-manager/</loc>
-    <lastmod>2025-06-22T18:42:10+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/spark-architecture/</loc>
-    <lastmod>2025-06-22T18:42:10+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/sparksession/</loc>
-    <lastmod>2025-06-22T18:42:10+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/apache-airflow/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/apache-airflow/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/airflow-study-7/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/connection/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/custom-hook/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/docker-compose/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/hook/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/postgres/</loc>
-    <lastmod>2025-06-08T16:52:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%97%90%EC%96%B4%ED%94%8C%EB%A1%9C%EC%9A%B0/</loc>
     <lastmod>2025-06-08T16:52:44+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/airflow-study-6/</loc>
     <lastmod>2025-06-07T12:50:14+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/baseoperator/</loc>
-    <lastmod>2025-06-07T12:50:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/custom-operator/</loc>
-    <lastmod>2025-06-07T12:50:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/httpoperator/</loc>
-    <lastmod>2025-06-07T12:50:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/rest-api/</loc>
-    <lastmod>2025-06-07T12:50:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84-open-api/</loc>
-    <lastmod>2025-06-07T12:50:14+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/airflow-study-5/</loc>
-    <lastmod>2025-06-07T11:08:37+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/edge-label/</loc>
-    <lastmod>2025-06-07T11:08:37+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/taskgroup/</loc>
-    <lastmod>2025-06-07T11:08:37+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/trigger-rule/</loc>
-    <lastmod>2025-06-07T11:08:37+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/triggerdagrunoperator/</loc>
     <lastmod>2025-06-07T11:08:37+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/airflow-study-4/</loc>
     <lastmod>2025-06-06T16:36:50+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/branching/</loc>
-    <lastmod>2025-06-06T16:36:50+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/branchoperator/</loc>
-    <lastmod>2025-06-06T16:36:50+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/email/</loc>
-    <lastmod>2025-06-06T16:36:50+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/emailoperator/</loc>
-    <lastmod>2025-06-06T16:36:50+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/smtp/</loc>
-    <lastmod>2025-06-06T16:36:50+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/airflow-study-3/</loc>
-    <lastmod>2025-06-01T23:46:09+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/bashoperator/</loc>
-    <lastmod>2025-06-01T23:46:09+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/jinja-%ED%85%9C%ED%94%8C%EB%A6%BF/</loc>
-    <lastmod>2025-06-01T23:46:09+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/pythonoperator/</loc>
-    <lastmod>2025-06-01T23:46:09+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/variable/</loc>
-    <lastmod>2025-06-01T23:46:09+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/xcom/</loc>
-    <lastmod>2025-06-01T23:46:09+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%B3%80%EC%88%98/</loc>
     <lastmod>2025-06-01T23:46:09+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/airflow-study-2/</loc>
     <lastmod>2025-05-30T23:36:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/dag/</loc>
-    <lastmod>2025-05-30T23:36:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/decorator/</loc>
-    <lastmod>2025-05-30T23:36:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/plugins/</loc>
-    <lastmod>2025-05-30T23:36:13+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/airflow-%EC%84%A4%EC%B9%98/</loc>
-    <lastmod>2025-05-27T22:05:51+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/airflow-study-1/</loc>
     <lastmod>2025-05-27T22:05:51+09:00</lastmod>
@@ -602,324 +89,49 @@
     <loc>https://minyeamer.github.io/blog/10000-recipe/</loc>
     <lastmod>2023-03-26T18:52:14+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/beautifulsoup/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/crawling/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/requests/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%A7%8C%EA%B0%9C%EC%9D%98-%EB%A0%88%EC%8B%9C%ED%94%BC/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%9B%B9-%EC%8A%A4%ED%81%AC%EB%9E%98%ED%95%91/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%9B%B9-%EC%9E%90%EB%8F%99%ED%99%94/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%81%AC%EB%A1%A4%EB%A7%81/</loc>
-    <lastmod>2023-03-26T18:52:14+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/smartstore-login-3/</loc>
-    <lastmod>2022-12-04T10:22:03+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/2%EB%8B%A8%EA%B3%84-%EC%9D%B8%EC%A6%9D/</loc>
-    <lastmod>2022-12-04T10:22:03+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/graphql/</loc>
-    <lastmod>2022-12-04T10:22:03+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/oauth-%EC%9D%B8%EC%A6%9D/</loc>
-    <lastmod>2022-12-04T10:22:03+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/</loc>
-    <lastmod>2022-12-04T10:22:03+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8A%A4%ED%86%A0%EC%96%B4/</loc>
-    <lastmod>2022-12-04T10:22:03+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%BF%A0%ED%82%A4-%EC%9D%B8%EC%A6%9D/</loc>
     <lastmod>2022-12-04T10:22:03+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/smartstore-login-2/</loc>
     <lastmod>2022-12-03T16:11:42+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/bvsd/</loc>
-    <lastmod>2022-12-03T16:11:42+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/encpw/</loc>
-    <lastmod>2022-12-03T16:11:42+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/lzstring/</loc>
-    <lastmod>2022-12-03T16:11:42+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/rsa-%EC%95%94%ED%98%B8%ED%99%94/</loc>
-    <lastmod>2022-12-03T16:11:42+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/session_keys/</loc>
-    <lastmod>2022-12-03T16:11:42+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84-%EB%A1%9C%EA%B7%B8%EC%9D%B8/</loc>
-    <lastmod>2022-12-03T16:11:42+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/smartstore-login-1/</loc>
     <lastmod>2022-12-03T13:56:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%9E%90%EB%8F%99%ED%99%94/</loc>
-    <lastmod>2022-12-03T13:56:14+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/go-template/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-old-3/</loc>
     <lastmod>2022-09-08T15:52:12+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/katex/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/papermod/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B0%9C%EB%B0%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EC%B5%9C%EC%A0%81%ED%99%94/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
-    <lastmod>2022-09-08T15:52:12+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/github-issues/</loc>
-    <lastmod>2022-09-08T14:39:22+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-old-2/</loc>
-    <lastmod>2022-09-08T14:39:22+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/utterances/</loc>
-    <lastmod>2022-09-08T14:39:22+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%8C%93%EA%B8%80-%EC%8B%9C%EC%8A%A4%ED%85%9C/</loc>
     <lastmod>2022-09-08T14:39:22+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-blog-old-1/</loc>
     <lastmod>2022-09-08T12:02:32+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B9%83%ED%97%88%EB%B8%8C-%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
-    <lastmod>2022-09-08T12:02:32+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/chirpy/</loc>
-    <lastmod>2022-08-30T16:28:43+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/jekyll/</loc>
-    <lastmod>2022-08-30T16:28:43+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/jekyll-blog/</loc>
     <lastmod>2022-08-30T16:28:43+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/dacon/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/dacon/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/dacon-shop-review/</loc>
     <lastmod>2022-08-22T15:06:20+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/categories/data-analysis/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/koelectra/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/nlp/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/nlpaug/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/roberta/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B0%90%EC%A0%95-%EB%B6%84%EC%84%9D/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A6%9D%EA%B0%95/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%87%BC%ED%95%91%EB%AA%B0-%EB%A6%AC%EB%B7%B0/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%95%99%EC%83%81%EB%B8%94/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%97%AD%EB%B2%88%EC%97%AD/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%B6%84%EB%A5%98/</loc>
-    <lastmod>2022-08-22T15:06:20+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/audio-mnist/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/dacon-audio-mnist/</loc>
     <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/librosa/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/mel-spectrogram/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/mfcc/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/resnet/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EA%B5%90%EC%B0%A8%EA%B2%80%EC%A6%9D/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%9D%8C%EC%84%B1-%EB%B6%84%EB%A5%98/</loc>
-    <lastmod>2022-08-22T14:50:36+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/catboost/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/dacon-consumption-prediction/</loc>
     <lastmod>2022-08-22T14:31:44+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/eda/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/ensemble/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/lgbm/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/optuna/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/soft-voting/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/xgboost/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%86%8C%EB%B9%84-%EC%98%88%EC%B8%A1/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%9A%8C%EA%B7%80-%EB%AA%A8%EB%8D%B8/</loc>
-    <lastmod>2022-08-22T14:31:44+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/big-o/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/big-o-list/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/dictionary/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/list/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/python/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/search/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/set/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/sort/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84/</loc>
-    <lastmod>2022-03-20T18:12:40+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/</loc>
     <lastmod>2022-03-20T18:12:40+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/baekjoon-1197-mst/</loc>
     <lastmod>2022-03-20T16:18:29+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/tags/dfs/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/graph/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/heap/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/mst/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/union-find/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B0%B1%EC%A4%80/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EB%B0%B1%EC%A4%80-gold-4/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%B5%9C%EC%86%8C-%EC%8A%A4%ED%8C%A8%EB%8B%9D-%ED%8A%B8%EB%A6%AC/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%ED%94%84%EB%A6%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</loc>
-    <lastmod>2022-03-20T16:18:29+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/bfs/</loc>
-    <lastmod>2022-03-20T13:37:54+09:00</lastmod>
-  </url><url>
-    <loc>https://minyeamer.github.io/tags/%EC%9D%B4%EC%A7%84-%ED%83%90%EC%83%89/</loc>
-    <lastmod>2022-03-20T13:37:54+09:00</lastmod>
-  </url><url>
     <loc>https://minyeamer.github.io/blog/algorithm-basics/</loc>
     <lastmod>2022-03-20T13:37:54+09:00</lastmod>
   </url><url>
-    <loc>https://minyeamer.github.io/categories/data-engineering/apache-airflow/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/data-engineering/apache-spark/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/frontend/blog/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/data-engineering/crawling/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/data-analysis/dacon/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/algorithm/graph/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/cloud/kubernetes/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/project/open-source/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/algorithm/python/</loc>
+    <loc>https://minyeamer.github.io/categories/</loc>
   </url><url>
     <loc>https://minyeamer.github.io/search/</loc>
   </url><url>
-    <loc>https://minyeamer.github.io/categories/algorithm/sql/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/project/tools/</loc>
-  </url><url>
-    <loc>https://minyeamer.github.io/categories/linux/ubuntu/</loc>
+    <loc>https://minyeamer.github.io/tags/</loc>
   </url>
 </urlset>

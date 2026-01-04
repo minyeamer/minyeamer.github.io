@@ -1,0 +1,1 @@
+(function(){"use strict";document.addEventListener("keydown",function(e){if(e.key==="Escape"){const e=document.querySelectorAll(".sc-image input.toggle:checked, .md-image input.toggle:checked");e.forEach(function(e){e.checked=!1})}})})()
