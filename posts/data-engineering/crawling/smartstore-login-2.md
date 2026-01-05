@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Python requests를 이용한 네이버 로그인 구현 방법입니다.
   RSA 암호화, session_keys 처리, bvsd 값 생성, dynamicKey 활용 등 네이버 로그인의 핵심 기술을 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&raw=1"
 categories: ["Data Engineering", "Crawling"]
 tags: ["크롤링", "Python", "네이버 로그인", "RSA 암호화", "requests", "session_keys", "encpw", "bvsd", "lzstring", "웹 자동화"]
 ---
@@ -56,7 +56,7 @@ cookies = {
 네이버 로그인 페이지에서 로그인을 수행하는 과정에서
 발견할 수 있는 POST 요청을 살펴보면 다음과 같은 데이터가 전달됨을 발견할 수 있습니다.
 
-![nidlogin.login > Payload > From Data > dynamicKey](https://dl.dropboxusercontent.com/scl/fi/6g6nao7vdpnckt30anip6/smartstore-login-05-nid-login.webp?rlkey=qy094lowbgltfh2sfnj49r9bo&dl=0)
+![nidlogin.login > Payload > From Data > dynamicKey](https://dl.dropboxusercontent.com/scl/fi/6g6nao7vdpnckt30anip6/smartstore-login-05-nid-login.webp?rlkey=qy094lowbgltfh2sfnj49r9bo&raw=1)
 
 암호화된 값을 생략하고 키로 전달되는 내용을 확인하면 다음과 같습니다.
 
@@ -88,7 +88,7 @@ cookies = {
 키의 명칭만으로는 무엇을 의미하는지 알 수 없기 때문에
 로그인 페이지 소스에서 키명칭을 검색하였고 네이버 로그인 폼에서 하나의 단서를 찾을 수 있었습니다.
 
-![nidlogin.login > Response > form > dynamicKey](https://dl.dropboxusercontent.com/scl/fi/e9wu13gvzs25eq4p4qm06/smartstore-login-06-dynamic-key.webp?rlkey=0j9ykm4nm5hvyt6wvtldnb1tb&dl=0)
+![nidlogin.login > Response > form > dynamicKey](https://dl.dropboxusercontent.com/scl/fi/e9wu13gvzs25eq4p4qm06/smartstore-login-06-dynamic-key.webp?rlkey=0j9ykm4nm5hvyt6wvtldnb1tb&raw=1)
 
 `dynamicKey` 의 경우 로그인 폼에 동적으로 부여되는 값임을 알 수 있습니다.
 하지만 나머지 `encpw`, `bvsd`, `encnm` 의 값은 비어있기 때문에
@@ -100,7 +100,7 @@ cookies = {
 `common_202201.js` 내부에서 RSA 암호화 처리를 통해 값을 생성함을 알 수 있습니다.
 그 중에서 가장 처음 단계로 실행될 것이라 추측되는 것이 아래 `confirmSubmit()` 함수입니다.
 
-![common_202201.js > Response > function confirmSubmit() > var encpw](https://dl.dropboxusercontent.com/scl/fi/8q5yioyjox3ubhxfho0i1/smartstore-login-07-encpw.webp?rlkey=2jux1201cyogaarm8uhxxt7ds&dl=0)
+![common_202201.js > Response > function confirmSubmit() > var encpw](https://dl.dropboxusercontent.com/scl/fi/8q5yioyjox3ubhxfho0i1/smartstore-login-07-encpw.webp?rlkey=2jux1201cyogaarm8uhxxt7ds&raw=1)
 
 해당 함수는 아이디와 비밀번호의 여부를 체크하고 `encryptIdPw()` 함수의 결과를 반환합니다.
 바로 밑에서 확인할 수 있는 `encryptIdPw()` 함수의 내용은 다음과 같습니다.
@@ -143,12 +143,12 @@ function encryptIdPw() {
 마찬가지로 해당 명칭을 검색했을 때
 `session_keys` 는 Ajax 통신의 응답 결과를 받아오는 것을 확인할 수 있습니다.
 
-![common_202201.js > Response > function getAjaxResult(urls) > var session_keys](https://dl.dropboxusercontent.com/scl/fi/q8wpck8bep5t5nbzmjqy7/smartstore-login-08-session-keys.webp?rlkey=ya5y8j6mo4guio3j2mujj3u7r&dl=0)
+![common_202201.js > Response > function getAjaxResult(urls) > var session_keys](https://dl.dropboxusercontent.com/scl/fi/q8wpck8bep5t5nbzmjqy7/smartstore-login-08-session-keys.webp?rlkey=ya5y8j6mo4guio3j2mujj3u7r&raw=1)
 
 하지만 네이버 로그인 페이지에서 `svctype=262144` 를 추가적인 파라미터로 입력할 경우
 접근할 수 있는 모바일 로그인 페이지에서 해당 값을 확인할 수 있었습니다.
 
-![nidlogin.login > Response > input#session_keys](https://dl.dropboxusercontent.com/scl/fi/bvl8cuwl0ayo6rxzbjlm6/smartstore-login-09-nid-mlogin.webp?rlkey=8u0d8rncdrhvugtp3yo14apwq&dl=0)
+![nidlogin.login > Response > input#session_keys](https://dl.dropboxusercontent.com/scl/fi/bvl8cuwl0ayo6rxzbjlm6/smartstore-login-09-nid-mlogin.webp?rlkey=8u0d8rncdrhvugtp3yo14apwq&raw=1)
 
 다시 `encryptIdPw()` 함수로 돌아가서 `session_keys` 를 처리하기 위해
 `keySplit()` 함수를 찾아보았습니다.
@@ -211,7 +211,7 @@ encpw = rsa.encrypt(value.encode(), publicKey).hex()
 `bvsd.1.3.8.min.js` 에서 주목할 부분은 `uuid` 및 `encData` 를 생성하는 부분인데
 아래 코드에서 `encData` 는 `o` 라는 값을 인코딩하는 것으로 추측됩니다.
 
-![bvsd.1.3.8.min.js > Response > r = i["default"].compressToEncodedURIComponent(o)](https://dl.dropboxusercontent.com/scl/fi/ke70oepd3d3a7pigupdfy/smartstore-login-10-bvsd.webp?rlkey=x12x4kvi75l298hfm7wqpryyf&dl=0)
+![bvsd.1.3.8.min.js > Response > r = i["default"].compressToEncodedURIComponent(o)](https://dl.dropboxusercontent.com/scl/fi/ke70oepd3d3a7pigupdfy/smartstore-login-10-bvsd.webp?rlkey=x12x4kvi75l298hfm7wqpryyf&raw=1)
 
 `o` 값을 코드 내에서 찾아보니 아래와 같이 디바이스의 마우스 상태 등을
 기록한 값임을 확인할 수 있었습니다.
@@ -365,7 +365,7 @@ naver.get_cookies()
 
 또한 해당 결과는 개발자 도구에서도 응답 헤더의 `set-cookie` 값에서 찾아볼 수 있습니다.
 
-![nidlogin.login > Headers > set-cookie: NID_AUT=...;](https://dl.dropboxusercontent.com/scl/fi/13giue4qz293h7mm5mo2b/smartstore-login-11-nid-cookies.webp?rlkey=owjn9fvluz3i2rvp6vsfwops4&dl=0)
+![nidlogin.login > Headers > set-cookie: NID_AUT=...;](https://dl.dropboxusercontent.com/scl/fi/13giue4qz293h7mm5mo2b/smartstore-login-11-nid-cookies.webp?rlkey=owjn9fvluz3i2rvp6vsfwops4&raw=1)
 
 지금까지의 과정으로 네이버 로그인 과정을 거쳤을 때,
 게시글의 서두에서 언급한 쿠키 값의 목록 중에서 일부 값을 획득할 수 있습니다.

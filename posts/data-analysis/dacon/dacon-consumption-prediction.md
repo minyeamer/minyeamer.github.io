@@ -6,7 +6,7 @@ description: >
   DACON 소비자 데이터 기반 소비 예측 경진대회 참가 및 분석 결과입니다.
   EDA 시각화, Label Encoding, 파생 변수 생성, Optuna 하이퍼파라미터 튜닝, Soft Voting Ensemble
   기법을 활용하여 NMAE 0.18533 성적으로 36위를 달성한 과정을 공유합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/a9p1jkt6m3c44nigy5lnd/consumption-prediction-00-cover.webp?rlkey=4f4szfbtri7noe9lw8tw11bp4&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/a9p1jkt6m3c44nigy5lnd/consumption-prediction-00-cover.webp?rlkey=4f4szfbtri7noe9lw8tw11bp4&raw=1"
 categories: ["Data Analysis", "Dacon"]
 tags: ["DACON", "소비 예측", "회귀 모델", "EDA", "데이터 분석", "Ensemble", "Soft Voting", "Optuna", "LGBM", "XGBoost", "CatBoost"]
 ---
@@ -24,7 +24,7 @@ tags: ["DACON", "소비 예측", "회귀 모델", "EDA", "데이터 분석", "En
 - [소비자 데이터](https://dacon.io/competitions/official/235893/data)
 - 베이스라인에서 데이터 결측치가 없음을 확인받고 전처리 없이 EDA 진행했습니다.
 
-![train.csv](https://dl.dropboxusercontent.com/scl/fi/y4e3kpu0yxm2ax2deeyxp/consumption-prediction-01-data.webp?rlkey=3arpouhstnsbnspq75vnjp7as&dl=0)
+![train.csv](https://dl.dropboxusercontent.com/scl/fi/y4e3kpu0yxm2ax2deeyxp/consumption-prediction-01-data.webp?rlkey=3arpouhstnsbnspq75vnjp7as&raw=1)
 
 ## EDA
 
@@ -33,7 +33,7 @@ tags: ["DACON", "소비 예측", "회귀 모델", "EDA", "데이터 분석", "En
 - 예측해야할 소비량 데이터는 6부터 2525 사이의 범위에 존재하며,
   전체 데이터 중 50퍼센트 이상이 500 이하의 값에 편향됨을 확인했습니다.
 
-![target histogram, target ratio](https://dl.dropboxusercontent.com/scl/fi/ezj2gsbjx264j6fix9g1e/consumption-prediction-02-label.webp?rlkey=j5h87z12gr5agelh1itg3difa&dl=0)
+![target histogram, target ratio](https://dl.dropboxusercontent.com/scl/fi/ezj2gsbjx264j6fix9g1e/consumption-prediction-02-label.webp?rlkey=j5h87z12gr5agelh1itg3difa&raw=1)
 
 ### 출생 연도와 소득
 
@@ -41,33 +41,33 @@ tags: ["DACON", "소비 예측", "회귀 모델", "EDA", "데이터 분석", "En
 - 두 데이터 간에 관계가 있음을 기대하며 출생 연도에 따른 소득의 총합과 평균값 그래프를 추가로 표시했습니다.
 - 중년층에서 가장 높은 소득이 나타남을 알 수 있었고, 청년층과 노년층에서는 반대의 결과를 확인했습니다.
 
-![Year_Birth histogram, Year_Birth ratio, Income histogram](https://dl.dropboxusercontent.com/scl/fi/8dz8q7x1ftmhjdqlh8jto/consumption-prediction-03-birth-year.webp?rlkey=y9j3p9043dixyma828k9ozo76&dl=0)
+![Year_Birth histogram, Year_Birth ratio, Income histogram](https://dl.dropboxusercontent.com/scl/fi/8dz8q7x1ftmhjdqlh8jto/consumption-prediction-03-birth-year.webp?rlkey=y9j3p9043dixyma828k9ozo76&raw=1)
 
-![Income sum by Year_Birth, Income mean by Year_Birth](https://dl.dropboxusercontent.com/scl/fi/o70gefb3uu3cjv1fer8nu/consumption-prediction-04-birth-income.webp?rlkey=x9qpxnhbfi1nstfw4ee023t1b&dl=0)
+![Income sum by Year_Birth, Income mean by Year_Birth](https://dl.dropboxusercontent.com/scl/fi/o70gefb3uu3cjv1fer8nu/consumption-prediction-04-birth-income.webp?rlkey=x9qpxnhbfi1nstfw4ee023t1b&raw=1)
 
-![Year_Birth histogram, Year_Birth ratio, Income histogram](https://dl.dropboxusercontent.com/scl/fi/gwqfx0s60ogl834pjcxzk/consumption-prediction-05-income.webp?rlkey=v0ls1gekn36fprxqojo6gdkz2&dl=0)
+![Year_Birth histogram, Year_Birth ratio, Income histogram](https://dl.dropboxusercontent.com/scl/fi/gwqfx0s60ogl834pjcxzk/consumption-prediction-05-income.webp?rlkey=v0ls1gekn36fprxqojo6gdkz2&raw=1)
 
 ### 구매 건수
 
 - 구매 건수 데이터에서도 일부 이상치가 발생하는 것을 확인했지만,
   이상치의 수가 무시할 수는 없는 수준이고 실제로 이상치를 남겨둔 경우에 더 높은 성능이 나오는 것을 확인했습니다.
 
-![NumDealsPurchases, NumWebPurchases, NumCatalogPurchases, NumStorePurchases, NumWebVisitsMonth](https://dl.dropboxusercontent.com/scl/fi/vbpv1uo2uqqxxwx47h0wu/consumption-prediction-06-purchases.webp?rlkey=6a2s67g1oedoqqmtp01t40iib&dl=0)
+![NumDealsPurchases, NumWebPurchases, NumCatalogPurchases, NumStorePurchases, NumWebVisitsMonth](https://dl.dropboxusercontent.com/scl/fi/vbpv1uo2uqqxxwx47h0wu/consumption-prediction-06-purchases.webp?rlkey=6a2s67g1oedoqqmtp01t40iib&raw=1)
 
 ### 고객 등록 일자
 
 - 문자열로 된 날짜 데이터를 분리해 연, 월, 일에 해당하는 데이터를 각각 그래프로 표시했습니다.
 
-![Year_Customer, Month_Customer, Day_Customer](https://dl.dropboxusercontent.com/scl/fi/2j3qoouhyus6ti3ysz1ir/consumption-prediction-07-customer-ymd.webp?rlkey=vmrkbp6kkq3mfxsbmi5bmba87&dl=0)
+![Year_Customer, Month_Customer, Day_Customer](https://dl.dropboxusercontent.com/scl/fi/2j3qoouhyus6ti3ysz1ir/consumption-prediction-07-customer-ymd.webp?rlkey=vmrkbp6kkq3mfxsbmi5bmba87&raw=1)
 
 ### 범주형 데이터
 
 - 나머지 범주형 데이터도 그래프로 표시하여 각 범주의 분포를 확인했습니다.
 - 결혼 상태 데이터에 한해서 같은 종류의 범주를 하나로 묶어서 분석할 수 있는 가능성 인지했습니다.
 
-![AcceptedCmp1, AcceptedCmp2, AcceptedCmp3, AcceptedCmp4, AcceptedCmp5, Response](https://dl.dropboxusercontent.com/scl/fi/fvo3m112c35zlaqsy5ef1/consumption-prediction-08-categorical1.webp?rlkey=3wzvj0vlhy0ojgzz5wufaymvq&dl=0)
+![AcceptedCmp1, AcceptedCmp2, AcceptedCmp3, AcceptedCmp4, AcceptedCmp5, Response](https://dl.dropboxusercontent.com/scl/fi/fvo3m112c35zlaqsy5ef1/consumption-prediction-08-categorical1.webp?rlkey=3wzvj0vlhy0ojgzz5wufaymvq&raw=1)
 
-![Education, Martial_Status, Kidhome, Teenhome, Complain](https://dl.dropboxusercontent.com/scl/fi/kcbtb8mfjd4e2435s1o0x/consumption-prediction-08-categorical2.webp?rlkey=lckqiru6j1xo9t7ouqypt0udj&dl=0)
+![Education, Martial_Status, Kidhome, Teenhome, Complain](https://dl.dropboxusercontent.com/scl/fi/kcbtb8mfjd4e2435s1o0x/consumption-prediction-08-categorical2.webp?rlkey=lckqiru6j1xo9t7ouqypt0udj&raw=1)
 
 ## 데이터 전처리
 

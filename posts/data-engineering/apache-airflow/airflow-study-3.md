@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 Jinja 템플릿과 XCom을 소개하고, 템플릿 변수 활용과 Task 간 데이터 공유 방법을 단계별로 안내합니다.
   Variable 사용법과 Airflow 3.0 업데이트 내용까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "Jinja 템플릿", "XCom", "Variable", "템플릿 변수", "BashOperator", "PythonOperator", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -14,7 +14,7 @@ tags: ["Apache Airflow", "Jinja 템플릿", "XCom", "Variable", "템플릿 변�
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - 파이썬 기반 웹 프레임워크 Flask, Django에서 주로 사용
 - HTML 템플릿을 만들고 화면에 보여질 때 값을 렌더링해서 출력
@@ -231,7 +231,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html#macros"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - Jinja 템플릿 변수 기반으로 다양한 날짜 연산이 가능하도록 연산 모듈을 제공
 
@@ -335,7 +335,7 @@ with DAG(
 - 참고 자료로 활용한 강의에서 사용했던 Airflow 2.x 버전과, 현재 사용하는 Airflow 3.x 버전에서
   `data_interval_start`, `data_interval_end` 를 결정하는 기준이 변경된 것을 인지
 
-![Macro 변수 목록](https://dl.dropboxusercontent.com/scl/fi/wcfx74annpqby7h9qmc73/airflow-19-bash-macros.webp?rlkey=5ec769twafb9d2m9ldfnfc3rc&dl=0)
+![Macro 변수 목록](https://dl.dropboxusercontent.com/scl/fi/wcfx74annpqby7h9qmc73/airflow-19-bash-macros.webp?rlkey=5ec769twafb9d2m9ldfnfc3rc&raw=1)
 
 ## Airflow 3.0 업데이트
 - 2.9 버전에서 `data_interval` 계산 알고리즘에 영향을 주는 `create_cron_data_intervals` 파라미터가 도입되었는데,
@@ -348,7 +348,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/installation/upgrading_to_airflow3.html#breaking-changes"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 ### CronDataIntervalTimetable
 - 이전 버전의 알고리즘인 `CronDataIntervalTimetable` 의 경로를 파악해서 `bash_macros1` DAG의 스케줄을 재설정
@@ -436,7 +436,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - Cross Communication이란 의미로, Airflow DAG 내 Task 간 데이터 공유를 위해 사용되는 기술
 - 주로 작은 규모의 데이터 공유를 위해 사용 (XCom 내용은 메타 DB의 xcom 테이블에 값이 저장)
@@ -547,9 +547,9 @@ with DAG(
 - 두 개의 `xcom_push_task` 실행 내역의 XCom 탭에서 `key1` 과 `key2` 에 대한 값이 지정됨을 확인
 - `xcom_pull_task` 에서는 `task_ids` 를 지정하지 않았을 때 마지막으로 push된 "value2"가 출력될 것을 기대했지만, Airflow 3.0에서 발생한 업데이트로 인해 None 값이 출력
 
-![xcom_push_task1 > XCom 목록](https://dl.dropboxusercontent.com/scl/fi/j0vd8nzylw6qanmygqxhb/airflow-20-xcom-push-task1.webp?rlkey=x6e0oqpuaf8lxltfy6v91fx7u&dl=0)
+![xcom_push_task1 > XCom 목록](https://dl.dropboxusercontent.com/scl/fi/j0vd8nzylw6qanmygqxhb/airflow-20-xcom-push-task1.webp?rlkey=x6e0oqpuaf8lxltfy6v91fx7u&raw=1)
 
-![xcom_push_task2 > XCom 목록](https://dl.dropboxusercontent.com/scl/fi/20rcijufdw87qw9xw3cxv/airflow-21-xcom-push-task2.webp?rlkey=47xl0no6t7wdemtgiwdnn3srd&dl=0)
+![xcom_push_task2 > XCom 목록](https://dl.dropboxusercontent.com/scl/fi/20rcijufdw87qw9xw3cxv/airflow-21-xcom-push-task2.webp?rlkey=47xl0no6t7wdemtgiwdnn3srd&raw=1)
 
 ```bash
 # xcom_pull_task
@@ -567,7 +567,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/release_notes.html#behaviour-change-in-xcom-pull"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 ### PythonOperator (2)
 - `xcom_return_task` 에서 문자열 "Success"를 반환하고, 두 개의 `xcom_pull_task` 에서 서로 다른 방식으로 return 값을 받아 출력
@@ -657,7 +657,7 @@ with DAG(
 - `bash_pull_task` 에서 첫 번째로는 XCom에서 `bash_pushed` 키를 가지고 꺼낸 PUSHED_VALUE 값을 출력하여, 실행 로그에 "bash_message" 가 출력됨을 확인
 - 두 번째로는 Xcom에서 `return_value` 키를 가지고 꺼낸 RETURN_VALUE 값을 출력하여, 실행 로그에 `bash_push_task` 의 마지막 출력문 "COMPLETE" 가 출력됨을 확인
 
-![bash_push_task1 > XCom 목록](https://dl.dropboxusercontent.com/scl/fi/4qwkzxfg4atptcz3djxs4/airflow-22-bash-push-task.webp?rlkey=lr5wsqb82ititdv0f0jp1ic82&dl=0)
+![bash_push_task1 > XCom 목록](https://dl.dropboxusercontent.com/scl/fi/4qwkzxfg4atptcz3djxs4/airflow-22-bash-push-task.webp?rlkey=lr5wsqb82ititdv0f0jp1ic82&raw=1)
 
 ```bash
 # bash_pull_task
@@ -689,14 +689,14 @@ bash_pull = BashOperator(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/variables.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - 모든 DAG에서 공유하는 전역 변수
 - Airflow UI에서 Admin 메뉴를 통해 접근 및 생성 가능
 
-![Variable 페이지](https://dl.dropboxusercontent.com/scl/fi/n02tx2fag1ngmoo34c2ar/airflow-23-variable.webp?rlkey=lks97xtcwoplxjhx6tg3rxjga&dl=0)
+![Variable 페이지](https://dl.dropboxusercontent.com/scl/fi/n02tx2fag1ngmoo34c2ar/airflow-23-variable.webp?rlkey=lks97xtcwoplxjhx6tg3rxjga&raw=1)
 
-![Variable 추가](https://dl.dropboxusercontent.com/scl/fi/of4scht6bxg0avu0t69m0/airflow-24-add-variable.webp?rlkey=k0lij755upimzylzcxk4bnhhj&dl=0)
+![Variable 추가](https://dl.dropboxusercontent.com/scl/fi/of4scht6bxg0avu0t69m0/airflow-24-add-variable.webp?rlkey=k0lij755upimzylzcxk4bnhhj&raw=1)
 
 ### Variable 가져오기
 - Variable 라이브러리를 통해 전역 변수를 꺼내는 방법
@@ -763,4 +763,4 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/security/secrets/mask-sensitive-values.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}

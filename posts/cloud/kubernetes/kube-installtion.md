@@ -6,8 +6,8 @@ description: >
   Ubuntu 24.04에서 쿠버네티스 클러스터 설치 가이드.
   kubeadm, containerd, Calico CNI를 활용한 마스터/워커 노드 구성부터 대시보드 배포까지 단계별로 설명합니다.
   Apple Silicon(ARM64) 환경에서 실습 가능한 완벽한 K8s 설치 튜토리얼입니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernetes-00-cover.webp?rlkey=62jkzfxluywah0k79039ywve0&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernetes-00-cover.webp?rlkey=62jkzfxluywah0k79039ywve0&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&raw=1"
 categories: ["Cloud", "Kubernetes"]
 tags: ["Kubernetes", "쿠버네티스 설치", "Ubuntu 24.04", "kubeadm", "containerd", "Calico", "CNI", "kubectl", "kubelet", "클러스터 구성"]
 ---
@@ -41,7 +41,7 @@ Apple Silicon 환경에서 리눅스 가상머신을 실행하기 때문에, OS�
 
 UTM 소프트웨어를 사용해 Ubuntu Server 가상머신이 만들어졌음을 가정하고 진행합니다. 가상머신 생성이 필요한 경우 [이전 게시글](/blog/install-ubuntu-server/)을 참고할 수 있습니다.
 
-![localhost(minyeamer) \subset {UTM \subset {k8s-master, k8s-worker1, k8s-worker2}}](https://dl.dropboxusercontent.com/scl/fi/yohnr0gbnachd0thjabu3/diagram-02-vm.webp?rlkey=heta5zxt7qoomnhwqfh1tvml5&dl=0)
+![localhost(minyeamer) \subset {UTM \subset {k8s-master, k8s-worker1, k8s-worker2}}](https://dl.dropboxusercontent.com/scl/fi/yohnr0gbnachd0thjabu3/diagram-02-vm.webp?rlkey=heta5zxt7qoomnhwqfh1tvml5&raw=1)
 
 ### 가용 자원
 
@@ -86,7 +86,7 @@ IP Address : 192.168.50.15/24
 ### 네트워크
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/a74mlztg1okfv44avn46l/diagram-03-network.webp?rlkey=nod84kq0bx9nrb0lhvizjozoo&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/a74mlztg1okfv44avn46l/diagram-03-network.webp?rlkey=nod84kq0bx9nrb0lhvizjozoo&raw=1"
   alt="{k8s-master, k8s-worker1, k8s-worker2} -> localhost(minyeamer) -> gateway -> internet"
   max-width="691px"
   align="center" >}}
@@ -446,7 +446,7 @@ source ~/.bashrc
 [쿠버네티스 대시보드를 배포하고 접속하기](https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/)
 에 따르면 아래와 같은 웹 UI(쿠버네티스 대시보드)를 배포할 수 있습니다.
 
-![Kubernetes Dashboard > Workloads > Pods](https://dl.dropboxusercontent.com/scl/fi/25ojg74h2u84k91aluf5k/kubernetes-01-dashboard.webp?rlkey=yp0kbkrle7od4cr1crcb06mm7&dl=0)
+![Kubernetes Dashboard > Workloads > Pods](https://dl.dropboxusercontent.com/scl/fi/25ojg74h2u84k91aluf5k/kubernetes-01-dashboard.webp?rlkey=yp0kbkrle7od4cr1crcb06mm7&raw=1)
 
 쿠버네티스 대시보드 웹 UI에 대한 파드를 생성하고, 파드의 `443` 포트를 호스트의 포트(`8443` 등)에 포워딩하여 웹 UI에 접속할 수 있습니다. 해당 과정은 아래에서 제시합니다.
 

@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Python 자료구조와 알고리즘의 Big-O 시간복잡도를 표로 정리한 가이드.
   List, Set, Dictionary 연산, 정렬 알고리즘, 검색 알고리즘의 성능 비교표를 제공합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/2pbut3o7r8s53u7lw7phy/big-o-chart.webp?rlkey=16usvhofwldv1i44rttt1hsvt&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/2pbut3o7r8s53u7lw7phy/big-o-chart.webp?rlkey=16usvhofwldv1i44rttt1hsvt&raw=1"
 categories: ["Algorithm", "Python"]
 tags: ["Big-O", "시간복잡도", "알고리즘", "자료구조", "Python", "Sort", "Search", "List", "Dictionary", "Set"]
 ---

@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 BranchOperator와 EmailOperator 개념을 소개하고, Branching 기능과 이메일 전송 방법을 단계별로 안내합니다.
   BranchPythonOperator, @task.branch 데코레이터, BaseBranchOperator 상속, SMTP 설정, Connection 추가, SSLError 해결까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "BranchOperator", "EmailOperator", "Branching", "SMTP", "Email", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -16,11 +16,11 @@ tags: ["Apache Airflow", "BranchOperator", "EmailOperator", "Branching", "SMTP",
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#branching"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - 특정 Task의 결과에 따라 하위 Task를 선별해서 수행시키고 싶을 때 사용
 
-![branch_good - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/72b4oq3ksv4r7gs6ykyf2/airflow-25-branch-workflow.webp?rlkey=zm635gumlsypzyjip6ao28j5a&dl=0)
+![branch_good - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/72b4oq3ksv4r7gs6ykyf2/airflow-25-branch-workflow.webp?rlkey=zm635gumlsypzyjip6ao28j5a&raw=1)
 
 ### BranchPythonOperator
 - `BranchPythonOperator` 에서 랜덤한 조건에 따라 `task_a` 만 수행하거나, `task_b` 와 `task_c` 를 같이 수행하는 분기 처리
@@ -83,18 +83,18 @@ with DAG(
 
 {{% columns %}}
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/zmqrndlh8ei1rlngzxz76/airflow-26-branch-success-a.webp?rlkey=zxsorrt87pao4n0azm8j8378q&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/zmqrndlh8ei1rlngzxz76/airflow-26-branch-success-a.webp?rlkey=zxsorrt87pao4n0azm8j8378q&raw=1"
   alt="branch_task >> task_a 성공" >}}
 <--->
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/uu93j7ryw1blnzp5m178z/airflow-27-branch-success-bc.webp?rlkey=kd14bt6phatm40q8mbb56iyoc&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/uu93j7ryw1blnzp5m178z/airflow-27-branch-success-bc.webp?rlkey=kd14bt6phatm40q8mbb56iyoc&raw=1"
   alt="branch_task >> task_b, task_c 성공" >}}
 {{% /columns %}}
 
 - 또한, `task_a` 가 선택되는 작업에서 XCom을 보면 `skipmixin_key` 키로 `{'followed': ['task_a']}` 값이 전달되는데,
   이를 통해 다른 Task에서도 어떤 분기 처리가 되었는지 확인 가능
 
-![skipmixin_key = {'followed': ['task_a']}](https://dl.dropboxusercontent.com/scl/fi/jrraft65v5seeqr3hr21f/airflow-28-branch-skipmixin-key.webp?rlkey=ndgnddwg7dxwruzts4ke8pywa&dl=0)
+![skipmixin_key = {'followed': ['task_a']}](https://dl.dropboxusercontent.com/scl/fi/jrraft65v5seeqr3hr21f/airflow-28-branch-skipmixin-key.webp?rlkey=ndgnddwg7dxwruzts4ke8pywa&raw=1)
 
 - 마찬가지로 실행 로그에서도 어떤 Task가 선택되었고, 어떤 Task가 Skip되었는지 조회 가능
 
@@ -165,7 +165,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/2.9.2/_api/airflow/operators/branch/index.html#airflow.operators.branch.BaseBranchOperator"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - Branching 기능을 제공하는 Operator의 기본 클래스
 - 해당 클래스를 상속받을 경우 `choose_branch(self, context)` 메서드를 구현해야 하고,
@@ -227,7 +227,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/1.10.9/_api/airflow/operators/email_operator/index.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - 이메일을 전송해주는 Operator
 - SMTP 프로토콜을 통해 개인 Gmail에서 다른 주소로 메일을 보내는 기능 구현
@@ -238,7 +238,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/howto/email-config.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - `docker-compose.yaml` 파일 내에 아래와 같은 항목을 추가
 - `AIRFLOW__SMTP__SMTP_USER` 에는 앱 비밀번호를 생성한 구글 계정을 입력
@@ -261,7 +261,7 @@ x-airflow-common:
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - Airflow 3.0 버전부터는 SMTP 설정을 환경변수나 설정 파일에서 가져오는 것이 아닌, Connection을 활용하도록 권장
 - Airflow UI의 사이드바에서 `Admin->Connections` 메뉴로 이동한 후, `Add Connection` 버튼을 클릭하여 Connection 추가
@@ -270,7 +270,7 @@ x-airflow-common:
 - `Extra Fields` 에서 메일을 보내는 계정 등 추가적인 정보를 입력 가능
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/7tj5wzmg7xo93p8cftpps/airflow-29-smtp-connection.webp?rlkey=sglggl4g8gib7vr4stn0jw1ae&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/7tj5wzmg7xo93p8cftpps/airflow-29-smtp-connection.webp?rlkey=sglggl4g8gib7vr4stn0jw1ae&raw=1"
   alt="Edit Connection - SMTP"
   max-width="691px"
   align="center" >}}
@@ -320,7 +320,7 @@ File "/usr/local/lib/python3.12/ssl.py", line 1319 in do_handshake
 - 원인 파악은 못했지만, Connection에서 SSL 비활성화 후 재시도하니 정상적으로 메일 전송
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/jrubhr3qfjs3pv2ll5csk/airflow-30-smtp-disable-ssl.webp?rlkey=fp6yfxpdgry4h7ojyuv77ruel&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/jrubhr3qfjs3pv2ll5csk/airflow-30-smtp-disable-ssl.webp?rlkey=fp6yfxpdgry4h7ojyuv77ruel&raw=1"
   alt="Edit Connection - SMTP > Disable SSL"
   max-width="691px"
   align="center" >}}

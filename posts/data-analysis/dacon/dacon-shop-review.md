@@ -6,7 +6,7 @@ description: >
   쇼핑몰 리뷰 텍스트로 평점을 예측하는 NLP 대회 참가 후기.
   역번역과 NLPAUG를 활용한 데이터 증강, KoELECTRA와 RoBERTa 모델 비교 실험,
   그리고 hard-voting 앙상블을 통해 accuracy 0.7116으로 550팀 중 2위를 달성한 과정을 공유합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/ur1r3hzxm11trh1p63y4o/shop-review-00-cover.webp?rlkey=f2nnfvwif6byhu0lbvb6bd0sh&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/ur1r3hzxm11trh1p63y4o/shop-review-00-cover.webp?rlkey=f2nnfvwif6byhu0lbvb6bd0sh&raw=1"
 categories: ["Data Analysis", "Dacon"]
 tags: ["DACON", "NLP", "텍스트 분류", "감정 분석", "KoELECTRA", "RoBERTa", "데이터 증강", "앙상블", "역번역", "NLPAUG", "쇼핑몰 리뷰"]
 ---
@@ -41,18 +41,18 @@ tags: ["DACON", "NLP", "텍스트 분류", "감정 분석", "KoELECTRA", "RoBERT
 
 |평점 1점 리뷰에서 빈도수가 많은 단어|평점 2점 리뷰에서 빈도수가 많은 단어|
 |:---:|:---:|
-|![워드클라우드 평점 1점 - 너무, 안, 배송, 그냥, 잘, 못](https://dl.dropboxusercontent.com/scl/fi/so6oe23rvnqake6lk966z/shop-review-01-wc-score-1.webp?rlkey=3quh8mb05d9yi8qvy7mn1bapw&dl=0)|![워드클라우드 평점 2점 - 너무, 안, 배송, 잘, 그냥, 생각](https://dl.dropboxusercontent.com/scl/fi/nemetg0aeo27bbbpvct2f/shop-review-02-wc-score-2.webp?rlkey=0miz5qqbixlhlx6eaw00qyjod&dl=0)|
+|![워드클라우드 평점 1점 - 너무, 안, 배송, 그냥, 잘, 못](https://dl.dropboxusercontent.com/scl/fi/so6oe23rvnqake6lk966z/shop-review-01-wc-score-1.webp?rlkey=3quh8mb05d9yi8qvy7mn1bapw&raw=1)|![워드클라우드 평점 2점 - 너무, 안, 배송, 잘, 그냥, 생각](https://dl.dropboxusercontent.com/scl/fi/nemetg0aeo27bbbpvct2f/shop-review-02-wc-score-2.webp?rlkey=0miz5qqbixlhlx6eaw00qyjod&raw=1)|
 
 |평점 4점 리뷰에서 빈도수가 많은 단어|평점 5점 리뷰에서 빈도수가 많은 단어|
 |:---:|:---:|
-|![워드클라우드 평점 4점 - 좋아요, 잘, 배송, 재구매, 사용, 가격](https://dl.dropboxusercontent.com/scl/fi/mg197ah0insbj3rk97i7m/shop-review-03-wc-score-4.webp?rlkey=t134xfyr6x1385mc2j8zhd6jo&dl=0)|![워드클라우드 평점 5점 - 좋아요, 잘, 배송, 너무, 재구매, 사용](https://dl.dropboxusercontent.com/scl/fi/gycpg3eo9vrku624zymi6/shop-review-04-wc-score-5.webp?rlkey=l5xkad3dyijwhtamtexs9c3ob&dl=0)|
+|![워드클라우드 평점 4점 - 좋아요, 잘, 배송, 재구매, 사용, 가격](https://dl.dropboxusercontent.com/scl/fi/mg197ah0insbj3rk97i7m/shop-review-03-wc-score-4.webp?rlkey=t134xfyr6x1385mc2j8zhd6jo&raw=1)|![워드클라우드 평점 5점 - 좋아요, 잘, 배송, 너무, 재구매, 사용](https://dl.dropboxusercontent.com/scl/fi/gycpg3eo9vrku624zymi6/shop-review-04-wc-score-5.webp?rlkey=l5xkad3dyijwhtamtexs9c3ob&raw=1)|
 
 - 평점 별 리뷰 수를 시각화 했을 때, 최대 4배에 달하는 불균형이 존재함이 확인됩니다.
 - 데이터 증강을 통해 각 평점 간 비율을 맞춰야할 것이라 판단됩니다.
 
 |원본 데이터의 불균형적인 평점 별 리뷰 수|이상적인 평점 별 리뷰 수|
 |:---:|:---:|
-|![원본 데이터의 불균형적인 평점 별 리뷰 수](https://dl.dropboxusercontent.com/scl/fi/jrdany6421ugvya02lnkf/shop-review-05-bar-original.webp?rlkey=mqcc8qf97jsd7lvq145x9bnu2&dl=0)|![이상적인 평점 별 리뷰 수](https://dl.dropboxusercontent.com/scl/fi/mlafgphr8bkllod7yxdsw/shop-review-06-bar-balanced.webp?rlkey=axnz2ml9fmrrtmt5t6dvhk2dm&dl=0)|
+|![원본 데이터의 불균형적인 평점 별 리뷰 수](https://dl.dropboxusercontent.com/scl/fi/jrdany6421ugvya02lnkf/shop-review-05-bar-original.webp?rlkey=mqcc8qf97jsd7lvq145x9bnu2&raw=1)|![이상적인 평점 별 리뷰 수](https://dl.dropboxusercontent.com/scl/fi/mlafgphr8bkllod7yxdsw/shop-review-06-bar-balanced.webp?rlkey=axnz2ml9fmrrtmt5t6dvhk2dm&raw=1)|
 
 ## Data Augmentation
 
@@ -94,7 +94,7 @@ tags: ["DACON", "NLP", "텍스트 분류", "감정 분석", "KoELECTRA", "RoBERT
 - 파라미터 수 때문이지 검증 데이터에 대한 평가 점수에서는 RoBERTa 모델이 앞섰지만,
   대회용 테스트 데이터에 대해서는 KoELECTRA jaehyeong 모델과 RoBERTa 모델의 성능이 유사했습니다.
 
-![Compare Models by Name](https://dl.dropboxusercontent.com/scl/fi/86pzwauzd9uts1myl21u6/shop-review-07-compare-by-name.webp?rlkey=gsd34tnzqyow9rwjrhxiup5a8&dl=0)
+![Compare Models by Name](https://dl.dropboxusercontent.com/scl/fi/86pzwauzd9uts1myl21u6/shop-review-07-compare-by-name.webp?rlkey=gsd34tnzqyow9rwjrhxiup5a8&raw=1)
 
 ### 학습 데이터 간 비교
 
@@ -106,7 +106,7 @@ tags: ["DACON", "NLP", "텍스트 분류", "감정 분석", "KoELECTRA", "RoBERT
 - 검증 데이터에 대한 평가 점수는 aug 데이터가 앞섰지만,
   대회용 테스트 데이터에 대해서는 aug 데이터의 예측 성능이 가장 낮고 vanilla 데이터가 가장 높았습니다.
 
-![Compare Models by Train Data](https://dl.dropboxusercontent.com/scl/fi/fy14x71t04r1udwrm7k6i/shop-review-08-compare-by-train.webp?rlkey=je32ev8bve698nplkuo1qmr3z&dl=0)
+![Compare Models by Train Data](https://dl.dropboxusercontent.com/scl/fi/fy14x71t04r1udwrm7k6i/shop-review-08-compare-by-train.webp?rlkey=je32ev8bve698nplkuo1qmr3z&raw=1)
 
 ### 테스트 데이터 간 비교
 
@@ -115,14 +115,14 @@ tags: ["DACON", "NLP", "텍스트 분류", "감정 분석", "KoELECTRA", "RoBERT
 - 전체 테스트 데이터 중 50%에 대한 점수를 기록하는 대회의 평가 기준을 활용해
   각각의 예측 결과 간에 점수를 비교했을 때, 오히려 원본 데이터가 높은 성능을 보이는 것을 확인했습니다.
 
-![Compare Models by Test Data](https://dl.dropboxusercontent.com/scl/fi/gcaazirdyss91li24phet/shop-review-09-compare-by-test.webp?rlkey=md944nzaa3h2fthmmkoz7g1md&dl=0)
+![Compare Models by Test Data](https://dl.dropboxusercontent.com/scl/fi/gcaazirdyss91li24phet/shop-review-09-compare-by-test.webp?rlkey=md944nzaa3h2fthmmkoz7g1md&raw=1)
 
 - 이러한 결과가 발생한 원인을 파악하기 위해 각각의 데이터에 대해 EDA를 다시 수행했을 때,
   가장 많은 데이터 증강이 발생한 평점 4점 리뷰의 단어 비율이 크게 변화함을 확인했습니다.
 
 |원본 데이터에서 평점 4점 리뷰의 단어 비율|증강/정규화된 데이터에서 평점 4점 리뷰의 단어 비율|
 |:---:|:---:|
-|![워드클라우드 평점 4점 - 좋아요, 잘, 배송, 재구매, 사용, 가격](https://dl.dropboxusercontent.com/scl/fi/mg197ah0insbj3rk97i7m/shop-review-03-wc-score-4.webp?rlkey=t134xfyr6x1385mc2j8zhd6jo&dl=0)|![워드클라우드 평점 4점 증강 - 정보기술, 잘, 정보, 기술, 생각, 배송](https://dl.dropboxusercontent.com/scl/fi/9gebebysb1wja53uoinqh/shop-review-10-wc-score-4-aug.webp?rlkey=ceqf40buo1s000xgq4ja49lnd&dl=0)|
+|![워드클라우드 평점 4점 - 좋아요, 잘, 배송, 재구매, 사용, 가격](https://dl.dropboxusercontent.com/scl/fi/mg197ah0insbj3rk97i7m/shop-review-03-wc-score-4.webp?rlkey=t134xfyr6x1385mc2j8zhd6jo&raw=1)|![워드클라우드 평점 4점 증강 - 정보기술, 잘, 정보, 기술, 생각, 배송](https://dl.dropboxusercontent.com/scl/fi/9gebebysb1wja53uoinqh/shop-review-10-wc-score-4-aug.webp?rlkey=ceqf40buo1s000xgq4ja49lnd&raw=1)|
 
 - NLPAUG의 동의어 변환이 원인인 것으로 추정되어 다른 증강법을 적용할 필요가 있지만,
   데이터 전처리부터 다시 수행하는 것과 모델링을 개선하는 것을 병행할만한 여유가 없다고 판단해

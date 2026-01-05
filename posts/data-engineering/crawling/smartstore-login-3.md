@@ -5,7 +5,7 @@ layout: "post"
 description: >
   네이버 스마트스토어센터 로그인 최종 구현 방법입니다.
   OAuth 인증, GraphQL 쿼리, oauth_token 추출, 2단계 인증 처리를 통해 필요한 모든 쿠키 값을 획득하는 과정을 설명합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&raw=1"
 categories: ["Data Engineering", "Crawling"]
 tags: ["크롤링", "Python", "네이버", "스마트스토어", "OAuth 인증", "GraphQL", "2단계 인증", "requests", "쿠키 인증", "웹 자동화"]
 ---
@@ -47,7 +47,7 @@ cookies = {
 이 경우 개발자 도구 Sources 탭에서 Event Listener Breakpoints 메뉴 아래
 Window > `window.close` 부분을 선택하면 창이 닫히는 순간에 중단시킬 수 있습니다.
 
-![Sources > Event Listener Breakpoints > Window > window.close](https://dl.dropboxusercontent.com/scl/fi/v491onzs75t8n5wypv73d/smartstore-login-12-event-listener.webp?rlkey=ox7z6b80f41g7ewlo386s03k1&dl=0)
+![Sources > Event Listener Breakpoints > Window > window.close](https://dl.dropboxusercontent.com/scl/fi/v491onzs75t8n5wypv73d/smartstore-login-12-event-listener.webp?rlkey=ox7z6b80f41g7ewlo386s03k1&raw=1)
 
 ### 네이버 로그인과의 차이점
 
@@ -92,7 +92,7 @@ Window > `window.close` 부분을 선택하면 창이 닫히는 순간에 중단
 네이버 로그인 페이지를 띄우는 과정에 집중하여 두 값이 발생하는 지점을 찾아보았고,
 graphql 주소로 보낸 POST 요청에 대한 응답으로 `url` 에 해당하는 `authUrl` 값을 받는 것을 확인했습니다.
 
-![sell.smartstore.naver.com > Response > client_id](https://dl.dropboxusercontent.com/scl/fi/tfyxyeg8sdjkebyt6fv9k/smartstore-login-13-auth-url.webp?rlkey=hcvmnd2j3o107r38l66pssphd&dl=0)
+![sell.smartstore.naver.com > Response > client_id](https://dl.dropboxusercontent.com/scl/fi/tfyxyeg8sdjkebyt6fv9k/smartstore-login-13-auth-url.webp?rlkey=hcvmnd2j3o107r38l66pssphd&raw=1)
 
 이렇게 구한 `client_id` 및 `url` 값을 로그인 데이터에 담아 요청을 보낼 경우
 일반적인 네이버 로그인 결과로 얻을 수 있는 `NID_AUT` 등의 쿠키 값을 획득할 수 있습니다.
@@ -109,7 +109,7 @@ graphql 주소로 보낸 POST 요청에 대한 응답으로 `url` 에 해당하�
 당시 `snsLoginBegin` 라는 명칭의 쿼리와는 다른 `snsLoginCallback` 쿼리를 사용하여
 추가적인 로그인을 수행하는 것임을 짐작할 수 있습니다.
 
-![accounts.commerce.naver.com/graphql > Payload > variables](https://dl.dropboxusercontent.com/scl/fi/8rv6urob0drzyb7kzyxtt/smartstore-login-14-code-state.webp?rlkey=9eixe4xwsx4ec99ifwocgx52a&dl=0)
+![accounts.commerce.naver.com/graphql > Payload > variables](https://dl.dropboxusercontent.com/scl/fi/8rv6urob0drzyb7kzyxtt/smartstore-login-14-code-state.webp?rlkey=9eixe4xwsx4ec99ifwocgx52a&raw=1)
 
 변수로 전달되는 `state` 의 경우 앞에서 구한 것과 동일한 값이지만,
 `code` 는 아직까지 본 적 없는 값입니다.
@@ -121,7 +121,7 @@ graphql 주소로 보낸 POST 요청에 대한 응답으로 `url` 에 해당하�
 이 경우 네이버 로그인 후에 연속적으로 진행되는 다른 요청 내역을 직접 들여다봐야 했고,
 다행히 바로 아래의 주소에 대한 응답 내역에서 `oauth_token` 값을 받아볼 수 있었습니다.
 
-![accounts.commerce.naver.com/authorize > Payload > Query String Parameters](https://dl.dropboxusercontent.com/scl/fi/oslugg8q683o1t9ue3qb5/smartstore-login-15-oauth-token.webp?rlkey=0kq2firvjjspeprjtpib5p249&dl=0)
+![accounts.commerce.naver.com/authorize > Payload > Query String Parameters](https://dl.dropboxusercontent.com/scl/fi/oslugg8q683o1t9ue3qb5/smartstore-login-15-oauth-token.webp?rlkey=0kq2firvjjspeprjtpib5p249&raw=1)
 
 ```html
 <html>
@@ -138,12 +138,12 @@ location.replace("https://nid.naver.com/login/noauth/allow_oauth.nhn?oauth_token
 
 스마트스토어센터는 최초 로그인 시 반드시 2단계 인증을 거쳐야 합니다.
 
-![스마트스토어센터 2단계 인증](https://dl.dropboxusercontent.com/scl/fi/8wnzlu76st4hadsxi7769/smartstore-login-16-2fa-login.webp?rlkey=9h9dfu3dmr1hc0v7yhlbnlih7&dl=0)
+![스마트스토어센터 2단계 인증](https://dl.dropboxusercontent.com/scl/fi/8wnzlu76st4hadsxi7769/smartstore-login-16-2fa-login.webp?rlkey=9h9dfu3dmr1hc0v7yhlbnlih7&raw=1)
 
 마지막 남은 `NSI` 값 또한 해당 2단계 인증을 거쳐야 얻을 수 있을 것이라 걱정했지만,
 다행히 2단계 인증을 거치지 않아도 네트워크 응답 내역에서 `NSI`를 확인할 수 있었습니다.
 
-![sell.smartstore.naver.com/api/login > Response Headers > set-cookie: NSI=...;](https://dl.dropboxusercontent.com/scl/fi/jq3yg0sfkejwquktcs7kv/smartstore-login-17-2fa-cookies.webp?rlkey=w4t7i7gs09msyaqh56xl9gu4c&dl=0)
+![sell.smartstore.naver.com/api/login > Response Headers > set-cookie: NSI=...;](https://dl.dropboxusercontent.com/scl/fi/jq3yg0sfkejwquktcs7kv/smartstore-login-17-2fa-cookies.webp?rlkey=w4t7i7gs09msyaqh56xl9gu4c&raw=1)
 
 POST 요청이지만 전달되는 데이터는 아래와 같이 단순했기에
 추가적인 분석 없이 마지막 `NSI` 값을 획득했습니다.

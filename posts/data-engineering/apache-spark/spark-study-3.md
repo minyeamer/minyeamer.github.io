@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Spark의 애플리케이션 구조와 RDD 개념을 다루며,
   Driver Process, Executor, Job, Stage, Task부터 Transformation과 Action까지 단계별로 안내합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "Spark Application", "RDD", "Spark Shell", "Spark Web UI", "데이터 엔지니어링", "스파크", "Study"]
 ---
@@ -14,7 +14,7 @@ tags: ["Apache Spark", "Spark Application", "RDD", "Spark Shell", "Spark Web UI"
 
 Spark Application은 Driver Process 하나와 일련의 일련의 Executors로 구성된다.
 
-![Spark Applications Explained | Databricks](https://dl.dropboxusercontent.com/scl/fi/efpu71pb72iioxddwha2y/spark-09-spark-applications.webp?rlkey=p9badhgpaaylfwocm4hq7mpsg&dl=0)
+![Spark Applications Explained | Databricks](https://dl.dropboxusercontent.com/scl/fi/efpu71pb72iioxddwha2y/spark-09-spark-applications.webp?rlkey=p9badhgpaaylfwocm4hq7mpsg&raw=1)
 
 ### Driver Process
 
@@ -37,13 +37,13 @@ Executor는 Driver가 할당한 작업을 실제로 실행하는 역할을 하�
 Spark Application의 실행 과정에서 Cluster Manager는 Application이 실행되는 물리적인 머신을 관리한다.
 Spark Application은 클러스터에서 독립적인 프로세스로 실행되며, SparkContext 객체에 의해 조정된다.
 
-![Cluster Mode Overview - Spark 4.0.0 Documentation](https://dl.dropboxusercontent.com/scl/fi/idzpu1q4qtd235bz2j6zd/spark-10-cluster-overview.webp?rlkey=ta8wmac7rx1ekmuh5ts6lca7w&dl=0)
+![Cluster Mode Overview - Spark 4.0.0 Documentation](https://dl.dropboxusercontent.com/scl/fi/idzpu1q4qtd235bz2j6zd/spark-10-cluster-overview.webp?rlkey=ta8wmac7rx1ekmuh5ts6lca7w&raw=1)
 
 SparkContext는 여러 유형의 Cluster Manager(Standalone, YARN, Kubernetes)에 연결될 수 있으며,
 Application 간에 리소스를 할당한다. Spark가 연결되어 클러스터의 노드에서 Executor가 확보되면,
 SparkContext에 전달된 Application 코드가 Executor에게 전달된다.
 
-![Driver -> Job -> Stage -> Tasks](https://dl.dropboxusercontent.com/scl/fi/jqawdvvxozxxs5e5mta5q/spark-11-execution-flow.webp?rlkey=qsjvuasvudjkugo7j54jylt6w&dl=0)
+![Driver -> Job -> Stage -> Tasks](https://dl.dropboxusercontent.com/scl/fi/jqawdvvxozxxs5e5mta5q/spark-11-execution-flow.webp?rlkey=qsjvuasvudjkugo7j54jylt6w&raw=1)
 
 ### Job
 
@@ -146,7 +146,7 @@ Action을 호출할 때마다 RDD가 처음부터 계산되는데, 반복적인 
 Stage 안에서 각각의 Task는 파란 박스로 표시되는데, 아래 예시에서 Stage 2는 2개의
 Task로 구성되어 있음을 알 수 있다. Task가 여러 개라면 모두 병렬로 실행된다.
 
-![Detail for Job 2 > [Stage 2 -> Stage 3 -> Stage 4]](https://dl.dropboxusercontent.com/scl/fi/34b0fd6v1ovfsezjbu7qc/spark-12-dag-visualization.webp?rlkey=sk8l6qo20z319bctwc4fr70op&dl=0)
+![Detail for Job 2 > [Stage 2 -> Stage 3 -> Stage 4]](https://dl.dropboxusercontent.com/scl/fi/34b0fd6v1ovfsezjbu7qc/spark-12-dag-visualization.webp?rlkey=sk8l6qo20z319bctwc4fr70op&raw=1)
 
 ## spark-submit
 

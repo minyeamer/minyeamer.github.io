@@ -5,8 +5,8 @@ layout: "post"
 description: >
   Hugo의 taxonomies 기능을 활용하여 태그와 카테고리 페이지를 커스터마이징하는 방법을 소개합니다.
   게시글 목록 템플릿과 페이지네이션 구현, 태그 및 카테고리 페이지 추가, 메뉴에 카테고리를 통합하는 과정을 안내합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Taxonomies", "태그", "카테고리", "휴고 테마", "휴고 레이아웃", "Blog", "HTML", "CSS", "JavaScript", "Hugo Book", "블로그 태그", "블로그 카테고리"]
 ---
@@ -109,7 +109,7 @@ Hugo에서 이러한 기능을 제공해준다면 그대로 사용해도 되지 
 아래 이미지는 티스토리에서 볼 수 있는 게시글 목록의 한 부분인데,
 게시글 제목, 작성일, 요약과 같은 메타데이터가 좌측에 보여지고 커버 이미지가 우측에 표시됩니다.
 
-![티스토리 페이지 목록](https://dl.dropboxusercontent.com/scl/fi/ikiuvlhm3qhzedbo70lq2/hugo-26-tistory-list.webp?rlkey=1wxkesjmx7ukcemg2edd107g3&dl=0)
+![티스토리 페이지 목록](https://dl.dropboxusercontent.com/scl/fi/ikiuvlhm3qhzedbo70lq2/hugo-26-tistory-list.webp?rlkey=1wxkesjmx7ukcemg2edd107g3&raw=1)
 
 티스토리 블로그에서는 게시글 목록에서 태그를 보여주지 않지만,
 이번에 만들 taxonomy 페이지에서는 각 게시글 항목마다 태그를 보여주고
@@ -322,7 +322,7 @@ Book 테마는 `layouts/_partials/docs` 경로에 partial 템플릿이 위치해
 아직 게시글 항목을 볼 수 있는 페이지를 만들지 않아서 해당 템플릿을 직접 확인하기 어려울 것이기에
 실제로 템플릿을 렌더링한 결과를 보여드립니다. (커버 이미지는 해당 게시글의 커버 이미지를 첨부했습니다.)
 
-![스타일이 적용된 게시글 항목](https://dl.dropboxusercontent.com/scl/fi/5wp1ijnpa7wsiiidjqx90/hugo-29-post-item-with-style.webp?rlkey=xpi059pig9wnpki1t6x2hemvk&dl=0)
+![스타일이 적용된 게시글 항목](https://dl.dropboxusercontent.com/scl/fi/5wp1ijnpa7wsiiidjqx90/hugo-29-post-item-with-style.webp?rlkey=xpi059pig9wnpki1t6x2hemvk&raw=1)
 
 간단하게 설명하자면, 게시글 요약은 게시글이 가진 `Description` 또는 `Summary` 를 가져와
 일정 글자 수까지 잘라서 표시합니다. `Description` 은 front matter에서 작성하는
@@ -353,7 +353,7 @@ front matter에서 커버 이미지에 대한 주소를 작성하면 `img.post-c
 
 마찬가지로 티스토리 블로그를 보면 아래 이미지와 같이 페이지네이션 기능을 제공합니다.
 
-![티스토리 페이지네이션](https://dl.dropboxusercontent.com/scl/fi/ovln0vmu7bnazbz1xcuel/hugo-27-tistory-pagination.webp?rlkey=znhs90atgjp8rpfhcwqvcsjk5&dl=0)
+![티스토리 페이지네이션](https://dl.dropboxusercontent.com/scl/fi/ovln0vmu7bnazbz1xcuel/hugo-27-tistory-pagination.webp?rlkey=znhs90atgjp8rpfhcwqvcsjk5&raw=1)
 
 일반적인 게시판 페이지에서는 10개 단위로 페이지를 표시하는데
 티스토리 블로그는 현재 페이지에서 앞뒤로 3개의 페이지만 보여줍니다.
@@ -573,7 +573,7 @@ The Paginate method is more flexible, and strongly recommended.
 
 페이지네이션 템플릿을 렌더링하면 아래 이미지처럼 보입니다.
 
-![스타일이 적용된 페이지네이션](https://dl.dropboxusercontent.com/scl/fi/ese1anj2erz20tjsy4zd3/hugo-32-pagination-with-style.webp?rlkey=lpaiva9puxov3agnsyh0cget1&dl=0)
+![스타일이 적용된 페이지네이션](https://dl.dropboxusercontent.com/scl/fi/ese1anj2erz20tjsy4zd3/hugo-32-pagination-with-style.webp?rlkey=lpaiva9puxov3agnsyh0cget1&raw=1)
 
 페이지네이션 템플릿은 이전 버튼, 페이지 링크 10개, 다음 버튼이 순서대로 나열되어 있습니다.
 
@@ -594,7 +594,7 @@ The Paginate method is more flexible, and strongly recommended.
 
 {{< bookmark
   url="https://gohugobrasil.netlify.app/templates/taxonomy-templates/#taxonomy-list-templates"
-  image="https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1" >}}
 
 위 Hugo 공식문서를 참고해보면 다음과 같은 우선순위로 taxonomy 템플릿을 탐색한다는 것을 알 수 있습니다.
 
@@ -729,7 +729,7 @@ taxonomy 유형의 템플릿에서 공통으로 적용되는 스타일입니다.
 아래와 같이 관련 게시글 목록을 볼 수 있습니다.
 관련 게시글이 2개 밖에 없어 페이지네이션은 안보이는데 관련 게시글을 10개 이상 추가하면 나타납니다.
 
-![태그와 연관된 게시글 목록을 보여주는 페이지](https://dl.dropboxusercontent.com/scl/fi/ltozvebtxa8syiz53kleq/hugo-33-tags-list.webp?rlkey=3u1ppcgqz9t7nrrls2yf31bql&dl=0)
+![태그와 연관된 게시글 목록을 보여주는 페이지](https://dl.dropboxusercontent.com/scl/fi/ltozvebtxa8syiz53kleq/hugo-33-tags-list.webp?rlkey=3u1ppcgqz9t7nrrls2yf31bql&raw=1)
 
 ### terms 템플릿 추가
 
@@ -807,7 +807,7 @@ terms 템플릿은 단순히 태그 목록을 나열하는 것뿐이라서 내�
 하지만, 이렇게하면 태그가 하나에 한줄씩 세로로 나열되어 보기에 좋지 않습니다.
 단순한 텍스트인 각각의 태그를 칩 형태로 바꾸고 가로로 나열하는 CSS 스타일도 적용했습니다.
 
-![스타일이 적용된 태그 목록](https://dl.dropboxusercontent.com/scl/fi/d2d796n8c5mvv01s566t5/hugo-35-tags-terms-with-style.webp?rlkey=2nncbcugjb28gv45disvkab1m&dl=0)
+![스타일이 적용된 태그 목록](https://dl.dropboxusercontent.com/scl/fi/d2d796n8c5mvv01s566t5/hugo-35-tags-terms-with-style.webp?rlkey=2nncbcugjb28gv45disvkab1m&raw=1)
 
 `{baseURL}/tags` 경로를 통해 terms 페이지에 접근할 수 있는데,
 좌측 메뉴에 해당 페이지에 대한 바로가기 버튼도 추가하면 누구나 찾아갈 수 있습니다.
@@ -1046,7 +1046,7 @@ layout: "parent"
 제목은 카테고리 명칭과 동일해야 하고, `layout` 를 `parent` 로 지정하면 부모 카테고리 페이지로 렌더링됩니다.
 그 결과는 아래 이미지처럼 보입니다. (jekyll 카테고리는 임의로 추가했습니다.)
 
-![부모 카테고리와 연관된 게시글 목록을 보여주는 페이지](https://dl.dropboxusercontent.com/scl/fi/90dwwoc6j18ggg3o79c8v/hugo-36-categories-parent.webp?rlkey=87fe1su96x9jfkr4d89conlh0&dl=0)
+![부모 카테고리와 연관된 게시글 목록을 보여주는 페이지](https://dl.dropboxusercontent.com/scl/fi/90dwwoc6j18ggg3o79c8v/hugo-36-categories-parent.webp?rlkey=87fe1su96x9jfkr4d89conlh0&raw=1)
 
 ### 자식 카테고리 템플릿 추가
 
@@ -1143,13 +1143,13 @@ parent: "Development"
 
 렌더링하면 이렇게 보입니다.
 
-![자식 카테고리와 연관된 게시글 목록을 보여주는 페이지](https://dl.dropboxusercontent.com/scl/fi/epkvj6f0d695go7gano4w/hugo-37-categories-child.webp?rlkey=i6kkniqxp0r9ksesrlrge7ezd&dl=0)
+![자식 카테고리와 연관된 게시글 목록을 보여주는 페이지](https://dl.dropboxusercontent.com/scl/fi/epkvj6f0d695go7gano4w/hugo-37-categories-child.webp?rlkey=i6kkniqxp0r9ksesrlrge7ezd&raw=1)
 
 ### 카테고리 목록 템플릿 추가
 
 카테고리 목록을 보여주는 페이지는 결론부터 보여드리면 아래 이미지와 같습니다.
 
-![카테고리 목록](https://dl.dropboxusercontent.com/scl/fi/p7p85k9q39czms9krzof8/hugo-38-categories-terms.webp?rlkey=1uyijv1rprc6fvekpxu1zb27l&dl=0)
+![카테고리 목록](https://dl.dropboxusercontent.com/scl/fi/p7p85k9q39czms9krzof8/hugo-38-categories-terms.webp?rlkey=1uyijv1rprc6fvekpxu1zb27l&raw=1)
 
 트리처럼 카테고리를 단계적으로 보여주고 자식 카테고리 하위에는 관련 게시글을 최대 3개까지 표시합니다.
 
@@ -1395,7 +1395,7 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 
 여기까지 적용했다면 아래 이미지와 같이 메뉴에 카테고리 트리가 보여집니다.
 
-![메뉴에서 보이는 카테고리 트리](https://dl.dropboxusercontent.com/scl/fi/dfuwpvpv27nzbn8drlfs9/hugo-39-categories-menu.webp?rlkey=gg0qotqspkfblua4gv7454c2h&dl=0)
+![메뉴에서 보이는 카테고리 트리](https://dl.dropboxusercontent.com/scl/fi/dfuwpvpv27nzbn8drlfs9/hugo-39-categories-menu.webp?rlkey=gg0qotqspkfblua4gv7454c2h&raw=1)
 
 ## 게시글 항목 개선하기
 
@@ -1542,7 +1542,7 @@ Book 테마에서 메뉴를 표현하는 템플릿은 `layouts/_partials/docs/me
 [게시글 항목 템플릿 추가](#게시글-항목-템플릿-추가) 시에 만들었던 `post-item` 템플릿 중간에
 `post-categories` 및 `post-tags` 요소를 칩 형태로 추가했습니다.
 
-![태그와 카테고리를 추가하여 완성된 게시글 항목](https://dl.dropboxusercontent.com/scl/fi/wgpcod2e86fb6kpnq6cnd/hugo-40-post-item-complete.webp?rlkey=tqzyqvdn0j5c4r81cg96ukpuq&dl=0)
+![태그와 카테고리를 추가하여 완성된 게시글 항목](https://dl.dropboxusercontent.com/scl/fi/wgpcod2e86fb6kpnq6cnd/hugo-40-post-item-complete.webp?rlkey=tqzyqvdn0j5c4r81cg96ukpuq&raw=1)
 
 태그와 카테고리 페이지와 관련된 모든 구현 과정이 종료되었습니다.
 

@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 개념과 장단점을 소개하고, Docker를 이용한 Airflow 설치 과정을 단계별로 안내합니다.
   DAG 구조와 워크플로우 이해, Docker Compose를 활용한 로컬 환경 구축, 웹 UI를 통한 Example DAG 실행까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -33,7 +33,7 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 - Task에 대한 종속성은 `>>` 또는 `<<` 연산자를 사용해 선언
    - 예시) `first_task >> second_task`
 
-![DAGs - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/ngxutq3ok3w4zin85ftt9/airflow-01-dag-example.webp?rlkey=5u21auwiiqf32ziksstmeu16r&dl=0)
+![DAGs - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/ngxutq3ok3w4zin85ftt9/airflow-01-dag-example.webp?rlkey=5u21auwiiqf32ziksstmeu16r&raw=1)
 
 ### Airflow Workflow
 - **Scheduler** : 예약된 일정에 워크플로우를 Executor에게 넘겨 Task를 실행
@@ -44,7 +44,7 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 - **Webserver** : User Interface를 통해 Scheduler와 DAG 실행 과정을 시각화해 표시
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/f3l1sntgvfm9h82c1utod/airflow-02-workflow.webp?rlkey=l6qafh8nbfricv588tsdk1qye&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/f3l1sntgvfm9h82c1utod/airflow-02-workflow.webp?rlkey=l6qafh8nbfricv588tsdk1qye&raw=1"
   alt="Architecture Overview - Airflow Documentation"
   max-width="691px"
   align="center" >}}
@@ -56,9 +56,9 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/2.6.0/core-concepts/overview.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
-![UI / Screenshots - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/r15u5f5worgn1qmt8dfga/airflow-03-user-interface.webp?rlkey=weeolbcg3a9e363nunxmj21ux&dl=0)
+![UI / Screenshots - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/r15u5f5worgn1qmt8dfga/airflow-03-user-interface.webp?rlkey=weeolbcg3a9e363nunxmj21ux&raw=1)
 
 ## Airflow 설치 환경
 - macOS Sequoia 15.5
@@ -71,7 +71,7 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 - `docker-compose` 를 이용해 Airflow를 운영하는데 필요한 여러 서비스(컨테이너)를 실행
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/wrp3yqqd8l9llzk5jfjb2/airflow-04-docker.webp?rlkey=p5u5yu9bbs0hu6clbu9azubbt&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/wrp3yqqd8l9llzk5jfjb2/airflow-04-docker.webp?rlkey=p5u5yu9bbs0hu6clbu9azubbt&raw=1"
   alt="Docker vs VM"
   max-width="691px"
   align="center" >}}
@@ -83,13 +83,13 @@ tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이�
 - 운영체제에 맞는 Docker Descktop 파일을 내려받아 설치
 - 설치 후 실행하면 아래와 같은 초기 화면을 확인
 
-![Docker Descktop UI](https://dl.dropboxusercontent.com/scl/fi/3pl7bbucirxxzozqfgawb/airflow-05-docker-home.webp?rlkey=stzfnx8s35sa6zpkyw818nol8&dl=0)
+![Docker Descktop UI](https://dl.dropboxusercontent.com/scl/fi/3pl7bbucirxxzozqfgawb/airflow-05-docker-home.webp?rlkey=stzfnx8s35sa6zpkyw818nol8&raw=1)
 
 ## Airflow 설치하기
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 ### 1. docker-compose.yaml
 
@@ -147,7 +147,7 @@ docker compose up
 
 - Docker Desktop 상에서 아래 이미지와 같이 모든 컨테이너들이 실행되고 있는지 확인 가능
 
-![Docker Descktop에서 Airflow 서비스 조회](https://dl.dropboxusercontent.com/scl/fi/8e2btqsfjeapzv1k6924j/airflow-06-docker-container.webp?rlkey=2zz6vga8bfhtqgjrng0ir6j20&dl=0)
+![Docker Descktop에서 Airflow 서비스 조회](https://dl.dropboxusercontent.com/scl/fi/8e2btqsfjeapzv1k6924j/airflow-06-docker-container.webp?rlkey=2zz6vga8bfhtqgjrng0ir6j20&raw=1)
 
 - 또는 터미널에서 `docker ps` 명령어를 입력해 컨테이너 실행 상태를 조회 가능
 
@@ -170,32 +170,32 @@ e933dc415a73   apache/airflow:3.0.1   "/usr/bin/dumb-init …"   1 minutes ago  
 - 컨테이너가 정상적으로 실행 중인 경우 브라우저에서 `localhost:8080` 주소로 접속하면 Airflow UI에 접근 가능
 - 초기 계정은 Username 과 Password 모두 `airflow` 입력
 
-![Airflow 로그인 페이지](https://dl.dropboxusercontent.com/scl/fi/fijme1clvmdqlt46roizs/airflow-07-airflow-signin.webp?rlkey=6dc4nuq3td9h673unb7vo2bi5&dl=0)
+![Airflow 로그인 페이지](https://dl.dropboxusercontent.com/scl/fi/fijme1clvmdqlt46roizs/airflow-07-airflow-signin.webp?rlkey=6dc4nuq3td9h673unb7vo2bi5&raw=1)
 
 - 정상적으로 로그인 시 아래와 같은 홈페이지로 이동
 
-![Airflow 홈페이지](https://dl.dropboxusercontent.com/scl/fi/8ugkzw79rcae4gnf1ix9l/airflow-08-airflow-home.webp?rlkey=ksnnjlbiobl6sn9n21s5lhvg3&dl=0)
+![Airflow 홈페이지](https://dl.dropboxusercontent.com/scl/fi/8ugkzw79rcae4gnf1ix9l/airflow-08-airflow-home.webp?rlkey=ksnnjlbiobl6sn9n21s5lhvg3&raw=1)
 
 ### Example DAG 실행
 
 - 사이드바에서 Dags 메뉴를 클릭하면 DAG 목록이 있는 페이지로 이동
 - 첫 번째에 있는 `tutorial_taskflow_templates` DAG를 클릭하여 상세 페이지 조회
 
-![/dags 페이지](https://dl.dropboxusercontent.com/scl/fi/qssvefcj7yqz86yauf5vu/airflow-09-dags.webp?rlkey=zubkjhref7wyy8evao33b8ooh&dl=0)
+![/dags 페이지](https://dl.dropboxusercontent.com/scl/fi/qssvefcj7yqz86yauf5vu/airflow-09-dags.webp?rlkey=zubkjhref7wyy8evao33b8ooh&raw=1)
 
 - 상단의 DAG 제목 옆에 토글 스위치를 클릭하면 DAG 활성화
 - 좌측에서 DAG 내 Task 간 종속성을 그래프로 확인 (해당 DAG는 단일 Task로 구성)
 
-![Dag 페이지 > Overview 탭](https://dl.dropboxusercontent.com/scl/fi/gwo3af2ws3slm9lg52c50/airflow-10-dag-overview.webp?rlkey=d6g317x96hq6fl45u5fd8uoqt&dl=0)
+![Dag 페이지 > Overview 탭](https://dl.dropboxusercontent.com/scl/fi/gwo3af2ws3slm9lg52c50/airflow-10-dag-overview.webp?rlkey=d6g317x96hq6fl45u5fd8uoqt&raw=1)
 
 - 내비게이션 메뉴 중에서 Runs 메뉴를 클릭하면 실행 이력을 조회
 
-![Dag 페이지 > Runs 탭](https://dl.dropboxusercontent.com/scl/fi/1z3pcjj7soidh5ii2rb3i/airflow-11-dag-runs.webp?rlkey=084k611n5p59r94jdeyzfq9j3&dl=0)
+![Dag 페이지 > Runs 탭](https://dl.dropboxusercontent.com/scl/fi/1z3pcjj7soidh5ii2rb3i/airflow-11-dag-runs.webp?rlkey=084k611n5p59r94jdeyzfq9j3&raw=1)
 
 - 실행된 결과를 하나 클릭하면 하위 Task 목록을 조회 가능
 - State 항목을 통해 처리 상태를 알 수 있는데, `success` 상태는 Task가 성공적으로 처리됨을 의미
 
-![Dag Run 페이지 > Task Instances 탭](https://dl.dropboxusercontent.com/scl/fi/opw1v6yekhji2677pa64t/airflow-12-dag-run-tasks.webp?rlkey=g5kohv8yzorz9hb5sdno2ynsl&dl=0)
+![Dag Run 페이지 > Task Instances 탭](https://dl.dropboxusercontent.com/scl/fi/opw1v6yekhji2677pa64t/airflow-12-dag-run-tasks.webp?rlkey=g5kohv8yzorz9hb5sdno2ynsl&raw=1)
 
 - Task 하나를 클릭해서 Logs 메뉴에 들어가면 아래와 같이 `context` 라는 객체를 출력하는 구문이 확인됨
 - 앞서 DAG 페이지의 내비게이션 메뉴 중 Code 메뉴에서 이미 코드를 확인했는데,
@@ -205,7 +205,7 @@ e933dc415a73   apache/airflow:3.0.1   "/usr/bin/dumb-init …"   1 minutes ago  
 [2025-05-27, 23:31:26] INFO - context: {'dag': <DAG: tutorial_taskflow_templates>, ...}: chan="stdout": source="task"
 ```
 
-![Task 페이지 > Logs 탭](https://dl.dropboxusercontent.com/scl/fi/sktawkrc89dzg7bu9v7ih/airflow-13-dag-run-logs.webp?rlkey=ib50ujf423m0664xpi72v8kcf&dl=0)
+![Task 페이지 > Logs 탭](https://dl.dropboxusercontent.com/scl/fi/sktawkrc89dzg7bu9v7ih/airflow-13-dag-run-logs.webp?rlkey=ib50ujf423m0664xpi72v8kcf&raw=1)
 
 ## Airflow 중지
 

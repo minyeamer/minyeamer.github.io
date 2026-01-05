@@ -6,8 +6,8 @@ description: >
   Hugo PaperMod 테마에 Utterances 댓글 기능을 추가하는 방법입니다.
   Github Issues 기반의 무료 댓글 시스템 Utterances 설치, 레이아웃 커스터마이징, 동적 설정 방법을 설명합니다.
   Disqus 대신 Utterances를 선택하는 이유와 실제 적용 과정을 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Utterances", "댓글 시스템", "Github Issues", "PaperMod", "Github", "블로그 만들기", "Blog", "개발 블로그"]
 ---
@@ -28,13 +28,13 @@ Utterances 설치는 단순히 레이아웃 상에서 댓글이 위치할 곳에
 하지만, 선행적으로 [해당 링크](https://github.com/marketplace/utterances)를 통해
 Utterances와 연동시킬 저장소를 등록해야 합니다.
 
-![Application > utterances](https://dl.dropboxusercontent.com/scl/fi/w5cuo428u0kss2tkie8kw/hugo-2022-02-utterances-application.webp?rlkey=dzktkckia9fbmjvl0cyng9fie&dl=0)
+![Application > utterances](https://dl.dropboxusercontent.com/scl/fi/w5cuo428u0kss2tkie8kw/hugo-2022-02-utterances-application.webp?rlkey=dzktkckia9fbmjvl0cyng9fie&raw=1)
 
 무료 플랜 선택 후 Utterances를 적용할 저장소를 선택하게 되는데
 모든 저장소를 지정해도 되지만, 저는 댓글을 관리할 저장소만 지정하겠습니다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/6wg0cqovib47bd1i0a3t8/hugo-2022-03-utterances-install.webp?rlkey=1qpnaqk2hsr90609cap0s3p3w&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/6wg0cqovib47bd1i0a3t8/hugo-2022-03-utterances-install.webp?rlkey=1qpnaqk2hsr90609cap0s3p3w&raw=1"
   alt="Install utterances"
   max-width="550px"
   align="center" >}}
@@ -100,12 +100,12 @@ params:
 
 정상적으로 스크립트가 삽입되었다면 아래와 같이 댓글을 입력하는 부분이 표시됩니다.
 
-![powered by utteranc.es](https://dl.dropboxusercontent.com/scl/fi/odmsjy5hw3en7k8rhtigt/hugo-2022-04-utterances-ui.webp?rlkey=1je72ah0ufukuppee7u5j13ui&dl=0)
+![powered by utteranc.es](https://dl.dropboxusercontent.com/scl/fi/odmsjy5hw3en7k8rhtigt/hugo-2022-04-utterances-ui.webp?rlkey=1je72ah0ufukuppee7u5j13ui&raw=1)
 
 댓글 기능이 정상적으로 적용되는지 확인하기 위해 실험적으로 댓글을 작성해봅니다.
 저도 과거 게시글에 댓글을 작성하여 아래와 같이 올라온 이슈를 확인했습니다.
 
-![blog/jekyll-blog/ #1](https://dl.dropboxusercontent.com/scl/fi/80ovwfrk5lecwjpd68m8o/hugo-2022-05-utterances-issue.webp?rlkey=pf4howfeibzzhpvptil9z5gkt&dl=0)
+![blog/jekyll-blog/ #1](https://dl.dropboxusercontent.com/scl/fi/80ovwfrk5lecwjpd68m8o/hugo-2022-05-utterances-issue.webp?rlkey=pf4howfeibzzhpvptil9z5gkt&raw=1)
 
 ## 마치며
 

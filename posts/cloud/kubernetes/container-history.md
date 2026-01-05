@@ -6,8 +6,8 @@ description: >
   쿠버네티스 등장 배경과 컨테이너의 역사를 다룬 가이드.
   LXC, Docker, containerd부터 CRI, OCI까지 컨테이너 기술의 진화를 단계별로 설명하며,
   Kubernetes의 핵심 개념을 이해하세요. 클라우드 네이티브 환경 구축에 필수적인 지식입니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernetes-00-cover.webp?rlkey=62jkzfxluywah0k79039ywve0&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernetes-00-cover.webp?rlkey=62jkzfxluywah0k79039ywve0&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&raw=1"
 categories: ["Cloud", "Kubernetes"]
 tags: ["Kubernetes", "Container", "컨테이너 역사", "Docker", "LXC", "containerd", "CRI", "OCI", "kubelet", "컨테이너 런타임", "클라우드 네이티브", "오케스트레이션"]
 ---
@@ -27,7 +27,7 @@ tags: ["Kubernetes", "Container", "컨테이너 역사", "Docker", "LXC", "conta
 
 ## Container History
 
-![chroot -> cgroup -> namespace -> lxc -> docker -> containerd + Cloud Orchestration](https://dl.dropboxusercontent.com/scl/fi/68zs362oo5yfcc4q7vt3b/diagram-00-container-history.webp?rlkey=l0wyexrgbiugt67y6telphnwe&dl=0)
+![chroot -> cgroup -> namespace -> lxc -> docker -> containerd + Cloud Orchestration](https://dl.dropboxusercontent.com/scl/fi/68zs362oo5yfcc4q7vt3b/diagram-00-container-history.webp?rlkey=l0wyexrgbiugt67y6telphnwe&raw=1)
 
 ### LXC
 
@@ -96,7 +96,7 @@ OCI(Open Container Initiative) 표준을 준수합니다.
 
 ## Kubernetes History
 
-![docker (v1.0 ~ v1.20) -> dockershim (v1.5 ~ v1.23) -> cri-dockerd (v1.24 ~ )](https://dl.dropboxusercontent.com/scl/fi/brv7o8znyu6xcxgqvqge1/diagram-01-kubernetes-history.webp?rlkey=zw7bi3tdisijvxjarcfmf2v0x&dl=0)
+![docker (v1.0 ~ v1.20) -> dockershim (v1.5 ~ v1.23) -> cri-dockerd (v1.24 ~ )](https://dl.dropboxusercontent.com/scl/fi/brv7o8znyu6xcxgqvqge1/diagram-01-kubernetes-history.webp?rlkey=zw7bi3tdisijvxjarcfmf2v0x&raw=1)
 
 ### Docker
 

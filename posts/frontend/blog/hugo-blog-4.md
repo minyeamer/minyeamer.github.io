@@ -5,8 +5,8 @@ layout: "post"
 description: >
   Hugo Book 테마에서 Fuse.js 기반 검색 인덱스를 분석하고 검색 UI를 개선하는 과정을 소개합니다.
   검색 페이지를 구현하면서 검색 성능을 최적화하고 템플릿 일관성을 보장하기 위한 방식을 알아봅니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Fusejs", "검색 인덱스", "검색 페이지", "Hugo 검색", "휴고 테마", "EventListener", "window", "DocumentFragment", "JavaScript", "Blog", "Hugo Book"]
 ---
@@ -162,7 +162,7 @@ public % tree -L 1
 만들어졌을건데, 어떤 파일을 봐야할지 모르겠다면 위 자바스크립트에서 `searchDataURL` 변수를 출력해보면 알 수 있습니다.
 (`searchDataURL` 변수를 선언하는 라인 아래에 `console.log()` 를 실행하면 빌드 직후에 콘솔에 출력됩니다.)
 
-![/search-data.json | en.search-data.min.eab6c7b9001273416ee00669c84e2e15e0c20a277354e60f930fbf616c3450cd.json](https://dl.dropboxusercontent.com/scl/fi/sm2svkm72ba0mylhjxn4m/hugo-41-search-data-log.webp?rlkey=enpd7cb3550b5mrvdjnxdu21f&dl=0)
+![/search-data.json | en.search-data.min.eab6c7b9001273416ee00669c84e2e15e0c20a277354e60f930fbf616c3450cd.json](https://dl.dropboxusercontent.com/scl/fi/sm2svkm72ba0mylhjxn4m/hugo-41-search-data-log.webp?rlkey=enpd7cb3550b5mrvdjnxdu21f&raw=1)
 
 `public/` 경로에서 보았던 `en.search-data.min.eab6c7b9001273416ee00669c84e2e15e0c20a277354e60f930fbf616c3450cd.json`
 파일이 그대로 출력되었습니다.
@@ -174,7 +174,7 @@ public % tree -L 1
 
 브라우저에서 이 파일의 경로로 접속하면 아래와 같은 내용을 볼 수 있습니다.
 
-![{"id": 0, "href": "/docs/example/", "title": "Example Site", "section": "Docs", "content": "Introduction..."}](https://dl.dropboxusercontent.com/scl/fi/6euzxfwdwi9xilagnp270/hugo-42-search-data-json.webp?rlkey=7qdw7qra5i2cs9m8mqg5gdmvv&dl=0)
+![{"id": 0, "href": "/docs/example/", "title": "Example Site", "section": "Docs", "content": "Introduction..."}](https://dl.dropboxusercontent.com/scl/fi/6euzxfwdwi9xilagnp270/hugo-42-search-data-json.webp?rlkey=7qdw7qra5i2cs9m8mqg5gdmvv&raw=1)
 
 이 파일은 ExampleSite 기준으로 100 KB,
 현재 40개 글이 있는 제 블로그 기준으로는 600 KB 정도의 용량이 되는데
@@ -287,7 +287,7 @@ Fuse 인덱스를 생성하는 것을 보니 `Fuse.js` 를 사용한다는 것�
 `results` 의 내용은 즉시 `ul#book-search-results` 요소 내부에 표시됩니다.
 해당 요소는 검색창 바로 아래 있어서 검색 결과가 검색창 아래에 (카테고리 목록을 아래로 밀어내고) 출력됩니다.
 
-![Hugo 검색 > Getting Started with Hugo, ...](https://dl.dropboxusercontent.com/scl/fi/0idnsek7m85h1e3c22q27/hugo-43-search-results.webp?rlkey=yac3gdsry1p95r5it9xjf2nyr&dl=0)
+![Hugo 검색 > Getting Started with Hugo, ...](https://dl.dropboxusercontent.com/scl/fi/0idnsek7m85h1e3c22q27/hugo-43-search-results.webp?rlkey=yac3gdsry1p95r5it9xjf2nyr&raw=1)
 
 여기까지 봤다면 Book 테마에서 검색을 어떻게 구현했는지 이해할 수 있습니다.
 
@@ -377,7 +377,7 @@ Fuse 인덱스를 생성하는 것을 보니 `Fuse.js` 를 사용한다는 것�
 정확히는 검색 버튼의 역할이지만, 아직 검색 페이지 및 리다이렉트 기능을 구현하지는 않았으므로
 검색 아이콘이라고 부르겠습니다.
 
-![검색창 오른쪽에 검색 아이콘 추가](https://dl.dropboxusercontent.com/scl/fi/ex7a0jo1tl2g9o97awx8p/hugo-44-search-icon.webp?rlkey=u8pwtm314swdts5chgxobypen&dl=0)
+![검색창 오른쪽에 검색 아이콘 추가](https://dl.dropboxusercontent.com/scl/fi/ex7a0jo1tl2g9o97awx8p/hugo-44-search-icon.webp?rlkey=u8pwtm314swdts5chgxobypen&raw=1)
 
 아직 검색 아이콘에 특별한 기능은 없지만,
 입력창이 검색 기능을 한다는 것은 직관적으로 인식하게 되었습니다.
@@ -443,7 +443,7 @@ CSS 파일에서 `position: absolute;` 를 적용하면 위치를 고정할 수 
 해당 블로그에서는 `section` 을 여러 개 사용할 일이 없으므로 없애는게 더 깔끔합니다.
 이에 해당하는 `<small>` 태그는 자바스크립트에서 동적으로 생성하므로 이 부분을 제거했습니다.
 
-![카테고리 목록 위에 검색 결과를 표시](https://dl.dropboxusercontent.com/scl/fi/yjojly1wmx3ltbmw3b6qm/hugo-45-search-results-absolute.webp?rlkey=43mp7431jni6p59i6t95f43zi&dl=0)
+![카테고리 목록 위에 검색 결과를 표시](https://dl.dropboxusercontent.com/scl/fi/yjojly1wmx3ltbmw3b6qm/hugo-45-search-results-absolute.webp?rlkey=43mp7431jni6p59i6t95f43zi&raw=1)
 
 ### 검색 결과에 더보기 링크 추가
 
@@ -514,7 +514,7 @@ Book 테마에서는 검색 결과를 최대 10개까지만 보여줍니다.
 더보기 링크의 역할은 검색 버튼과 마찬가지로 검색 페이지가 만들어져야 제 기능을 하지만
 일단 구색만 갖췄습니다.
 
-![검색 결과가 3개를 초과하면 더보기 표시](https://dl.dropboxusercontent.com/scl/fi/nw82ytf7boi8ljjif0heu/hugo-46-search-results-more.webp?rlkey=41wze58zpc55q7idbo2fgb4ga&dl=0)
+![검색 결과가 3개를 초과하면 더보기 표시](https://dl.dropboxusercontent.com/scl/fi/nw82ytf7boi8ljjif0heu/hugo-46-search-results-more.webp?rlkey=41wze58zpc55q7idbo2fgb4ga&raw=1)
 
 이전 결과에서는 최대 10개 게시글만 보여주고
 전체 몇 개 글이 있는지는 알 수 없었는데, 이 점을 개선했다는데에 의미가 있습니다.
@@ -861,7 +861,7 @@ type: "search"
 이 파일을 생성한 것으로 `/search` 경로를 인식할 수 있게 되었습니다.
 실제로 `/search` 경로에 접속하면 아래 이미지와 같은 빈 페이지가 보입니다.
 
-![비어있는 검색 페이지](https://dl.dropboxusercontent.com/scl/fi/rmii7uu5ff863s00aj2lp/hugo-47-search-page-empty.webp?rlkey=goo5yhox3ctedvjuqo85imtzq&dl=0)
+![비어있는 검색 페이지](https://dl.dropboxusercontent.com/scl/fi/rmii7uu5ff863s00aj2lp/hugo-47-search-page-empty.webp?rlkey=goo5yhox3ctedvjuqo85imtzq&raw=1)
 
 ### 검색 페이지 이동 기능 추가
 
@@ -1337,7 +1337,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 여기까지 적용하고 블로그에서 검색을 수행하면 아래 이미지와 같은 검색 페이지로 이동할 수 있습니다.
 
-!["Hugo" 검색 결과](https://dl.dropboxusercontent.com/scl/fi/2kkw8zwdob4wy15xkg59t/hugo-48-search-page.webp?rlkey=vrjfr1vc54vpyhl2bsz2mut3g&dl=0)
+!["Hugo" 검색 결과](https://dl.dropboxusercontent.com/scl/fi/2kkw8zwdob4wy15xkg59t/hugo-48-search-page.webp?rlkey=vrjfr1vc54vpyhl2bsz2mut3g&raw=1)
 
 검색 페이지와 관련된 모든 구현 과정이 종료되었습니다.
 

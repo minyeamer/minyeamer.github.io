@@ -6,7 +6,7 @@ description: >
   Apache Spark의 Spark SQL을 다루며,
   SQL 쿼리 실행부터 테이블/뷰 관리, 메타데이터 캐싱까지 단계별로 안내합니다.
   빅데이터 분석과 데이터 엔지니어링을 위한 강력한 도구를 습득하고 실무에 적용하세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "Spark SQL", "SQL", "View", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
 ---

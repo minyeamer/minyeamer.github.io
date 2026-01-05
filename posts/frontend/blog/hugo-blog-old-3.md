@@ -7,8 +7,8 @@ description: >
   Archive, Search 페이지 추가, 검색 엔진 등록(Google, Naver, Bing),
   KaTex 수식 표현, CSS 너비 조정, 새탭 링크 오픈, Go Template 활용 등 기법을 다룹니다.
   테마 구조 이해부터 고급 커스터마이징까지 웹 개발자를 위한 실전 방법을 제공합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "PaperMod", "Go Template", "KaTex", "검색 엔진 최적화", "블로그 만들기", "Blog", "개발 블로그"]
 ---
@@ -77,9 +77,9 @@ menu:
 
 위와 같은 과정을 통해 Archive, Search 기능을 추가했습니다.
 
-![Hugo Home > Archive](https://dl.dropboxusercontent.com/scl/fi/xyrrp2yxuxpmln2in2uqs/hugo-2022-06-archive.webp?rlkey=6z1lbgxuanl1d1hchnn4249lz&dl=0)
+![Hugo Home > Archive](https://dl.dropboxusercontent.com/scl/fi/xyrrp2yxuxpmln2in2uqs/hugo-2022-06-archive.webp?rlkey=6z1lbgxuanl1d1hchnn4249lz&raw=1)
 
-![Hugo Home > Search](https://dl.dropboxusercontent.com/scl/fi/ko78c7iq90eeko58esepb/hugo-2022-07-search.webp?rlkey=fix5gvcxk06ttcyle9fdg1rwi&dl=0)
+![Hugo Home > Search](https://dl.dropboxusercontent.com/scl/fi/ko78c7iq90eeko58esepb/hugo-2022-07-search.webp?rlkey=fix5gvcxk06ttcyle9fdg1rwi&raw=1)
 
 ## 검색 엔진 등록하기
 
@@ -254,13 +254,13 @@ Go에 대해 잘 알지 못해 최선의 기능이라고 생각하지는 않지�
 현재 PaperMod 테마의 카테고리는 아래 그림처럼 태그와 동일한 리스트 템플릿을 사용하는데,
 개인적으로는 트리 형태의 계층식 카테고리를 선호합니다.
 
-![Categories - List](https://dl.dropboxusercontent.com/scl/fi/0eocr267qt6yy1yxb70ap/hugo-2022-08-categories-list.webp?rlkey=p3zt147r73zs61y1ql0mte7rj&dl=0)
+![Categories - List](https://dl.dropboxusercontent.com/scl/fi/0eocr267qt6yy1yxb70ap/hugo-2022-08-categories-list.webp?rlkey=p3zt147r73zs61y1ql0mte7rj&raw=1)
 
 언제나처럼 PaperMod 이슈를 탐색하던 중 이슈
 [Tree-style category list page #24](https://github.com/adityatelange/hugo-PaperMod/issues/24)를
 발견했는데, 아래 그림처럼 제가 머릿속에 그리던 방식을 그대로 표현하여 큰 관심을 가졌습니다.
 
-![Categories - Tree](https://dl.dropboxusercontent.com/scl/fi/rtddoxeg0h107m45dxoz6/hugo-2022-09-categories-tree.webp?rlkey=2drzd64dy8x8ioevm4s847ua1&dl=0)
+![Categories - Tree](https://dl.dropboxusercontent.com/scl/fi/rtddoxeg0h107m45dxoz6/hugo-2022-09-categories-tree.webp?rlkey=2drzd64dy8x8ioevm4s847ua1&raw=1)
 
 해당 기능을 구현한 분께 메일을 보내 참고 자료를 얻었지만,
 아직까진 시간적 여유가 부족해 해당 작업을 처리하지 못한 상태입니다.

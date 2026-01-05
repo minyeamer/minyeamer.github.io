@@ -6,7 +6,7 @@ description: >
   uv를 활용한 Python 프로젝트 구성 및 배포 가이드.
   Rust 기반 고속 패키지 관리자로 프로젝트 초기화, 가상환경 생성, 의존성 추가부터 PyPI 배포까지 단계별로 안내합니다.
   pip보다 빠른 uv로 효율적인 개발 환경을 구축하세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/jj13nbquunpa7gfeok7qf/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/jj13nbquunpa7gfeok7qf/uv-00-cover.png?rlkey=fwjnzqzt94gdmu25brus4cwfa&raw=1"
 categories: ["Project", "Tools"]
 tags: ["uv", "Python", "프로젝트 관리", "가상환경", "PyPI", "배포", "패키지 관리", "Rust", "Python 패키지"]
 ---
@@ -22,7 +22,7 @@ uv는 Rust로 작성된 매우 빠른 Python 패키지 및 프로젝트 관리�
 Rust 기반으로 만들어져서 그런지 `pip` 나 `poetry` 와 비교했을 때 굉장히 빠른 속도를 보여줍니다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/nw5qz64i85snrbm7ocir9/uv-01-fast.webp?rlkey=gwy75efcl9clbyzdenfq2z8eb&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/nw5qz64i85snrbm7ocir9/uv-01-fast.webp?rlkey=gwy75efcl9clbyzdenfq2z8eb&raw=1"
   alt="uv 0.06s, poetry 0.99s, pdm 1.90s, pip-sync 4.63s"
   max-width="691px"
   align="center" >}}
@@ -243,12 +243,12 @@ PyPI에 배포하기 전에 먼저 API 토큰을 생성해야 합니다.
 
 과거에 아래와 같이 PyPI에 패키지를 등록한 적이 있는데, 이번에 새로운 패키지를 등록해봅니다.
 
-![PyPI > Your projects (2)](https://dl.dropboxusercontent.com/scl/fi/5g23hk24yl9rtn1o5r1h8/uv-02-pypi-list.webp?rlkey=laccd47zg8gr644ach7uke5iy&dl=0)
+![PyPI > Your projects (2)](https://dl.dropboxusercontent.com/scl/fi/5g23hk24yl9rtn1o5r1h8/uv-02-pypi-list.webp?rlkey=laccd47zg8gr644ach7uke5iy&raw=1)
 
 Account settings 페이지의 API tokens 항목에서 API 토큰을 발급받을 수 있습니다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/wfto4binkivlk9qcdwp4d/uv-03-pypi-token.webp?rlkey=jiwgu55kust02dpigbvxxx22i&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/wfto4binkivlk9qcdwp4d/uv-03-pypi-token.webp?rlkey=jiwgu55kust02dpigbvxxx22i&raw=1"
   alt="API tokens > Name = minyeamer, Scope = All projects"
   max-width="691px"
   align="center" >}}
@@ -265,7 +265,7 @@ Uploading linkmerce-0.1.0.tar.gz (5.5KiB)
 
 PyPI 프로젝트 페이지를 확인해보면 방금 배포한 패키지가 올라온 것을 볼 수 있습니다.
 
-![PyPI > Your projects (3)](https://dl.dropboxusercontent.com/scl/fi/fh8dfopuws8ub83wmlldo/uv-04-pypi-add.webp?rlkey=wpe4wkbusikljdedt0k80ji99&dl=0)
+![PyPI > Your projects (3)](https://dl.dropboxusercontent.com/scl/fi/fh8dfopuws8ub83wmlldo/uv-04-pypi-add.webp?rlkey=wpe4wkbusikljdedt0k80ji99&raw=1)
 
 매번 `uv publish` 명령어를 작성하는 것은 불편하기 때문에
 `dist.sh` 스크립트 파일로 명령어를 내보내서 간단하게 호출할 수 있습니다.

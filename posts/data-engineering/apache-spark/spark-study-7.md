@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Spark의 외부 데이터 소스 연결과 데이터 읽기/쓰기를 다루며,
   JDBC, RDBMS 등과의 연동을 단계별로 안내합니다. 빅데이터 처리를 위한 실용적인 기법을 배우세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "JDBC", "RDBMS", "Hive", "PostgreSQL", "MySQL", "데이터 엔지니어링", "스파크", "Study"]
 ---
@@ -23,7 +23,7 @@ tags: ["Apache Spark", "JDBC", "RDBMS", "Hive", "PostgreSQL", "MySQL", "데이�
 게시글을 참고했다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/0o5512v3i618kk6yrok97/spark-16-hive-tgz.webp?rlkey=1lcorgbp5xngu4w4g4zugvi6b&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/0o5512v3i618kk6yrok97/spark-16-hive-tgz.webp?rlkey=1lcorgbp5xngu4w4g4zugvi6b&raw=1"
   alt="/hive/hive-4.0.1/apache-hive-4.0.1-bin.tar.gz"
   max-width="691px"
   align="center"
@@ -402,7 +402,7 @@ postgres=# SELECT * FROM spark_schema.users;
 PostgreSQL 데이터베이스에 연결하려면 JDBC 드라이버 파일을 클래스 경로에 추가한다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/j2o3uadsj58suc9z81yaw/spark-17-postgres-jdbc-driver.webp?rlkey=qpai41152zlaovp7aoev19p72&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/j2o3uadsj58suc9z81yaw/spark-17-postgres-jdbc-driver.webp?rlkey=qpai41152zlaovp7aoev19p72&raw=1"
   alt="If you are using Java 8 or newer then you should use the JDBC 4.2 version"
   href="https://jdbc.postgresql.org/download/" >}}
 
@@ -582,7 +582,7 @@ mysql> SELECT * FROM users;
 MySQL 데이터베이스에 연결하려면 JDBC 드라이버 파일을 클래스 경로에 추가한다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/oyl2a11p3l7jfkzcl5bp3/spark-18-mysql-connector.webp?rlkey=2zsceygess6fl29e1ze5nd9eo&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/oyl2a11p3l7jfkzcl5bp3/spark-18-mysql-connector.webp?rlkey=2zsceygess6fl29e1ze5nd9eo&raw=1"
   alt="Platform Independent (Architecture Independent), Compressed TAR Archive"
   href="https://downloads.mysql.com/archives/c-j/" >}}
 

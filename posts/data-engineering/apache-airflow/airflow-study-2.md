@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 Operator 개념을 소개하고, BashOperator와 PythonOperator의 사용법을 단계별로 안내합니다.
   DAG 작성, Plugins 활용, Decorator 패턴, 파라미터 전달 방법까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "BashOperator", "PythonOperator", "DAG", "Plugins", "Decorator", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -62,13 +62,13 @@ AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
 - 컨테이너를 재시작해도 여전히 예제가 남아있어 `airflow db reset` 등 여러가지 초기화 방법을 탐색했지만,
   결과적으로 `localhost:8080` 에 대한 크롬 브라우저 캐시를 삭제하니 해결
 
-![빈 DAG 목록](https://dl.dropboxusercontent.com/scl/fi/og5rcgutgrpkxmsa7xs47/airflow-14-empty-dags.webp?rlkey=vcky34swl24vbh53dfw9rr0vq&dl=0)
+![빈 DAG 목록](https://dl.dropboxusercontent.com/scl/fi/og5rcgutgrpkxmsa7xs47/airflow-14-empty-dags.webp?rlkey=vcky34swl24vbh53dfw9rr0vq&raw=1)
 
 ## BashOperator
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/bash.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 ### BashOperator 정의
 - `dags/` 경로 아래에 `bash_operator.py` 파일을 생성
@@ -122,12 +122,12 @@ with DAG(
 ### BashOperator 실행
 - Airflow 컨테이너를 중지 후 다시 실행해 UI에서 DAG가 올라온 것을 확인
 
-![BashOperator 목록](https://dl.dropboxusercontent.com/scl/fi/vhk1tkfhwy42b3cyffvm8/airflow-15-bash-operator.webp?rlkey=y9ve9t40s4tyiihmb4mmeyibu&dl=0)
+![BashOperator 목록](https://dl.dropboxusercontent.com/scl/fi/vhk1tkfhwy42b3cyffvm8/airflow-15-bash-operator.webp?rlkey=y9ve9t40s4tyiihmb4mmeyibu&raw=1)
 
 - DAG를 실행하여 정상적으로 수행되는지 확인
 - DAG를 클릭해서 이동하는 페이지에서 `bash_task` 과 `bash_task2` 의 관계를 그래프로 조회 가능
 
-![BashOperator Task 목록](https://dl.dropboxusercontent.com/scl/fi/zkr4zd86vbadiigpsja2t/airflow-16-bash-tasks.webp?rlkey=meg3x9abfc3leyqsb3pcieko0&dl=0)
+![BashOperator Task 목록](https://dl.dropboxusercontent.com/scl/fi/zkr4zd86vbadiigpsja2t/airflow-16-bash-tasks.webp?rlkey=meg3x9abfc3leyqsb3pcieko0&raw=1)
 
 - `bash_task1` 과 `bash_task2` 에 대해 각각의 로그를 확인
 - `bash_task1` 에는 `echo whoami` 명령어가 전달되어 `whoami` 를 결과로 출력
@@ -153,7 +153,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow-providers-standard/stable/operators/python.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 ### PythonOperator 종류
 - `PythonOperator` : 파이썬 함수를 실행시키기 위한 Operator
@@ -201,13 +201,13 @@ with DAG(
 ### PythonOperator 실행
 - Airflow UI에서 `python_operator` DAG가 올라온 것을 확인
 
-![PythonOperator 목록](https://dl.dropboxusercontent.com/scl/fi/9kak9x4u6maiyotnvtwgn/airflow-17-python-operator.webp?rlkey=hdijovzk2lngwtytrsldbs8a2&dl=0)
+![PythonOperator 목록](https://dl.dropboxusercontent.com/scl/fi/9kak9x4u6maiyotnvtwgn/airflow-17-python-operator.webp?rlkey=hdijovzk2lngwtytrsldbs8a2&raw=1)
 
 - DAG를 실행하여 정상적으로 수행되는지 확인
 - `python_task` 의 첫 번째 실행 로그에서는 "Argentina" 국가가 선택되어 출력
 - UI에서 Trigger 버튼을 눌러 `python_task` 를 수동 실행한 로그에서는 "Indonesia" 국가가 선택되어 출력
 
-![PythonOperator Task 목록](https://dl.dropboxusercontent.com/scl/fi/9xyvmxz6108v9a2mxnudn/airflow-18-python-tasks.webp?rlkey=jt7j53z1y7mq1vaqekcyf5dy7&dl=0)
+![PythonOperator Task 목록](https://dl.dropboxusercontent.com/scl/fi/9xyvmxz6108v9a2mxnudn/airflow-18-python-tasks.webp?rlkey=jt7j53z1y7mq1vaqekcyf5dy7&raw=1)
 
 
 ```bash
@@ -232,7 +232,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/plugins.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - `plugins/` 경로에 파이썬 함수를 작성하고 외부에서 활용
 - DAG 선언 시 함수를 가져오기만 해도 되어서 깔끔해지고 같은 함수를 재활용할 수 있어서 편리

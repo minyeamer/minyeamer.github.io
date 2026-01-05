@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 HttpOperator와 Custom Operator 개념을 소개하고, 네이버 Open API 연동과 BaseOperator 상속을 단계별로 안내합니다.
   REST API 호출, Connection 설정, Variable 활용, CSV 파일 저장, NaverSearchToCsvOperator 구현까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "HttpOperator", "BaseOperator", "REST API", "네이버 Open API", "Custom Operator", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -14,7 +14,7 @@ tags: ["Apache Airflow", "HttpOperator", "BaseOperator", "REST API", "네이버 
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow-providers-http/stable/index.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - HTTP 요청을 하고 응답 결과를 반환받는 Operator (반환값은 XCom에 저장)
 - HTTP를 이용하여 API를 처리하는 RestAPI 호출 시 사용 가능
@@ -31,7 +31,7 @@ pip install apache-airflow-providers-http
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow-providers-http/stable/_api/airflow/providers/http/operators/http/index.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - `http_conn_id` : http Connection을 생성해야 하는데 해당 Connection의 ID
 - `endpoint` : Connection에 등록한 Host 뒤에 붙는 경로
@@ -45,7 +45,7 @@ pip install apache-airflow-providers-http
 
 {{< bookmark
   url="https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md"
-  image="https://dl.dropboxusercontent.com/scl/fi/x4x2s1wylgkwatfygk09z/naver-developers.webp?rlkey=z10lqzacm268bma2enhqbej0g&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/x4x2s1wylgkwatfygk09z/naver-developers.webp?rlkey=z10lqzacm268bma2enhqbej0g&raw=1" >}}
 
 - `HttpOperator` 활용을 위해 간단한 API를 예제로 사용
 - 네이버 쇼핑 검색 API는 네이버에서 제공하는 Open API 중 하나로 네이버 쇼핑 페이지에서 검색한 결과를 XML 형식 또는 JSON 형식으로 반환하는 RestAPI
@@ -56,7 +56,7 @@ pip install apache-airflow-providers-http
 - 아래 이미지와 같이 사용 API로 "검색"을 선택하고, 임의로 애플리케이션 이름과 서비스 환경을 입력하여 애플리케이션 등록
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/077ryedn6nmsmd7xnb1xy/airflow-42-naver-openapi-register.webp?rlkey=8e0iylgt9z8ze8snge38nbaky&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/077ryedn6nmsmd7xnb1xy/airflow-42-naver-openapi-register.webp?rlkey=8e0iylgt9z8ze8snge38nbaky&raw=1"
   alt="애플리케이션 등록 (API 이용신청)"
   max-width="691px"
   align="center" >}}
@@ -64,7 +64,7 @@ pip install apache-airflow-providers-http
 - 생성한 애플리케이션 정보에서 `Client ID` 와 `Client Secret` 을 조회 가능
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/yxvxn3o30wvxip6cyy40b/airflow-43-naver-openapi-info.webp?rlkey=skjpbqiydx1e4if1octvkef4a&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/yxvxn3o30wvxip6cyy40b/airflow-43-naver-openapi-info.webp?rlkey=skjpbqiydx1e4if1octvkef4a&raw=1"
   alt="애플리케이션 정보 - Client ID, Client Secret"
   max-width="691px"
   align="center" >}}
@@ -75,7 +75,7 @@ pip install apache-airflow-providers-http
 - API가 별도로 알려지지 않은 포트를 사용할 경우 `Port` 에 포트 번호를 입력하지만, 네이버 Open API는 표준 HTTPS 포트를 사용하기 때문에 미표기
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/yk6vu7a970ulpe7m1fog5/airflow-44-http-connection.webp?rlkey=5l6wya7grf6757xubjmcfid2w&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/yk6vu7a970ulpe7m1fog5/airflow-44-http-connection.webp?rlkey=5l6wya7grf6757xubjmcfid2w&raw=1"
   alt="Edit Connection - HTTP"
   max-width="691px"
   align="center" >}}
@@ -84,7 +84,7 @@ pip install apache-airflow-providers-http
 - API키는 Variable로 추가하는데, `Client ID` 와 `Client Secret` 을 각각의 Variable로 등록
 - `Client Secret` 의 키 명칭에는 "secret" 이 포함되어 UI에서 자동으로 마스킹 처리되는 것을 확인
 
-![Variables - 애플리케이션 정보](https://dl.dropboxusercontent.com/scl/fi/t27j9mfzzmve67j5oflj1/airflow-45-naver-openapi-variables.webp?rlkey=3tj9lslxgqltobx9yuesp1xe1&dl=0)
+![Variables - 애플리케이션 정보](https://dl.dropboxusercontent.com/scl/fi/t27j9mfzzmve67j5oflj1/airflow-45-naver-openapi-variables.webp?rlkey=3tj9lslxgqltobx9yuesp1xe1&raw=1)
 
 ### HttpOperator 활용 예시
 - 앞서 등록한 Connection의 ID를 `http_conn_id` 에 입력하고, `endpoint` 에 Host를 제외한 나머지 경로를 입력
@@ -167,7 +167,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/howto/custom-operator.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 ### BaseOperator
 - `BaseOperator` 클래스를 상속받아 직접 만든 Operator를 사용 가능
@@ -521,7 +521,7 @@ with DAG(
 - `start` 1부터 `display` 1000까지 총 1000개의 검색 결과를 100개 단위로 나눠서 요청하는 과정을 로그로 남겨서 조회
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/3hty0k935z7ae0y3u0y2y/airflow-46-naver-search-task.webp?rlkey=k2diw9fntl9qaud4pxvgl6akv&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/3hty0k935z7ae0y3u0y2y/airflow-46-naver-search-task.webp?rlkey=k2diw9fntl9qaud4pxvgl6akv&raw=1"
   alt="search_shopping_task >> search_blog_task"
   max-width="518px"
   align="center" >}}

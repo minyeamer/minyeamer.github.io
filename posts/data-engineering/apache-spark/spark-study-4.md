@@ -6,7 +6,7 @@ description: >
   Apache Spark의 Structured API를 다루며,
   DataFrame과 Dataset의 기본 개념부터 Schema 정의, Column 연산, Row 처리까지 단계별로 안내합니다.
   데이터 엔지니어링을 위한 효율적인 데이터 조작 기법을 배우고 실무에 적용하세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "Structured API", "DataFrame", "Dataset", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
 ---
@@ -474,7 +474,7 @@ Dataset는 정적 타입 API와 동적 타입 API의 두 가지 특성을 모두
 ### Dataset
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/u1a2mkzn6mvvldypq7zi5/spark-13-unified-api.webp?rlkey=nkt5uf9qce0h6ezrurbjmjqzw&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/u1a2mkzn6mvvldypq7zi5/spark-13-unified-api.webp?rlkey=nkt5uf9qce0h6ezrurbjmjqzw&raw=1"
   alt="Unified Apache Spark 2.0 API - databricks"
   max-width="691px"
   align="center" >}}
@@ -545,7 +545,7 @@ Spark SQL은 고수준 정형화 기능들이 구축되도록 하는 방대한 �
 - JVM을 위한 최적화된 코드를 생성한다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/zf3tn8nbir6j0rw492p96/spark-14-sql-connectors.webp?rlkey=m81odrfx2wd463g9xqsuqcdy5&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/zf3tn8nbir6j0rw492p96/spark-14-sql-connectors.webp?rlkey=m81odrfx2wd463g9xqsuqcdy5&raw=1"
   alt="Figure 4-1. Spark SQL connectors and data sources"
   max-width="691px"
   align="center" >}}
@@ -560,7 +560,7 @@ Spark SQL 엔진의 핵심은 Catalyst Optimizer다. Catalyst Optimizer는 두 �
 
 Catalyst Optimizer는 연산 쿼리를 받아 실행 계획으로 변환한다. 그 과정은 아래 그림과 같이 4단계의 과정을 거친다.
 
-![Catalyst Optimizer - databricks](https://dl.dropboxusercontent.com/scl/fi/ji5e1hhmiewssku8c3zdg/spark-15-catalyst-optimizer.webp?rlkey=ujqf2c8wiqinzmfqf9ohui0zv&dl=0)
+![Catalyst Optimizer - databricks](https://dl.dropboxusercontent.com/scl/fi/ji5e1hhmiewssku8c3zdg/spark-15-catalyst-optimizer.webp?rlkey=ujqf2c8wiqinzmfqf9ohui0zv&raw=1)
 
 1. 분석   
 제공된 코드가 유효하고 오류가 없는지 확인한다. 칼럼, 데이터 타입, 함수, 테이블, 데이터베이스 이름 목록을 갖고 있는 Catalog 객체를 참조한다. 분석 단계를 성공적으로 통과하면 Spark에서 이해하고 해결할 수 있는 요소만이 포함되어 있다는 의미를 가진다.

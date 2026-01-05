@@ -6,7 +6,7 @@ description: >
   Apache Airflow의 Connection과 Hook 개념을 소개하고,
   Docker Compose를 활용한 Postgres 컨테이너 생성부터 Connection 설정, Hook 사용, bulk_load 기능까지 단계별로 안내합니다.
   Docker Compose, Postgres, Connection, Hook, bulk_load까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "Connection", "Hook", "Docker Compose", "Postgres", "Custom Hook", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -195,18 +195,18 @@ e23d4eb919fc   postgres:13            "docker-entrypoint.s…"   58 seconds ago 
 
 {{% columns %}}
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/mdmcowq7snd9kre1nk3er/airflow-47-dbeaver-select-database.webp?rlkey=mqhmcjbk9ffa0cjqb4yib3wkw&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/mdmcowq7snd9kre1nk3er/airflow-47-dbeaver-select-database.webp?rlkey=mqhmcjbk9ffa0cjqb4yib3wkw&raw=1"
   alt="Connect to a database > Select your database" >}}
 <--->
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/fjrzi28evemhofio626rl/airflow-48-dbeaver-connection-settings.webp?rlkey=q4xqe24sguok0arrnn3z8jv2b&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/fjrzi28evemhofio626rl/airflow-48-dbeaver-connection-settings.webp?rlkey=q4xqe24sguok0arrnn3z8jv2b&raw=1"
   alt="Connect to a database > Connection Settings" >}}
 {{% /columns %}}
 
 - 정상적으로 연결되었다면 아래와 같이 Database 명칭을 확인 가능
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/76s6qjohro7qeawziu92c/airflow-49-dbeaver-database-navigator.webp?rlkey=b8ja2rvtsyqjmn6tay2mw8hl4&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/76s6qjohro7qeawziu92c/airflow-49-dbeaver-database-navigator.webp?rlkey=b8ja2rvtsyqjmn6tay2mw8hl4&raw=1"
   alt="Database Navigator"
   max-width="518px"
   align="center" >}}
@@ -226,7 +226,7 @@ CREATE TABLE public.dag_run (
 
 - 테이블이 정상적으로 만들어졌다면 새로고침 후 아래와 같이 테이블 내 컬럼 내역을 확인 가능
 
-![dag_run > Properties > Columns > [dag_id, task_id, run_id, msg]](https://dl.dropboxusercontent.com/scl/fi/7cj3j0xkqa33yk11x4fdq/airflow-50-dbeaver-dagrun-columns.webp?rlkey=vo7evh64owh5o5weotwny3nt9&dl=0)
+![dag_run > Properties > Columns > [dag_id, task_id, run_id, msg]](https://dl.dropboxusercontent.com/scl/fi/7cj3j0xkqa33yk11x4fdq/airflow-50-dbeaver-dagrun-columns.webp?rlkey=vo7evh64owh5o5weotwny3nt9&raw=1)
 
 ### PythonOperator
 
@@ -273,7 +273,7 @@ with DAG(
 - DAG을 실행한 후 DBeaver에서 `dag_run` 테이블 조회 시 아래와 같이 하나의 행이 올라온 것을 확인
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/qkhf61bfelnqo014ics1d/airflow-51-dbeaver-dagrun-row.webp?rlkey=nnj98cyd7dn4feedrdoyztee4&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/qkhf61bfelnqo014ics1d/airflow-51-dbeaver-dagrun-row.webp?rlkey=nnj98cyd7dn4feedrdoyztee4&raw=1"
   alt="dag_run > Data > manual__2025-06-08T04:11:08.876393+00:00"
   max-width="691px"
   align="center" >}}
@@ -296,7 +296,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/index.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - Providers에 속한 Postgres 문서에서
   [Connection 접속 과정](https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/_modules/airflow/providers/postgres/hooks/postgres.html#PostgresHook.get_conn)을 조회 가능
@@ -342,7 +342,7 @@ def get_conn(self) -> connection:
 - Connection에 입력한 각 항목은 앞서 확인한 `get_conn()` 메서드에서 PostgreSQL 연결 시 사용
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/3q28bhxv5ld52bx3dqaiz/airflow-52-postgres-connection.webp?rlkey=py1x2x3gab8qemhlyw38h188k&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/3q28bhxv5ld52bx3dqaiz/airflow-52-postgres-connection.webp?rlkey=py1x2x3gab8qemhlyw38h188k&raw=1"
   alt="Add Connection - Postgres"
   max-width="691px"
   align="center" >}}
@@ -392,7 +392,7 @@ with DAG(
 - DAG을 실행한 후 DBeaver에서 `dag_run` 테이블 조회 시 아래와 같이 두 번째 행이 추가된 것을 확인
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/qgawsskyvb52i0d82sjbs/airflow-53-dbeaver-dagrun-rows.webp?rlkey=l81q9dh7a68q062s0nrnam77v&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/qgawsskyvb52i0d82sjbs/airflow-53-dbeaver-dagrun-rows.webp?rlkey=l81q9dh7a68q062s0nrnam77v&raw=1"
   alt="dag_run > Data > manual__2025-06-08T06:15:41.672840+00:00"
   max-width="691px"
   align="center" >}}
@@ -403,7 +403,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow-providers-postgres/6.1.3/_modules/airflow/providers/postgres/hooks/postgres.html#PostgresHook.bulk_load"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - PostgreSQL에 데이터를 업로드하는 `bulk_load()` 메서드에 대해 살펴보기
 
@@ -478,7 +478,7 @@ CREATE TABLE nshopping_search(
 
 - DBeaver에서 `nshopping` 스키마를 만들고 SQL문을 수행하면 아래와 같이 테이블 열 목록을 확인 가능
 
-![search > Properties > Columns](https://dl.dropboxusercontent.com/scl/fi/fzg4ruvxagiz3vfa5z13e/airflow-54-dbeaver-search-columns.webp?rlkey=o3ovhjjfr7xyktexyjux56el2&dl=0)
+![search > Properties > Columns](https://dl.dropboxusercontent.com/scl/fi/fzg4ruvxagiz3vfa5z13e/airflow-54-dbeaver-search-columns.webp?rlkey=o3ovhjjfr7xyktexyjux56el2&raw=1)
 
 ### CSV 파일 가공
 
@@ -529,7 +529,7 @@ with DAG(
 - DAG을 실행하고 DBeaver에서 `nshopping.search` 테이블을 조회하면 아래와 같이 CSV 파일이 그대로 올라온 것을 확인
 - 하지만, CSV 헤더가 1행으로 들어가는 문제점이 보임
 
-![search > Data > [1] [rank, title, link, ...]](https://dl.dropboxusercontent.com/scl/fi/6lurqjuyz338xpnc8icr3/airflow-55-dbeaver-search-data.webp?rlkey=bjq0qwcguvuh96glzpq2kmy8h&dl=0)
+![search > Data > [1] [rank, title, link, ...]](https://dl.dropboxusercontent.com/scl/fi/6lurqjuyz338xpnc8icr3/airflow-55-dbeaver-search-data.webp?rlkey=bjq0qwcguvuh96glzpq2kmy8h&raw=1)
 
 #### 문제점 및 개선방안
 - 문제점 : 구분자가 `Tab` 으로 고정되어 있고, 헤더까지 포함해서 업로드 됨
@@ -540,7 +540,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/_modules/airflow/hooks/base.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 ### BaseHook
 - `BaseHook` 클래스를 상속받아 직접 만든 Hook을 사용 가능
@@ -815,7 +815,7 @@ with DAG(
 - DBeaver에서 `nshopping.search2` 테이블이 생성되었고, 의도대로 정수형 열을 추측하여 데이터 타입을 구분해서 지정된 것을 확인
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/7wxi8iful4mscw6hrbk4b/airflow-56-dbeaver-search2-columns.webp?rlkey=21gcfnuz4969c25nzmocd9kmc&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/7wxi8iful4mscw6hrbk4b/airflow-56-dbeaver-search2-columns.webp?rlkey=21gcfnuz4969c25nzmocd9kmc&raw=1"
   alt="search2 > Properties > Columns"
   max-width="691px"
   align="center" >}}
@@ -825,4 +825,4 @@ with DAG(
 - 참조한 강의에서는 CSV 파일을 `pd.DataFrame` 객체로 읽고, SQLAlchemy의 엔진을 사용해 `to_sql()` 기능으로 PostgreSQL 테이블에 데이터를 적재하는 방식으로 접근
    - 개인적으로는 `PostgresHook` 을 이해하고자, `PostgresHook` 의 원형을 최대한 유지하면서 필요한 기능만 추가하기 위해 외부 라이브러리의 사용을 제한함
 
-![search2 > Data](https://dl.dropboxusercontent.com/scl/fi/p2tb7a2tcjq69pfixzf6p/airflow-57-dbeaver-search2-data.webp?rlkey=0t6eb81t9ullwkfowhocrjrhx&dl=0)
+![search2 > Data](https://dl.dropboxusercontent.com/scl/fi/p2tb7a2tcjq69pfixzf6p/airflow-57-dbeaver-search2-data.webp?rlkey=0t6eb81t9ullwkfowhocrjrhx&raw=1)

@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Airflow의 Trigger Rule과 TriggerDagRunOperator 개념을 소개하고, TaskGroup과 Edge Label 사용법을 단계별로 안내합니다.
   DAG 실행 트리거, 그룹화, 라벨링, Trigger Rule 옵션까지 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "TriggerDagRunOperator", "TaskGroup", "Trigger Rule", "Edge Label", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
 ---
@@ -14,13 +14,13 @@ tags: ["Apache Airflow", "TriggerDagRunOperator", "TaskGroup", "Trigger Rule", "
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#trigger-rules"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - 상위 Task들의 상태에 따라 수행여부를 결정하고 싶을 때 사용
 - 기본적으로는 상위 Task가 모두 성공해야 실행
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/dydw147s5pt1s7fg6leop/airflow-31-trigger-rule.webp?rlkey=rg9lo0dungmd863zk8gh76fgj&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/dydw147s5pt1s7fg6leop/airflow-31-trigger-rule.webp?rlkey=rg9lo0dungmd863zk8gh76fgj&raw=1"
   alt="Trigger Rule (Failed, Skipped, Success -> Running)"
   max-width="691px"
   align="center"
@@ -86,7 +86,7 @@ with DAG(
   `upstream_task2` 가 실패 처리되어도 `downstream_task` 가 수행되는 모습을 확인
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/dxr2449t4dkkoomh1qr1u/airflow-32-trigger-all-done.webp?rlkey=9vxn9jjqug6t88csakmh9m87y&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/dxr2449t4dkkoomh1qr1u/airflow-32-trigger-all-done.webp?rlkey=9vxn9jjqug6t88csakmh9m87y&raw=1"
   alt="all_done - upstream failed > downstream success"
   max-width="518px"
   align="center" >}}
@@ -147,7 +147,7 @@ with DAG(
   나머지는 `skipped` 처리되었기 때문에, `downstream_task` 도 수행되지 못하고 `skipped` 처리
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/3tjf1xjx31kjcufq3fkmp/airflow-33-trigger-none-skipped.webp?rlkey=t89irlnfi2j04e61kh7tie1yz&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/3tjf1xjx31kjcufq3fkmp/airflow-33-trigger-none-skipped.webp?rlkey=t89irlnfi2j04e61kh7tie1yz&raw=1"
   alt="none_skipped - upstream failed > downstream success"
   max-width="691px"
   align="center" >}}
@@ -156,7 +156,7 @@ with DAG(
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/2.3.4/_api/airflow/operators/trigger_dagrun/index.html"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - 다른 DAG을 실행시키는 Operator
 - 실행할 다른 DAG의 ID를 지정하여 수행
@@ -164,11 +164,11 @@ with DAG(
 
 {{% columns %}}
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/vxkt9g7uy44cwfc4vl174/airflow-34-trigger-dagrun-operator.webp?rlkey=t3i8pjpa7l1yfsscggh3d3j8t&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/vxkt9g7uy44cwfc4vl174/airflow-34-trigger-dagrun-operator.webp?rlkey=t3i8pjpa7l1yfsscggh3d3j8t&raw=1"
   alt="TriggerDagRunOperator" >}}
 <--->
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/o2urlt1hg28y1apeobgom/airflow-35-external-task-sensor.webp?rlkey=rg8l6wgbfja8jw934akg8t5qg&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/o2urlt1hg28y1apeobgom/airflow-35-external-task-sensor.webp?rlkey=rg8l6wgbfja8jw934akg8t5qg&raw=1"
   alt="ExternalTaskSensor" >}}
 {{% /columns %}}
 
@@ -236,21 +236,21 @@ with DAG(
 - 두 번째 이미지인 PythonOperator의 `run_id` 가 첫 번째 이미지인 TriggerDagRunOperator의 실행 시간과 같다는 것을 알 수 있으며,
   `trigger_run_id` 를 지정하지 않았기 때문에 `manual` 로 지정
 
-![Scheduled Dag Run](https://dl.dropboxusercontent.com/scl/fi/6sxhtm8e4yteuivcrjqla/airflow-36-trigger-dagrun-scheduled.webp?rlkey=wvlbjj9imkl733q0ujdi9ot6k&dl=0)
+![Scheduled Dag Run](https://dl.dropboxusercontent.com/scl/fi/6sxhtm8e4yteuivcrjqla/airflow-36-trigger-dagrun-scheduled.webp?rlkey=wvlbjj9imkl733q0ujdi9ot6k&raw=1)
 
-![Manual Dag Run](https://dl.dropboxusercontent.com/scl/fi/76871p6tozn66wxhspgsq/airflow-37-trigger-dagrun-manual.webp?rlkey=3azwukh8qp6syyb8p8u5vgh0d&dl=0)
+![Manual Dag Run](https://dl.dropboxusercontent.com/scl/fi/76871p6tozn66wxhspgsq/airflow-37-trigger-dagrun-manual.webp?rlkey=3azwukh8qp6syyb8p8u5vgh0d&raw=1)
 
 
 ## TaskGroup
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#taskgroups"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - 여러 Task들을 그룹화하는 개념
 - UI 상에서 Task들을 모아서 편하게 보고 관리하기 쉽게 하기 위한 목적
 
-![TaskGroups - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/0ake7j9qyw49ei0nze6n3/airflow-38-task-group.gif?rlkey=eauhbvmxgwh15ybsyx2yh57xn&dl=0)
+![TaskGroups - Airflow Documentation](https://dl.dropboxusercontent.com/scl/fi/0ake7j9qyw49ei0nze6n3/airflow-38-task-group.gif?rlkey=eauhbvmxgwh15ybsyx2yh57xn&raw=1)
 
 ### TaskGroup 활용
 - `@task_group` 데코레이터 또는 `TaskGroup` 클래스를 활용하여 TaskGroup을 구현
@@ -313,20 +313,20 @@ with DAG(
 - 기대와 다르게 지정한 Tooltip이 표시되지 않았는데, Airflow 3.0 버전의 버그인 것으로 추정
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/8eszfqcf35b9trq3n7yzi/airflow-39-task-group-summary.webp?rlkey=87f0vvl76lsxexlqz8i8385mb&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/8eszfqcf35b9trq3n7yzi/airflow-39-task-group-summary.webp?rlkey=87f0vvl76lsxexlqz8i8385mb&raw=1"
   alt="TaskGroup 요약"
   max-width="518px"
   align="center" >}}
 
 - TaskGroup을 클릭하면 펼쳐지면서 내부 Task를 표시
 
-![TaskGroup 상세](https://dl.dropboxusercontent.com/scl/fi/xlxj8po8fb7c79w4kt03x/airflow-40-task-group-detail.webp?rlkey=epggkqvb5m36jsf3bsse28ntb&dl=0)
+![TaskGroup 상세](https://dl.dropboxusercontent.com/scl/fi/xlxj8po8fb7c79w4kt03x/airflow-40-task-group-detail.webp?rlkey=epggkqvb5m36jsf3bsse28ntb&raw=1)
 
 ## Edge Label
 
 {{< bookmark
   url="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html#edge-labels"
-  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/jaltieh1sb4r7ozm6ju3e/airflow-00-cover-bg.webp?rlkey=s10wwm9o11zy79dwm1vje30sb&raw=1" >}}
 
 - Task 연결에 대한 설명을 추가하는 개념
 - Task 종속성을 나타내는 `>>` 또는 `<<` 연산자 사이에 `Label` 을 추가
@@ -382,4 +382,4 @@ with DAG(
 - Airflow UI의 Graph View에서 Edge Label을 확인
 - Branch 연결에 대해서는 모든 연결에 동일한 내용의 Label을 표시
 
-![Edge Label - 브랜치 시작 > 브랜치 종료](https://dl.dropboxusercontent.com/scl/fi/81h4ymeiwu26fjkdbozxw/airflow-41-edge-label.webp?rlkey=vw8g2kjbmf2kq2q1n988nj4vg&dl=0)
+![Edge Label - 브랜치 시작 > 브랜치 종료](https://dl.dropboxusercontent.com/scl/fi/81h4ymeiwu26fjkdbozxw/airflow-41-edge-label.webp?rlkey=vw8g2kjbmf2kq2q1n988nj4vg&raw=1)

@@ -6,7 +6,7 @@ description: >
   Apache Spark의 기본 개념과 아키텍처를 다루며,
   스파크의 시작부터 컴포넌트, Spark Driver, SparkSession, Cluster Manager, 배포 모드까지 단계별로 안내합니다.
   데이터 엔지니어링과 빅데이터 처리를 위한 필수 지식을 습득하고 실무에 적용하세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "Spark Architecture", "SparkSession", "Cluster Manager", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
 ---
@@ -51,7 +51,7 @@ GFS는 하둡 파일 시스템과 맵리듀스 구현에 영향을 주었다. HD
 셋째, 맵리듀스 태스크가 필요해질 때마다 중간 과정의 데이터를 로컬 디스크에 써야 했다.
 반복적인 I/O 작업에 의해 거대한 맵리듀스 작업에 며칠이 걸리기도 했다.
 
-![Big Data -> Split -> Map -> Reduce -> Output](https://dl.dropboxusercontent.com/scl/fi/pg3qcymue8h7z8h8n8cau/spark-01-map-reduce.webp?rlkey=6bnfs4bxy1haa8e52335qv24a&dl=0)
+![Big Data -> Split -> Map -> Reduce -> Output](https://dl.dropboxusercontent.com/scl/fi/pg3qcymue8h7z8h8n8cau/spark-01-map-reduce.webp?rlkey=6bnfs4bxy1haa8e52335qv24a&raw=1)
 
 UC 버클리 연구원들은 동적이고 반복적인 작업에서 비효율적인 맵리듀스를 개선하여 단순하고 빠르고 쉬운 스파크를 만들기로 했다.
 구체적으로는 더 높은 장애 내구성을 갖고, 병렬성을 높이면서, 맵리듀스 연산을 위한 중간 결과를 메모리에 저장하고,
@@ -103,7 +103,7 @@ RDBMS 테이블이나 CSV와 같은 구조화된 데이터 파일 포맷에서 �
 ## Spark Architecture
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/hhpp6o2d6m6grww5vz6t8/spark-02-architecture.webp?rlkey=mzdwo2l947nuead3shu2xeodz&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/hhpp6o2d6m6grww5vz6t8/spark-02-architecture.webp?rlkey=mzdwo2l947nuead3shu2xeodz&raw=1"
   alt="The Architecture of Apache Spark"
   max-width="691px"
   align="center" >}}

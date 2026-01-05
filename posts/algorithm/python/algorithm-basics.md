@@ -5,7 +5,7 @@ layout: "post"
 description: >
   파이썬으로 자료구조(Set, Dictionary, Counter, Heap)와 알고리즘(Binary Search, DFS/BFS, Kruskal/Prim)을 학습한 스터디 노트입니다.
   백준 문제를 통해 시간 복잡도 개선 사례와 시행착오 과정을 코드와 함께 기록했습니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/4rjqwin7uhj6usnuuskmu/dfs-bfs.gif?rlkey=2t7382a8o6by70yqshafpi66f&st=1oa40lri&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/4rjqwin7uhj6usnuuskmu/dfs-bfs.gif?rlkey=2t7382a8o6by70yqshafpi66f&st=1oa40lri&raw=1"
 categories: ["Algorithm", "Python"]
 tags: ["Python", "알고리즘", "자료구조", "백준", "Set", "Heap", "이진 탐색", "DFS", "BFS", "크루스칼 알고리즘", "프림 알고리즘", "Union-Find"]
 ---

@@ -6,8 +6,8 @@ description: >
   Hugo Book 테마의 본문 레이아웃을 개선하는 방법을 소개합니다.
   본문 헤더에 제목과 커버 이미지를 추가하고, 푸터에 이전/다음 게시글 네비게이션과 태그 목록을 구현합니다.
   Disqus 댓글 시스템 연동과 스크롤 진행도, 최신글 목록 등 부가 기능까지 안내합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Disqus", "댓글 기능", "커버 이미지", "스크롤 진행도", "휴고 본문", "휴고 테마", "휴고 레이아웃", "Blog", "HTML", "CSS", "JavaScript", "Hugo Book"]
 ---
@@ -82,7 +82,7 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 원래도 비어있는 템플릿이기 때문에 ExampleSite 기준으로 아래 이미지처럼
 본문 영역엔 마크다운 콘텐츠만 나타납니다.
 
-![Hugo Book 본문](https://dl.dropboxusercontent.com/scl/fi/tqrspz13thhcfnxgk6awy/hugo-49-book-page.webp?rlkey=qe6olc3g75xhaqs0vdieeskne&dl=0)
+![Hugo Book 본문](https://dl.dropboxusercontent.com/scl/fi/tqrspz13thhcfnxgk6awy/hugo-49-book-page.webp?rlkey=qe6olc3g75xhaqs0vdieeskne&raw=1)
 
 ## 본문 헤더 개선하기
 
@@ -92,7 +92,7 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 아래 이미지처럼 본문 상단에 카테고리, 제목, 작성일을 표시하고 있습니다.
 딱 이정도만 있으면 좋을 것 같아 그대로 구현해보겠습니다.
 
-![티스토리 본문 헤더](https://dl.dropboxusercontent.com/scl/fi/noni21f2m6d18j30v6zql/hugo-50-tistory-header.webp?rlkey=5uzz2mjz1yqer45j3lcx67r2f&dl=0)
+![티스토리 본문 헤더](https://dl.dropboxusercontent.com/scl/fi/noni21f2m6d18j30v6zql/hugo-50-tistory-header.webp?rlkey=5uzz2mjz1yqer45j3lcx67r2f&raw=1)
 
 본문 헤더를 `content-before` 템플릿에 추가할 수도 있지만,
 개인적으로 분문 영역은 `.book-article` 영역 내부로 규정했기 때문에
@@ -206,14 +206,14 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 또한, 헤더의 카테고리 텍스트는 시리즈 3번째 글에서 생성했던
 [카테고리 페이지](/blog/hugo-blog-3/#카테고리-페이지-추가)로 연결됩니다.
 
-![본문 헤더 - Getting Started with Hugo](https://dl.dropboxusercontent.com/scl/fi/gvo9vryf9mqwi4of1h0ly/hugo-51-post-header.webp?rlkey=tvpqxkr0gwm7lt11ti8ijfjei&dl=0)
+![본문 헤더 - Getting Started with Hugo](https://dl.dropboxusercontent.com/scl/fi/gvo9vryf9mqwi4of1h0ly/hugo-51-post-header.webp?rlkey=tvpqxkr0gwm7lt11ti8ijfjei&raw=1)
 
 ### 본문 커버 이미지 표시하기
 
 티스토리와 함께 블로그 테마로 참고하는 Velog에서는 본문 상단에
 커버 이미지를 표시합니다.
 
-![Velog 본문 헤더](https://dl.dropboxusercontent.com/scl/fi/1gh92qmne98sywr15ei15/hugo-52-velog-header.webp?rlkey=7fa9p2hp7jkesywcvza5yr82k&dl=0)
+![Velog 본문 헤더](https://dl.dropboxusercontent.com/scl/fi/1gh92qmne98sywr15ei15/hugo-52-velog-header.webp?rlkey=7fa9p2hp7jkesywcvza5yr82k&raw=1)
 
 
 제가 티스토리를 사용할 때는 커버 이미지가 눈에 띄지 않아 중요하게 생각하지 않았고
@@ -274,13 +274,13 @@ Book 테마에서 심심하게 느껴졌던 본문 상단에 헤더를 추가하
 커버 이미지를 적용하고 동일한 게시글에 들어가보면 헤더 아래에
 큼지막하게 커버 이미지가 노출됩니다.
 
-![본문 커버 이미지 - Getting Started with Hugo](https://dl.dropboxusercontent.com/scl/fi/x65dvdgm2mnwhjzh8uipl/hugo-53-book-cover.webp?rlkey=m9d06tpw6dkt0wnbbp7lullmf&dl=0)
+![본문 커버 이미지 - Getting Started with Hugo](https://dl.dropboxusercontent.com/scl/fi/x65dvdgm2mnwhjzh8uipl/hugo-53-book-cover.webp?rlkey=m9d06tpw6dkt0wnbbp7lullmf&raw=1)
 
 ## 푸터 영역 파악하기
 
 Book 테마의 기본 푸터 영역은 아래 이미지처럼 카피라이트 외에 보여지는 것이 없습니다.
 
-![Hugo Book 푸터 영역](https://dl.dropboxusercontent.com/scl/fi/ac4payhh900vfomy0gxgi/hugo-54-book-footer.webp?rlkey=m5t5x8xmgmqb0btay7nmjzshc&dl=0)
+![Hugo Book 푸터 영역](https://dl.dropboxusercontent.com/scl/fi/ac4payhh900vfomy0gxgi/hugo-54-book-footer.webp?rlkey=m5t5x8xmgmqb0btay7nmjzshc&raw=1)
 
 다시, 가장 기본이 되는 `baseof.html` 파일로 돌아가보겠습니다.
 
@@ -379,7 +379,7 @@ Velog와 같은 일반적인 블로그 플랫폼에서는 아래 이미지처럼
 이동하는 링크를 제공하여 현재 게시글에 관심있는 독자들이 다른 게시글을 연속해서 볼 수 있도록
 지원합니다.
 
-![Velog 이전, 다음 게시글 링크](https://dl.dropboxusercontent.com/scl/fi/ds1q718dur3j1k12fof7t/hugo-55-velog-prev-next.webp?rlkey=eexbteixibselrr653yy3qorw&dl=0)
+![Velog 이전, 다음 게시글 링크](https://dl.dropboxusercontent.com/scl/fi/ds1q718dur3j1k12fof7t/hugo-55-velog-prev-next.webp?rlkey=eexbteixibselrr653yy3qorw&raw=1)
 
 Book 테마의 푸터에서는 그러한 바로가기 링크가 보이지 않는데,
 이전에 `footer` 템플릿 하단에서 `docs/prev-next` 템플릿을 호출하던걸 보면
@@ -603,8 +603,8 @@ CSS 스타일에서 신경쓴 부분은 이전 게시글 링크 `.post-nav-prev`
 `docs/post-prev-next` 템플릿을 호출하도록 수정하면
 아래 이미지처럼 이전, 다음 게시글 링크가 표시됩니다.
 
-![NEXT >> (Hu)go Template Primer](https://dl.dropboxusercontent.com/scl/fi/6ujyg43trd2utnd18c6n4/hugo-56-post-next.webp?rlkey=el8enizgyonqoxi2jux2wl48y&dl=0)
-![Getting Started with Hugo << PREV](https://dl.dropboxusercontent.com/scl/fi/xj13r3jedux66nhgajd4j/hugo-57-post-prev.webp?rlkey=mfi2yeoftoe9ee9yb1grs2ikn&dl=0)
+![NEXT >> (Hu)go Template Primer](https://dl.dropboxusercontent.com/scl/fi/6ujyg43trd2utnd18c6n4/hugo-56-post-next.webp?rlkey=el8enizgyonqoxi2jux2wl48y&raw=1)
+![Getting Started with Hugo << PREV](https://dl.dropboxusercontent.com/scl/fi/xj13r3jedux66nhgajd4j/hugo-57-post-prev.webp?rlkey=mfi2yeoftoe9ee9yb1grs2ikn&raw=1)
 
 만약 이전 게시글이 없다면 "이전 게시글이 없습니다" 안내 문구와 함께 링크가 비활성화되고
 다음 게시글이 없다면 마찬가지로 링크가 비활성화됩니다.
@@ -648,7 +648,7 @@ CSS 스타일에서 신경쓴 부분은 이전 게시글 링크 `.post-nav-prev`
 CSS 스타일을 추가해줄 필요는 없습니다.
 태그 칩을 클릭하면 태그 페이지로 이동하는 것도 동일합니다.
 
-![태그 목록 [#go, #golang, #hugo, #development]](https://dl.dropboxusercontent.com/scl/fi/1emh4l8qibucohh08ws02/hugo-58-post-tags.webp?rlkey=44kcyrh2fkzdq4kcrsoi6lvib&dl=0)
+![태그 목록 [#go, #golang, #hugo, #development]](https://dl.dropboxusercontent.com/scl/fi/1emh4l8qibucohh08ws02/hugo-58-post-tags.webp?rlkey=44kcyrh2fkzdq4kcrsoi6lvib&raw=1)
 
 ### 댓글 기능 추가하기 (Disqus)
 
@@ -679,23 +679,23 @@ Disqus를 사용하려면 먼저 Disqus 사이트에 방문하여 요금제를 �
 (이미지를 클릭하면 이동합니다.)
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/r50aiy2tpou104i9dwm5v/hugo-59-disqus-pricing.webp?rlkey=toy12an5lob6o0zd5cungv4iz&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/r50aiy2tpou104i9dwm5v/hugo-59-disqus-pricing.webp?rlkey=toy12an5lob6o0zd5cungv4iz&raw=1"
   alt="Disqus Pricing"
   href="https://disqus.com/pricing/" >}}
 
 물론, 밑으로 조금 내리면 무료 플랜을 선택할 수 있습니다.
 
-![Disqus - We offer a free, ad-supported version of Disqus Comments to eligible publishers.](https://dl.dropboxusercontent.com/scl/fi/0dfmqyta1jummihk82zgd/hugo-60-disqus-free.webp?rlkey=qdhlrvjq2f2l0kegmuge4jnp9&dl=0)
+![Disqus - We offer a free, ad-supported version of Disqus Comments to eligible publishers.](https://dl.dropboxusercontent.com/scl/fi/0dfmqyta1jummihk82zgd/hugo-60-disqus-free.webp?rlkey=qdhlrvjq2f2l0kegmuge4jnp9&raw=1)
 
 계정을 만들고 로그인하면 새로운 사이트를 만들 수 있는 페이지로 이동합니다.
 사이트명은 기본적으로 어드민 페이지의 URL로 사용되는데 원한다면 URL만 수정할 수도 있습니다.
 
-![Disqus - Create a new site](https://dl.dropboxusercontent.com/scl/fi/xglt6xwvt1xge1b9hrf55/hugo-61-disqus-new-site.webp?rlkey=lqnvnxs7jjs5zq3gkr04872d3&dl=0)
+![Disqus - Create a new site](https://dl.dropboxusercontent.com/scl/fi/xglt6xwvt1xge1b9hrf55/hugo-61-disqus-new-site.webp?rlkey=lqnvnxs7jjs5zq3gkr04872d3&raw=1)
 
 카테고리는 아무거나 선택해서 다음으로 넘어가면 플랫폼을 선택하는 페이지가 나타납니다.
 아쉽게도 Jekyll은 있는데 Hugo가 없네요. 맨 아래에 `Install manually` 부분을 클릭해줍니다.
 
-![Disqus - What platform is your site on?](https://dl.dropboxusercontent.com/scl/fi/0gamdvt43dkf9rl9fjk2c/hugo-62-disqus-platform.webp?rlkey=o81ph3mded67j89w76gko924y&dl=0)
+![Disqus - What platform is your site on?](https://dl.dropboxusercontent.com/scl/fi/0gamdvt43dkf9rl9fjk2c/hugo-62-disqus-platform.webp?rlkey=o81ph3mded67j89w76gko924y&raw=1)
 
 그러면 웹사이트에 Disqus를 직접 추가할 수 있는 스크립트를 제공해줍니다.   
 (아래 스크립트를 그대로 가져다 쓰면 안되고 `<site-name>` 에 알맞은 URL이 들어가야 합니다.)
@@ -727,7 +727,7 @@ Disqus를 사용하려면 먼저 Disqus 사이트에 방문하여 요금제를 �
 
 그러면 아래 이미지처럼 푸터 영역에 Disqus UI가 나타납니다.
 
-![Disqus - What do you think? 0 Responses](https://dl.dropboxusercontent.com/scl/fi/wd9gveaxjkpln3grb4gv2/hugo-63-disqus-thread.webp?rlkey=m7d1fn0aadrrxx0rpsv37plok&dl=0)
+![Disqus - What do you think? 0 Responses](https://dl.dropboxusercontent.com/scl/fi/wd9gveaxjkpln3grb4gv2/hugo-63-disqus-thread.webp?rlkey=m7d1fn0aadrrxx0rpsv37plok&raw=1)
 
 만약 Disqus 댓글창이 바로 위에 있는 이전, 다음 게시글 링크와 너무 붙어있다고 생각된다면
 `#disqus_thread` 영역을 대상으로 `margin` 스타일을 추가할 수 있습니다.
@@ -823,7 +823,7 @@ document.addEventListener('DOMContentLoaded', function() {
 게시글에 접속해서 스크롤을 조금 내리면 아래 이미지처럼 진행도가 표시됩니다.
 스크롤 위치에 따라 왼쪽에서 시작해 오른쪽까지 파란색 진행도가 자연스럽게 채워집니다.
 
-![스크롤 진행도 표시](https://dl.dropboxusercontent.com/scl/fi/vatf7headlxbgwetyxdfk/hugo-64-scroll-progress.webp?rlkey=0t0kjbwzcr1k3a389rqv5e9wi&dl=0)
+![스크롤 진행도 표시](https://dl.dropboxusercontent.com/scl/fi/vatf7headlxbgwetyxdfk/hugo-64-scroll-progress.webp?rlkey=0t0kjbwzcr1k3a389rqv5e9wi&raw=1)
 
 ### 최신글 표시하기
 
@@ -950,7 +950,7 @@ Hugo 설정에서 `BookMenu.recentPosts` 가 `true` 일 경우에만 표시되�
 `config.yaml` 과 같은 설정 파일에서 `BookMenu.recentPosts` 키값을 추가하면
 아래 이미지와 같이 카테고리 목록 아래에 최신글 목록이 최대 5개까지 표시됩니다.
 
-![최신글](https://dl.dropboxusercontent.com/scl/fi/8s3vk9617fzi4ljcxrl48/hugo-65-recent-posts.webp?rlkey=wis8xi2x2fw7jn5tj2oujo4rt&dl=0)
+![최신글](https://dl.dropboxusercontent.com/scl/fi/8s3vk9617fzi4ljcxrl48/hugo-65-recent-posts.webp?rlkey=wis8xi2x2fw7jn5tj2oujo4rt&raw=1)
 
 ## 마치며
 

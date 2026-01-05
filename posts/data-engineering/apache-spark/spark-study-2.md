@@ -5,7 +5,7 @@ layout: "post"
 description: >
   Apache Spark의 설치와 PySpark 실행 과정을 다루며, JDK와 HDFS 설정부터 호스트명 오류 해결까지 단계별로 안내합니다.
   또한, HDFS 실행 중 발생한 호스트명과 관련된 오류를 해결하는 과정을 공유합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "Spark Shell", "JDK", "Hadoop", "HDFS", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
 ---
@@ -18,7 +18,7 @@ tags: ["Apache Spark", "Spark Shell", "JDK", "Hadoop", "HDFS", "PySpark", "데�
 ### Spark 설치
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/ziy6h7z1oxy7puilm5ml2/spark-03-download-spark.webp?rlkey=bv8ckikaauinh733icd2l9gem&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/ziy6h7z1oxy7puilm5ml2/spark-03-download-spark.webp?rlkey=bv8ckikaauinh733icd2l9gem&raw=1"
   alt="Download Apache Spark"
   href="https://spark.apache.org/downloads.html" >}}
 
@@ -28,7 +28,7 @@ tags: ["Apache Spark", "Spark Shell", "JDK", "Hadoop", "HDFS", "PySpark", "데�
 가 나타난다. 해당 링크로 이동하면 아래와 같이 Hadoop 관련 바이너리 파일이 포함된 압축 파일의 설치 경로를 확인할 수 있다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/20hbdfye2kl3jvmytp6bk/spark-04-download-spark-tgz.webp?rlkey=o7zeq22r59epazjwef0ck0s10&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/20hbdfye2kl3jvmytp6bk/spark-04-download-spark-tgz.webp?rlkey=o7zeq22r59epazjwef0ck0s10&raw=1"
   alt="https://www.apache.org/dyn/closer.lua/spark/spark-4.0.0/spark-4.0.0-bin-hadoop3.tgz"
   href="https://www.apache.org/dyn/closer.lua/spark/spark-4.0.0/spark-4.0.0-bin-hadoop3.tgz" >}}
 
@@ -76,7 +76,7 @@ Hadoop은 다운로드할 때 지정한 것과 같은 3.4 버전을 설치하고
 ### Java 설치
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/ksrg6fvzag4uxt2foh65e/spark-05-homebrew-openjdk17.webp?rlkey=as293mym3jrl2097r83fqo4fp&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/ksrg6fvzag4uxt2foh65e/spark-05-homebrew-openjdk17.webp?rlkey=as293mym3jrl2097r83fqo4fp&raw=1"
   alt="Homebrew Formulae > openjdk@17"
   href="https://formulae.brew.sh/formula/openjdk@17" >}}
 
@@ -116,7 +116,7 @@ OpenJDK 64-Bit Server VM Homebrew (build 17.0.15+0, mixed mode, sharing)
 ### Hadoop 설치
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/z3qvarefsly6np0p6y5y3/spark-06-download-hadoop-tgz.webp?rlkey=pp1nflw57fl14iur748zkp2td&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/z3qvarefsly6np0p6y5y3/spark-06-download-hadoop-tgz.webp?rlkey=pp1nflw57fl14iur748zkp2td&raw=1"
   alt="https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.4.0/hadoop-3.4.0-aarch64.tar.gz"
   href="https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.4.0/hadoop-3.4.0-aarch64.tar.gz" >}}
 
@@ -371,7 +371,7 @@ scala>
 
 메시지에서 알려주는대로 `http://localhost:4040` 경로에 접근하니까 아래와 같은 웹 UI 화면을 조회할 수 있었다.
 
-![Spark Jobs](https://dl.dropboxusercontent.com/scl/fi/pmbfig1sp0s22xa387bie/spark-07-spark-jobs.webp?rlkey=y10mey04y7rpfm7nacplypcie&dl=0)
+![Spark Jobs](https://dl.dropboxusercontent.com/scl/fi/pmbfig1sp0s22xa387bie/spark-07-spark-jobs.webp?rlkey=y10mey04y7rpfm7nacplypcie&raw=1)
 
 ### Spark 디렉터리 구조
 
@@ -412,7 +412,7 @@ Java, Python, R, Scala에 대한 예제들을 제공한다.
 ### PyPi 설치
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/svtj2gv0qt6yg4r4440kq/spark-08-pyspark-pypi.webp?rlkey=jsyxby5oeh4ty6dvzo40phtly&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/svtj2gv0qt6yg4r4440kq/spark-08-pyspark-pypi.webp?rlkey=jsyxby5oeh4ty6dvzo40phtly&raw=1"
   alt="Apache Spark Python API > Project description"
   href="https://pypi.org/project/pyspark/" >}}
 

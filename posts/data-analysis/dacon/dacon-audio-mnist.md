@@ -6,7 +6,7 @@ description: >
   음성 녹음 데이터를 0~9 숫자로 분류하는 Audio MNIST 대회 참가 후기.
   Mel Spectrogram과 MFCC 특징 추출 방식 비교, ResNet 기반 모델 학습,
   그리고 5-Fold 교차검증과 앙상블을 통해 accuracy 0.9765를 달성한 과정을 공유합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/hda0zjli52y1voal1r2qx/audio-mnist-00-cover.webp?rlkey=1mvu9rxa9tlw3ihekpg2rhfe3&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/hda0zjli52y1voal1r2qx/audio-mnist-00-cover.webp?rlkey=1mvu9rxa9tlw3ihekpg2rhfe3&raw=1"
 categories: ["Data Analysis", "Dacon"]
 tags: ["DACON", "음성 분류", "Audio MNIST", "Mel Spectrogram", "MFCC", "ResNet", "딥러닝", "앙상블", "교차검증", "Librosa"]
 ---
@@ -49,15 +49,15 @@ length: 0.64225 secs
 - **MFCC**: Mel Spectrogram에 대해 행렬을 압축해서 표현해주는 DCT 연산을 수행합니다.
 - Mel Spectrogram은 한정적인 도메인에서, MFCC는 일반적인 상황에서 더 좋은 성능을 보여줍니다.
 
-![Mel Spectrogram vs MFCC](https://dl.dropboxusercontent.com/scl/fi/zjzdj5tkzy68lc647wgrv/audio-mnist-01-spectrum.webp?rlkey=byf0633g0kvto04c9z125pehu&dl=0)
+![Mel Spectrogram vs MFCC](https://dl.dropboxusercontent.com/scl/fi/zjzdj5tkzy68lc647wgrv/audio-mnist-01-spectrum.webp?rlkey=byf0633g0kvto04c9z125pehu&raw=1)
 
 💨 모델 학습을 위해 짧은 길이의 오디오에 padding을 붙이고 np.array로 변환한 후 랜덤한 데이터 시각화했습니다.
 
-![Mel Spectrogram vs MFCC (Split)](https://dl.dropboxusercontent.com/scl/fi/dcysktlalt7u6copa7c8s/audio-mnist-02-spectrum-split.webp?rlkey=5y1mpuqdnrbiltn9kvenfjg5i&dl=0)
+![Mel Spectrogram vs MFCC (Split)](https://dl.dropboxusercontent.com/scl/fi/dcysktlalt7u6copa7c8s/audio-mnist-02-spectrum-split.webp?rlkey=5y1mpuqdnrbiltn9kvenfjg5i&raw=1)
 
 ## 모델 학습
 
-![ResNet](https://dl.dropboxusercontent.com/scl/fi/hd5t7j2j75ke28fr0qtbx/audio-mnist-03-resnet.webp?rlkey=fwtp4ayvmhz2jin0i8c7v5a89&dl=0)
+![ResNet](https://dl.dropboxusercontent.com/scl/fi/hd5t7j2j75ke28fr0qtbx/audio-mnist-03-resnet.webp?rlkey=fwtp4ayvmhz2jin0i8c7v5a89&raw=1)
 
 - ResNet의 ResBlock을 응용하여 모델 생성했습니다.
 - 5-Fold 교차검증을 실시하면서, 각각의 동일한 모델에 Mel Spectrogram, MFCC feature를 학습시켜  

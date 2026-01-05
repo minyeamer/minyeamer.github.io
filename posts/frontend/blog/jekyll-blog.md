@@ -5,7 +5,7 @@ layout: "post"
 description: >
   깃허브 블로그를 시작하는 가이드입니다. Jekyll과 Chirpy 테마를 활용한 깃허브 블로그 생성, 설정, 배포 방법을 단계별로 설명합니다.
   Github Pages 설정, YAML 설정 파일 커스터마이징, Front Matter를 이용한 포스트 작성 방법을 다룹니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/8dqo0a6mlauwmjl6chzmn/jekyll-00-cover.webp?rlkey=mo6frv75mjkbashexx0suinbc&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/8dqo0a6mlauwmjl6chzmn/jekyll-00-cover.webp?rlkey=mo6frv75mjkbashexx0suinbc&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["깃허브 블로그", "Jekyll", "Chirpy", "Github", "Github Pages", "블로그 만들기", "Blog", "개발 블로그"]
 ---
@@ -39,7 +39,7 @@ Jekyll 테마는 아래와 같은 사이트를 참조하여 마음에 드는 UI�
 
 {{< bookmark
   url="http://jekyllthemes.org"
-  image="https://dl.dropboxusercontent.com/scl/fi/5syi6sox2mkunc9bsixjw/jekyll-01-theme.webp?rlkey=jf12gq51osxhaadrajsjpvqgs&dl=0" >}}
+  image="https://dl.dropboxusercontent.com/scl/fi/5syi6sox2mkunc9bsixjw/jekyll-01-theme.webp?rlkey=jf12gq51osxhaadrajsjpvqgs&raw=1" >}}
 
 무료로 가져다 사용할 수 있는 여러 테마 중 개인적으로 마음에 드는 Chirpy 테마를 활용해 보겠습니다.
 
@@ -64,14 +64,14 @@ Chirpy 테마를 설치하고 배포하는 방법엔 두 가지 방식이 있습
 
 저는 Jekyll에 친숙한 편이 아니기 때문에 1번째 방법을 통해 설치를 진행했습니다.
 
-![Fork chirpy-starter](https://dl.dropboxusercontent.com/scl/fi/fp7vdli18uppb0sigow09/jekyll-02-chirpy-starter.webp?rlkey=whbhghg05q7wrlx2oyh2bdnpo&dl=0)
+![Fork chirpy-starter](https://dl.dropboxusercontent.com/scl/fi/fp7vdli18uppb0sigow09/jekyll-02-chirpy-starter.webp?rlkey=whbhghg05q7wrlx2oyh2bdnpo&raw=1)
 
 이때, 저장소 이름은 `<GH_USERNAME>.github.io` 형식으로 지정해야 하며,
 `<GH_USERNAME>`에는 깃허브 아이디를 입력하면 됩니다.
 
 이렇게 저장소를 생성하면 자동으로 배포까지 되는데, `Actions` 탭을 통해 아래처럼 진행사항을 확인할 수 있습니다.
 
-![Github Actions](https://dl.dropboxusercontent.com/scl/fi/ovbsupppdfl0bzcp0kyth/jekyll-03-github-actions.webp?rlkey=hrjsvlz5g3gmqmkmtr0n48ou3&dl=0)
+![Github Actions](https://dl.dropboxusercontent.com/scl/fi/ovbsupppdfl0bzcp0kyth/jekyll-03-github-actions.webp?rlkey=hrjsvlz5g3gmqmkmtr0n48ou3&raw=1)
 
 빌드 및 배포가 완료되면 `https://<저장소 이름>` 주소를 통해 블로그 페이지에 접근할 수 있는데,
 2022년 8월 기준에서 해당 테마를 가져온 직후엔
@@ -80,7 +80,7 @@ Chirpy 테마를 설치하고 배포하는 방법엔 두 가지 방식이 있습
 이것은 현재 Github Pages가 스타일이 적용되지 않는 `main` 브랜치를 대상으로 하고 있는 것이 원인으로,
 `Settings` 탭 아래 `Pages` 메뉴를 클릭했을 때 보이는 `Branch` 부분을 `gh-pages`로 수정하면 됩니다.
 
-![Github Pages](https://dl.dropboxusercontent.com/scl/fi/szt5s3atuar828y1afigm/jekyll-04-github-pages.webp?rlkey=s6qr5ediy0i7mh9a0sbe610pk&dl=0)
+![Github Pages](https://dl.dropboxusercontent.com/scl/fi/szt5s3atuar828y1afigm/jekyll-04-github-pages.webp?rlkey=s6qr5ediy0i7mh9a0sbe610pk&raw=1)
 
 ## 블로그 설정하기
 

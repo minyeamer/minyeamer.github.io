@@ -6,7 +6,7 @@ description: >
   Apache Spark의 다양한 데이터 소스를 다루며,
   Parquet, JSON, CSV, Avro 등 형식의 데이터 읽기/쓰기를 단계별로 안내합니다.
   빅데이터 처리를 위한 실용적인 기법을 배우세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "Data Sources", "Parquet", "JSON", "CSV", "Avro", "Spark SQL", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
 ---

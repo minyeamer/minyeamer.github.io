@@ -6,8 +6,8 @@ description: >
   Hugo와 PaperMod 테마를 이용한 깃허브 블로그 구축 가이드입니다.
   Hugo 설치, Github 저장소 생성, Submodule 연동, 테마 설정, 포스트 작성, Github Pages 배포 과정을 설명합니다.
   쉘 스크립트를 활용한 자동 배포 방법도 포함합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "PaperMod", "깃허브 블로그", "Github", "Github Pages", "Submodule", "블로그 만들기", "Blog", "개발 블로그"]
 ---
@@ -42,7 +42,7 @@ Jekyll 블로그를 사용했을 당시 적용했던 Chirpy 테마는 사이드 
 결국, 저는 모든 테마를 둘러본 후 다루기 쉬워보이면서 외적으로도 괜찮았던
 [PaperMod 테마](https://themes.gohugo.io/)를 선택했습니다.
 
-![PaperMod](https://dl.dropboxusercontent.com/scl/fi/6sm8m1g440zwxc25id6eo/hugo-2022-01-paper-mod.webp?rlkey=jbnntusceupjz0388brp4x75l&dl=0)
+![PaperMod](https://dl.dropboxusercontent.com/scl/fi/6sm8m1g440zwxc25id6eo/hugo-2022-01-paper-mod.webp?rlkey=jbnntusceupjz0388brp4x75l&raw=1)
 
 ## Hugo 블로그 구성하기
 
@@ -213,7 +213,7 @@ Hugo는 `hugo -t <THEMES>` 명령어를 통해 로컬에서 페이지 렌더링�
 배포에 앞서, 깃허브에서 제공하는 Github Pages가 `gh-pages` 브랜치를 참고하도록
 아래 그림과 같이 저장소 설정에서 빌드 및 배포 대상 브랜치를 지정해주어야 합니다.
 
-![Github Pages](https://dl.dropboxusercontent.com/scl/fi/0cnmj22bhifufb80kso8o/hugo-2022-02-github-pages.webp?rlkey=c3gt7e0vyyanv86x81oxj7v9x&dl=0)
+![Github Pages](https://dl.dropboxusercontent.com/scl/fi/0cnmj22bhifufb80kso8o/hugo-2022-02-github-pages.webp?rlkey=c3gt7e0vyyanv86x81oxj7v9x&raw=1)
 
 위와 같이 수동으로 배포할 경우 두 번의 push 과정을 거쳐야 합니다.
 매번 이 과정을 수행하는 것은 불편하기 때문에 쉘 스크립트를 작성하여 작업을 단순화합니다.

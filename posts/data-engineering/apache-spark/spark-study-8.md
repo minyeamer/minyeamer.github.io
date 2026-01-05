@@ -6,7 +6,7 @@ description: >
   Apache Spark의 고차 함수와 사용자 정의 함수를 다루며,
   UDF 생성부터 Pandas UDF, transform, filter 등 고차 함수 활용까지 단계별로 안내합니다.
   빅데이터 분석과 데이터 엔지니어링을 위한 강력한 도구를 습득하고 실무에 적용하세요.
-cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "고차 함수", "UDF", "Pandas UDF", "Spark SQL", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
 ---
@@ -120,7 +120,7 @@ df.select("id", cubed_udf(col("id"))).show()
 Stage 0에서 `ArrowEvalPython` 연산이 Pandas UDF를 평가하는 단계이다.
 
 {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/kn9ih42tqsbxfskwq5vj4/spark-19-pandas-udf.webp?rlkey=f1yvfjog5fvxjyhcvjugsd1id&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/kn9ih42tqsbxfskwq5vj4/spark-19-pandas-udf.webp?rlkey=f1yvfjog5fvxjyhcvjugsd1id&raw=1"
   alt="WholeStageCodegen (1) -> ArrowEvalPython -> WholeStageCodeGen (2) -> mapPartitionsInternal"
   max-width="432px"
   align="center" >}}

@@ -5,7 +5,7 @@ layout: "post"
 description: >
   네이버 스마트스토어센터 자동 데이터 수집을 위한 로그인 구현 시리즈 첫 번째입니다.
   API를 활용한 데이터 수집 방식, 쿠키 기반 인증, requests 모듈을 통한 자동화 구현의 기초를 설명합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&raw=1"
 categories: ["Data Engineering", "Crawling"]
 tags: ["크롤링", "Python", "네이버", "스마트스토어", "로그인 자동화", "requests", "데이터 수집", "쿠키 인증", "웹 자동화"]
 ---
@@ -35,7 +35,7 @@ tags: ["크롤링", "Python", "네이버", "스마트스토어", "로그인 자�
 네이버 쇼핑에서 표시되는 상품의 순위는 검색인기도를 기준으로 결정됩니다.
 키워드별 상위권 상품의 검색인기도를 가져오는 것을 예시로 데이터 수집을 진행해보겠습니다.
 
-![스마트스토어 검색인기도 - 검색결과 상위 상품](https://dl.dropboxusercontent.com/scl/fi/idrkdsijc0s2pvexje2pa/smartstore-login-01-popularity-ui.webp?rlkey=h5ksw8y9k8x2xxkiygrb4c5aj&dl=0)
+![스마트스토어 검색인기도 - 검색결과 상위 상품](https://dl.dropboxusercontent.com/scl/fi/idrkdsijc0s2pvexje2pa/smartstore-login-01-popularity-ui.webp?rlkey=h5ksw8y9k8x2xxkiygrb4c5aj&raw=1)
 
 위 이미지에서 왼쪽 부분은 실제 UI, 오른쪽 부분은 HTML 소스 입니다.
 
@@ -48,7 +48,7 @@ tags: ["크롤링", "Python", "네이버", "스마트스토어", "로그인 자�
 하지만 네이버의 대부분의 웹페이지는 API를 기반으로 가져온 데이터로 구성되기 때문에
 해당 API를 활용할 수 있다면 더욱 효율적인 데이터 수집이 가능합니다.
 
-!["relevance":172,"similarity":22,"quality":93](https://dl.dropboxusercontent.com/scl/fi/7930bw0j9zhxgucy2oeqx/smartstore-login-02-popularity-json.webp?rlkey=q7sj2tvfnayfkim2fzzv3iu10&dl=0)
+!["relevance":172,"similarity":22,"quality":93](https://dl.dropboxusercontent.com/scl/fi/7930bw0j9zhxgucy2oeqx/smartstore-login-02-popularity-json.webp?rlkey=q7sj2tvfnayfkim2fzzv3iu10&raw=1)
 
 서버에서 가져오는 데이터를 확인할 때는 주로 개발자 도구의 네트워크 탭을 활용합니다.
 웹페이지 로드 시 가져오는 문서를 확인하다보면 위 이미지와 같이 목표로 하는 데이터를 보내주는 API를 발견할 수 있습니다.
@@ -76,7 +76,7 @@ tags: ["크롤링", "Python", "네이버", "스마트스토어", "로그인 자�
 개발자 도구 네트워크 탭에서 하나의 문서를 클릭하고 Headers 탭에서 스크롤을 내리면
 아래와 같은 Request Headers 정보를 확인할 수 있습니다.
 
-![cookie: NNB=...; nid_inf=...; NID_AUT=...;](https://dl.dropboxusercontent.com/scl/fi/3101t7wp01cjoh1soye45/smartstore-login-03-popularity-headers.webp?rlkey=mfgbtgk7ha662d1wqb11t8fox&dl=0)
+![cookie: NNB=...; nid_inf=...; NID_AUT=...;](https://dl.dropboxusercontent.com/scl/fi/3101t7wp01cjoh1soye45/smartstore-login-03-popularity-headers.webp?rlkey=mfgbtgk7ha662d1wqb11t8fox&raw=1)
 
 서버와 클라이언트 간 네트워크 요청 시 서버는 클라이언트의 정보를 확인할 목적으로
 클라이언트에 쿠키라는 암호화된 인증 정보를 남깁니다.
@@ -124,11 +124,11 @@ response = requests.get(url, headers=headers)
 
 {{% columns ratio="65:35" %}}
 - {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/dioekdylr9hg6mi6rj9f6/smartstore-login-00-main.webp?rlkey=uf5euqirww7zb8uwp1dayl87r&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/dioekdylr9hg6mi6rj9f6/smartstore-login-00-main.webp?rlkey=uf5euqirww7zb8uwp1dayl87r&raw=1"
   alt="스마트스토어 홈페이지 - 로그인하기" >}}
 <--->
 - {{< image
-  src="https://dl.dropboxusercontent.com/scl/fi/ss8nhi6428fxn0n4bpx4y/smartstore-login-04-login-ui.webp?rlkey=3klo2immbjzwmd5uxqbqxl24c&dl=0"
+  src="https://dl.dropboxusercontent.com/scl/fi/ss8nhi6428fxn0n4bpx4y/smartstore-login-04-login-ui.webp?rlkey=3klo2immbjzwmd5uxqbqxl24c&raw=1"
   alt="이메일/판매자 아이디 로그인" >}}
 {{% /columns %}}
 

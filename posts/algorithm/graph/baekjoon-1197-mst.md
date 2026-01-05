@@ -5,8 +5,8 @@ layout: "post"
 description: >
   백준 1197 최소 스패닝 트리(MST) 문제를 DFS, 크루스칼, 프림 알고리즘으로 차례대로 접근하며 시행착오를 겪은 과정을 상세히 기록했습니다.
   각 알고리즘의 한계와 개선 방향, 그리고 최종 해결까지의 여정을 코드와 함께 공유합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/urp006mklessb60476rk9/baekjoon-cover.webp?rlkey=l2rycs6gxicqd29c4xr0e8ogd&dl=0"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/tg1jfh6uc53wykiuden0x/baekjoon-cover-og.webp?rlkey=ptw8l3wroyh530mzhhx7mi5tf&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/urp006mklessb60476rk9/baekjoon-cover.webp?rlkey=l2rycs6gxicqd29c4xr0e8ogd&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/tg1jfh6uc53wykiuden0x/baekjoon-cover-og.webp?rlkey=ptw8l3wroyh530mzhhx7mi5tf&raw=1"
 categories: ["Algorithm", "Graph"]
 tags: ["백준", "최소 스패닝 트리", "MST", "DFS", "크루스칼 알고리즘", "프림 알고리즘", "Python", "알고리즘", "Union-Find", "Heap", "백준 Gold 4"]
 ---
@@ -15,7 +15,7 @@ tags: ["백준", "최소 스패닝 트리", "MST", "DFS", "크루스칼 알고�
   url="https://www.acmicpc.net/problem/1197"
   title="1197번: 최소 스패닝 트리"
   description="그래프가 주어졌을 때, 그 그래프의 최소 스패닝 트리를 구하는 프로그램을 작성하시오. 최소 스패닝 트리는, 주어진 그래프의 모든 정점들을 연결하는 부분 그래프 중에서 그 가중치의 합이 최소인 트리를 말한다."
-  image="https://dl.dropboxusercontent.com/scl/fi/tg1jfh6uc53wykiuden0x/baekjoon-00-cover-og.webp?rlkey=ptw8l3wroyh530mzhhx7mi5tf&dl=0"
+  image="https://dl.dropboxusercontent.com/scl/fi/tg1jfh6uc53wykiuden0x/baekjoon-00-cover-og.webp?rlkey=ptw8l3wroyh530mzhhx7mi5tf&raw=1"
   fetch="false" >}}
 
 해당 문제는 n개의 정점들에 대한 간선들 중에서 가장 가중치가 작은 경로의 가중치를 찾는 것이다.  

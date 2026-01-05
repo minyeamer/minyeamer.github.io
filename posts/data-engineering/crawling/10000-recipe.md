@@ -7,7 +7,7 @@ description: >
   카테고리, 레시피 목록, 레시피 상세정보, 평점, 요리 후기, 댓글 등 다양한 데이터를
   BeautifulSoup과 requests로 수집하고 JSON 구조로 변환하는 과정을 다룹니다.
   데이터베이스 스키마 설계부터 실제 크롤링 구현까지 완전한 예제 코드를 제공합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/vjq1dd2vnsj3kwa7jpy6m/10000-recipe-00-main.webp?rlkey=rdv1pqcayg0334gp7zdu522z0&dl=0"
+cover: "https://dl.dropboxusercontent.com/scl/fi/vjq1dd2vnsj3kwa7jpy6m/10000-recipe-00-main.webp?rlkey=rdv1pqcayg0334gp7zdu522z0&raw=1"
 categories: ["Data Engineering", "Crawling"]
 tags: ["크롤링", "Python", "BeautifulSoup", "requests", "웹 스크래핑", "데이터 수집", "JSON", "웹 자동화", "만개의 레시피"]
 ---
@@ -21,7 +21,7 @@ tags: ["크롤링", "Python", "BeautifulSoup", "requests", "웹 스크래핑", "
 만개의 레시피의 각 페이지를 살펴보면서 추가적으로 가져갈만한 데이터가 있음을 확인하여
 우선적으로 테이블 관계 및 스키마를 구성해보았습니다.
 
-![만개의 레시피 스키마](https://dl.dropboxusercontent.com/scl/fi/gqevx9a2rxsog4r031cks/10000-recipe-01-schema.webp?rlkey=776vsnrf34208z7zxdzbkewff&dl=0)
+![만개의 레시피 스키마](https://dl.dropboxusercontent.com/scl/fi/gqevx9a2rxsog4r031cks/10000-recipe-01-schema.webp?rlkey=776vsnrf34208z7zxdzbkewff&raw=1)
 
 초기에 만개의 레시피와 공공데이터를 데이터 소스로 삼았기 때문에,
 만개의 레시피에 대한 DB `_10000`, 공공데이터에 대한 DB `food`로 구성했습니다.
