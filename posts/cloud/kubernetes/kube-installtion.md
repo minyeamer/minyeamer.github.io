@@ -10,7 +10,10 @@ cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernete
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&raw=1"
 categories: ["Cloud", "Kubernetes"]
 tags: ["Kubernetes", "쿠버네티스 설치", "Ubuntu 24.04", "kubeadm", "containerd", "Calico", "CNI", "kubectl", "kubelet", "클러스터 구성"]
+series: ["Kubernetes 배우기"]
 ---
+
+{{< series "Kubernetes 배우기" >}}
 
 ## 실습 개요
 

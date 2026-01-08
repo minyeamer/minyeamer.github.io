@@ -9,7 +9,10 @@ cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-c
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Fusejs", "검색 인덱스", "검색 페이지", "Hugo 검색", "휴고 테마", "EventListener", "window", "DocumentFragment", "JavaScript", "Blog", "Hugo Book"]
+series: ["Hugo 블로그 만들기"]
 ---
+
+{{< series "Hugo 블로그 만들기" "Hugo 블로그 만들기 \([0-9]+\) - " >}}
 
 {{% hint info %}}
 <i class="fa-solid fa-circle-info"></i> 대상 독자

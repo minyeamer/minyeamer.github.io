@@ -9,7 +9,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/ur1r3hzxm11trh1p63y4o/shop-review-00-cover.webp?rlkey=f2nnfvwif6byhu0lbvb6bd0sh&raw=1"
 categories: ["Data Analysis", "Dacon"]
 tags: ["DACON", "NLP", "텍스트 분류", "감정 분석", "KoELECTRA", "RoBERTa", "데이터 증강", "앙상블", "역번역", "NLPAUG", "쇼핑몰 리뷰"]
+series: ["DACON 경진대회"]
 ---
+
+{{< series "DACON 경진대회" >}}
 
 {{< bookmark "https://dacon.io/competitions/official/235938/overview/description" >}}
 

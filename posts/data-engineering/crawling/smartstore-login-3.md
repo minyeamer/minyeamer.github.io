@@ -8,7 +8,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&raw=1"
 categories: ["Data Engineering", "Crawling"]
 tags: ["크롤링", "Python", "네이버", "스마트스토어", "OAuth 인증", "GraphQL", "2단계 인증", "requests", "쿠키 인증", "웹 자동화"]
+series: ["스마트스토어센터 로그인 구현하기"]
 ---
+
+{{< series "스마트스토어센터 로그인 구현하기" "\[Python\] " >}}
 
 앞선 네이버 로그인 구현 과정을 통해 네이버 로그인에 대해 이해하고
 스마트스토어센터 로그인 결과로 얻을 수 있는 쿠키 값의 일부를 획득했습니다.

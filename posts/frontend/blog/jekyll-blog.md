@@ -1,5 +1,5 @@
 ---
-title: "깃허브 블로그 시작하기 | Jekyll Chirpy 테마 설치 및 배포 가이드"
+title: "깃허브 블로그 시작하기 - Jekyll Chirpy 테마 설치 및 배포 가이드"
 date: "2022-08-30T16:28:43+09:00"
 layout: "post"
 description: >
@@ -8,7 +8,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/8dqo0a6mlauwmjl6chzmn/jekyll-00-cover.webp?rlkey=mo6frv75mjkbashexx0suinbc&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["깃허브 블로그", "Jekyll", "Chirpy", "Github", "Github Pages", "블로그 만들기", "Blog", "개발 블로그"]
+series: ["깃허브 블로그 만들기"]
 ---
+
+{{< series "깃허브 블로그 만들기" "깃허브 블로그 만들기 \([0-9]+\) - " >}}
 
 블로그를 처음 시작함에 있어서 모든 것이 준비된 호스팅 서비스의 편의성은 무시할 수 없습니다.
 저도 처음엔 코드를 직접 건드리는 자유도 높은 방식의 블로그에 진입 장벽을 느끼고

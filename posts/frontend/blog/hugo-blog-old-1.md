@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 [2022년] (1) - PaperMod 테마 설치 및 Github Pages 배포"
+title: "깃허브 블로그 만들기 (1) - PaperMod 테마 설치 및 Github Pages 배포"
 date: "2022-09-08T12:02:32+09:00"
 layout: "post"
 description: >
@@ -10,7 +10,10 @@ cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-c
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "PaperMod", "깃허브 블로그", "Github", "Github Pages", "Submodule", "블로그 만들기", "Blog", "개발 블로그"]
+series: ["깃허브 블로그 만들기"]
 ---
+
+{{< series "깃허브 블로그 만들기" "깃허브 블로그 만들기 \([0-9]+\) - " >}}
 
 얼마 전, 티스토리 블로그에서 [Jekyll 블로그](https://minyeamer.github.io/blog/jekyll-blog/)로 이동했는데,
 처음 기대했던 submodule을 활용한 효율적인 저장소 연동에서 어려움을 겪고 다른 대안을 탐색하게 되었습니다.

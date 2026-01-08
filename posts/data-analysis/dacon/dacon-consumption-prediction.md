@@ -9,7 +9,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/a9p1jkt6m3c44nigy5lnd/consumption-prediction-00-cover.webp?rlkey=4f4szfbtri7noe9lw8tw11bp4&raw=1"
 categories: ["Data Analysis", "Dacon"]
 tags: ["DACON", "소비 예측", "회귀 모델", "EDA", "데이터 분석", "Ensemble", "Soft Voting", "Optuna", "LGBM", "XGBoost", "CatBoost"]
+series: ["DACON 경진대회"]
 ---
+
+{{< series "DACON 경진대회" >}}
 
 {{< bookmark "https://dacon.io/competitions/official/235893/codeshare/4921" >}}
 

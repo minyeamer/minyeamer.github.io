@@ -8,7 +8,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&raw=1"
 categories: ["Data Engineering", "Crawling"]
 tags: ["크롤링", "Python", "네이버 로그인", "RSA 암호화", "requests", "session_keys", "encpw", "bvsd", "lzstring", "웹 자동화"]
+series: ["스마트스토어센터 로그인 구현하기"]
 ---
+
+{{< series "스마트스토어센터 로그인 구현하기" "\[Python\] " >}}
 
 이번 게시글에서는 스마트스토어센터 페이지에서 데이터를 수집하는 자동화 프로그램을 제작하기 위한
 첫 번째 과정으로 네이버 로그인을 구현할 것입니다.

@@ -9,7 +9,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/hda0zjli52y1voal1r2qx/audio-mnist-00-cover.webp?rlkey=1mvu9rxa9tlw3ihekpg2rhfe3&raw=1"
 categories: ["Data Analysis", "Dacon"]
 tags: ["DACON", "음성 분류", "Audio MNIST", "Mel Spectrogram", "MFCC", "ResNet", "딥러닝", "앙상블", "교차검증", "Librosa"]
+series: ["DACON 경진대회"]
 ---
+
+{{< series "DACON 경진대회" >}}
 
 {{< bookmark "https://dacon.io/competitions/official/235905/overview/description" >}}
 

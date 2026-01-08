@@ -9,7 +9,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "Connection", "Hook", "Docker Compose", "Postgres", "Custom Hook", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
+series: ["Apache Airflow 배우기"]
 ---
+
+{{< series "Apache Airflow 배우기" "Apache Airflow - " >}}
 
 ## Docker Compose 이해
 - 목적 : 1개 이상의 도커 컨테이너 생성 시 컨테이너들의 설정을 관리할 수 있도록 해주는 기능

@@ -9,7 +9,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/iafnblb6k95kbw7bwn2xj/spark-00-cover.webp?rlkey=6995tacnu3mvr7s31akl5sca6&raw=1"
 categories: ["Data Engineering", "Apache Spark"]
 tags: ["Apache Spark", "Data Sources", "Parquet", "JSON", "CSV", "Avro", "Spark SQL", "PySpark", "데이터 엔지니어링", "스파크", "Study"]
+series: ["Apache Spark 배우기"]
 ---
+
+{{< series "Apache Spark 배우기" "Apache Spark - " >}}
 
 ## Data Source API
 

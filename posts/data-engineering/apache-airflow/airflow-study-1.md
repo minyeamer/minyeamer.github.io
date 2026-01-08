@@ -8,7 +8,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/8oxi6rw0kesl9l3egs78s/airflow-00-cover.webp?rlkey=6abx67jiweasmlwehj4o4gdle&raw=1"
 categories: ["Data Engineering", "Apache Airflow"]
 tags: ["Apache Airflow", "Airflow 설치", "Docker", "Docker Compose", "데이터 엔지니어링", "에어플로우", "Python", "Study"]
+series: ["Apache Airflow 배우기"]
 ---
+
+{{< series "Apache Airflow 배우기" "Apache Airflow - " >}}
 
 ## Airflow란?
 - 워크플로우를 만들고 관리하기 위한 목적의 파이썬 기반 오픈소스 플랫폼

@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 [2022년] (3) - PaperMod 테마 커스터마이징"
+title: "깃허브 블로그 만들기 (3) - PaperMod 테마 커스터마이징"
 date: "2022-09-08T15:52:12+09:00"
 layout: "post"
 description: >
@@ -11,7 +11,10 @@ cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-c
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "PaperMod", "Go Template", "KaTex", "검색 엔진 최적화", "블로그 만들기", "Blog", "개발 블로그"]
+series: ["깃허브 블로그 만들기"]
 ---
+
+{{< series "깃허브 블로그 만들기" "깃허브 블로그 만들기 \([0-9]+\) - " >}}
 
 블로그를 구성할 때 기술적, 시간적 한계 때문에 이미 만들어진 테마를 사용하게 됩니다.
 제가 Hugo 블로그를 만들 때도 이러한 문제 때문에

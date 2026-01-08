@@ -10,7 +10,10 @@ cover: "https://dl.dropboxusercontent.com/scl/fi/vz7ubvu68l28n2h9m13vc/kubernete
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/9itthpgf8xuiogeebvyp9/kubernetes-00-logo.webp?rlkey=g4wrh18mf0tioibm3fij5r54k&raw=1"
 categories: ["Cloud", "Kubernetes"]
 tags: ["Kubernetes", "Container", "컨테이너 역사", "Docker", "LXC", "containerd", "CRI", "OCI", "kubelet", "컨테이너 런타임", "클라우드 네이티브", "오케스트레이션"]
+series: ["Kubernetes 배우기"]
 ---
+
+{{< series "Kubernetes 배우기" >}}
 
 ## Study Overview
 

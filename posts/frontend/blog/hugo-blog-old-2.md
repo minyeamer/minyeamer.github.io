@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 [2022년] (2) - Utterances 댓글 시스템 설치 및 설정"
+title: "깃허브 블로그 만들기 (2) - Utterances 댓글 시스템 설치 및 설정"
 date: "2022-09-08T14:39:22+09:00"
 layout: "post"
 description: >
@@ -10,7 +10,10 @@ cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-c
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Utterances", "댓글 시스템", "Github Issues", "PaperMod", "Github", "블로그 만들기", "Blog", "개발 블로그"]
+series: ["깃허브 블로그 만들기"]
 ---
+
+{{< series "깃허브 블로그 만들기" "깃허브 블로그 만들기 \([0-9]+\) - " >}}
 
 Hugo 블로그는 기본적으로 댓글 기능을 제공하지는 않습니다.
 

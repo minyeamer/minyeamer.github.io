@@ -8,7 +8,10 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/bghhh0kkkr4ssaw5a10ri/smartstore-login-00-main-wide.webp?rlkey=014mj9c15aymkvseohy0dtqih&raw=1"
 categories: ["Data Engineering", "Crawling"]
 tags: ["크롤링", "Python", "네이버", "스마트스토어", "로그인 자동화", "requests", "데이터 수집", "쿠키 인증", "웹 자동화"]
+series: ["스마트스토어센터 로그인 구현하기"]
 ---
+
+{{< series "스마트스토어센터 로그인 구현하기" "\[Python\] " >}}
 
 네이버 스마트스토어센터에서는 매출 향상에 도움을 주는 유용한 통계 데이터를 제공해줍니다.
 

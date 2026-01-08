@@ -10,7 +10,10 @@ cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-c
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "Disqus", "댓글 기능", "커버 이미지", "스크롤 진행도", "휴고 본문", "휴고 테마", "휴고 레이아웃", "Blog", "HTML", "CSS", "JavaScript", "Hugo Book"]
+series: ["Hugo 블로그 만들기"]
 ---
+
+{{< series "Hugo 블로그 만들기" "Hugo 블로그 만들기 \([0-9]+\) - " >}}
 
 {{% hint info %}}
 <i class="fa-solid fa-circle-info"></i> 대상 독자
