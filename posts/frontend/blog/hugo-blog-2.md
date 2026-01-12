@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 (2) - 메인 레이아웃 커스터마이징 (메뉴, 목차, 헤더)"
+title: "Hugo Book 테마 커스터마이징 - 메뉴/목차/헤더 레이아웃 개선"
 date: "2025-11-04T01:50:16+09:00"
 layout: "post"
 description: >
@@ -13,7 +13,7 @@ tags: ["Hugo", "Blog", "휴고 테마", "휴고 레이아웃", "HTML", "CSS", "J
 series: ["Hugo 블로그 만들기"]
 ---
 
-{{< series "Hugo 블로그 만들기" "Hugo 블로그 만들기 \([0-9]+\) - " >}}
+{{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
 <i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**

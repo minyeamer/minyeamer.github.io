@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 (1) - 프로젝트 구성과 GitHub Pages 배포 (Submodule 활용)"
+title: "Hugo 블로그 만들기 - Git Submodule로 구성하고 배포하기"
 date: "2025-11-01T20:42:21+09:00"
 layout: "post"
 description: >
@@ -13,7 +13,7 @@ tags: ["Hugo", "Blog", "티스토리", "Velog", "Git", "Github Pages", "Submodul
 series: ["Hugo 블로그 만들기"]
 ---
 
-{{< series "Hugo 블로그 만들기" "Hugo 블로그 만들기 \([0-9]+\) - " >}}
+{{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
 <i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**

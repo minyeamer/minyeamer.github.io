@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 (3) - Taxonomies로 태그/카테고리 페이지 커스터마이징"
+title: "Hugo Taxonomies 커스터마이징 - 태그/카테고리 템플릿 구현"
 date: "2025-11-22T23:04:47+09:00"
 layout: "post"
 description: >
@@ -12,7 +12,7 @@ tags: ["Hugo", "Taxonomies", "태그", "카테고리", "휴고 테마", "휴고 
 series: ["Hugo 블로그 만들기"]
 ---
 
-{{< series "Hugo 블로그 만들기" "Hugo 블로그 만들기 \([0-9]+\) - " >}}
+{{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
 <i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**

@@ -1,5 +1,5 @@
 ---
-title: "Hugo 블로그 만들기 (4) - 검색 기능 개선 및 검색 페이지 구현 (Fuse.js)"
+title: "Hugo 검색 기능 구현 - Fuse.js로 검색 인덱스 최적화하기"
 date: "2025-12-14T12:40:13+09:00"
 layout: "post"
 description: >
@@ -12,7 +12,7 @@ tags: ["Hugo", "Fusejs", "검색 인덱스", "검색 페이지", "Hugo 검색", 
 series: ["Hugo 블로그 만들기"]
 ---
 
-{{< series "Hugo 블로그 만들기" "Hugo 블로그 만들기 \([0-9]+\) - " >}}
+{{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
 <i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**
