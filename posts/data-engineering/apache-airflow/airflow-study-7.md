@@ -490,7 +490,7 @@ CREATE TABLE nshopping_search(
 - 앞서 `bulk_load()` 메서드의 주석에 `Tab` 으로 구분된 파일을 업로드한다고 명시되어 있기 때문에, `shop.csv` 파일을 `,` 대신 `Tab` 으로 구분한 `shop_with_tab.csv` 파일을 같은 위치에 생성
    - vi 편집기로 파일을 열었다면 `%s/,/\t/g` 명령어를 입력해 `,` 를 `Tab` 으로 변경 가능
 
-{{< data-table >}}
+{{< data-table file-name="shop_with_tab.csv" >}}
 rank,title,link,image,lprice,hprice,mallName,productId,productType,brand,maker,category1,category2,category3,category4
 1,삼성 갤럭시북 인강용 사무용 업무용 가성비 윈도우11 저가 싼 태블릿 <b>노트북</b> 추천 기본팩,https://smartstore.naver.com/main/products/10407884292,https://shopping-phinf.pstatic.net/main_8795238/87952389253.11.jpg,428000,,삼성공식파트너 코인비엠에스,87952389253,2,갤럭시북,삼성전자,디지털/가전,노트북,,
 2,LG전자 울트라PC 라이젠5 사무용 인강용 저렴한 8GB NVMe256GB LG<b>노트북</b>,https://smartstore.naver.com/main/products/6174236911,https://shopping-phinf.pstatic.net/main_8371873/83718736488.14.jpg,599000,,제이 씨앤에스,83718736488,2,LG전자,LG전자,디지털/가전,노트북,,

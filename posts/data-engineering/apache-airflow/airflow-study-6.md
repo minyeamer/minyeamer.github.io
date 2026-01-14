@@ -573,7 +573,7 @@ files/
 
 #### `shop.csv`
 
-{{< data-table >}}
+{{< data-table file-name="shop.csv" >}}
 rank,title,link,image,lprice,hprice,mallName,productId,productType,brand,maker,category1,category2,category3,category4
 1,삼성 갤럭시북...,https://...,https://...,428000,,삼성공식파트너 코인비엠에스,87952389253,2,갤럭시북,삼성전자,디지털/가전,노트북,,
 2,삼성전자 갤럭시북4...,https://...,https://...,799000,,네이버,52631236642,1,갤럭시북4,삼성전자,디지털/가전,노트북,,
@@ -584,7 +584,7 @@ rank,title,link,image,lprice,hprice,mallName,productId,productType,brand,maker,c
 
 #### `blog.csv`
 
-{{< data-table >}}
+{{< data-table file-name="blog.csv" >}}
 rank,title,link,description,bloggername,bloggerlink,postdate
 1,<b>노트북</b>에서...,https://...,버리고 <b>노트북</b>으로...,란디의 하늘색 꿈,blog.naver.com/fksel33,20250601
 2,고비넘긴 삼성<b>노트북</b>...,https://...,노원구 공릉동에 위치한...,하드웨어수리닷컴(엘존),blog.naver.com/yzenn,20250603
