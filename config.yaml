@@ -49,6 +49,8 @@ params:
     enabled: true
     disqusShortname: "minyeamer"
 
+  i18nDir: "themes/seotax/i18n"
+
   search:
     enabled: true
 
