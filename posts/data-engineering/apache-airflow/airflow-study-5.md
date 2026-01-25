@@ -165,7 +165,7 @@ with DAG(
 - 실행할 다른 DAG의 ID를 지정하여 수행
 - 선행 DAG이 하나만 있을 경우 `TriggerDagRunOperator` 를 사용하고, 선행 DAG이 2개 이상인 경우는 `ExternalTaskSensor` 를 사용 권장
 
-{{% columns %}}
+{{< columns >}}
 {{< image
   src="https://dl.dropboxusercontent.com/scl/fi/vxkt9g7uy44cwfc4vl174/airflow-34-trigger-dagrun-operator.webp?rlkey=t3i8pjpa7l1yfsscggh3d3j8t&raw=1"
   alt="TriggerDagRunOperator" >}}
@@ -173,7 +173,7 @@ with DAG(
 {{< image
   src="https://dl.dropboxusercontent.com/scl/fi/o2urlt1hg28y1apeobgom/airflow-35-external-task-sensor.webp?rlkey=rg8l6wgbfja8jw934akg8t5qg&raw=1"
   alt="ExternalTaskSensor" >}}
-{{% /columns %}}
+{{< /columns >}}
 
 ### run_id
 - DAG의 수행 방식과 시간을 유일하게 식별해주는 키

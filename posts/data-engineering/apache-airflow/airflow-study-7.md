@@ -196,7 +196,7 @@ e23d4eb919fc   postgres:13            "docker-entrypoint.s…"   58 seconds ago 
    - Port는 Docker Compose에서 맵핑한 5432 사용
    - Database, Username, Password 또한 Docker Compose에서 지정한 값을 사용
 
-{{% columns %}}
+{{< columns >}}
 {{< image
   src="https://dl.dropboxusercontent.com/scl/fi/mdmcowq7snd9kre1nk3er/airflow-47-dbeaver-select-database.webp?rlkey=mqhmcjbk9ffa0cjqb4yib3wkw&raw=1"
   alt="Connect to a database > Select your database" >}}
@@ -204,7 +204,7 @@ e23d4eb919fc   postgres:13            "docker-entrypoint.s…"   58 seconds ago 
 {{< image
   src="https://dl.dropboxusercontent.com/scl/fi/fjrzi28evemhofio626rl/airflow-48-dbeaver-connection-settings.webp?rlkey=q4xqe24sguok0arrnn3z8jv2b&raw=1"
   alt="Connect to a database > Connection Settings" >}}
-{{% /columns %}}
+{{< /columns >}}
 
 - 정상적으로 연결되었다면 아래와 같이 Database 명칭을 확인 가능
 

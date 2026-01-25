@@ -84,7 +84,7 @@ with DAG(
 
 - 여러 번 Trigger하여 실행했는데, 의도대로 `task_a` 만 수행되거나, `task_b` 와 `task_c` 가 같이 수행되는 두 가지 경우를 확인
 
-{{% columns %}}
+{{< columns >}}
 {{< image
   src="https://dl.dropboxusercontent.com/scl/fi/zmqrndlh8ei1rlngzxz76/airflow-26-branch-success-a.webp?rlkey=zxsorrt87pao4n0azm8j8378q&raw=1"
   alt="branch_task >> task_a 성공" >}}
@@ -92,7 +92,7 @@ with DAG(
 {{< image
   src="https://dl.dropboxusercontent.com/scl/fi/uu93j7ryw1blnzp5m178z/airflow-27-branch-success-bc.webp?rlkey=kd14bt6phatm40q8mbb56iyoc&raw=1"
   alt="branch_task >> task_b, task_c 성공" >}}
-{{% /columns %}}
+{{< /columns >}}
 
 - 또한, `task_a` 가 선택되는 작업에서 XCom을 보면 `skipmixin_key` 키로 `{'followed': ['task_a']}` 값이 전달되는데,
   이를 통해 다른 Task에서도 어떤 분기 처리가 되었는지 확인 가능
