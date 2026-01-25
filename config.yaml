@@ -1,6 +1,6 @@
 baseURL: "https://minyeamer.github.io/"
 title: "Minystory"
-description: "minyeamer's blog"
+description: "minyeamer's dev blog"
 copyright: "[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)"
 
 theme: "seotax"
