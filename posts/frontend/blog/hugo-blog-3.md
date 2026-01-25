@@ -1,5 +1,5 @@
 ---
-title: "Hugo Taxonomies 커스터마이징 - 태그/카테고리 템플릿 구현"
+title: "Hugo 분류(Taxonomies) 커스터마이징 - 태그/카테고리 템플릿 구현"
 date: "2025-11-22T23:04:47+09:00"
 layout: "post"
 description: >
@@ -8,7 +8,7 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
-tags: ["Hugo", "Taxonomies", "태그", "카테고리", "휴고 테마", "휴고 레이아웃", "Blog", "HTML", "CSS", "JavaScript", "Hugo Book", "블로그 태그", "블로그 카테고리"]
+tags: ["Hugo", "Taxonomies", "태그", "카테고리", "Hugo 분류", "휴고 테마", "Blog", "HTML", "CSS", "JavaScript", "Hugo Book", "블로그 태그", "블로그 카테고리"]
 series: ["Hugo 블로그 만들기"]
 ---
 
