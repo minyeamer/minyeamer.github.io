@@ -15,7 +15,6 @@ series: ["Hugo 테마 만들기"]
 .content-cover, .screenshot-image { border: 3px solid var(--gray-200); }
 .sc-columns .sc-codeblock { margin: 0; }
 .sc-columns:has(.screenshot-image) { gap: 0.25rem; }
-.sc-columns:has(.screenshot-image) div { margin: 0; }
 .columns-4 { display: flex; }
 @media screen and (max-width: 1254px) { .columns-4 { flex-wrap: wrap; } }
 </style>
