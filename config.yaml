@@ -22,10 +22,6 @@ params:
   # author: ["Me", "You"] # multiple authors
   keywords: ["minyeamer", "Blog", "Data", "Engineering", "MLOps", "미니스토리", "블로그"]
 
-  favicon: "/images/favicon.ico"
-  images:
-    - "/images/profile/opengraph.jpg"
-
   posts:
     section: "posts"
 
@@ -35,6 +31,7 @@ params:
     favicon32x32: "/images/favicons/favicon-32x32.png"
     apple_touch_icon: "/images/favicons/apple-touch-icon.png"
     safari_pinned_tab: "/images/favicons/apple-touch-icon.png"
+    opengraph: "/images/profile/opengraph.jpg"
 
   menu:
     profileImage: "/images/profile/menu.jpg"
@@ -50,6 +47,9 @@ params:
     disqusShortname: "minyeamer"
 
   i18nDir: "themes/seotax/i18n"
+
+  imageDir: "_images"
+  maxImageSize: 1920
 
   search:
     enabled: true
