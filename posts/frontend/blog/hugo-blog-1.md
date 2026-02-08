@@ -33,26 +33,28 @@ series: ["Hugo 블로그 만들기"]
 
 Velog, 티스토리 등의 블로그 플랫폼을 이용해 봤지만 원하는 요소들을 전부 추가하는데는 제약이 많았습니다.
 
-### <img src="https://dl.dropboxusercontent.com/scl/fi/rclmscmcgcz0re8hq60pd/logo-velog.jpg?rlkey=3d1nh4v5s46oz094lx9tos3vl&raw=1" alt="Velog" class="h3-image"> Velog 사용 경험
+### <img src="https://dl.dropboxusercontent.com/scl/fi/rclmscmcgcz0re8hq60pd/logo-velog.jpg?rlkey=3d1nh4v5s46oz094lx9tos3vl&raw=1" alt="Velog" class="h3-image" width="20" height="20"> Velog 사용 경험
 
 Velog는 개인적으로 느끼기에 블로그 플랫폼들 중에서 따로 테마를 설정하지 않아도 기본 스타일이 보기 좋다는 장점이 있지만,
 다크모드 ON/OFF 버튼 추가 또는 코드 블럭 스타일 변경 등의 커스터마이징이 불가능하고,
 무엇보다 카테고리 없이 태그로만 게시글을 구별해야 한다는걸 가장 큰 제약으로 인식했습니다.
 
-<a href="https://velog.io/@minyeamer/posts" target="_blank">
-<img src="https://dl.dropboxusercontent.com/scl/fi/2aspdgqtn9er0wpvvgh5v/hugo-01-example-velog.webp?rlkey=6nxofpq3gndqrnogm3m1o3dxl&raw=1" alt="Velog 인터페이스">
-</a>
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/2aspdgqtn9er0wpvvgh5v/hugo-01-example-velog.webp?rlkey=6nxofpq3gndqrnogm3m1o3dxl&raw=1"
+  alt="Velog 인터페이스"
+  href="https://velog.io/@minyeamer/posts" >}}
 
-### <img src="https://dl.dropboxusercontent.com/scl/fi/u28ide6ixcwmte9deafju/logo-tistory.png?rlkey=thffzqj0ouhn0axj6fapizz7x&raw=1" alt="Tistory" class="h3-image"> 티스토리 사용 경험
+### <img src="https://dl.dropboxusercontent.com/scl/fi/u28ide6ixcwmte9deafju/logo-tistory.png?rlkey=thffzqj0ouhn0axj6fapizz7x&raw=1" alt="Tistory" class="h3-image" width="20" height="20"> 티스토리 사용 경험
 
 티스토리는 테마 수정은 자유로운 편이지만, 테마 편집이든 블로그 게시글 작성이든 티스토리 UI에서 편집 과정을 거쳐야 반영되는 점에서
 즉각적인 피드백이 어렵다고 느꼈습니다. 그리고, 무엇보다 글 편집이나 블로그 관리 등의 설정 메뉴에는 다크모드가 적용이 안돼서 개인적으로 쓰기 싫었습니다.
 
-<a href="https://minyeamer.tistory.com/" target="_blank">
-<img src="https://dl.dropboxusercontent.com/scl/fi/4xn1fjflju78w0jv76i7h/hugo-02-example-tistory.webp?rlkey=ixtuq0oo3xa26cgqfkwri1i4t&raw=1" alt="티스토리 인터페이스">
-</a>
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/4xn1fjflju78w0jv76i7h/hugo-02-example-tistory.webp?rlkey=ixtuq0oo3xa26cgqfkwri1i4t&raw=1"
+  alt="티스토리 인터페이스"
+  href="https://minyeamer.tistory.com/" >}}
 
-### <img src="https://dl.dropboxusercontent.com/scl/fi/xgh0tzbm00qneoy4x1par/logo-hugo.png?rlkey=xnyulio177owaxe8pjir0vf9j&raw=1" alt="Hugo" class="h3-image"> Hugo 사용 경험
+### <img src="https://dl.dropboxusercontent.com/scl/fi/xgh0tzbm00qneoy4x1par/logo-hugo.png?rlkey=xnyulio177owaxe8pjir0vf9j&raw=1" alt="Hugo" class="h3-image" width="20" height="20"> Hugo 사용 경험
 
 3년 전에 Hugo를 활용한 [Github 블로그](http://localhost:1313/blog/hugo-blog-old-1/)를 만든 적이 있었는데,
 당시에는 테마를 원하는대로 수정할 수 있을 만큼의 전문 지식이 없어서 다른 블로그 플랫폼들과 마찬가지로 잠깐 이용하다 말았지만,
