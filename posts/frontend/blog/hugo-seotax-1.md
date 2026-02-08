@@ -8,7 +8,7 @@ description: >
   Hugo 블로그 테마 개발에 관심이 있다면 꼭 참고하세요.
 cover: "https://dl.dropboxusercontent.com/scl/fi/4ypgz37ygay76807x2gpd/seotax-00-cover.webp?rlkey=vuon12lsgu8xk2ya2153wxvel&raw=1"
 categories: ["Frontend", "Blog"]
-tags: ["Hugo", "서택스 테마", "Hugo 검색", "Hugo 분류", "다국어 번역", "휴고 테마", "UI/UX", "반응형 디자인", "태그", "카테고리", "i18n", "Blog"]
+tags: ["Hugo", "서택스 테마", "Hugo 검색", "Hugo 분류", "다국어 번역", "휴고 테마", "Vanilla JS", "UI/UX", "반응형 디자인", "태그", "카테고리", "i18n", "Blog"]
 series: ["Hugo 테마 만들기"]
 ---
 <style>
