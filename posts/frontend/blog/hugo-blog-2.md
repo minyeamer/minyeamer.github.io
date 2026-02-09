@@ -16,7 +16,7 @@ series: ["Hugo 블로그 만들기"]
 {{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
-<i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**
+<i class="icon-magic"></i> **AI 요약 & 가이드**
 
 Hugo 블로그의 외형을 결정짓는 **메인 레이아웃(메뉴, 목차, 헤더)** 을 직접 뜯어고치며 프론트엔드 역량을 키워보세요.
 템플릿 구조에 대한 기초 지식부터 CSS/JS를 활용한 세부 기능 구현까지 단계별로 설명합니다.

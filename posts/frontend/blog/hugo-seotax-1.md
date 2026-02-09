@@ -22,7 +22,7 @@ series: ["Hugo 테마 만들기"]
 {{< series "Hugo 테마 만들기" >}}
 
 {{% hint info %}}
-<i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**
+<i class="icon-magic"></i> **AI 요약 & 가이드**
 
 Hugo의 서택스(SeoTax) 테마 설계 목적과 레이아웃 구조를 한눈에 정리하고,
 이어지는 글에서는 구현 세부사항을 코드 예제와 함께 자세히 다룰 예정입니다.

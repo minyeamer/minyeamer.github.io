@@ -16,7 +16,7 @@ series: ["Hugo 블로그 만들기"]
 {{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
-<i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**
+<i class="icon-magic"></i> **AI 요약 & 가이드**
 
 이 글은 **나만의 마크다운 블로그**를 구축하려는 분들을 위해 **Hugo** 프로젝트의 기획부터 배포까지 과정을 다룹니다.
 특히 **Git Submodules**를 활용하여 프로젝트 구조를 체계화하고, 번거로운 배포 과정을 자동화하는 실전 노하우를 제공합니다.

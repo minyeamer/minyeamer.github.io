@@ -16,7 +16,7 @@ series: ["Hugo 블로그 만들기"]
 {{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
-<i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**
+<i class="icon-magic"></i> **AI 요약 & 가이드**
 
 Hugo Book 테마의 **본문 레이아웃을 완성**하는 마지막 단계입니다.
 헤더에 제목과 커버 이미지를 추가하고, 푸터에 이전/다음 게시글 네비게이션과 Disqus 댓글 시스템을 연동하여

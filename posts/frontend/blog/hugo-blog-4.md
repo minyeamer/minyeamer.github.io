@@ -15,7 +15,7 @@ series: ["Hugo 블로그 만들기"]
 {{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
-<i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**
+<i class="icon-magic"></i> **AI 요약 & 가이드**
 
 Hugo Book 테마의 **검색 기능을 완전히 해부**하고, Fuse.js 기반 인덱싱부터 검색 페이지 구현까지 실전 노하우를 공유합니다.
 검색창 UI 개선, `window` 전역 객체를 활용한 모듈 분리, `DocumentFragment` 를 통한 DOM 조작 최적화까지 단계별로 안내합니다.

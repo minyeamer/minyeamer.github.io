@@ -15,7 +15,7 @@ series: ["Hugo 블로그 만들기"]
 {{< series "Hugo 블로그 만들기" >}}
 
 {{% hint info %}}
-<i class="fa-solid fa-wand-magic-sparkles"></i> **AI 요약 & 가이드**
+<i class="icon-magic"></i> **AI 요약 & 가이드**
 
 Hugo가 기본으로 제공하는 기능을 넘어, 블로그의 전문성을 높여주는 **Taxonomy 커스터마이징** 노하우를 공유합니다.
 반복되는 게시글 목록과 복잡한 카테고리 트리 구조를 독립된 **템플릿으로 모듈화**하여,
