@@ -8,7 +8,7 @@ description: >
 cover: "https://dl.dropboxusercontent.com/scl/fi/w0zho4wlgq6m8db5mvn9k/hugo-00-cover.webp?rlkey=et2tlzgb0h6blgf8klzbqjxem&raw=1"
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/hp31764bfpm55wanzj5le/hugo-00-logo.webp?rlkey=rkezagmfupugt717a5fx2xqs2&raw=1"
 categories: ["Frontend", "Blog"]
-tags: ["Hugo", "Fusejs", "검색 인덱스", "검색 페이지", "Hugo 검색", "휴고 테마", "EventListener", "window", "DocumentFragment", "JavaScript", "Blog", "Hugo Book"]
+tags: ["Hugo", "Fuse.js", "검색 인덱스", "검색 페이지", "Hugo 검색", "휴고 테마", "EventListener", "window", "DocumentFragment", "JavaScript", "Blog", "Hugo Book"]
 series: ["Hugo 블로그 만들기"]
 ---
 
