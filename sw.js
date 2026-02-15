@@ -1,9 +1,10 @@
 const cacheName = self.location.pathname
 const pages = [
 
-  "/blog/hugo-seotax-1/",
+  "/blog/hugo-seotax-2/",
   "/",
   "/posts/",
+  "/blog/hugo-seotax-1/",
   "/blog/hugo-blog-5/",
   "/blog/hugo-blog-4/",
   "/blog/hugo-blog-3/",
@@ -47,7 +48,7 @@ const pages = [
   "/categories/",
   "/search/",
   "/tags/",
-  "/main.min.1435ffc4437e2d099b34e2aa96f03e235a206db23ea465bde5f86811a7108f83.css",
+  "/main.min.2645a7d9c5a4e6ec4130cf335d83b7bd6ecc4ea05e244abe01938a765c99d8b7.css",
   
 ];
 
