@@ -43,6 +43,11 @@ Hugo 서택스(SeoTax) 테마를 만들게 된 계기이자 가장 중요하게 
 최대한 다양한 필터를 제공하고 연속적인 검색이 가능하게끔 지원하는
 UI/UX의 개선을 주로 다뤘습니다.
 
+{{< image
+  src="https://dl.dropboxusercontent.com/scl/fi/gqsgo2otrmou4qj77k8iz/seotax-01-search-demo.gif?rlkey=ti6ysbvm9906qe7ypdzejxag9&raw=1"
+  alt="서택스 테마 - 검색 동작"
+  class="screenshot-image" >}}
+
 ## 경량화, 왜 고민하게 됐을까?
 
 Hugo 서택스 테마를 만들기 전에 Hugo Book 테마를 커스터마이징해서 사용한 적이 있습니다.
