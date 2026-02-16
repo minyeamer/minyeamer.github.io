@@ -6,14 +6,13 @@ description: >
   Hugo 서택스(SeoTax) 테마에 독자의 브라우저 언어를 자동 감지하는 동적 다국어 번역 시스템을 구현한 과정을 다룹니다.
   Hugo의 정적 빌드 기반 다국어 지원 한계를 극복하고, YAML 번역 데이터와 Vanilla JS를 활용해
   단일 페이지에서 27개 언어를 실시간으로 지원하는 클라이언트 사이드 i18n 구현 방법을 코드와 함께 설명합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/akc9netlwqqnmvzdwx9fj/seotax-20-cover-search.webp?rlkey=7y56r86rjd3hkfdufvbfu4tq1&raw=1"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/373ci1c9iozdc8aoi94ka/logo-seotax.webp?rlkey=wsjupt9pphj6gf1fs2zy82fcc&raw=1"
+cover: "https://dl.dropboxusercontent.com/scl/fi/vuprpywdtba0wzqke746y/seotax-35-i18n-4.webp?rlkey=1r8uq3z22j81qatvagtxvrhq7&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "서택스 테마", "i18n", "다국어 지원", "Vanilla JS", "클라이언트 사이드", "YAML 번역", "브라우저 언어 감지", "localStorage", "날짜 지역화"]
 series: ["Hugo 테마 만들기"]
 ---
 <style>
-.screenshot-image { border: 3px solid var(--gray-200); }
+.content-cover, .screenshot-image { border: 3px solid var(--gray-200); }
 </style>
 
 {{< series "Hugo 테마 만들기" >}}

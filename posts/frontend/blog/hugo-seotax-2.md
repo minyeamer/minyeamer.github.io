@@ -6,14 +6,14 @@ description: >
   Hugo 서택스(SeoTax) 테마의 핵심 기능인 동적 검색 페이지 구현 과정을 상세히 다룹니다.
   Taxonomies로 인한 정적 페이지 증가 문제를 해결하고, Fuse.js와 Vanilla JS를 활용한
   고급 검색 필터(카테고리, 태그) 구현 방법을 코드 예제와 함께 설명합니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/akc9netlwqqnmvzdwx9fj/seotax-20-cover-search.webp?rlkey=7y56r86rjd3hkfdufvbfu4tq1&raw=1"
-thumbnail: "https://dl.dropboxusercontent.com/scl/fi/373ci1c9iozdc8aoi94ka/logo-seotax.webp?rlkey=wsjupt9pphj6gf1fs2zy82fcc&raw=1"
+cover: "https://dl.dropboxusercontent.com/scl/fi/t0soxd6tufbxk8j54vany/seotax-33-search-bar.webp?rlkey=x7scuz2hhubydoygu0dvdj1ys&raw=1"
+thumbnail: "https://dl.dropboxusercontent.com/scl/fi/c3n2yngz9x7xigcm4mfas/seotax-34-search-bar-mobile.webp?rlkey=3d42ry9915824hcrdxuwigmqe&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "서택스 테마", "Fuse.js", "동적 렌더링", "Hugo 검색", "Taxonomies", "정적 페이지 최적화", "Vanilla JS", "카테고리 검색", "태그 검색"]
 series: ["Hugo 테마 만들기"]
 ---
 <style>
-.screenshot-image { border: 3px solid var(--gray-200); }
+.content-cover, .screenshot-image { border: 3px solid var(--gray-200); }
 pre.mermaid {
   display: flex;
   justify-content: center;
