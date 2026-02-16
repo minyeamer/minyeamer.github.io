@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://minyeamer.github.io/blog/hugo-seotax-3/</loc>
-    <lastmod>2026-02-16T14:36:58+09:00</lastmod>
+    <loc>https://minyeamer.github.io/blog/hugo-seotax-4/</loc>
+    <lastmod>2026-02-17T01:11:13+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/</loc>
-    <lastmod>2026-02-16T14:36:58+09:00</lastmod>
+    <lastmod>2026-02-17T01:11:13+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/posts/</loc>
+    <lastmod>2026-02-17T01:11:13+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/hugo-seotax-3/</loc>
     <lastmod>2026-02-16T14:36:58+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/hugo-seotax-2/</loc>
