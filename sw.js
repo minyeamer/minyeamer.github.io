@@ -51,7 +51,7 @@ const pages = [
   "/categories/",
   "/search/",
   "/tags/",
-  "/main.min.fca04b5572b99624e5a4be8e838871c46182e9c7f27b832acae02ffdcc620bd9.css",
+  "/main.min.9605e37800f56c26b159602cba595b0da19fa8dfb1e04d88e0fef5da593f5df9.css",
   
 ];
 
