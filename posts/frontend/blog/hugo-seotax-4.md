@@ -8,7 +8,7 @@ description: >
   테마 전환 시스템 구축 방법을 SCSS 색상 팔레트 설계부터 JavaScript 로직까지 코드와 함께 설명합니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/v5udabzzzi9h865bslgys/seotax-31-light-dark-cover.webp?rlkey=80r03xv7riqgu8k9n4tm7zvvx&raw=1"
 categories: ["Frontend", "Blog"]
-tags: ["Hugo", "서택스 테마", "다크모드", "라이트 테마", "SCSS", "Vanilla JS", "localStorage", "CSS Variables", "prefers-color-scheme", "Disqus"]
+tags: ["Hugo", "서택스 테마", "다크모드", "CSS Variables", "Vanilla JS", "localStorage", "SCSS", "prefers-color-scheme", "Disqus"]
 series: ["Hugo 테마 만들기"]
 ---
 <style>
