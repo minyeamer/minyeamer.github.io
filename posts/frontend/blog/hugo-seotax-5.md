@@ -6,7 +6,7 @@ description: >
   Hugo 서택스(SeoTax) 테마의 코드블럭에 줄 번호, Mac 스타일 UI, 복사 버튼을 구현한 과정을 다룹니다.
   highlight.js의 xcode/vs2015 테마를 CSS Variables로 내재화하고,
   개발자 블로그에 최적화된 시각적이고 기능적인 코드블럭 시스템을 완성했습니다.
-cover: "https://dl.dropboxusercontent.com/scl/fi/ngl1etsbzvwzaijwyzcdz/seotax-40-codeblock-wide.webp?rlkey=9s3uppawzsvw1g1hny6j38aoq&raw=1"
+cover: "https://dl.dropboxusercontent.com/scl/fi/x5nr8dn33t1k8n79skn28/seotax-40-codeblock-wide.webp?rlkey=f6gz3ysn8iq88f7665dy0vjwd&raw=1"
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/ij840qdz6ci2djdj33odl/seotax-41-codeblock-mobile.webp?rlkey=d2z6is2czkhbofu1ah5ful4re&raw=1"
 categories: ["Frontend", "Blog"]
 tags: ["Hugo", "서택스 테마", "코드블럭", "highlight.js", "Mac 스타일", "복사 버튼", "Vanilla JS", "highlightjs-line-numbers", "Clipboard API", "코드블록"]
