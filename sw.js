@@ -1,9 +1,10 @@
 const cacheName = self.location.pathname
 const pages = [
 
-  "/blog/hugo-seotax-5/",
+  "/blog/openpyxl-styles/",
   "/",
   "/posts/",
+  "/blog/hugo-seotax-5/",
   "/blog/hugo-seotax-4/",
   "/blog/hugo-seotax-3/",
   "/blog/hugo-seotax-2/",
@@ -51,7 +52,7 @@ const pages = [
   "/categories/",
   "/search/",
   "/tags/",
-  "/main.min.9605e37800f56c26b159602cba595b0da19fa8dfb1e04d88e0fef5da593f5df9.css",
+  "/main.min.2723258fe3ca3034e8b05c1b8fccf06ed2a0865fdbeb5e4afb326f1db6c6e3b9.css",
   
 ];
 
