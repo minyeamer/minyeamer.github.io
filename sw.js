@@ -1,9 +1,10 @@
 const cacheName = self.location.pathname
 const pages = [
 
-  "/blog/openpyxl-styles/",
+  "/blog/openpyxl-transform/",
   "/",
   "/posts/",
+  "/blog/openpyxl-styles/",
   "/blog/hugo-seotax-5/",
   "/blog/hugo-seotax-4/",
   "/blog/hugo-seotax-3/",
