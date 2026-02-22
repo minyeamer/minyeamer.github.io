@@ -4,18 +4,21 @@ date: "2026-02-20T02:09:30+09:00"
 layout: "post"
 description: >
   Python OpenPyXL로 엑셀 파일을 읽고 서식을 편집하는 과정을 자동화하는 실전 가이드입니다.
-  셀 서식, 컬럼 너비 자동 조정, 조건부 서식, BFS 알고리즘 기반 셀 병합, 필터 XML 조작까지
+  셀 서식, 열 너비 자동 조정, 조건부 서식, BFS 알고리즘 기반 셀 병합, 필터 XML 조작까지
   실무에서 즉시 활용 가능한 Python 함수 구현 방법을 코드 예제와 함께 상세히 설명합니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/2agm4ko7b6978hv8ptp76/openpyxl-00-cover.webp?rlkey=7kduplna4paxq0gl22tn5sx6p&raw=1"
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/wuax6ut9ea84j5t1vosjc/openpyxl-00-logo.webp?rlkey=ahg48xcyed7mhlgaxxl8iavqt&raw=1"
 categories: ["Data Analysis", "Excel"]
 tags: ["Python", "OpenPyXL", "엑셀 자동화", "데이터 처리", "셀 서식", "조건부 서식", "BFS 알고리즘", "셀 병합", "엑셀 필터", "엑셀 XML"]
+series: ["OpenPyXL 엑셀 자동화"]
 ---
 <style>
 pre.mermaid { display: flex; justify-content: center; }
 .inline-table { display: inline-table; border-collapse: collapse; border: 1px solid var(--body-font-color); }
 .inline-cell { display: table-cell; border: 1px solid var(--body-font-color); padding: 4px 10px; }
 </style>
+
+{{< series "OpenPyXL 엑셀 자동화" >}}
 
 {{% hint info %}}
 <i class="icon-magic"></i> **AI 요약 & 가이드**
@@ -68,7 +71,7 @@ flowchart LR
     A[데이터 수집] --> B[데이터 가공]
     B --> C[엑셀 변환<br/>및 스타일링]
     C --> D[슬랙 업로드]
-    
+
     style A fill:#e1f5ff
     style B fill:#fff4e1
     style C fill:#e8f5e9
@@ -275,7 +278,7 @@ OpenPyXL 공식 문서 [Working with styles](https://openpyxl.readthedocs.io/en/
 다음과 같이 정의해볼 수 있습니다.
 
 ```python
-from openpyxl.styles import Alignment, Border, PatternFill, Font, Side
+from openpyxl.styles import Alignment, Border, Side, PatternFill, Font
 
 def style_cell(
         cell: Cell,
@@ -306,7 +309,7 @@ def create_border(**kwargs: dict) -> Border:
 ```python
 header_style = {
     "alignment": {"horizontal": "center", "vertical": "center"},                        # 가운데 정렬
-    "border": {side: {"style": "thin"} for side in ["left","right","top","bottom"]},    # 바깥 테두리
+    "border": {side: {"style": "thin"} for side in ["left", "right", "top", "bottom"]},    # 바깥 테두리
     "fill": {"start_color": "FFFF00", "end_color": "FFFF00", "fill_type": "solid"},     # 노란색 배경
     "font": {"bold": True, "color": "000000"},                                          # 볼드체
 }
@@ -1100,7 +1103,7 @@ for col_idx, column in enumerate(ws.columns, start=1):
     for row_idx, cell in enumerate(column, start=1):
         if hyperlink and text.startswith("https://"):
             cell.hyperlink = text
-            cell.font = _font(color="#0000FF", underline="single")
+            cell.font = Font(color="0000FF", underline="single")
 ```
 
 하이퍼링크를 추가한다고 링크
