@@ -13,7 +13,7 @@ tags: ["Python", "OpenPyXL", "엑셀 자동화", "JSON", "CSV", "셀 서식", "�
 series: ["OpenPyXL 엑셀 자동화"]
 ---
 
-{{< series "OpenPyXL 엑셀 자동화" >}}
+{{< series "OpenPyXL 엑셀 자동화" "\[OpenPyXL\] " >}}
 
 {{% hint info %}}
 <i class="icon-magic"></i> **AI 요약 & 가이드**

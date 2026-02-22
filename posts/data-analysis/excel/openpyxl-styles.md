@@ -18,7 +18,7 @@ pre.mermaid { display: flex; justify-content: center; }
 .inline-cell { display: table-cell; border: 1px solid var(--body-font-color); padding: 4px 10px; }
 </style>
 
-{{< series "OpenPyXL 엑셀 자동화" >}}
+{{< series "OpenPyXL 엑셀 자동화" "\[OpenPyXL\] " >}}
 
 {{% hint info %}}
 <i class="icon-magic"></i> **AI 요약 & 가이드**
