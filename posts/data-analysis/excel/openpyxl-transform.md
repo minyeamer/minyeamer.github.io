@@ -1,5 +1,5 @@
 ---
-title: "[OpenPyXL] CSV/JSON 데이터를 서식 있는 엑셀로 변환하기"
+title: "[OpenPyXL] CSV, JSON 데이터를 서식 있는 엑셀로 변환하기"
 date: "2026-02-22T16:10:58+09:00"
 layout: "post"
 description: >
