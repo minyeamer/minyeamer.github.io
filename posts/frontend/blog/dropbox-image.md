@@ -649,6 +649,15 @@ Command Palette를 거치지 않고 키보드 단축키(`Cmd + Alt + U`)로
 
 ![Use dropbox-image-uploader for VS Code extension](https://dl.dropboxusercontent.com/scl/fi/k479on0o4k06rm9824hu1/dropbox-00-preview.gif?rlkey=e68aj559ulf8xudc6b0ko6t5g&raw=1)
 
+혹시 텍스트만으로 사용자 설정을 입력하는데 어려움을 겪는 분들이 계실 것 같아
+제 설정도 공유드립니다.
+
+저는 개발 과정을 설명하는 글을 주로 작성해서 제 화면을 캡쳐한 PNG 이미지를 원본으로 저장해 놓는데,
+아무래도 용량이 크다보니 압축 효율이 좋은 WEBP 포맷 변환과 최대 1920px 크기 제한을 걸었습니다.
+(설정에서 "dropbox"를 검색하면 관련 설정을 확인할 수 있습니다.)
+
+![VS Code Settings](https://dl.dropboxusercontent.com/scl/fi/7i53xdjzlees4bqw33h7s/dropbox-06-vscode-settings.webp?rlkey=74byu8c2jllno2famgd89h3ys&raw=1)
+
 ## 확장 프로그램 배포하기
 
 VS Code Marketplace에 확장 프로그램을 배포하는 방법은 두 가지입니다.
