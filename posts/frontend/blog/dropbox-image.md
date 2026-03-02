@@ -675,7 +675,7 @@ npx @vscode/vsce package --allow-missing-repository
 4. Publisher ID 입력 (package.json의 `publisher` 값과 동일해야 함)
 5. 이름, 설명 등 입력 후 생성
 
-![VS Code | Marketplace - Create Pulbisher](https://dl.dropboxusercontent.com/scl/fi/t0x8170w2gmhm0q9xnv76/dropbox-04-create-publisher.webp?rlkey=pwdqnh36m968v9e9m3afij7gi&raw=1)
+![VS Code | Marketplace - Create Pulbisher](https://dl.dropboxusercontent.com/scl/fi/urxj0mea3yr7utvu1wvjl/dropbox-04-create-publisher.webp?rlkey=ch1a5ashypdep1blz99p638lx&raw=1)
 
 #### 3단계: VSIX 업로드
 
