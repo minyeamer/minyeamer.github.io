@@ -675,7 +675,7 @@ npx @vscode/vsce package --allow-missing-repository
 4. Publisher ID 입력 (package.json의 `publisher` 값과 동일해야 함)
 5. 이름, 설명 등 입력 후 생성
 
-![VS Code | Marketplace - Create Pulbisher](https://dl.dropboxusercontent.com/scl/fi/fg61b9aeqjxieev3u1v5t/dropbox-04-create-publisher.webp?rlkey=z4wafwn0gb690kj793u5advtz&raw=1)
+![VS Code | Marketplace - Create Pulbisher](https://dl.dropboxusercontent.com/scl/fi/t0x8170w2gmhm0q9xnv76/dropbox-04-create-publisher.webp?rlkey=pwdqnh36m968v9e9m3afij7gi&raw=1)
 
 #### 3단계: VSIX 업로드
 
@@ -684,7 +684,7 @@ npx @vscode/vsce package --allow-missing-repository
 3. 생성된 `.vsix` 파일을 드래그 앤 드롭 또는 선택
 4. **업로드 완료!**
 
-![Manage Publishers & Extensions](https://dl.dropboxusercontent.com/scl/fi/pyiorewd596y78wpwg3rk/dropbox-05-new-extension.webp?rlkey=3c5gyj3g3vkt230vinisa5g0m&raw=1)
+![Manage Publishers & Extensions](https://dl.dropboxusercontent.com/scl/fi/1uuqefaux3v30tua8ltd7/dropbox-05-new-extension.webp?rlkey=el4wlkln4rj49onf8cdz4kl6h&raw=1)
 
 ### 방법 2: CLI로 배포
 
