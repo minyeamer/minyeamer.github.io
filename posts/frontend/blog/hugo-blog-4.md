@@ -974,7 +974,7 @@ document.querySelector(".book-search").classList.remove("hidden");
 |초기 로드 크기|❌ 모든 페이지에 대한 `post-item` 요소|✅ 모든 페이지의 속성만 추출한 `data.json`|
 |템플릿 일관성|✅ 높음 (템플릿의 변경사항만 고려하면 됨)|❌ 낮음 (템플릿 변경사항을 자바스크립트에도 반영)|
 
-{{% details title="만약 방식 2를 사용할 경우 `data.json` 을 이렇게 구성해야 합니다." open=false %}}
+{{% details summary="만약 방식 2를 사용할 경우 `data.json` 을 이렇게 구성해야 합니다." open=false %}}
 `data.json` 에는 `post-item` 템플릿을 구성하는 모든 속성 값들이 포함됩니다.
 
 ```json
