@@ -638,11 +638,12 @@ params:
 
 ```yaml
 params:
-  imageDir: "_images"  # 이미지 원본 디렉토리
-  maxImageSize: 1920   # 이미지 최대 너비 (px)
+  images:
+    rootPath: "_images"  # 이미지 원본 디렉토리
+    maxImageSize: 1920   # 이미지 최대 너비 (px)
 ```
 
-- `imageDir`: 이미지 가로, 세로 길이를 추정하기 위한 원본 이미지 경로
+- `rootPath`: 이미지 가로, 세로 길이를 추정하기 위한 원본 이미지 경로
 - `maxImageSize`: 웹 최적화를 위한 이미지 최대 너비 제한
 
 ### 사이드 메뉴 구성
