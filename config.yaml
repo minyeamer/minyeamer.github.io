@@ -48,8 +48,11 @@ params:
 
   i18nDir: "themes/seotax/i18n"
 
-  imageDir: "_images"
-  maxImageSize: 1920
+  image:
+    rootPath: "_images"
+    maxImageSize: 1920
+    roundedCorners: false
+    rotateLandscapeImages: true
 
   search:
     enabled: true
