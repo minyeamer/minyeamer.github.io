@@ -1,6 +1,7 @@
 const cacheName = self.location.pathname
 const pages = [
 
+  "/blog/ossca-airflow-i18n/",
   "/",
   "/posts/",
   "/blog/fix-cls-issue/",
