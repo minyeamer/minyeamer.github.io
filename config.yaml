@@ -44,7 +44,16 @@ params:
 
   comments:
     enabled: true
-    disqusShortname: "minyeamer"
+    provider: "giscus" # "disqus"
+    # disqus:
+    #   shortname: "your-disqus-shortname"
+    giscus:
+      repo: "minyeamer/minyeamer.github.io"
+      repoId: "R_kgDOH7RTCQ"
+      category: "Comments"
+      categoryId: "DIC_kwDOH7RTCc4C9nE6"
+      mapping: "pathname"
+      inputPosition: "bottom"
 
   i18nDir: "themes/seotax/i18n"
 
