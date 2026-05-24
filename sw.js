@@ -1,9 +1,10 @@
 const cacheName = self.location.pathname
 const pages = [
 
-  "/blog/giscus-comment/",
+  "/blog/github-copilot-billing/",
   "/",
   "/posts/",
+  "/blog/giscus-comment/",
   "/blog/pr-66809-doc-md/",
   "/blog/ossca-airflow-i18n/",
   "/blog/fix-cls-issue/",

@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://minyeamer.github.io/blog/giscus-comment/</loc>
-    <lastmod>2026-05-23T17:16:17+09:00</lastmod>
+    <loc>https://minyeamer.github.io/blog/github-copilot-billing/</loc>
+    <lastmod>2026-05-24T23:54:15+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/</loc>
-    <lastmod>2026-05-23T17:16:17+09:00</lastmod>
+    <lastmod>2026-05-24T23:54:15+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/posts/</loc>
+    <lastmod>2026-05-24T23:54:15+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/giscus-comment/</loc>
     <lastmod>2026-05-23T17:16:17+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/pr-66809-doc-md/</loc>
