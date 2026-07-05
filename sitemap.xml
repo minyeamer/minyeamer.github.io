@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://minyeamer.github.io/blog/gemini-code-assist-guide/</loc>
-    <lastmod>2026-05-25T00:00:04+09:00</lastmod>
+    <loc>https://minyeamer.github.io/blog/pr-66809-md-render/</loc>
+    <lastmod>2026-07-06T01:06:26+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/</loc>
-    <lastmod>2026-05-25T00:00:04+09:00</lastmod>
+    <lastmod>2026-07-06T01:06:26+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/posts/</loc>
+    <lastmod>2026-07-06T01:06:26+09:00</lastmod>
+  </url><url>
+    <loc>https://minyeamer.github.io/blog/gemini-code-assist-guide/</loc>
     <lastmod>2026-05-25T00:00:04+09:00</lastmod>
   </url><url>
     <loc>https://minyeamer.github.io/blog/claude-code-guide/</loc>
