@@ -24,6 +24,11 @@ params:
 
   posts:
     section: "posts"
+    sort: "newest" # ["newest" | "oldest"]
+
+  search:
+    enabled: true
+    sort: "newest" # ["relevance" | "newest" | "oldest"]
 
   assets:
     favicon: "/images/favicons/favicon.ico"
@@ -37,6 +42,11 @@ params:
     profileImage: "/images/profile/menu.jpg"
     categories: true
     recentPosts: true
+    # categoryOrder:
+    #   - name: "Data Engineering"
+    #     weight: 10
+    #   - name: "Data Analysis"
+    #     weight: 20
 
   social:
     github: "https://github.com/minyeamer"
@@ -57,14 +67,11 @@ params:
 
   i18nDir: "themes/seotax/i18n"
 
-  image:
+  images:
     rootPath: "_images"
     maxImageSize: 1920
     roundedCorners: false
     rotateLandscapeImages: true
-
-  search:
-    enabled: true
 
   serviceWorker: "precache"
 
