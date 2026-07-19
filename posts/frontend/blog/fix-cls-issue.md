@@ -284,7 +284,7 @@ assets/_images/${frontend/blog}/${hugo-00-cover.webp}
 <!-- 마크다운 컨텐츠 경로로부터 이미지 폴더 경로 추출 -->
 {{- $pageDir := cond $page.File $page.File.Dir "" -}}
 {{- $relPath := strings.TrimPrefix (default site.Params.posts.section "posts/") $pageDir -}}
-{{- $rootPath := default site.Params.image.rootPath "_images" -}}
+{{- $rootPath := default site.Params.images.rootPath "_images" -}}
 {{- $imagePath := printf "%s/%s" $rootPath $relPath -}}
 
 <!-- 드롭박스 공유 링크로부터 이미지 파일명 추출 -->
@@ -322,7 +322,7 @@ assets/_images/${frontend/blog}/${hugo-00-cover.webp}
 
 ```go-html
 {{- if and $width $height -}}
-  {{- $maxSize := default 0 site.Params.image.maxImageSize -}}
+  {{- $maxSize := default 0 site.Params.images.maxImageSize -}}
   {{- $maxDim := cond (gt $width $height) $width $height -}}
   {{- if and $maxSize (gt $maxDim $maxSize) -}}
     {{- $width = div (mul $width $maxSize) $maxDim -}}
