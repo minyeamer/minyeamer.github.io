@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Minystory - 검색 on Minystory</title>
-    <link>https://minyeamer.github.io/search/</link>
-    <description>Recent content in Minystory - 검색 on Minystory</description>
+    <title>Minystory - 최신순 on Minystory</title>
+    <link>https://minyeamer.github.io/list/newest/</link>
+    <description>Recent content in Minystory - 최신순 on Minystory</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)</copyright>
-    <atom:link href="https://minyeamer.github.io/search/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://minyeamer.github.io/list/newest/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

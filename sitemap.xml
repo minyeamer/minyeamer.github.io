@@ -192,6 +192,10 @@
   </url><url>
     <loc>https://minyeamer.github.io/search/</loc>
   </url><url>
+    <loc>https://minyeamer.github.io/list/oldest/</loc>
+  </url><url>
+    <loc>https://minyeamer.github.io/list/newest/</loc>
+  </url><url>
     <loc>https://minyeamer.github.io/tags/</loc>
   </url>
 </urlset>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minystory - 오래된순 on Minystory</title>
+    <link>https://minyeamer.github.io/list/oldest/</link>
+    <description>Recent content in Minystory - 오래된순 on Minystory</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)</copyright>
+    <atom:link href="https://minyeamer.github.io/list/oldest/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

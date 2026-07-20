@@ -65,6 +65,8 @@ const pages = [
   "/blog/algorithm-basics/",
   "/categories/",
   "/search/",
+  "/list/oldest/",
+  "/list/newest/",
   "/tags/",
   "/main.min.f9c55459aa1fb5a9ce5b6ae28b563e5f91180c6a8549b7a74acdcf81e3977f28.css",
   
