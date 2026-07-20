@@ -1,4 +1,4 @@
 ---
-title: "Minystory - Search"
+title: "Minystory - 검색"
 type: "search"
 ---
