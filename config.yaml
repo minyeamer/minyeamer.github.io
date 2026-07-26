@@ -24,11 +24,11 @@ params:
 
   posts:
     section: "posts"
-    sort: "newest" # ["newest" | "oldest"]
+    sort: "oldest" # ["newest" | "oldest" | "disabled"]
 
   search:
     enabled: true
-    sort: "newest" # ["relevance" | "newest" | "oldest"]
+    sort: "relevance" # ["relevance" | "newest" | "oldest" | "disabled"]
 
   assets:
     favicon: "/images/favicons/favicon.ico"
