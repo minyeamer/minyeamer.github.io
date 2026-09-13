@@ -5,7 +5,7 @@ copyright: "[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode
 
 theme: "seotax"
 defaultContentLanguage: "ko"
-languageCode: "ko-kr"
+locale: "ko-kr"
 
 enableRobotsTXT: true
 buildDrafts: false
