@@ -1,15 +1,14 @@
 ---
-title: "Grafana 클론코딩 #0 - Grafana 구조 분석과 개발 환경 만들기"
-date: "2026-09-13T21:58:04+09:00"
+title: "Grafana 클론코딩 #0 - Grafana 구조 분석과 학습 방향"
+date: "2026-09-13T22:00:00+09:00"
 layout: "post"
 description: >
   Grafana를 AI와 함께 분석하며 React/TypeScript 프론트엔드, Go 백엔드,
   데이터 소스, DataFrame, 플러그인 구조를 초보자 눈높이에서 정리합니다.
-  PostgreSQL과 Docker Compose로 BI 대시보드 클론코딩용 개발 환경을 구성한 기록입니다.
 cover: "https://dl.dropboxusercontent.com/scl/fi/zwq4u706rujc3ghn4w020/grafana-01-index.webp?rlkey=0n10p1u9ji3v11dgx3vxqrrcv&raw=1"
 thumbnail: "https://dl.dropboxusercontent.com/scl/fi/aemlct9pg86wza6kwd7da/grafana-00-logo.webp?rlkey=ud43ycrmipiugi9hjwfh1zmgp&raw=1"
 categories: ["Project", "Grafana Clone"]
-tags: ["Grafana", "Grafana 클론코딩", "대시보드 플랫폼", "BI 대시보드", "React", "TypeScript", "Go", "PostgreSQL", "Docker Compose"]
+tags: ["Grafana", "Grafana 클론코딩", "대시보드 플랫폼", "BI 대시보드", "React", "TypeScript", "Go", "Apache Superset", "Kibana", "Metabase"]
 series: ["Grafana 클론코딩"]
 ---
 
@@ -30,7 +29,8 @@ PostgreSQL 같은 SQL 데이터소스를 연결하면 BI 대시보드의 기반�
 - **[Grafana를 선택한 이유](#grafana를-선택한-이유)**: Grafana를 BI 대시보드 클론코딩의 참고 대상으로 고른 이유를 설명합니다.
 - **[Grafana UI 둘러보기](#grafana-ui-둘러보기)**: PostgreSQL 데이터소스 연결부터 대시보드/패널 생성, 사용자 권한, 알림 설정까지 직접 확인합니다.
 - **[Grafana 전체 구조](#grafana의-전체-구조)**: React 프론트엔드, Go 서버, 메타데이터 DB, 외부 데이터 소스가 어떤 역할을 나누는지 살펴봅니다.
-- **[클론코딩 개발 환경](#클론코딩-개발-환경-만들기)**: PostgreSQL 데모 데이터와 React, Go, Docker Compose로 구성한 개발 환경을 소개합니다.
+- **[프론트엔드 구조](#프론트엔드-구조)**: React 앱의 시작점, URL과 화면 연결, 상태가 놓이는 위치를 살펴봅니다.
+- **[백엔드 구조](#백엔드-구조)**: Go API, 데이터 소스, DataFrame, 플러그인의 책임을 정리합니다.
 {{% /hint %}}
 
 ## 시작하며
@@ -411,104 +411,12 @@ DB 접속 정보처럼 민감한 값을 다루거나 외부 API와 통신해야 
 이후 두 번째 데이터 소스가 실제로 필요해질 때,
 공통 인터페이스를 만들고 PostgreSQL 구현을 그 안으로 옮기는 방식으로 확장할 예정입니다.
 
-## 클론코딩 개발 환경 만들기
-
-Grafana 구조를 바탕으로, 첫 단계에서는 복잡한 마이크로서비스 대신 작은 단일 애플리케이션을 만들었습니다.
-
-```text
-브라우저
-└── React + TypeScript (localhost:5173)
-    └── Go API (localhost:8080)
-
-메타데이터 PostgreSQL (localhost:15431)
-└── 이후 사용자, dashboard, datasource, 권한, version 저장
-
-분석 PostgreSQL (localhost:15432)
-└── 매출 데이터를 조회하는 analytics.profit_daily() 테이블 함수
-```
-
-{{< bookmark "https://github.com/minyeamer/dashboard-lab" >}}
-
-### 데모 데이터 구성
-
-클론코딩에서 사용할 분석 데이터는 실제 서비스의 마트 테이블을 단순화해 만든 가상 데이터입니다.
-기간은 **2025-08-01 ~ 2026-07-31**까지로 잡았습니다. 1년치 일별 데이터가 있어
-일/주/월 단위의 흐름, 기간 필터, 그리고 전년/전월 비교 같은 대시보드 기능을 연습할 수 있습니다.
-
-상품은 식품팀과 가전팀의 **125개 상품**으로 구성했습니다.
-브랜드는 `솔담건강`, `들꽃찬`, `모노에어`, `루미에르홈`, `한결웰빙`의 다섯 가지입니다.
-쇼핑몰도 스마트스토어, 쿠팡, 11번가, G마켓, 옥션, 카카오톡 선물하기의 여섯 곳을 넣었습니다.
-따라서 이후에는 브랜드별 매출 추이, 상품 카테고리별 이익,
-쇼핑몰별 판매 점유율처럼 BI 대시보드에서 자주 보는 비교 차트를 만들 수 있습니다.
-
-핵심 시계열인 `demo.sales_daily` 테이블에는 **39,684건**의 일별 판매 기록이 있습니다.
-단순히 정상 주문만 넣지 않고 반품, 교환, 취소, 빈박스, 증정, 배송, 광고, 비용 상태도 함께 넣었습니다.
-판매수량과 결제금액뿐 아니라 공급가, 원가, 배송비, 광고비, 기타 비용을 포함했기 때문에
-매출뿐 아니라 마진과 영업이익을 계산할 수 있습니다.
-
-`analytics.profit_daily(시작일, 종료일)` 테이블 함수는 판매 기록, 상품 정보, 쇼핑몰 정보,
-추가 손익을 하나로 합쳐서 조회하기 쉽게 만들어 둔 함수입니다.
-이 함수의 결과에는 날짜, 브랜드, 상품, 쇼핑몰, 주문 상태, 매출, 원가, 비용, 이익이 함께 들어 있습니다.
-
-```sql
-SELECT *
-FROM analytics.profit_daily(
-  DATE '2026-07-01',
-  DATE '2026-07-31'
-);
-```
-
-데이터는 `dashboard-lab/demo_db/` 경로에 CSV와 초기화 SQL로 함께 포함했습니다.
-따라서 저장소를 내려받고 Docker Compose를 실행하면
-별도의 파일 준비나 외부 DB 연결 없이 같은 데이터를 바로 조회할 수 있습니다.
-
-### Docker Compose로 실행하기
-
-저장소 루트에서 아래 명령을 실행하면 프론트엔드, 백엔드, 두 가지 PostgreSQL 컨테이너가 함께 시작됩니다.
-
-```bash
-cp .env.example .env
-docker compose up --build
-```
-
-| 서비스 | 역할 | 포트 |
-| --- | --- | --- |
-| `frontend` | React 정적 화면 | `5173` |
-| `backend` | Go HTTP API | `8080` |
-| `metadata-db` | 메타데이터 설정 | `15431` |
-| `analytics-db` | 매출/영업이익 분석 데이터 | `15432` |
-
-이번 단계에서는 실제 대시보드 API는 아직 만들지 않았습니다.
-`http://localhost:5173`에는 비어 있는 Dashboards 화면이 표시되고,
-`http://localhost:8080/api/health`로 백엔드 상태를 확인할 수 있습니다.
-
-```json
-{
-  "status": "ok",
-  "phase": "0"
-}
-```
-
-Docker 환경에서 4개의 컨테이너를 실제로 실행하여 React 빌드와 Go 헬스 체크 테스트를 통과했습니다.
-
-```bash
-% docker ps
-CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS                   PORTS               NAMES
-835007e944a4   dashboard-lab-frontend   "docker-entrypoint.s…"   1 minutes ago   Up 1 minutes             0.0.0.0:5173->5173/tcp, [::]:5173->5173/tcp     dashboard-lab-frontend-1
-d6c752260563   dashboard-lab-backend    "/dashboard-lab-api"     1 minutes ago   Up 1 minutes             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp     dashboard-lab-backend-1
-8b6e4e1397d3   postgres:16-alpine       "docker-entrypoint.s…"   1 minutes ago   Up 1 minutes (healthy)   0.0.0.0:15431->5432/tcp, [::]:15431->5432/tcp   dashboard-lab-metadata-db-1
-4896c0b43d44   postgres:16-alpine       "docker-entrypoint.s…"   1 minutes ago   Up 1 minutes (healthy)   0.0.0.0:15432->5432/tcp, [::]:15432->5432/tcp   dashboard-lab-analytics-db-1
-```
-
 ## 다음 작업
 
-이번 회차에서는 Grafana를 살펴보고 개발 환경만 준비했습니다.
-`dashboard-lab`에 작성한 React 프론트엔드와 Go 백엔드 코드 자체는 아직 자세히 분석하지 않았습니다.
+이번 회차에서는 Grafana를 둘러보고, 이후 클론코딩에서 참고할 프론트엔드 및 백엔드 구조를 분석했습니다.
+다음 글부터 클론코딩을 위한 개발 환경을 구성하고 React 프론트엔드와 Go 백엔드 코드를
+AI를 통해 작성 및 읽어 볼 예정입니다.
 
 다음 회차에서는 먼저 코드를 다시 읽으며 React 화면이 어떻게 시작되고,
 Go 서버가 어떻게 HTTP 요청을 받아 응답하는지 확인할 예정입니다.
 아직 기능이 거의 없는 작은 코드이므로, 프론트엔드와 백엔드가 연결되는 가장 단순한 구조를 이해하기에 적합합니다.
-
-그다음 첫 번째 기능으로 대시보드 목록을 구현할 것입니다.
-메타데이터 DB에 대시보드 정보를 저장하고, Go API가 목록을 JSON으로 반환하며,
-React 화면이 그 결과를 목록으로 표시하는 흐름을 만들 계획입니다.
