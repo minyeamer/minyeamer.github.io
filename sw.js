@@ -1,9 +1,10 @@
 const cacheName = self.location.pathname
 const pages = [
 
-  "/blog/grafana-clone-2/",
+  "/blog/grafana-clone-3/",
     "/",
     "/posts/",
+    "/blog/grafana-clone-2/",
     "/blog/grafana-clone-1/",
     "/blog/grafana-clone-0/",
     "/blog/add-hugo-theme/",
@@ -72,7 +73,7 @@ const pages = [
     "/list/oldest/",
     "/list/newest/",
     "/tags/",
-    "/main.min.34f9382ca94d29cc2a5c4caade12ebacfed1d396b50d74059aa354413aff82e8.css",
+    "/main.min.8fe9f9598d00e933624a55b6f61122dfa87735ed3171b6788974175da2703e59.css",
   
 ];
 
