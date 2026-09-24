@@ -1,6 +1,6 @@
 ---
 title: "Grafana 클론코딩 #2 - Go API와 React로 대시보드 목록 구현"
-date: "2026-09-19T00:11:43+09:00"
+date: "2026-09-20T00:11:43+09:00"
 layout: "post"
 description: >
   PostgreSQL 메타데이터 테이블, Go HTTP API, React 화면을 연결해 대시보드 목록과 상세 조회를 구현합니다.
@@ -29,8 +29,6 @@ DB 테이블, Store와 handler, React 상태, 테스트가 하나의 기능으�
 - **[React 목록과 상세 화면](#react-목록과-상세-화면)**: API 응답을 상태에 저장하고 목록 카드와 상세 화면으로 렌더링합니다.
 - **[테스트와 빌드 검증](#테스트와-빌드-검증)**: fake Store를 이용한 handler 테스트와 TypeScript, Vite 빌드를 확인합니다.
 {{% /hint %}}
-
-## 시작하며
 
 [이전 글](/blog/grafana-clone-1/)에서는 대시보드 플랫폼을 시작하기 위한
 React, Go, 두 PostgreSQL 컨테이너를 준비하고, 각 프로그램이 실행되는 최소 코드를 읽었습니다.
@@ -154,7 +152,12 @@ type Store interface {
 
 `PostgresStore`는 Go 표준 라이브러리 `database/sql`의 `*sql.DB`를 보관합니다.
 `*sql.DB`는 하나의 물리 연결이 아니라 연결을 필요에 따라 빌려 주는 관리 객체입니다.
+
 `NewPostgresStore`는 이 객체를 받아 `Store`를 만들고, 아래 두 메서드가 실제 SQL을 실행합니다.
+Go에는 클래스를 만들 때 자동으로 호출되는 생성자 문법이 없어서, 보통 `NewTypeName` 형태의 함수를 직접 만듭니다.
+`NewPostgresStore`도 새 DB 연결을 열거나 SQL을 실행하는 함수가 아니라,
+이미 만든 `*sql.DB`를 `PostgresStore`의 `db` 필드에 담아 반환할 뿐입니다.
+즉 `db`를 건네받아 `PostgresStore`를 조립하는 짧은 생성 함수라고 볼 수 있습니다.
 
 ```go
 // backend/internal/dashboard/dashboard.go
@@ -704,7 +707,7 @@ func TestGetDashboardReturnsNotFound(t *testing.T) {
 `backend/` 경로에서 Go 테스트를 실행하여 성공하면 다음과 같은 테스트 결과가 출력됩니다.
 
 ```bash
-backend % go test ./...
+backend % GOWORK=off go test ./...
 ok      github.com/minyeamer/dashboard-lab/backend/cmd/api      0.499s
 ?       github.com/minyeamer/dashboard-lab/backend/internal/dashboard   [no test files]
 ```
