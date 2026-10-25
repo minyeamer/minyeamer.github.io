@@ -12,9 +12,16 @@
 			<copyright>[© CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)</copyright>
 		
 		
-			<lastBuildDate>Sun, 11 Oct 2026 22:19:25 +0900</lastBuildDate>
+			<lastBuildDate>Mon, 26 Oct 2026 01:37:01 +0900</lastBuildDate>
 		
 			<atom:link href="https://minyeamer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>코드잇(Codeit) 수강 후기 - SKT 영위크 2주 무료 이용</title>
+				<link>https://minyeamer.github.io/blog/codeit-review/</link>
+				<pubDate>Mon, 26 Oct 2026 01:37:01 +0900</pubDate>
+				<guid>https://minyeamer.github.io/blog/codeit-review/</guid>
+				<description>&lt;a href=&#34;https://www.codeit.kr/&#34; target=&#34;_blank&#34; class=&#34;sc-bookmark-card &#34;&gt;&lt;div class=&#34;sc-bookmark-image&#34;&gt;&#xA;    &lt;img src=&#34;https://www.codeit.kr/meta/og_tag.png&#34; alt=&#34;코드잇 | 5분마다 인생이 바뀐다&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;&gt;&#xA;  &lt;/div&gt;&lt;div class=&#34;sc-bookmark-content&#34;&gt;&#xA;    &lt;h3 class=&#34;sc-bookmark-title&#34;&gt;코드잇 | 5분마다 인생이 바뀐다&lt;/h3&gt;&lt;p class=&#34;sc-bookmark-description&#34;&gt;&#xA;      웹 개발, 데이터 분석, AI, 디자인 등 IT 역량 코드잇 하나로 완벽하게&#xA;    &lt;/p&gt;&lt;small class=&#34;sc-bookmark-url&#34;&gt;코드잇&lt;/small&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/a&gt;&#xA;&lt;p&gt;최근 2주간 코드잇이라는 IT/코딩 교육 플랫폼에서 프론트엔드 중심의 과정을 들었습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;수강-배경&#34;&gt;수강 배경&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#%ec%88%98%ea%b0%95-%eb%b0%b0%ea%b2%bd&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;저는 Python과 SQL 중심의 기술 스택을 가지고 데이터 직무에서 경력을 가지고 있지만,&#xA;최근 바이브코딩으로 웹사이트 개발을 시도하면서 프론트엔드와 백엔드 분야에서 전문성이 부족한 것을 느끼고 있었습니다.&#xA;특히, 개인용 웹사이트를 만드는데 그치지 않고 오픈소스 프로젝트에도 바이브코딩으로 제가 원하는 UI를 추가했었고,&#xA;이 과정에서 리뷰어에게 검수가 덜 된 코드를 제출해 주의를 받은 후 웹 개발 지식에 대한 필요성을 체감했습니다.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Grafana 클론코딩 #4 - 대시보드 편집과 저장 구현하기</title>
 				<link>https://minyeamer.github.io/blog/grafana-clone-4/</link>
