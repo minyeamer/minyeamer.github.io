@@ -3,6 +3,7 @@ const pages = [
 
   "/",
     "/posts/",
+    "/blog/linkmerce-atlas/",
     "/blog/codeit-review/",
     "/blog/grafana-clone-4/",
     "/blog/grafana-clone-3/",
@@ -75,7 +76,7 @@ const pages = [
     "/list/oldest/",
     "/list/newest/",
     "/tags/",
-    "/main.min.f84306441fda1f2de4839c00278932c39129d0884c842b3ac45c3a268c5fafc1.css",
+    "/main.min.155a29955370c7302304fa1419d5ade63c310485d8109ce61fb63f68cbdc2c7a.css",
   
 ];
 
