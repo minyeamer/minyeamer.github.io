@@ -387,7 +387,7 @@ Github Actions 과정을 설명해주셨습니다. 특히, 마크다운 문서�
 ## Q&A Counter: Ask the NVIDIA Tech Experts
 
 1층 로비에서는 엔비디아의 전문가들이 행사 참가자들과 테이블을 놓고 기술적인 대화를 나누는 부스가 있었습니다.
-저는 영어를 잘 하지도 않고 엔비디아와 겹치는 기술 스택이 많지 않아서 참가하지는 않았습니다.
+저는 영어를 잘 하지도 못하고 엔비디아와 겹치는 기술 스택이 많지 않아서 참가하지는 않았습니다.
 
 ![nvidia-seoul26-37-qna-counter](https://dl.dropboxusercontent.com/scl/fi/735px1fi8ox80mq3kwxus/nvidia-seoul26-37-qna-counter.webp?rlkey=mqyp77fho9pepgpik39gvm95v&raw=1)
 
