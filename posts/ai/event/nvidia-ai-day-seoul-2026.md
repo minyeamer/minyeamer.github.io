@@ -74,7 +74,7 @@ NVIDIA의 N자도 보이지 않아 10분 이상 길을 헤맸는데, 3층 지도
 
 ![AI Day Pass](https://dl.dropboxusercontent.com/scl/fi/0tuq43xmccgd8jrtz86ee/nvidia-seoul26-06-expedite-badge.webp?rlkey=t01oxpj6pcmninxr6hdt2wz7r&raw=1)
 
-## 1층 로비 둘러보기
+## 1층 로비 둘러보기 (1일차)
 
 체크인 후 1층 로비에는 몇 개의 부스가 준비되어 있었습니다.
 
@@ -278,11 +278,16 @@ GPU 입고와 동시에 2주 만에 물리 및 논리적인 클러스터를 구�
   alt="마트 장면의 과제: 실사 정답ㆍ카메라 기종ㆍ긴 영상" >}}
 {{< /columns >}}
 
+### 럭키 드로우
+
 1일차의 모든 세션이 종료된 후,
 럭키 드로우로 DGX Spark와 RTX Spark 제품을 랜덤한 2명에게 제공하는 행사를 진행했습니다.
 기대는 안했지만 아쉽게도 당첨되지는 못했습니다.
 
 ![럭키 드로우](https://dl.dropboxusercontent.com/scl/fi/tx2faybpj0sbcol89yyen/nvidia-seoul26-27-lucky-draw.webp?rlkey=t33uxw70ib1srivpy8085x72o&raw=1)
+
+그래도 오후 세션 중간부터 이번 행사에 대한 설문을 제출하고 엔비디아 로고가 새겨진 에코백을 받을 수 있었습니다.
+Build-a-Claw 부스에서도 설문을 마치고 젠슨 황 CEO가 OpenClaw의 상징인 가재를 들고 있는 키링도 받았습니다.
 
 ## 커뮤니티 운영자 토크 (2일차)
 
@@ -379,7 +384,7 @@ Github Actions 과정을 설명해주셨습니다. 특히, 마크다운 문서�
   alt="Nemo K Cards" >}}
 {{< /columns >}}
 
-### Q&A Counter: Ask the NVIDIA Tech Experts
+## Q&A Counter: Ask the NVIDIA Tech Experts
 
 1층 로비에서는 엔비디아의 전문가들이 행사 참가자들과 테이블을 놓고 기술적인 대화를 나누는 부스가 있었습니다.
 저는 영어를 잘 하지도 않고 엔비디아와 겹치는 기술 스택이 많지 않아서 참가하지는 않았습니다.
