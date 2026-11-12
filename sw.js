@@ -2,6 +2,7 @@ const cacheName = self.location.pathname
 const pages = [
 
   "/",
+    "/blog/nvidia-ai-day-seoul-2026/",
     "/posts/",
     "/blog/linkmerce-atlas/",
     "/blog/codeit-review/",
@@ -76,7 +77,7 @@ const pages = [
     "/list/oldest/",
     "/list/newest/",
     "/tags/",
-    "/main.min.155a29955370c7302304fa1419d5ade63c310485d8109ce61fb63f68cbdc2c7a.css",
+    "/main.min.3db1f4d1ded80191f2cb429b9ec16d97fd667c1cd1040507e49514dd026c5303.css",
   
 ];
 
